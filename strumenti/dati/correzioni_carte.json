@@ -1,0 +1,546 @@
+{
+ "4029": {
+  "desc": "Questa carta scoperta sul Terreno ritorna nella mano del proprietario durante l'End Phase del tuo turno."
+ },
+ "4167": {
+  "desc": "Guerriero-M #2 è specializzato in attacchi combinati. È equipaggiato con una resistente armatura rivestita di un campo magnetico."
+ },
+ "4241": {
+  "name": "Wodan l'Abitante della Foresta"
+ },
+ "4255": {
+  "desc": "È un essere in grado di trasformare l'acqua che esce da un'anfora in draghi che si scagliano all'attacco."
+ },
+ "4270": {
+  "desc": "È uno spirito racchiuso in un guscio d'uovo che utilizza un enorme paio d'ali per respingere qualunque tipo di proiettile scagliato dai nemici."
+ },
+ "4284": {
+  "desc": "È meglio evitare del tutto questa piccola ma mortale creatura..."
+ },
+ "4392": {
+  "desc": "I valori ATK e DEF di questa carta aumentano di 300 punti per ogni carta \"Lady Arpia\" scoperta sul Terreno."
+ },
+ "4398": {
+  "desc": "Questo mostro può essere evocato dal Deck sul Terreno tramite Evocazione Speciale offrendo come Tributo la carta \"Zoa\" equipaggiata con \"Metalmorph\"."
+ },
+ "4469": {
+  "desc": "Quando questa carta viene mandata direttamente dalla tua mano al Cimitero a causa dell'effetto di una carta del tuo avversario, pesca 2 carte dal tuo Deck."
+ },
+ "4476": {
+  "name": "Fantasma Magico"
+ },
+ "4502": {
+  "desc": "È un coniglio rabbioso che si fa largo tra gli avversari usando i suoi fenomenali artigli."
+ },
+ "4521": {
+  "desc": "Un monumento di pietra dall'Isola dell'Est che lancia raggi laser dalle sue labbra di roccia spaccate."
+ },
+ "4553": {
+  "desc": "Quando questa carta è scoperta sul Terreno e il suo controllo passa al tuo avversario, aumenta i tuoi Life Points di 3000 punti. Quest'effetto può essere usato una sola volta fino a quando questa carta resta scoperta sul Terreno."
+ },
+ "4663": {
+  "desc": "Se hai meno Life Points del tuo avversario, l'ATK base del mostro equipaggiato con questa carta è raddoppiato. Se, invece, è il tuo avversario a disporre di meno Life Points di te, l'ATK base del mostro equipaggiato con questa carta viene dimezzato."
+ },
+ "4668": {
+  "desc": "Distrugge tutti i mostri di tipo Insetto presenti sul Terreno."
+ },
+ "4670": {
+  "desc": "Distrugge tutti i mostri di tipo Pesce presenti sul Terreno."
+ },
+ "4693": {
+  "desc": "Fin quando questa carta resta scoperta sul Terreno, tutti i mostri evocati con Evocazione per Scoperta di Livello 2 o inferiore sono immediatamente distrutti senza che i loro effetti siano attivati."
+ },
+ "4714": {
+  "desc": "È la regina delle galassie e padrona delle stelle."
+ },
+ "4733": {
+  "desc": "Questa carta non può essere evocata a meno che la carta \"Mondo Toon\" sia sul tuo Terreno. Questa carta non può attaccare nello stesso turno in cui viene evocata. Pagare 500 Life Points ogni volta che attacchi con questo mostro. Quando la carta \"Mondo Toon\" viene distrutta, anche questa carta viene distrutta. Se il tuo avversario non controlla un Mostro Toon sul Terreno, questo mostro può attaccare direttamente i Life Points del tuo avversario. Se un Mostro Toon è sul Terreno del tuo avversario, questo mostro deve attaccarlo."
+ },
+ "4734": {
+  "desc": "Questa carta non può essere evocata a meno che la carta \"Mondo Toon\" sia sul tuo Terreno. Questa carta non può attaccare nello stesso turno in cui viene evocata. Pagare 500 Life Points ogni volta che attacchi con questo mostro. Quando la carta \"Mondo Toon\" viene distrutta, anche questa carta viene distrutta. Se il tuo avversario non controlla un Mostro Toon sul Terreno, questo mostro può attaccare direttamente i Life Points del tuo avversario. Se un Mostro Toon è sul Terreno del tuo avversario, questo mostro deve attaccarlo."
+ },
+ "4735": {
+  "desc": "Questa carta non può essere evocata a meno che la carta \"Mondo Toon\" sia sul tuo Terreno. Questa carta non può attaccare nello stesso turno in cui viene evocata. Pagare 500 Life Points ogni volta che attacchi con questo mostro. Quando la carta \"Mondo Toon\" viene distrutta, anche questa carta viene distrutta. Se il tuo avversario non controlla un Mostro Toon sul Terreno, questo mostro può attaccare direttamente i Life Points del tuo avversario. Se un Mostro Toon è sul Terreno del tuo avversario, questo mostro deve attaccarlo."
+ },
+ "4736": {
+  "desc": "SCOPRI: Fin quando questa carta resta sul Terreno, 1 mostro designato non può attaccare."
+ },
+ "4737": {
+  "desc": "Scegli 1 mostro sul Terreno del tuo avversario. Tratta il mostro selezionato come una Carta Magia Equipaggiamento ed equipaggia l'\"Abbandono\" con essa. L'\"Abbandono\" assume ATK e DEF del mostro scelto (a un mostro coperto sono attribuiti ATK e DEF pari a 0). Puoi usare quest'effetto solamente una volta per turno e puoi equipaggiare l'\"Abbandono\" con 1 solo mostro per volta. Se l'\"Abbandono\" viene distrutto in seguito ad una battaglia, il mostro usato come equipaggiamento viene distrutto invece dell'\"Abbandono\" e il danno da combattimento inflitto ai tuoi Life Points viene inflitto anche ai Life Points del tuo avversario."
+ },
+ "4748": {
+  "desc": "Questa carta può essere evocata solamente con Evocazione Speciale dal Deck sul Terreno offrendo come Tributo la carta \"Drago Nero Occhi Rossi\" equipaggiata con la carta \"Metalmorph\". Il tuo Deck viene quindi mescolato."
+ },
+ "4769": {
+  "desc": "SCOPRI: Metti questa carta scoperta nel Deck del tuo avversario e mischialo. Quando il tuo avversario pesca questa carta, essa viene immediatamente Evocata tramite un'Evocazione Speciale sul Terreno del tuo avversario, scoperta e in Posizione di Difesa e infligge 1000 punti di danno ai suoi Life Points. Da questo momento, e fino a quando questa carta resta scoperta sul Terreno, tutte i mostri scoperti sul Terreno del tuo avversario sono trattati come mostri di Tipo Insetto."
+ },
+ "4773": {
+  "desc": "Questa carta non può essere evocata a meno che la carta \"Mondo Toon\" sia sul tuo Terreno. Questa carta non può attaccare nello stesso turno in cui viene evocata. Pagare 500 Life Points ogni volta che attacchi con questo mostro. Quando la carta \"Mondo Toon\" viene distrutta, anche questa carta viene distrutta. Se il tuo avversario non controlla un Mostro Toon sul Terreno, questo mostro può attaccare direttamente i Life Points del tuo avversario. Se un Mostro Toon è sul Terreno del tuo avversario, questo mostro deve attaccarlo."
+ },
+ "4787": {
+  "desc": "È così pesante che la terra trema sotto i suoi passi."
+ },
+ "4794": {
+  "desc": "Quando 1 mostro viene mandato al Cimitero in seguito all'esito di una battaglia, potrai farlo tornare sul Terreno nella stessa posizione di battaglia effettuando un'Evocazione Speciale."
+ },
+ "4836": {
+  "desc": "Quando il tuo avversario evoca un mostro (eccetto le Evocazioni Speciali), se l'ATK di quel mostro evocato è di 1000 o superiore, il mostro viene distrutto."
+ },
+ "4859": {
+  "desc": "Tutti i mostri fatti tornare grazie alla carta \"Mostro Resuscitato\" vengono mandati al Cimitero. Inoltre, la carta \"Mostro Resuscitato\" non può essere giocata fino a quando questa carta rimane sul Terreno."
+ },
+ "4916": {
+  "desc": "Quando questa carta viene evocata (escludendo le Evocazioni Speciali), puoi scegliere 1 Mostro Rituale dal tuo Deck, mostralo ed aggiungilo alla tua mano. Dopo di che, mischia il tuo Deck."
+ },
+ "4931": {
+  "desc": "Fino a quando questa carta rimane scoperta sul Terreno, non possono essere contemporaneamente presenti sul Terreno mostri con lo stesso nome (le carte coperte sono escluse da quest'effetto). Se una carta con lo stesso nome viene evocata in seguito, quella carta viene distrutta (se 2 di queste carte vengono giocate simultaneamente, entrambe le carte vengono distrutte)."
+ },
+ "5003": {
+  "desc": "\"Cucciolo di Drago\" + \"Spada dell'Alligatore\"\nCon questa carta puoi infliggere Danno Diretto ai Life Points del tuo avversario se sul Terreno del tuo avversario sono presenti Carte Mostro I cui soli Attributi sono TERRA, ACQUA e FUOCO."
+ },
+ "5090": {
+  "desc": "Questo mostro utilizza sia il potere della Luce che quello dell'Oscurità."
+ },
+ "5091": {
+  "desc": "Quando questa carta viene mandata al Cimitero, può essere trattata come una Carta Magia Equipaggiamento ed essere utilizzata per equipaggiare 1 mostro sul Terreno. Il valore ATK del mostro equipaggiato con questa carta diminuisce di 500 punti."
+ },
+ "5104": {
+  "name": "Maschera dell'Antimagia"
+ },
+ "5113": {
+  "desc": "Ogni volta che un mostro sul Terreno del tuo avversario attacca, lancia una moneta e scegli testa o croce. Se indovini, l'ATK del mostro attaccante diventa 0 durante la Battle Phase. Paga 500 Life Points durante ogni tua Standby Phase. Se non lo fai, distruggi questa carta."
+ },
+ "5171": {
+  "desc": "Nega l'effetto da Scoperta del Mostro, presente sul Terreno coperto e in posizione Difensiva, attaccato da questa Carta."
+ },
+ "5174": {
+  "desc": "Puoi usare l'effetto di questa Carta solo se sul tuo Terreno è presente un Mostro scoperto il cui nome comprenda la parola \"sventato/a\". Distruggi tutte le Carte presenti sul tuo Terreno a eccezione di questa. Scegli e distruggi un numero di Carte dell'avversario pari alle tue Carte distrutte con quest'effetto. Non puoi mandare sul Terreno un Mostro con un'evocazione normale o posizionarne uno nel turno in cui hai usato quest'effetto."
+ },
+ "5175": {
+  "desc": "Questo Mostro può essere Evocato solo tramite Evocazione Rituale utilizzando la Carta Magia Rituale \"Rituale di Lithmus\". Questa Carta non viene distrutta in conseguenza di una battaglia e non subisce gli effetti delle Carte Trappola. Fin quando sul Terreno è presente una Carta Trappola scoperta, i valori ATK e DEF di questa Carta sono pari a 3000."
+ },
+ "5177": {
+  "desc": "Fin quando questa Carta resta sul Terreno scoperta in Posizione di Attacco, non può essere distrutta in seguito a una battaglia. Sistema un \"Segnalino Fanciulla\" sul Mostro che attacca questa Carta."
+ },
+ "5178": {
+  "desc": "Se il Duellante usa un Mostro equipaggiato con questa Carta per attaccare un Mostro che ha su di sé un \"Segnalino Fanciulla\" e subisce danni da battaglia, alla fine del Damage Step prende il controllo del Mostro che ha inflitto danni da battaglia ai suoi Life Points."
+ },
+ "5179": {
+  "desc": "Puoi attivare questa Carta solo se sul tuo Terreno è presente una \"Fanciulla Innamorata\" scoperta. Quando l'avversario attacca uno dei tuoi Mostri, puoi decidere che una \"Fanciulla Innamorata\" scoperta presente sul tuo Terreno diventerà l'obiettivo dell'attacco."
+ },
+ "5180": {
+  "desc": "Questa Carta può essere attivata solo se un Mostro del tuo avversario è presente, scoperto, sul tuo Terreno. Il valore ATK del Mostro equipaggiato con \"Matrimonio Felice\" aumenta di una quantità pari al valore ATK di quel Mostro."
+ },
+ "5181": {
+  "desc": "Distruggi tutti i Mostri presenti sul Terreno del tuo avversario. Successivamente, scegli un Mostro tra quelli presenti nel Cimitero dell'avversario, e mandalo sul tuo Terreno tramite Evocazione Speciale, ignorando le condizioni di evocazione. Alla fine del turno, i tuoi Life Points si riducono del 90%."
+ },
+ "5182": {
+  "desc": "Quando questa Carta viene attivata, i Life Points di entrambi i Duellanti aumentano di 600. Ogni volta che un Duellante dichiara un attacco con un Mostro, può decidere di pagare 100 Life Points e infliggere 100 unità di danni ai Life Points dell'avversario al termine del Damage Step."
+ },
+ "5183": {
+  "desc": "Puoi attivare questa Carta solo se hai \"Don Zaloog\", \"Dark Scorpion - Cliff il Rimuovi Trappole\", \"Dark Scorpion - Chick il Codardo\", \"Dark Scorpion - Gorg il Forte\" e \"Dark Scorpion - Meanae la Spina\" scoperti sul tuo Terreno. Fai tornare le Carte nella Mano dei loro possessori."
+ },
+ "5184": {
+  "desc": "Puoi attivare questa Carta solo se hai \"Don Zaloog\" e \"Dark Scorpion - Meanae la Spina\" scoperti sul tuo Terreno. Manda \"Dark Scorpion - Meanae la Spina\" dal tuo Terreno al Cimitero per distruggere tutti i Mostri dell'avversario."
+ },
+ "5187": {
+  "desc": "Ciascun giocatore sceglie il bersaglio per l'attacco dell'avversario. Tutti i Mostri presenti sul Terreno scoperti devono attaccare quando è possibile."
+ },
+ "5189": {
+  "desc": "Quando un \"Kuriboh Alato\" presente sul tuo Terreno viene distrutto, puoi far passare questa Carta dal Deck alla Mano. Paga metà dei tuoi Life Points per aggiungere alla Mano una Carta dal Cimitero o dal Deck. Dopo aver attivato questa Carta, essa viene messa nel Deck, che viene poi mescolato. Dopo aver usato quest'effetto 3 volte, la Carta dà vita a un altro effetto: seleziona un Mostro presente scoperto sul tuo Terreno e moltiplica il suo valore ATK per il numero di Mostri presenti sul Terreno dell'avversario fino alla End Phase di questo turno."
+ },
+ "5190": {
+  "desc": "Scarta tutte le Carte che hai in Mano. Seleziona un Mostro di Tipo Bestia dal tuo Cimitero e mandalo sul tuo Terreno tramite Evocazione Speciale. Fino alla End Phase di questo turno, il valore ATK di tutti i Mostri presenti, scoperti, sul Terreno dell'avversario si riduce di 200 unità per ogni Mostro di Tipo Bestia, Pianta e Bestia Alata presente nel tuo Cimitero."
+ },
+ "5194": {
+  "desc": "Offri 1 mostro sul tuo Terreno come Tributo (escluso questo mostro) durante ogni tua Standby Phase. Se non lo fai, distruggi questa carta. I mostri usati per un'Evocazione tramite Tributo, o offerti come Tributo per gli effetti di altre carte, sono esclusi."
+ },
+ "5224": {
+  "desc": "Alla fine di ogni turno del tuo avversario, piazza scoperta sul tuo Terreno 1 carta \"Messaggio dello Spirito\" dalla tua mano o dal tuo Deck nell'ordine \"I\", \"N\", \"A\", \"L\". Se tutte le carte \"Messaggio dello Spirito\" \"I\", \"N\", \"A\" e \"L\" sono sul tuo Terreno, sei dichiarato vincitore. Se una di queste carte viene distrutta o rimossa dal Terreno durante la costruzione del messaggio, tutte queste carte sono mandate al Cimitero."
+ },
+ "5231": {
+  "desc": "Il Duellante che controlla questa Carta può attivare le Trappole durante il turno in cui esse sono giocate. Inoltre, inviando al Cimitero questa Carta e \"Serket la Belva Leggendaria\" quando si trovano sul tuo Terreno, puoi selezionare una Carta Mostro dalla Mano, dal Deck o dal Deck di Fusione ed evocarla tramite Evocazione Speciale."
+ },
+ "5238": {
+  "desc": "Quando questo mostro viene attaccato ed è coperto in posizione Difensiva, puoi designare 1 al suo posto mostro dell'avversario come bersaglio dell'attacco. Quando questa carta è sul Terreno, puoi effettuare un'Evocazione Speciale per \"Genio della Lampada\" dalla tua Mano."
+ },
+ "5242": {
+  "desc": "Questa Carta viene distrutta a meno che sul tuo Terreno non sia presente \"Cattedrale dei Nobili\". Ogni volta che questa Carta distrugge un Mostro in battaglia, esso viene rimosso dal gioco e il valore ATK di \"Serket la Belva Leggendaria\" aumenta di 500 punti."
+ },
+ "5269": {
+  "name": "Le Vacanze dell'Imperatore"
+ },
+ "5275": {
+  "desc": "Forza l'attivazione di 1 Carta Trappola coperta. Se il timing dell'attivazione della Carta Trappola non è corretto, annulla l'effetto e distruggila. Se non è una Carta Trappola, falla ritornare nella sua posizione originaria. Dopo che questa carta è stata attivata, mettila nel tuo Deck e non nel Cimitero. Dopo di che, mischia il tuo Deck."
+ },
+ "5290": {
+  "desc": "Distruggi tutte le Carte Magia controllate dal tuo avversario presenti scoperte sul Terreno. Per ciascuna Carta Magia distrutta, il tuo avversario subisce 500 unità di danni ai suoi Life Points."
+ },
+ "5328": {
+  "name": "Rinforzi dell'Esercito"
+ },
+ "5331": {
+  "name": "Pronti all'Intercetto"
+ },
+ "5334": {
+  "desc": "Durante un combattimento tra questa carta attaccante ed un mostro in Posizione di Difesa il cui DEF sia inferiore all'ATK di questa carta, infliggi la differenza ai Life Points del tuo avversario come danno da combattimento. Quando questa carta attacca, essa passa in Posizione di Difesa alla fine del Damage Step."
+ },
+ "5348": {
+  "desc": "Offri 1 mostro di Tipo Drago sul tuo Terreno come Tributo per distruggere tutti i mostri scoperti sul Terreno con DEF uguale o inferiore all'ATK del mostro offerto come Tributo."
+ },
+ "5352": {
+  "desc": "Entrambi i giocatori guardano la mano dell'avversario, scelgono 1 carta e la scartano al Cimitero, ed ognuno pesca 1 carta."
+ },
+ "5358": {
+  "desc": "Offri come Tributo ciascuno dei tuoi Mostri presenti sul Terreno (eccetto i Segna-Mostri). Per ogni Carta offerta come Tributo, il tuo avversario seleziona una Carta Magia dal suo Deck e la manda al Cimitero. Successivamente, il tuo avversario deve mischiare il Deck."
+ },
+ "5367": {
+  "desc": "Evoca dal tuo Cimitero, tramite Evocazione Speciale, un Mostro Normale, scoperto e in Posizione Difensiva. Mentre il Mostro evocato è sul Terreno, esso non può attaccare."
+ },
+ "5372": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Normale o Posizionata. Questa carta può essere Evocata solo tramite Evocazione Speciale scegliendo 1 \"Gradius\" sul tuo Terreno. L'ATK e il DEF di questo mostro sono sempre uguali all'ATK e DEF del \"Gradius\" scelto. Se il \"Gradius\" scelto viene distrutto o rimosso dal Terreno, anche questa carta viene distrutta."
+ },
+ "5401": {
+  "desc": "Durante la tua Standby Phase, scegli 1 carta dalla mano del tuo avversario e nomina un Tipo di carta (Mostro, Magia o Trappola). Se indovini, infliggi 700 punti di danno ai Life Points del tuo avversario. Puoi utilizzare questo effetto solamente una volta per turno."
+ },
+ "5424": {
+  "desc": "SCOPRI: Entrambi i giocatori tirano un dado. Il giocatore che ottiene il risultato inferiore riceve un ammontare di danni pari al lancio dell'avversario x 500. Se il vincitore ottiene un 6, invece, il perdente riceve 6000 punti di danno. Se il risultato è pari, entrambi i giocatori tirano nuovamente il dado."
+ },
+ "5448": {
+  "desc": "Pesca 2 carte dal tuo Deck e salta le tue prossime 2 Draw Phase."
+ },
+ "5482": {
+  "desc": "Quando questa carta viene Evocata con una Evocazione tramite Tributo con successo, puoi pagare 2000 Life Points per evocare dal tuo Cimitero 2 Mostri di Tipo Demone con un'Evocazione Speciale. I Mostri evocati con quest'effetto non possono attaccare durante il turno in cui compaiono sul Terreno."
+ },
+ "5483": {
+  "desc": "Se questa Carta è presente scoperta sul tuo Terreno e viene mandata al Cimitero dopo essere stata distrutta per effetto di una Carta dell'avversario, verrà Evocata tramite Evocazione Speciale sul tuo Terreno durante la prossima Standby Phase."
+ },
+ "5486": {
+  "desc": "Nega i danni derivanti dall'effetto di una Carta controllata dall'avversario e infligge danni ai suoi Life Points."
+ },
+ "5493": {
+  "desc": "Può essere attivata quando uno dei Mostri del tuo avversario sferra un attacco. Distrugge tutte le Carte Magia e le Carte Trappola presenti sul Terreno."
+ },
+ "5497": {
+  "desc": "Può essere attivato quando il tuo avversario attacca durante la sua Battle Step. Fai tornare un Mostro dal Terreno alla tua Mano ed evoca (sempre dalla tua Mano, tramite Evocazione Speciale) un Mostro dell'OSCURITÀ di Livello 4."
+ },
+ "5501": {
+  "desc": "\"Glorioso Soldato Nero\" + \"Drago Occhi Blu Finale\"\nQuesto Mostro può essere evocato solo tramite Evocazione per Fusione. Per ciascun Mostro di Tipo Drago presente sul tuo Terreno (fatta eccezione per questa Carta) il valore ATK di \"Capo del Soldato Drago\" aumenta di 500 punti."
+ },
+ "5526": {
+  "desc": "Questo mostro non viene distrutto in seguito ad una battaglia. Distruggi questa carta quando viene designata come bersaglio dell'effetto di una Carta Magia, Trappola o Mostro con Effetto. Quando questa carta attacca direttamente i Life Points del tuo avversario con successo, il tuo avversario scarta 1 carta a caso dalla sua mano."
+ },
+ "5528": {
+  "desc": "\"Spirito Mietitore\" + \"Cavallo Incubo\"\nQuesta carta non viene distrutta in seguito ad una battaglia. Distruggi questa carta quando viene designata come bersaglio dell'effetto di una Carta Magia, Trappola o Mostro con Effetto. Questa carta può attaccare direttamente i Life Points del tuo avversario anche se c'è un mostro sul Terreno del tuo avversario. Quando questa carta attacca direttamente i Life Points del tuo avversario con successo, il tuo avversario scarta 1 carta a caso dalla sua mano.",
+  "name": "Mietitore dell'Incubo"
+ },
+ "5531": {
+  "name": "Camera Oscura dell'Incubo"
+ },
+ "5536": {
+  "desc": "Infliggi danno ai Life Points di entrambi i giocatori durante ogni tua Standby Phase. Il primo danno inizia a 200 punti ed è raddoppiato in ogni tua successiva Standby Phase."
+ },
+ "5549": {
+  "desc": "Puoi attivare questa carta solo durante la tua Standby Phase. Scarta 1 carta dalla tua mano. Il tuo avversario non può Evocare tramite Evocazione Normale, Posizionare e/o Evocare tramite Evocazione Speciale durante il suo prossimo turno."
+ },
+ "5555": {
+  "desc": "Una volta per turno, durante la tua Main Phase puoi equipaggiare questa carta al tuo \"X-Testa Cannone\" o \"Y-Testa Drago\" come una Carta Equipaggiamento, OPPURE staccare l'equipaggiamento ed Evocare tramite Evocazione Speciale questa carta scoperta in Posizione d'Attacco. Quando questa carta viene equipaggiata per effetto di questa carta, aumenta ATK/DEF del mostro equipaggiato di 600 punti (1 mostro può essere equipaggiato solo con 1 Mostro Unione alla volta. Se il mostro equipaggiato con questa carta viene distrutto in seguito ad una battaglia, distruggi invece questa carta)."
+ },
+ "5557": {
+  "desc": "Può essere attivata quando un Mostro presente sul tuo Terreno viene distrutto e mandato al Cimitero. Paga 1000 Life Points per evocare dal tuo Deck (tramite Evocazione Speciale) un Mostro di Livello 4."
+ },
+ "5561": {
+  "desc": "Quando questa Carta infligge danni da battaglia al tuo avversario, questi deve mandare al Cimitero la Carta che si trova in cima al suo Deck. Quando questa Carta viene mandata al Cimitero dal Terreno, puoi scegliere dal Deck una Carta di tipo Zombie con un valore DEF pari o inferiore a 1200 e aggiungerla alla tua Mano, dopo averla mostrata al tuo avversario. Il Deck viene quindi mischiato."
+ },
+ "5574": {
+  "desc": "Puoi attivare questa Carta solo quando il tuo avversario manda sul Terreno un Mostro con un'Evocazione normale oppure con un'Evocazione per Scoperta. Manda sul tuo Terreno, tramite Evocazione Speciale, un \"Segna-Clone\" con Tipo, Attributo, Livello e valori ATK e DEF uguali a quelli del Mostro mandato sul Terreno dall'avversario. Se quel Mostro viene distrutto e mandato al Cimitero, anche il Segna viene distrutto."
+ },
+ "5632": {
+  "desc": "Evoca sul tuo Terreno, tramite Evocazione Speciale, un \"Segna-Demone Metallico\" (Tipo Demone/OSCURITÀ/Livello 1/ATK 0/DEF 0). Questo Segna non può attaccare. I danni ricevuti dal Duellante che controlla il \"Segna-Demone Metallico\" vengono passati all'avversario. Paga 1000 Life Points durante la tua Standby Phase oppure il \"Segna-Demone Metallico\" verrà distrutto."
+ },
+ "5689": {
+  "desc": "Evocazione Speciale con l'effetto di \"Santuario Demoniaco\". Questo Segna non può attaccare. I danni ricevuti dal Duellante che controlla questo Segna vengono passati all'avversario. Paga 1000 Life Points durante la tua Standby Phase oppure questo Segna verrà distrutto."
+ },
+ "5698": {
+  "desc": "\"Mago Nero\" + \"Spadaccino di Fuoco\"\nOgni danno inflitto al controllore di questa carta da una battaglia che coinvolga questa mostro diventa 0. Quando questa carta viene distrutta in seguito ad una battaglia e mandata al cimitero, Evoca tramite Evocazione Speciale 1 \"Cavaliere Miraggio\" dalla tua mano o dal tuo Deck."
+ },
+ "5703": {
+  "desc": "SCOPRI: Aggiungi 1 carta che includa \"Guardiano\" nel nome dal tuo Deck alla tua mano. Non puoi aggiungere \"Guardiano Celtico\", \"Drago Alato #1\", \"Dragone Alato, Custode della Fortezza #2\", \"Guardia del Labirinto\" o \"Guardiano Affidabile\"."
+ },
+ "5720": {
+  "desc": "Quando questa carta in Posizione di Difesa viene attaccata e l'ATK del mostro attaccante è inferiore al DEF di questa carta, distruggi il mostro attaccante dopo il calcolo dei danni."
+ },
+ "5738": {
+  "desc": "Evoca tramite Evocazione Speciale 3 \"Segna-Ojama\" (Tipo Bestia/LUCE/Livello 2/ATK 0/DEF 1000) sul Terreno del tuo avversario in Posizione di Difesa. I Segna-Mostro non possono essere usati come Tributo per un Evocazione tramite Tributo. Quando un \"Segna-Ojama\" viene distrutto, il controllore di quel Segna-Mostro subisce 300 punti di danno."
+ },
+ "5743": {
+  "desc": "Distrugge un Mostro presente scoperto sul Terreno del tuo avversario. Quando un suo Mostro viene distrutto da quest'effetto, il tuo avversario riceve 1000 Life Points."
+ },
+ "5753": {
+  "desc": "Paga la metà dei tuoi Life Points per attivare uno dei seguenti effetti:\n●Se nel tuo Cimitero è presente una \"Amicizia\", il tuo avversario non può posizionare, non può evocare normalmente, tramite Evocazione per Scoperta o Evocazione Speciale e non può attivare Effetti Mostro fino alla fine del turno.\n●Se nel tuo Cimitero è presente una \"Unità\", gli effetti delle Carte Magie e delle Carte Trappola presenti sul Terreno del tuo avversario vengono cancellati, e il tuo avversario non può attivare né posizionare Carte Magia o Carte Trappola fino alla fine del turno."
+ },
+ "5755": {
+  "desc": "Seleziona un Mostro presente sul tuo Terreno. Fino alla tua End Phase, il valore DEF del Mostro selezionato diviene pari alla somma dei valori DEF di tutti i Mostri presenti scoperti sul tuo Terreno."
+ },
+ "5795": {
+  "desc": "Puoi attivare questa carta solo quando hai \"Don Zaloog\", \"Dark Scorpion - Cliff il Rimuovi Trappole\", \"Dark Scorpion - Chick il Codardo\", \"Dark Scorpion - Gorg il Forte\" e \"Dark Scorpion - Meanae la Spina\" scoperti sul tuo Terreno. Durante il turno in cui questa carta viene attivata, ognuna di queste 5 carte può attaccare direttamente I Life Points del tuo avversario. In questo caso, I danni da combattimento inflitti da ognuna di queste carte diventa 400 punti."
+ },
+ "5868": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Speciale. Questa Carta deve essere mandata sul Terreno con un'Evocazione tramite Tributo offrendo 3 Carte di Tipo Drago presenti sul tuo Terreno. Se questa Carta attacca direttamente i Life Points dell'avversario e li riduce a zero, chi controlla la Carta si aggiudica la Partita."
+ },
+ "5915": {
+  "desc": "Puoi attivare questa carta solo quando il tuo avversario dichiara un attacco. Il tuo avversario sceglie 1 carta a caso dalla tua mano. Se è una Carta Mostro, Evocala tramite Evocazione Speciale sul tuo Terreno. Se non lo è, mandala al Cimitero."
+ },
+ "5925": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Speciale. Questa Carta deve essere mandata sul Terreno con un'Evocazione tramite Tributo offrendo 3 Carte di Tipo Bestia Alata presenti sul tuo Terreno. Se questa Carta attacca direttamente i Life Points dell'avversario e li riduce a zero, chi controlla la Carta si aggiudica la Partita."
+ },
+ "5929": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Speciale. Questa Carta deve essere mandata sul Terreno con un'Evocazione tramite Tributo offrendo 3 Carte di Tipo Guerriero-Bestia presenti sul tuo Terreno. Se questa Carta attacca direttamente i Life Points dell'avversario e li riduce a zero, chi controlla la Carta si aggiudica la Partita."
+ },
+ "5935": {
+  "desc": "Quando questa Carta viene attivata, si trasforma in una Carta Mostro (Tipo Zombie/OSCURITÀ/Livello 4/ATK 1800/DEF 500) e viene Evocata tramite Evocazione Speciale nella tua Zona Carte Mostro in Posizione Difensiva. Se questa Carta è distrutta in battaglia, riduce i Life Points dell'avversario di una quantità pari al valore ATK del Mostro da cui è stata distrutta. Questa Carta viene trattata anche come una Carta Trappola."
+ },
+ "5943": {
+  "desc": "Quando questa carta viene Evocata con una Evocazione tramite Tributo con successo, puoi lanciare i dadi. Il valore ATK di questa Carta aumenta, per tutto il tempo che resta scoperta sul Terreno, di una quantità pari al numero uscito dal lancio dei dadi moltiplicato per 200."
+ },
+ "5944": {
+  "desc": "Lancia un dado durante ciascuna delle tue Standby Phase e applica l'effetto corrispondente al numero che risulta dal lancio: 1) scarta una Carta dalla tua Mano. 2) il tuo avversario scarta una Carta dalla sua Mano. 3) pesca una Carta. 4) il tuo avversario estrae una Carta. 5) distruggi una delle Carte presenti sul Terreno del tuo avversario. 6) distruggi questa Carta."
+ },
+ "5961": {
+  "desc": "Un mostro che combatte con questa carta in Posizione di Difesa viene rimesso in cima al Deck del proprietario alla fine del Damage Step."
+ },
+ "5969": {
+  "desc": "Quando questa carta in Posizione di Difesa viene attaccata e l'ATK del mostro attaccante è inferiore al DEF di questa carta, distruggi il mostro attaccante dopo il calcolo dei danni."
+ },
+ "5978": {
+  "desc": "Offri 1 mostro sul tuo Terreno come Tributo. Scegli l'ATK o il DEF del mostro offerto come Tributo e aumenta i tuoi Life Points dell'ammontare di punti scelto."
+ },
+ "6001": {
+  "desc": "Questa Carta non può essere Evocata tramite Evocazione Speciale. Quando sono attivati gli effetti di un Effetto Mostro, questa Carta dev'essere offerta come Tributo se è sul Terreno scoperta. Essa cancella l'attivazione e gli effetti dell'Effetto Mostro e lo distrugge."
+ },
+ "6003": {
+  "desc": "Seleziona un Mostro presente sul Terreno in Posizione Difensiva e distruggilo."
+ },
+ "6006": {
+  "desc": "Seleziona un effetto tra quelli elencati di seguito:\r\n●Pesca 1 carta dal tuo Deck.\r\n●Pesca 2 carte dal tuo Deck. Quest'effetto può essere attivato solo quando sul Terreno del tuo avversario è presente scoperto un Mostro Spirit."
+ },
+ "6007": {
+  "desc": "Fin quando questa Carta e \"Marshmallon\" sono presenti scoperte sul Terreno, il tuo avversario non può attaccare alcuna Carta, a eccezione di \"Marshmallon\"."
+ },
+ "6019": {
+  "desc": "Ha un'indole tranquilla ma nel suo destino è scritto che un giorno il suo cuore potrebbe essere tentato dal male..."
+ },
+ "6057": {
+  "desc": "Puoi attivare questa carta solo quando hai un \"Mago Nero\" scoperto sul tuo Terreno. Distruggi tutte le Carte Magia e Trappola sul Terreno del tuo avversario."
+ },
+ "6076": {
+  "desc": "Questa Carta non può essere Evocata tramite Evocazione Speciale. Pagando la metà dei tuoi Life Points, puoi distruggere tutte le Carte presenti sul Terreno, a eccezione di questa, e rimuoverle dal gioco. Il valore ATK di \"Gandra, il Drago della Distruzione\" aumenta di una quantità pari al numero di Carte distrutte da quest'effetto moltiplicato per 300. Questa Carta viene mandata al Cimitero durante la End Phase del turno in cui è stata chiamata sul Terreno tramite Evocazione o Evocazione per Scoperta."
+ },
+ "6092": {
+  "desc": "Se questa carta viene aggiunta alla tua mano dal tuo Deck per effetto di una Carta Magia, Trappola o Mostro, puoi Evocare tramite Evocazione Speciale questa carta sul tuo Terreno."
+ },
+ "6098": {
+  "desc": "Fino a quando questa carta resta scoperta sul tuo Terreno, il controllo di questa carta non può essere cambiato. Durante la End Phase del turno in cui questa carta ha distrutto un mostro in battaglia, manda questa carta al Cimitero per Evocare tramite Evocazione Speciale \"Horus il Drago della Fiamma Oscura LV6\" dalla tua mano o dal tuo Deck."
+ },
+ "6158": {
+  "desc": "Attiva questa Carta mandando al Cimitero una Carta \"Inganno\" presente scoperta sul tuo Terreno. Quando attivi questa Carta, solo i Mostri che sono sul Terreno del tuo avversario si trasformano in \"Segna-Inganno\" (Tipo Incantatore/VENTO/Livello 5/ATK 2000/DEF 1200) in Posizione Difensiva tramite Evocazione Speciale. Questi Segna non possono attaccare."
+ },
+ "6173": {
+  "desc": "Un soldato meccanico costruito per essere una guardia. È composto di un metallo a prova di ruggine."
+ },
+ "6176": {
+  "desc": "Una volta per turno, puoi scegliere 1 mostro dal tuo Cimitero. Manda 1 carta dalla tua mano al Cimitero ed Evoca tramite Evocazione Speciale il mostro scelto. Questa carta non può essere Evocata tramite Evocazione Speciale dal Cimitero."
+ },
+ "6210": {
+  "desc": "Il mostro equipaggiato con questa carta non può cambiare posizione né dichiarare un attacco. Diminuisci l'ATK del mostro equipaggiato di 300 punti. Se il mostro equipaggiato viene distrutto, scegli 1 mostro sul Terreno ed equipaggialo con questa carta."
+ },
+ "6221": {
+  "desc": "Paga 500 Life Points. Guarda la mano del tuo avversario e tutte le carte Posizionate sul suo Terreno."
+ },
+ "6231": {
+  "desc": "Il controllo di ciascuna delle Carte presenti sul Terreno torna al suo possessore originario."
+ },
+ "6248": {
+  "desc": "Quando questa carta viene cambiata da Posizione d'Attacco a scoperta in Posizione di Difesa, distruggi 1 mostro sul Terreno del tuo avversario."
+ },
+ "6257": {
+  "name": "L'OSCURITÀ - Creatura Sigillo Fusione"
+ },
+ "6287": {
+  "desc": "Quando questa Carta viene distrutta in battaglia e mandata al Cimitero, puoi pagare 500 Life Points e chiamarla sul Terreno tramite Evocazione Speciale durante la Standby Phase del turno successivo. Quando questa Carta è chiamata sul Terreno con un'Evocazione Speciale grazie a quest'effetto, il suo valore ATK aumenta di 500 punti."
+ },
+ "6288": {
+  "desc": "Attiva questa Carta selezionando un Mostro presente scoperto sul tuo Terreno. Durante la Battle Phase di questo turno, il valore ATK del Mostro selezionato aumenta di una quantità pari alla somma dei valori ATK di tutti i Mostri scoperti in Posizione Offensiva sul tuo Terreno. Questo Mostro non può infliggere danni di battaglia al tuo avversario. Inoltre, gli altri Mostri scoperti in Posizione Offensiva non possono attaccare."
+ },
+ "6291": {
+  "desc": "Attiva questa Carta selezionando un Mostro di Tipo Zombie con valore ATK inferiore a 2000 punti presente sul tuo Terreno. Il Mostro selezionato sarà in grado di attaccare direttamente il tuo avversario durante il turno."
+ },
+ "6302": {
+  "desc": "Se non ci sono Mostri sul tuo Terreno quando evochi questa Carta con un'Evocazione Normale, puoi mandare sul Terreno dalla tua Mano, tramite Evocazione Speciale, una Carta il cui nome comprenda la parola \"Macchinario\" (a eccezione di \"Macchinario Soldato\")."
+ },
+ "6304": {
+  "desc": "Fin quando questa Carta resta sul Terreno scoperta, non è possibile attaccare i Mostri i cui nomi comprendono la parola \"Macchinario\" (a eccezione di \"Macchinario Cecchino\")."
+ },
+ "6307": {
+  "desc": "Manda al Cimitero, dal tuo Terreno, una copia di \"Macchinario Soldato\", di \"Macchinario Cecchino\" e di \"Macchinario Difensore\". Puoi mandare sul Terreno \"Forza del Macchinario\", dalla Mano o dal Deck, tramite Evocazione Speciale."
+ },
+ "6308": {
+  "desc": "Questa carta non può essere posizionata o mandata sul Terreno tramite Evocazione Normale. Questa Carta può essere mandata sul Terreno con un'Evocazione Speciale solo se usi l'effetto di \"Comandante Covington\" e può attaccare solo se paghi 1000 Life Points. Se questa Carta, scoperta, finisce al Cimitero, puoi mandare sul Terreno dal Cimitero, tramite Evocazione Speciale, \"Macchinario Soldato\", \"Macchinario Cecchino\" e \"Macchinario Difensore\"."
+ },
+ "6368": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Speciale. Quando questa carta viene Evocata con una Evocazione tramite Tributo con successo, puoi rimuovere dal gioco fino a 5 mostri FUOCO dal tuo Cimitero. Distruggi un numero di Carte Magia o Trappola pari al numero di carte che hai rimosso dal gioco con questo effetto."
+ },
+ "6380": {
+  "desc": "Quando un Mostro di Tipo Bestia presente sul tuo Terreno viene distrutto e mandato al Cimitero, puoi pagare 1000 Life Points per mandare sul Terreno questa Carta, tramite Evocazione Speciale, dalla Mano o dal Cimitero."
+ },
+ "6400": {
+  "desc": "Questa Carta non può essere offerta come Tributo. Quando \"Sacerdote Evocatore\" viene evocato tramite Evocazione normale o Evocazione per Scoperta, esso compare sul Terreno in Posizione Difensiva. Scartando dalla tua Mano una Carta Magia, puoi chiamare sul Terreno dal Deck tramite Evocazione Speciale una Carta Mostro di Livello 4. La Carta Mostro chiamata sul Terreno con l'Evocazione Speciale usando quest'effetto non può attaccare fino alla fine del turno. Puoi attivare l'effetto di questa Carta una sola volta per turno, durante la tua Main Phase."
+ },
+ "6405": {
+  "desc": "Questa Carta non può essere Evocata tramite Evocazione Speciale. Può essere evocata solo offrendo come Tributo 3 Carte Mostro presenti sul tuo Terreno. Fin quando \"Orribile Strada Oscura\" resta sul Terreno scoperta, i valori ATK e DEF di tutte le altre Carte Mostro presenti sul Terreno sono ridotti del 50%."
+ },
+ "6410": {
+  "desc": "Questa Carta può essere chiamata sul Terreno dalla tua Mano con un'Evocazione Speciale dopo aver cancellato gli effetti di una Carta controllata dal tuo avversario usando una Carta Contro-Trappola. Quando \"Vandalgyon il Darkruler\" viene evocato con un'Evocazione Speciale, si attiva uno dei seguenti effetti, in base al genere della Carta i cui effetti sono stati cancellati.\n●Carta Magia: i Life Points dell'avversario si riducono di 1500 unità.\n●Carta Trappola: distruggi una delle Carte presenti sul Terreno dell'avversario.\n●Carta Effetto Mostro: prendi una Carta dal tuo Cimitero e chiamala sul Terreno con un'Evocazione Speciale."
+ },
+ "6435": {
+  "desc": "Puoi attivare questa carta solo quando ci sono 3 \"Rana Des\" scoperte sul tuo Terreno. Distruggi tutte le carte sul Terreno del tuo avversario."
+ },
+ "6450": {
+  "desc": "Pagando 1000 Life Points puoi distruggere tutte le Carte Mostro presenti sul Terreno scoperte e impedire che Carte dello stesso Tipo siano chiamate sul Terreno con Evocazione normale, Evocazione per Scoperta o Evocazione Speciale."
+ },
+ "6454": {
+  "desc": "\"Cavaliere della Regina\" + \"Cavaliere del Jack\" + \"Cavaliere del Re\"\nL'Evocazione per Fusione di questa carta può essere effettuata solo con i Mostri Materiale da Fusione sopra riportati. Fin quando \"Alkana, il Cavaliere dello Scherzo\" resta sul Terreno scoperto, puoi cancellare gli effetti delle Carte Magia, delle Carte Trappola e delle Carte Effetto Mostro scartando dalla tua Mano una Carta dello stesso Tipo. Qualsiasi Carta Mostro può essere scartata per cancellare l'effetto di un Effetto Mostro. Quest'effetto può essere attivato una sola volta per turno."
+ },
+ "6458": {
+  "desc": "Puoi equipaggiare questa carta solo ad un mostro di Tipo Guerriero. Aumenta l'ATK del mostro equipaggiato di 300 punti. Se questa carta è nel tuo Cimitero durante la tua Main Phase, rimuovi dal gioco 2 mostri di Tipo Guerriero dal tuo Cimitero per aggiungere questa carta alla tua mano."
+ },
+ "6472": {
+  "desc": "Un'immagine di bellezza sul ghiaccio, questa magnifica guerriera fa a pezzi i suoi avversari con il suo attacco speciale Accel Slicer."
+ },
+ "6480": {
+  "desc": "Quando questa carta viene distrutta in battaglia da un mostro di Tipo Pyro e mandata al Cimitero, infliggi 800 danni ad entrambi i giocatori."
+ },
+ "6492": {
+  "desc": "Offri come Tributo 2 \"Hydrogeddon\" e 1 \"Oxygeddon\" sul tuo Terreno. Evoca tramite Evocazione Speciale 1 \"Drago Acquatico\" dalla tua mano, dal tuo Deck o dal tuo Cimitero."
+ },
+ "6506": {
+  "desc": "Quando questa carta viene distrutta in seguito ad una battaglia e mandata al Cimitero, aggiungi 1 mostro di Livello 4 o inferiore che includa \"Mondo Oscuro\" nel nome della carta dal tuo Deck alla tua mano."
+ },
+ "6507": {
+  "desc": "Mandando 1 \"Aussa l'Ammaliatrice della Terra\" e 1 mostro TERRA dal tuo Terreno al Cimitero, puoi Evocare tramite Evocazione Speciale questa carta dalla tua mano o dal tuo Deck. Se Evochi tramite Evocazione Speciale questa carta in questo modo, questa carta guadagna il seguente effetto: Durante un combattimento tra questa carta attaccante ed un mostro in Posizione di Difesa il cui DEF sia inferiore all'ATK di questa carta, infliggi la differenza ai Life Points del tuo avversario come danno da combattimento."
+ },
+ "6508": {
+  "desc": "Mandando 1 \"Eria l'Ammaliatrice dell'Acqua\" e 1 mostro ACQUA dal tuo Terreno al Cimitero, puoi Evocare tramite Evocazione Speciale questa carta dalla tua mano o dal tuo Deck. Se Evochi tramite Evocazione Speciale questa carta in questo modo, questa carta guadagna il seguente effetto: Durante un combattimento tra questa carta attaccante ed un mostro in Posizione di Difesa il cui DEF sia inferiore all'ATK di questa carta, infliggi la differenza ai Life Points del tuo avversario come danno da combattimento."
+ },
+ "6509": {
+  "desc": "Mandando 1 \"Hiita l'Ammaliatrice del Fuoco\" e 1 mostro FUOCO dal tuo Terreno al Cimitero, puoi Evocare tramite Evocazione Speciale questa carta dalla tua mano o dal tuo Deck. Se Evochi tramite Evocazione Speciale questa carta in questo modo, questa carta guadagna il seguente effetto: Durante un combattimento tra questa carta attaccante ed un mostro in Posizione di Difesa il cui DEF sia inferiore all'ATK di questa carta, infliggi la differenza ai Life Points del tuo avversario come danno da combattimento."
+ },
+ "6510": {
+  "desc": "Mandando 1 \"Wynn l'Ammaliatrice del Vento\" e 1 mostro VENTO dal tuo Terreno al Cimitero, puoi Evocare tramite Evocazione Speciale questa carta dalla tua mano o dal tuo Deck. Se Evochi tramite Evocazione Speciale questa carta in questo modo, questa carta guadagna il seguente effetto: Durante un combattimento tra questa carta attaccante ed un mostro in Posizione di Difesa il cui DEF sia inferiore all'ATK di questa carta, infliggi la differenza ai Life Points del tuo avversario come danno da combattimento."
+ },
+ "6523": {
+  "desc": "Tutti i mostri di Livello 3 o inferiore scoperti sul Terreno vengono cambiati in Posizione d'Attacco e restano in Posizione d'Attacco fino a quando questa carta è attiva."
+ },
+ "6528": {
+  "name": "Anello dell'Eroe"
+ },
+ "6533": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Speciale. Questa Carta deve essere mandata sul Terreno con un'Evocazione tramite Tributo offrendo 3 Carte di Tipo Demone presenti sul tuo Terreno. Se questa Carta attacca direttamente i Life Points dell'avversario e li riduce a zero, chi controlla la Carta si aggiudica la Partita."
+ },
+ "6534": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Speciale. Questa Carta deve essere mandata sul Terreno con un'Evocazione tramite Tributo offrendo 3 Carte di Tipo Fata presenti sul tuo Terreno. Se questa Carta attacca direttamente i Life Points dell'avversario e li riduce a zero, chi controlla la Carta si aggiudica la Partita."
+ },
+ "6535": {
+  "desc": "\"Burstinatrix Eroe Elementale\" + \"Bubbleman Eroe Elementale\"\r\nQuesto mostro non può essere Evocato tramite Evocazione Speciale se non tramite Evocazione per Fusione. Quando questa carta distrugge un mostro in seguito ad una battaglia e lo manda al Cimitero, aumenta i tuoi Life Points dell'ATK del mostro distrutto."
+ },
+ "6547": {
+  "desc": "Quando questa carta attacca, essa passa in Posizione di Difesa alla fine del Damage Step."
+ },
+ "6550": {
+  "desc": "Quando questa Carta viene chiamata sul Terreno con un'Evocazione o con un'Evocazione Speciale, puoi scegliere fino a 5 Carte Magia presenti nel Cimitero del tuo avversario e rimuoverle dal gioco. Il valore ATK di questa Carta aumenta di una quantità pari al numero di Carte rimosse grazie a quest'effetto moltiplicato per 300."
+ },
+ "6563": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Normale o Posizionata. Questa carta non può essere Evocata tramite Evocazione Speciale se non mandando 3 Carte Trappola scoperte dal tuo Terreno al Cimitero. Aumenta l'ATK di questa carta di 1000 punti per ogni Carta Trappola Continua nel tuo Cimitero. Una volta per turno, puoi distruggere 1 Carta Magia o Trappola Posizionata sul Terreno del tuo avversario. Le Carte Magia e Trappola non possono essere attivate in risposta all'attivazione di questo effetto."
+ },
+ "6575": {
+  "desc": "Puoi attivare questa carta solo fino a quando hai 2 o più carte in mano e hai \"Uria, Signore delle Fiamme Ardenti\" o \"Hamon, Signore del Tuono Fragoroso\" scoperto sul tuo Terreno. Manda tutta la tua mano al Cimitero per Evocare tramite Evocazione Speciale 3 \"Segna-Martire Fantasma\" (Tipo Demone/OSCURITÀ/Livello 1/ATK 0/DEF 0) in Posizione d'Attacco sul tuo Terreno."
+ },
+ "6584": {
+  "desc": "Puoi attivare questa carta solo durante la Battle Phase di un turno in cui un mostro sul tuo Terreno che includa \"Eroe Elementale\" nel nome della carta è stato distrutto in seguito ad una battaglia. Il danno da combattimento inflitto da 1 mostro del tuo avversario diventa 0."
+ },
+ "6587": {
+  "desc": "Offri questa carta come Tributo per infliggere 500 danni al tuo avversario, dopo di che entrambi i giocatori non possono attivare Carte Trappola durante la Battle Phase di questo turno."
+ },
+ "6596": {
+  "desc": "L'ATK e il DEF di questa carta sono pari al numero di Segna-Mostro sul Terreno x 500 punti."
+ },
+ "6607": {
+  "desc": "Se questa carta attacca direttamente i Life Points del tuo avversario, infliggi un danno ai Life Points del tuo avversario pari al numero di carte nel Fusion Deck del tuo avversario x 100 punti."
+ },
+ "6610": {
+  "desc": "Quando questa carta coperta in Posizione di Difesa viene distrutta e mandata al Cimitero, eccetto che in seguito ad una battaglia, scambia ATK e DEF originali di questa carta ed Evocala tramite Evocazione Speciale sul tuo Terreno."
+ },
+ "6636": {
+  "desc": "Puoi aggiungere alla tua Mano \"Kuriboh\" oppure \"Kuriboh Alato\" o evocarli dal Deck sul tuo Terreno con un'Evocazione Speciale."
+ },
+ "6638": {
+  "desc": "Evocazione Speciale con l'effetto di \"Dente di Leone\". Questo Segna non può essere usato come Tributo per un'Evocazione tramite Tributo nel turno in cui viene chiamato sul Terreno con Evocazione Speciale."
+ },
+ "6639": {
+  "desc": "\"Avian Eroe Elementale\" + \"Burstinatrix Eroe Elementale\" + \"Clayman Eroe Elementale\" + \"Bubbleman Eroe Elementale\"\nQuesto mostro non può essere Evocato tramite Evocazione Speciale se non tramite Evocazione per Fusione. L'Attributo di questa carta viene considerato anche come VENTO, ACQUA, FUOCO e TERRA. Quando questa Carta è chiamata sul Terreno con Evocazione tramite Fusione, tutte le Carte che sono state rimosse dal gioco tornano ai Deck dei proprietari e il Deck viene mischiato. Il valore ATK di questa Carta aumenta di una quantità pari al numero di Carte Mostro con lo stesso Attributo presenti sul Terreno dell'avversario, moltiplicato per 300."
+ },
+ "6640": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Normale o Posizionata. Questa carta non può essere Evocata tramite Evocazione Speciale se non offrendo come Tributo 1 mostro sul tuo Terreno che includa \"sfinge\" nel suo nome. Fino a quando questa carta è scoperta sul Terreno, ogni volta che un mostro TERRA viene Evocato tramite Evocazione per Scoperta, infliggi 1000 punti di danno ai Life Points del tuo avversario."
+ },
+ "6647": {
+  "desc": "Questa carta può essere Evocata tramite Evocazione Speciale offrendo come Tributo 1 \"Helios - Il Sole Primordiale\" sul tuo Terreno. L'ATK e il DEF di questo mostro diventano il numero di mostri rimossi dal gioco x 200 punti. Se questa carta viene distrutta in seguito ad una battaglia e mandata al Cimitero, questa carta viene Evocata tramite Evocazione Speciale durante l'End Phase, aumentando l'ATK e il DEF di 300 punti."
+ },
+ "6648": {
+  "desc": "Questa Carta può essere chiamata sul Terreno con un'Evocazione tramite Tributo offrendo \"Helios Duo Megistos\" dal tuo Terreno come Tributo. I valori ATK e DEF di questa Carta sono dati dal numero di Carte Mostro rimosse dal gioco moltiplicato per 300. Se questa Carta è distrutta in battaglia e mandata al Cimitero, viene automaticamente evocata con un'Evocazione Speciale nella End Phase e i suoi valori ATK e DEF aumentano di 500 unità. Se il tuo avversario ha delle Carte Mostro sul suo Terreno, questa Carta può attaccarli ancora una volta."
+ },
+ "6654": {
+  "desc": "Quando questa Carta viene mandata al Cimitero, evoca sul tuo Terreno con Evocazione Speciale 2 \"Segna-Soffici\" (Tipo Pianta/VENTO/Livello 1/ATK 0/DEF 0). Questo Segna non possono essere usati come Tributo per Evocazioni tramite Tributo nel turno in cui sono stati chiamati sul Terreno."
+ },
+ "6657": {
+  "desc": "\"Bubbleman Eroe Elementale\" + \"Avian Eroe Elementale\"\nQuesto mostro non può essere Evocato tramite Evocazione Speciale se non tramite Evocazione per Fusione. Se hai almeno una Carta Magia o Trappola nella tua Zona Carte Magia & Trappola, questa carta può attaccare direttamente i Life Points del tuo avversario."
+ },
+ "6659": {
+  "desc": "Una volta per turno, fino a quando questa carta è scoperta sul tuo Terreno, se un mostro sul tuo Terreno che include \"Eroe del Destino\" nel suo nome (eccetto questa carta) viene distrutto in seguito ad una battaglia e mandato al Cimitero, puoi Evocare tramite Evocazione Speciale quel 1 mostro sul tuo Terreno durante la tua prossima Standby Phase."
+ },
+ "6679": {
+  "desc": "Puoi attivare questa carta solo quando un mostro sul tuo Terreno viene distrutto in seguito ad una battaglia e mandato al Cimitero. Evoca tramite Evocazione Speciale 1 mostro di Livello 4 o inferiore dalla tua mano o dal tuo Deck che include \"Eroe del Destino\" nel nome della carta."
+ },
+ "6681": {
+  "desc": "Rimuovi dal gioco 1 Carta Mostro nella tua mano. Fino a quando questa carta è sul Terreno, i mostri del tuo avversario che hanno lo stesso Attributo del mostro rimosso per questo effetto non possono dichiarare un attacco."
+ },
+ "6684": {
+  "desc": "Quando questa carta distrugge un mostro dell'avversario in seguito ad una battaglia, scegli ed attiva 1 dei seguenti effetti:\n● Aumenta l'ATK di questa carta di 400 punti.\n● Distruggi 1 Carta Magia o Trappola scoperta sul Terreno.\n● Evoca tramite Evocazione Speciale 1 \"Segna-Opzione\" sul tuo Terreno. Esso ha lo stesso Tipo, Attributo, Livello, ATK e DEF di questa carta."
+ },
+ "6706": {
+  "desc": "Scegli 1 \"Victory Viper XX03\" scoperto sul tuo Terreno per attivare questa carta. Scegli 1 effetto di \"Victory Viper XX03\" ed applicalo come effetto di questa carta."
+ },
+ "6711": {
+  "desc": "Ogni volta che una carta Contro-Trappola viene attivata, Evoca tramite Evocazione Speciale 1 \"Segna-Seraphim Sintetico\" (Tipo Fata/LUCE/Livello 1/ATK 300/DEF 300)."
+ },
+ "6721": {
+  "desc": "Se non ci sono carte nella Zona Carte Magia e Trappola del tuo avversario, questa carta può attaccare direttamente i Life Points del tuo avversario. Quando lo fa, il danno da battaglia che questa carta infligge ai Life Points del tuo avversario diventa uguale all'ATK originale di questa carta."
+ },
+ "6722": {
+  "desc": "Scarta 1 carta dalla tua mano. Evoca tramite Evocazione Speciale tante carte \"Lady Arpia\" quante possibili dal tuo Cimitero. Quando questa carta viene rimossa dal Terreno, distruggi tutti i mostri Evocati tramite Evocazione Speciale dall'effetto di questa carta."
+ },
+ "6734": {
+  "desc": "\"Cyber Drago\" + 1 o più mostri di Tipo Macchina\nQuesto mostro non può essere Evocato tramite Evocazione Speciale se non tramite Evocazione per Fusione. Quando questa carta viene Evocata per Fusione, manda tutte le carte sul tuo Terreno al Cimitero eccetto questa carta. L'ATK e il DEF originali di questa carta diventano il numero di Mostri Materiale da Fusione che hai usato per l'Evocazione per Fusione di questa carta x 800 punti. Questa carta può attaccare ogni turno tanti mostri del tuo avversario quanto il numero di Mostri Materiale da Fusione che hai usato per l'Evocazione per Fusione di questa carta."
+ },
+ "6754": {
+  "desc": "Questa carta non può essere Evocata tramite Evocazione Speciale. Questa carta può attaccare due volte durante la stessa Battle Phase. Se questa carta viene distrutta, puoi Evocare tramite Evocazione Speciale 2 \"Segna-Duplicante\" (Tipo Guerriero/OSCURITÀ/Livello 4/ATK 1000/DEF 1000) sul tuo Terreno durante la tua prossima Standby Phase."
+ },
+ "6811": {
+  "desc": "Scarta 1 carta dalla tua mano. Seleziona 1 mostro di Tipo Dinosauro nel tuo Cimitero ed Evocalo tramite Evocazione Speciale. Annulla gli effetti di un Mostro con Effetto Evocato tramite Evocazione Speciale in questo modo. Quando questa carta viene rimossa dal Terreno, distruggi quel mostro. Quando il mostro viene distrutto, distruggi questa carta."
+ },
+ "6815": {
+  "desc": "Questa Carta può essere trattata come una Carta Magia e mandata nella Zona Carte Magia e Trappola. Quando questa Carta, presente nella Zona Carte Magia e Trappola, viene distrutta e mandata al Cimitero per effetto di una Carta dell'avversario, puoi mandarla sul tuo Terreno, tramite Evocazione Speciale, durante la End Phase di questo turno. Inoltre, quando questa Carta viene mandata sul Terreno tramite Evocazione per Scoperta, puoi distruggere una quantità di Carte Magia o Carte Trappola pari al numero di Carte \"Mago Giocattolo\" presenti sul Terreno."
+ },
+ "6957": {
+  "desc": "Puoi mandare sul Terreno questa Carta con un'Evocazione tramite Tributo offrendo \"Gazelle, Re delle Bestie Mitiche\" oppure \"Bestia Fantasma\". Quando questa Carta distrugge un Mostro in battaglia, infliggi 500 unità di danni ai Life Points dell'avversario. Quando questa Carta viene distrutta e mandata al Cimitero per effetto di una Carta controllata dal tuo avversario, il tuo rivale subisce 2000 unità di danni ai propri Life Points."
+ }
+}

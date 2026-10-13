@@ -1,0 +1,26 @@
+{
+ "lingua": "en",
+ "texture_ui": 43,
+ "per_famiglia": {
+  "fogli_icone": 3,
+  "lettere_esito": 4,
+  "menu_liste": 2,
+  "schede_deck": 14,
+  "schede_ricette": 11,
+  "schermata_vs": 3,
+  "tutorial": 6
+ },
+ "neutre": 0,
+ "specifiche": 43,
+ "righe_ini_ui": 43,
+ "carte_corrette": 82,
+ "banner": [
+  "moduli/en/intro/title_screen/00000000542eff79685c434d.png",
+  "moduli/en/intro/title_screen/00000000705176739829dcf5.png"
+ ],
+ "cartelle_carte": {
+  "frame": 0,
+  "large_en": 87,
+  "small_en": 87
+ }
+}

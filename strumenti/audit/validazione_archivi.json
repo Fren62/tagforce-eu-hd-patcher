@@ -1,0 +1,11 @@
+{
+  "audit_righe": 1378,
+  "fonti_verificate_dagli_archivi": 1378,
+  "archivi": 6,
+  "coppie_index_strings": 2136,
+  "scene_con_conteggi_diversi": [],
+  "riscontri_contestuali_espliciti": 84,
+  "proposte_impaginate_in_dialogo_prova": 3,
+  "scena_originale_proposte_testate": 0,
+  "limiti": "Nessuna nuova proposta applicata alla ROM. RAM ripristinata al termine. I conteggi uguali non garantiscono corrispondenza semantica. Controllo font su due righe e a capo automatico; paginazione lunga non certificata."
+}

@@ -1,0 +1,53 @@
+# Giochi e dati di terzi: mai nel repository
+*.iso
+*.cso
+*.pbp
+PSP/
+backup_prima_upscaling_AI/
+confronti/
+
+# Risultati di build (si ricostruiscono)
+patcher/build/
+patcher/tfpatch/target/
+*.tfp
+textures.zip
+__pycache__/
+*.pyc
+
+# Derivati dalle immagini del gioco / font scaricabili con strumenti/font_alternativi/scarica_font.sh
+strumenti/dati/upscale_extra/
+strumenti/font_alternativi/scaricati/
+strumenti/font_alternativi/static/
+
+# File locali
+CLAUDE.local.md
+.claude/
+megapy-*.tar.gz
+pyserial-*.whl
+
+# Fogli di confronto con texture originali del gioco
+documentazione/**/fogli/
+strumenti/dati/label_eu_*.png
+
+# Note di lavoro private, bozze di permessi, export personali
+LEGGIMI.md
+LEGGIMI_PACK.txt
+LEGGIMI_TRASFERIMENTO.txt
+STATO_LAVORI.md
+PROMPT_NUOVA_LINGUA.md
+PERMESSI_AUTORI.md
+
+# Immagini derivate da asset del gioco o di terzi (stanno nei moduli texture, non nel repo)
+strumenti/dati/*.png
+
+# Dati di analisi con percorsi locali / struttura del pack di terzi
+strumenti/analisi/ab.json
+strumenti/analisi/inventory.json
+strumenti/font_alternativi/risultati_misure/
+
+# Font: si scaricano con strumenti/font_alternativi/scarica_font.sh
+strumenti/font_alternativi/xcharter/
+
+# Dump completi di testi del gioco (originali) in CSV e confronti
+documentazione/**/*.csv
+documentazione/**/*_diff.md

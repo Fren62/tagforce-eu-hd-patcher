@@ -1,0 +1,808 @@
+{
+ "4022": {
+  "desc": "Prenez une pièce et jouez à pile ou face. Si vous gagnez, tous les monstres sur le Terrain de votre adversaire sont détruits. Si vous perdez, tous les monstres sur votre Terrain sont détruits et vous recevez des dommages égaux à la moitié des points d'ATK de tous les monstres détruits. Cet effet ne peut être utilisé qu'une fois par tour, et uniquement durant votre Main Phase."
+ },
+ "4027": {
+  "name": "Exodia l'Interdit"
+ },
+ "4034": {
+  "desc": "Protégé par un solide corps de pierre, ce monstre fracasse les os à coups de poing."
+ },
+ "4051": {
+  "desc": "Cette créature électrocute ses adversaires à coups d'éclairs."
+ },
+ "4062": {
+  "desc": "Ce monstre ne peut être Invoqué que par Invocation Spéciale en sacrifiant \"Petit Papillon\" à partir de votre 2ème tour après que \"Petit Papillon\" a été équipé de \"Cocon d'Évolution\"."
+ },
+ "4087": {
+  "desc": "Ce puissant dragon possède une mâchoire qui peut presque tout réduire en poussière."
+ },
+ "4089": {
+  "desc": "FLIP: Augmentez de 200 points l'ATK et la DEF de tous les monstres de Type Zombie face recto sur le Terrain. Tant que cette carte reste face recto sur le Terrain, l'ATK et la DEF des monstres de Type Zombie continuent d'augmenter de 200 points supplémentaires durant chacune de vos Standby Phases. Cet effet continuera jusqu'à votre 4ème tour inclus suivant le tour de son activation."
+ },
+ "4105": {
+  "desc": "Tant que \"Château des Illusions\" reste face recto sur le Terrain, augmentez l'ATK et la DEF de cette carte de 100 points. L'ATK et la DEF de cette carte continuent d'augmenter de 100 points supplémentaires durant chacune de vos Standby Phases. Cet effet continuera jusqu'à votre 4ème tour inclus suivant le tour de son activation."
+ },
+ "4154": {
+  "desc": "Ombre tapie dans le noir, qui paralyse ses adversaires et les rend inoffensifs."
+ },
+ "4208": {
+  "name": "Marmotte Archdémon de L'Infamie"
+ },
+ "4232": {
+  "desc": "Rapide et redoutable, ce monstre saisit ses victimes avec ses pinces et l'attaque avec une piqûre venimeuse."
+ },
+ "4240": {
+  "desc": "Une créature vicieuse qui a décapité plus d'un ennemi."
+ },
+ "4249": {
+  "name": "Élémentaire de l'Eau"
+ },
+ "4255": {
+  "desc": "Elle manipule l'eau de sa jarre tel un puissant dragon."
+ },
+ "4298": {
+  "desc": "Un monstre amphibien doté de nombreux pouvoirs qui le protège des attaques ennemies."
+ },
+ "4324": {
+  "desc": "Vous ne pouvez activer cette carte que lorsqu'il y a 1 ou plusieurs \"Dame Harpie\" face recto sur le Terrain. Faites l'Invocation Spéciale d'1 \"Dame Harpie\" ou d'1 \"Sœurs de Harpie\" depuis votre main ou votre Deck."
+ },
+ "4326": {
+  "desc": "Sélectionnez 1 des monstres de votre adversaire et passez-le en Position d'Attaque. Si la carte est face verso, retournez-la face recto. Si la carte a un Effet Flip, celui-ci est immédiatement Activé."
+ },
+ "4360": {
+  "desc": "Il ressemble à une peluche inoffensive mais sa fermeture éclair cache une redoutable mâchoire."
+ },
+ "4389": {
+  "desc": "Ce dragon de dessin animé est plus dangereux qu'il n'en a l'air."
+ },
+ "4397": {
+  "desc": "Un monstre dont le plein potentiel est atteint lorsqu'il est habillé avec \"Métalmorphe\"."
+ },
+ "4398": {
+  "desc": "Invoquez ce monstre sur le Terrain par Invocation Spéciale depuis le Deck en offrant \"Zoa\" équipée de \"Métalmorphe\" en sacrifice."
+ },
+ "4423": {
+  "desc": "Vous ne pouvez Activer cet effet que durant votre Standby Phase. Sélectionnez et détruisez 2 monstres face recto avec une ATK de 1000 points ou moins en sacrifiant cette carte face recto."
+ },
+ "4430": {
+  "desc": "De dangereuses lames se cachent sous les quatre ailes de ce dragon volant."
+ },
+ "4450": {
+  "desc": "Monstre étrange à un œil capable de transpercer son ennemi d'un seul coup de lance."
+ },
+ "4465": {
+  "desc": "Cette créature attaque à coups d'ondes électromagnétiques."
+ },
+ "4469": {
+  "desc": "Lorsque cette carte est envoyée directement de votre main au Cimetière par l'effet d'une carte de votre adversaire, piochez 2 cartes de votre Deck."
+ },
+ "4491": {
+  "desc": "Ce monstre forme une énorme boule de fumier pour écraser son adversaire."
+ },
+ "4517": {
+  "desc": "Cette plante guerrière attaque à coups de graines et d'épée."
+ },
+ "4535": {
+  "desc": "Connu de beaucoup comme \"L'Exécuteur Incandescent\", ce monstre est capable de réduire ses ennemis en cendre."
+ },
+ "4543": {
+  "desc": "Il roule sur le sol et attaque ses ennemis à coups d'éclairs."
+ },
+ "4550": {
+  "desc": "Créature monstrueuse dont le corps couvert de canons ne rate jamais sa cible."
+ },
+ "4562": {
+  "name": "L'Âme errante"
+ },
+ "4589": {
+  "desc": "FLIP: Détruisez toutes les \"Épées de Révélation de la Lumière\" face recto sur le Terrain de votre adversaire. Si \"Épées de Révélation de la Lumière\" est détruite, vous pouvez réaliser deux Battle Phases durant ce tour (ou durant votre prochain tour, si l'effet est Activé durant le tour de votre adversaire)."
+ },
+ "4610": {
+  "desc": "Souris des champs mal élevée prête à enfoncer ses crocs dans n'importe quoi."
+ },
+ "4612": {
+  "desc": "Cet amphibien utilise ses deux queues comme des fouets."
+ },
+ "4624": {
+  "desc": "\"La Demoiselle Sonique\" + \"La Belle Chasseur de Prime\""
+ },
+ "4627": {
+  "desc": "Mage guerrière adepte de la création de sorts à vous faire froid dans le dos."
+ },
+ "4637": {
+  "desc": "Cette sorcière bénie par la lumière lunaire possède un pouvoir dépassant l'entendement des mortels."
+ },
+ "4647": {
+  "desc": "FLIP: Sélectionnez 1 monstre de votre adversaire et échangez-le avec celui-ci. Cet effet ne peut pas être Activé durant la Battle Phase."
+ },
+ "4657": {
+  "desc": "Vous pouvez activer 1 ou les 2 effets suivants.\n●Vous pouvez activer cette carte lorsqu'un monstre de votre adversaire déclare une attaque. Changez la position de bataille du monstre attaquant en Position de Défense.\n●Après activation, cette carte est considérée comme une Carte d'Équipement et augmente l'ATK du monstre équipé de 500 points. Vous pouvez équiper 1 monstre de votre Terrain avec cette carte."
+ },
+ "4660": {
+  "desc": "Un monstre FEU équipé avec cette carte augmente son ATK de 700 points.",
+  "name": "Salamandra"
+ },
+ "4700": {
+  "name": "Résurrection de Chakra"
+ },
+ "4703": {
+  "desc": "Cette carte est utilisée pour faire l'Invocation Rituelle de l'\"Épée Garma\". Vous devez égalment Sacrifier des monstres dont le total de Niveaux est égal à 7 ou plus sur votre Terrain ou dans votre main."
+ },
+ "4706": {
+  "desc": "Cette carte est utilisée pour faire l'Invocation Rituelle de \"Baleine Forteresse\". Vous devez égalment Sacrifier des monstres dont le total de Niveaux est égal à 7 ou plus sur votre Terrain ou dans votre main."
+ },
+ "4715": {
+  "desc": "Ce monstre ne peut être Invoqué que par Invocation Rituelle avec la Carte Magie Rituelle, \"Résurrection de Chakra\". Vous devez également sacrifier des monstres dont le total des Niveaux est égal à 7 ou plus du Terrain ou de votre main."
+ },
+ "4739": {
+  "desc": "Cette entité malfaisante contrôle le cœur des hommes. Ses mille yeux sont capables de voir et d'étendre leur influence négative aux âmes des individus.",
+  "name": "Idole aux Mille Yeux"
+ },
+ "4740": {
+  "desc": "\"Le Renoncé\" + \"Idole aux Mille Yeux\"\nTant que cette carte reste face recto sur le Terrain, les autres monstres ne peuvent ni changer leur position, ni attaquer. Ce monstre peut prendre l'ATK et la DEF d'1 monstre de votre adversaire sur le Terrain (un monstre face verso se solde par une ATK et une DEF de 0). Traitez le monstre sélectionné comme une Carte Magie d'Équipement et utilisez-le pour équiper \"Le Renoncé aux Mille Yeux\". Vous ne pouvez utiliser cet effet qu'une fois par tour et vous ne pouvez équiper \"Le Renoncé aux Mille Yeux\" qu'avec 1 monstre à la fois. Si cette carte est détruite à la suite d'un combat, le monstre d'Équipement est détruit à la place de celle-ci.",
+  "name": "Le Renoncé aux Mille Yeux"
+ },
+ "4744": {
+  "desc": "Alpha, Bêta et Gamma fusionnent pour former un monstre puissant."
+ },
+ "4750": {
+  "desc": "Si vous réussissez à invoquer cette carte, équipez-la d'un Compteur Magie (1 carte maximum). Le Compteur Magie est enlevée si vous détruisez une Carte Piège face recto sur le Terrain."
+ },
+ "4763": {
+  "desc": "Alpha, Bêta et Gamma fusionnent pour former un monstre puissant."
+ },
+ "4768": {
+  "desc": "Vous ne pouvez pas déclarer d'attaque sans sacrifier 1 monstre sur votre Terrain. Augmentez l'ATK de cette carte de 200 points pour chaque monstre de Type Insecte sur le Terrain. Faites l'Invocation Spéciale d'1 \"Jeton Monstre Insecte\" (Type Insecte/TERRE/Niveau 1/ATK 100/DEF 100) en Position d'Attaque sur votre Terrain à la fin du tour où cette carte a détruit le monstre de votre adversaire."
+ },
+ "4788": {
+  "desc": "Si cette carte est Invoquée avec succès par Invocation Normale ou par Invocation Flip, elle est changée en Position de Défense. Cette carte peut attaquer lorsqu'elle est en Position de Défense. Si cette carte attaque en Position de Défense, appliquez son ATK pour le calcul des dommages."
+ },
+ "4792": {
+  "desc": "Alpha, Bêta, et Gammameld fusionnent pour former un monstre puissant."
+ },
+ "4804": {
+  "desc": "Activable uniquement lorsqu'un monstre de votre adversaire déclare une attaque. Annulez l'attaque de ce monstre et la Battle Phase de votre adversaire est terminée."
+ },
+ "4805": {
+  "desc": "Sacrifiez 1 \"Kuriboh\" face recto. Invoquez par Invocation Spéciale autant de \"Jetons Kuriboh\" que possible sur votre Terrain en Position de Défense (Type Démon/TÉNÈBRES/Niveau 1/ATK 300/DEF 200). Ces jetons ne peuvent pas être sacrifiés pour une Invocation Sacrifice."
+ },
+ "4814": {
+  "name": "Contrôle Hypnotique"
+ },
+ "4859": {
+  "desc": "Tous les monstres ressuscités grâce à \"Monster Reborn\" sont envoyés au cimetière. \"Monster Reborn\" ne peut pas être joué tant que cette carte est sur le terrain."
+ },
+ "4870": {
+  "name": "Épine Magique"
+ },
+ "4888": {
+  "desc": "Cette carte ne peut équiper qu'un monstre sur votre Terrain. Diminuez l'ATK et la DEF du monstre équipé de cette carte de 500 points. Votre adversaire ne peut attaquer que le monstre équipé de cette carte."
+ },
+ "4950": {
+  "desc": "Vous pouvez Activer cette carte lorsque la main de votre adversaire contient 6 cartes ou plus et que la vôtre en contient 2 ou moins. Prenez une pièce et jouez à pile ou face. Si vous gagnez, piochez des cartes jusqu'à ce que votre main contienne 5 cartes. Si vous perdez, sautez votre prochain tour."
+ },
+ "4965": {
+  "desc": "Vous et votre adversaire devez sélectionner 1 Carte Monstre de vos Cimetières respectifs et les Invoquer par Invocation Spéciale en Position de Défense face verso."
+ },
+ "4987": {
+  "desc": "Tant que cette carte reste face recto sur le Terrain, votre adversaire doit révéler sa main. Il/elle augmente ses Life Points de 1000 points à chacune de ses Standby Phases si il/elle possède une Carte Magie dans sa main."
+ },
+ "5004": {
+  "desc": "Bête-Guerrier maléfique capable des pires méfaits et qui aime ça ! Sa hache porte les marques de ses innombrables victimes."
+ },
+ "5018": {
+  "desc": "Une fois qu'il entre dans la bataille, ce berserk continuera à se battre jusqu'à ce qu'il n'y ait plus un seul ennemi."
+ },
+ "5026": {
+  "desc": "Tant que cette carte reste face recto sur le Terrain, le Terrain est traité comme \"Umi\" (il n'y a cependant pas d'augmentation ou de diminution de l'ATK/DEF due à l'effet de \"Umi\"). S'il y a une Carte Magie de Terrain active sur le Terrain, cet effet ne s'applique pas."
+ },
+ "5027": {
+  "desc": "Serviteur du Roi des Machines, ce commandant est réputé pour la manière dont il contrôle ses troupes."
+ },
+ "5036": {
+  "desc": "Une mystérieuse merveille vivante.",
+  "name": "Mangeur d'Âme"
+ },
+ "5044": {
+  "desc": "FLIP: Chaque joueur sélectionne une carte du jeu de l'autre joueur et la jette. Tout monstre détruisant cette carte au combat perd 500 points de son ATK et sa DEF."
+ },
+ "5073": {
+  "desc": "Ce guerrier recouvert entièrement de métal se métamorphose en fusionnant avec \"Robolady\"."
+ },
+ "5086": {
+  "desc": "Beaucoup ont été dupés par la beauté de ce vampire."
+ },
+ "5115": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Reine Insecte\"."
+ },
+ "5135": {
+  "desc": "Lorsque votre adversaire Pose une Carte Monstre en Position de Défense face verso, retournez-la en Position d'Attaque face recto. Si la Carte Monstre possède un Effet Flip, celui-ci n'est pas Activé."
+ },
+ "5154": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Multiplication des Fourmis\". Ce Jeton ne peut pas être sacrifié pour une Invocation Sacrifice."
+ },
+ "5175": {
+  "desc": "Utilisez la Carte Magie Rituelle \"Rituel de Lithmus\" pour exécuter une Invocation Rituelle de ce monstre. Cette carte ne peut pas être détruite pendant une bataille et n'est pas affectée par les Cartes Piège. Tant qu'une Carte Piège est posée face recto sur le Terrain, l'ATK et la DEF de cette carte sont égales à 3000 points."
+ },
+ "5180": {
+  "desc": "Vous ne pouvez activer l'effet de cette carte que si une Carte Monstre appartenant à votre adversaire est sur votre Terrain. Augmentez l'ATK du monstre équipé de cette carte de l'ATK du monstre adverse."
+ },
+ "5190": {
+  "desc": "Défaussez-vous de toutes les cartes de votre Main. Sélectionnez un monstre de type Bête depuis votre Cimetière puis exécutez une Invocation Spéciale de celui-ci sur votre Terrain. Diminuez l'ATK de tous les monstres face verso sur le Terrain de votre adversaire de 200 points pour chaque monstre de type Bête, Plante et Bête-Ailée de votre Cimetière jusqu'à la End Phase de ce tour."
+ },
+ "5227": {
+  "desc": "Cette carte ne peut être activée que durant la Battle Step de votre adversaire. Annulez l'attaque d'1 monstre, sélectionnez 1 autre monstre face recto de votre adversaire et faites-le attaquer. Si le monstre sélectionné est en Position de Défense, passez-le en Position d'Attaque."
+ },
+ "5234": {
+  "desc": "Cette carte peut être activée seulement pendant la Main Phase. Une fois activée, elle devient une Carte Monstre (Type Reptile/TERRE/Niveau 4/ATK 1600/DEF 1800) puis posée dans la Zone Carte Monstre à l'aide d'une Invocation Spéciale (cette carte est également considérée comme une Carte Piège)."
+ },
+ "5238": {
+  "desc": "Lorsque ce monstre est attaqué face cachée, en position défensive, vous pouvez désigner 1 monstre de l'adversaire comme cible de cette attaque. Lorsque cette carte est sur le terrain, vous pouvez invoquer \"La Jinn le Génie Mystique de la Lampe\" dans votre jeu, par Invocation Spéciale."
+ },
+ "5239": {
+  "desc": "Cette carte est soumise aux mêmes règles que la carte \"Dame Harpie\"."
+ },
+ "5242": {
+  "desc": "Cette carte est détruite sauf si la \"Cathédrale des Rois\" est placé sur votre Terrain. Chaque fois que cette carte détruit un monstre, celui-ci est écarté du jeu et cette carte reçoit un bonus de 500 points en ATK."
+ },
+ "5244": {
+  "name": "Gardien Celtique Recyclé"
+ },
+ "5264": {
+  "desc": "Retirez du jeu n'importe quel nombre de monstres de votre Cimetière. Détruisez 1 monstre face recto sur le Terrain dont le Niveau est égal au nombre de monstres que vous avez retirés du jeu."
+ },
+ "5266": {
+  "desc": "Sélectionnez 1 monstre face recto sur le Terrain. Augmentez l'ATK du monstre sélectionné de 100 points pour chaque monstre dans votre Cimetière durant le tour où cette carte est Activée. Le nombre de monstres est appliqué lorsque cette carte est Activée."
+ },
+ "5275": {
+  "desc": "Force l'activation d'1 Carte Piège face verso. Si le timing de l'activation de la Carte Piège est incorrect, annulez l'effet et détruisez la Carte Piège. Si ce n'est pas une Carte Piège, retournez-la dans sa position d'origine. Après que cette carte est Activée, placez-la dans votre Deck et non dans le Cimetière. Mélangez ensuite le Deck."
+ },
+ "5278": {
+  "desc": "Si 5 de vos monstres ou plus ont été retirés du jeu dans le présent Duel, renvoyez 3 d'entre eux au Cimetière."
+ },
+ "5290": {
+  "desc": "Cette carte détruit toutes les Cartes Magie posées face recto sur le Terrain qui sont contrôlées par votre adversaire. Pour chaque Carte Magie détruite, votre adversaire subit 500 points de dommages."
+ },
+ "5292": {
+  "desc": "Après avoir invoqué avec succès cette carte, vous pouvez détruire un monstre de votre adversaire lors de votre 3ème Standby Phase. Cette carte ne peut pas être détruite tant que son effet est activé (le calcul des dommages s'applique normalement)."
+ },
+ "5314": {
+  "desc": "Vous ne pouvez activer l'effet de cette carte que si vous avez un monstre de Type Démon sur votre Terrain. Payez 500 Life Points pour utiliser cet effet. Les deux joueurs sélectionnent chacun 1 Carte Monstre du Cimetière de leur adversaire et la retirent du jeu."
+ },
+ "5368": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Multiplicateur\". Ce Jeton ne peut pas être sacrifié pour une Invocation Sacrifice."
+ },
+ "5369": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Bouc Émissaire\". Ce Jeton ne peut pas être sacrifié pour une Invocation Sacrifice."
+ },
+ "5370": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Machine à Spectre\"."
+ },
+ "5380": {
+  "desc": "Cette carte ne peut pas être Invoquée par Invocation Spéciale. Cette carte retourne dans la main de son propriétaire durant la End Phase du tour où elle a été Invoquée par Invocation Normale ou retournée face recto. Si cette carte inflige des dommages de combat aux Life Points de votre adversaire, celui-ci se défausse de toutes les cartes de sa main durant la Draw Phase de son prochain tour avant de piocher."
+ },
+ "5386": {
+  "name": "Cœur de l'Eau Claire"
+ },
+ "5410": {
+  "desc": "À chaque fois que cette carte inflige des dommages de combat à votre adversaire, déclarez 1 type de carte (Monstre, Magie ou Piège). Votre adversaire sélectionne 1 carte de ce type dans son Deck et l'envoie au Cimetière. De plus, si cette carte est détruite et envoyée au Cimetière par l'effet d'une carte de votre adversaire, elle est Invoquée par Invocation Spéciale sur le Terrain durant votre prochaine Standby Phase."
+ },
+ "5421": {
+  "desc": "Vous pouvez retourner cette carte en Position de Défense face verso une fois par tour durant votre Main Phase. Lorsque cette carte attaque un monstre en Position de Défense face verso sur le Terrain de votre adversaire, l'ATK de cette carte devient 2400 durant ce calcul des dommages seulement."
+ },
+ "5428": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut être Invoquée que par Invocation Spéciale depuis votre main ou votre Deck en sacrifiant 1 \"Grand Dezard\" qui a rempli les conditions. Vous pouvez retourner cette carte en Position de Défense face verso une fois par tour durant votre Main Phase. Tant que ce monstre reste face recto sur le Terrain, annulez l'activation et les effets de toutes les Cartes Magie et Piège qui désignent cette carte comme cible, et détruisez-les. Lorsque cette carte est retournée face recto, vous pouvez faire l'Invocation Spéciale d'1 monstre de Type Zombie depuis votre Cimetière."
+ },
+ "5429": {
+  "desc": "Vous pouvez retourner cette carte en Position de Défense face verso une fois par tour durant votre Main Phase. Lorsque cette carte est retournée face recto, regardez toutes les Cartes Magie et Piège Posées sur le Terrain de votre adversaire et retournez-les dans leur position d'origine."
+ },
+ "5433": {
+  "desc": "Durant la Standby Phase de votre adversaire, piochez des cartes jusqu'à ce que vous ayez 4 cartes en main. Durant votre Standby Phase, défaussez au hasard le même nombre de cartes que vous avez piochées en raison de l'effet de cette carte."
+ },
+ "5440": {
+  "desc": "À la fin du tour de votre adversaire, détruisez le(s) monstre(s) face recto avec l'ATK la plus élevée sur le Terrain. Durant votre Standby Phase, si vous avez 4 cartes ou moins dans votre main, cette carte est détruite."
+ },
+ "5452": {
+  "desc": "Vous ne pouvez utiliser cet effet que durant une Battle Step de votre tour. Diminuez l'ATK de cette carte de 400 points, puis durant un combat entre cette carte attaquant et un monstre en Position de Défense dont la DEF est inférieure à l'ATK de cette carte, infligez la différence en dommages de combat aux Life Points de votre adversaire. Cet effet continue jusqu'à la End Phase du tour où cet effet est activé.",
+  "name": "Univers Exarion"
+ },
+ "5454": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Statue du Maléfique\"."
+ },
+ "5455": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Bouc Émissaire\". Ce Jeton ne peut pas être sacrifié pour une Invocation Sacrifice."
+ },
+ "5456": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Bouc Émissaire\". Ce Jeton ne peut pas être sacrifié pour une Invocation Sacrifice."
+ },
+ "5457": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Bouc Émissaire\". Ce Jeton ne peut pas être sacrifié pour une Invocation Sacrifice."
+ },
+ "5482": {
+  "name": "Marionnettiste des Esprits"
+ },
+ "5488": {
+  "name": "Chevalier Épée"
+ },
+ "5490": {
+  "desc": "Cette carte peut être activée lorsque votre adversaire exécute une Invocation Normale ou une Invocation Flip. Vous pouvez invoquer une Carte Monstre TÉNÈBRES de Niveau 4 ou moins de votre main."
+ },
+ "5493": {
+  "desc": "Cette carte peut être activée lorsque le monstre de votre adversaire attaque. Détruisez toutes les Cartes Magie et Piège placées sur le Terrain."
+ },
+ "5497": {
+  "desc": "Cette carte peut être activée lorsque votre adversaire attaque pendant sa Battle Step. Remettez une Carte Monstre placée sur le Terrain dans votre main puis invoquez un monstre de Niveau 4 de votre main à l'aide d'une Invocation Spéciale."
+ },
+ "5526": {
+  "desc": "Cette carte n'est pas détruite à l'issue d'un combat. Détruisez cette carte lorsqu'elle est désignée comme cible d'un effet d'une Carte Magie, Piège ou Monstre à Effet. Si cette carte attaque directement avec succès les Life Points de votre adversaire, il se défausse d'1 carte au hasard de sa main."
+ },
+ "5531": {
+  "desc": "À chaque fois que vous infligez des dommages excepté des dommages de combat aux Life Points de votre adversaire, infligez 300 points de dommages aux Life Points de votre adversaire. L'effet de cette carte n'est pas appliqué pour l'effet de \"Chambre Ténébreuse du Cauchemar\"."
+ },
+ "5557": {
+  "desc": "Cette carte peut être activée lorsqu'un monstre placé sur le Terrain est détruit puis envoyé au Cimetière. Sacrifiez 1000 Life Points pour invoquer un monstre de Niveau 4 de votre Deck à l'aide d'une Invocation Spéciale."
+ },
+ "5560": {
+  "name": "Transporteur Interdimensionnel de Matière"
+ },
+ "5565": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Jarre à Cobra\". Lorsque ce Jeton est détruit à l'issue d'un combat, infligez 500 points de dommages aux Life Points de votre adversaire."
+ },
+ "5566": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Lekunga\"."
+ },
+ "5578": {
+  "desc": "Bien qu'ayant toujours souffert en silence, ils ont prêté serment de se révolter un jour."
+ },
+ "5608": {
+  "desc": "Chaque joueur sélectionne 1 carte de sa main puis compare les Niveaux des cartes sélectionnées. La carte ayant le plus grand Niveau retourne dans la main du joueur qui l'a sélectionnée. Le joueur ayant sélectionné la carte avec le Niveau le plus bas reçoit 1000 points de dommages et envoie la carte qu'il a sélectionnée au Cimetière. Si des non-monstres sont sélectionnés, ils sont traités comme étant de Niveau 0. S'ils sont de même Niveau, chaque joueur retourne sa carte dans sa main."
+ },
+ "5614": {
+  "desc": "Envoyez cette carte sur le Terrain au Cimetière durant votre Main Phase. Infligez des dommages aux Life Points de votre adversaire égaux au nombre de vos Standby Phases qui se sont écoulées depuis l'activation de cette carte x 1000 points."
+ },
+ "5619": {
+  "desc": "Vous ne pouvez activer cette carte que lorsque vous faites l'Invocation Normale avec succès d'un monstre. S'il y a plus de monstres sur le Terrain de votre adversaire que sur le vôtre, détruisez les cartes de votre adversaire pour qu'il contrôle le même nombre de monstres que vous. Votre adversaire sélectionne les monstres qui sont détruits."
+ },
+ "5623": {
+  "desc": "Sélectionnez et activez 1 des effets suivants :\n● Équipez 1 Monstre Union sur votre Terrain à un monstre approprié sur votre Terrain en tant que Carte Magie d'Équipement.\n● Libérez l'Équipement Union d'1 de vos Monstres Union équipé et faites-en l'Invocation Spéciale en Position d'Attaque face recto sur votre Terrain."
+ },
+ "5628": {
+  "desc": "\"Magicien Sombre\" + \"Buster Blader\"\nCette carte ne peut pas être Invoquée par Invocation Spéciale excepté par Invocation Fusion. Tant que cette carte reste face recto sur le Terrain, vous pouvez défausser 1 carte de votre main pour annuler l'activation d'une carte Magie et la détruire. Augmentez l'ATK de cette carte de 500 points pour chaque monstre de Type Dragon sur le Terrain et dans le Cimetière de chaque joueur."
+ },
+ "5634": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Duplication des Clones\". Si le monstre est détruit et envoyé au Cimetière, détruisez ce Jeton."
+ },
+ "5635": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Dendle Des\"."
+ },
+ "5640": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Clone Éphémère\". Détruisez ce Jeton à la fin du tour."
+ },
+ "5665": {
+  "desc": "L'ATK d'origine de tout monstre de votre adversaire ayant combattu contre cette carte durant son tour devient 200 points durant la Damage Step."
+ },
+ "5672": {
+  "name": "Œil de Senri"
+ },
+ "5689": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Sanctuaire Démoniaque\". Ce Jeton ne peut pas attaquer. Votre adversaire subit les dégâts infligées au ce Jeton durant le duel. Sacrifiez 1000 Life Points durant votre Standby Phase. Si vous ne payez pas les 1000 Life Points, ce Jeton est détruit."
+ },
+ "5716": {
+  "desc": "L'ATK de cette carte devient égale à la somme des ATK originales des 2 monstres que vous avez sacrifiés pour l'Invocation Sacrifice de cette carte."
+ },
+ "5731": {
+  "name": "Baguette de l'Œil de l'Esprit"
+ },
+ "5733": {
+  "desc": "Détruisez tous les jetons sur le Terrain. Augmentez vos Life Points du nombre de jetons détruits x 800 points."
+ },
+ "5744": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Trio Ojama\". Ce Jeton ne peut pas être offert en Sacrifice pour exécuter une Invocation Sacrifice. Lorsque le Jeton est détruit, le contrôleur subit 300 points de dégats à ses Life Points."
+ },
+ "5745": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Trio Ojama\". Ce Jeton ne peut pas être offert en Sacrifice pour exécuter une Invocation Sacrifice. Lorsque le Jeton est détruit, le contrôleur subit 300 points de dégats à ses Life Points."
+ },
+ "5746": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Trio Ojama\". Ce Jeton ne peut pas être offert en Sacrifice pour exécuter une Invocation Sacrifice. Lorsque le Jeton est détruit, le contrôleur subit 300 points de dégats à ses Life Points."
+ },
+ "5758": {
+  "desc": "Vous ne pouvez activer cette carte que lorsqu'il y a une \"Magicienne des Ténèbres\" face recto sur votre Terrain. Faîtes l'Invocation Spéciale d'1 \"Magicien Sombre\" de votre main ou de votre Deck."
+ },
+ "5765": {
+  "desc": "Lorsque cette carte inflige des dommages de combat aux Life Points de votre adversaire, vous pouvez sélectionner et activer 1 des effets suivants :\n●Renvoyez 1 Carte Monstre sur le Terrain de votre adversaire au dessus du Deck de son propriétaire.\n●Renvoyez 1 carte du dessus du Deck de votre adversaire au Cimetière."
+ },
+ "5788": {
+  "desc": "Payez 2000 Life Points. Après que 20 tours se sont écoulés après l'activation de cette carte (en comptant le tour d'activation de cette carte comme premier tour), vous gagnez le Duel."
+ },
+ "5856": {
+  "desc": "Vous ne pouvez activer cette carte que lorsqu'un monstre avec une ATK de 1000 ou moins est Invoqué par Invocation Normale, Invocation Flip ou Invocation Spéciale. Retirez le monstre du jeu et votre adversaire retire du jeu tous les monstres du même nom de sa main et de son Deck. Mélangez ensuite son Deck."
+ },
+ "5859": {
+  "name": "Drain d'Énergie"
+ },
+ "5927": {
+  "desc": "Défaussez 1 monstre EAU de votre main au Cimetière. Renvoyez 1 carte sur le Terrain dans la main de son propriétaire. Vous ne pouvez utiliser cet effet qu'une fois par tour, durant votre Main Phase."
+ },
+ "5932": {
+  "desc": "Lorsque cette carte est détruite à l'issue d'un combat avec un monstre de votre adversaire, retirez du jeu cette carte et le monstre adverse qui a détruit cette carte."
+ },
+ "5935": {
+  "desc": "Lorsque cette carte est activée, elle devient une Carte Monstre (Type Zombie/TÉNÈBRES/Niveau 4/ATK 1800/DEF 500) puis est invoquée spécialement dans la Zone Carte Monstre en Position de Défense. Si cette carte est détruite pendant un combat, les Life Points de votre adversaire sont réduits d'un nombre équivalent à l'ATK du monstre qui l'a détruite. (Cette carte est également considérée comme une Carte Piège.)"
+ },
+ "5936": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Agneaux Égarés\"."
+ },
+ "5937": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Agneaux Égarés\"."
+ },
+ "5943": {
+  "desc": "Lorsque cette carte est Invoquée avec succès par Invocation Sacrifice, lancez le dé une fois. L'ATK de cette carte est augmentée du chiffre du dé multiplié par 200 aussi longtemps qu'elle reste face recto sur le Terrain."
+ },
+ "5944": {
+  "desc": "Jetez un dé à chaque Standby Phase. Appliquez les effets suivants selon la face que vous avez obtenue. 1) Enlevez une carte de votre main. 2) Votre adversaire doit enlever une carte de sa main. 3) Piochez une carte. 4) Votre adversaire pioche une carte. 5) Détruisez une carte posée sur le Terrain de votre adversaire. 6) Détruisez cette carte."
+ },
+ "5945": {
+  "desc": "Choisissez 2 chiffres de 1 à 6. Votre adversaire doit jeter un dé et si le résultat obtenu est identique à l'un des chiffres que vous avez choisis, vous pouvez piocher le nombre de cartes équivalent. Dans le cas contraire, envoyez le nombre équivalent de cartes du Deck au Cimetière."
+ },
+ "5955": {
+  "desc": "Tant que cette carte reste en Position d'Attaque face recto sur le Terrain, elle n'est pas détruite à l'issue d'un combat, bien que le calcul des dommages s'applique normalement. Un monstre qui a combattu cette carte ne peut plus changer sa position de combat ni attaquer tant que cette carte reste en Position d'Attaque face recto sur le Terrain."
+ },
+ "5956": {
+  "name": "Tour d'Ossements Buveuse d'Âmes"
+ },
+ "5957": {
+  "desc": "Lorsque cette carte est Invoquée avec succés par Invocation Spéciale, vous pouvez l'équiper avec 1 Carte de Magie d'Équipement appropriée de votre Cimetière."
+ },
+ "5963": {
+  "name": "Perceur à Épines"
+ },
+ "5964": {
+  "desc": "Lancez une pièce 3 fois. Si le résultat est au moins 2 fois \"face\", sélectionnez 1 carte du Terrain de votre adversaire et détruisez-la. Cet effet ne peut être utilisé qu'une seule fois par tour, durant votre Main Phase."
+ },
+ "5973": {
+  "desc": "Cette carte ne peut pas être attaquée s'il y a un autre monstre de Type Démon face recto sur votre Terrain. L'ATK et la DEF de cette carte deviennent égales au nombre de monstres de Type Démon sur le Terrain (exceptée cette carte) x 1000 points."
+ },
+ "5974": {
+  "name": "Dragon d'Éclat Solaire"
+ },
+ "5980": {
+  "desc": "Sacrifiez 1 monstre sur votre Terrain. Prenez les cartes de votre Deck jusqu'à prendre un monstre qui puisse être Invoqué par Invocation Normale, et faites-en l'Invocation Spéciale. Envoyez toutes les autres cartes prises dans le Cimetière."
+ },
+ "5981": {
+  "desc": "Une fois uniquement durant chacune de vos Standby Phases, Vous pouvez payer 700 Life Points pour activer l'effet de cette carte. Échangez l'ATK et la DEF d'1 monstre de Type Guerrier ou Machine sur votre Terrain jusqu'à la fin du prochain tour de votre adversaire. Lorsque cette carte est détruite, l'effet est annulé."
+ },
+ "5995": {
+  "desc": "Annule l'activation d'une Carte Magie d'Équipement et la détruit."
+ },
+ "5996": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut pas être Invoquée par Invocation Spéciale excepté en sacrifiant 1 \"Guerrier de Zera\" face recto sur votre Terrain tant que \"Pandémonium\" est face recto sur votre Terrain. Lorsque vous faites avec succés l'Invocation Spéciale de cette carte, votre adversaire défausse au hasard 3 cartes de sa main. Cet effet n'est pas appliqué à moins que \"Pandémonium\" ne soit sur votre Terrain."
+ },
+ "6001": {
+  "desc": "Cette carte ne peut pas être invoquée spécialement. Lorsque les effets d'un Monstre à Effet sont activés, cette carte doit être sacrifiée si elle est face recto sur le Terrain. Elle annule l'activation et les effets du Monstre à Effet puis le détruit."
+ },
+ "6003": {
+  "desc": "Choisissez un monstre en position de défense puis détruisez-le."
+ },
+ "6004": {
+  "desc": "Si votre adversaire active l'effet d'une carte qui vous oblige à vous défausser de votre Main, envoyez cette carte de votre Main à votre Cimetière pour annuler l'effet de la carte adverse et la détruire. Ensuite, piochez 1 carte depuis votre Deck."
+ },
+ "6005": {
+  "desc": "Pendant votre Standby Phase, si cette carte est placée dans votre Cimetière et que vous ne possédez aucune carte dans votre Main, vous pouvez l'ajouter à celle-ci en sacrifiant 500 Life Points."
+ },
+ "6006": {
+  "desc": "Choisissez un des effets suivants :\n●Piochez une carte de votre Deck.\n●Si un Monstre Spirit est posé face recto sur le Terrain de votre adversaire, piochez 2 cartes de votre Deck."
+ },
+ "6010": {
+  "desc": "Cette carte peut être activée lorsqu'un monstre de l'adversaire attaque. Le propriétaire de cette carte choisis la carte qui doit être prise pour cible."
+ },
+ "6043": {
+  "desc": "Sacrifiez un Monstre Normal (excepté un jeton) sur votre Terrain pour infliger 800 points de dommages aux Life Points de votre adversaire."
+ },
+ "6048": {
+  "name": "Épée du Dévoreur d'Âme"
+ },
+ "6050": {
+  "name": "Revirement d'Âme"
+ },
+ "6051": {
+  "name": "Magie Économique"
+ },
+ "6052": {
+  "desc": "A chaque fois qu'une ou plusieurs cartes sont défaussées de votre main au Cimetière par l'effet d'une carte contrôlée par votre adversaire, augmentez vos Life Points de 1000 points."
+ },
+ "6063": {
+  "desc": "Durant chacune des End Phases de votre adversaire, placez 1 carte face recto de votre Deck ou de votre main sur votre Terrain dans cet ordre : \"Deuxième Sarcophage\", \"Troisième Sarcophage\". Si l'une d'elles est retirée de votre Terrain, toutes ces cartes sont envoyées au Cimetière. Lorsque vous avez les 3 cartes Sarcophage sur votre Terrain, envoyez-les au Cimetière et faîtes l'Invocation Spéciale d'1 \"Esprit du Pharaon\" de votre main ou de votre Deck."
+ },
+ "6066": {
+  "desc": "Durant la End Phase de chaque tour, sélectionnez dans votre Deck un nombre de Monstres Normaux de Niveau 2 ou moins égal au nombre de vos Monstres Normaux de Niveau 2 ou moins détruits à l'issue du combat durant ce tour et Invoquez-les par Invocation Spéciale sur votre Terrain. Mélangez ensuite votre Deck."
+ },
+ "6067": {
+  "desc": "Tous les Monstres à Effet face recto sur le Terrain sont changés en Position de Défense. Durant ce tour, la DEF d'origine de ces Monstres à Effet devient 0 et leur position de combat ne peut être changée."
+ },
+ "6071": {
+  "name": "Résurrection de l'Âme"
+ },
+ "6076": {
+  "desc": "Cette carte ne peut pas être invoquée spécialement. Sacrifiez la moitié de vos Life Points pour détruire toutes les cartes sur le Terrain sauf celle-ci, puis retirez-les du jeu. Pour chaque carte détruite, l'ATK de cette carte augmente de 300 points. Cette carte est envoyée au Cimetière lors de la End Phase du tour où elle a été invoquée normalement ou par flip."
+ },
+ "6078": {
+  "desc": "Payez la moitié de vos Life Points. Faîtes l'Invocation Spéciale d'autant de vos monstres ayant été retirés du jeu de votre Terrain que possible. Durant la End Phase, retirez du jeu tous les monstres ayant été Invoqués par Invocation Spéciale par cet effet.",
+  "name": "Retour de la Dimension Différente"
+ },
+ "6079": {
+  "desc": "Si cette carte face recto sur votre Terrain est retirée du jeu, détruisez \"Andro Sphinx\" et \"Sphinx Teleia\" sur votre Terrain et retirez-les du jeu."
+ },
+ "6087": {
+  "desc": "Lorsque \"Pyramide de Lumière\" est face recto sur le Terrain, vous pouvez payer 500 Life Points pour faire l'Invocation Spéciale de cette carte. Cette carte ne peut être attaquée durant le tour où elle a été Invoquée par Invocation Normale ou Spéciale. Cette carte ne peut pas être Invoquée par Invocation Spéciale de votre Cimetière. Si cette carte détruit un monstre en Position de Défense à l'issue d'un combat, infligez des dommages à votre adversaire égaux à la moitié de l'ATK du monstre détruit."
+ },
+ "6088": {
+  "desc": "Lorsque \"Pyramide de Lumière\" est face recto sur le Terrain, vous pouvez payer 500 Life Points pour faire l'Invocation Spéciale de cette carte. Cette carte ne peut être attaquée durant le tour où elle a été Invoquée par Invocation Normale ou Spéciale. Cette carte ne peut pas être Invoquée par Invocation Spéciale de votre Cimetière. Si cette carte détruit un monstre en Position de Défense à l'issue d'un combat, infligez des dommages à votre adversaire égaux à la moitié de la DEF du monstre détruit."
+ },
+ "6090": {
+  "desc": "Lorsque vous prenez 3000 points de dommages ou plus de combat en 1 attaque, vous pouvez activer cette carte. Retirez du jeu tous les monstres du Deck et du Cimetière de chacun des joueurs."
+ },
+ "6106": {
+  "desc": "Envoyez 1 Carte Monstre de votre main au Cimetière pour détruire 1 monstre face recto sur le Terrain de votre adversaire dont l'ATK est égale ou inférieure à l'ATK du monstre envoyé. Durant la End Phase du tour où cette carte a détruit un monstre à l'issue d'un combat, envoyez cette carte au Cimetière pour faire l'Invocation Spéciale d'un \"Dragon Armé LV7\" depuis votre main ou votre Deck."
+ },
+ "6107": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut pas être Invoquée par Invocation Spéciale excepté par l'effet du \"Dragon Armé LV5\". Envoyez 1 Carte Monstre de votre main au Cimetière pour détruire tous les monstres face recto sur le Terrain de votre adversaire dont l'ATK est égale ou inférieure à l'ATK du monstre envoyé."
+ },
+ "6113": {
+  "desc": "Augmentez l'ATK de cette carte de 1000 points pour chaque monstre FEU sur le Terrain excepté cette carte. Envoyez un monstre FEU autre que cette carte au Cimetière pour infliger 500 points de dommages aux Life Points de votre adversaire."
+ },
+ "6115": {
+  "name": "Dragon Élémentaire"
+ },
+ "6126": {
+  "desc": "\"Ojama Vert\" + \"Ojama Jaune\" + \"Ojama Noir\"\nSélectionnez jusqu'à 3 Zones Carte Monstre de votre adversaire. Tant que cette carte reste face recto sur le terrain, les zones sélectionnées ne peuvent pas être utilisées."
+ },
+ "6133": {
+  "name": "Montée de Niveau !"
+ },
+ "6150": {
+  "desc": "Cette carte peut-être Invoquée par Invocation Spéciale depuis votre main en vous défaussant d'une autre carte de votre Main."
+ },
+ "6158": {
+  "desc": "Cette carte est activée en envoyant la carte \"Le Mystérieux\" posée face recto sur le Terrain au Cimetière. Lorsque cette carte est activée, les monstres sur le Terrain de votre adversaire sont Invoqués par Invocation Spéciale en Position de Défense en tant que \"Jetons Mystérieux\" (Type Magicien/VENT/Niveau 5/ATK 2000/DEF 1200). Les Jetons ne peuvent pas attaquer."
+ },
+ "6163": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Homme-Bloc\". Ce Jeton ne peut pas déclarer d'attaque."
+ },
+ "6165": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Magie du Mystérieux 4\". Ce Jeton ne peut pas déclarer d'attaque."
+ },
+ "6166": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut être Invoquée par Invocation Spéciale excepté par l'effet de \"Spadassin Silencieux LV5\". Tant que cette carte reste face recto sur votre Terrain, annulez les effets de toutes les Cartes Magie sur le Terrain."
+ },
+ "6169": {
+  "desc": "Cette carte peut être activée si 2 monstres ou plus de Type Magicien sont posés sur le Terrain face recto en position d'attaque. Cette carte peut être activée en sélectionnant l'un de ces monstres. L'ATK de ce monstre passe à 3000 jusqu'à la fin de ce tour. Les autres monstres de Type Magicien qui n'ont pas été sélectionnés ne peuvent pas attaquer pendant ce tour."
+ },
+ "6194": {
+  "name": "Manta de la Malédiction Rampante"
+ },
+ "6197": {
+  "name": "Âme de Gaïa, le Combustible Collectif"
+ },
+ "6203": {
+  "name": "Homunculus, l'Être Alchimique"
+ },
+ "6208": {
+  "name": "Étincelle d'Extase Triangulaire"
+ },
+ "6210": {
+  "desc": "Un monstre équipé de cette carte ne peut changer sa position de combat ou déclarer une attaque. Diminuez l'ATK de ce monstre équipé de 300 points. Si le monstre équipé est détruit, sélectionnez 1 monstre sur le Terrain et équipez-le avec cette carte."
+ },
+ "6220": {
+  "name": "Fruits des Études de Kozaky"
+ },
+ "6229": {
+  "desc": "Cette carte ne peut pas être détruite pendant une bataille. Lorsque cette carte est en Position d'Attaque face recto, sacrifiez un monstre de niveau 5 ou moins sur votre Terrain pour infliger aux Life Points de votre adversaire des dégâts équivalents à l'ATK du monstre sacrifié. Cet effet ne peut être utilisé qu'une seule fois par tour."
+ },
+ "6235": {
+  "desc": "De tous les guerriers insectes, c'est le parangon des Indestructibles Insectes Envahisseurs, corps d'élite que seuls les plus braves peuvent rejoindre. Nous ne pouvons plus ignorer leurs inégalables prouesses."
+ },
+ "6258": {
+  "desc": "Vous pouvez substituer cette carte par n'importe quel Monstre-Matériel de Fusion. Lorsque vous faîtes ainsi, le ou les autres Monstres-Matériel de Fusion doivent être corrects. Sacrifiez les Monstres-Matériel de Fusion en incluant cette carte sur le Terrain pour faire l'Invocation Spéciale d'1 Monstre de Fusion TERRE de votre Fusion Deck."
+ },
+ "6265": {
+  "desc": "\"Seigneur des D\" + \"Dragon Divin Ragnarok\"\nTant que cette carte reste face recto sur le Terrain, votre adversaire ne peut pas désigner de monstre de Type Dragon comme cible de l'effet d'une Carte Magie, Piège ou Monstre. Une fois par tour, vous pouvez faire l'Invocation Spéciale d'1 monstre de Type Dragon depuis votre main sur votre Terrain."
+ },
+ "6277": {
+  "desc": "Lorsque votre adversaire a 4 cartes dans sa main, sélectionnez et activez un des effets suivants :\n● Votre adversaire ne peut pas piocher durant sa prochaine Draw Phase.\n● Votre adversaire ne peut activer aucune Carte Magie et/ou Piège durant ce tour."
+ },
+ "6287": {
+  "desc": "Lorsque cette carte est détruite pendant une bataille et envoyée au Cimetière, vous pouvez payer 500 Life Points pour en faire l'Invocation Spéciale pendant la Standby Phase du prochain tour. Si cette carte est invoquée avec succès, son ATK augmente de 500 points."
+ },
+ "6288": {
+  "desc": "Choisissez une Carte Monstre posée face recto sur votre Terrain pour activer cette carte. Pendant la Battle Phase de ce tour, les Points ATK du monstre sélectionné augmentent de la somme totale des Points ATK de toutes les Cartes Monstres posées face recto en position d'attaque sur votre Terrain. Ce monstre ne peut pas infliger de dommages directes à votre adversaire. De plus, les autres monstres posés face recto en position d'attaque ne peuvent pas attaquer."
+ },
+ "6292": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut être Invoquée par Invocation Spéciale excepté en sacrifiant 1 \"Dragon Noir aux Yeux Rouges\" sur votre Terrain. Augmentez l'ATK de cette carte de 300 points pour chaque monstre de Type Dragon dans votre Cimetière."
+ },
+ "6293": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut être Invoquée par Invocation Spéciale excepté en retirant du jeu 1 \"Seigneur Vampire\" sur votre Terrain. Défaussez 1 monstre de Type Zombie de votre main au Cimetière pour sélectionner et faire l'Invocation Spéciale d'1 monstre de Type Zombie du Cimetière avec un Niveau inférieur à celui du monstre de Type Zombie défaussé. Vous ne pouvez utiliser cet effet qu'une fois par tour."
+ },
+ "6299": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Séraphin Artificiel\"."
+ },
+ "6300": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Double Je - Héros de la Destinée\"."
+ },
+ "6302": {
+  "desc": "Si aucun monstre n'est sur votre Terrain lorsque vous exécutez une Invocation Normale de cette carte, vous pouvez faire l'Invocation Spéciale depuis votre main d'un monstre dont le nom contient le mot \"Mécano\" autre que \"Soldat Mécano\"."
+ },
+ "6307": {
+  "desc": "Envoyez 1 carte \"Soldat Mécano\", 1 \"Tireur d'Élite Mécano\" et 1 \"Fantassin Mécano\" de votre Terrain au Cimetière. Faites l'Invocation Spéciale de \"Force Mécano\" depuis votre main ou votre Deck."
+ },
+ "6308": {
+  "desc": "Cette carte ne peut pas être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut pas être Invoquée Spécialement sauf par l'effet de \"Commandant Covington\". Sacrifiez 1000 Life Points pour attaquer avec cette carte. Envoyez cette carte face recto au Cimetière pour exécuter une Invocation Spéciale de \"Soldat Mécano\", \"Tireur d'Élite Mécano\" et \"Fantassin Mécano\" depuis votre Cimetière."
+ },
+ "6324": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut pas être Invoquée par Invocation Spéciale excepté en retirant du jeu un ou plusieurs monstre(s) de Type Rocher depuis votre Cimetière. L'ATK et la DEF d'origine de cette carte deviennent le nombre de monstres de Type Rocher que vous avez retirés du jeu lorsque vous avez fait l'Invocation Spéciale de cette carte x 700 points."
+ },
+ "6368": {
+  "desc": "Cette carte ne peut pas être Invoquée par Invocation Spéciale. Lorsque cette carte est Invoquée avec succès par Invocation Sacrifice, vous pouvez retirer du jeu jusqu'à 5 monstres FEU de votre Cimetière. Détruisez un nombre de Cartes Magie et Piège égal au nombre de cartes que vous avez retirées du jeu avec cet effet."
+ },
+ "6376": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut être Invoquée par Invocation Spéciale excepté en sacrifiant 1 \"Dragon-Levia - Dédale\" sur votre Terrain. Envoyez \"Umi\" de votre Terrain au Cimetière pour envoyer au Cimetière toutes les cartes dans la main des deux joueurs et sur le Terrain excepté cette carte."
+ },
+ "6380": {
+  "desc": "Lorsqu'un monstre de type Bête sur votre Terrain est détruit et envoyé au Cimetière, vous pouvez sacrifier 1000 Life Points pour faire l'Invocation Spéciale de cette carte depuis votre main ou votre Cimetière."
+ },
+ "6400": {
+  "desc": "Cette carte ne peut pas être sacrifiée. Lorsque cette carte est invoquée normalement ou par invocation flip avec succès, elle est posée sur le Terrain en Position de Défense. Défaussez-vous d'une Carte Magie de votre Main pour invoquer spécialement un monstre de niveau 4 depuis votre Deck. Le monstre invoqué spécialement ne pourra pas attaquer pendant ce tour. Cet effet ne peut être activé qu'une seule fois par tour pendant la Main Phase."
+ },
+ "6408": {
+  "desc": "Vous ne pouvez activer cette carte que lorsqu'il y a un \"Bubbleman, Héros Élémentaire\" face recto sur le Terrain. Changez 1 \"Bubbleman, Héros Élémentaire\" sur votre Terrain en Position d'Attaque face recto et 1 monstre sur le Terrain de votre adversaire en Position d'Attaque face recto, en Position de Défense. Sacrifiez le \"Bubbleman, Héros Élémentaire\" qui a été changé en Position de Défense et faites l'Invocation Spéciale d'1 monstre depuis votre main qui inclut \"Héros Élémentaire\" dans son nom de carte."
+ },
+ "6410": {
+  "desc": "Cette carte peut être Invoquée par Invocation Spéciale depuis votre main après avoir annulé les effets d'une carte contrôlée par votre adversaire à l'aide d'une Carte Contre-Piège. Si cette carte est Invoquée par Invocation Spéciale avec succès, les effets suivants sont activés selon les effets annulés au départ.\n●Magie : réduisez les Life Points de votre adversaire de 1500.\n●Piège : choisissez une carte posée sur le Terrain de votre adversaire puis détruisez-la.\n●Effet de monstre : choisissez une carte depuis votre Cimetière puis faites-en l'Invocation Spéciale."
+ },
+ "6424": {
+  "desc": "Lorsque cette carte est Invoquée avec succès par Invocation Sacrifice, vous pouvez faire l'Invocation Spéciale d'un nombre de \"Grenouille Des\" de votre main ou votre Deck allant jusqu'au nombre de \"T.A.D.P.O.L.E.\" dans votre Cimetière."
+ },
+ "6449": {
+  "desc": "À chaque fois que votre adversaire déclare une attaque sur un monstre en Position de Défense face recto, tirez à pile ou face. Si vous gagnez, changez le monstre face recto en Position de Défense ciblé en Position d'Attaque. Si vous perdez, le contrôleur de cette carte reçoit des dommages égaux à la différence entre l'ATK du monstre attaquant et la DEF du monstre attaqué."
+ },
+ "6450": {
+  "desc": "Sacrifiez 1000 Life Points pour détruire toutes les Cartes Monstre posées face recto sur le Terrain et empêcher les monstres de même Type d'être invoqués normalement, spécialement ou par Flip."
+ },
+ "6454": {
+  "desc": "\"Chevalier de la Reine\" + \"Chevalier du Valet\" + \"Chevalier du Roi\"\nUne Invocation Fusion de cette carte ne peut être réalisée qu'avec les Monstres-Matériels de Fusion ci-dessus. Tant que cette carte reste sur le Terrain face recto, vous pouvez annuler les effets de Magie, Piège ou Effet de monstre en vous défaussant d'une carte de même type de votre Main (n'importe quel type de Carte Monstre peut être retirée pour annuler les effets d'un Monstre à Effet). Cet effet ne peut être utilisé qu'une seule fois par tour."
+ },
+ "6456": {
+  "desc": "Cette carte ne peut pas être Invoquée par Invocation Spéciale. Lorsque cette carte est Invoquée par Invocation Normale, vous pouvez équiper autant de Cartes Magie d'Équipement de votre Cimetière que possible au(x) monstre(s) de Type Guerrier sur votre Terrain."
+ },
+ "6469": {
+  "desc": "Sélectionnez 1 \"Ojama Roi\" face recto sur le Terrain. Détruisez chaque monstre sur le Terrain qui inclut \"Ojama\" dans son nom de carte, excepté l'\"Ojama Roi\" sélectionné. Augmentez l'ATK de l'\"Ojama Roi\" sélectionné de 1000 points pour chaque monstre détruit."
+ },
+ "6474": {
+  "desc": "Lorsque cette carte est détruite par un monstre attaquant de votre adversaire et envoyée au Cimetière, infligez les dommages de combat que vous avez reçus durant ce combat également aux Life Points de votre adversaire."
+ },
+ "6483": {
+  "desc": "\"Tigre Jet V\" + \"Catapulte à Vent W\"\nCette carte ne peut être Invoquée par Invocation Spéciale depuis votre Fusion Deck qu'en retirant du jeu les cartes ci-dessus depuis votre Terrain (N'utilisez pas la carte \"Polymérisation\"). En défaussant 1 carte de votre main pour changer la position de combat d'1 monstre sur le Terrain de votre adversaire (Les effets Flip ne sont pas activés à ce moment.)"
+ },
+ "6487": {
+  "desc": "\"Avian, Héros Élémentaire\" + \"Sparkman, Héros Élémentaire\" + \"Bubbleman, Héros Élémentaire\"\nCe monstre ne peut pas être Invoqué par Invocation Spéciale excepté par une Invocation Fusion. En envoyant 1 carte (exceptée cette carte) de votre Terrain au Cimetière, sélectionnez 1 monstre sur votre Terrain. Tant que cette carte est face recto sur le Terrain, le monstre sélectionné n'est pas détruit à l'issue d'un combat. (Le calcul des dommages est appliqué normalement.)"
+ },
+ "6490": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Raviel, Empereur des Phantasmes\". Ce Jeton ne peut pas déclarer d'attaque."
+ },
+ "6513": {
+  "name": "Division !"
+ },
+ "6521": {
+  "name": "Lancement !"
+ },
+ "6530": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut être Invoquée par Invocation Spéciale excepté en sacrifiant 1 \"Magicien Sombre\" depuis votre Terrain. Tant que cette carte est face recto sur le Terrain, infligez 1000 points de dommages aux Life Points de votre adversaire à chaque fois qu'un joueur active 1 Carte Magie Normale.",
+  "name": "Sorcier Éradicateur des Ténèbres"
+ },
+ "6540": {
+  "desc": "Cette carte ne peut ni être Invoquée par Invocation Normale ni être Posée. Cette carte ne peut pas être Invoquée par Invocation Spéciale excepté en sacrifiant 1 \"Dragon Armé LV7\" depuis votre Terrain au Cimetière. Envoyez 1 carte de votre main au Cimetière pour détruire tous les monstres face recto sur le Terrain de votre adversaire."
+ },
+ "6541": {
+  "desc": "Ajoutez le nombre de votre choix de cartes de votre main à votre Deck et mélangez-le. Ensuite piochez le même nombre de cartes que celui des cartes ajoutées à votre Deck."
+ },
+ "6542": {
+  "desc": "Vous ne pouvez activer cette carte que lorsqu'1 monstre avec une ATK de 1500 points ou moins est Invoqué par Invocation Spéciale sur votre Terrain alors qu'il y a 1 monstre face recto sur le Terrain de votre adversaire. Faites l'Invocation Spéciale de toutes les cartes avec le même nom que le monstre Invoqué depuis votre main, votre Deck et votre Cimetière en Position d'Attaque face recto. Votre adversaire sélectionne 1 monstre sur son Terrain et fait l'Invocation Spéciale de toutes les cartes avec ce même nom depuis sa main, son Deck et son Cimetière."
+ },
+ "6544": {
+  "desc": "Vous ne pouvez activer cette carte que lorsqu'un monstre sur votre Terrain est détruit à l'issue d'un combat et envoyé au Cimetière. Chacun de vous et de votre adversaire sélectionne 1 monstre de vos Cimetières respectifs et en fait l'Invocation Spéciale en Position de Défense. Aucun monstre Invoqué par Invocation Spéciale par l'effet de cette carte ne peut changer sa position de combat aussi longtemps qu'il est face recto sur le Terrain, excepté par l'effet d'une carte.",
+  "name": "La Fin d'Enkindling"
+ },
+ "6547": {
+  "name": "Dragonute à la Hache"
+ },
+ "6550": {
+  "desc": "Si cette carte est Invoquée par Invocation Normale ou Spéciale avec succès, vous pouvez choisir 5 Cartes Magie maximum placées dans le Cimetière de votre adversaire puis les retirer du jeu. Pour chaque carte retirée grâce à cet effet, l'ATK de cette carte augmente de 300 points."
+ },
+ "6573": {
+  "desc": "Sélectionnez 1 monstre \"Rouages Ancients\" de votre main (révélez-le à votre adversaire). Retirez du jeu des cartes \"Rouages Ancients\" de votre Cimetière dont le total de Niveaux est égal au double de celui de la carte sélectionnée. Vous n'avez pas à faire de Sacrifice lorsque vous faites l'Invocation Normale ce tour de la carte sélectionnée."
+ },
+ "6583": {
+  "desc": "Vous ne pouvez activer cette carte qu'en réponse à l'activation d'un effet qui devrait renvoyer cette carte depuis le Terrain dans la main. Piochez 2 cartes depuis votre Deck et défaussez 1 carte de votre main."
+ },
+ "6586": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Fantômes Martyres\"."
+ },
+ "6616": {
+  "desc": "Vous ne pouvez équiper cette carte qu'à \"Magicienne Blanche Pikeru\" ou à \"Curran Magicienne d'Ébène\". Augmentez l'ATK du monstre équipé de 800 points. Durant un tour où le monstre équipé détruit un monstre de Niveau 5 ou plus à l'issue d'un combat, en Sacrifiant le monstre équipé et cette carte, Invoquez par Invocation Spéciale depuis votre main ou votre Deck : 1 \"Princesse Pikeru\" si vous avez Sacrifié 1 \"Magicienne Blanche Pikeru\", ou 1 \"Princesse Curran\" si vous avez Sacrifié \"Curran Magicienne d'Ébène\"."
+ },
+ "6636": {
+  "desc": "Vous pouvez ajouter 1 carte \"Kuriboh\" ou \"Kuriboh Ailé\" de votre Deck à votre main, ou en faire l'Invocation Spéciale sur votre Terrain."
+ },
+ "6637": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Vipère de la Victoire XX03\" ou \"Capsule de Puissance\". Ce Jeton possède toujours le même type, attribut, niveau, ATK ou DEF que \"Vipère de la Victoire XX03\"."
+ },
+ "6638": {
+  "desc": "Invoqué par Invocation Spéciale par l'effet de \"Dandylion\". Ce Jeton ne peut pas être offert en Sacrifice pour exécuter une Invocation Sacrifice durant le même tour où il a été Invoqué par Invocation Spéciale."
+ },
+ "6639": {
+  "desc": "\"Avian, Héros Élémentaire\" + \"Burstinatrix, Héros Élémentaire\" + \"Clayman, Héros Élémentaire\" + \"Bubbleman, Héros Élémentaire\"\nCe monstre ne peut pas être Invoqué par Invocation Spéciale excepté par une Invocation Fusion. L'Attribut de cette carte est également traité comme étant VENT, EAU, FEU et TERRE. Si cette carte est invoquée avec succès, toutes les cartes retirées du jeu reviennent dans le Deck de leur propriétaire respectif et le Deck est mélangé. Pour chaque Carte Monstre possédant le même Attribut que cette carte, l'ATK de celle-ci augmente de 300 points."
+ },
+ "6645": {
+  "desc": "Augmentez l'ATK et la DEF de cette carte de 300 points pour chacune de vos cartes retirées du jeu."
+ },
+ "6648": {
+  "desc": "Cette carte peut être Invoquée par Invocation Spéciale en sacrifiant \"Duo Hélios Megistus\" sur votre Terrain. L'ATK et la DEF de cette carte sont égales au nombre de Cartes Monstre retirées du jeu x 300. Si cette carte est détruite à l'issue d'un combat et envoyée au Cimetière, elle est Invoquée par Invocation Spéciale durant la End Phase et son ATK et sa DEF augmentent de 500 points. Si des monstres sont sur le Terrain de votre adversaire, cette carte peut attaquer une fois de plus."
+ },
+ "6653": {
+  "desc": "Un nouvel Héros Élémentaire a émergé du Néo-Space ! Lorsqu'il a engagé un Contact Fusion avec un Néo-Spacien, ses pouvoirs cachés se sont révélés."
+ },
+ "6654": {
+  "desc": "Lorsque cette carte est envoyée au Cimetière, vous pouvez faire l'Invocation Spéciale de 2 \"Jetons Fluffy\" (Type Plante/VENT/Niveau 1/ATK 0/DEF 0) sur votre Terrain. Ce Jeton peut être offert en Sacrifice pour une Invocation Sacrifice durant le même tour où il a été Invoqué."
+ },
+ "6659": {
+  "desc": "Une fois par tour, tant que cette carte est face recto sur votre Terrain, si un monstre sur votre Terrain qui inclut \"Héros de la Destinée\" dans son nom de carte (excepté cette carte) est détruit à l'issue d'un combat et envoyé au Cimetière, vous pouvez faire l'Invocation Spéciale de ce 1 monstre sur votre Terrain durant votre prochaine Standby Phase."
+ },
+ "6661": {
+  "desc": "Si cette carte a été Invoquée par Invocation Spéciale par l'effet de la \"Prison de la Tour de l'Horloge\", détruisez tous les monstres sur votre Terrain (exceptés les monstres \"Héros de la Destinée\"), vous pouvez ensuite Invoquer par Invocation Spéciale jusqu'à 2 monstres \"Héros de la Destinée\" de votre Cimetière. Durant le tour où cette carte est Invoquée par Invocation Spéciale, les monstres \"Héros de la Destinée\" sur votre Terrain ne peuvent pas être détruits et tous les dommages de combat infligés au contrôleur de cette carte deviennent 0 durant les combats impliquant des monstres \"Héros de la Destinée\" de votre Terrain. L'ATK et la DEF de cette carte sont égales au total combiné des ATK d'origine de tous les monstres \"Héros de la Destinée\" sur votre Terrain (excepté cette carte)."
+ },
+ "6675": {
+  "desc": "Retirez du jeu ces cartes depuis votre Cimetière pour activer cette carte : \"H - Cœur Passionné\", \"E - Appel de Détresse\", \"R - Justice Vertueuse\" et \"O - Au-delà de l'Âme\". Faites l'Invocation Spéciale d'1 Monstre Normal \"Héros Élémentaire\" depuis votre Deck. Ce tour, les Monstres Normaux \"Héros Élémentaire\" que vous contrôlez peuvent attaquer votre adversaire directement."
+ },
+ "6684": {
+  "desc": "Lorsque cette carte détruit un monstre de l'adversaire à l'issue d'un combat, sélectionnez et activez 1 des effets suivants :\r\n● Augmentez l'ATK de cette carte de 400 points.\r\n● Détruisez 1 Carte Magie ou Piège face recto sur le Terrain.\r\n● Faites l'Invocation Spéciale d'1 \"Jeton Option\" sur votre Terrain. Il a toujours les mêmes Type, Attribut, Niveau, ATK et DEF que cette carte."
+ },
+ "6685": {
+  "desc": "Si vous faites l'Invocation Sacrifice de cette carte en sacrifiant 1 des monstres suivants, cette carte acquiert l'effet approprié :\n● Homme-Batterie D : Annulez l'effet d'une Carte Magie ou Piège qui cible cette carte.\n● Homme-Batterie C : Durant un combat entre cette carte attaquant et un monstre en Position de Défense dont la DEF est inférieure à l'ATK de cette carte, infligez la différence en dommages de combat aux Life Points de votre adversaire.\n● Homme-Batterie AA : Augmentez l'ATK de cette carte de 1000 points."
+ },
+ "6697": {
+  "desc": "FLIP: Votre adversaire ne peut pas faire d'Invocation Spéciale pour le restant du tour."
+ },
+ "6720": {
+  "desc": "Cette carte ne peut pas être Invoquée par Invocation Spéciale. Si vous faites l'Invocation Sacrifice de cette carte, le Sacrifice doit être un monstre VENT. Tant que cette carte est face recto sur le Terrain, les deux joueurs reçoivent 1000 points de dommages durant la End Phase de chaque joueur. Diminuez les dommages que chaque joueur reçoit quand cela arrive de 500 points pour chaque Carte Magie et Piège que ce joueur contrôle."
+ },
+ "6736": {
+  "desc": "Lorsqu'un monstre qui inclut \"roid\" dans son nom de carte est ajouté à votre main depuis votre Cimetière, vous pouvez faire l'Invocation Spéciale de ce monstre."
+ },
+ "6759": {
+  "desc": "Chaque joueur peut Poser ou faire l'Invocation Normale de monstres sans sacrifice(s) en payant 1000 Life Points x le nombre de monstres nécessaires pour les Invoquer par Invocation Sacrifice."
+ },
+ "6761": {
+  "desc": "Après son activation, cette carte est traitée comme une Carte Équipement. Équipez-la à un monstre sur votre Terrain qui inclut \"Héros de la Destinée\" dans son nom de carte. Augmentez l'ATK du monstre équipé de 500 points. Lorsque le monstre équipé détruit un monstre contrôlé par votre adversaire à l'issue d'un combat et l'envoie au Cimetière, infligez 500 points de dommages aux Life Points de votre adversaire."
+ },
+ "6765": {
+  "desc": "\"Néos, Héros Élémentaire\" + \"Panthère Noire Néo-Spacien\"\nCette carte ne peut être Invoquée par Invocation Spéciale que depuis votre Fusion Deck en retournant les cartes ci-dessus depuis votre Terrain dans le Deck. (N'utilisez pas la carte \"Polymérisation\"). Vous pouvez sélectionner 1 Monstre à Effet face recto sur le Terrain si 1 n'est pas déjà sélectionné par cette carte. Tant que vous contrôlez cette carte face recto, l'effet du monstre sélectionné est annulé jusqu'à ce qu'il soit retiré du Terrain. (Vous ne pouvez sélectionner qu'1 monstre à la fois avec cet effet.) Cette carte retourne dans le Fusion Deck durant la End Phase."
+ },
+ "6766": {
+  "desc": "\"Néos, Héros Élémentaire\" + \"Dauphin Aquatique Néo-Spacien\"\nCette carte ne peut être Invoquée par Invocation Spéciale que depuis votre Fusion Deck en retournant les cartes ci-dessus depuis votre Terrain dans le Deck. (N'utilisez pas la carte \"Polymérisation\"). Une fois par tour, en défaussant 1 carte, sélectionnez 1 carte au hasard de la main de votre adversaire et détruisez-la. Cette carte retourne dans le Fusion Deck durant la End Phase."
+ },
+ "6767": {
+  "desc": "\"Néos, Héros Élémentaire\" + \"Scarabée Flamboyant Néo-Spacien\"\nCette carte ne peut être Invoquée par Invocation Spéciale que depuis votre Fusion Deck en retournant les cartes ci-dessus depuis votre Terrain dans le Deck. (N'utilisez pas la carte \"Polymérisation\"). Cette carte gagne 400 points d'ATK pour chaque Carte Magie et Piège sur le Terrain. Cette carte retourne dans le Fusion Deck durant la End Phase."
+ },
+ "6809": {
+  "desc": "Chaque joueur lance une pièce une seule fois. Si le résultat d'un joueur est Pile, augmentez ses Life Points de 2000 points ; si le résultat est Face, il reçoit 2000 points de dommages."
+ },
+ "6815": {
+  "desc": "Cette carte peut être considérée comme une Carte Magie et Posée dans votre Zone de Carte Magie & Piège. Lorsque cette carte est détruite et envoyée au Cimetière par l'effet d'une carte adverse alors qu'elle est Posée dans votre Zone de Carte Magie & Piège, faites l'Invocation Spéciale de cette carte sur votre Terrain pendant la End Phase du même tour. Si vous exécutez avec succès une Invocation Flip de cette carte, détruisez un nombre de Cartes Magie ou Piège sur le Terrain égal au nombre de \"Magicien Jouet\" face recto sur le Terrain."
+ },
+ "6822": {
+  "desc": "Sélectionnez 1 monstre de Type Dinosaure face recto de Niveau 5 ou plus sur votre Terrain pour activer cette carte. Sélectionnez et renvoyez dans la main de leur propriétaire jusqu'à 2 monstres qui sont soit d'un Niveau inférieur au monstre sélectionné, soit face verso sur le Terrain de votre adversaire."
+ },
+ "6957": {
+  "desc": "Il est possible d'exécuter une Invocation Sacrifice de cette carte avec 1 Sacrifice en offrant \"Gazelle, Roi des Bêtes Mythiques\" ou une \"Bête Fantôme\". Lorsque cette carte détruit un monstre pendant une bataille, infligez 500 points de dégâts aux Life Points de votre adversaire. Lorsque cette carte est détruite puis envoyée au Cimetière par l'effet d'une carte contrôlée par votre adversaire, infligez 2000 points de dégâts à ses Life Points."
+ }
+}

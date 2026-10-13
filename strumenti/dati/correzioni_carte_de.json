@@ -1,0 +1,776 @@
+{
+ "4017": {
+  "desc": "Mit einem Körper voller schwertähnlicher Dornen wagt nichts und niemand, sich diesem geladenen Monster in den Weg zu stellen."
+ },
+ "4022": {
+  "desc": "Wirf eine Münze und wähle Kopf oder Zahl. Falls du richtig vorausgesagt hast, zerstöre alle Monster auf der Spielfeldseite deines Gegners. Wenn du falsch vorausgesagt hast, zerstöre alle Monster auf deiner Spielfeldseite und deine Life Points erhalten so viel Schaden wie die Hälfte der addierten ATK aller zerstörten Monster beträgt. Du kannst diese Karte nur in deinem Zug aktivieren und nur einmal pro Zug."
+ },
+ "4031": {
+  "desc": "Ein kleiner Kobold, der in der Dunkelheit lauert und den sein Horn zu einem ausgezeichneten Gegner macht."
+ },
+ "4035": {
+  "desc": "Ein harter Kämpfer, der sich auch auf dem rauesten Terrain geschickt bewegen kann."
+ },
+ "4069": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nur durch den Effekt von „Vornehmer Egotist“ als Spezialbeschwörung beschworen werden."
+ },
+ "4074": {
+  "desc": "Ein Axt schwingender Ungeheuer-Krieger mit dem Kopf eines Drachen."
+ },
+ "4124": {
+  "desc": "Eine niedliche kleine Elfe, die sich im Schatten verbirgt und spirituelle Unterstützung leistet."
+ },
+ "4172": {
+  "desc": "Jedes Mal, wenn du oder dein Gegner ein Monster als Normal- oder Flippbeschwörung beschwören, erhöhe deine Life Points um 500 Punkte."
+ },
+ "4208": {
+  "desc": "Ein Luft-Murmeltier, das ein ruchloses Horn und Flügel hat. Es greift an, indem es Eicheln wirft."
+ },
+ "4235": {
+  "desc": "Diese Kreatur verleiht Macht, anstatt das Leben zu verkürzen."
+ },
+ "4238": {
+  "desc": "Eine lebende Waffe, die Projektile spuckt."
+ },
+ "4239": {
+  "desc": "Ein Unterweltler, der angeblich in der Traumwelt lebt und seine Feinde in ihrem Schlaf angreift."
+ },
+ "4258": {
+  "desc": "Eine weibliche Fee. Im Gegensatz zu ihrer lieblichen Schönheit zerkratzt sie ihre Feinde."
+ },
+ "4292": {
+  "desc": "Ein unzerstörbarer Mechanoid, erschaffen nur, um die Tore zu bewachen."
+ },
+ "4312": {
+  "desc": "Ein mit dieser Karte ausgerüstetes Monster vom Typ Insekt erhöht seinen ATK-Wert um 700 Punkte."
+ },
+ "4373": {
+  "desc": "Wenn du mit dieser Karte angreifst, musst du eine Münze werfen und dich für Kopf oder Zahl entscheiden. Falls du richtig vorausgesagt hast, greifst du normal an. Wenn du falsch vorausgesagt hast, verlierst du die Hälfte deiner Life Points und greifst dann an."
+ },
+ "4374": {
+  "desc": "Die ATK dieser Karte erhöht sich um 100 Punkte für jede Monsterkarte in deinem Friedhof."
+ },
+ "4398": {
+  "desc": "Dieses Monster kann als Spezialbeschwörung vom Deck auf das Spielfeld gebracht werden, indem die mit einem „Zoa“ ausgestattete „Metallwandler“ als Tribut entrichtet wird."
+ },
+ "4400": {
+  "desc": "Ein Monster, das nicht vom Typ Maschine ist und den „Stahlskorpion“ angreift, wird in der End Phase des zweiten gegnerischen Zugs nach diesem Angriff zerstört."
+ },
+ "4420": {
+  "desc": "Dieses mit einem Paar Schaufeln ausgestattete Monster zerstört alles, was sich ihm in den Weg stellt."
+ },
+ "4431": {
+  "desc": "Wirf diese Karte aus deiner Hand ab, um bis zu 2 „Donnerdrache“-Karten aus deinem Deck deiner Hand hinzuzufügen. Mische dein Deck anschließend. Du kannst diesen Effekt nur während deiner Main Phase benutzen."
+ },
+ "4452": {
+  "desc": "Dieses Monster hypnotisiert einen Gegner mit Hilfe des Balls auf seinem Schwanz und zerrt ihn in sein nasses Verderben."
+ },
+ "4496": {
+  "desc": "FLIPP: Fügt den Life Points deines Gegners einen direkten Schaden von 1000 Punkten auf Kosten von 2000 deiner eigenen Life Points."
+ },
+ "4506": {
+  "desc": "Wenn diese Karte als Normalbeschwörung oder Flippbeschwörung beschworen wurde, zerstöre 1 offenes Monster vom Typ Drache auf dem Spielfeld."
+ },
+ "4512": {
+  "desc": "Im Tausch gegen 3000 deiner Life Points darfst du ein Monster aus deinem Fusionsdeck auf dem Friedhof ablegen."
+ },
+ "4522": {
+  "desc": "Solange diese Karte offen auf dem Spielfeld liegt, erhöhen sich ATK und DEF dieser Karte um 300 Punkte für jede Karte in der Hand des Spielers, der diese Karte kontrolliert."
+ },
+ "4541": {
+  "desc": "Eine menschenähnliche Mantis, der über zwei rasiermesserscharfe Sicheln verfügt."
+ },
+ "4574": {
+  "desc": "Ein menschenähnlicher Dinosaurier mit einem hohen Intelligenzquotienten, dem es an Stärke fehlt."
+ },
+ "4576": {
+  "desc": "Ein getigerter Drache, der oft dabei beobachtet wird, wie er mit hoher Geschwindigkeit durch das Ödland rennt."
+ },
+ "4596": {
+  "desc": "Dieses Monster wickelt sich selbst um einen Gegner und stochert mit seinem riesigen Schnabel herum."
+ },
+ "4609": {
+  "desc": "Ein schöner und starker Elfendrache."
+ },
+ "4622": {
+  "desc": "Für 3 Spielzüge (einschließlich der deines Gegners) nach der Aktivierung dieser Karte (einschließlich „Flipp“-Aktivierung) sind die ATK- und DEF-Werte dieses Monsters halbiert. Danach werden die ATK- und DEF-Werte für den Rest des Duells verdoppelt."
+ },
+ "4652": {
+  "desc": "Ein Schleimmeister, der sicher härter ist, als er aussieht."
+ },
+ "4654": {
+  "desc": "Diese Maschine, erschaffen, um Angriffe in feindliches Gebiet zu führen, mäht die Feinde durch ihr Vorwärtsstürzen einfach nieder."
+ },
+ "4660": {
+  "desc": "Ein mit dieser Karte ausgerüstetes FEUER-Monster erhöht seine ATK um 700 Punkte."
+ },
+ "4664": {
+  "desc": "Nach der Aktivierung wird diese Karte verwendet, um ein aufgedecktes Monster auszurüsten. Das mit dieser Karte ausgerüstete Monster erhöht seinen ATK- und DEF-Wert um 300 Punkte. Wenn ein mit dieser Karte ausgerüstetes Monster angreift, kannst du seinen ATK-Wert um die Hälfte des ATK-Werts des angegriffenen Monsters erhöhen."
+ },
+ "4667": {
+  "desc": "Biete 1 FINSTERNIS Monster von deiner Seite des Spielfelds mit einer ATK von 1000 oder weniger als Tribut an. Du und dein Gegner überprüfen alle Monster auf der Spielfeldseite deines Gegners, alle Karten auf der Hand deines Gegners und alle Karten, die dein Gegner in den nächsten 3 Spielzügen zieht, und zerstören alle Monster mit einer ATK von 1500 oder höher, die dabei gefunden werden."
+ },
+ "4687": {
+  "desc": "Wenn ein Monster, das dein Gegner beschwört (mit Ausnahme von Spezialbeschwörung), eine DEF von 500 oder weniger hat, ist es zerstört."
+ },
+ "4688": {
+  "desc": "Wenn ein Monster, das dein Gegner beschwört (mit Ausnahme von Spezialbeschwörung), eine ATK von 500 oder weniger hat, ist es zerstört."
+ },
+ "4691": {
+  "desc": "Wähle 1 verdecktes Monster in Verteidigungsposition. Decke es auf und falls die DEF dieses Monsters 2000 Punkte oder geringer ist, zerstöre das Monster. Falls die DEF mehr als 2000 Punkte beträgt, lege das Monster in verdeckte Verteidigungsposition zurück."
+ },
+ "4692": {
+  "desc": "Wenn dein Gegner mit einem Monster angreift, zerstöre sein/ihr Monster mit dem höchsten ATK-Wert in Angriffsposition."
+ },
+ "4694": {
+  "desc": "Effekte, die die Life Points deines Gegners erhöhen, fügen stattdessen den Life Points deines Gegners Schaden zu."
+ },
+ "4738": {
+  "desc": "FLIPP: Biete diese Karte während deiner Standby Phase als Tribut an, um alle Monster auf deiner Spielfeldseite zu zerstören und den Life Points deines Gegners so viel Schaden zuzufügen, wie die Hälfte der addierten ATK aller zerstörten Karten (ohne dieses Monster) beträgt."
+ },
+ "4748": {
+  "desc": "Diese Karte kann nur vom Deck auf das Spielfeld als Spezialbeschwörung beschworen werden, indem der „Rotäugiger schwarzer Drache“, ausgerüstet mit „Metallwandler“, als Tribut angeboten wird. Dein Deck wird anschließend gemischt."
+ },
+ "4750": {
+  "desc": "Wird diese Karte erfolgreich beschworen, kannst du maximal eine Zauberzählmarke darauf setzen. Wenn du die Zauberzählmarke entfernst, kannst du eine offene Fallenkarte auf dem Feld zerstören."
+ },
+ "4755": {
+  "desc": "Wenn diese Karte beschworen wird (ohne Spezialbeschwörung), kannst du eine „Gazelle, König der mythischen Bestien“ von deinem Deck in die Hand nehmen."
+ },
+ "4780": {
+  "desc": "Diese Karte kann nicht durch Kampf mit einem Monster der Stufe 7 oder niedriger zerstört werden. Während jeder deiner End Phasen erhält diese Karte 1000 ATK. Falls diese Karte angreift, wird ihr ATK auf 0 zurückgesetzt, nach der Schadensberechnung."
+ },
+ "4794": {
+  "desc": "Wenn als Kampfergebnis ein Monster auf dem Friedhof abgelegt wird, kannst du es als Spezialbeschwörung wieder auf die gleiche Kampfposition zurückholen."
+ },
+ "4795": {
+  "desc": "Wenn diese Karte beschworen wird (einschließlich Spezialbeschwörung), übernimmt sie die ursprünglichen ATK- und DEF-Werte eines gegnerischen Monsters."
+ },
+ "4803": {
+  "desc": "Zahle 800 Life Points. Wähle 1 offenes Monster auf der Spielfeldseite deines Gegners. Übernimm die Kontrolle über die gewählte Karte bis zur End Phase des Spielzugs, in dem diese Karte aktiviert wurde."
+ },
+ "4804": {
+  "desc": "Du kannst diese Karte nur aktivieren, wenn ein Monster deines Gegners angreift. Annulliere den Angriff und die Battle Phase deines Gegners endet."
+ },
+ "4814": {
+  "desc": "Während des nächsten Spielzugs deines Gegners, nachdem du diese Karte aktiviert hast, kann dein Gegner die Kampfpositionen von Monstern nicht ändern, außer durch einen Karteneffekt."
+ },
+ "4817": {
+  "desc": "Übernimm die Kontrolle über 1 Monster auf der Spielfeldseite deines Gegners bis zur End Phase. Dieses Monster kann keinen Angriff deklarieren oder als Tribut angeboten werden."
+ },
+ "4830": {
+  "desc": "Wenn diese Karte aktiviert wird, kannst du im gleichen Spielzug keine Monster beschwören (einschließlich „Flipp“- und Spezialbeschwörung). Du kannst zum Preis der Hälfte deiner Life Points eine Spezialbeschwörung für einen „Dunkler Magier“ aus deinem Deck durchführen."
+ },
+ "4834": {
+  "desc": "Du kannst diese Karte nur aktivieren, wenn dein Gegner einen Angriff deklariert, solange du ein Monster auf deiner Spielfeldseite hast. Übernimm die Kontrolle über 1 offenes Monster deines Gegners, außer dem angreifenden Monster, und dieses Monster wird stattdessen angegriffen. Am Ende der Battle Phase gib die Kontrolle über dieses Monster an deinen Gegner zurück."
+ },
+ "4855": {
+  "desc": "Wenn dein Gegner „Raigeki“ aktiviert, werden statt deiner eigenen Monster alle Monster deines Gegners zerstört."
+ },
+ "4861": {
+  "desc": "Zahle die Hälfte deiner Life Points. Annuliere die Aktivierung einer Zauber- oder Fallenkarte oder die Beschwörung eines Monsters als Normal-, Flipp- oder Spezialbeschwörung. Zerstöre diese Zauber- oder Fallenkarte oder das beschworene Monster."
+ },
+ "4892": {
+  "desc": "Wenn dein Gegner „Harpyien-Flederwisch“ aktiviert, zerstöre stattdessen alle Zauber- und Fallenkarten auf der Spielfeldseite deines Gegners."
+ },
+ "4944": {
+  "desc": "Du kannst diese Karte aktivieren, wenn eine Permanente Zauberkarte aktiviert wird. Im Spielzug, in dem diese Karte aktiviert wird, haben alle Permanenten Zauberkarten keine Auswirkungen."
+ },
+ "5029": {
+  "desc": "Ein Riese, der aus Magma entstanden ist und mit seinen Magmafäusten angreift."
+ },
+ "5030": {
+  "desc": "Falls diese Karte auf dem Spielfeld zerstört und auf den Friedhof gelegt wird, beschwöre diese Karte als Spezialbeschwörung mit ATK und DEF von 1000 in der End Phase dieses Spielzugs. Dieser Effekt kann nur einmal in diesem Duell verwendet werden."
+ },
+ "5033": {
+  "desc": "Falls sich keine offenen Monster vom Typ Insekt (ausgenommen dieses) auf deiner Spielfeldseite befinden, werden die ATK und DEF dieses Monsters zu 1000."
+ },
+ "5042": {
+  "desc": "Diese Karte kann die Life Points deines Gegners direkt angreifen. Jedes Mal, wenn diese Karte den Life Points deines Gegners Kampfschaden zufügt, erhöhe die ATK dieser Karte in deiner nächsten Standby Phase um 1000 Punkte. Diese Erhöhung der ATK gilt, solange diese Karte offen auf dem Spielfeld liegt."
+ },
+ "5067": {
+  "desc": "Dieser Effekt ist nur während der Battle Phase deines Spielzugs aktiv. Kampfschaden, den diese Karte oder der Beherrscher dieser Karte von Kämpfen mit dieser Karte erhalten, wird zu 0. Nach der Schadensberechnung verringere die ATK des Monsters, das von dieser Karte angegriffen wurde, um 500 Punkte bis zum Ende des Spielzugs."
+ },
+ "5113": {
+  "desc": "Jedes Mal, wenn ein Monster auf der Spielfeldseite deines Gegners angreift, wirf eine Münze und wähle Kopf oder Zahl. Wenn du richtig vorausgesagt hast, wird die ATK des angreifenden Monsters während der Battle Phase zu 0. Zahle in jeder deiner Standby Phasen 500 Life Points. Wenn du dies nicht tust, wird diese Karte zerstört."
+ },
+ "5116": {
+  "desc": "Opfere 1 Monster vom Typ Insekt auf deiner Spielfeldseite. Beschwöre 2 „Armeeameisen-Spielmarke“ (Typ Insekt/ERDE/Stufe 4/ATK 500/DEF 1200) als Spezialbeschwörung auf deiner Spielfeldseite. Die Spielmarken können nicht als Tribut für eine Tributbeschwörung verwendet werden."
+ },
+ "5129": {
+  "desc": "Verdopple die ATK aller offenen Monster vom Typ Maschine auf deiner Spielfeldseite bis zum Ende dieses Spielzugs. Während deiner End Phase zerstöre alle Monster, die von diesem Effekt betroffen waren."
+ },
+ "5142": {
+  "desc": "Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "5164": {
+  "desc": "Erhöhe deine Life Points um 500 Punkte, jedes Mal, wenn Monster vom Spielfeld auf die Hand ihrer Besitzer zurückgegeben werden."
+ },
+ "5173": {
+  "desc": "Wenn diese Karte zerstört und auf den Friedhof geschickt wird, während sie verdeckt liegt, dann werden deinem Gegner 500 Punkte Schaden an seinen LP verursacht."
+ },
+ "5175": {
+  "desc": "Dieses Monster kann nur als Ritualbeschwörung beschworen werden, indem du die Ritualzauberkarte „Ritual von Lithmus“ aktivierst. Diese Karte kann nicht als Ergebnis eines Kampfes zerstört werden und wird auch nicht durch die Effekte von Fallenkarten beeinflusst. Die ATK und DEF werden auf 3000 gesetzt, solange sich eine aufgedeckte Fallenkarte auf dem Feld befindet."
+ },
+ "5177": {
+  "desc": "Solange diese Karte sich auf dem Feld in aufgedeckter Angriffsposition befindet, kann sie nicht aufgrund von Kämpfen zerstört werden. Auf jedes Monster, das diese Karte angreift, wird eine „Jungfernmarke“ getan."
+ },
+ "5178": {
+  "desc": "Wenn das ausgerüstete Monster ein anderes Monster mit einer „Jungfernmarke“ darauf angreift und derjenige, der das ausgerüstete Monster kontrolliert, Kampfschaden abbekommt, dann übernimmt er die Kontrolle über das Monster, das Schaden an den LP des Spielers gemacht hat, am Ende des Damage Step."
+ },
+ "5179": {
+  "desc": "Du kannst diese Karte nur dann aktivieren, wenn sich eine aufgedeckte „Verliebte Jungfer“-Karte auf deiner Seite des Spielfeldes befindet. Wenn dein Gegner eins deiner Monster angreift, dann kannst du bestimmen, dass das Ziel seines Angriffs eine aufgedeckte „Verliebte Jungfer“-Karte auf deiner Seite des Spielfeldes ist."
+ },
+ "5180": {
+  "desc": "Diese Karte kann nur aktiviert werden, wenn sich ein aufgedecktes Monster, das deinem Gegner gehört, auf deiner Seite des Spielfeldes befindet. Erhöhe die ATK des ausgerüsteten Monsters um die ATK des anderen Monsters."
+ },
+ "5181": {
+  "desc": "Zerstöre alle Monster auf der Spielfeldseite deines Gegners. Danach wähle 1 Monster aus dem Friedhof deines Gegners aus und bringe es durch eine Spezialbeschwörung auf deine Seite des Spielfelds, dabei werden die Beschwörungsbedingungen der Karte ignoriert. Am Ende dieser Runde werden deine LP um 90 Prozent reduziert."
+ },
+ "5182": {
+  "desc": "Wenn diese Karte aktiviert wird, dann werden die Life Points beider Spieler um 600 erhöht. Jedes Mal, wenn ein Spieler einen Angriff mit einem Monster ankündigt, dann kann er 100 Life Points bezahlen, um am Ende des Damage Steps 100 Punkte Schaden an den Life Points des Gegners zu verursachen."
+ },
+ "5185": {
+  "desc": "Dieses Monster kann nur als Ritualbeschwörung beschworen werden, indem du die Ritualzauberkarte „Ritual des Matadors“ aktivierst. Diese Karte kann nicht angreifen. Diese Karte kann nicht als Ergebnis eines Kampfes zerstört werden und jeglicher Kampfschaden, der demjenigen zugefügt wird, der die Karte kontrolliert, wird auf 0 reduziert. Ein Monster, das gegen diese Karte kämpft, wird am Ende des Damage Step zerstört."
+ },
+ "5189": {
+  "desc": "Wenn ein „Geflügelter Kuriboh“ auf deiner Seite des Feldes zerstört wird, dann kannst du diese Karte aus deinem Deck in die Hand holen. Bezahle 50 Prozent deiner Life Points, um eine Karte aus deinem Deck oder Friedhof auf deine Hand zu holen. Nachdem diese Karte aktiviert wurde, wird sie wieder ins Deck getan. Danach musst du das Deck mischen. Nachdem du diesen Effekt drei Mal benutzt hast, erhält diese Karte folgenden Effekt: Wähle 1 aufgedecktes Monster auf deiner Seite des Spielfelds und multipliziere seine ATK mit der Anzahl von Monstern, die sich auf der Seite des Spielfeldes deines Gegners befinden. Dieser Effekt hält bis zum Ende dieser Runde an."
+ },
+ "5190": {
+  "desc": "Lege alle Karten aus deiner Hand ab. Wähle 1 Monster vom Typ Ungeheuer aus deinem Friedhof und bringe es durch Spezialbeschwörung auf deine Seite des Spielfeldes. Senke die ATK von aufgedeckten Monstern auf der Seite deines Gegners um 200 Punkte bis zur End Phase dieser Runde für jedes Monster vom Typ Ungeheuer, Pflanze und Geflügeltes Ungeheuer auf deinem Friedhof."
+ },
+ "5197": {
+  "desc": "Jedes Mal, wenn du deine Life Points erhöhst, füge den Life Points deines Gegners 500 Punkte Schaden zu."
+ },
+ "5202": {
+  "desc": "Biete diese Karte offen als Tribut an. Lege eine deiner Zauberkarten, die in diesem Spielzug durch deinen Gegner auf den Friedhof gelegt wurde, unter dein Deck zurück."
+ },
+ "5223": {
+  "desc": "Nur „Dunkler Magier“ oder „Dunkles Magier-Mädchen“ darf sich damit ausrüsten. Das Monster, das sich damit ausrüstet, erhält 700 zusätzliche ATK-Punkte. Wird diese Karte auf den Friedhof geschickt, bekommst du 1000 Life Points zurück."
+ },
+ "5238": {
+  "desc": "Wenn dieses Monster in verdeckter Verteidigungsposition angegriffen wird, kannst du stattdessen ein gegnerisches Monster als Angriffsziel bestimmen. Wenn sich diese Karte auf dem Spielfeld befindet, kannst du den „Mystischer Jinn der Lampe“ durch Spezialbeschwörung aus deiner Hand herbeirufen."
+ },
+ "5239": {
+  "desc": "Diese Karte ist aus Regelzwecken dieselbe wie die „Harpyie“."
+ },
+ "5242": {
+  "desc": "Diese Karte wird zerstört, wenn sich die „Kathedrale der Adligen“ nicht auf deinem Feld befindet. Immer wenn mit dieser Karte ein Monster im Kampf zerstört wird, verlässt das Monster das Spiel, und die Karte erhält einen ATK-Bonus von 500 Punkten."
+ },
+ "5245": {
+  "desc": "Diese Karte kann keinen Spieler direkt angreifen. Jedes Mal, wenn diese Karte ein Monster im Kampf zerstört, verringere die ATK dieser Karte um 200 Punkte."
+ },
+ "5248": {
+  "desc": "Jedes Mal, wenn diese Karte den Life Points deines Gegners Kampfschaden zufügt, kannst du bis zu 2 Monster vom Friedhof deines Gegners aus dem Spiel entfernen. Zusätzlich, solange diese Karte offen auf dem Spielfeld liegt, kann dein Gegner keine Karten in deinem oder seinem Friedhof aus dem Spiel entfernen."
+ },
+ "5260": {
+  "desc": "Der Effekt dieser Karte kann nur im Spielzug deines Gegners benutzt werden. Wenn dein Gegner eine Zauberkarte aktiviert, biete diese offene Karte als Tribut an, um die Aktivierung dieser Zauberkarte zu annullieren und die Zauberkarte zu zerstören."
+ },
+ "5263": {
+  "desc": "Annulliere die Aktivierung einer Zauberkarte, die 1 Monster als Ziel bestimmt, und zerstöre die Zauberkarte."
+ },
+ "5269": {
+  "desc": "Annulliere die Effekte aller Ausrüstungskarten."
+ },
+ "5275": {
+  "desc": "Erzwinge die Aktivierung einer verdeckten Fallenkarte. Falls das Timing der Aktivierung nicht korrekt ist, annulliere den Effekt und zerstöre sie. Falls es keine Fallenkarte ist, bringe sie zurück in ihre ursprüngliche Position. Nachdem diese Karte aktiviert wurde, lege sie in dein Deck und nicht auf den Friedhof. Mische dein Deck anschließend."
+ },
+ "5286": {
+  "desc": "Diese Karte kann nur aktiviert werden, wenn dein Gegner einen Angriff deklariert und du ein Monster auf deiner Spielfeldseite kontrollierst, dessen Name „Amazonische“ enthält. Alle Monster auf der Spielfeldseite deines Gegners werden in offene Angriffsposition gebracht (Flipp-Effekte werden nicht aktiviert) und ihre ATK verringert sich um 500 Punkte. Dein Gegner muss in diesem Spielzug mit allen seinen Monstern angreifen."
+ },
+ "5290": {
+  "desc": "Zerstört alle aufgedeckten Zauberkarten auf dem Feld, die von deinem Gegner kontrolliert werden. Für jede zerstörte Zauberkarte erhält dein Gegner 500 Schadenspunkte."
+ },
+ "5295": {
+  "desc": "Kampfschaden, den der Beherrscher dieser Karte, den er aus einem Kampf mit dieser Karte erhält, wird zu 0."
+ },
+ "5299": {
+  "desc": "Du kannst diese Karte nur aktivieren, wenn eine Karte, die ein Monster auf dem Spielfeld, dessen Name „Amazonische“ enthält, als Ziel bestimmt, aktiviert wird. Gib das als Ziel bestimmte Monster auf die Hand seines Besitzers zurück und beschwöre ein anderes Monster als Spezialbeschwörung aus deiner Hand."
+ },
+ "5311": {
+  "desc": "Jedes Mal, wenn eine Monsterkarte vom Spielfeld auf den Friedhof gelegt wird, erhält der Besitzer der Karte 500 Punkte Schaden pro Karte."
+ },
+ "5313": {
+  "desc": "Wähle 1 Monster vom Typ Unterweltler in deinem Friedhof. Entferne Monster von deiner Spielfeldseite aus dem Spiel, die zusammen genauso viele Stufen haben wie das gewählte Monster. Beschwöre dann das gewählte Monster als Spezialbeschwörung."
+ },
+ "5334": {
+  "desc": "Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu. Falls diese Karte angreift, lege sie am Ende des Damage Steps in Verteidigungsposition."
+ },
+ "5351": {
+  "desc": "Wenn diese Karte als Ergebnis eines Kampfes zerstört und auf den Friedhof gelegt wird, wähle 2 Karten im Friedhof deines Gegners und füge sie seinem Deck hinzu. Dein Gegner mischt sein Deck anschließend."
+ },
+ "5384": {
+  "desc": "„Robot-Yarou“ + „Robot-Lady“\nDu kannst „Super-Robot-Lady“ als Spezialbeschwörung beschwören, indem du diese Karte vom Spielfeld auf das Fusionsdeck zurücklegst. Du kannst diesen Effekt nicht im gleichen Spielzug verwenden, in dem diese Karte als Spezialbeschwörung beschworen wurde. Zusätzlich, erhöhe die ATK dieser Karte um 1000 Punkte während des Damage Steps, wenn diese Karte gegen ein Monster kämpft."
+ },
+ "5393": {
+  "desc": "Diese Karte kann nur in Main Phase 1 aktiviert werden. Wähle 1 offenes Monster auf dem Spielfeld. Jedes Mal, wenn das gewählte Monster in diesem Spielzug Kampfschaden zufügt, wirft dein Gegner 1 zufällige Karte aus seiner Hand ab."
+ },
+ "5402": {
+  "desc": "Jedes Mal, wenn ein Spirit-Monster auf deine Hand zurückkehrt, wählt dein Gegner 1 Monster auf seiner Spielfeldseite und gibt es auf die Hand seines Besitzers zurück. Zahle in jeder deiner Standby Phasen 500 Life Points. Falls du dies nicht tust, zerstöre diese Karte."
+ },
+ "5410": {
+  "desc": "Jedes Mal, wenn diese Karte den Life Points deines Gegners Kampfschaden zufügt, nenne 1 Kartentyp (Monster, Zauber oder Falle). Dein Gegner wählt 1 Karte des genannten Typs aus seinem Deck und legt sie auf den Friedhof. Außerdem, falls diese Karte durch den Effekt einer Karte deines Gegners zerstört und auf den Friedhof gelegt wird, beschwöre sie als Spezialbeschwörung auf dem Spielfeld in deiner nächsten Standby Phase."
+ },
+ "5433": {
+  "desc": "Ziehe während der Standby Phase deines Gegners so viele Karten, bis du 4 Karten auf deiner Hand hast. Wirf während deiner Standby Phase so viele Karten zufällig aus deiner Hand ab, wie du durch den Effekt dieser Karte gezogen hast."
+ },
+ "5452": {
+  "desc": "Du kannst diesen Effekt nur während eines Battle Steps in deinem Spielzug aktivieren. Verringere die ATK dieser Karte um 400 Punkte und in jedem Kampf von dieser Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu. Dieser Effekt hält bis zur End Phase des Spielzugs an, in der er aktiviert wurde."
+ },
+ "5453": {
+  "desc": "Während der Standby Phase in deiner Runde wird die ATK dieser Karte um 700 Punkte angehoben."
+ },
+ "5475": {
+  "desc": "Diese Karte kann nicht in dem Spielzug angreifen, in dem sie als Normalbeschwörung, Flippbeschwörung oder Spezialbeschwörung beschworen wurde. Wenn „Toon-Welt“ auf dem Spielfeld zerstört wird, wird diese Karte auch zerstört. Falls „Toon-Welt“ auf deiner Spielfeldseite ist und dein Gegner keine Toon-Monster kontrolliert, kann diese Karte die Life Points deines Gegners direkt angreifen. Wenn diese Karte den Life Points deines Gegners Kampfschaden zufügt, ziehe 1 Karte von deinem Deck."
+ },
+ "5476": {
+  "desc": "Diese Karte kann nicht in dem Spielzug angreifen, in dem sie als Normalbeschwörung, Flippbeschwörung oder Spezialbeschwörung beschworen wurde. Wenn „Toon-Welt“ auf dem Spielfeld zerstört wird, wird diese Karte auch zerstört. Falls „Toon-Welt“ auf deiner Spielfeldseite ist und dein Gegner keine Toon-Monster kontrolliert, kann diese Karte die Life Points deines Gegners direkt angreifen. Wenn diese Karte den Life Points deines Gegners Kampfschaden zufügt, wirft dein Gegner 1 Karte zufällig von seiner Hand ab."
+ },
+ "5477": {
+  "desc": "Diese Karte kann nicht in dem Spielzug angreifen, in dem sie als Normalbeschwörung, Flippbeschwörung oder Spezialbeschwörung beschworen wurde. Wenn „Toon-Welt“ auf dem Spielfeld zerstört wird, wird diese Karte auch zerstört. Falls „Toon-Welt“ auf deiner Spielfeldseite ist und dein Gegner keine Toon-Monster kontrolliert, kann diese Karte die Life Points deines Gegners direkt angreifen. Biete 1 Monster auf deiner Spielfeldseite als Tribut an, um den Life Points deines Gegners 500 Punkte Schaden zuzufügen."
+ },
+ "5478": {
+  "desc": "Diese Karte kann nicht in dem Spielzug angreifen, in dem sie als Normalbeschwörung, Flippbeschwörung oder Spezialbeschwörung beschworen wurde. Wenn „Toon-Welt“ auf dem Spielfeld zerstört wird, wird diese Karte auch zerstört. Falls „Toon-Welt“ auf deiner Spielfeldseite ist und dein Gegner keine Toon-Monster kontrolliert, kann diese Karte die Life Points deines Gegners direkt angreifen. Falls diese Karte angreift, wird sie am Ende der Battle Phase in die Verteidigungsposition geändert und diese Position kann bis zum Ende deines nächsten Spielzugs nicht geändert werden."
+ },
+ "5479": {
+  "desc": "Entferne alle Karten auf deiner Hand und auf deiner Spielfeldseite aus dem Spiel. Ziehe Karten, bis du 2 Karten auf deiner Hand hast."
+ },
+ "5482": {
+  "desc": "Wenn diese Karte erfolgreich als Tributbeschwörung beschworen wurde, kannst du 2 Monster vom Typ Unterweltler für 2000 Life Points von deinem Friedhof spezialbeschwören. Monster, die durch diesen Effekt spezialbeschworen werden, können in dem entsprechenden Spielzug nicht angreifen."
+ },
+ "5492": {
+  "desc": "Jedes Mal, wenn Monsterkarten deines Gegners auf den Friedhof gelegt werden, füge den Life Points deines Gegners 300 Punkte Schaden zu."
+ },
+ "5499": {
+  "desc": "Wenn dieses Monster erfolgreich als Normal-, Flipp- oder Spezialbeschwörung beschworen wird, wähle 1 offenes Monster auf dem Spielfeld und verringere seine ATK um 800 Punkte. Dieser Effekt bleibt bestehen, bis die gewählte Karte vom Spielfeld entfernt wird."
+ },
+ "5530": {
+  "desc": "Dein Gegner nennt eine Monsterstufe. Du nimmst dann Karten von deinem Deck, bis du eine Monsterkarte gefunden hast. Wenn dieses Monster die gleiche Stufe hat, wie dein Gegner genannt hat, lege alle aufgenommenen Karten auf den Friedhof. Wenn nicht, beschwöre dieses Monster als Spezialbeschwörung und lege alle anderen aufgenommenen Karten auf den Friedhof."
+ },
+ "5531": {
+  "desc": "Jedes Mal, wenn du den Life Points deines Gegners Schaden zufügst (ausgenommen Kampfschaden), füge den Life Points deines Gegners 300 Punkte Schaden zu. Der Effekt dieser Karte gilt nicht für den Effekt von „Dunkle Kammer der Alpträume“."
+ },
+ "5546": {
+  "desc": "Dein Gegner fügt alle Karten aus seiner Hand zu seinem Deck hinzu. Das Deck wird anschließend gemischt. Dein Gegner zieht dann die gleiche Anzahl Karten von seinem Deck, wie er vorher in sein Deck zurückgelegt hat."
+ },
+ "5574": {
+  "desc": "Du kannst diese Karte nur dann aktivieren, wenn dein Gegner eine erfolgreiche Beschwörung oder Flipp-Beschwörung eines Monsters durchführt. Führe eine Spezialbeschwörung von 1 „Klone-Spielmarke“ auf deiner Seite des Spielfelds durch. Diese „Klon-Spielmarke“ hat genau die gleiche Stufe, ATK, DEF, ist vom gleichen Typ und hat die gleiche Eigenschaft wie das Monster deines Gegners. Wenn dieses Monster zerstört und auf den Friedhof geschickt wird, dann zerstöre auch diese Spielmarke."
+ },
+ "5575": {
+  "name": "Kosten verringern"
+ },
+ "5585": {
+  "desc": "Einmal pro Spielzug, während deiner Main Phase, kannst du deine „Zerfallener Anführer“-Karte mit dieser Karte als Ausrüstungszauberkarte ausrüsten ODER sie als Union-Ausrüstung ausklinken und als Spezialbeschwörung in offener Angriffsposition auf deiner Spielfeldseite beschwören. Wenn diese Karte durch ihren Effekt ein Monster ausrüstet, erhöhe die ATK und DEF des ausgerüsteten Monsters um 500 Punkte und jedes Mal, wenn das ausgerüstete Monster 1 Monster deines Gegners als Ergebnis eines Kampfes zerstört, wirft dein Gegner 1 zufällige Karte aus seiner Hand ab. (1 Monster kann nur mit 1 Union-Monster zurzeit ausgerüstet sein. Wenn das Monster, das mit dieser Karte ausgerüstet ist, als Ergebnis eines Kampfes zerstört wird, zerstöre stattdessen diese Karte.)"
+ },
+ "5589": {
+  "desc": "Einmal pro Spielzug, während deiner Main Phase, kannst du deine „Vampir-Knabenkraut“-Karte mit dieser Karte als Ausrüstungszauberkarte ausrüsten ODER sie als Union-Ausrüstung ausklinken und als Spezialbeschwörung in offener Angriffsposition auf deiner Spielfeldseite beschwören. Wenn diese Karte durch ihren Effekt ein Monster ausrüstet, jedes Mal, wenn das ausgerüstete Monster 1 Monster deines Gegners als Ergebnis eines Kampfes zerstört, beschwöre 1 „Böse Pflanze-Spielmarke“ (Typ Pflanze/ERDE/Stufe 1/ATK 800/DEF 800) als Spezialbeschwörung. (1 Monster kann nur mit 1 Union-Monster zurzeit ausgerüstet sein. Wenn das Monster, das mit dieser Karte ausgerüstet ist, als Ergebnis eines Kampfes zerstört wird, zerstöre stattdessen diese Karte.)"
+ },
+ "5596": {
+  "desc": "Jedes Mal, wenn diese Karte ein Monster auf der Spielfeldseite deines Gegners als Ergebnis eines Kampfes zerstört, ziehe 1 Karte und wähle dann 1 Karte aus deiner Hand und lege sie unter dein Deck zurück."
+ },
+ "5598": {
+  "desc": "Jedes Mal, wenn diese Karte den Life Points deines Gegners Kampfschaden zufügt, nenne den Namen einer Karte. Schau dir dann die Karten in der Hand deines Gegners an und wirf alle Exemplare der genannten Karte auf den Friedhof ab."
+ },
+ "5604": {
+  "desc": "Während der Battle Phase kannst du diesen Effekt auf 1 Monster anwenden, das mit einem Union-Monster ausgerüstet ist und in diesem Spielzug angegriffen hat. Klinke die Union-Ausrüstung von dem ausgerüsteten Monster aus und du kannst mit dem Monster in diesem Spielzug erneut angreifen."
+ },
+ "5608": {
+  "desc": "Jeder Spieler wählt 1 Karte aus seiner Hand und dann werden Stufen der gewählten Karten verglichen. Die Karte mit der höheren Stufe wird dem Spieler, der sie gewählt hat, auf die Hand zurückgegeben. Der Spieler, der die Karte mit der niedrigeren Stufe gewählt hat, erhält 1000 Punkte Schaden und die gewählte Karte wird auf den Friedhof gelegt. Gewählte Karten, die keine Monster sind, werden als Stufe 0 behandelt. Wenn beide Spieler Karten mit der gleichen Stufe gewählt haben, werden beide gewählten Karten auf die Hand des jeweiligen Spielers zurückgegeben."
+ },
+ "5614": {
+  "desc": "Lege diese Karte auf dem Spielfeld in deiner Main Phase auf den Friedhof. Füge den Life Points deines Gegners Schaden in Höhe von 1000 Punkten x der Anzahl deiner Standby Phasen, die nach der Aktivierung dieser Karte vergangen sind, zu."
+ },
+ "5630": {
+  "name": "Zauberabsorption"
+ },
+ "5676": {
+  "desc": "Schau dir die obersten 3 Karten von deinem Deck an und lege sie in beliebiger Reihenfolge oben auf dein Deck zurück. Dein Gegner darf diese Karten nicht anschauen."
+ },
+ "5678": {
+  "desc": "Wenn die ATK des angreifenden Monsters auf der Spielfeldseite deines Gegners niedriger ist als die DEF des angegriffenen Monsters, das sich in Verteidigungsposition auf deiner Spielfeldseite befindet, zerstöre das angreifende Monster. Führe die Schadensberechnung normal durch."
+ },
+ "5689": {
+  "desc": "Spezialbeschworen mit dem Effekt von „Feindzuflucht“. Diese Spielmarke kann nicht angreifen. Überschüssige Schäden gegen den Besitzer aus dem Kampf mit dieser Spielmarke werden auf den Gegner umgeleitet. Du musst 1000 Life Points während deiner Standby Phase zahlen. Wenn du die 1000 Life Points nicht zahlst, wird diese Spielmarke zerstört."
+ },
+ "5699": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nicht als Spezialbeschwörung beschworen werden, außer durch den Effekt von „Dunkelglanz-Ritter“. Während der Schadensberechnung erhöhe die ATK dieser Karte um die Grund-ATK des gegnerischen Monsters. Entferne diese Karte in der End Phase eines Spielzugs, in dem diese Karte einen Kampf geführt hat, aus dem Spiel."
+ },
+ "5709": {
+  "desc": "Diese Karte kann nur als Normal-, Flipp- und Spezialbeschwörung beschworen werden, wenn sich „Baou, Wunden reißende Flamberge“ auf deiner Spielfeldseite befindet. Jedes Mal, wenn diese Karte ein Monster als Ergebnis eines Kampfes zerstört und dieses auf den Friedhof gelegt wird, erhöhe die ATK dieser Karte um 1000 Punkte. Außerdem, die Effekte von Effektmonstern, die diese Karte als Ergebnis eines Kampfes zerstört, werden annulliert."
+ },
+ "5754": {
+  "desc": "Bittet deinen Gegner um einen Handschlag. Wenn dein Gegner mit einem Handschlag reagiert, werden die Life Points beider Spieler so geändert, dass sie die Hälfte der ursprünglichen Life Points betragen. Wenn du eine „Einheit“ in deiner Hand hast, kannst du sie deinem Gegner zeigen. Er muss darauf mit einem Handschlag reagieren."
+ },
+ "5755": {
+  "desc": "Wähle ein Monster auf deinem Feld aus. Die DEF dieses Monsters wird zur Summe der ursprünglichen DEF-Werte aller aufgedeckten Monster auf deinem Feld, bis deine End Phase beginnt."
+ },
+ "5784": {
+  "desc": "Mit dieser Karte wird ein beliebiges FINSTERNIS Monster als Ritualbeschwörung beschworen. Biete zusätzlich 1 oder mehrere Monster von deiner Hand oder deiner Spielfeldseite als Tribut an, die zusammen so viele Stufen wie das als Ritualbeschwörung zu beschwörende Monster haben."
+ },
+ "5788": {
+  "desc": "Zahle 2000 Life Points. Nach dem 20. Spielzug nach der Aktivierung dieser Karte gewinnst du das Duell (der Spielzug, in dem diese Karte aktiviert wurde, zählt als 1. Spielzug)."
+ },
+ "5791": {
+  "desc": "Kein Spieler braucht in der Standby Phase Life Points für ERZUNTERWELTLER-Monsterkarten zu zahlen. Jedes Mal, wenn ERZUNTERWELTLER-Monsterkarten auf den Friedhof gelegt werden, außer als Ergebnis eines Kampfes, kann dieser Spieler 1 ERZUNTERWELTLER-Monsterkarte aus seinem Deck wählen, deren Stufe geringer als die Stufe der zerstörten Karte ist, und sie seiner Hand hinzufügen."
+ },
+ "5815": {
+  "desc": "Falls die ATK eines Monsters, das dieses Monster angreift, niedriger ist als die DEF dieses Monsters, zerstöre das angreifende Monster."
+ },
+ "5817": {
+  "desc": "Du kannst diese Karte bis zur End Phase dieses Spielzugs aus dem Spiel entfernen, indem du 2 FINSTERNIS Monster in deinem Friedhof aus dem Spiel entfernst. Du kannst diesen Effekt im Spielzug beider Spieler benutzen. Du kannst diesen Effekt nur einmal pro Spielzug verwenden."
+ },
+ "5818": {
+  "desc": "FLIPP: Wähle 1 Monsterkarte auf der gegnerischen Spielfeldseite und gib sie auf die Hand ihres Besitzers zurück."
+ },
+ "5824": {
+  "desc": "Entferne 2 LICHT Monster in deinem Friedhof aus dem Spiel, um 1 offen liegendes Monster auf dem Spielfeld mit einer höheren ATK als diese Karte zu zerstören. Du kannst diesen Effekt nur einmal pro Spielzug verwenden."
+ },
+ "5828": {
+  "desc": "Du kannst bis zu 2 Zauberkarten in deinem Friedhof aus dem Spiel entfernen, um die ATK dieses Monsters bis zum Ende des nächsten gegnerischen Spielzugs um 300 Punkte pro aus dem Spiel entfernter Karte zu erhöhen. Dieser Effekt kann nur einmal während deines eigenen Zugs verwendet werden."
+ },
+ "5829": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nur als Spezialbeschwörung beschworen werden, indem 1 FEUER Monster aus deinem Friedhof aus dem Spiel entfernt wird. Wenn diese Karte ein Monster deines Gegners als Ergebnis eines Kampfes zerstört und es in den Friedhof legt, füge den Life Points deines Gegners 1500 Punkte Schaden zu."
+ },
+ "5830": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nur als Spezialbeschwörung beschworen werden, indem 2 WASSER Monster aus deinem Friedhof aus dem Spiel entfernt werden. Falls diese Karte ein Monster deines Gegners als Ergebnis eines Kampfes zerstört, überspringe die Draw Phase des nächsten Spielzugs deines Gegners."
+ },
+ "5836": {
+  "desc": "Diese Karte kann nur ein Monster mit „Ninja“ im Kartennamen ausrüsten. Die ATK des ausgerüsteten Monsters erhöht sich um 700 Punkte. Wenn diese Karte vom Spielfeld auf den Friedhof gelegt wird, erhält dein Gegner 700 Punkte Schaden an seinen Life Points."
+ },
+ "5843": {
+  "desc": "Bestimme 1 Kartennamen. Sieh dir die Hand deines Gegners an und wenn sich die bestimmte Karte auf seiner Hand befindet, wird diese 1 Karte aus dem Spiel entfernt. Wenn er/sie die bestimmte Karte nicht auf seiner/ihrer Hand hält, wird 1 zufällige Karte auf deiner Hand aus dem Spiel entfernt."
+ },
+ "5844": {
+  "desc": "Wenn sich keine Zauberkarte in deinem Friedhof befindet, kann kein Spieler seine Battle Phase durchführen."
+ },
+ "5854": {
+  "desc": "Immer wenn du oder dein Gegner eine Zauberkarte aktiviert, erhält diese Karte eine Zauberzählmarke. Wenn die 4. Zauberzählmarke auf diese Karte platziert wird, wird diese Karte zerstört und der Spieler, der diese Zauberkarte aktiviert hat, erhält 3000 Punkte Schaden."
+ },
+ "5860": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nur als Spezialbeschwörung beschworen werden, indem 1 LICHT und 1 FINSTERNIS Monster aus deinem Friedhof aus dem Spiel entfernt werden. Zahle 1000 Life Points, um alle Karten auf den Händen beider Spieler und auf dem Spielfeld auf den Friedhof zu legen. Füge den Life Points deines Gegners für jede durch diesen Effekt auf den Friedhof gelegte Karte 300 Punkte Schaden zu."
+ },
+ "5871": {
+  "desc": "Um unbeschreiblich Böses zu bekämpfen, erlangte er mächtige Kraft durch den Umbau seines Körpers, aber er verlor sein Herz und seine Vertraulichkeit."
+ },
+ "5884": {
+  "desc": "Solange sich diese Karte offen auf deiner Seite des Spielfelds befindet und ein Monster vom Typ Ungeheuer, Ungeheuer-Krieger oder Geflügeltes Ungeheuer mit einer höheren ATK als der DEF eines gegnerischen, in Verteidigungsposition liegenden Monsters angreift, erhält dein Gegner die Differenz als Kampfschaden an seinen Life Points."
+ },
+ "5887": {
+  "desc": "Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "5888": {
+  "desc": "Wenn dieses Monster mit einem gegnerischen Monster kämpft und das gegnerische Monster nicht als Ergebnis des Kampfes zerstört wird, wird das gegnerische Monster am Ende des Damage Steps auf die Hand seines Besitzers zurückgegeben."
+ },
+ "5895": {
+  "desc": "Lege „Umi“ von deiner Spielfeldseite auf den Friedhof, um alle Karten auf dem Spielfeld, außer dieser Karte, zu zerstören."
+ },
+ "5896": {
+  "desc": "Biete 1 „Torpedofisch“ auf deiner Spielfeldseite als Tribut an, um 1 Monster auf dem Spielfeld zu zerstören. Biete 1 „Kannonenball Speer-Schalentier“ auf deiner Spielfeldseite als Tribut an, um 1 Zauber- oder Fallenkarte zu zerstören."
+ },
+ "5897": {
+  "desc": "Solange sich „Umi“ offen auf dem Spielfeld befindet, ist diese Karte von Zauberkarten nicht betroffen."
+ },
+ "5912": {
+  "desc": "Zerstöre 1 offen liegendes Monster auf deiner Spielfeldseite, um den Life Points beider Spieler 1000 Punkte Schaden zuzufügen."
+ },
+ "5922": {
+  "desc": "Solange diese Karte offen auf dem Spielfeld liegt, kann dein Gegner keine Schnellzauberkarten aktivieren."
+ },
+ "5928": {
+  "desc": "Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "5930": {
+  "desc": "Wenn diese Karte ein Monster deines Gegners, als Ergebnis eines Kampfes, zerstört und auf den Friedhof legt, kannst du 1 offenes Monster auf der Spielfeldseite deines Gegners auswählen und es in die verdeckte Verteidigungsposition bringen."
+ },
+ "5943": {
+  "desc": "Wenn diese Karte erfolgreich als Tributbeschwörung beschworen wurde, dann darfst du einmal den Würfel werfen. Die ATK dieser Karte erhöht sich um 200 mal das Würfelergebnis, solange die Karte in aufgedeckter Position auf dem Feld bleibt."
+ },
+ "5956": {
+  "desc": "Diese Karte kann nicht angegriffen werden, wenn sich ein anderes Monster vom Typ Zombie offen auf deiner Spielfeldseite befindet. Jedes Mal, wenn ein Monster vom Typ Zombie erfolgreich als Spezialbeschwörung beschworen wurde, lege die obersten 2 Karten vom Deck deines Gegners auf den Friedhof."
+ },
+ "5958": {
+  "desc": "Jedes Mal, wenn diese Karte den Life Points deines Gegners Kampfschaden zufügt, nenne 1 Kartentyp (Monster, Zauber oder Falle). Dein Gegner wählt 1 Karte des genannten Typs aus seinem Deck und legt sie auf den Friedhof."
+ },
+ "5987": {
+  "desc": "Die DEF eines offenen Monsters auf dem Spielfeld wird bis zum Ende dieses Spielzugs zu 0."
+ },
+ "6001": {
+  "desc": "Diese Karte kann nicht spezialbeschworen werden. Wenn die Effekte einer Monsterkarte aktiviert werden, dann muss diese Karte als Tribut geopfert werden, wenn sie aufgedeckt auf dem Feld liegt. Diese Karte verhindert die Aktivierung und den Effekt des Effektmonsters, welches diese Karte zerstört."
+ },
+ "6048": {
+  "desc": "Du kannst nur ein Monster der Stufe 3 oder niedriger auf deiner Spielfeldseite mit dieser Karte ausrüsten. Wenn du diese Karte aktivierst, biete alle normalen Monster (ausgenommen Monsterspielmarken) auf deiner Spielfeldseite außer dem ausgerüsteten Monster als Tribut an. Erhöhe die ATK des ausgerüsteten Monsters um 1000 Punkte für jedes normale Monster, das du als Tribut angeboten hast."
+ },
+ "6052": {
+  "desc": "Jedes Mal, wenn Karten durch den Effekt einer Karte, die dein Gegner kontrolliert, aus deiner Hand auf den Friedhof abgeworfen werden, erhöhe deine Life Points um 1000 Punkte."
+ },
+ "6066": {
+  "desc": "Während der End Phase jedes Spielzugs, wähle eine Anzahl von normalen Monstern der Stufe 2 oder niedriger aus deinem Deck, die der Anzahl deiner normalen Monster der Stufe 2 oder niedriger, die in diesem Spielzug als Ergebnis eines Kampfes zerstört wurden, entspricht und beschwöre diese als Spezialbeschwörung auf deiner Spielfeldseite. Mische dein Deck anschließend."
+ },
+ "6076": {
+  "desc": "Diese Karte kann nicht spezialbeschworen werden. Wenn du die Hälfte deiner Life Points bezahlst, dann kannst du alle Karten auf dem Feld, außer dieser Karte, aus dem Spiel entfernen. Für jede Karte, die durch diesen Effekt zerstört wird, erhöht sich die ATK dieser Karte um 300 Punkte. Diese Karte wird in der End Phase von der Runde, in der sie beschworen/ flippbeschworen wurde, auf den Friedhof geschickt."
+ },
+ "6085": {
+  "desc": "Wenn diese Karte auf deinen Friedhof gelegt wird, kannst du diese Karte vom Friedhof aus dem Spiel entfernen, um 1 „Peten, dunkler Clown“-Karte als Spezialbeschwörung aus deiner Hand oder deinem Deck zu beschwören."
+ },
+ "6097": {
+  "desc": "Solange diese Karte offen auf deiner Spielfeldseite liegt, bleibt diese Karte von jeglichen Effekten von Zauberkarten unberührt. Lege während der Standby Phase deines Spielzugs diese offene Karte auf den Friedhof, um eine „Ultimatives Insekt LV3“-Karte als Spezialbeschwörung aus deiner Hand oder deinem Deck zu beschwören (außer in dem Spielzug, in dem diese Karte als Normal- oder Spezialbeschwörung beschworen oder aufgedeckt wurde)."
+ },
+ "6103": {
+  "desc": "Falls diese Karte ein Monster angreift, das sich verdeckt in Verteidigungsposition befindet, zerstöre das Monster durch den Effekt dieser Karte, ohne die Karte aufzudecken oder eine Schadensberechnung. Während der End Phase des Spielzugs, in dem diese Karte ein Monster als Ergebnis eines Kampfes zerstört hat, lege diese Karte auf den Friedhof, um eine „Mystischer Schwertkämpfer LV4“-Karte als Spezialbeschwörung aus deiner Hand oder deinem Deck zu beschwören."
+ },
+ "6104": {
+  "desc": "Falls du diese Karte als Normalbeschwörung beschwörst, muss sie verdeckt in Verteidigungsposition auf das Spielfeld gebracht werden. Falls diese Karte ein Monster angreift, das sich verdeckt in Verteidigungsposition befindet, zerstöre das Monster durch den Effekt dieser Karte, ohne die Karte aufzudecken oder eine Schadensberechnung. Während der End Phase des Spielzugs, in dem diese Karte ein Monster als Ergebnis eines Kampfes zerstört hat, lege diese Karte auf den Friedhof, um eine „Mystischer Schwertkämpfer LV6“-Karte als Spezialbeschwörung aus deiner Hand oder deinem Deck zu beschwören."
+ },
+ "6133": {
+  "desc": "Lege 1 offenes Monster auf deiner Spielfeldseite, dessen Kartenname „LV“ enthält, auf den Friedhof, um diese Karte zu aktivieren. Beschwöre ein Monster, das im Kartentext der auf den Friedhof gelegten Karte erwähnt ist, als Spezialbeschwörung aus deiner Hand oder deinem Deck, ungeachtet der Bedingungen für die Beschwörung des Monsters."
+ },
+ "6158": {
+  "desc": "Wird durch das Ablegen einer auf deinem Feld aufgedeckten „Der Trickreiche“-Karte, auf den Friedhof aktiviert. Wenn diese Karte aktiviert wird, werden nur die Monster auf dem Feld deines Gegners spezialbeschworen in Verteidigungsposition als „Trickreiche-Spielmarke“ (Typ Hexer/WIND/Stufe 5/ATK 2000/DEF 1200). Diese Spielmarken können nicht angreifen."
+ },
+ "6166": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nicht als Spezialbeschwörung beschworen werden, außer durch den Effekt von „Schweigsamer Schwertkämpfer LV5“. Solange diese Karte offen auf deiner Spielfeldseite liegt, annuliere die Effekte von allen Zauberkarten auf dem Spielfeld."
+ },
+ "6167": {
+  "desc": "Jedes Mal, wenn dein Gegner eine oder mehrere Karten zieht, lege 1 Zauberzählmarke auf diese Karte (maximal 5). Erhöhe die ATK dieser Karte um 500 Punkte für jede Zauberzählmarke auf dieser Karte. Falls 5 Zauberzählmarken auf dieser Karte sind, lege während der Standby Phase deines nächsten Spielzugs diese offene Karte mit 5 Zauberzählmarken auf den Friedhof, um eine „Schweigsamer Magier LV8“-Karte als Spezialbeschwörung aus deiner Hand oder deinem Deck zu beschwören."
+ },
+ "6168": {
+  "desc": "Du kannst diese Karte nur aktivieren, wenn ein Monster vom Typ Hexer einen Angriff deklariert. Jeder Spieler wählt 1 Monster vom Typ Hexer mit einer ATK von 2000 oder weniger aus seinem Deck und beschwört es als Spezialbeschwörung in offener Angriffsposition auf seine Spielfeldseite."
+ },
+ "6179": {
+  "desc": "Falls du diese Karte als Normalbeschwörung beschwörst, muss sie verdeckt in Verteidigungsposition auf das Spielfeld gebracht werden. Falls diese Karte ein Monster angreift, das sich verdeckt in Verteidigungsposition befindet, zerstöre das Monster durch den Effekt dieser Karte, ohne die Karte aufzudecken oder eine Schadensberechnung. Du kannst Monster, die durch diesen Effekt zerstört werden, oben auf das Deck deines Gegners legen, anstatt sie auf den Friedhof zu legen."
+ },
+ "6229": {
+  "desc": "Diese Karte kann nicht im Kampf zerstört werden. Wenn diese Karte aufgedeckt in Angriffsposition liegt, bezahle ein Monster auf deinem Spielfeld als Tribut, das Stufe 5 oder niedriger ist, um deinem Gegner Schaden an seinen Life Points in der gleichen Höhe wie die ursprüngliche ATK des Monsters zuzufügen. Dieser Effekt kann nur einmal pro Spielzug aktiviert werden."
+ },
+ "6234": {
+  "desc": "Eine heißblütige Maus, durch die Welt wandernd, um der stärkste Kämpfer in der Welt der Mäuse zu werden. Sei vorsichtig, ihn nicht zu berühren, oder er verbrennt dich."
+ },
+ "6244": {
+  "desc": "Diese Karte kann mit 1 Tributmonster als Normalbeschwörung beschworen oder gesetzt werden. In diesem Fall wird die Grund-ATK dieser Karte 2000. Wenn diese Karte erfolgreich als Tributbeschwörung beschworen wird, kannst du von deinem Friedhof eine Anzahl an Monstern vom Typ Ungeheuer in Höhe der tributierten Monster auf die Hand ihrer Besitzer zurückgeben."
+ },
+ "6249": {
+  "desc": "Wenn diese Karte als Ergebnis eines Kampfes zerstört und in den Friedhof gelegt wird, füge den Life Points beider Spieler 1000 Punkte Schaden zu. Wenn diese Karte, außer als Ergebnis eines Kampfes, zerstört und in den Friedhof gelegt wird, füge den Life Points deines Gegners 1000 Punkte Schaden zu."
+ },
+ "6250": {
+  "desc": "Jedes Mal, wenn du oder dein Gegner 1 Zauberkarte aktiviert, lege 1 Zauberzählmarke auf diese Karte. Entferne eine beliebige Anzahl an Zauberzählmarken, um ein offenes Monster auf dem Spielfeld, mit einer ATK von 700 x der Anzahl der entfernten Zauberzählmarken oder weniger, zu zerstören."
+ },
+ "6254": {
+  "desc": "Du kannst diese Karte einmal pro Spielzug während deiner Main Phase in die verdeckte Verteidigungsposition bringen. Wenn diese Karte erfolgreich als Flippbeschwörung beschworen wird, gib 1 Monster auf der Spielfeldseite deines Gegners zurück auf die Hand seines Besitzers."
+ },
+ "6256": {
+  "desc": "Du kannst diese Karte an Stelle einer beliebigen Fusionsmaterial-Monsterkarte verwenden. Du kannst bei dieser Fusion keine anderen Fusionsmaterial-Monster ersetzen. Biete die Fusionsmaterial-Monster inklusive dieser Karte als Tribut an, um 1 LICHT Fusionsmonster aus deinem Fusionsdeck als Spezialbeschwörung zu beschwören."
+ },
+ "6257": {
+  "desc": "Du kannst diese Karte an Stelle einer beliebigen Fusionsmaterial-Monsterkarte verwenden. Du kannst bei dieser Fusion keine anderen Fusionsmaterial-Monster ersetzen. Biete die Fusionsmaterial-Monster inklusive dieser Karte als Tribut an, um 1 FINSTERNIS Fusionsmonster aus deinem Fusionsdeck als Spezialbeschwörung zu beschwören."
+ },
+ "6258": {
+  "desc": "Du kannst diese Karte an Stelle einer beliebigen Fusionsmaterial-Monsterkarte verwenden. Du kannst bei dieser Fusion keine anderen Fusionsmaterial-Monster ersetzen. Biete die Fusionsmaterial-Monster inklusive dieser Karte als Tribut an, um 1 ERDE Fusionsmonster aus deinem Fusionsdeck als Spezialbeschwörung zu beschwören."
+ },
+ "6262": {
+  "desc": "Lege diese offene Karte auf deiner Spielfeldseite in den Friedhof, um 2 Monster vom Typ Ungeheuer der Stufe 3 oder niedriger als Spezialbeschwörung von deinem Deck auf das Spielfeld zu beschwören. Die Monster, die auf diese Weise als Spezialbeschwörung beschworen wurden, werden in der End Phase zerstört."
+ },
+ "6282": {
+  "desc": "Wähle 1 Monster auf deiner Spielfeldseite, um diese Karte zu aktivieren. Zerstöre die gewählte Karte und sende die 2 obersten Karten vom Deck deines Gegners auf den Friedhof."
+ },
+ "6285": {
+  "desc": "Biete jeweils 1 WIND, WASSER, FEUER und ERDE Monster auf deiner Spielfeldseite als Tribut an, um diese Karte zu aktivieren. Zerstöre alle Karten auf der Spielfeldseite deines Gegners."
+ },
+ "6287": {
+  "desc": "Wenn diese Karte im Kampf zerstört wird und auf den Friedhof geschickt wird, dann kannst du 500 Life Points bezahlen und sie während der Standby Phase der nächsten Runde durch Spezialbeschwörung wieder auf dein Feld bringen. Wenn diese Karte erfolgreich durch diesen Effekt spezialbeschworen wurde, dann wird ihre ATK um 500 Punkte erhöht."
+ },
+ "6293": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nicht als Spezialbeschwörung beschworen werden, außer indem du 1 „Vampirlord“-Karte auf deiner Spielfeldseite aus dem Spiel entfernst. Wirf 1 Monster vom Typ Zombie von deiner Hand auf deinen Friedhof ab, um 1 Monster vom Typ Zombie, mit einer niedrigeren Stufe als das abgeworfene Monster, aus deinem Friedhof auszuwählen und als Spezialbeschwörung zu beschwören. Du kannst diesen Effekt nur einmal pro Spielzug benutzen."
+ },
+ "6303": {
+  "desc": "FLIPP: Wähle 1 „Kommandant Covington“-Karte aus deinem Deck und nimm sie auf deine Hand."
+ },
+ "6308": {
+  "desc": "Diese Karte kann nicht normal beschworen oder gesetzt werden. Diese Karte kann nicht durch eine Spezialbeschwörung auf das Spielfeld gebracht werden außer durch den Effekt von „Kommandant Covington“. Diese Karte kann nicht angreifen, es sei denn, du zahlst 1000 Life Points. Wenn du diese Karte aus aufgedeckter Position auf den Friedhof schickst, dann kannst du alle „Maschinisten Soldat“, „Maschinisten Scharfschütze“ und „Maschinisten Verteidiger“ aus deinem Friedhof per Spezialbeschwörung auf das Feld bringen."
+ },
+ "6315": {
+  "desc": "Diese Karte kann nicht als Spezialbeschwörung beschworen werden. Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz deinem Gegner als Kampfschaden zu. Falls diese Karte angreift, kann dein Gegner bis zum Ende des Damage Steps keine Zauber- oder Fallenkarten aktivieren."
+ },
+ "6320": {
+  "desc": "Die Grund-DEF dieser Karte wird zur Anzahl deiner Monster vom Typ Fels, die aus dem Spiel entfernt wurden x 700 Punkte."
+ },
+ "6324": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nicht als Spezialbeschwörung beschworen werden, außer indem du Monster vom Typ Fels in deinem Friedhof aus dem Spiel entfernst. Die Grund-ATK und -DEF dieser Karte werden zur Anzahl der Monster vom Typ Fels, die du entfernt hast, als du diese Karte als Spezialbeschwörung beschworen hattest, x 700 Punkte."
+ },
+ "6343": {
+  "desc": "Dieses Monster kann nur als Ritualbeschwörung beschworen werden, indem du die Ritualzauberkarte „Doriados Segen“ aktivierst. Die Eigenschaft dieser Karte wird auch als WIND, WASSER, FEUER und ERDE behandelt."
+ },
+ "6344": {
+  "desc": "„Elementarheld Avian“ + „Elementarheld Burstinatrix“\nDieses Monster kann nicht als Spezialbeschwörung beschworen werden, außer durch eine Fusionsbeschwörung. Wenn diese Karte ein Monster als Ergebnis eines Kampfes zerstört und es auf den Friedhof legt, füge den Life Points deines Gegners Schaden in Höhe der ATK des zerstörten Monsters zu."
+ },
+ "6345": {
+  "desc": "„Elementarheld Sparkman“ + „Elementarheld Clayman“\nDieses Monster kann nicht als Spezialbeschwörung beschworen werden, außer durch eine Fusionsbeschwörung. Wirf 1 Karte von deiner Hand ab, um 1 offenes Monster auf dem Spielfeld mit geringerer Grund-ATK als die ATK dieser Karte zu wählen und zu zerstören. Du kannst diesen Effekt nur einmal pro Spielzug, während deiner Main Phase, benutzen."
+ },
+ "6346": {
+  "desc": "Lege 1 Monster auf deiner Spielfeldseite auf den Friedhof. Wähle 1 Monster auf deiner Spielfeldseite. Erhöhe die ATK des gewählten Monsters um die ATK des abgelegten Monsters bis zur End Phase des Spielzugs, in dem diese Karte aktiviert wurde."
+ },
+ "6354": {
+  "desc": "Zahle 300 Life Points, um die verdeckten Monster in Verteidigungsposition auf deiner Spielfeldseite zu mischen und sie in verdeckter Verteidigungsposition zurückzulegen. Du kannst diesen Effekt nur einmal pro Spielzug benutzen."
+ },
+ "6355": {
+  "desc": "Wähle 1 Monster auf deiner Spielfeldseite, um diese Karte zu aktivieren. Solange du 2 oder mehr Monster auf deiner Spielfeldseite hast und alle Monster auf deiner Spielfeldseite in Verteidigungsposition sind, erhöhe die DEF des gewählten Monsters um 700 Punkte. Wenn das gewählte Monster vom Spielfeld entfernt wird, zerstöre diese Karte."
+ },
+ "6359": {
+  "desc": "Füge den Life Points des Spielers, der diese gesetzte Karte zerstört, 1000 Punkte Schaden zu."
+ },
+ "6368": {
+  "desc": "Diese Karte kann nicht als Spezialbeschwörung beschworen werden. Wenn diese Karte erfolgreich als Tributbeschwörung beschworen wird, kannst du bis zu 5 FEUER Monster aus dem Friedhof aus dem Spiel entfernen. Zerstöre die selbe Anzahl an Zauber- oder Fallenkarten in Höhe der Anzahl der Karten, die du mit diesem Effekt aus dem Spiel entfernt hast."
+ },
+ "6376": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nicht als Spezialbeschwörung beschworen werden, außer indem du 1 „Leviadrache - Daedalus“-Karte auf deiner Spielfeldseite als Tribut anbietest. Lege „Umi“ von deiner Spielfeldseite auf den Friedhof, um alle Karten, außer dieser Karte, in den Händen beider Spieler und auf dem Spielfeld auf den Friedhof zu legen."
+ },
+ "6399": {
+  "desc": "Wenn ein Monster angreift, dessen Name „Elementarheld“ enthält, falls seine ATK niedriger ist als die ATK des Ziels des Angriffs, erhöhe die ATK des angreifenden Monsters um 1000 Punkte nur während der Schadensberechnung."
+ },
+ "6400": {
+  "desc": "Diese Karte kann nicht als Tribut geopfert werden. Wenn diese Karte erfolgreich durch Beschwörung oder Flippbeschwörung aufs Feld gebracht wird, erscheint sie in Verteidigungsposition auf dem Feld. Indem du eine Zauberkarte aus deiner Hand ablegst, kannst du eine Spezialbeschwörung eines Monsters der Stufe 4 aus deinem Deck durchführen. Die Monsterkarte, die durch diesen Effekt spezialbeschworen wurde, kann für eine Runde nicht angreifen. Du kannst diesen Effekt der Karte nur einmal pro Runde in deiner Main Phase aktivieren."
+ },
+ "6409": {
+  "desc": "Du kannst nur „Elementarheld Sparkman“ mit dieser Karte ausrüsten. Während der Main Phase deines Spielzugs kannst du die Kampfposition von 1 offenen Monster ändern. Nachdem du diesen Effekt dreimal benutzt hast, zerstöre diese Karte."
+ },
+ "6410": {
+  "desc": "Diese Karte kann aus deiner Hand spezialbeschworen werden, wenn du den Effekt einer Karte deines Gegners durch eine Konterfallenkarte unterbrochen hast. Wenn diese Karte erfolgreich auf diese Art spezialbeschworen wurde, werden die folgenden Effekte aktiviert, abhängig davon, welche Effekte ursprünglich unterbrochen wurden.\n●Zauber: die Life Points des Gegners werden um 1500 Punkte gesenkt.\n●Falle: wähle eine Karte auf dem Feld deines Gegners und zerstöre sie.\n●Effektmonster: wähle eine Karte aus deinem Friedhof und bringe sie durch Spezialbeschwörung auf dein Feld."
+ },
+ "6414": {
+  "desc": "Wirf 1 Karte von deiner Hand ab. Die ATK von 1 offenen Monster auf dem Spielfeld wird bis zur End Phase dieses Spielzugs 2000."
+ },
+ "6427": {
+  "desc": "Die Grund-ATK dieser Karte wird zur Anzahl deiner Monster vom Typ Dinosaurier, die vom Spiel entfernt worden sind, x 1000 Punkte."
+ },
+ "6438": {
+  "desc": "Du kannst diese Karte nur aktivieren, wenn du keine Karten auf deiner Hand hast. Wirf einen sechsseitigen Würfel dreimal und füge den Life Points deines Gegners Schaden in Höhe der Summe der gewürfelten Augen x 100 Punkte zu."
+ },
+ "6450": {
+  "desc": "Wenn du 1000 Life Points bezahlst, dann darfst du alle aufgedeckten Monster auf dem Feld zerstören und verhindern, dass irgendwelche Karten vom gleichen Typ beschworen, flippbeschworen oder spezialbeschworen werden."
+ },
+ "6454": {
+  "desc": "„Ritterin der Königin“ + „Ritter des Buben“ + „Ritter des Königs“\nEine Fusionsbeschwörung dieses Monsters kann nur mit den oben genannten Fusionsmaterial-Monstern durchgeführt werden. Während diese Karte aufgedeckt auf dem Feld ist, darfst du die Effekte von Zauber-, Fallen- und Effektmonsterkarten durch das Ablegen einer Karte vom gleichen Typ unterbrechen (um den Effekt einer Effektmonsterkarte zu unterbrechen, kann jede Monsterkarte abgelegt werden). Dieser Effekt kann nur einmal pro Runde aktiviert werden."
+ },
+ "6477": {
+  "desc": "Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6500": {
+  "desc": "Solange sich diese Karte offen auf dem Spielfeld befindet, füge den Life Points deines Gegners 400 Punkte Schaden zu, jedes Mal, wenn du 1 Normale Zauberkarte aktivierst."
+ },
+ "6505": {
+  "desc": "Falls diese Karte durch den Effekt einer Karte aus der Hand auf den Friedhof abgeworfen wird, beschwöre diese Karte als Spezialbeschwörung auf deine Spielfeldseite. Falls diese Karte durch den Effekt einer Karte deines Gegners aus der Hand auf den Friedhof abgeworfen wird, kannst du bis zu 2 Karten auf der Spielfeldseite deines Gegners wählen und sie zerstören."
+ },
+ "6507": {
+  "desc": "Indem du 1 „Aussa, die Erdverzaubererin“ und 1 ERDE Monster von deiner Spielfeldseite auf den Friedhof legst, kannst du diese Karte aus deiner Hand oder aus deinem Deck als Spezialbeschwörung beschwören. Falls du diese Karte auf diese Weise als Spezialbeschwörung beschwörst, bekommt diese Karte den folgenden Effekt: Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6508": {
+  "desc": "Indem du 1 „Eria, die Wasserverzaubererin“ und 1 WASSER Monster von deiner Spielfeldseite auf den Friedhof legst, kannst du diese Karte aus deiner Hand oder aus deinem Deck als Spezialbeschwörung beschwören. Falls du diese Karte auf diese Weise als Spezialbeschwörung beschwörst, bekommt diese Karte den folgenden Effekt: Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6509": {
+  "desc": "Indem du 1 „Hiita, die Feuerverzaubererin“ und 1 FEUER Monster von deiner Spielfeldseite auf den Friedhof legst, kannst du diese Karte aus deiner Hand oder aus deinem Deck als Spezialbeschwörung beschwören. Falls du diese Karte auf diese Weise als Spezialbeschwörung beschwörst, bekommt diese Karte den folgenden Effekt: Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6510": {
+  "desc": "Indem du 1 „Wynn, die Windverzaubererin“ und 1 WIND Monster von deiner Spielfeldseite auf den Friedhof legst, kannst du diese Karte aus deiner Hand oder aus deinem Deck als Spezialbeschwörung beschwören. Falls du diese Karte auf diese Weise als Spezialbeschwörung beschwörst, bekommt diese Karte den folgenden Effekt: Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6522": {
+  "desc": "Keiner der Spieler kann Fusionsbeschwörungen durchführen."
+ },
+ "6524": {
+  "desc": "Lege 1 Ausrüstungszauberkarte aus deiner Hand auf den Friedhof, um diese Karte zu aktivieren. Falls das ausgerüstete Monster ein Monster als Ergebnis eines Kampfes zerstört, kann der Beherrscher dieser Ausrüstungszauberkarte 1 Monster von seinem Friedhof seiner Hand hinzufügen, dessen ATK kleiner oder gleich der ATK des ausgerüsteten Monsters ist."
+ },
+ "6530": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nicht als Spezialbeschwörung beschworen werden, außer indem du 1 „Dunkler Magier“ von deiner Spielfeldseite als Tribut anbietest. Solange sich diese Karte offen auf dem Spielfeld befindet, füge den Life Points deines Gegners 1000 Punkte Schaden zu, jedes Mal, wenn ein Spieler 1 Normale Zauberkarte aktiviert."
+ },
+ "6541": {
+  "desc": "Füge eine beliebige Anzahl an Karten von deiner Hand dem Deck hinzu und mische es, dann ziehe so viele Karten von deinem Deck, wie du ihm hinzugefügt hast."
+ },
+ "6542": {
+  "desc": "Du kannst diese Karte nur aktivieren, wenn 1 Monster mit einer ATK von 1500 Punkten oder weniger als Spezialbeschwörung auf deiner Spielfeldseite beschworen wird, während ein offenes Monster auf der gegnerischen Spielfeldseite ist. Beschwöre alle Monster mit demselben Namen wie das beschworene Monster von deiner Hand, deinem Deck und deinem Friedhof als Spezialbeschwörung in offener Angriffsposition. Dein Gegner wählt 1 Monster auf seiner Spielfeldseite und beschwört alle Monster mit demselben Namen von seiner Hand, seinem Deck und seinem Friedhof als Spezialbeschwörung."
+ },
+ "6543": {
+  "desc": "Du kannst diese Karte nur in Reaktion auf die Aktivierung eines Fallenkarteneffekts, der Schaden zufügt. Mache den Effektschaden von dieser Fallenkarte zu 0."
+ },
+ "6545": {
+  "desc": "Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6550": {
+  "desc": "Wenn diese Karte erfolgreich beschworen oder spezialbeschworen wurde, dann kannst du dir bis zu 5 Zauberkarten aus dem Friedhof deines Gegners aussuchen und sie aus dem Spiel entfernen. Für jede Karte, die durch diesen Effekt aus dem Spiel entfernt wird, erhöht sich die ATK dieser Karte um 300 Punkte."
+ },
+ "6569": {
+  "desc": "Diese Karte kann nicht als Normalbeschwörung beschworen oder gesetzt werden. Diese Karte kann nicht als Spezialbeschwörung beschworen werden, außer durch den Effekt von „Photonengeneratoreinheit“. Du kannst 1 Monster zerstören, dessen ATK oder DEF gleich oder höher als die ATK dieser Karte ist. Du kannst diesen Effekt nur einmal pro Spielzug benutzen."
+ },
+ "6571": {
+  "desc": "Wähle 1 offenes Monster auf deiner Spielfeldseite, dessen Kartenname „Elementarheld“ enthält, um diese Karte zu aktivieren. In diesem Spielzug wird die ATK des gewählten Monsters halbiert und es kann zweimal während der gleichen Battle Phase angreifen."
+ },
+ "6582": {
+  "desc": "Du kannst diese Karte nur aktivieren, indem du 1 Karte von deiner Hand abwirfst, wenn du Kampfschaden erhältst. Beschwöre 1 Monster von deinem Deck als Spezialbeschwörung in Angriffsposition, dessen ATK kleiner oder gleich dem Kampfschaden ist, den du erhalten hast."
+ },
+ "6589": {
+  "desc": "Falls ein Monster deines Gegners diese verdeckte Karte in Verteidigungsposition angreift, wird diese Karte eine Ausrüstungskarte, welche das angreifende Monster ausrüstet, ohne Schadensberechnung. Zerstöre das ausgerüstete Monster während der Standby Phase des nächsten Spielzugs deines Gegners."
+ },
+ "6601": {
+  "desc": "Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6610": {
+  "desc": "Wenn diese verdeckte Karte in Verteidigungsposition zerstört und auf den Friedhof gelegt wird, außer als Ergebnis eines Kampfes, tausche die Grund-ATK und -DEF dieser Karte und beschwöre sie als Spezialbeschwörung auf deine Spielfeldseite."
+ },
+ "6617": {
+  "desc": "Diese Karte kann benutzt werden, um „Ruin, Königin des Vergessens“ oder „Demise, König des Jüngsten Tages“ als Ritualbeschwörung zu beschwören. Du musst außerdem Monster von deiner Spielfeldseite oder deiner Hand als Tribut anbieten, deren Anzahl an Stufen zusammen die gleiche Anzahl an Stufen sind, wie die des Ritualmonsters, das du versuchst, als Ritualbeschwörung zu beschwören."
+ },
+ "6637": {
+  "desc": "Spezialbeschworen mit dem Effekt von „Siegesviper XX03“ oder „Energiekapsel“. Dieser Token hat immer die gleiche Stufe, ATK, DEF, den gleichen Typ und die gleiche Eigenschaft wie „Siegesviper XX03“."
+ },
+ "6638": {
+  "desc": "Spezialbeschworen mit dem Effekt von „Löwenzahn“. Diese Spielmarke kann nicht als Tribut für Tributbeschwörungen in der Runde, in der sie spezialbeschworen wurde, eingesetzt werden."
+ },
+ "6639": {
+  "desc": "„Elementarheld Avian“ + „Elementarheld Burstinatrix“ + „Elementarheld Clayman“ + „Elementarheld Bubbleman“\nDieses Monster kann nicht als Spezialbeschwörung beschworen werden, außer durch eine Fusionsbeschwörung. Die Eigenschaft dieser Karte wird auch als WIND, WASSER, FEUER und ERDE behandelt. Wenn diese Karte erfolgreich fusionsbeschworen wird, werden alle Karten, die aus dem Spiel entfernt wurden, wieder ins Deck ihrer Besitzer getan und das Deck wird neu gemischt. Für jede Monsterkarte auf dem Feld deines Gegners mit der gleichen Eigenschaft steigt die ATK dieser Karte um 300 Punkte."
+ },
+ "6642": {
+  "desc": "Falls ein Monster vom Typ Fels in Verteidigungsposition angegriffen wird, verdopple allen Kampfschaden, den der Beherrscher des angreifenden Monsters erhält."
+ },
+ "6654": {
+  "desc": "Wenn diese Karte auf den Friedhof geschickt wird, dann werden 2 „Flauschige-Spielmarke“ (Typ Pflanze/WIND/Stufe 1/ATK 0/DEF 0) auf deiner Seite des Felds spezialbeschworen. Diese Spielmarken können nicht als Tribut für eine Tributbeschwörung in der Runde benutzt werden, in der sie spezialbeschworen wurden."
+ },
+ "6661": {
+  "desc": "Falls diese Karte durch den Effekt von „Gefängnisuhrturm“ als Spezialbeschwörung beschworen wurde, zerstöre alle Monster auf deiner Spielfeldseite (außer „Schicksalsheld“-Monstern), dann kannst du bis zu 2 „Schicksalsheld“-Monster von deinem Friedhof als Spezialbeschwörung beschwören. Während des Spielzugs, in dem diese Karte als Spezialbeschwörung beschworen wurde, können „Schicksalsheld“-Monster auf deiner Spielfeldseite nicht zerstört werden und der Kampfschaden, der dem Beherrscher dieser Karte bei einem Kampf mit einem „Schicksalsheld“-Monster auf deiner Spielfeldseite zugefügt werden würde, wird zu 0. Die ATK und DEF dieser Karte entsprechen der Summe der Grund-ATK aller „Schicksalsheld“-Monster auf deiner Spielfeldseite (außer dieser Karte)."
+ },
+ "6664": {
+  "desc": "Falls die ATK jedes Monsters auf der gegnerischen Spielfeldseite höher als die ATK dieser Karte ist, kann diese Karte die Life Points deines Gegners direkt angreifen."
+ },
+ "6671": {
+  "desc": "Wähle 1 offenes Monster auf deiner Spielfeldseite, um diese Karte zu aktivieren. Erhöhe die ATK des gewählten Monsters um 500 Punkte. Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu. Diese Effekte dauern bis zum Ende dieses Spielzugs an."
+ },
+ "6681": {
+  "desc": "Entferne 1 Monsterkarte von deiner Hand aus dem Spiel. Solange diese Karte auf dem Spielfeld liegt, können gegnerische Monster, die die gleiche Eigenschaft wie das durch diesen Effekt entfernte Monster haben, keinen Angriff deklarieren."
+ },
+ "6685": {
+  "desc": "Falls du diese Karte als Tributbeschwörung beschwörst, indem du 1 der folgenden Monster als Tribut angeboten hast, erhält diese Karte den entsprechenden Effekt:\r\n●Batteriemann D: Annulliere den Effekt von einer Zauber- oder Fallenkarte, die diese 1 Karte zum Ziel bestimmt.\r\n●Batteriemann C: Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu.\r\n●Batteriemann AA: Erhöhe die ATK dieser Karte um 1000 Punkte."
+ },
+ "6688": {
+  "desc": "Du kannst diese Karte als Normalbeschwörung beschwören, ohne ein Monster als Tribut anzubieten. Falls du sie auf diese Weise als Normalbeschwörung beschwörst, wird sie während der End Phase auf den Friedhof gelegt."
+ },
+ "6689": {
+  "desc": "Du kannst diese Karte als Normalbeschwörung beschwören, indem du 1 Monster für sie als Tribut anbietest. Falls du sie auf diese Weise als Normalbeschwörung beschwörst, wird sie während der End Phase auf den Friedhof gelegt. Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6722": {
+  "desc": "Wirf 1 Karte von deiner Hand ab. Beschwöre als Spezialbeschwörung so viele „Harpyie“-Karten aus deinem Friedhof wie möglich. Wenn diese Karte vom Spielfeld entfernt wird, zerstöre alle Monster, die durch den Effekt dieser Karte als Spezialbeschwörung beschworen wurden."
+ },
+ "6736": {
+  "desc": "Wenn ein Monster, dessen Kartenname „roid“ enthält, aus deinem Friedhof deiner Hand hinzugefügt wird, kannst du dieses Monster als Spezialbeschwörung beschwören."
+ },
+ "6739": {
+  "desc": "„Steamroid“ + „Drillroid“ + „Submarineroid“\nEine Fusionsbeschwörung dieses Monsters kann nur mit den oben genannten Fusionsmaterialmonstern durchgeführt werden. Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz den Life Points deines Gegners als Kampfschaden zu."
+ },
+ "6758": {
+  "desc": "Wenn ein Monster angreift, dessen Kartenname „Schicksalsheld“ enthält, und falls seine ATK kleiner ist als die ATK des Angriffsziels, erhöhe nur während der Schadensberechnung die ATK des angreifenden Monsters um 1000 Punkte."
+ },
+ "6763": {
+  "desc": "Du kannst diese Karte nur aktivieren, wenn ein Monster auf deiner Spielfeldseite, dessen Kartenname „Schicksalsheld“ enthält, durch den Karteneffekt deines Gegners zerstört und auf den Friedhof gelegt wird. Beschwöre als Spezialbeschwörung auf deine Spielfeldseite alle Monster, deren Kartenname „Schicksalsheld“ enthält, die in diesem Spielzug zerstört und auf den Friedhof gelegt wurden."
+ },
+ "6815": {
+  "desc": "Diese Karte kann als Zauberkarte behandelt werden und in deine Zauber- & Fallenkartenzone platziert werden. Wenn diese Karte durch den Effekt einer Karte deines Gegners zerstört und auf den Friedhof geschickt wird, während sie sich in deiner Zauber- & Fallenkartenzone befindet, dann kannst du diese Karte während der End Phase dieser Runde per Spezialbeschwörung auf deine Seite des Spielfeldes bringen. Außerdem wird, wenn diese Karte erfolgreich Flipp-beschworen wird, eine Anzahl von Zauber- oder Fallenkarten auf dem Feld zerstört, die der Anzahl der aufgedeckten „Spielzeugmagier“-Karten auf dem Spielfeld entspricht."
+ },
+ "6955": {
+  "desc": "Während eines Kampfes zwischen dieser angreifenden Karte und einem Monster in Verteidigungsposition, dessen DEF niedriger ist als die ATK dieser Karte, füge die Differenz deinem Gegner als Kampfschaden zu."
+ }
+}

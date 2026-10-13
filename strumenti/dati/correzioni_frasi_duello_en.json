@@ -1,0 +1,33 @@
+{
+ "esatte": {
+  "I activate face-down card!": "I activate a face-down card!",
+  "Here's face-down card!": "Here's a face-down card!",
+  "I'm coming with face-down card!": "I'm coming with a face-down card!"
+ },
+ "parti": [
+  [
+   "a Equip Spell",
+   "an Equip Spell"
+  ],
+  [
+   "a a big meanie",
+   "a big meanie"
+  ],
+  [
+   "What you're doing, do you!",
+   "What are you doing?!"
+  ],
+  [
+   "Are not you annoyed",
+   "Aren't you annoyed"
+  ],
+  [
+   "preparations for my resurrection is complete",
+   "preparations for my resurrection are complete"
+  ],
+  [
+   "taking it serious!",
+   "taking it seriously!"
+  ]
+ ]
+}

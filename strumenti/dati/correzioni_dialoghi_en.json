@@ -1,0 +1,1610 @@
+{
+ "st01_t01/Iso001E#38": {
+  "attuale": "You stole, lied and lost. \nYou deserve to be demoted!",
+  "proposto": "You stole, lied and lost.\nYou deserve to be demoted!"
+ },
+ "st01_t01/Iso005E#34": {
+  "attuale": "Scrubs don't have PhDs\nin dueling!  Got that?!",
+  "proposto": "Scrubs don't have PhDs\nin dueling! Got that?!"
+ },
+ "st01_t01/Iso005E#49": {
+  "attuale": "Wow.  It's almost like\nthey really... like 《C005_3》.",
+  "proposto": "Wow. It's almost like\nthey really... like 《C005_3》."
+ },
+ "st01_t01/Iso005E#69": {
+  "attuale": "Another chance?! Do you\nknow much we spent?!",
+  "proposto": "Another chance?! Do you\nknow how much we spent?!"
+ },
+ "st01_t01/Iso005E#70": {
+  "attuale": "You don't deserve to be a \n《C005_2》!",
+  "proposto": "You don't deserve to be a\n《C005_2》!"
+ },
+ "st01_t01/Iso005E#115": {
+  "attuale": "My new family is already \ndysfunctional!",
+  "proposto": "My new family is already\ndysfunctional!"
+ },
+ "st01_t01/Iso007E#42": {
+  "attuale": "Chill, 《C003_3》. \nIt's just a costume!",
+  "proposto": "Chill, 《C003_3》.\nIt's just a costume!"
+ },
+ "st01_t01/Iso007E#70": {
+  "attuale": "It's 《PLAYER》ｖｓ《C026_1》!",
+  "proposto": "It's 《PLAYER》 vs 《C026_1》!"
+ },
+ "st01_t01/Iso010E#34": {
+  "attuale": "C'mon. \nThis is a place to duel.",
+  "proposto": "C'mon.\nThis is a place to duel."
+ },
+ "st01_t01/Iso010E#66": {
+  "attuale": "Huh? A present? I don't \nneed that, but thanks!",
+  "proposto": "Huh? A present? I don't\nneed that, but thanks!"
+ },
+ "st01_t01/Iso010E#102": {
+  "attuale": "I've lost... It was a close,\nbut I can't say I'm happy.",
+  "proposto": "I've lost... It was close,\nbut I can't say I'm happy."
+ },
+ "st01_t01/Iso010E#103": {
+  "attuale": "Boy, it does feels good\nto win a duel!",
+  "proposto": "Boy, it does feel good\nto win a duel!"
+ },
+ "st01_t01/Iso010E#172": {
+  "attuale": "Wow, I won! This Deck \nisn't so bad after all!",
+  "proposto": "Wow, I won! This Deck\nisn't so bad after all!"
+ },
+ "st01_t01/Iso010E#194": {
+  "attuale": "I'm a man! I can't turn my \nback when faced with a duel!",
+  "proposto": "I'm a man! I can't turn my\nback when faced with a duel!"
+ },
+ "st01_t01/Iso010E#195": {
+  "attuale": "I'm a man! I admit my \nmistakes and move on!",
+  "proposto": "I'm a man! I admit my\nmistakes and move on!"
+ },
+ "st01_t01/Iso010E#196": {
+  "attuale": "I'm a man! I'm a duelist! I \ncan't let this go to my head!",
+  "proposto": "I'm a man! I'm a duelist! I\ncan't let this go to my head!"
+ },
+ "st01_t01/Iso010E#204": {
+  "attuale": "Go ahead, 《PLAYER》.\nShow me what your made of!",
+  "proposto": "Go ahead, 《PLAYER》.\nShow me what you're made of!"
+ },
+ "st01_t01/Iso010E#205": {
+  "attuale": "Argh! You're skill is almost\ninhuman, 《PLAYER》!",
+  "proposto": "Argh! Your skill is almost\ninhuman, 《PLAYER》!"
+ },
+ "st01_t01/Iso010E#216": {
+  "attuale": "Bring it on! I'll give you a \ntaste of some REAL power!",
+  "proposto": "Bring it on! I'll give you a\ntaste of some REAL power!"
+ },
+ "st01_t01/Iso010E#231": {
+  "attuale": "I don't stop until my \nopponent surrenders!",
+  "proposto": "I don't stop until my\nopponent surrenders!"
+ },
+ "st01_t01/Iso010E#240": {
+  "attuale": "Perfect timing! I was just \nlooking for someone to duel.",
+  "proposto": "Perfect timing! I was just\nlooking for someone to duel."
+ },
+ "st01_t01/Iso010E#241": {
+  "attuale": "Dang! I thought I had you\nbut there, but I lost.",
+  "proposto": "Dang! I thought I had you\nthere, but I lost."
+ },
+ "st01_t01/Iso010E#261": {
+  "attuale": "Well, I don't know... Aw, \nwhat the heck. Let's duel!",
+  "proposto": "Well, I don't know... Aw,\nwhat the heck. Let's duel!"
+ },
+ "st01_t01/Iso010E#263": {
+  "attuale": "Yahoo! You played pretty \ngood though! Nice duel!",
+  "proposto": "Yahoo! You played pretty\ngood though! Nice duel!"
+ },
+ "st01_t01/Iso010E#270": {
+  "attuale": "Don't worry, I'll finish you \noff quick! Let's duel!",
+  "proposto": "Don't worry, I'll finish you\noff quick! Let's duel!"
+ },
+ "st01_t01/Iso010E#283": {
+  "attuale": "You're really good! I didn't \ndo bad, but it wasn't enough.",
+  "proposto": "You're really good! I didn't\ndo bad, but it wasn't enough."
+ },
+ "st01_t01/Iso010E#299": {
+  "attuale": "I've blown you over. Use \nyour passion and try again!",
+  "proposto": "I've blown you over. Use\nyour passion and try again!"
+ },
+ "st01_t01/Iso010E#302": {
+  "attuale": "Tag duel are hard. I don't\nknow what to do to win.",
+  "proposto": "Tag duels are hard. I don't\nknow what to do to win."
+ },
+ "st01_t01/Iso010E#312": {
+  "attuale": "I'm important to get\nexperience in tag dueling.",
+  "proposto": "It's important for me to get\nexperience in tag dueling."
+ },
+ "st01_t01/Iso010E#319": {
+  "attuale": "That was a fun duel. I \nmade some mistakes, though.",
+  "proposto": "That was a fun duel. I\nmade some mistakes, though."
+ },
+ "st01_t01/Iso010E#360": {
+  "attuale": "Wow, a draw is really rare.\nDid you it easy on me?",
+  "proposto": "Wow, a draw is really rare.\nDid you go easy on me?"
+ },
+ "st01_t01/Iso010E#371": {
+  "attuale": "Yaaay! I won! Looks like \nyou slipped up a little, huh?",
+  "proposto": "Yaaay! I won! Looks like\nyou slipped up a little, huh?"
+ },
+ "st01_t01/Iso010E#373": {
+  "attuale": "Who are you? Hey, it's\nnot like I asked you name!",
+  "proposto": "Who are you? Hey, it's\nnot like I asked your name!"
+ },
+ "st01_t01/Iso010E#378": {
+  "attuale": "Who are you? Hey, it's\nnot like I asked you name!",
+  "proposto": "Who are you? Hey, it's\nnot like I asked your name!"
+ },
+ "st01_t01/Iso010E#383": {
+  "attuale": "Who are you? Hey, it's\nnot like I asked you name!",
+  "proposto": "Who are you? Hey, it's\nnot like I asked your name!"
+ },
+ "st01_t01/Iso023E#51": {
+  "attuale": "It looks like...\nHuh?  A card?",
+  "proposto": "It looks like...\nHuh? A card?"
+ },
+ "st01_t01/Iso024E#50": {
+  "attuale": "What?  《PLAYER》?",
+  "proposto": "What? 《PLAYER》?"
+ },
+ "st01_t01/Iso024E#71": {
+  "attuale": "This is dumb. 《PLAYER》, are \nyou really gonna duel him?",
+  "proposto": "This is dumb. 《PLAYER》, are\nyou really gonna duel him?"
+ },
+ "st01_t01/Iso024E#72": {
+  "attuale": "No is dumb! \nDuel!",
+  "proposto": "No is dumb!\nDuel!"
+ },
+ "st01_t01/Iso024E#78": {
+  "attuale": "I trained out here \nfor a whole year!",
+  "proposto": "I trained out here\nfor a whole year!"
+ },
+ "st01_t01/Iso024E#80": {
+  "attuale": "Just be yourself, like \nwhen you dueled 《PLAYER》.",
+  "proposto": "Just be yourself, like\nwhen you dueled 《PLAYER》."
+ },
+ "st01_t01/Iso025E#1": {
+  "attuale": "I invited 《C002_3》 and 《C003_3》,\nbut what's《C004_3》 and\n《C005_2》 doing here?",
+  "proposto": "I invited 《C002_3》 and 《C003_3》,\nbut what's 《C004_3》 and\n《C005_2》 doing here?"
+ },
+ "st01_t01/Iso025E#7": {
+  "attuale": "I invited 《C002_3》 and 《C003_3》,\nbut what's《C004_3》 and\n《C005_2》 doing here?",
+  "proposto": "I invited 《C002_3》 and 《C003_3》,\nbut what's 《C004_3》 and\n《C005_2》 doing here?"
+ },
+ "st01_t01/Iso025E#13": {
+  "attuale": "I invited 《C002_3》 and 《C003_3》,\nbut what's《C004_3》 and\n《C005_2》 doing here?",
+  "proposto": "I invited 《C002_3》 and 《C003_3》,\nbut what's 《C004_3》 and\n《C005_2》 doing here?"
+ },
+ "st01_t01/Iso025E#51": {
+  "attuale": "You're incredible, 《PLAYER》! You \ndraw better than 《C005_2》!",
+  "proposto": "You're incredible, 《PLAYER》! You\ndraw better than 《C005_2》!"
+ },
+ "st01_t01/Iso025E#82": {
+  "attuale": "Heh, maybe he should \nhone his drawing skills.",
+  "proposto": "Heh, maybe he should\nhone his drawing skills."
+ },
+ "st01_t01/Iso026E#59": {
+  "attuale": "What?  《PLAYER》?",
+  "proposto": "What? 《PLAYER》?"
+ },
+ "st01_t01/Iso026E#64": {
+  "attuale": "Hmm... It's true that ＊\ndraws as well as that\nslacker Jaden.",
+  "proposto": "Hmm... It's true that 《PLAYER》\ndraws as well as that\nslacker Jaden."
+ },
+ "st01_t01/Iso026E#95": {
+  "attuale": "I trained out here \nfor a whole year!",
+  "proposto": "I trained out here\nfor a whole year!"
+ },
+ "st01_t01/Iso026E#97": {
+  "attuale": "Just be yourself, like \nwhen you dueled 《PLAYER》.",
+  "proposto": "Just be yourself, like\nwhen you dueled 《PLAYER》."
+ },
+ "st01_t01/Iso028E#7": {
+  "attuale": "Then I say we arrange \nsomething sporting.",
+  "proposto": "Then I say we arrange\nsomething sporting."
+ },
+ "st01_t01/Iso029E#22": {
+  "attuale": "What's with him? \nWhy's he acting all gonzo?",
+  "proposto": "What's with him?\nWhy's he acting all gonzo?"
+ },
+ "st01_t01/Iso030E#42": {
+  "attuale": "＊ has always\nbelieved in you!",
+  "proposto": "《PLAYER》 has always\nbelieved in you!"
+ },
+ "st01_t01/Iso031E#2": {
+  "attuale": "Aww man. \nThe whole school's here.",
+  "proposto": "Aww man.\nThe whole school's here."
+ },
+ "st01_t01/Iso031E#39": {
+  "attuale": "Man! Those two baldies \nfaced the King of Games!",
+  "proposto": "Man! Those two baldies\nfaced the King of Games!"
+ },
+ "st01_t01/Iso031E#48": {
+  "attuale": "《C002_3》! 《PLAYER》! 《C003_3》 \nand I have your back!",
+  "proposto": "《C002_3》! 《PLAYER》! 《C003_3》\nand I have your back!"
+ },
+ "st01_t01/Iso031E#78": {
+  "attuale": "《C002_3》, I'll see how much\nyou improved in the \nfinals. So don't lose.",
+  "proposto": "《C002_3》, I'll see how much\nyou improved in the\nfinals. So don't lose."
+ },
+ "st01_t01/Iso150E#13": {
+  "attuale": "You have class everyday\nfrom Monday to Saturday.",
+  "proposto": "You have class every day\nfrom Monday to Saturday."
+ },
+ "st01_t01/LessonE#9": {
+  "attuale": "Even pre-duelist know the\nanswer to this!!",
+  "proposto": "Even a pre-duelist knows the\nanswer to this!!"
+ },
+ "st01_t01/LessonE#125": {
+  "attuale": "The top is the bottom and \nthe bottom is the top.",
+  "proposto": "The top is the bottom and\nthe bottom is the top."
+ },
+ "st01_t01/LessonE#264": {
+  "attuale": "I-I rather have\nvolleyball!",
+  "proposto": "I-I'd rather have\nvolleyball!"
+ },
+ "st01_t01/LessonE#313": {
+  "attuale": " He's Attie now!",
+  "proposto": "He's Attie now!"
+ },
+ "st01_t01/LessonE#355": {
+  "attuale": " He's Attie now!",
+  "proposto": "He's Attie now!"
+ },
+ "st01_t01/LessonE#371": {
+  "attuale": "Okay, how this?",
+  "proposto": "Okay, how's this?"
+ },
+ "st01_t01/LessonE#410": {
+  "attuale": "Who dares call me\n\"temporary!\"  ...Eek!",
+  "proposto": "Who dares call me\n\"temporary!\" ...Eek!"
+ },
+ "st01_t01/LessonE#549": {
+  "attuale": "９\n１０\n１１\n１２",
+  "proposto": "9\n10\n11\n12"
+ },
+ "st01_t01/LessonE#591": {
+  "attuale": "Ｑ\nＰ\nＡ\nＣ",
+  "proposto": "Q\nP\nA\nC"
+ },
+ "st01_t01/MailE#70": {
+  "attuale": "You got a 80%.",
+  "proposto": "You got an 80%."
+ },
+ "st01_t01/MailE#148": {
+  "attuale": "You got a 80%.",
+  "proposto": "You got an 80%."
+ },
+ "st01_t01/MailE#207": {
+  "attuale": "You got a 80%.",
+  "proposto": "You got an 80%."
+ },
+ "st01_t01/MorningE#44": {
+  "attuale": "Move using the Directional Buttons\nor Analog Stick .",
+  "proposto": "Move using the Directional Buttons\nor Analog Stick."
+ },
+ "st01_t01/Scr001E#92": {
+  "attuale": "You can get up all by \nyourself? That's amazing!",
+  "proposto": "You can get up all by\nyourself? That's amazing!"
+ },
+ "st01_t01/Scr001E#137": {
+  "attuale": "We got up early and ate \nbreakfast already!",
+  "proposto": "We got up early and ate\nbreakfast already!"
+ },
+ "st01_t01/Scr001E#228": {
+  "attuale": "It's kinda cramped but \nmake yourself at home.",
+  "proposto": "It's kinda cramped but\nmake yourself at home."
+ },
+ "st01_t01/Scr001E#244": {
+  "attuale": "Do you have your Deck \nand Duel Disk?",
+  "proposto": "Do you have your Deck\nand Duel Disk?"
+ },
+ "st01_t01/Scr001E#247": {
+  "attuale": "Do you have your Deck \nand Duel Disk?",
+  "proposto": "Do you have your Deck\nand Duel Disk?"
+ },
+ "st01_t01/Scr001E#329": {
+  "attuale": "Let's go back to the dorm\nand get our game on! \nCome on 《C002_3》! 《C003_3》!",
+  "proposto": "Let's go back to the dorm\nand get our game on!\nCome on 《C002_3》! 《C003_3》!"
+ },
+ "st01_t01/Scr001E#351": {
+  "attuale": "I'm sure I lost it \nsomewhere around here...",
+  "proposto": "I'm sure I lost it\nsomewhere around here..."
+ },
+ "st01_t01/Scr001E#356": {
+  "attuale": "I'm sure I lost it \nsomewhere around here...",
+  "proposto": "I'm sure I lost it\nsomewhere around here..."
+ },
+ "st01_t01/Scr001E#421": {
+  "attuale": "Man today's class was \nboring!",
+  "proposto": "Man today's class was\nboring!"
+ },
+ "st01_t01/Scr001E#424": {
+  "attuale": "Man today's class was \nboring!",
+  "proposto": "Man today's class was\nboring!"
+ },
+ "st01_t01/Scr001E#456": {
+  "attuale": "Listen, buying sandwiches\nis like then, okay?",
+  "proposto": "Listen, buying sandwiches\nis like Zen, okay?"
+ },
+ "st01_t01/Scr001E#459": {
+  "attuale": "Listen, buying sandwiches\nis like then, okay?",
+  "proposto": "Listen, buying sandwiches\nis like Zen, okay?"
+ },
+ "st01_t01/Scr001E#487": {
+  "attuale": "Seein' how often you go to the shop,\nI'd say your keeping your\neye out for something.",
+  "proposto": "Seein' how often you go to the shop,\nI'd say you're keeping your\neye out for something."
+ },
+ "st01_t01/Scr001E#522": {
+  "attuale": "I heard 《C030_1》's \ncoming up with something\nto replace Sandwich Day.",
+  "proposto": "I heard 《C030_1》's\ncoming up with something\nto replace Sandwich Day."
+ },
+ "st01_t01/Scr001E#525": {
+  "attuale": "I heard 《C030_1》's \ncoming up with something\nto replace Sandwich Day.",
+  "proposto": "I heard 《C030_1》's\ncoming up with something\nto replace Sandwich Day."
+ },
+ "st01_t01/Scr001E#568": {
+  "attuale": "All right!\nThe foods in! \nAnyone for a duel?",
+  "proposto": "All right!\nThe food's in!\nAnyone for a duel?"
+ },
+ "st01_t01/Scr001E#571": {
+  "attuale": "All right!\nThe foods in! \nAnyone for a duel?",
+  "proposto": "All right!\nThe food's in!\nAnyone for a duel?"
+ },
+ "st01_t01/Scr001E#602": {
+  "attuale": "You've gotta eat up and \nbuild some strength before dueling!",
+  "proposto": "You've gotta eat up and\nbuild some strength before dueling!"
+ },
+ "st01_t01/Scr001E#605": {
+  "attuale": "You've gotta eat up and \nbuild some strength before dueling!",
+  "proposto": "You've gotta eat up and\nbuild some strength before dueling!"
+ },
+ "st01_t01/Scr001E#661": {
+  "attuale": "We were waiting for \nyou, but you're so late\nthat the food's gone cold!",
+  "proposto": "We were waiting for\nyou, but you're so late\nthat the food's gone cold!"
+ },
+ "st01_t01/Scr001E#664": {
+  "attuale": "You should be on time \nfor dinner!",
+  "proposto": "You should be on time\nfor dinner!"
+ },
+ "st01_t01/Scr001E#666": {
+  "attuale": "You should be on time \nfor dinner!",
+  "proposto": "You should be on time\nfor dinner!"
+ },
+ "st01_t01/Scr001E#672": {
+  "attuale": "He's said \"I'm eating \nso don't talk to me!\".",
+  "proposto": "He said \"I'm eating\nso don't talk to me!\"."
+ },
+ "st01_t01/Scr001E#674": {
+  "attuale": "He's said \"I'm eating \nso don't talk to me!\".",
+  "proposto": "He said \"I'm eating\nso don't talk to me!\"."
+ },
+ "st01_t01/Scr001E#738": {
+  "attuale": "I was just thinking I \nwanted to talk to you...",
+  "proposto": "I was just thinking I\nwanted to talk to you..."
+ },
+ "st01_t01/Scr001E#743": {
+  "attuale": "I was just thinking I \nwanted to talk to you...",
+  "proposto": "I was just thinking I\nwanted to talk to you..."
+ },
+ "st01_t01/Scr001E#748": {
+  "attuale": "I was just thinking I \nwanted to talk to you...",
+  "proposto": "I was just thinking I\nwanted to talk to you..."
+ },
+ "st01_t01/Scr001E#761": {
+  "attuale": "Now that you mention it...\n\nI heard 《C001_3》 \nmessed up with his hobby.",
+  "proposto": "Now that you mention it...\nI heard 《C001_3》\nmessed up with his hobby."
+ },
+ "st01_t01/Scr001E#774": {
+  "attuale": "Now that you mention it...\nI heard 《C002_3》 \nmessed up with his hobby.",
+  "proposto": "Now that you mention it...\nI heard 《C002_3》\nmessed up with his hobby."
+ },
+ "st01_t01/Scr001E#787": {
+  "attuale": "Now that you mention it...\nI heard 《C003_3》 \nmessed up with his hobby.",
+  "proposto": "Now that you mention it...\nI heard 《C003_3》\nmessed up with his hobby."
+ },
+ "st01_t01/Scr001E#800": {
+  "attuale": "Now that you mention it...\nI heard 《C004_3》 \nmessed up with her hobby.",
+  "proposto": "Now that you mention it...\nI heard 《C004_3》\nmessed up with her hobby."
+ },
+ "st01_t01/Scr001E#814": {
+  "attuale": "Now that you mention it...\nI heard 《C005_2》 \nmessed up with his hobby.",
+  "proposto": "Now that you mention it...\nI heard 《C005_2》\nmessed up with his hobby."
+ },
+ "st01_t01/Scr001E#827": {
+  "attuale": "Now that you mention it...\nI heard 《C006_2》 \nmessed up with his hobby.",
+  "proposto": "Now that you mention it...\nI heard 《C006_2》\nmessed up with his hobby."
+ },
+ "st01_t01/Scr001E#840": {
+  "attuale": "Now that you mention it...\nI heard 《C007_4》 \nmessed up with his hobby.",
+  "proposto": "Now that you mention it...\nI heard 《C007_4》\nmessed up with his hobby."
+ },
+ "st01_t01/Scr002E#278": {
+  "attuale": "Right!\nThe banana from for dinner!\nI saved it until now!",
+  "proposto": "Right!\nThe banana from dinner!\nI saved it until now!"
+ },
+ "st01_t01/Scr002E#326": {
+  "attuale": "Hey, 《C002_3》. \nMaybe you should take a\nshower before you do.",
+  "proposto": "Hey, 《C002_3》.\nMaybe you should take a\nshower before you do."
+ },
+ "st01_t01/Scr002E#329": {
+  "attuale": "Hey, 《C002_3》. \nMaybe you should take a\nshower before you do.",
+  "proposto": "Hey, 《C002_3》.\nMaybe you should take a\nshower before you do."
+ },
+ "st01_t01/Scr003E#19": {
+  "attuale": "Hey, don't you laugh at\nme!\nKoala's are lishus!",
+  "proposto": "Hey, don't you laugh at\nme!\nKoalas are lishus!"
+ },
+ "st01_t01/Scr003E#20": {
+  "attuale": "Did you know mother\nkoalas like, \nfeed their babies their own feces?",
+  "proposto": "Did you know mother\nkoalas like,\nfeed their babies their own feces?"
+ },
+ "st01_t01/Scr003E#33": {
+  "attuale": "Please, 《PLAYER》! \nBe my Tag Force partner!",
+  "proposto": "Please, 《PLAYER》!\nBe my Tag Force partner!"
+ },
+ "st01_t01/Scr003E#146": {
+  "attuale": "My father owns a hot sauce\ncompany.",
+  "proposto": "My father owns a sake\nbrewery."
+ },
+ "st01_t01/Scr003E#147": {
+  "attuale": "He sent me some hot sauce with my\nlast allowance.\nI'll give ya a reasonable discount.\nDo you wanna...",
+  "proposto": "He sent me some shochu with my\nlast allowance.\nI'll give ya a reasonable discount.\nDo you wanna..."
+ },
+ "st01_t01/Scr003E#150": {
+  "attuale": "My father owns a hot sauce\ncompany.",
+  "proposto": "My father owns a sake\nbrewery."
+ },
+ "st01_t01/Scr003E#151": {
+  "attuale": "He sent me some hot sauce\nwith my last allowance.\nI'll give ya a reasonable discount.\nDo you wanna...",
+  "proposto": "He sent me some shochu\nwith my last allowance.\nI'll give ya a reasonable discount.\nDo you wanna..."
+ },
+ "st01_t01/Scr003E#163": {
+  "attuale": "Wow. You really did it.\nIt's 《C026_2》...\nWearing a bikini!",
+  "proposto": "Wow. You really did it.\nIt's 《C026_2》...\nWearing a maid outfit!"
+ },
+ "st01_t01/Scr003E#168": {
+  "attuale": "Wow. You really did it.\nIt's 《C026_2》...\nWearing a bikini!",
+  "proposto": "Wow. You really did it.\nIt's 《C026_2》...\nWearing a maid outfit!"
+ },
+ "st01_t01/Scr003E#178": {
+  "attuale": "Judging by you expression,\nI'd say so-so...",
+  "proposto": "Judging by your expression,\nI'd say so-so..."
+ },
+ "st01_t01/Scr003E#180": {
+  "attuale": "Judging by you expression,\nI'd say so-so...",
+  "proposto": "Judging by your expression,\nI'd say so-so..."
+ },
+ "st01_t01/Scr003E#189": {
+  "attuale": "Hey, can you draw a picture for me then?\nDraw me 《C026_2》 in a bikini!",
+  "proposto": "Hey, can you draw a picture for me then?\nDraw me 《C026_2》 in a maid outfit!"
+ },
+ "st01_t01/Scr003E#191": {
+  "attuale": "Here, you can use this!",
+  "proposto": "Here, use this maid outfit!"
+ },
+ "st01_t01/Scr003E#195": {
+  "attuale": "Hey, can you draw a picture for me then?\nDraw me 《C026_2》 in a bikini!",
+  "proposto": "Hey, can you draw a picture for me then?\nDraw me 《C026_2》 in a maid outfit!"
+ },
+ "st01_t01/Scr003E#197": {
+  "attuale": "Here, you can use this!",
+  "proposto": "Here, use this maid outfit!"
+ },
+ "st01_t01/Scr003E#244": {
+  "attuale": "To be honest, it's\ngetting' kind of old.",
+  "proposto": "To be honest, it's\ngettin' kind of old."
+ },
+ "st01_t01/Scr003E#246": {
+  "attuale": "To be honest, it's\ngetting' kind of old.",
+  "proposto": "To be honest, it's\ngettin' kind of old."
+ },
+ "st01_t01/Scr003E#465": {
+  "attuale": "I don't minding eating\nyour shrimp tail, ya know.\nThat is, if you don't want it.",
+  "proposto": "I don't mind eating\nyour shrimp tail, ya know.\nThat is, if you don't want it."
+ },
+ "st01_t01/Scr003E#496": {
+  "attuale": "When I flunked the year, I\ntotally lost my appetite.\nI dreading going to the cafeteria...",
+  "proposto": "When I flunked the year, I\ntotally lost my appetite.\nI was dreading going to the cafeteria..."
+ },
+ "st01_t01/Scr004E#1": {
+  "attuale": "You're always coming \nhere to see me...",
+  "proposto": "You're always coming\nhere to see me..."
+ },
+ "st01_t01/Scr004E#29": {
+  "attuale": "He... \nHe went to this Academy.",
+  "proposto": "He...\nHe went to this Academy."
+ },
+ "st01_t01/Scr004E#462": {
+  "attuale": "Oh,《C145_1》.",
+  "proposto": "Oh, 《C145_1》."
+ },
+ "st01_t01/Scr005E#51": {
+  "attuale": "I'm not like 《C001_3》 and \nthe rest of you guys.\nI can't sit still in these cramped rooms!",
+  "proposto": "I'm not like 《C001_3》 and\nthe rest of you guys.\nI can't sit still in these cramped rooms!"
+ },
+ "st01_t01/Scr005E#53": {
+  "attuale": "I'm not like 《C001_3》 and \nthe rest of you guys.\nI can't sit still in these cramped rooms!",
+  "proposto": "I'm not like 《C001_3》 and\nthe rest of you guys.\nI can't sit still in these cramped rooms!"
+ },
+ "st01_t01/Scr005E#82": {
+  "attuale": "Look 《PLAYER》!\nAnswering one or two of\nyour questions is a pain! \nCome back when you\nhave four!",
+  "proposto": "Look 《PLAYER》!\nAnswering one or two of\nyour questions is a pain!\nCome back when you\nhave four!"
+ },
+ "st01_t01/Scr005E#97": {
+  "attuale": "What is it with the \nsunshine on this island?",
+  "proposto": "What is it with the\nsunshine on this island?"
+ },
+ "st01_t01/Scr005E#99": {
+  "attuale": "What is it with the \nsunshine on this island?",
+  "proposto": "What is it with the\nsunshine on this island?"
+ },
+ "st01_t01/Scr005E#105": {
+  "attuale": "The first thing I see this\nmorning is your face! \nThat's gonna leave me feeling funny all day.",
+  "proposto": "The first thing I see this\nmorning is your face!\nThat's gonna leave me feeling funny all day."
+ },
+ "st01_t01/Scr005E#107": {
+  "attuale": "The first thing I see this\nmorning is your face! \nThat's gonna leave me feeling funny all day.",
+  "proposto": "The first thing I see this\nmorning is your face!\nThat's gonna leave me feeling funny all day."
+ },
+ "st01_t01/Scr005E#165": {
+  "attuale": "See ya tomorrow, \n《PLAYER》!",
+  "proposto": "See ya tomorrow,\n《PLAYER》!"
+ },
+ "st01_t01/Scr005E#167": {
+  "attuale": "See ya tomorrow, \n《PLAYER》!",
+  "proposto": "See ya tomorrow,\n《PLAYER》!"
+ },
+ "st01_t01/Scr005E#169": {
+  "attuale": "My artwork, antique \nfurniture and paintings\nwill never fit in this tiny room!",
+  "proposto": "My artwork, antique\nfurniture and paintings\nwill never fit in this tiny room!"
+ },
+ "st01_t01/Scr005E#171": {
+  "attuale": "My artwork, antique \nfurniture and paintings\nwill never fit in this tiny room!",
+  "proposto": "My artwork, antique\nfurniture and paintings\nwill never fit in this tiny room!"
+ },
+ "st01_t01/Scr005E#172": {
+  "attuale": "Ever seen one of \nthese, 《PLAYER》?\nIt's called a \"PLASMA TV\"!",
+  "proposto": "Ever seen one of\nthese, 《PLAYER》?\nIt's called a \"PLASMA TV\"!"
+ },
+ "st01_t01/Scr005E#174": {
+  "attuale": "Ever seen one of \nthese, 《PLAYER》?\nIt's called a \"PLASMA TV\"!",
+  "proposto": "Ever seen one of\nthese, 《PLAYER》?\nIt's called a \"PLASMA TV\"!"
+ },
+ "st01_t01/Scr005E#193": {
+  "attuale": "You like this bed?\nIt's order made from France.\nIt has the highest possible level of comfort.",
+  "proposto": "You like this bed?\nIt's made to order from France.\nIt has the highest possible level of comfort."
+ },
+ "st01_t01/Scr005E#195": {
+  "attuale": "You like this bed?\nIt's order made from France.\nIt has the highest possible level of comfort.",
+  "proposto": "You like this bed?\nIt's made to order from France.\nIt has the highest possible level of comfort."
+ },
+ "st01_t01/Scr005E#217": {
+  "attuale": "Here I am relaxing and \nhere you come barging in...",
+  "proposto": "Here I am relaxing and\nhere you come barging in..."
+ },
+ "st01_t01/Scr005E#218": {
+  "attuale": "This dorm has no \nprivacy at all!!",
+  "proposto": "This dorm has no\nprivacy at all!!"
+ },
+ "st01_t01/Scr005E#219": {
+  "attuale": "Here I am relaxing and \nhere you come barging in...",
+  "proposto": "Here I am relaxing and\nhere you come barging in..."
+ },
+ "st01_t01/Scr005E#220": {
+  "attuale": "This dorm has no \nprivacy at all!!",
+  "proposto": "This dorm has no\nprivacy at all!!"
+ },
+ "st01_t01/Scr005E#221": {
+  "attuale": "Come to complain \nabout something?\nHow pathetic!",
+  "proposto": "Come to complain\nabout something?\nHow pathetic!"
+ },
+ "st01_t01/Scr005E#222": {
+  "attuale": "If you want to be a \nduelist you have to\ndrag yourself up from the pits!",
+  "proposto": "If you want to be a\nduelist you have to\ndrag yourself up from the pits!"
+ },
+ "st01_t01/Scr005E#241": {
+  "attuale": "Then pack your bags \nand get outta here!",
+  "proposto": "Then pack your bags\nand get outta here!"
+ },
+ "st01_t01/Scr005E#251": {
+  "attuale": "When you are as high up in society as I am,\nyou have many important\ntasks before class.\nFeeding the rabbits, \nwatering the flowers...",
+  "proposto": "When you are as high up in society as I am,\nyou have many important\ntasks before class.\nFeeding the rabbits,\nwatering the flowers..."
+ },
+ "st01_t01/Scr005E#253": {
+  "attuale": "When you are as high up in society as I am,\nyou have many important\ntasks before class.\nFeeding the rabbits, \nwatering the flowers...",
+  "proposto": "When you are as high up in society as I am,\nyou have many important\ntasks before class.\nFeeding the rabbits,\nwatering the flowers..."
+ },
+ "st01_t01/Scr005E#269": {
+  "attuale": "Well, try your best you \nslacker!",
+  "proposto": "Well, try your best you\nslacker!"
+ },
+ "st01_t01/Scr005E#271": {
+  "attuale": "Well, try your best you \nslacker!",
+  "proposto": "Well, try your best you\nslacker!"
+ },
+ "st01_t01/Scr005E#279": {
+  "attuale": "What a surprise!\nYou're in school before \nclass has even started!",
+  "proposto": "What a surprise!\nYou're in school before\nclass has even started!"
+ },
+ "st01_t01/Scr005E#281": {
+  "attuale": "What a surprise!\nYou're in school before \nclass has even started!",
+  "proposto": "What a surprise!\nYou're in school before\nclass has even started!"
+ },
+ "st01_t01/Scr005E#333": {
+  "attuale": "Going to the classroom are we 《PLAYER》? \nThen you should go through the Main Gate.",
+  "proposto": "Going to the classroom are we 《PLAYER》?\nThen you should go through the Main Gate."
+ },
+ "st01_t01/Scr005E#351": {
+  "attuale": "I doubt the people here\nwill be able to reach \nthe new level of existence that I have.",
+  "proposto": "I doubt the people here\nwill be able to reach\nthe new level of existence that I have."
+ },
+ "st01_t01/Scr005E#353": {
+  "attuale": "I doubt the people here\nwill be able to reach \nthe new level of existence that I have.",
+  "proposto": "I doubt the people here\nwill be able to reach\nthe new level of existence that I have."
+ },
+ "st01_t01/Scr005E#389": {
+  "attuale": "But now I get why a slacker like\n《C001_3》 threw me off guard so much.\n\nObelisk is so far up in society, that I \ncouldn't see the rats scrambling at my feet!",
+  "proposto": "But now I get why a slacker like\n《C001_3》 threw me off guard so much.\n\nObelisk is so far up in society, that I\ncouldn't see the rats scrambling at my feet!"
+ },
+ "st01_t01/Scr005E#391": {
+  "attuale": "But now I get why a slacker like \n《C001_3》 threw me off guard so much.\n\nObelisk is so far up in society, that I \ncouldn't see the rats scrambling at my feet!",
+  "proposto": "But now I get why a slacker like\n《C001_3》 threw me off guard so much.\n\nObelisk is so far up in society, that I\ncouldn't see the rats scrambling at my feet!"
+ },
+ "st01_t01/Scr005E#407": {
+  "attuale": "Huge rooms, good food...\nCompared to Slifer, \nI guess this place was paradise.",
+  "proposto": "Huge rooms, good food...\nCompared to Slifer,\nI guess this place was paradise."
+ },
+ "st01_t01/Scr005E#409": {
+  "attuale": "Huge rooms, good food...\nCompared to Slifer, \nI guess this place was paradise.",
+  "proposto": "Huge rooms, good food...\nCompared to Slifer,\nI guess this place was paradise."
+ },
+ "st01_t01/Scr005E#415": {
+  "attuale": "Are you trying to \ninsult me?",
+  "proposto": "Are you trying to\ninsult me?"
+ },
+ "st01_t01/Scr005E#417": {
+  "attuale": "Are you trying to \ninsult me?",
+  "proposto": "Are you trying to\ninsult me?"
+ },
+ "st01_t01/Scr005E#418": {
+  "attuale": "Hey  《PLAYER》. \nTryin' to get into Obelisk\nby sucking up to 《C008_3》?",
+  "proposto": "Hey 《PLAYER》.\nTryin' to get into Obelisk\nby sucking up to 《C008_3》?"
+ },
+ "st01_t01/Scr005E#420": {
+  "attuale": "Hey  《PLAYER》. \nTryin' to get into Obelisk\nby sucking up to 《C008_3》?",
+  "proposto": "Hey 《PLAYER》.\nTryin' to get into Obelisk\nby sucking up to 《C008_3》?"
+ },
+ "st01_t01/Scr005E#493": {
+  "attuale": "Why you...\nDon't you know that bears rub soup \ninto their paws when they hibernate?",
+  "proposto": "Why you...\nDon't you know that bears rub soup\ninto their paws when they hibernate?"
+ },
+ "st01_t01/Scr005E#508": {
+  "attuale": "I can't eat foul stuff\neveryday like you!",
+  "proposto": "I can't eat foul stuff\nevery day like you!"
+ },
+ "st01_t01/Scr005E#511": {
+  "attuale": "I can't eat foul stuff\neveryday like you!",
+  "proposto": "I can't eat foul stuff\nevery day like you!"
+ },
+ "st01_t01/Scr005E#530": {
+  "attuale": "Your grilled fish was \ntasty.",
+  "proposto": "Your grilled fish was\ntasty."
+ },
+ "st01_t01/Scr005E#532": {
+  "attuale": "Your grilled fish was \ntasty.",
+  "proposto": "Your grilled fish was\ntasty."
+ },
+ "st01_t01/Scr005E#776": {
+  "attuale": "What did you do? \nPut poison in it?",
+  "proposto": "What did you do?\nPut poison in it?"
+ },
+ "st01_t01/Scr005E#839": {
+  "attuale": "This might be fit for the \ncommoners...\nBut it doesn't suit me.",
+  "proposto": "This might be fit for the\ncommoners...\nBut it doesn't suit me."
+ },
+ "st01_t01/Scr006E#85": {
+  "attuale": "Oh, 《PLAYER》!\nYou get up early and train, too? \nThat's very impressive!",
+  "proposto": "Oh, 《PLAYER》!\nYou get up early and train, too?\nThat's very impressive!"
+ },
+ "st01_t01/Scr006E#86": {
+  "attuale": "You want to do some duel\nexercises with me? \nAll right, get ready!",
+  "proposto": "You want to do some duel\nexercises with me?\nAll right, get ready!"
+ },
+ "st01_t01/Scr006E#88": {
+  "attuale": "Oh, 《PLAYER》!\nYou get up early and train, too? \nThat's very impressive!",
+  "proposto": "Oh, 《PLAYER》!\nYou get up early and train, too?\nThat's very impressive!"
+ },
+ "st01_t01/Scr006E#89": {
+  "attuale": "You want to do some duel\nexercises with me? \nAll right, get ready!",
+  "proposto": "You want to do some duel\nexercises with me?\nAll right, get ready!"
+ },
+ "st01_t01/Scr006E#130": {
+  "attuale": "D-Don't be stupid! \nYou'd never find that kind\nof card in my Deck!",
+  "proposto": "D-Don't be stupid!\nYou'd never find that kind\nof card in my Deck!"
+ },
+ "st01_t01/Scr006E#363": {
+  "attuale": "Oh,  《PLAYER》.\nHow about it?\nWant to duel?",
+  "proposto": "Oh, 《PLAYER》.\nHow about it?\nWant to duel?"
+ },
+ "st01_t01/Scr006E#365": {
+  "attuale": "Oh,  《PLAYER》.\nHow about it?\nWant to duel?",
+  "proposto": "Oh, 《PLAYER》.\nHow about it?\nWant to duel?"
+ },
+ "st01_t01/Scr006E#367": {
+  "attuale": "《PLAYER》、did you finish that report yet?",
+  "proposto": "《PLAYER》, did you finish that report yet?"
+ },
+ "st01_t01/Scr006E#369": {
+  "attuale": "《PLAYER》、did you finish that report yet?",
+  "proposto": "《PLAYER》, did you finish that report yet?"
+ },
+ "st01_t01/Scr006E#382": {
+  "attuale": "《PLAYER》...\nYou're Deck hasn't been calculated for duels.",
+  "proposto": "《PLAYER》...\nYour Deck hasn't been calculated for duels."
+ },
+ "st01_t01/Scr006E#384": {
+  "attuale": "《PLAYER》...\nYou're Deck hasn't been calculated for duels.",
+  "proposto": "《PLAYER》...\nYour Deck hasn't been calculated for duels."
+ },
+ "st01_t01/Scr006E#398": {
+  "attuale": "My goal is to be the best\nduelist at this academy.\nThat's why I put in all this hard work everyday!",
+  "proposto": "My goal is to be the best\nduelist at this academy.\nThat's why I put in all this hard work every day!"
+ },
+ "st01_t01/Scr006E#430": {
+  "attuale": "$M6344...\nHow can I seal away it's\nfusion ability?",
+  "proposto": "$M6344...\nHow can I seal away its\nfusion ability?"
+ },
+ "st01_t01/Scr006E#431": {
+  "attuale": "Oh, Sorry.\nI'm trying to figure out a\nway to fight against 《C001_3》's Deck. \nDon't tell anyone.",
+  "proposto": "Oh, Sorry.\nI'm trying to figure out a\nway to fight against 《C001_3》's Deck.\nDon't tell anyone."
+ },
+ "st01_t01/Scr006E#432": {
+  "attuale": "$M6344...\nHow can I seal away it's\nfusion ability?",
+  "proposto": "$M6344...\nHow can I seal away its\nfusion ability?"
+ },
+ "st01_t01/Scr006E#433": {
+  "attuale": "Oh, Sorry.\n\n\nI'm trying to figure out a way to fight\nagainst 《C001_3》's Deck. \nDon't tell anyone.",
+  "proposto": "Oh, Sorry.\n\n\nI'm trying to figure out a way to fight\nagainst 《C001_3》's Deck.\nDon't tell anyone."
+ },
+ "st01_t01/Scr006E#494": {
+  "attuale": "If $M6397 and $M6398 are\nFusion Summoned, their\nATK become 8000...",
+  "proposto": "If $M6397 and $M6398 are\nFusion Summoned, their\nATK becomes 8000..."
+ },
+ "st01_t01/Scr006E#496": {
+  "attuale": "If $M6397 and $M6398 are\nFusion Summoned, their\nATK become 8000...",
+  "proposto": "If $M6397 and $M6398 are\nFusion Summoned, their\nATK becomes 8000..."
+ },
+ "st01_t01/Scr006E#523": {
+  "attuale": "Jeez, I never thought\nyou to be so into food.",
+  "proposto": "Jeez, I never thought\nyou'd be so into food."
+ },
+ "st01_t01/Scr006E#525": {
+  "attuale": "Jeez, I never thought\nyou to be so into food.",
+  "proposto": "Jeez, I never thought\nyou'd be so into food."
+ },
+ "st01_t01/Scr006E#535": {
+  "attuale": "Nature is full of secrets and special powers. \nIt can't be figured out with numbers or logic.",
+  "proposto": "Nature is full of secrets and special powers.\nIt can't be figured out with numbers or logic."
+ },
+ "st01_t01/Scr006E#537": {
+  "attuale": "Nature is full of secrets and special powers. \nIt can't be figured out with numbers or logic.",
+  "proposto": "Nature is full of secrets and special powers.\nIt can't be figured out with numbers or logic."
+ },
+ "st01_t01/Scr006E#538": {
+  "attuale": "Hey 《PLAYER》, don't you\nthink the forest is kind\nof a mysterious in a way?",
+  "proposto": "Hey 《PLAYER》, don't you\nthink the forest is kind\nof mysterious in a way?"
+ },
+ "st01_t01/Scr006E#541": {
+  "attuale": "Hey 《PLAYER》, don't you\nthink the forest is kind\nof a mysterious in a way?",
+  "proposto": "Hey 《PLAYER》, don't you\nthink the forest is kind\nof mysterious in a way?"
+ },
+ "st01_t01/Scr006E#566": {
+  "attuale": "It's like a monster spirit\ncould pop out at anytime.",
+  "proposto": "It's like a monster spirit\ncould pop out at any time."
+ },
+ "st01_t01/Scr006E#569": {
+  "attuale": "It's like a monster spirit\ncould pop out at anytime.",
+  "proposto": "It's like a monster spirit\ncould pop out at any time."
+ },
+ "st01_t01/Scr006E#581": {
+  "attuale": "But doing the same thing\neveryday is getting old.\nIf you're up to it, then let's duel!",
+  "proposto": "But doing the same thing\nevery day is getting old.\nIf you're up to it, then let's duel!"
+ },
+ "st01_t01/Scr006E#583": {
+  "attuale": "But it gets boring doing\nthe same thing everyday.\nIf you feel like it, would you duel against me?",
+  "proposto": "But it gets boring doing\nthe same thing every day.\nIf you feel like it, would you duel against me?"
+ },
+ "st01_t01/Scr006E#684": {
+  "attuale": "I heard 《C001_3》 \nmessed up at school.",
+  "proposto": "I heard 《C001_3》\nmessed up at school."
+ },
+ "st01_t01/Scr006E#697": {
+  "attuale": "I heard 《C002_3》 \nmessed up at school.",
+  "proposto": "I heard 《C002_3》\nmessed up at school."
+ },
+ "st01_t01/Scr006E#710": {
+  "attuale": "I heard 《C003_3》 \nmessed up at school.",
+  "proposto": "I heard 《C003_3》\nmessed up at school."
+ },
+ "st01_t01/Scr006E#737": {
+  "attuale": "I heard 《C005_2》 \nmessed up at school.",
+  "proposto": "I heard 《C005_2》\nmessed up at school."
+ },
+ "st01_t01/Scr006E#750": {
+  "attuale": "I heard 《C006_2》 \nmessed up at school.",
+  "proposto": "I heard 《C006_2》\nmessed up at school."
+ },
+ "st01_t01/Scr006E#763": {
+  "attuale": "I heard 《C007_4》 \nmessed up at school.",
+  "proposto": "I heard 《C007_4》\nmessed up at school."
+ },
+ "st01_t01/Scr007E#27": {
+  "attuale": "Try and keep and eye on my\nbrother, OK 《PLAYER》?",
+  "proposto": "Try and keep an eye on my\nbrother, OK 《PLAYER》?"
+ },
+ "st01_t01/Scr007E#95": {
+  "attuale": "《PLAYER》, you have a\nway of dueling that takes\nfull advantages of your strengths.",
+  "proposto": "《PLAYER》, you have a\nway of dueling that takes\nfull advantage of your strengths."
+ },
+ "st01_t01/Scr007E#98": {
+  "attuale": "《PLAYER》, you have a\nway of dueling that takes\nfull advantages of your strengths.",
+  "proposto": "《PLAYER》, you have a\nway of dueling that takes\nfull advantage of your strengths."
+ },
+ "st01_t01/Scr007E#180": {
+  "attuale": "So you want to know if \nChancellor 《C038_4》 is\nreally good at dueling or not?",
+  "proposto": "So you want to know if\nChancellor 《C038_4》 is\nreally good at dueling or not?"
+ },
+ "st01_t01/Scr007E#184": {
+  "attuale": "So you want to know if \nChancellor 《C038_4》 is\nreally good at dueling or not?",
+  "proposto": "So you want to know if\nChancellor 《C038_4》 is\nreally good at dueling or not?"
+ },
+ "st01_t01/Scr007E#563": {
+  "attuale": "I though about inviting\nhim to our big duel, but\nin the end I just couldn't *duel* it! Hahaha!",
+  "proposto": "I thought about inviting\nhim to our big duel, but\nin the end I just couldn't *duel* it! Hahaha!"
+ },
+ "st01_t01/Scr007E#589": {
+  "attuale": "A duelist a skilled as you\nshould have a nickname.",
+  "proposto": "A duelist as skilled as you\nshould have a nickname."
+ },
+ "st01_t01/Scr007E#619": {
+  "attuale": "Why don't l give you a title of your own?\n\"Jambo 《PLAYER》\".\n\"Jambo\" means \"hello\" in Swahili.",
+  "proposto": "Why don't I give you a title of your own?\n\"Jambo 《PLAYER》\".\n\"Jambo\" means \"hello\" in Swahili."
+ },
+ "st01_t01/Scr007E#659": {
+  "attuale": "He just don't have any\ninterest in you...",
+  "proposto": "He just doesn't have any\ninterest in you..."
+ },
+ "st01_t01/Scr007E#663": {
+  "attuale": "He just don't have any\ninterest in you...",
+  "proposto": "He just doesn't have any\ninterest in you..."
+ },
+ "st01_t01/Scr008E#25": {
+  "attuale": "I can't believe you'd say\nsomething like that to me!\nI have a PhD in deuling!",
+  "proposto": "I can't believe you'd say\nsomething like that to me!\nI have a PhD in dueling!"
+ },
+ "st01_t01/Scr017E#7": {
+  "attuale": "Hah!\nGood-for-nothing's are good for nothing.\nBut at least you have guts!",
+  "proposto": "Hah!\nGood-for-nothings are good for nothing.\nBut at least you have guts!"
+ },
+ "st01_t01/Scr020E#23": {
+  "attuale": "You want to duel with\nme, Slifer? \nHa! You sure have guts!",
+  "proposto": "You want to duel with\nme, Slifer?\nHa! You sure have guts!"
+ },
+ "st01_t01/Scr020E#41": {
+  "attuale": "It's nothing special! So \ndon't get your hopes up...",
+  "proposto": "It's nothing special! So\ndon't get your hopes up..."
+ },
+ "st01_t01/Scr023E#5": {
+  "attuale": "I wanna be just like \nhim...",
+  "proposto": "I wanna be just like\nhim..."
+ },
+ "st01_t01/Scr023E#55": {
+  "attuale": "Hehehe...  All right!",
+  "proposto": "Hehehe... All right!"
+ },
+ "st01_t01/Scr026E#2": {
+  "attuale": "I almost fainted with \ngratitude when I got it!",
+  "proposto": "I almost fainted with\ngratitude when I got it!"
+ },
+ "st01_t01/Scr026E#8": {
+  "attuale": "So if it's a Tag Duel \ntournament...\nYou need a partner,\nright..?",
+  "proposto": "So if it's a Tag Duel\ntournament...\nYou need a partner,\nright..?"
+ },
+ "st01_t01/Scr026E#19": {
+  "attuale": "This one kid who always\nwears a red uniform..",
+  "proposto": "This one kid who always\nwears a red uniform..."
+ },
+ "st01_t01/Scr027E#13": {
+  "attuale": "OK! If you change your \nmind, just let me know!",
+  "proposto": "OK! If you change your\nmind, just let me know!"
+ },
+ "st01_t01/Scr031E#16": {
+  "attuale": "I'd be happy to be you're\npartner!",
+  "proposto": "I'd be happy to be your\npartner!"
+ },
+ "st01_t01/Scr032E#2": {
+  "attuale": "Hey! I'm busy getting \nready for the tournament!",
+  "proposto": "Hey! I'm busy getting\nready for the tournament!"
+ },
+ "st01_t01/Scr032E#10": {
+  "attuale": "Hey! I'm busy getting \nready for the tournament!",
+  "proposto": "Hey! I'm busy getting\nready for the tournament!"
+ },
+ "st01_t01/Scr035E#0": {
+  "attuale": "How do you do?\nI'm  《C035_1》!",
+  "proposto": "How do you do?\nI'm 《C035_1》!"
+ },
+ "st01_t01/Scr035E#9": {
+  "attuale": "How do you do?\nI'm  《C035_1》!",
+  "proposto": "How do you do?\nI'm 《C035_1》!"
+ },
+ "st01_t01/Scr035E#20": {
+  "attuale": "Ahhh...  A draw!?",
+  "proposto": "Ahhh... A draw!?"
+ },
+ "st01_t01/Scr036E#7": {
+  "attuale": "Let's toss a coin to see \nif I'll be your partner!",
+  "proposto": "Let's toss a coin to see\nif I'll be your partner!"
+ },
+ "st01_t01/Scr037E#6": {
+  "attuale": "You will have to endure \na ritual trial.",
+  "proposto": "You will have to endure\na ritual trial."
+ },
+ "st01_t01/Scr037E#16": {
+  "attuale": "I would like to present \nyou with this.\nConsider it proof of your worthiness.",
+  "proposto": "I would like to present\nyou with this.\nConsider it proof of your worthiness."
+ },
+ "st01_t01/Scr037E#17": {
+  "attuale": "I would like to present \nyou with this.\nConsider it proof of your worthiness.",
+  "proposto": "I would like to present\nyou with this.\nConsider it proof of your worthiness."
+ },
+ "st01_t01/Scr038E#9": {
+  "attuale": "I'm only kidding, \nit's just a joke!",
+  "proposto": "I'm only kidding,\nit's just a joke!"
+ },
+ "st01_t01/Scr042E#20": {
+  "attuale": "Fine. Beat me, and I'll \nlet you join my class.",
+  "proposto": "Fine. Beat me, and I'll\nlet you join my class."
+ },
+ "st01_t01/Scr044E#58": {
+  "attuale": "Fine. Beat me, and I'll \nlet you join my class.",
+  "proposto": "Fine. Beat me, and I'll\nlet you join my class."
+ },
+ "st01_t01/Scr051E#25": {
+  "attuale": "You could probably \nhandle my Recipe well.",
+  "proposto": "You could probably\nhandle my Recipe well."
+ },
+ "st01_t01/Scr051E#27": {
+  "attuale": "I'm not very good with it, \nbut why don't you try it out?",
+  "proposto": "I'm not very good with it,\nbut why don't you try it out?"
+ },
+ "st01_t01/Scr051E#36": {
+  "attuale": "Huh? A present? I don't \nneed that, but thanks!",
+  "proposto": "Huh? A present? I don't\nneed that, but thanks!"
+ },
+ "st01_t01/Scr052E#5": {
+  "attuale": "I always understand what's \nbeing said in class.",
+  "proposto": "I always understand what's\nbeing said in class."
+ },
+ "st01_t01/Scr052E#6": {
+  "attuale": "But there's one thing \nI just can't figure out.\n\nMr. 《C008_3》 is always\nsaying the word \"slacker\".",
+  "proposto": "But there's one thing\nI just can't figure out.\n\nMr. 《C008_3》 is always\nsaying the word \"slacker\"."
+ },
+ "st01_t01/Scr052E#11": {
+  "attuale": "I always understand what's \nbeing said in class.",
+  "proposto": "I always understand what's\nbeing said in class."
+ },
+ "st01_t01/Scr052E#12": {
+  "attuale": "But there's one thing \nI just can't figure out.\n\nMr. 《C008_3》 is always\nsaying the word \"slacker\".",
+  "proposto": "But there's one thing\nI just can't figure out.\n\nMr. 《C008_3》 is always\nsaying the word \"slacker\"."
+ },
+ "st01_t01/Scr053E#6": {
+  "attuale": "No, I haven't forgotten! \nWe're gonna beat everyone!",
+  "proposto": "No, I haven't forgotten!\nWe're gonna beat everyone!"
+ },
+ "st01_t01/Scr053E#20": {
+  "attuale": "I've lost... It was a close,\nbut I can't say I'm happy.",
+  "proposto": "I've lost... It was close,\nbut I can't say I'm happy."
+ },
+ "st01_t01/Scr053E#23": {
+  "attuale": "It may not be much for \nsomeone as talented as you.",
+  "proposto": "It may not be much for\nsomeone as talented as you."
+ },
+ "st01_t01/Scr053E#27": {
+  "attuale": "I'll have to change my \nstrategy in order to win.",
+  "proposto": "I'll have to change my\nstrategy in order to win."
+ },
+ "st01_t01/Scr053E#29": {
+  "attuale": "Boy, it does feels good\nto win a duel!",
+  "proposto": "Boy, it does feel good\nto win a duel!"
+ },
+ "st01_t01/Scr054E#3": {
+  "attuale": "Do you know Ms. 《C035_2》? \nWh-What a great teacher!",
+  "proposto": "Do you know Ms. 《C035_2》?\nWh-What a great teacher!"
+ },
+ "st01_t01/Scr054E#7": {
+  "attuale": "What? P-Partner!? \nPartner! Wow, that's great!",
+  "proposto": "What? P-Partner!?\nPartner! Wow, that's great!"
+ },
+ "st01_t01/Scr054E#9": {
+  "attuale": "Do you know Ms. 《C035_2》? \nWh-What a great teacher!",
+  "proposto": "Do you know Ms. 《C035_2》?\nWh-What a great teacher!"
+ },
+ "st01_t01/Scr056E#5": {
+  "attuale": "Hehe, don't sweat it! I \ndidn't forget! Let's win!",
+  "proposto": "Hehe, don't sweat it! I\ndidn't forget! Let's win!"
+ },
+ "st01_t01/Scr056E#16": {
+  "attuale": "Oh, yeah. \nI've got somethin' for ya.",
+  "proposto": "Oh, yeah.\nI've got somethin' for ya."
+ },
+ "st01_t01/Scr056E#20": {
+  "attuale": "Here, take this. From one \ndueling buddy to another!",
+  "proposto": "Here, take this. From one\ndueling buddy to another!"
+ },
+ "st01_t01/Scr057E#5": {
+  "attuale": "Which book should I \nread next...",
+  "proposto": "Which book should I\nread next..."
+ },
+ "st01_t01/Scr057E#9": {
+  "attuale": "Which book should I \nread next...",
+  "proposto": "Which book should I\nread next..."
+ },
+ "st01_t01/Scr058E#6": {
+  "attuale": "I want something fun \nto do...",
+  "proposto": "I want something fun\nto do..."
+ },
+ "st01_t01/Scr058E#10": {
+  "attuale": "I want something fun \nto do...",
+  "proposto": "I want something fun\nto do..."
+ },
+ "st01_t01/Scr058E#17": {
+  "attuale": "I want something fun \nto do... Huh? What?",
+  "proposto": "I want something fun\nto do... Huh? What?"
+ },
+ "st01_t01/Scr058E#21": {
+  "attuale": "How about this! \nTry to beat me in a duel!",
+  "proposto": "How about this!\nTry to beat me in a duel!"
+ },
+ "st01_t01/Scr058E#22": {
+  "attuale": "That'll check my Duel \nDisk at the same time.",
+  "proposto": "That'll check my Duel\nDisk at the same time."
+ },
+ "st01_t01/Scr058E#23": {
+  "attuale": "When you're ready, \nchallenge me to a duel.",
+  "proposto": "When you're ready,\nchallenge me to a duel."
+ },
+ "st01_t01/Scr058E#26": {
+  "attuale": "That'll check my Duel \nDisk at the same time.",
+  "proposto": "That'll check my Duel\nDisk at the same time."
+ },
+ "st01_t01/Scr058E#27": {
+  "attuale": "When you're ready, \nchallenge me to a duel.",
+  "proposto": "When you're ready,\nchallenge me to a duel."
+ },
+ "st01_t01/Scr058E#37": {
+  "attuale": "Or do you just wanna \nbattle? I'm down.",
+  "proposto": "Or do you just wanna\nbattle? I'm down."
+ },
+ "st01_t01/Scr059E#20": {
+  "attuale": "I get a sandwich, you get \nthe Disk checked. Deal?",
+  "proposto": "I get a sandwich, you get\nthe Disk checked. Deal?"
+ },
+ "st01_t01/Scr059E#23": {
+  "attuale": "I get a sandwich, you get \nthe Disk checked. Deal?",
+  "proposto": "I get a sandwich, you get\nthe Disk checked. Deal?"
+ },
+ "st01_t01/Scr061E#29": {
+  "attuale": "I won! Hooray! I did it!\nI told you us country folk\ncan duel like rest!",
+  "proposto": "I won! Hooray! I did it!\nI told you us country folk\ncan duel like the rest!"
+ },
+ "st01_t01/Scr065E#4": {
+  "attuale": "I've heard 《C002_1》 has a \nreal older brother.",
+  "proposto": "I've heard 《C002_1》 has a\nreal older brother."
+ },
+ "st01_t01/Scr065E#8": {
+  "attuale": "I've heard 《C002_1》 has a \nreal older brother.",
+  "proposto": "I've heard 《C002_1》 has a\nreal older brother."
+ },
+ "st01_t01/Scr066E#17": {
+  "attuale": "I lost!\nI though I was doing good.",
+  "proposto": "I lost!\nI thought I was doing good."
+ },
+ "st01_t01/Scr066E#18": {
+  "attuale": "Hey, why don't you \ntake my Recipe.",
+  "proposto": "Hey, why don't you\ntake my Recipe."
+ },
+ "st01_t01/Scr066E#22": {
+  "attuale": "Wow, I won! This Deck \nisn't so bad after all!",
+  "proposto": "Wow, I won! This Deck\nisn't so bad after all!"
+ },
+ "st01_t01/Scr066E#27": {
+  "attuale": "Hm, what's this? Nah, I \ndon't need a sandwich.",
+  "proposto": "Hm, what's this? Nah, I\ndon't need a sandwich."
+ },
+ "st01_t01/Scr076E#6": {
+  "attuale": "We're already partners! \nNo need to worry! HYAA!",
+  "proposto": "We're already partners!\nNo need to worry! HYAA!"
+ },
+ "st01_t01/Scr076E#14": {
+  "attuale": "I'm a man! I can't turn my \nback when faced with a duel!",
+  "proposto": "I'm a man! I can't turn my\nback when faced with a duel!"
+ },
+ "st01_t01/Scr076E#16": {
+  "attuale": "I'm a man! I won't cry! \nI admit my crushing defeat!",
+  "proposto": "I'm a man! I won't cry!\nI admit my crushing defeat!"
+ },
+ "st01_t01/Scr076E#17": {
+  "attuale": "I'm a man! I admit my \nmistakes and move on!",
+  "proposto": "I'm a man! I admit my\nmistakes and move on!"
+ },
+ "st01_t01/Scr077E#5": {
+  "attuale": "I thought you had a partner. \nAm I missing something here?",
+  "proposto": "I thought you had a partner.\nAm I missing something here?"
+ },
+ "st01_t01/Scr077E#14": {
+  "attuale": "Go ahead, 《PLAYER》.\nShow me what your made of!",
+  "proposto": "Go ahead, 《PLAYER》.\nShow me what you're made of!"
+ },
+ "st01_t01/Scr077E#16": {
+  "attuale": "Argh! You're skill is almost\ninhuman, 《PLAYER》!",
+  "proposto": "Argh! Your skill is almost\ninhuman, 《PLAYER》!"
+ },
+ "st01_t01/Scr078E#7": {
+  "attuale": "I'd only be interested if \nthe monkey were a duelist!",
+  "proposto": "I'd only be interested if\nthe monkey were a duelist!"
+ },
+ "st01_t01/Scr078E#12": {
+  "attuale": "We'll reach the pinnacle of \nsuccess as duelists together.",
+  "proposto": "We'll reach the pinnacle of\nsuccess as duelists together."
+ },
+ "st01_t01/Scr078E#15": {
+  "attuale": "I'd only be interested if \nthe monkey were a duelist!",
+  "proposto": "I'd only be interested if\nthe monkey were a duelist!"
+ },
+ "st01_t01/Scr078E#20": {
+  "attuale": "We shall test our wills \nand cards against each other!",
+  "proposto": "We shall test our wills\nand cards against each other!"
+ },
+ "st01_t01/Scr078E#24": {
+  "attuale": "I've lost, but thank you for \nsuch an exhilarating duel.",
+  "proposto": "I've lost, but thank you for\nsuch an exhilarating duel."
+ },
+ "st01_t01/Scr079E#9": {
+  "attuale": "Stick with me and you'll \nlearn to get the girls!",
+  "proposto": "Stick with me and you'll\nlearn to get the girls!"
+ },
+ "st01_t01/Scr079E#20": {
+  "attuale": "I'll admit defeat this time. \nHere, I'll give you this.",
+  "proposto": "I'll admit defeat this time.\nHere, I'll give you this."
+ },
+ "st01_t01/Scr079E#23": {
+  "attuale": "I'll admit defeat this time. \nHere, I'll give you this.",
+  "proposto": "I'll admit defeat this time.\nHere, I'll give you this."
+ },
+ "st01_t01/Scr079E#24": {
+  "attuale": "Tell all the girls how \ngenerous I am!",
+  "proposto": "Tell all the girls how\ngenerous I am!"
+ },
+ "st01_t01/Scr079E#25": {
+  "attuale": "Next time we duel, bring a \ncute girl with you, OK?",
+  "proposto": "Next time we duel, bring a\ncute girl with you, OK?"
+ },
+ "st01_t01/Scr079E#27": {
+  "attuale": "Next time we duel, bring a \ncute girl with you, OK?",
+  "proposto": "Next time we duel, bring a\ncute girl with you, OK?"
+ },
+ "st01_t01/Scr079E#29": {
+  "attuale": "Next time we duel, bring a \ncute girl with you, OK?",
+  "proposto": "Next time we duel, bring a\ncute girl with you, OK?"
+ },
+ "st01_t01/Scr080E#7": {
+  "attuale": "OK, but be warned. \nI don't like to lose.",
+  "proposto": "OK, but be warned.\nI don't like to lose."
+ },
+ "st01_t01/Scr080E#17": {
+  "attuale": "OK, I get it. You want my \nRecipe that bad, huh?",
+  "proposto": "OK, I get it. You want my\nRecipe that bad, huh?"
+ },
+ "st01_t01/Scr080E#28": {
+  "attuale": "Huh? A sandwich? You \ncan't expect me to take this!",
+  "proposto": "Huh? A sandwich? You\ncan't expect me to take this!"
+ },
+ "st01_t01/Scr081E#4": {
+  "attuale": "Tokens are easy to use, \nbut most have low DEF.",
+  "proposto": "Tokens are easy to use,\nbut most have low DEF."
+ },
+ "st01_t01/Scr081E#8": {
+  "attuale": "I don't have partner so \nconsider yourself lucky!",
+  "proposto": "I don't have partner so\nconsider yourself lucky!"
+ },
+ "st01_t01/Scr081E#13": {
+  "attuale": "Tokens are easy to use, \nbut most have low DEF.",
+  "proposto": "Tokens are easy to use,\nbut most have low DEF."
+ },
+ "st01_t01/Scr081E#19": {
+  "attuale": "Bring it on! I'll give you a \ntaste of some REAL power!",
+  "proposto": "Bring it on! I'll give you a\ntaste of some REAL power!"
+ },
+ "st01_t01/Scr081E#29": {
+  "attuale": "I gotta admit - you're good. \nUse this card wisely!",
+  "proposto": "I gotta admit - you're good.\nUse this card wisely!"
+ },
+ "st01_t01/Scr082E#4": {
+  "attuale": "Hey! The Ante Rule is \nagainst school policy!",
+  "proposto": "Hey! The Ante Rule is\nagainst school policy!"
+ },
+ "st01_t01/Scr082E#5": {
+  "attuale": "Even if they allowed it, \nI wouldn't! So don't do it!",
+  "proposto": "Even if they allowed it,\nI wouldn't! So don't do it!"
+ },
+ "st01_t01/Scr082E#9": {
+  "attuale": "Hey! The Ante Rule is \nagainst school policy!",
+  "proposto": "Hey! The Ante Rule is\nagainst school policy!"
+ },
+ "st01_t01/Scr082E#10": {
+  "attuale": "Even if they allowed it, \nI wouldn't! So don't do it!",
+  "proposto": "Even if they allowed it,\nI wouldn't! So don't do it!"
+ },
+ "st01_t01/Scr082E#15": {
+  "attuale": "I don't stop until my \nopponent surrenders!",
+  "proposto": "I don't stop until my\nopponent surrenders!"
+ },
+ "st01_t01/Scr084E#94": {
+  "attuale": "Humph! You're not all your\ncracked up to be!",
+  "proposto": "Humph! You're not all you're\ncracked up to be!"
+ },
+ "st01_t01/Scr084E#95": {
+  "attuale": "Humph! You're not all your\ncracked up to be!",
+  "proposto": "Humph! You're not all you're\ncracked up to be!"
+ },
+ "st01_t01/Scr086E#11": {
+  "attuale": "Perfect timing! I was just \nlooking for someone to duel.",
+  "proposto": "Perfect timing! I was just\nlooking for someone to duel."
+ },
+ "st01_t01/Scr086E#15": {
+  "attuale": "Dang! I thought I had you\nbut there, but I lost.",
+  "proposto": "Dang! I thought I had you\nthere, but I lost."
+ },
+ "st01_t01/Scr087E#5": {
+  "attuale": "I thought we went though\nthis. We're partners already.",
+  "proposto": "I thought we went through\nthis. We're partners already."
+ },
+ "st01_t01/Scr101E#7": {
+  "attuale": "Wonder what your up to... \nSure, but it'll cost ya!",
+  "proposto": "Wonder what you're up to...\nSure, but it'll cost ya!"
+ },
+ "st01_t01/Scr101E#13": {
+  "attuale": "Well, I don't know... Aw, \nwhat the heck. Let's duel!",
+  "proposto": "Well, I don't know... Aw,\nwhat the heck. Let's duel!"
+ },
+ "st01_t01/Scr101E#14": {
+  "attuale": "I've never been beat like \nthis, even in a tournament!",
+  "proposto": "I've never been beat like\nthis, even in a tournament!"
+ },
+ "st01_t01/Scr101E#21": {
+  "attuale": "Yahoo! You played pretty \ngood though! Nice duel!",
+  "proposto": "Yahoo! You played pretty\ngood though! Nice duel!"
+ },
+ "st01_t01/Scr102E#6": {
+  "attuale": "You better be thankful to \nhave an Obelisk Blue partner!",
+  "proposto": "You better be thankful to\nhave an Obelisk Blue partner!"
+ },
+ "st01_t01/Scr102E#10": {
+  "attuale": "Don't worry, I'll finish you \noff quick! Let's duel!",
+  "proposto": "Don't worry, I'll finish you\noff quick! Let's duel!"
+ },
+ "st01_t01/Scr102E#11": {
+  "attuale": "Ugh! Utterly defeated and \nhumiliated by a Slifer Red!",
+  "proposto": "Ugh! Utterly defeated and\nhumiliated by a Slifer Red!"
+ },
+ "st01_t01/Scr102E#23": {
+  "attuale": "Don't talk like we're pals. \nI don't want your sandwich.",
+  "proposto": "Don't talk like we're pals.\nI don't want your sandwich."
+ },
+ "st01_t01/Scr103E#9": {
+  "attuale": "... ...! That makes me so\nhappy! I'll do by best!",
+  "proposto": "... ...! That makes me so\nhappy! I'll do my best!"
+ },
+ "st01_t01/Scr104E#26": {
+  "attuale": "... ... OffEr... ... \n... ... REJECTED... ...",
+  "proposto": "... ... OffEr... ...\n... ... REJECTED... ..."
+ },
+ "st01_t01/Scr105E#15": {
+  "attuale": "You're really good! I didn't \ndo bad, but it wasn't enough.",
+  "proposto": "You're really good! I didn't\ndo bad, but it wasn't enough."
+ },
+ "st01_t01/Scr106E#9": {
+  "attuale": "Partners? Ah... Another \nperson amazed by me.",
+  "proposto": "Partners? Ah... Another\nperson amazed by me."
+ },
+ "st01_t01/Scr111E#6": {
+  "attuale": "I heard that he can sense\nthe \"scents of a duel.\"\nBut I wonder the scents of a duel are?",
+  "proposto": "I heard that he can sense\nthe \"scents of a duel.\"\nBut I wonder what the scents of a duel are?"
+ },
+ "st01_t01/Scr111E#12": {
+  "attuale": "I heard that he can sense\nthe \"scents of a duel.\"\nBut I wonder the scents of a duel are?",
+  "proposto": "I heard that he can sense\nthe \"scents of a duel.\"\nBut I wonder what the scents of a duel are?"
+ },
+ "st01_t01/Scr114E#5": {
+  "attuale": "So he did the best on the \nexam and is the best in every sport.\nIt still doesn't mean he can beat me!",
+  "proposto": "So he did the best on the\nexam and is the best in every sport.\nIt still doesn't mean he can beat me!"
+ },
+ "st01_t01/Scr114E#10": {
+  "attuale": "So he did the best on the \nexam and is the best in every sport.\nIt still doesn't mean he can beat me!",
+  "proposto": "So he did the best on the\nexam and is the best in every sport.\nIt still doesn't mean he can beat me!"
+ },
+ "st01_t01/Scr118E#19": {
+  "attuale": "Oh shoot! You beat me.\nDid you it easy on me?",
+  "proposto": "Oh shoot! You beat me.\nDid you go easy on me?"
+ },
+ "st01_t01/Scr118E#28": {
+  "attuale": "Wow, a draw is really rare.\nDid you it easy on me?",
+  "proposto": "Wow, a draw is really rare.\nDid you go easy on me?"
+ },
+ "st01_t01/Scr119E#5": {
+  "attuale": "I like already told you we'd\nbe partners ! Sheesh!",
+  "proposto": "I, like, already told you we'd\nbe partners! Sheesh!"
+ },
+ "st01_t01/Scr119E#25": {
+  "attuale": "Yaaay! I won! Looks like \nyou slipped up a little, huh?",
+  "proposto": "Yaaay! I won! Looks like\nyou slipped up a little, huh?"
+ },
+ "st01_t01/Scr120E#0": {
+  "attuale": "Who are you?\nHey, it's not like I asked you name!",
+  "proposto": "Who are you?\nHey, it's not like I asked your name!"
+ },
+ "st01_t01/Scr120E#18": {
+  "attuale": "Who are you?\nHey, it's not like I asked you name!",
+  "proposto": "Who are you?\nHey, it's not like I asked your name!"
+ },
+ "st01_t01/Scr125E#0": {
+  "attuale": "Who are you again?\nI'm 《C125_1》. \nHave we met before?",
+  "proposto": "Who are you again?\nI'm 《C125_1》.\nHave we met before?"
+ },
+ "st01_t01/Scr125E#14": {
+  "attuale": "Who are you again?\nI'm 《C125_1》. \nHave we met before?",
+  "proposto": "Who are you again?\nI'm 《C125_1》.\nHave we met before?"
+ },
+ "st01_t01/Scr126E#4": {
+  "attuale": "Then I'll beat the best \nduelist from North Academy!",
+  "proposto": "Then I'll beat the best\nduelist from North Academy!"
+ },
+ "st01_t01/Scr126E#9": {
+  "attuale": "Then I'll beat the best \nduelist from North Academy!",
+  "proposto": "Then I'll beat the best\nduelist from North Academy!"
+ },
+ "st01_t01/Scr137E#2": {
+  "attuale": "I hold the number 1post\nat Umiuma Corporation.",
+  "proposto": "I hold the number 1 post\nat Umiuma Corporation."
+ },
+ "st01_t01/Scr139E#3": {
+  "attuale": "Hey... Do you know \n《C137_1》?",
+  "proposto": "Hey... Do you know\n《C137_1》?"
+ },
+ "st01_t01/Scr140E#3": {
+  "attuale": "Hey... Do you know \n《C137_1》?",
+  "proposto": "Hey... Do you know\n《C137_1》?"
+ },
+ "st01_t01/Scr147E#26": {
+  "attuale": "But I guess I can say the \nsame about myself.",
+  "proposto": "But I guess I can say the\nsame about myself."
+ },
+ "st01_t01/Scr147E#29": {
+  "attuale": "Come to think of it, \nI haven't left this island",
+  "proposto": "Come to think of it,\nI haven't left this island"
+ },
+ "st01_t01/Scr148E#16": {
+  "attuale": "rental fee is deducted \nfrom your DP earnings.",
+  "proposto": "rental fee is deducted\nfrom your DP earnings."
+ },
+ "st02_t01/Iso002E#2": {
+  "attuale": "Hi,《PLAYER》.",
+  "proposto": "Hi, 《PLAYER》."
+ },
+ "st02_t01/Iso003E#1": {
+  "attuale": "Heh heh heh heh..",
+  "proposto": "Heh heh heh heh..."
+ },
+ "st02_t01/Iso003E#24": {
+  "attuale": "The energy from the duel\nhave revived the Beasts!",
+  "proposto": "The energy from the duel\nhas revived the Beasts!"
+ },
+ "st02_t01/Iso004E#2": {
+  "attuale": "Heh heh heh heh...",
+  "proposto": "Heh heh heh heh...."
+ },
+ "st02_t01/MorningE#90": {
+  "attuale": "Where are they?\nLet's take ‘em out for a spin!",
+  "proposto": "Where are they?\nLet's take 'em out for a spin!"
+ },
+ "st02_t01/MorningE#125": {
+  "attuale": "Where are they?\nLet's take ‘em out for a spin!",
+  "proposto": "Where are they?\nLet's take 'em out for a spin!"
+ },
+ "st02_t01/Scr002E#4": {
+  "attuale": "Show no weakness,《C002_3》.",
+  "proposto": "Show no weakness, 《C002_3》."
+ },
+ "st02_t01/Scr002E#11": {
+  "attuale": "That's enough,《C002_3》.\nYou dueled well.",
+  "proposto": "That's enough, 《C002_3》.\nYou dueled well."
+ },
+ "st02_t01/Scr008E#36": {
+  "attuale": "I'm taking your badges!",
+  "proposto": "I'm taking your medals!"
+ },
+ "st02_t01/Scr009E#2": {
+  "attuale": "Ah duel?\nWell, I guess so.",
+  "proposto": "A duel?\nWell, I guess so."
+ },
+ "st02_t01/Scr016E#18": {
+  "attuale": "You must stop the revival \nof the Sacred Beasts...",
+  "proposto": "You must stop the revival\nof the Sacred Beasts..."
+ },
+ "st02_t01/Scr016E#21": {
+  "attuale": "You must stop the revival \nof the Sacred Beasts...",
+  "proposto": "You must stop the revival\nof the Sacred Beasts..."
+ },
+ "st02_t01/Scr023E#32": {
+  "attuale": "Gimme your badges!",
+  "proposto": "Gimme your medals!"
+ },
+ "st02_t01/Scr051E#36": {
+  "attuale": "Huh? A present? I don't \nneed that, but thanks!",
+  "proposto": "Huh? A present? I don't\nneed that, but thanks!"
+ },
+ "st02_t01/Scr058E#5": {
+  "attuale": "I want something fun \nto do...",
+  "proposto": "I want something fun\nto do..."
+ },
+ "st02_t01/Scr059E#29": {
+  "attuale": "Look's like pay day came\nearly this month!",
+  "proposto": "Looks like pay day came\nearly this month!"
+ },
+ "st02_t01/Scr060E#13": {
+  "attuale": "If you don't you have any medals,\nwhy did you ask me to\nduel in the first place?",
+  "proposto": "If you don't have any medals,\nwhy did you ask me to\nduel in the first place?"
+ },
+ "st02_t01/Scr060E#15": {
+  "attuale": "If you don't you have any medals,\nwhy did you ask me to\nduel in the first place?",
+  "proposto": "If you don't have any medals,\nwhy did you ask me to\nduel in the first place?"
+ },
+ "st02_t01/Scr060E#17": {
+  "attuale": "If you don't you have any medals,\nwhy did you ask me to\nduel in the first place?",
+  "proposto": "If you don't have any medals,\nwhy did you ask me to\nduel in the first place?"
+ },
+ "st02_t01/Scr060E#19": {
+  "attuale": "If you don't you have any medals,\nwhy did you ask me to\nduel in the first place?",
+  "proposto": "If you don't have any medals,\nwhy did you ask me to\nduel in the first place?"
+ },
+ "st02_t01/Scr060E#21": {
+  "attuale": "If you don't you have any medals,\nwhy did you ask me to\nduel in the first place?",
+  "proposto": "If you don't have any medals,\nwhy did you ask me to\nduel in the first place?"
+ },
+ "st02_t01/Scr062E#2": {
+  "attuale": "Talking's OK, but... Well,\nI'd rather just talk, but...  \nBut... Naw!",
+  "proposto": "Talking's OK, but... Well,\nI'd rather just talk, but...\nBut... Naw!"
+ },
+ "st02_t01/Scr066E#21": {
+  "attuale": "Wow, I won! This Deck \nisn't so bad after all!",
+  "proposto": "Wow, I won! This Deck\nisn't so bad after all!"
+ },
+ "st02_t01/Scr069E#26": {
+  "attuale": "Ack! You're strong!\nYou really beat be there!",
+  "proposto": "Ack! You're strong!\nYou really beat me there!"
+ },
+ "st02_t01/Scr071E#32": {
+  "attuale": "Huh... A draw.\nThat's　too bad.\nMaybe next time!",
+  "proposto": "Huh... A draw.\nThat's too bad.\nMaybe next time!"
+ },
+ "st02_t01/Scr076E#20": {
+  "attuale": "I'm a man! I admit my \nmistakes and move on!",
+  "proposto": "I'm a man! I admit my\nmistakes and move on!"
+ },
+ "st02_t01/Scr077E#17": {
+  "attuale": "Go ahead, 《PLAYER》.\nShow me what your made of!",
+  "proposto": "Go ahead, 《PLAYER》.\nShow me what you're made of!"
+ },
+ "st02_t01/Scr079E#23": {
+  "attuale": "Next time we duel, bring a \ncute girl with you, OK?",
+  "proposto": "Next time we duel, bring a\ncute girl with you, OK?"
+ },
+ "st02_t01/Scr079E#26": {
+  "attuale": "Next time we duel, bring a \ncute girl with you, OK?",
+  "proposto": "Next time we duel, bring a\ncute girl with you, OK?"
+ },
+ "st02_t01/Scr079E#28": {
+  "attuale": "Next time we duel, bring a \ncute girl with you, OK?",
+  "proposto": "Next time we duel, bring a\ncute girl with you, OK?"
+ },
+ "st02_t01/Scr101E#22": {
+  "attuale": "Yahoo! You played pretty \ngood though! Nice duel!",
+  "proposto": "Yahoo! You played pretty\ngood though! Nice duel!"
+ },
+ "st02_t01/Scr104E#30": {
+  "attuale": "... ... OffEr... ... \n... ... REJECTED... ...",
+  "proposto": "... ... OffEr... ...\n... ... REJECTED... ..."
+ },
+ "st02_t01/Scr105E#20": {
+  "attuale": "You're really good! I didn't \ndo bad, but it wasn't enough.",
+  "proposto": "You're really good! I didn't\ndo bad, but it wasn't enough."
+ },
+ "st02_t01/Scr118E#28": {
+  "attuale": "Wow, a draw is really rare.\nDid you it easy on me?",
+  "proposto": "Wow, a draw is really rare.\nDid you go easy on me?"
+ },
+ "st02_t01/Scr119E#23": {
+  "attuale": "Yaaay! I won! Looks like \nyou slipped up a little, huh?",
+  "proposto": "Yaaay! I won! Looks like\nyou slipped up a little, huh?"
+ },
+ "st02_t01/Scr120E#0": {
+  "attuale": "Who are you?\nHey, it's not like I asked you name!",
+  "proposto": "Who are you?\nHey, it's not like I asked your name!"
+ },
+ "st02_t01/Scr120E#5": {
+  "attuale": "Who are you?\nHey, it's not like I asked you name!",
+  "proposto": "Who are you?\nHey, it's not like I asked your name!"
+ },
+ "st02_t01/Scr124E#12": {
+  "attuale": "What's this?\nYou don't have enough?!\nWe'll let's do this some other time.",
+  "proposto": "What's this?\nYou don't have enough?!\nWell, let's do this some other time."
+ },
+ "st02_t01/Scr124E#13": {
+  "attuale": "What's this?\nYou don't have enough?!\nWe'll let's do this some other time.",
+  "proposto": "What's this?\nYou don't have enough?!\nWell, let's do this some other time."
+ },
+ "st02_t01/Scr124E#14": {
+  "attuale": "What's this?\nYou don't have enough?!\nWe'll let's do this some other time.",
+  "proposto": "What's this?\nYou don't have enough?!\nWell, let's do this some other time."
+ },
+ "st02_t01/Scr124E#15": {
+  "attuale": "What's this?\nYou don't have enough?!\nWe'll let's do this some other time.",
+  "proposto": "What's this?\nYou don't have enough?!\nWell, let's do this some other time."
+ },
+ "st02_t01/Scr124E#16": {
+  "attuale": "What's this?\nYou don't have enough?!\nWe'll let's do this some other time.",
+  "proposto": "What's this?\nYou don't have enough?!\nWell, let's do this some other time."
+ },
+ "st02_t01/Scr125E#0": {
+  "attuale": "Who are you again?\nI'm 《C125_1》. \nHave we met before?",
+  "proposto": "Who are you again?\nI'm 《C125_1》.\nHave we met before?"
+ },
+ "st02_t01/Scr125E#4": {
+  "attuale": "Who are you again?\nI'm 《C125_1》. \nHave we met before?",
+  "proposto": "Who are you again?\nI'm 《C125_1》.\nHave we met before?"
+ },
+ "st02_t01/Scr125E#7": {
+  "attuale": "Is 1enough?",
+  "proposto": "Is 1 enough?"
+ },
+ "st02_t01/Scr125E#8": {
+  "attuale": "Is 2enough?",
+  "proposto": "Is 2 enough?"
+ },
+ "st02_t01/Scr125E#9": {
+  "attuale": "Is 3enough?",
+  "proposto": "Is 3 enough?"
+ },
+ "st02_t01/Scr125E#10": {
+  "attuale": "Is 4enough?",
+  "proposto": "Is 4 enough?"
+ },
+ "st02_t01/Scr125E#11": {
+  "attuale": "Is 5enough?",
+  "proposto": "Is 5 enough?"
+ },
+ "st02_t01/Scr125E#18": {
+  "attuale": "Um, is it all right to\nstart now? Let duel then.",
+  "proposto": "Um, is it all right to\nstart now? Let's duel then."
+ },
+ "st02_t01/Scr125E#22": {
+  "attuale": "Oh, do I have pay you?\nHow many do I owe?\nIs this right?",
+  "proposto": "Oh, do I have to pay you?\nHow many do I owe?\nIs this right?"
+ },
+ "st02_t01/Scr148E#16": {
+  "attuale": "rental fee is deducted \nfrom your DP earnings.",
+  "proposto": "rental fee is deducted\nfrom your DP earnings."
+ }
+}

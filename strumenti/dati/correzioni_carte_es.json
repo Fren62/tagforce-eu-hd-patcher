@@ -1,0 +1,1970 @@
+{
+ "4017": {
+  "name": "Brazo de Espada de Dragón"
+ },
+ "4031": {
+  "name": "Diablillo de Cuerno"
+ },
+ "4036": {
+  "desc": "\"Sirviente de la Calavera\" + \"Guerrero de Batalla\""
+ },
+ "4042": {
+  "name": "El Pelo de Serpiente"
+ },
+ "4054": {
+  "desc": "Cuando esta carta se manda del Campo al Cementerio, selecciona 1 monstruo con ATK 1500 o menos de tu Deck, muéstralo a tu adversario y añádelo a tu mano. Luego baraja tu Deck."
+ },
+ "4055": {
+  "name": "Insecto Grande"
+ },
+ "4062": {
+  "desc": "Este monstruo no puede ser Invocado mediante una Invocación Normal o Colocado. Esta carta solo puede ser Invocada mediante una Invocación Especial ofreciendo \"Petit Moth\" como Sacrificio en el 2º de tus turnos después de que \"Petit Moth\" haya sido equipado con el \"Capullo Evolutivo\"."
+ },
+ "4070": {
+  "desc": "Un rápido y poderoso Bestia-Guerrero que porta un hacha."
+ },
+ "4078": {
+  "desc": "Puedes equipar esta carta de tu mano como una Carta Mágica de Equipo a un \"Petit Moth\" boca arriba en el Campo. Si está equipada, el ATK y la DEF del \"Capullo Evolutivo\" se aplican a \"Petit Moth\"."
+ },
+ "4081": {
+  "name": "Planta Come-Hombres"
+ },
+ "4084": {
+  "name": "Incursor del Hacha"
+ },
+ "4088": {
+  "desc": "Un dragón feroz con un ataque mortal."
+ },
+ "4089": {
+  "desc": "VOLTEO: Aumenta el ATK y la DEF de todos los monstruos de Tipo Zombi en 200 puntos. Mientras esta carta permanezca boca arriba en el Campo, el ATK y la DEF de los monstruos Tipo Zombi continúa aumentando en 200 puntos durante cada una de tus Standby Phases. Este efecto continúa hasta el 4º turno después de la activación de esta carta."
+ },
+ "4090": {
+  "desc": "VOLTEO: Selecciona 1 Carta de Trampa en el Campo y destrúyela. Si la carta seleccionada está Colocada, toma y mira la carta. Si es una Carta de Trampa, es destruida. Si es una Carta Mágica, devuélvela a su posición original."
+ },
+ "4093": {
+  "name": "Quimera Oscura"
+ },
+ "4094": {
+  "name": "Guardián de Metal"
+ },
+ "4105": {
+  "desc": "Mientras el \"Castillo de las Ilusiones Oscuras\" permanezca boca arriba en el Campo, aumenta el ATK y la DEF de esta carta en 100 puntos. Además, el ATK y la DEF de esta carta continúa aumentando en 100 puntos durante cada una de tus Standby Phases. Este efecto continúa hasta el 4º turno después de la activación de esta carta."
+ },
+ "4106": {
+  "name": "Guerrero de Batalla"
+ },
+ "4107": {
+  "name": "Alas de la Llama Perversa"
+ },
+ "4109": {
+  "name": "Espejo de Trabajo - Cambiar"
+ },
+ "4110": {
+  "name": "Cortina de los Oscuros"
+ },
+ "4111": {
+  "name": "Tomozaurio"
+ },
+ "4116": {
+  "name": "Héroe del Este"
+ },
+ "4118": {
+  "name": "Eso que se Alimenta de la Vida"
+ },
+ "4121": {
+  "desc": "\"Duende Místico\" + \"Cortina de los Oscuros\"",
+  "name": "Kamionmago"
+ },
+ "4122": {
+  "name": "Escorpión de Pesadilla"
+ },
+ "4124": {
+  "name": "Partidario en las Sombras"
+ },
+ "4127": {
+  "desc": "Un feroz animal que duerme todo el día. A veces es mejor dejar que los Leones Durmientes duerman."
+ },
+ "4130": {
+  "name": "Herramienta Antigua"
+ },
+ "4131": {
+  "name": "Ave de Fe"
+ },
+ "4138": {
+  "desc": "Un zombi que aparece súbitamente desde la parcela nº 13, un sepulcro vacío."
+ },
+ "4141": {
+  "name": "Mano del Demonio"
+ },
+ "4145": {
+  "name": "Zombi de Plata Ojizarco"
+ },
+ "4148": {
+  "desc": "Este lanzador de conjuros ataca a sus enemigos con conjuros relacionados con el fuego como el \"Mar de Llamas\" y el \"Muro de Fuego\"."
+ },
+ "4149": {
+  "name": "Necrolancer el Tiempo-Señor"
+ },
+ "4150": {
+  "desc": "Esta criatura genera vientos con fuerza de vendaval y tornados que se llevan a sus enemigos."
+ },
+ "4151": {
+  "name": "El Ladrón Fantasma Encantador"
+ },
+ "4154": {
+  "name": "La Sombra que Controla la Oscuridad"
+ },
+ "4160": {
+  "name": "Segadora de Fuego"
+ },
+ "4166": {
+  "desc": "Especializado en ataques combinados, este guerrero utiliza el magnetismo para bloquear la huida del enemigo."
+ },
+ "4172": {
+  "desc": "Mientras esta carta permanezca boca arriba en el campo, aumenta tus Life Points en 500 puntos por cada monstruo adicional Invocado (excluyendo Invocación Especial, pero incluyendo los monstruos de tu adversario)."
+ },
+ "4173": {
+  "name": "Tarro Antiguo"
+ },
+ "4177": {
+  "desc": "VOLTEO: Mira las 5 cartas superiores de tu Deck, ordénalas en cualquier orden deseado y devuélvelas a la parte superior de tu Deck."
+ },
+ "4179": {
+  "name": "Preso Oscuro"
+ },
+ "4181": {
+  "desc": "Un hada caída que es poderosa en la oscuridad.",
+  "name": "Cerebro Antiguo"
+ },
+ "4192": {
+  "desc": "Una bestia pájaro que invoca refuerzos con un espejo de mano."
+ },
+ "4198": {
+  "name": "Llave de la Maza"
+ },
+ "4203": {
+  "desc": "Esta criatura ataca lanzando armas semejantes a misiles.",
+  "name": "Zombi Topo Mecánico"
+ },
+ "4204": {
+  "name": "Amante Feliz"
+ },
+ "4209": {
+  "name": "Espectro Fantasma"
+ },
+ "4223": {
+  "name": "Dragón de Cráneo Negro"
+ },
+ "4232": {
+  "name": "Acechador del Cráneo"
+ },
+ "4235": {
+  "name": "Reloj de Arena de la Vida"
+ },
+ "4248": {
+  "name": "Vela del Destino"
+ },
+ "4258": {
+  "desc": "Un hada-gata. En contra de su adorable belleza, ataca a sus enemigos."
+ },
+ "4259": {
+  "name": "Hadabruja"
+ },
+ "4261": {
+  "desc": "Esta criatura está escudada por una gruesa piel de pelo y es excelente defendiéndose a sí misma."
+ },
+ "4263": {
+  "name": "Armadiller de Piedra"
+ },
+ "4265": {
+  "name": "Hechicero Antiguo"
+ },
+ "4267": {
+  "desc": "Un perverso espejo que hipnotiza a sus enemigos, desviando los ataques de sus objetivos destinados."
+ },
+ "4268": {
+  "desc": "Ofrece 1 monstruo en tu Campo como Sacrificio para aumentar el ATK de este monstruo en 700 puntos hasta el final del turno."
+ },
+ "4278": {
+  "desc": "\"Tyhone\" + \"Alas de la Llama Perversa\""
+ },
+ "4281": {
+  "desc": "Un robot de batalla de superficie que fue usado una vez en guerra marítima."
+ },
+ "4282": {
+  "desc": "El Sol y el Viento del Norte se unen para producir una combinación devastadora de calor y vientos con fuerza de vendaval."
+ },
+ "4285": {
+  "name": "Rey Nebuloso"
+ },
+ "4286": {
+  "desc": "Mientras el rey está ausente, la reina protege el trono con una poderosa defensa."
+ },
+ "4294": {
+  "desc": "La DEF de este monstruo se reduce a la mitad cuando es atacado por monstruos LUZ."
+ },
+ "4295": {
+  "name": "Limo de Cambio"
+ },
+ "4303": {
+  "desc": "Un soldado mecánico que no cesará de atacar hasta que todas las señales de vida hayan desaparecido de sus sensores."
+ },
+ "4312": {
+  "name": "Armadura Insecto con Cañón Láser"
+ },
+ "4323": {
+  "name": "Ciber Escudo"
+ },
+ "4326": {
+  "desc": "Selecciona 1 monstruo en Posición de Defensa en el Campo de tu adversario y cámbialo a Posición de Ataque boca arriba."
+ },
+ "4336": {
+  "desc": "Aumenta el ATK y la DEF de todos los monstruos Tipo Insecto, Bestia, Planta, y Guerrero Bestia en 200 puntos."
+ },
+ "4337": {
+  "desc": "Aumenta el ATK y la DEF de todos los monstruos Tipo Dinosaurio, Zombi y Roca en 200 puntos."
+ },
+ "4338": {
+  "desc": "Aumenta el ATK y la DEF de todos los monstruos Tipo Dragón, Bestia Alada y Trueno en 200 puntos."
+ },
+ "4339": {
+  "desc": "Aumenta el ATK y la DEF de todos los monstruos Tipo Guerrero y Guerrero Bestia en 200 puntos."
+ },
+ "4340": {
+  "desc": "Aumenta el ATK y la DEF de todos los monstruos Tipo Pez, Serpiente Marina, Trueno y Aqua en 200 puntos. Disminuye el ATK y la DEF de todos los monstruos Tipo Máquina y Piro en 200 puntos."
+ },
+ "4341": {
+  "desc": "Aumenta el ATK y la DEF de todos los monstruos Tipo Demonio y Lanzador de Conjuros en 200 puntos. También disminuye el ATK y la DEF de todos los monstruos Tipo Hada en 200 puntos."
+ },
+ "4348": {
+  "name": "Dian Keto, el Señor de la Curación"
+ },
+ "4358": {
+  "name": "Kanan la Señora de las Espadas"
+ },
+ "4361": {
+  "name": "Ojo Megasónico"
+ },
+ "4362": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Ritual del León de Guerra\". También debes ofrecer monstruos cuyo Nivel total sea 7 o más de tu Campo o tu mano como Sacrificio.",
+  "name": "Súper León de Guerra"
+ },
+ "4365": {
+  "name": "Zombis de Tres Piernas"
+ },
+ "4366": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Ritual de Zera\". También debes ofrecer monstruos cuyo Nivel total sea 8 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4367": {
+  "name": "Pingüino Volador"
+ },
+ "4368": {
+  "name": "Escudo Milenario"
+ },
+ "4369": {
+  "name": "Regalo del Hada"
+ },
+ "4371": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Ritual del Espejo Bestial\". También debes ofrecer monstruos cuyo Nivel total sea 6 o más de tu Campo o tu mano como Sacrificio.",
+  "name": "Espejo Demoníaco"
+ },
+ "4381": {
+  "name": "Gusano del Calabozo"
+ },
+ "4382": {
+  "name": "Domador de Monstruos"
+ },
+ "4386": {
+  "name": "Dragón de Ojos Azules Definitivo"
+ },
+ "4387": {
+  "desc": "Un monstruo Caimán directo de los dibujos."
+ },
+ "4389": {
+  "name": "Dragón Loro"
+ },
+ "4390": {
+  "name": "Conejo Oscuro"
+ },
+ "4392": {
+  "desc": "Aumenta el ATK y la DEF de esta carta en 300 puntos por cada \"Dama Arpía\" boca arriba en el campo.",
+  "name": "Dragón Mascota de Arpía"
+ },
+ "4394": {
+  "name": "Máquina del Péndulo"
+ },
+ "4398": {
+  "desc": "A este monstruo se le realiza Invocación Especial desde el Deck al campo ofreciendo como Sacrificio a \"Zoa\" equipado con \"Metalmorph\"."
+ },
+ "4399": {
+  "name": "Comilón de Zona"
+ },
+ "4405": {
+  "name": "Espadachín de una Tierra Lejana"
+ },
+ "4411": {
+  "name": "Asesino de la Espada"
+ },
+ "4414": {
+  "name": "Mech - Soldado Gigante"
+ },
+ "4416": {
+  "name": "Araña Karakuri"
+ },
+ "4423": {
+  "desc": "Solo puedes activar este efecto durante tu Standby Phase. Ofrece esta carta boca arriba como Sacrificio para seleccionar y destruir 2 monstruos boca arriba con un ATK de 1000 o menos."
+ },
+ "4432": {
+  "name": "Dragón de Piedra"
+ },
+ "4433": {
+  "desc": "\"Dragón Alado, Guardián de la Fortaleza #1\" + \"Dragón Hada\""
+ },
+ "4434": {
+  "name": "Mago de la Fe"
+ },
+ "4435": {
+  "name": "Diosa del Capricho"
+ },
+ "4448": {
+  "desc": "\"Dragón Hada\" + \"Amazona de los Mares\" + \"Comilón de Zona\""
+ },
+ "4451": {
+  "name": "Centinela del Mar"
+ },
+ "4453": {
+  "name": "Serpiente Marina Roja Gigante"
+ },
+ "4461": {
+  "name": "Roca de Cañón"
+ },
+ "4466": {
+  "name": "Caracol del Rayo"
+ },
+ "4467": {
+  "name": "Pingüino de Perno"
+ },
+ "4473": {
+  "desc": "\"Ave de Fe\" + \"Ave de Cráneo Rojo\"",
+  "name": "Pájaro Sol Carmesí"
+ },
+ "4475": {
+  "desc": "VOLTEO: Selecciona 1 Carta Mágica en el Campo y destrúyela. Si la carta seleccionada está Colocada, toma y mira la carta. Si es una Carta Mágica, es destruida. Si es una Carta de Trampa, devuélvela a su posición original."
+ },
+ "4478": {
+  "name": "Comeaire"
+ },
+ "4480": {
+  "name": "Kamen de Mar"
+ },
+ "4484": {
+  "desc": "Cuando esta carta ataca a un monstruo de VIENTO el ATK de esta carta aumenta en 1000 puntos solo durante el Damage Step."
+ },
+ "4485": {
+  "desc": "Cuando esta carta es enviada al Cementerio, es devuelta a la parte superior del Deck."
+ },
+ "4488": {
+  "desc": "\"Trakodon\" + \"Víbora de llama\""
+ },
+ "4495": {
+  "name": "Lirio Cañón"
+ },
+ "4496": {
+  "name": "Bola de Agujas"
+ },
+ "4501": {
+  "desc": "\"Bruja del Bosque Negro\" + \"Dama de la Fe\""
+ },
+ "4504": {
+  "desc": "Un extraño demonio con largos brazos y garras afiladas como cuchillas."
+ },
+ "4506": {
+  "desc": "Cuando esta carta es Invocada mediante una Invocación Normal o Invocación de Volteo, destruye 1 monstruo de Tipo Dragón boca arriba en el Campo."
+ },
+ "4512": {
+  "name": "Gale Dogra"
+ },
+ "4513": {
+  "name": "Peces Disparatados"
+ },
+ "4515": {
+  "name": "Bracchio-raidus"
+ },
+ "4519": {
+  "desc": "Un robot guardia construido para proteger salas del trono, está armado con misiles rastreadores."
+ },
+ "4520": {
+  "name": "Scizzar Valiente"
+ },
+ "4521": {
+  "desc": "Un monumento de piedra de la Isla Oriental que lanza ráfagas de láser desde sus labios tallados en la piedra."
+ },
+ "4526": {
+  "name": "Pájaro Tortuga"
+ },
+ "4528": {
+  "name": "Ave Monstruosa"
+ },
+ "4530": {
+  "name": "Chico Estrella"
+ },
+ "4532": {
+  "name": "Cazador de Cuello"
+ },
+ "4537": {
+  "name": "Arena Mística"
+ },
+ "4544": {
+  "desc": "Se traga enteros a sus enemigos y usa su esencia como energía."
+ },
+ "4545": {
+  "desc": "Un tiburón zombi que puede lanzar su maldición letal con un hechizo."
+ },
+ "4549": {
+  "desc": "Este monstruo captura otros peces con su larga lengua y les extrae la energía."
+ },
+ "4551": {
+  "desc": "\"El Pelo de Serpiente\" + \"Dragón de Fuego de la Tierra Negra\""
+ },
+ "4555": {
+  "name": "Sapo Viscoso"
+ },
+ "4570": {
+  "desc": "\"El Pelo de Serpiente\" + \"Zombi de Dragón\"",
+  "name": "Gran Mamut de Goldfine"
+ },
+ "4571": {
+  "desc": "\"Kamen de Mar\" + \"Sustancia Pegajosa Horripilante\" + \"Amazona de los Mares\"",
+  "name": "Tiburón Negro Devorador de Carne Humana"
+ },
+ "4574": {
+  "name": "Anthrosaurio"
+ },
+ "4576": {
+  "name": "Trakodon"
+ },
+ "4579": {
+  "name": "D Pequeño"
+ },
+ "4580": {
+  "desc": "Cuando esta carta se manda del Campo al Cementerio, selecciona 1 monstruo con DEF 1500 o menos de tu Deck, muéstralo a tu adversario y añádelo a tu mano. Luego baraja tu Deck."
+ },
+ "4591": {
+  "desc": "Un caracol cibernético que aun así viaja a paso lento."
+ },
+ "4606": {
+  "name": "Llave de la Maza #2"
+ },
+ "4608": {
+  "name": "Soldado Pingüino"
+ },
+ "4609": {
+  "name": "Dragón Hada"
+ },
+ "4618": {
+  "name": "Dama de la Fe"
+ },
+ "4622": {
+  "desc": "Durante tres turnos (incluyendo el de tu adversario) luego de la Invocación de esta carta (incluyendo Invocación por Volteo), el ATK y la DEF de este monstruo se reducen a la mitad. Luego de esos turnos, tanto el ATK como la DEF se duplican durante el resto del Duelo.",
+  "name": "Reloj de Arena del Coraje"
+ },
+ "4629": {
+  "name": "La Cosa que se Esconde en el Barro"
+ },
+ "4632": {
+  "name": "Amazona de los Mares"
+ },
+ "4635": {
+  "name": "Rata Blindada"
+ },
+ "4636": {
+  "desc": "Antes del amanecer de la humanidad, este guerrero lagarto gobernaba con suma autoridad."
+ },
+ "4637": {
+  "desc": "Un hechicero bendecido por la luz de la luna con poderes más allá de la comprensión de los mortales."
+ },
+ "4640": {
+  "name": "Lagarto Nocturno"
+ },
+ "4644": {
+  "name": "Reina de las Hojas de Otoño"
+ },
+ "4645": {
+  "desc": "\"Asaltante de Tierra Bugroth\" + \"Centinela del Mar\"",
+  "name": "Bugroth Anfibio"
+ },
+ "4652": {
+  "name": "Sustancia Pegajosa Horripilante"
+ },
+ "4653": {
+  "desc": "Este anfibio es fuerte en el ataque, pero deja mucho que desear cuando defiende."
+ },
+ "4655": {
+  "desc": "Confunde a los monstruos enemigos con un ruido discordante para los oídos."
+ },
+ "4657": {
+  "desc": "Selecciona y activa 1 o 2 de los siguientes efectos.\n●Cuando un monstruo del adversario ataca, puedes cambiar un monstruo del adversario de la Posición de Ataque a la Posición de Defensa.\n●Después de la activación, esta carta se trata como una Carta de Equipo que aumenta el ATK del monstruo equipado en 500 puntos y equípala en tu Campo.",
+  "name": "Kunai con Cadena"
+ },
+ "4660": {
+  "desc": "Un monstruo de FUEGO equipado con esta carta aumenta su ATK en 700 puntos."
+ },
+ "4667": {
+  "name": "Virus Aplastacartas"
+ },
+ "4668": {
+  "name": "Aerosol Erradicador"
+ },
+ "4670": {
+  "name": "Sequía Eterna"
+ },
+ "4674": {
+  "name": "Palacio Brillante"
+ },
+ "4678": {
+  "desc": "Destruye todas las Cartas Mágicas y de Trampa en el Campo de tu adversario."
+ },
+ "4679": {
+  "desc": "Esta carta se usa en la Invocación de Ritual de \"Súper León de Guerra\". También debes ofrecer monstruos cuyo Nivel total sea 7 o más de tu Campo o tu mano como Sacrificio.",
+  "name": "Ritual del León de Guerra"
+ },
+ "4680": {
+  "desc": "Esta carta se usa en la Invocación de Ritual de \"Espejo Demoníaco\". También debes ofrecer monstruos cuyo Nivel total sea 6 o más de tu Campo o tu mano como Sacrificio.",
+  "name": "Ritual del Espejo Bestial"
+ },
+ "4691": {
+  "desc": "Selecciona 1 monstruo boca abajo en Posición de Defensa. Voltéalo boca arriba y si la DEF del monstruo es de 2000 puntos o menos, destrúyelo. Si la DEF es mayor a 2000 puntos, regresa el monstruo a la Posición de Defensa boca abajo.",
+  "name": "Agujero Trampa de Ácido"
+ },
+ "4692": {
+  "name": "Ruina Generalizada"
+ },
+ "4693": {
+  "desc": "Mientras esta carta permanece boca arriba en el campo, todos los monstruos con Invocación por Volteo de Nivel 2 o inferior son destruidos inmediatamente sin que se activen sus efectos.",
+  "name": "Abanico Goblin"
+ },
+ "4707": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Danza de Inicio\". También debes ofrecer monstruos cuyo Nivel total sea 6 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4708": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Receta de Hamburguesa\". También debes ofrecer monstruos cuyo Nivel total sea 6 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4710": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"La oración de Novox\". También debes ofrecer monstruos cuyo Nivel total sea 7 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4713": {
+  "desc": "\"Sabiduría Manchada\" + \"Cerebro Antiguo\""
+ },
+ "4714": {
+  "name": "Reina Cosmo"
+ },
+ "4715": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Resurrección de Chakra\". También debes ofrecer monstruos cuyo Nivel total sea 7 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4716": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Juramento de Tortuga\". También debes ofrecer monstruos cuyo Nivel total sea 8 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4718": {
+  "name": "Dragón Meteoro"
+ },
+ "4719": {
+  "desc": "\"Dragón Negro de Ojos Rojos\" + \"Dragón Meteoro\"",
+  "name": "Dragón Meteoro Negro"
+ },
+ "4720": {
+  "name": "Pegaso Aladefuego"
+ },
+ "4722": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Juramento de la Espada Garma\". También debes ofrecer monstruos cuyo Nivel total sea 7 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4723": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Pacto de Escarabajo de jabalina\". También debes ofrecer monstruos cuyo Nivel total sea 8 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4724": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Juramento de la Ballena Fortaleza\". También debes ofrecer monstruos cuyo Nivel total sea 7 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4725": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Resurgimiento de Dokurorider\". También debes ofrecer monstruos cuyo Nivel total sea 6 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "4727": {
+  "desc": "Esta carta se usa en la Invocación de Ritual de \"Mago del Caos Negro\". También debes ofrecer monstruos cuyo Nivel total sea 8 o más de tu Campo o tu mano como Sacrificio.",
+  "name": "Ritual de Magia Negra"
+ },
+ "4728": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Ritual de Magia Negra\". También debes ofrecer monstruos cuyo Nivel total sea 8 o más de tu Campo o tu mano como Sacrificio.",
+  "name": "Mago del Caos Negro"
+ },
+ "4733": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta solo puede ser Invocada mediante una Invocación Especial mientras \"Mundo Toon\" esté en tu Campo. Puedes Invocar mediante una Invocación Especial este monstruo de tu mano, pero se requieren Sacrificios para monstruos de Nivel 5 o superior. Esta carta no puede atacar en el mismo turno en el que es Invocada. A menos que pagues 500 Life Points, este monstruo no puede atacar. Cuando \"Mundo Toon\" en el Campo es destruido, esta carta también es destruida. Si tu adversario no controla un monstruo Toon, esta carta puede atacar los Life Points de tu adversario directamente. Si hay un monstruo Toon boca arriba en el Campo de tu adversario, debes seleccionar ese monstruo Toon como objetivo del ataque."
+ },
+ "4734": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta solo puede ser Invocada mediante una Invocación Especial mientras \"Mundo Toon\" esté en tu Campo. Puedes Invocar mediante una Invocación Especial este monstruo de tu mano, pero se requieren Sacrificios para monstruos de Nivel 5 o superior. Esta carta no puede atacar en el mismo turno en el que es Invocada. A menos que pagues 500 Life Points, este monstruo no puede atacar. Cuando \"Mundo Toon\" en el Campo es destruido, esta carta también es destruida. Si tu adversario no controla un monstruo Toon, esta carta puede atacar los Life Points de tu adversario directamente. Si hay un monstruo Toon boca arriba en el Campo de tu adversario, debes seleccionar ese monstruo Toon como objetivo del ataque."
+ },
+ "4735": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta solo puede ser Invocada mediante una Invocación Especial mientras \"Mundo Toon\" esté en tu Campo. Puedes Invocar mediante una Invocación Especial este monstruo de tu mano, pero se requieren Sacrificios para monstruos de Nivel 5 o superior. Esta carta no puede atacar en el mismo turno en el que es Invocada. A menos que pagues 500 Life Points, este monstruo no puede atacar. Cuando \"Mundo Toon\" en el Campo es destruido, esta carta también es destruida. Si tu adversario no controla un monstruo Toon, esta carta puede atacar los Life Points de tu adversario directamente. Si hay un monstruo Toon boca arriba en el Campo de tu adversario, debes seleccionar ese monstruo Toon como objetivo del ataque."
+ },
+ "4736": {
+  "name": "Ilusionista de Ojos Oscuros"
+ },
+ "4737": {
+  "desc": "Selecciona 1 monstruo en el Campo de tu adversario y equípalo a este monstruo (este efecto solo puede ser usado una vez por turno y solo puedes equiparle a 1 monstruo a la vez a esta carta). El ATK y la DEF de esta carta se convierten en la misma cantidad que la del monstruo equipado a esta carta. Si esta carta es destruida como resultado de una batalla, el monstruo equipado es destruido en su lugar y cualquier daño de batalla a tus Life Points también se inflige a los Life Points de tu adversario."
+ },
+ "4740": {
+  "desc": "\"Renunciado\" + \"Ídolo de los Mil Ojos\"\nMientras esta carta permanezca boca arriba en el Campo, los otros monstruos no pueden cambiar sus posiciones de batalla o atacar. Selecciona 1 monstruo en el Campo de tu adversario y equípalo a este monstruo (este efecto solo puede ser usado una vez por turno y solo puedes equiparle a 1 monstruo a la vez a esta carta). El ATK y la DEF de esta carta se convierten en la misma cantidad que la del monstruo equipado a esta carta. Si esta carta es destruida como resultado de una batalla, el monstruo equipado es destruido en su lugar."
+ },
+ "4742": {
+  "name": "Esfera Explosiva"
+ },
+ "4744": {
+  "name": "Alfa el Guerrero Magnético"
+ },
+ "4748": {
+  "desc": "A esta carta sólo se le puede hacer Invocación Especial desde el Deck al campo ofreciendo como Sacrificio \"Dragón Negro de Ojos Rojos\" equipado con \"Metalmorph\". Entonces tu Deck es barajada.",
+  "name": "Dragón de Metal Negro Ojos Rojos"
+ },
+ "4750": {
+  "name": "Hannibal Necromante"
+ },
+ "4755": {
+  "desc": "Cuando esta carta es Invocada (excluyendo Invocación Especial), puedes agregar una \"Gazelle el Rey de las Bestias Míticas\" desde tu Deck a tu mano."
+ },
+ "4756": {
+  "name": "Quimera, la Bestia Voladora Mítica"
+ },
+ "4759": {
+  "name": "Espadachín de Landstar"
+ },
+ "4760": {
+  "desc": "Cuando esta carta es Invocada con éxito mediante una Invocación Normal, Invocación de Volteo o Invocación Especial, selecciona y activa 1 de los siguientes efectos:\n●Selecciona 1 Carta de Equipo equipada a un monstruo en el Campo y destrúyela.\n●Selecciona 1 Carta de Equipo equipada a un monstruo en el Campo y equípala a esta carta.",
+  "name": "Ciber Predador"
+ },
+ "4761": {
+  "desc": "Puedes Invocar mediante una Invocación Especial esta carta de tu mano si tu adversario tiene al menos 2 monstruos más en el Campo que tú."
+ },
+ "4762": {
+  "desc": "Cuando esta carta en Posición de Ataque es atacada por un monstruo en el Campo de tu adversario, esta carta inflige daño a los Life Points de tu adversario igual al ATK del monstruo atacante. Luego, después del cálculo de daño, destruye esta carta."
+ },
+ "4763": {
+  "name": "Beta el Guerrero Magnético"
+ },
+ "4764": {
+  "name": "Gran Escudo Gardna"
+ },
+ "4766": {
+  "desc": "Aumenta el ATK de esta carta en 300 puntos por cada \"Mago Oscuro\" o \"Mago del Caos Negro\" en el Cementerio de ambos jugadores."
+ },
+ "4767": {
+  "name": "Aligátor de la Espada"
+ },
+ "4768": {
+  "desc": "No puedes declarar un ataque sin Sacrificar 1 monstruo en tu Campo. Aumenta el ATK de esta carta en 200 puntos por cada monstruo de Tipo Insecto en el Campo. Invoca mediante una Invocación Especial 1 \"Ficha Monstruo Insecto\" (Tipo Insecto/TIERRA/Nivel 1/ATK 100/DEF 100) en Posición de Ataque en tu Campo al final del turno en el que esta carta destruye el monstruo de tu adversario."
+ },
+ "4773": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta solo puede ser Invocada mediante una Invocación Especial mientras \"Mundo Toon\" esté en tu Campo. Puedes Invocar mediante una Invocación Especial este monstruo de tu mano, pero se requieren Sacrificios para monstruos de Nivel 5 o superior. Esta carta no puede atacar en el mismo turno en el que es Invocada. A menos que pagues 500 Life Points, este monstruo no puede atacar. Cuando \"Mundo Toon\" en el Campo es destruido, esta carta también es destruida. Si tu adversario no controla un monstruo Toon, esta carta puede atacar los Life Points de tu adversario directamente. Si hay un monstruo Toon boca arriba en el Campo de tu adversario, debes seleccionar ese monstruo Toon como objetivo del ataque."
+ },
+ "4777": {
+  "desc": "VOLTEO: Cambia la posición de batalla de 1 monstruo boca arriba en el Campo. La carta permanece boca arriba."
+ },
+ "4780": {
+  "desc": "Esta carta no puede ser destruida en batalla con un monstruo de Nivel 7 o menor. Durante cada una de tus End Phases, esta carta gana 1000 ATK. Si esta carta ataca, su ATK vuelve a 0, después del cálculo de daño."
+ },
+ "4786": {
+  "desc": "Aun cuando las posibilidades estén en su contra, esta brava hada avanzará en la batalla y jamás retrocederá."
+ },
+ "4789": {
+  "desc": "Solo al maestro de la espada de entre los monstruos de Tipo Demonio se le permite sujetar el Talwar."
+ },
+ "4790": {
+  "name": "Aligátor Cibertech"
+ },
+ "4792": {
+  "name": "Gamma el Guerrero Magnético"
+ },
+ "4794": {
+  "name": "Máquina del Tiempo"
+ },
+ "4795": {
+  "desc": "Cuando esta carta es Invocada (incluyendo Invocación Especial) adopta el ATK y la DEF original de un monstruo del adversario."
+ },
+ "4805": {
+  "desc": "Sacrifica 1 \"Kuriboh\" boca arriba. Invoca mediante una Invocación Especial cuantas \"Fichas de Kuriboh\" (Tipo Demonio/OSCURIDAD/Nivel 1/ATK 300/DEF 200) sea posible en Posición de Defensa en tu Campo. Las fichas no se pueden usar como Sacrificio en una Invocación de Sacrificio.",
+  "name": "Multiplicar"
+ },
+ "4806": {
+  "desc": "Un monstruo de Tipo Máquina equipado con esta carta aumenta su ATK o su DEF en 700 puntos. No puedes cambiar tu elección mientras esta carta permanezca boca arriba en el Campo."
+ },
+ "4808": {
+  "desc": "Selecciona 1 carta al azar de la mano de tu adversario y retírala del juego boca abajo. Mantén la carta fuera de juego durante 3 de los turnos de tu adversario. Durante la Standby Phase del 4º turno del adversario, la carta se devuelve a su mano.",
+  "name": "Espada de la Fuerza de Luz"
+ },
+ "4810": {
+  "desc": "Activando esta carta cuando tienes una carta \"Señor de D.\" boca arriba en el campo te permite hacer una Invocación Especial de hasta 2 cartas de Tipo Dragón desde tu mano."
+ },
+ "4815": {
+  "name": "Dado Grácil"
+ },
+ "4816": {
+  "name": "Dado de Cráneo"
+ },
+ "4819": {
+  "desc": "Esta carta sólo puede ser equipada a \"Jinzo\". Mientras esta carta esté equipada, los efectos de las Cartas de Trampa controladas por el controlador del monstruo equipado no son negados por el efecto del monstruo equipado. Cuando esta carta es retirada del Campo, destruye el monstruo equipado. La activación y el efecto de esta carta no pueden ser negados por ninguna carta."
+ },
+ "4830": {
+  "desc": "Cuando esta carta es activada, no puedes Invocar ningún monstruo en el mismo turno (incluyendo Invocación por Volteo y Invocación Especial). Puedes hacer Invocación Especial a un \"Mago Oscuro\" desde tu Deck al costo de la mitad de tus Life Points.",
+  "name": "Cortina de Magia Oscura"
+ },
+ "4835": {
+  "desc": "Destruye el monstruo boca arriba y con el ATK más bajo en el Campo de tu adversario (si hay más de uno, tú eliges cuál)."
+ },
+ "4852": {
+  "desc": "Mira las 5 cartas superiores en el Deck de tu adversario. Devuelve las cartas al Deck en el mismo orden."
+ },
+ "4854": {
+  "name": "Llamada de la Tumba"
+ },
+ "4855": {
+  "name": "Anti Raigeki"
+ },
+ "4859": {
+  "name": "Llamada de Oscuridad"
+ },
+ "4877": {
+  "name": "Infección de Gérmenes"
+ },
+ "4885": {
+  "desc": "Si un monstruo de tu Campo fue enviado a tu Cementerio este turno, puedes Invocar mediante una Invocación Especial 1 monstruo con un ATK de 1500 puntos o menos de tu Deck, una vez este turno. Luego baraja tu Deck."
+ },
+ "4888": {
+  "desc": "Esta carta sólo se puede equipar a un monstruo en tu Campo. El monstruo equipado con esta carta disminuye su ATK y DEF en 500 puntos. Todos los monstruos en el Campo de tu adversario deben atacar al monstruo equipado con esta carta si eligen atacar."
+ },
+ "4892": {
+  "desc": "Cuando tu adversario activa \"Polvo de Pluma de Arpía\", todas las Cartas Mágicas y de Trampa de tu adversario son destruidas en lugar de las tuyas."
+ },
+ "4901": {
+  "desc": "Paga 1000 Life Points. Tu adversario descarta 1 carta al azar de su mano y luego selecciona y descarta otra carta de su mano."
+ },
+ "4936": {
+  "name": "Chispa Reluciente"
+ },
+ "4948": {
+  "desc": "Puedes activar esta carta cuando descartas de tu mano. Después de eso, cada vez que descartas de tu mano, tu adversario también descarta el mismo número de cartas de su mano."
+ },
+ "4950": {
+  "desc": "Solo puedes activar esta carta cuando tu adversario tiene 6 o más cartas en su mano y tu mano contiene 2 o menos. Lanza una moneda y elige cara o cruz. Si aciertas, roba cartas hasta que tengas 5 en tu mano. Si fallas, sáltate tu próximo turno."
+ },
+ "4951": {
+  "desc": "Cuando activas esta carta, declara 1 Tipo de monstruo. Mientras esta carta permanezca boca arriba en el Campo, todos los monstruos boca arriba se convierten en el Tipo que has declarado."
+ },
+ "4952": {
+  "desc": "Declara 1 Tipo de Monstruo. Los monstruos del Tipo declarado no pueden atacar. Ofrece como Sacrificio 1 monstruo en el Campo durante cada una de tus Standby Phases. Si no lo haces, destruye esta carta."
+ },
+ "4953": {
+  "desc": "Solo puedes activar esta carta cuando haya 5 o más Cartas de Monstruo en tu Cementerio. Selecciona hasta 3 Cartas de Monstruo (excepto Cartas de Monstruo de Efecto) con un ATK de 1500 puntos o menos de tu Cementerio y añádelas a tu mano."
+ },
+ "4955": {
+  "desc": "Puedes activar esta carta cuando 1 o más de tus monstruos son devueltos del Campo a tu mano por el efecto de una carta de tu adversario. Devuelve todos los monstruos en el Campo a las manos de sus respectivos propietarios. Tanto tú como tu adversario realizan una Invocación Especial de vuestras manos del mismo número de monstruos en Posición de Defensa boca abajo."
+ },
+ "4957": {
+  "desc": "Los monstruos no pueden ser Colocados boca abajo. Los monstruos Colocados en Posición de Defensa son Invocados mediante una Invocación Normal en Posición de Defensa boca arriba."
+ },
+ "4961": {
+  "desc": "Cada vez que una carta es mandada al Cementerio, inflige 300 puntos de daño a los Life Points de su propietario por cada carta."
+ },
+ "4962": {
+  "desc": "Selecciona 2 Cartas que no sean de monstruo de tu Deck y 1 de tus Cartas de Monstruo en el Campo, y baraja tu Deck. Mezcla las 3 cartas seleccionadas y colócalas en el Campo boca abajo en Posición de Defensa. Las 2 cartas seleccionadas de tu Deck son tratadas como monstruos (ATK 0 / DEF 0) y son destruidas al final de la Battle Phase. Solo puedes usar este efecto durante la Battle Phase de tu adversario."
+ },
+ "4969": {
+  "desc": "VOLTEO: Devuelve todas las Cartas de Monstruo en el Campo a sus respectivos Decks y barájalos. Tú y tu adversario toman cartas hasta que tengáis el mismo número de Cartas de Monstruo que fueron devueltas a cada Deck. Invoca mediante una Invocación Especial los monstruos de Nivel 4 o inferior al Campo boca abajo en Posición de Defensa. El resto de cartas tomadas son descartadas al Cementerio."
+ },
+ "4976": {
+  "desc": "Cuando el monstruo de tu adversario ataca a esta carta boca abajo en Posición de Defensa, esta carta se convierte en una Carta Mágica de Equipo equipada al monstruo atacante (No se conduce el cálculo de daño). Durante cada una de las Standby Phases de tu adversario, aumenta tus Life Points en la mitad del ATK del monstruo equipado con esta carta."
+ },
+ "4980": {
+  "name": "Explorador del Cielo"
+ },
+ "4983": {
+  "desc": "Aumenta el ATK de esta carta en 500 puntos por cada monstruo de Tipo Dragón en el Campo de tu adversario y en el Cementerio de tu adversario."
+ },
+ "5002": {
+  "desc": "Esta carta solo puede ser Invocada mediante una Invocación Especial ofreciendo \"Alfa el Guerrero Magnético\", \"Beta el Guerrero Magnético\" y \"Gamma el Guerrero Magnético\" de tu mano o de tu Campo como Sacrificio. Además, si en tu Cementerio están \"Alfa el Guerrero Magnético\", \"Beta el Guerrero Magnético\" y \"Gamma el Guerrero Magnético\", puedes ofrecer esta carta del Campo como Sacrificio para hacer una Invocación Especial de esas 3 cartas a tu Campo.",
+  "name": "Valkyrion el Guerrero Magno"
+ },
+ "5003": {
+  "desc": "\"Bebé Dragón\" + \"Aligátor de la Espada\"\nPuedes ocasionar Daño Directo a los Life Points de tu adversario si los únicos Atributos de Cartas de Monstruo en el lado del campo de tu adversario son TIERRA, AGUA, o FUEGO.",
+  "name": "Dragón del Aligátor de la Espada"
+ },
+ "5024": {
+  "desc": "Mientras esta carta permanezca en Posición de Defensa boca arriba en tu lado del campo, el ATK y la DEF de todos tus monstruos de Tipo Planta boca arriba aumentan en 500 puntos."
+ },
+ "5027": {
+  "desc": "El Comandante de los monstruos de Tipo Máquina, sirve al Rey Máquina. Es famoso por la forma en la que controla sus tropas."
+ },
+ "5034": {
+  "desc": "Cuando se lucha contra monstruos Tipo Guerrero, tanto al ATK como a la DEF se les añaden 2000 puntos durante el cálculo del daño.",
+  "name": "Soldado Cifrado"
+ },
+ "5036": {
+  "name": "Comealma"
+ },
+ "5040": {
+  "name": "Polilla Electromagnética"
+ },
+ "5061": {
+  "desc": "Una vez que este monstruo se enrolla alrededor de su víctima, no hay escapatoria."
+ },
+ "5066": {
+  "name": "Bestia Anfibia"
+ },
+ "5072": {
+  "name": "Robolady"
+ },
+ "5073": {
+  "desc": "Un guerrero completamente cubierto de metal. Se mejora fusionándose con \"Robolady\"."
+ },
+ "5086": {
+  "desc": "Muchos han sido engañados por la belleza de este vampiro."
+ },
+ "5092": {
+  "name": "Soldado Mecanismo"
+ },
+ "5093": {
+  "desc": "Un monstruo enmascarado que lleva la más mortal de las maldiciones."
+ },
+ "5094": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Maldición de la Bestia Enmascarada\". También debes ofrecer monstruos cuyo Nivel total sea 8 o más de tu Campo o tu mano como Sacrificio."
+ },
+ "5095": {
+  "desc": "Este monstruo tiene cuatro máscaras diferentes para cuatro ataques diferentes."
+ },
+ "5110": {
+  "desc": "Esta carta sólo puede ser equipada a un monstruo del Tipo Guerrero. Aumenta el ATK del monstruo equipado en 800 puntos y disminuye el ATK de todos los monstruos de AGUA en el Campo en 500 puntos."
+ },
+ "5115": {
+  "name": "Ficha Monstruo Insecto"
+ },
+ "5121": {
+  "name": "Cartas Infinitas"
+ },
+ "5122": {
+  "desc": "Cuando un monstruo en el Campo de tu adversario ataca a un monstruo en tu Campo, si \"Gelatina Reanimada\" está boca arriba en tu Campo, puedes cambiar el objetivo del ataque a \"Gelatina Reanimada\"."
+ },
+ "5127": {
+  "desc": "Esta carta solo puede ser activada al principio de la Main Phase 1. Hasta tu próxima Draw Phase, ningún jugador puede activar o Colocar Cartas Mágicas o de Trampa."
+ },
+ "5130": {
+  "desc": "Solo puedes activar esta carta cuando tu adversario designa 1 monstruo en tu Campo como objetivo de una Carta Mágica o de Trampa, o de un ataque de batalla. Cambia el objetivo a otro monstruo en tu Campo."
+ },
+ "5131": {
+  "desc": "Ofrece como Sacrificio 1 monstruo en tu Campo. Invoca mediante una Invocación Especial 1 monstruo de Tipo Insecto de tu Deck que sea de 1 Nivel superior que el monstruo ofrecido como Sacrificio. Luego baraja tu Deck."
+ },
+ "5132": {
+  "desc": "Retira del juego 1 monstruo de tu Campo hasta tu próxima Standby Phase. La carta todavía cuenta para el límite de 5 cartas en la Zona de Monstruo."
+ },
+ "5138": {
+  "desc": "VOLTEO: Toma y mira 1 Carta de Monstruo boca abajo en Posición de Defensa en el Campo de tu adversario. Si es un Monstruo de Efecto, destrúyelo (su Efecto de Volteo no se activa), y si la carta no lo es, devuélvela a su posición original."
+ },
+ "5141": {
+  "name": "Bebé Vampiro"
+ },
+ "5152": {
+  "desc": "Une 1 de tus propios monstruos en tu Campo y tu mano con tu Deck y barájalo. Roba el mismo número de cartas que había en tu mano de tu Deck (No puedes activar esta carta si tienes cartas del adversario en tu mano)."
+ },
+ "5170": {
+  "desc": "Selecciona 2 Zonas de Carta de Monstruo en el Campo. Ningún jugador puede usar las zonas seleccionadas. No puedes seleccionar una zona ocupada por una Carta de Monstruo."
+ },
+ "5175": {
+  "desc": "Este monstruo sólo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"Ritual de Lithmus\". Esta carta no es destruida como resultado de una batalla y no es afectada por los efectos de Cartas de Trampa. Mientras esté una Carta de Trampa boca arriba en el campo, el ATK y la DEF de esta carta se convierten en 3000."
+ },
+ "5177": {
+  "desc": "Mientras esta carta permanezca boca arriba en el campo en Posición de Ataque boca arriba, no es destruida como resultado de una batalla. Coloca un \"Contador de Doncella\" en un monstruo que ataca a esta carta."
+ },
+ "5178": {
+  "desc": "Si el monstruo equipado ataca a un monstruo con un \"Contador de Doncella\" en él y el controlador del monstruo equipado recibe Daño de Batalla, toma control del monstruo que ocasiona daño de batalla a los Life Points de un jugador al terminar el Damage Step."
+ },
+ "5179": {
+  "desc": "Solamente puedes activar esta carta mientras hay una \"Doncella Enamorada\" boca arriba en tu lado del campo. Cuando tu oponente ataca a uno de tus monstruos, puedes cambiar el objetivo de ese ataque a una \"Doncella Enamorada\" boca arriba en tu lado del campo."
+ },
+ "5181": {
+  "name": "Puerta de las Ilusiones"
+ },
+ "5187": {
+  "desc": "Ambos jugadores seleccionan los objetivos de ataque para su oponente. Todos los monstruos boca arriba en el campo tienen que atacar cuando sea posible."
+ },
+ "5188": {
+  "name": "Destilación del Caos"
+ },
+ "5189": {
+  "name": "Sabatiel - La Piedra Filosofal"
+ },
+ "5190": {
+  "desc": "Descarta todas las cartas en tu mano. Selecciona a 1 monstruo Tipo Bestia desde tu Cementerio y hazle Invocación Especial a tu lado del campo. Disminuye en 200 puntos el ATK de todos los monstruos boca arriba en el lado del campo de tu oponente hasta la End Phase de este turno por cada monstruo de Tipo Bestia, Planta y Bestia Alada en tu Cementerio.",
+  "name": "Amanecer en Ayers Rock"
+ },
+ "5195": {
+  "name": "Arquera Amazoness"
+ },
+ "5197": {
+  "desc": "Cada vez que tú aumentes tus Life Points, inflige 500 puntos de daño a los Life Points de tu adversario."
+ },
+ "5206": {
+  "desc": "Un misterioso sacerdote creado como resultado de los últimos avances en biotecnología."
+ },
+ "5208": {
+  "desc": "\"La Doncella Compasiva\" + \"Señoroscura Marie\""
+ },
+ "5209": {
+  "name": "Señoroscura Marie"
+ },
+ "5212": {
+  "desc": "Aumenta el ATK y la DEF del monstruo equipado en 800 puntos por cada monstruo boca arriba que tú controles."
+ },
+ "5219": {
+  "name": "El Secreto del Retrato"
+ },
+ "5220": {
+  "desc": "Este monstruo se alimenta de los sueños del durmiente incauto, arrastrando a la víctima al sueño eterno."
+ },
+ "5221": {
+  "desc": "El espíritu maldito de un caballero acusado falsamente que vaga en busca de la verdad y la justicia."
+ },
+ "5222": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta sólo puede ser Invocada mediante una Invocación Especial retirando del juego 3 monstruos del Tipo Demonio de tu Cementerio. Cuando esta carta es destruida en batalla o por efecto de una carta de tu adversario, se considera una Carta de Equipo al final del turno. Equipa 1 de los monstruos de tu adversario con esta carta. Mientras esté equipado con esta carta, tú controlas el monstruo equipado."
+ },
+ "5223": {
+  "name": "Fórmula Mágica"
+ },
+ "5226": {
+  "desc": "Una vengativa criatura formada por los espíritus de los guerreros caídos, arrastra a cualquiera que se atreva a acercársele hacia las profundidades de la tierra.",
+  "name": "Espíritu Atado a la Tierra"
+ },
+ "5230": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta solo puede ser Invocada mediante una Invocación Especial de tu mano o Deck ofreciendo 1 \"Mago Oscuro\" en tu Campo como Sacrificio cuando tengas éxito en el efecto de \"Mago del Tiempo\". En ese momento, selecciona 1 Carta Mágica de tu Deck, añádela a tu mano y luego baraja tu Deck."
+ },
+ "5231": {
+  "name": "Templo de los Reyes"
+ },
+ "5234": {
+  "name": "Encarnación de Apophis"
+ },
+ "5236": {
+  "name": "Entierro Insensato"
+ },
+ "5237": {
+  "desc": "Selecciona \"Cráneo Convocado\" o cualquier monstruo Tipo Trueno. Todos los monstruos del adversario con DEF menor que el ATK de la carta seleccionada serán destruidos. Debes perder tu Battle Phase durante el turno en que esta carta es activada.",
+  "name": "Makiu, la Niebla Mística"
+ },
+ "5242": {
+  "desc": "Esta carta es destruida a menos que tengas \"Templo de los Reyes\" en tu Campo. Cada vez que esta carta destruye a un monstruo en una batalla, ese monstruo es retirado de la partida, y esta carta recibe una bonificación de 500 puntos ATK.",
+  "name": "Bestia Mística de Serket"
+ },
+ "5243": {
+  "name": "Gaia el Caballero Feroz Rápido"
+ },
+ "5244": {
+  "name": "Guardia Celta Convertido"
+ },
+ "5246": {
+  "desc": "Devuelve 1 Carta Mágica o de Trampa en el Campo de tu adversario a la mano de su propietario. La activación y el efecto de esta carta no pueden ser negados por ninguna carta."
+ },
+ "5255": {
+  "name": "Garuda el Espíritu del Viento"
+ },
+ "5258": {
+  "desc": "Cuando esta carta es atacada por un monstruo de tu adversario, selecciona 1 de tus otros monstruos y desígnalo como objetivo del ataque, y calcula el daño."
+ },
+ "5261": {
+  "name": "Poder Acumulado"
+ },
+ "5262": {
+  "name": "Orden Real"
+ },
+ "5275": {
+  "desc": "Fuerza la activación de 1 Carta de Trampa boca abajo. Si el timing de activación de la Carta de Trampa no es correcto, niega el efecto y destrúyela. Si no es una Carta de Trampa, se devuelve a su posición original. Después de que esta carta sea activada se inserta en tu Deck, no mandada al Cementerio. Luego baraja tu Deck.",
+  "name": "Muñeca Señuelo"
+ },
+ "5284": {
+  "desc": "Tu adversario recibe todo el daño de batalla al controlador de esta carta que este reciba como resultado de una batalla en la que participe este monstruo."
+ },
+ "5290": {
+  "desc": "Destruye todas las Cartas Mágicas boca arriba en el campo controladas por tu oponente. Por cada Carta Mágica destruida, tu oponente recibe 500 puntos de daño.",
+  "name": "Flecha Rompedora de Hechizos"
+ },
+ "5291": {
+  "desc": "Cuando esta carta es destruida en la batalla y colocada en el Cementerio, puedes pagar 1500 Life Points y elegir 1 Carta de Monstruo de la mano de tu oponente. Añade esa carta a tu mano y utilízala durante el resto del duelo (Cuando se envía al Cementerio, regresa al Cementerio de su dueño original).",
+  "name": "Maestra de la Cadena Amazoness"
+ },
+ "5292": {
+  "name": "Viser Des"
+ },
+ "5299": {
+  "desc": "Solo puedes activar esta carta cuando se activa una carta que designa como objetivo un monstruo en el Campo que incluye \"Amazoness\" en su nombre. Devuelve la Carta de Monstruo objetivo a la mano de su propietario e Invoca mediante una Invocación Especial otro monstruo de tu mano."
+ },
+ "5302": {
+  "desc": "\"Alma Oscura Poseída\" + \"Sabio de la Frontera\"\nUna Invocación de Fusión sólo se puede realizar con los Monstruos Material de Fusión nombrados arriba. Cuando una Carta Mágica Normal es activada, niega el efecto pagando 1000 Life Points. El efecto de un Monstruo de Efecto que este monstruo destruya como resultado de una batalla es negado."
+ },
+ "5304": {
+  "name": "Alma Oscura Poseída"
+ },
+ "5306": {
+  "desc": "Si Invocas mediante una Invocación de Sacrificio un monstruo de Tipo Demonio Sacrificando esta carta, Invoca mediante una Invocación Especial 1 \"Caballero del Cráneo #2\" de tu Deck. Luego baraja tu Deck.",
+  "name": "Caballero del Cráneo #2"
+ },
+ "5312": {
+  "name": "Máquina Absorbe Vidas"
+ },
+ "5317": {
+  "name": "Unidad Throwstone"
+ },
+ "5332": {
+  "name": "Un plan de finta"
+ },
+ "5336": {
+  "name": "El Dragón que Mora en la Cueva"
+ },
+ "5346": {
+  "name": "Súper Rejuvenecimiento"
+ },
+ "5351": {
+  "desc": "Cuando esta carta es destruida como resultado de una batalla y mandada al Cementerio, selecciona 2 cartas del Cementerio de tu adversario y añádelas al Deck de tu adversario. Luego tu adversario baraja su Deck."
+ },
+ "5354": {
+  "desc": "Manda 2 Cartas Mágicas de tu mano al Cementerio. Selecciona 1 Carta Mágica de tu Cementerio y añádela a tu mano."
+ },
+ "5358": {
+  "name": "Cañón de Virus"
+ },
+ "5359": {
+  "desc": "VOLTEO: Selecciona 1 carta en tu Cementerio y añádela a tu Deck. Luego baraja tu Deck."
+ },
+ "5367": {
+  "name": "Perdición Silenciosa"
+ },
+ "5368": {
+  "desc": "Invocación Especial con el efecto de \"Multiplicar\". Esta Ficha no puede ser usada como Sacrificio para una Invocación por Sacrificio.",
+  "name": "Ficha Kuriboh"
+ },
+ "5383": {
+  "desc": "\"Robolady\" + \"Roboyarou\"\nPuedes Invocar mediante una Invocación Especial \"Super Roboyarou\" devolviendo esta carta del Campo al Deck de Fusión. No puedes usar este efecto durante el mismo turno en el que esta carta es Invocada mediante una Invocación Especial. Además, aumenta el ATK de este monstruo en 1000 puntos durante el Damage Step cuando esta carta ataca los Life Points de tu adversario directamente.",
+  "name": "Super Robolady"
+ },
+ "5384": {
+  "desc": "\"Roboyarou\" + \"Robolady\"\nPuedes Invocar mediante una Invocación Especial \"Super Robolady\" devolviendo esta carta del Campo al Deck de Fusión. No puedes usar este efecto durante el mismo turno en el que esta carta es Invocada mediante una Invocación Especial. Además, aumenta el ATK de este monstruo en 1000 puntos durante el Damage Step cuando esta carta lucha contra un monstruo."
+ },
+ "5394": {
+  "desc": "Esta carta sólo puede ser activada durante la Main Phase 1. Todos los monstruos en el Campo que hayan ejecutado cálculo de daño son destruidos durante el End Step del turno."
+ },
+ "5406": {
+  "desc": "Esta carta sólo puede ser activada durante el turno de tu adversario cuando tus Life Points son 1000 o menos. Selecciona 1 monstruo en tu Campo y manda todas las demás cartas en el Campo y en las manos de sus respectivos propietarios a sus respectivos Cementerios. Después de eso, tu adversario selecciona e Invoca mediante una Invocación Especial 1 monstruo de su Deck en Posición de Ataque y ataca a tu monstruo seleccionado. (Cualquier daño de batalla de esta batalla se considera 0). El jugador cuyo monstruo permanezca solo en el Campo en la End Phase de este turno gana el Duelo. Cualquier otro caso resulta en EMPATE."
+ },
+ "5421": {
+  "desc": "Puedes voltear esta carta a Posición de Defensa boca abajo una vez por turno durante tu Main Phase. Cuando esta carta tiene como objetivo en la batalla a un monstruo en Posición de Defensa boca abajo, el ATK del Escorpión pasa a ser 2400 sólo durante ese cálculo de daño.",
+  "name": "Escorpión de 8 Pinzas"
+ },
+ "5427": {
+  "desc": "Puedes voltear esta carta en Posición de Defensa boca abajo una vez por turno durante tu Main Phase. Cuando a esta carta se le hace Invocación por Volteo, puedes robar una carta de tu Deck."
+ },
+ "5443": {
+  "desc": "Cuando esta carta Colocada es destruida y mandada al Cementerio, Invoca mediante una Invocación Especial 1 \"Ficha Vil\" (Tipo Demonio/OSCURIDAD/Nivel 4/ATK 1000/ DEF 1000)."
+ },
+ "5450": {
+  "desc": "A esta carta no puede hacérsele Invocación Especial a menos que \"Mundo Toon\" esté en tu campo. Si \"Mundo Toon\" es destruida, esta carta también es destruida. Si tu oponente no controla monstruo Toon entonces esta carta puede atacar directamente a tu oponente; si tu oponente controla uno o más monstruo Toon entonces elige un monstruo Toon para atacar. Además, esta carta recibe 300 ATK adicionales por cada \"Mago Oscuro\" y/o \"Mago del Caos Negro\" en tu Cementerio y en el Cementerio de tu oponente."
+ },
+ "5454": {
+  "name": "Ficha Vil"
+ },
+ "5476": {
+  "name": "Elfo Géminis Toon"
+ },
+ "5477": {
+  "name": "Soldado Cañón Toon"
+ },
+ "5480": {
+  "name": "Designador Oscuro"
+ },
+ "5482": {
+  "name": "Amo de Títeres"
+ },
+ "5486": {
+  "name": "Conjuro de Dolor"
+ },
+ "5490": {
+  "name": "Soldados Escondidos"
+ },
+ "5492": {
+  "name": "Vendedor de Ataúdes"
+ },
+ "5493": {
+  "desc": "Puede ser activada cuando el Monstruo de tu oponente ataca. Destruye todas las Cartas Mágicas y de Trampa en el campo.",
+  "name": "Catástrofe Malevolente"
+ },
+ "5497": {
+  "name": "Relevar al Monstruo"
+ },
+ "5501": {
+  "desc": "\"Soldado del Brillo Negro\" + \"Dragón de Ojos Azules Definitivo\"\nA este monstruo sólo puede hacérsele Invocación Especial con una Invocación de Fusión. Por cada monstruo Dragón en tu Campo, sin incluir a este, esta carta recibe una bonificación de 500 puntos ATK.",
+  "name": "Caballero Amo del Dragón"
+ },
+ "5502": {
+  "name": "Dragón de Cinco Cabezas"
+ },
+ "5504": {
+  "desc": "Un monstruo con un poderoso cañón, es capaz de integrar sus ataques. Ataca de muchas formas combinándose y separándose de otros monstruos.",
+  "name": "X-Cabeza Cañón"
+ },
+ "5508": {
+  "desc": "Un leño que ataca viajeros perdidos en el bosque. Originalmente un árbol grande, fue cortado y poseído por un espíritu malvado."
+ },
+ "5509": {
+  "name": "Espía del Cuidador de Tumbas"
+ },
+ "5514": {
+  "desc": "Cuando tu adversario activa una carta que incluye el efecto de hacer que tu adversario descarte de su mano, manda esta carta de tu mano al Cementerio para negar la activación y el efecto de la carta y destrúyela."
+ },
+ "5516": {
+  "desc": "Ofrece 1 monstruo que incluya \"Cuidador de Tumbas\" en su nombre en tu Campo como Sacrificio para infligir 700 puntos de daño a los Life Points de tu adversario. De todos modos, no puedes ofrecer \"Portacañón del Cuidador de Tumbas\" como Sacrificio para el efecto de esta carta.",
+  "name": "Portacañón del Cuidador de Tumbas"
+ },
+ "5517": {
+  "name": "Asaltante del Cuidador de Tumbas"
+ },
+ "5522": {
+  "name": "Falcos, el Sabio Alado"
+ },
+ "5523": {
+  "name": "Un Búho de Suerte"
+ },
+ "5530": {
+  "desc": "Tu adversario declara un Nivel de Carta de Monstruo. Toma cartas de la parte superior de tu Deck hasta que tomes un monstruo que pueda ser Invocado mediante una Invocación Normal. Si ese monstruo es del mismo Nivel que el declarado por tu adversario, todas las cartas tomadas son mandadas al Cementerio. Si no, Invoca mediante una Invocación Especial el monstruo que fue tomado y manda las demás cartas tomadas al Cementerio."
+ },
+ "5539": {
+  "desc": "Ofrece 1 monstruo en tu Campo como Sacrificio para Invocar mediante una Invocación Especial 1 Monstruo de Fusión del mismo Nivel de tu Deck de Fusión."
+ },
+ "5543": {
+  "desc": "Cuando un efecto que inflija daño a los Life Points es activado (excepto daño de batalla), transfiere el daño que recibes a los Life Points de tu adversario.",
+  "name": "Cañón Tras la Puerta"
+ },
+ "5546": {
+  "name": "Estrategia de Disturbio"
+ },
+ "5552": {
+  "desc": "Una vez por turno, durante tu Main Phase, puedes equipar esta carta a tu \"X-Cabeza Cañón\" como una Carta Mágica de Equipo O separar el equipamiento e Invocar mediante una Invocación Especial esta carta boca arriba en Posición de Ataque. Cuando esta carta es equipada por el efecto de esta carta, aumenta el ATK y la DEF de ese monstruo equipado en 400 puntos. (1 monstruo solo puede ser equipado con 1 Monstruo de Unión a la vez. Si el monstruo equipado con esta carta es destruido como resultado de una batalla, destruye esta carta en su lugar)."
+ },
+ "5553": {
+  "desc": "\"X-Cabeza Cañón\" + \"Y-Dragón Cabeza\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto retirando del juego los monstruos anteriores en tu Campo; entonces puedes Invocar mediante una Invocación Especial este monstruo de tu Deck de Fusión. (no necesitas la Carta Mágica \"Polimerización\"). Esta carta no puede ser Invocada mediante una Invocación Especial del Cementerio. Descarta 1 carta de tu mano para destruir 1 Carta Mágica o de Trampa boca arriba en el Campo de tu adversario.",
+  "name": "XY-Dragón Cañón"
+ },
+ "5555": {
+  "desc": "Una vez por turno, durante tu Main Phase, puedes equipar esta carta a tu \"X-Cabeza Cañón\" o \"Y-Dragón Cabeza\" como una Carta Mágica de Equipo O separar el equipamiento e Invocar mediante una Invocación Especial esta carta boca arriba en Posición de Ataque. Cuando esta carta es equipada por el efecto de esta carta, aumenta el ATK y la DEF de ese monstruo equipado en 600 puntos. (1 monstruo solo puede ser equipado con 1 Monstruo de Unión a la vez. Si el monstruo equipado con esta carta es destruido como resultado de una batalla, destruye esta carta en su lugar)."
+ },
+ "5556": {
+  "desc": "\"X-Cabeza Cañón\" + \"Y-Dragón Cabeza\" + \"Z-Metal Tanque\"\nEsta carta sólo puede ser Invocada mediante una Invocación Especial de tu Deck de Fusión retirando del juego las cartas nombradas arriba en tu Campo (No usas \"Polimerización\"). Esta carta no puede ser Invocada mediante una Invocación Especial del Cementerio. Descarta 1 carta de tu mano para destruir 1 carta en el Campo de tu adversario.",
+  "name": "XYZ-Dragón Cañón"
+ },
+ "5557": {
+  "desc": "Puede activarse cuando un Monstruo en tu campo es destruido y enviado al Cementerio. Paga 1000 Life Points para hacer Invocación Especial a un Monstruo de Nivel 4 desde tu Deck.",
+  "name": "Cuerda del Alma"
+ },
+ "5560": {
+  "desc": "Selecciona 1 monstruo boca arriba en tu Campo y retíralo del juego hasta la End Phase de este turno."
+ },
+ "5561": {
+  "desc": "Cuando esta carta causa daño de batalla a tu oponente, él debe enviar la carta en la parte superior de su Deck al Cementerio. Cuando esta carta es enviada del Campo al Cementerio, puedes elegir una carta de Tipo Zombi con una DEF de 1200 o menos desde tu Deck y mostrársela a tu oponente antes de añadirla a tu mano. Entonces se baraja el Deck.",
+  "name": "Goblin Zombi"
+ },
+ "5574": {
+  "desc": "Solamente puedes activar esta carta cuando tu oponente hace Invocaciones o Invocaciones de Volteo a un monstruo con éxito. Invocación Especial a 1 \"Ficha Clon\" a tu lado del campo con el mismo Tipo, Atributo, Nivel, ATK y DEF de ese monstruo. Si ese monstruo es destruido y enviado al Cementerio, destruye esta Ficha."
+ },
+ "5575": {
+  "desc": "Descarta 1 carta de tu mano. Disminuye en 2 Niveles todas las Cartas de Monstruo en tu mano hasta la End Phase del turno."
+ },
+ "5579": {
+  "desc": "Están oprimidos, pero creen que tendrán su libertad algún día."
+ },
+ "5588": {
+  "name": "Orchis Vampírico"
+ },
+ "5589": {
+  "desc": "Una vez por turno, durante tu Main Phase, puedes equipar esta carta a tu \"Orchis Vampírico\" como una Carta Mágica de Equipo O separar el equipamiento e Invocar mediante una Invocación Especial esta carta boca arriba en Posición de Ataque. Cuando esta carta es equipada por el efecto de esta carta, cada vez que el monstruo equipado destruye 1 monstruo como resultado de una batalla, Invoca mediante una Invocación Especial 1 \"Ficha de Planta Malvada\" (Tipo Planta/TIERRA/Nivel 1/ATK 800/DEF 800). (1 monstruo solo puede ser equipado con 1 Monstruo de Unión a la vez. Si el monstruo equipado con esta carta es destruido en batalla, se destruye esta carta en su lugar)."
+ },
+ "5592": {
+  "desc": "Puedes tomar un Monstruo de Unión que sea actualmente un monstruo en el Campo de tu adversario y equiparlo a esta carta. Este monstruo solo puede ser equipado con 1 Monstruo de Unión a la vez. El Monstruo de Unión equipado a esta carta no puede ser revertido a monstruo por su propio efecto."
+ },
+ "5606": {
+  "desc": "Paga 1500 Life Points. Selecciona 1 Carta de Monstruo del Cementerio de tu adversario, Invócala mediante una Invocación Especial a tu Campo en Posición de Ataque boca arriba, y equípala con esta carta. Cuando esta carta es retirada del Campo, destruye el monstruo equipado."
+ },
+ "5614": {
+  "desc": "Manda esta carta en el Campo al Cementerio durante tu Main Phase. Inflige daño a los Life Points de tu adversario igual al número de tus Standby Phases que hayan pasado después de que esta carta fuera activada x 1000 puntos.",
+  "name": "Cañón del Movimiento de las Olas"
+ },
+ "5619": {
+  "desc": "Solo puedes activar esta carta cuando Invocas con éxito mediante una Invocación Normal un monstruo. Si hay más monstruos en el Campo de tu adversario que en el tuyo, destruye los monstruos de tu adversario hasta que tu adversario controle el mismo número de monstruos que tú. Tu adversario selecciona qué monstruos son destruidos."
+ },
+ "5623": {
+  "desc": "Selecciona y activa 1 de los siguientes efectos:\n●Equipa 1 Monstruo de Unión en tu Campo al monstruo apropiado en tu Campo como una Carta Mágica de Equipo.\n●Separa 1 Monstruo de Unión equipado en tu Campo e Invócalo mediante una Invocación Especial boca arriba en Posición de Ataque en tu Campo."
+ },
+ "5624": {
+  "desc": "Solo puedes activar esta carta cuando tu adversario Invoca con éxito mediante una Invocación Normal, Invocación de Volteo o Invocación Especial un/os monstruo/s. Mientras ese monstruo permanezca boca arriba en el Campo, el ATK original de ese monstruo se divide a la mitad."
+ },
+ "5625": {
+  "desc": "\"X-Cabeza Cañón\" + \"Z-Metal Tanque\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto retirando del juego los monstruos anteriores en tu Campo; entonces puedes Invocar mediante una Invocación Especial este monstruo de tu Deck de Fusión. (no necesitas la Carta Mágica \"Polimerización\"). Esta carta no puede ser Invocada mediante una Invocación Especial del Cementerio. Descarta 1 carta de tu mano para destruir 1 Carta Mágica o de Trampa boca abajo en el Campo de tu adversario.",
+  "name": "XZ-Tanque Cañón"
+ },
+ "5626": {
+  "desc": "\"Y-Dragón Cabeza\" + \"Z-Metal Tanque\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto retirando del juego los monstruos anteriores en tu Campo; entonces puedes Invocar mediante una Invocación Especial este monstruo de tu Deck de Fusión. (no necesitas la Carta Mágica \"Polimerización\"). Esta carta no puede ser Invocada mediante una Invocación Especial del Cementerio. Descarta 1 carta de tu mano para destruir 1 Carta de Monstruo boca abajo en el Campo de tu adversario."
+ },
+ "5632": {
+  "desc": "Invocación Especial a una \"Ficha Demonio Metálico\" (Tipo Demonio/OSCURIDAD/Nivel 1/ATK 0/DEF 0) a tu campo. Esta Ficha no puede atacar. El daño excesivo recibido por su controlador en una batalla con \"Ficha Demonio Metálico\" en su lugar es recibido por el oponente. Paga 1000 Life Points durante tu Standby Phase. Si no pagas 1000 Life Points, la Ficha Demonio Metal es destruida."
+ },
+ "5642": {
+  "desc": "Parece muy poco fiable, pero puede tener un potencial increíble."
+ },
+ "5643": {
+  "desc": "Un pato que puede caminar a velocidades supersónicas. A veces, no puede controlar su increíble ritmo y pierde el control."
+ },
+ "5644": {
+  "desc": "Un dragón muy bello cubierto de zafiro. No le gustan las luchas, pero tiene un poder de ataque increíblemente alto."
+ },
+ "5645": {
+  "name": "Paladina Amazoness"
+ },
+ "5647": {
+  "desc": "Solo 1 \"Tigre Amazoness\" puede existir en tu Campo a la vez. Aumenta el ATK de este monstruo en 400 puntos por cada monstruo en tu Campo que incluya \"Amazoness\" en su nombre. Mientras esta carta permanezca boca arriba en el Campo, tu adversario no puede atacar a otro monstruo en tu Campo que incluya \"Amazoness\" en su nombre."
+ },
+ "5654": {
+  "desc": "Cuando esta carta es mandada al Cementerio como resultado de una batalla, tu adversario selecciona 1 Carta Mágica de tu Cementerio, y pon esa carta en la parte superior de tu Deck."
+ },
+ "5656": {
+  "desc": "VOLTEO: Pon 1 Contador Mágico en cada carta boca arriba en el Campo en la que puedas poner un Contador Mágico."
+ },
+ "5666": {
+  "desc": "Esta carta solo puede atacar cuando no haya otras cartas en tu Campo y tampoco tengas mano. Los efectos de los Monstruos de Efecto destruidos por esta carta quedan anulados."
+ },
+ "5667": {
+  "desc": "VOLTEO: Selecciona 2 Cartas de Monstruo en el Campo de tu adversario y 1 Carta de Monstruo en tu Campo y devuélvelos a las manos de sus propietarios."
+ },
+ "5676": {
+  "desc": "Mira las 3 cartas superiores de tu Deck, ordénalas en cualquier orden deseado, y devuélvelas a la parte superior del Deck. Tu adversario no puede mirar las cartas.",
+  "name": "Ordenando el Libro de Magia"
+ },
+ "5677": {
+  "name": "Cañón Mágico Mega Ton"
+ },
+ "5680": {
+  "desc": "Solo puedes activar esta carta durante tu turno. Selecciona 2 Cartas Mágicas de tu Cementerio y añádelas a tu Deck. Luego baraja tu Deck.",
+  "name": "Libro de Magia Oculto"
+ },
+ "5683": {
+  "name": "Desarmamiento"
+ },
+ "5684": {
+  "desc": "Retira 2 Contadores Mágicos en tu Campo. Niega la activación de una Carta Mágica y destrúyela."
+ },
+ "5685": {
+  "desc": "Voltea todas las Cartas de Monstruo boca abajo en Posición de Defensa boca arriba. Los efectos de los Monstruos de Efecto de Volteo no se activan. Aumenta tus Life Points en 400 puntos por cada Carta de Monstruo de Efecto en el Campo."
+ },
+ "5686": {
+  "name": "Limo Reflectametal"
+ },
+ "5688": {
+  "name": "Excavación de la Piedra Mágica"
+ },
+ "5689": {
+  "desc": "Invocación Especial con el efecto de \"Santuario del Demonio\". Esta Ficha no puede atacar. El daño excesivo recibido por su controlador en una batalla con esta Ficha en su lugar es recibido por el oponente. Paga 1000 Life Points durante tu Standby Phase. Si no pagas 1000 Life Points, esta Ficha es destruida.",
+  "name": "Ficha Demonio Metálico"
+ },
+ "5697": {
+  "desc": "Este monstruo solo puede ser Invocado mediante una Invocación de Ritual con la Carta Mágica de Ritual \"El Arca de Shinato\". También debes ofrecer monstruos cuyo Nivel total sea 8 o más de tu Campo o tu mano como Sacrificio. Cuando esta carta destruye un monstruo en Posición de Defensa en el Campo de tu adversario como resultado de una batalla y lo manda al Cementerio, inflige daño a los Life Points de tu adversario igual al ATK original del monstruo destruido."
+ },
+ "5699": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta no puede ser Invocada mediante una Invocación Especial excepto por el efecto de \"Caballero de la Llamarada Oscura\". Durante el cálculo de daño aumenta el ATK de esta carta en el ATK original del monstruo de tu adversario. Durante la End Phase del turno en el que esta carta realice una batalla, retira esta carta del juego."
+ },
+ "5704": {
+  "desc": "Un perro ninja maestro en Ninjutsu extremo. Entrenando duro ha aprendido la técnica de metamorfosearse en ser humano."
+ },
+ "5705": {
+  "desc": "Un tipo de robot mono automatizado que fue desarrollado con la tecnología más avanzada. Se mueve muy acrobáticamente."
+ },
+ "5708": {
+  "name": "Guardián Grarl"
+ },
+ "5728": {
+  "desc": "Un monstruo equipado con esta carta aumenta su DEF en 500 puntos. Niega el efecto de una Carta Mágica, excepto esta carta, que designa un monstruo equipado con esta carta como objetivo y destrúyela."
+ },
+ "5730": {
+  "name": "Cartas Preciosas del Más Allá"
+ },
+ "5733": {
+  "name": "Presente de Acción de gracias"
+ },
+ "5735": {
+  "desc": "Todos los monstruos en el Campo, excepto los Monstruos de Efecto, no son afectados por cualquier Carta Mágica (excluyendo esta carta).",
+  "name": "Área Anti-Magia"
+ },
+ "5737": {
+  "desc": "Solo puedes activar esta carta cuando tu adversario declara un ataque. Selecciona 1 monstruo boca arriba en tu Campo. Durante este turno, tu adversario solo puede atacar con el monstruo que tú seleccionaste. Tu adversario debe atacar al monstruo seleccionado con todos los monstruos boca arriba en su Campo."
+ },
+ "5738": {
+  "name": "Trío Ojama"
+ },
+ "5743": {
+  "name": "Toma Almas"
+ },
+ "5744": {
+  "desc": "Invocación Especial con el efecto de \"Trío Ojama\". Esta Ficha no puede ser usada como Sacrificio para una Invocación por Sacrificio. Cuando es destruida, el controlador recibirá 300 puntos de daño en sus Life Points."
+ },
+ "5745": {
+  "desc": "Invocación Especial con el efecto de \"Trío Ojama\". Esta Ficha no puede ser usada como Sacrificio para una Invocación por Sacrificio. Cuando es destruida, el controlador recibirá 300 puntos de daño en sus Life Points."
+ },
+ "5746": {
+  "desc": "Invocación Especial con el efecto de \"Trío Ojama\". Esta Ficha no puede ser usada como Sacrificio para una Invocación por Sacrificio. Cuando es destruida, el controlador recibirá 300 puntos de daño en sus Life Points."
+ },
+ "5755": {
+  "desc": "Selecciona un Monstruo en tu campo. La DEF del Monstruo seleccionado pasa a ser la suma del DEF original de todos los Monstruos boca arriba en tu campo hasta tu End Phase."
+ },
+ "5756": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta no puede ser Invocada mediante una Invocación Especial excepto por el efecto de \"Título de Caballero\". Si esta carta es Invocada mediante una Invocación Especial con éxito, destruye 1 carta en el Campo."
+ },
+ "5757": {
+  "desc": "Ofrece 1 \"Mago Oscuro\" boca arriba en tu Campo como Sacrificio para activar esta carta. Invoca mediante una Invocación Especial 1 \"Caballero Mago Oscuro\" de tu mano, Deck o Cementerio."
+ },
+ "5758": {
+  "name": "La Piedra del Sabio"
+ },
+ "5759": {
+  "desc": "Este joven tenía un corazón malvado, pero tras encontrar una persona especial, descubrió la justicia."
+ },
+ "5760": {
+  "desc": "Un pobre goblin que fue absorbido en otra dimensión. De todos modos, está haciendo lo mejor con su nuevo destino."
+ },
+ "5762": {
+  "desc": "Un experto en la batalla que pertenece a una unidad diabólica. Es famoso porque siempre hace su trabajo."
+ },
+ "5763": {
+  "desc": "Mientras esta carta permanezca boca arriba en tu Campo, \"Pandemonium\" en tu Campo no puede ser destruido por el efecto de una carta que controle tu adversario."
+ },
+ "5767": {
+  "desc": "Cuando esta carta es mandada al Cementerio, añádela a tu Deck y baraja tu Deck."
+ },
+ "5769": {
+  "desc": "VOLTEO: Selecciona 1 Carta Mágica de Equipo de tu Deck y añádela a tu mano."
+ },
+ "5770": {
+  "desc": "Mientras esta carta permanezca boca arriba en tu Campo, ningún jugador puede activar un efecto que sea activado al descartar de su mano.",
+  "name": "Goblin de la Codicia"
+ },
+ "5772": {
+  "desc": "El controlador de esta carta paga 500 Life Points durante cada una de sus Standby Phases. Cuando esta carta es designada como objetivo del efecto de una carta controlada por tu adversario, al resolver el efecto, lanza un dado de seis caras. Si el resultado es 3, niega el efecto y destruye la carta de tu adversario. Mientras esta carta permanezca boca arriba en el Campo, tu adversario no puede atacar a otra Carta de Monstruo ARCHIDEMONIO boca arriba excepto \"Archidemonio Peón Vil\".",
+  "name": "Archidemonio Peón Vil"
+ },
+ "5774": {
+  "name": "Archidemonio Alfil Oscuro"
+ },
+ "5780": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Especial. Esta carta vuelve a la mano del propietario durante la End Phase del turno en el que es Invocada mediante una Invocación Normal o volteada boca arriba. Cuando esta carta es Invocada mediante una Invocación Normal o volteada boca arriba, selecciona 1 monstruo boca arriba en el Campo y voltéalo boca abajo en Posición de Defensa."
+ },
+ "5786": {
+  "desc": "Destruye esta carta si no hay ninguna carta ARCHIDEMONIO boca arriba en tu Campo. Toma el control de 1 monstruo boca arriba de tu adversario equipado con esta carta. Recibes 800 puntos de daño durante cada una de las Standby Phases de tu adversario."
+ },
+ "5789": {
+  "desc": "Una vez por turno puedes pagar 500 Life Points para declarar 1 nombre de carta. Toma la carta superior de tu Deck y si su nombre es el que declaraste, añádela a tu mano. Si no lo es, manda la carta tomada al Cementerio."
+ },
+ "5792": {
+  "desc": "Selecciona 1 monstruo en tu Campo y mándalo al Cementerio. Aumenta tus Life Points en una cantidad igual a la del ATK original del monstruo."
+ },
+ "5798": {
+  "desc": "Descarta 2 cartas de tu mano para negar la activación de una Carta Mágica y destruirla. Además, comprueba la mano y el Deck de tu adversario y si encuentras cualquier Carta Mágica con el mismo nombre que la Carta Mágica destruida, mándalas todas al Cementerio."
+ },
+ "5800": {
+  "desc": "Selecciona 2 monstruos de LUZ de tu Cementerio y añádelos a tu Deck. Luego baraja tu Deck."
+ },
+ "5819": {
+  "name": "Espíritu de la Olla de la Codicia"
+ },
+ "5829": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta sólo puede ser Invocada mediante una Invocación Especial retirando del juego 1 monstruo de FUEGO en tu Cementerio. Cuando esta carta destruye un monstruo de tu adversario como resultado de una batalla y lo manda al Cementerio, inflige 1500 puntos de daño a los Life Points de tu adversario."
+ },
+ "5834": {
+  "desc": "El ATK y la DEF de esta carta se convierten en el número de tus cartas retiradas del juego x 400 puntos."
+ },
+ "5846": {
+  "desc": "Sólo puedes activar esta carta si hay un \"Soldado del Brillo Negro - Enviado del Principio\" o \"Dragón Emperador del Caos - Enviado del Fin\" en el Campo. Añade 2 de tus cartas retiradas del juego a tu mano.",
+  "name": "Semilla Primigenia"
+ },
+ "5868": {
+  "desc": "A esta carta no puede hacérsele Invocación Especial. A esta carta debe hacérsele Invocación por Sacrificio ofreciendo como Sacrificio 3 monstruos Tipo Dragón en tu lado del campo. Si esta carta ataca directamente a los Life Points de tu oponente y los hace 0, el controlador de esta carta gana el Match.",
+  "name": "Dragón de la Victoria"
+ },
+ "5876": {
+  "desc": "Un espíritu de madera malvado ahora ardiendo en llamas. Su ataque de fuego es poderoso, pero pronto no será más que cenizas."
+ },
+ "5880": {
+  "desc": "Cuando esta carta es Invocada con éxito mediante una Invocación Normal o Especial, puedes añadir 1 Carta Mágica de tu Cementerio a tu mano. Un monstruo que esta carta destruya como resultado de una batalla es retirado del juego en vez de ser mandado al Cementerio. Si esta carta es retirada del Campo, es retirada del juego."
+ },
+ "5893": {
+  "name": "Bugroth Anfibio MK-3"
+ },
+ "5895": {
+  "desc": "Envía \"Umi\" en tu Campo al Cementerio para destruir todas las cartas en el Campo excepto esta carta."
+ },
+ "5896": {
+  "desc": "Sacrifica 1 \"Pez Torpedo\" en tu Campo para destruir 1 monstruo en el Campo. Sacrifica 1 \"Crustáceo Lanza Bala de Cañón\" en tu Campo para destruir 1 Carta Mágica o de Trampa en el Campo."
+ },
+ "5897": {
+  "name": "Crustáceo Lanza Bala de Cañón"
+ },
+ "5899": {
+  "name": "Ángel Guardián Joan"
+ },
+ "5925": {
+  "desc": "A esta carta no puede hacérsele Invocación Especial. A esta carta debe hacérsele Invocación por Sacrificio ofreciendo como Sacrificio 3 monstruos Tipo Bestia Alada en tu lado del campo. Si esta carta ataca directamente a los Life Points de tu oponente y los hace 0, el controlador de esta carta gana el Match."
+ },
+ "5929": {
+  "desc": "A esta carta no puede hacérsele Invocación Especial. A esta carta debe hacérsele Invocación por Sacrificio ofreciendo como Sacrificio 3 monstruos Tipo Guerrero Bestia en tu lado del campo. Si esta carta ataca directamente a los Life Points de tu oponente y los hace 0, el controlador de esta carta gana el Match."
+ },
+ "5935": {
+  "name": "Zoma de Calavera"
+ },
+ "5943": {
+  "name": "Seis como Máximo"
+ },
+ "5944": {
+  "name": "Máquina Peligrosa Tipo 6"
+ },
+ "5949": {
+  "desc": "Un alma de luz cubierta de un brillo místico. Cuando veas su bella forma, tu sueño se hará realidad."
+ },
+ "5952": {
+  "name": "El Agente de la Sabiduría - Mercurio"
+ },
+ "5953": {
+  "desc": "Paga 500 Life Points para seleccionar 1 \"Bola Reluciente Mística\" de tu mano o de tu Deck, e Invócala mediante una Invocación Especial a tu Campo."
+ },
+ "5954": {
+  "desc": "Esta carta no es afectada por los efectos de Carta Mágica. Si \"El Santuario en el Cielo\" está boca arriba en tu Campo, y tus Life Points son mayores que los Life Points de tu adversario, aumenta el ATK y la DEF de esta carta en la diferencia entre tus Life Points y los de tu adversario."
+ },
+ "5968": {
+  "name": "Ejército de Pirañas"
+ },
+ "5969": {
+  "desc": "Cuando esta carta en Posición de Defensa es atacada y el ATK del monstruo atacante es menor que la DEF de esta carta, destruye el monstruo atacante después del cálculo de daño."
+ },
+ "5976": {
+  "desc": "Esta carta sólo puede ser Invocada mediante una Invocación Especial ofreciendo como Sacrificio 1 \"Guerrero de Zera\" boca arriba en tu Campo mientras \"El Santuario en el Cielo\" esté en el Campo. Descarta 1 Carta de Monstruo de LUZ de tu mano al Cementerio para destruir todos los monstruos en el Campo de tu adversario. Este efecto no se aplica a no ser que \"El Santuario en el Cielo\" esté boca arriba en tu Campo."
+ },
+ "5988": {
+  "desc": "Mientras \"El Santuario en el Cielo\" esté boca arriba en el Campo, descarta 1 Carta de Monstruo de LUZ de tu mano al Cementerio para activar esta carta. Selecciona 1 carta en el Campo controlada por tu adversario o 1 carta en la mano de tu adversario, y mándala al Cementerio."
+ },
+ "5993": {
+  "desc": "Descarta todas las cartas en tu mano al Cementerio, selecciona un número de monstruos de LUZ de tu Cementerio igual al número de cartas descartadas, y añádelos a tu mano."
+ },
+ "6003": {
+  "name": "Pulverizar el Escudo"
+ },
+ "6004": {
+  "name": "Diablillos Géminis"
+ },
+ "6005": {
+  "desc": "Durante tu Standby Phase, si esta carta está en el Cementerio y no tienes cartas en tu mano, puedes añadir esta carta a tu mano pagando 500 Life Points.",
+  "name": "Zombi Retornado"
+ },
+ "6006": {
+  "name": "Legado de Yata-Garatsu"
+ },
+ "6010": {
+  "desc": "Puede activarse cuando el monstruo de un oponente ataca. El propietario de esta carta selecciona el objetivo del atacante.",
+  "name": "Invitación de los Espíritus Terrestres"
+ },
+ "6018": {
+  "desc": "Un ángel desterrado. Nadie sabe en qué está pensando. A veces se enfada y es algo terrible."
+ },
+ "6019": {
+  "desc": "Tiene un alma tranquila, pero su destino es que un día su corazón será manchado por el mal..."
+ },
+ "6021": {
+  "desc": "Un escorpión enorme poseído por el alma de un demonio. Normalmente se reprime, pero tiene un potencial oculto."
+ },
+ "6025": {
+  "desc": "Mientras no haya cartas en la mano ni en la Zona de Cartas Mágicas y de Trampa del controlador de esta carta, aumenta el ATK de esta carta en 1500 puntos."
+ },
+ "6032": {
+  "name": "Lacooda de 3 Jorobas"
+ },
+ "6041": {
+  "name": "Momia Regeneradora"
+ },
+ "6042": {
+  "desc": "VOLTEO: Selecciona 1 monstruo en el Campo de tu adversario y destrúyelo. Cuando esta carta es mandada de tu mano al Cementerio, devuelve 1 Monstruo de Efecto de Volteo de tu Cementerio a tu mano."
+ },
+ "6059": {
+  "name": "Energía Milenaria"
+ },
+ "6064": {
+  "desc": "Sólo puedes activar esta carta durante el turno de tu adversario. Selecciona 1 monstruo boca arriba en el Campo de tu adversario. Durante tu próximo turno, cuando Invocas con éxito mediante una Invocación Normal un monstruo que sea 1 Nivel inferior al monstruo seleccionado, inflige daño a los Life Points de tu adversario igual al Nivel del monstruo seleccionado x 500 puntos."
+ },
+ "6071": {
+  "name": "Resurrección del Alma"
+ },
+ "6076": {
+  "name": "Gandora el Dragón de la Destrucción"
+ },
+ "6079": {
+  "desc": "Si esta carta boca arriba en tu Campo es retirada del juego, destruye \"Andro Esfinge\" y \"Esfinge Teleia\" en tu Campo y retíralas del juego."
+ },
+ "6082": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta no puede ser Invocada mediante una Invocación Especial excepto ofreciendo 1 \"Dragón de Ojos Azules Definitivo\" como Sacrificio de tu Campo. Aumenta el ATK de esta carta en 300 puntos por cada monstruo de Tipo Dragón en tu Cementerio. Puedes negar el efecto de Cartas Mágicas, de Trampa o Monstruos que designen esta carta."
+ },
+ "6084": {
+  "name": "Dragón de Metales Preciosos"
+ },
+ "6095": {
+  "desc": "Un perro perdido que se extravió hace 1000 años. Todavía está esperando que vuelva su amo."
+ },
+ "6109": {
+  "name": "Cría de Dragón Negro"
+ },
+ "6129": {
+  "name": "Factoría Oscura de Producción Masiva"
+ },
+ "6133": {
+  "desc": "Manda 1 monstruo boca arriba que tenga \"LV\" de tu Campo al Cementerio para activar esta carta. Invoca mediante una Invocación Especial de tu mano o Deck un monstruo que esté escrito en el nombre de la carta mandada al Cementerio, sin importar la condición de Invocación."
+ },
+ "6134": {
+  "desc": "Selecciona 1 \"Dragón Negro de Ojos Rojos\" boca arriba en tu Campo para activar esta carta. Inflige a los Life Points de tu adversario daño igual al ATK original del \"Dragón Negro de Ojos Rojos\" seleccionado. Durante el turno que usas esta carta, \"Dragón Negro de Ojos Rojos\" no puede atacar."
+ },
+ "6148": {
+  "desc": "Inflige daño a tu adversario igual al número de cartas en el Cementerio de tu adversario x 100 puntos."
+ },
+ "6149": {
+  "desc": "Descarta 1 carta de tu mano. Durante este turno, cualquier daño que recibas de tu adversario se convierte en 0."
+ },
+ "6150": {
+  "desc": "A esta carta puede hacérsele Invocación Especial desde tu mano descartando otra carta desde tu mano.",
+  "name": "El Difícil"
+ },
+ "6158": {
+  "desc": "Se activa enviando una carta \"El Difícil\" que está boca arriba en tu Campo al Cementerio. Cuando se activa esta carta, sólo a los monstruos que están en el campo de tu oponente se les hace Invocación Especial en Posición de Defensa como \"Fichas Tramposas\" (Tipo Lanzador de Conjuros/VIENTO/Nivel 5/ATK 2000/DEF 1200). Estas Fichas no pueden atacar.",
+  "name": "Conjuro Difícil 4"
+ },
+ "6160": {
+  "desc": "Sacrifica esta carta boca arriba para Invocar mediante una Invocación Especial en Posición de Defensa una cantidad de \"Fichas Bloqueadoras\" (Tipo Roca/TIERRA/Nivel 4/ATK 1000/DEF 1500) igual al número de turnos que esta carta haya estado boca arriba en tu Campo. Estas fichas no pueden declarar ataques."
+ },
+ "6163": {
+  "name": "Ficha Bloqueadora"
+ },
+ "6165": {
+  "desc": "Invocación Especial con el efecto de \"Conjuro Difícil 4\". Esta Ficha no puede declarar ataques.",
+  "name": "Ficha Difícil"
+ },
+ "6166": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta no puede ser Invocada mediante una Invocación Especial excepto por el efecto de \"Espadachín Silencioso LV5\". Mientras esta carta permanezca boca arriba en tu Campo, niega los efectos de todas las Cartas Mágicas en el Campo."
+ },
+ "6169": {
+  "name": "Magos, Uníos"
+ },
+ "6174": {
+  "desc": "Un coche de carga exclusivamente para Dekoichi. Puede transportar cualquier cosa, pero la mayoría de la mercancía llega rota."
+ },
+ "6199": {
+  "name": "B.E.S. Núcleo Grande"
+ },
+ "6212": {
+  "desc": "Descarta 1 carta de tu mano. Devuelve 1 monstruo en el Campo a la parte superior del Deck de su propietario."
+ },
+ "6218": {
+  "desc": "Selecciona 2 Cartas Mágicas y/o de Trampa Colocadas en el Campo para activar esta carta. Mientras esta carta permanezca boca arriba en el Campo, las Cartas Mágicas y/o de Trampa seleccionadas no pueden ser activadas."
+ },
+ "6231": {
+  "name": "Sello del Propietario"
+ },
+ "6233": {
+  "desc": "Un dragón legendario enviado por los dioses como su instrumento. Las leyendas dicen que si se le provoca, el mundo entero se hundiría bajo el mar."
+ },
+ "6269": {
+  "desc": "Cuando \"Gaia el Caballero Feroz\", \"Gaia el Campeón Dragón\" o \"Gaia el Caballero Feroz Rápido\" en tu Campo ataca un monstruo en Posición de Defensa, si el ATK de esas cartas es superior a la DEF del monstruo en Posición de Defensa, inflige la diferencia como daño de batalla a los Life Points de tu adversario. Si \"Gaia el Campeón Dragón\" inflige daño de batalla con este efecto, roba 2 cartas de tu Deck y descarta 1 carta de tu mano."
+ },
+ "6287": {
+  "name": "Maldición del Vampiro"
+ },
+ "6288": {
+  "name": "Ataque Unido"
+ },
+ "6289": {
+  "name": "Chupasangre"
+ },
+ "6291": {
+  "name": "Ojo Agobiante"
+ },
+ "6293": {
+  "name": "Génesis de Vampiro"
+ },
+ "6300": {
+  "desc": "Invocación Especial con el efecto de \"HÉROE del Destino - Double Dude\"."
+ },
+ "6302": {
+  "desc": "Si en tu lado del campo no hay monstruos cuando haces Invocación Normal a esta carta, puedes hacer Invocación Especial desde tu mano a un monstruo que incluya \"Maquinista\" en su nombre y que no sea \"Maquinaria Soldado\".",
+  "name": "Maquinaria Soldado"
+ },
+ "6303": {
+  "name": "Maquinaria Defensora"
+ },
+ "6304": {
+  "desc": "Mientras esta carta permanezca boca arriba en el campo, un monstruo que incluya \"Maquinista\" en su nombre, que no sea \"Maquinaria Francotiradora\", no puede ser atacado.",
+  "name": "Maquinaria Francotiradora"
+ },
+ "6307": {
+  "desc": "Envía uno de cada \"Maquinaria Soldado\", \"Maquinaria Francotiradora\", y \"Maquinaria Defensora\" desde tu lado del campo al Cementerio. Invocación Especial a 1 \"Fuerza de la Maquinaria\" desde tu mano o desde tu Deck."
+ },
+ "6308": {
+  "desc": "A esta carta no puede hacérsele Invocación Especial ni Colocación. A esta carta no puede hacérsele Invocación Especial excepto por el efecto de \"Comandante Covington\". Esta carta no puede atacar a menos que pagues 1000 Life Points. Enviando esta carta boca arriba al Cementerio, Invocación Especial a cada uno de \"Maquinaria Soldado\", \"Maquinaria Francotiradora\", y \"Maquinaria Defensora\" desde tu Cementerio.",
+  "name": "Fuerza de la Maquinaria"
+ },
+ "6310": {
+  "name": "HÉROE Elemental Avian"
+ },
+ "6311": {
+  "name": "HÉROE Elemental Burstinatrix"
+ },
+ "6312": {
+  "name": "HÉROE Elemental Clayman"
+ },
+ "6313": {
+  "name": "HÉROE Elemental Sparkman"
+ },
+ "6344": {
+  "desc": "\"HÉROE Elemental Avian\" + \"HÉROE Elemental Burstinatrix\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Cuando esta carta destruye un monstruo como resultado de una batalla y lo manda al Cementerio, inflige daño a los Life Points de tu adversario igual al ATK del monstruo destruido.",
+  "name": "HÉROE Elemental de la Llama Wingman"
+ },
+ "6345": {
+  "desc": "\"HÉROE Elemental Sparkman\" + \"HÉROE Elemental Clayman\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Descarta 1 carta de tu mano para seleccionar y destruir 1 monstruo boca arriba en el Campo con un ATK original inferior al ATK de esta carta. Sólo puedes usar este efecto una vez por turno, durante tu Main Phase.",
+  "name": "HÉROE Elemental del Trueno Gigante"
+ },
+ "6368": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Especial. Cuando esta carta es Invocada con éxito mediante una Invocación de Sacrificio, puedes retirar del juego hasta 5 monstruos de FUEGO de tu Cementerio. Destruye un número de Cartas Mágicas y de Trampa igual al número de cartas que retiraste del juego con este efecto."
+ },
+ "6374": {
+  "name": "Isaac, Caballero Divino"
+ },
+ "6376": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta no puede ser Invocada mediante una Invocación Especial excepto Sacrificando 1 \"Levia-Dragón - Dédalo\" en tu Campo. Envía \"Umi\" de tu Campo al Cementerio para enviar al Cementerio todas las cartas de la mano de ambos jugadores y del Campo, excepto esta carta."
+ },
+ "6383": {
+  "desc": "El más adorable y amistoso de todos los Vehicroid. ¡Puede armarse a sí mismo con ruedas de entrenamiento!"
+ },
+ "6393": {
+  "name": "HÉROE Elemental Bubbleman"
+ },
+ "6396": {
+  "name": "Dragón Ciber de Dos Cabezas"
+ },
+ "6397": {
+  "name": "Dragón Ciber Final"
+ },
+ "6400": {
+  "desc": "Esta carta no puede ser dada como un Sacrificio. Cuando a esta carta se le hace Invocación o Invocación de Volteo con éxito, aparece en el Campo en Posición de Defensa. Descartando una Carta Mágica desde tu mano puedes hacer Invocación Especial a una Carta de Monstruo de Nivel 4 desde tu Deck. La Carta de Monstruo a la que se le hizo Invocación Especial usando este efecto no puede atacar mientras dure el turno. Sólo puedes activar el efecto de esta carta una vez por turno, durante tu Main Phase.",
+  "name": "Monje Invocador"
+ },
+ "6405": {
+  "desc": "A esta carta no puede hacérsele Invocación Especial. Sólo puede ser Invocada dando como Sacrificios 3 Cartas de Monstruos en tu Campo. Mientras esta carta permanece en el Campo en posición boca arriba el ATK y la DEF de todas las otras Cartas de Monstruo en el Campo se reducen a la mitad.",
+  "name": "La Raizmuerta Malvada"
+ },
+ "6408": {
+  "desc": "Sólo puedes activar esta carta cuando haya un \"HÉROE Elemental Bubbleman\" boca arriba en el Campo. Cambia 1 \"HÉROE Elemental Bubbleman\" en Posición de Ataque boca arriba en tu Campo y 1 monstruo en Posición de Ataque boca arriba en el Campo de tu adversario a Posición de Defensa. Sacrifica el \"HÉROE Elemental Bubbleman\" cambiado a Posición de Defensa e Invoca mediante una Invocación Especial 1 monstruo de tu mano que incluya \"Héroe Elemental\" en su nombre."
+ },
+ "6409": {
+  "desc": "Sólo puedes equipar esta carta a \"HÉROE Elemental Sparkman\". Durante la Main Phase de tu turno, puedes cambiar la posición de batalla de 1 monstruo boca arriba. Después de usar este efecto 3 veces, destruye esta carta."
+ },
+ "6410": {
+  "desc": "A esta carta puede hacérsele Invocación Especial desde tu mano después que has cancelado los efectos de una carta controlada por tu oponente usando una Carta de Trampa de Contraefecto. Cuando a esta carta se le hace Invocación Especial con éxito de esta forma, se activan los siguientes efectos, dependiendo de las cartas cuyos efectos fueron cancelados originalmente.\n●Mágica: reduce en 1500 los Life Points de tu oponente.\n●Trampa: elige una carta en el campo de tu oponente y destrúyela.\n●Monstruo de Efecto: elige una carta desde tu Cementerio y hazle Invocación Especial a tu Campo.",
+  "name": "Van'Dalgyon el Señor de los Dragones Oscuros"
+ },
+ "6418": {
+  "name": "Fuerza de Ataque de Élite Goblin"
+ },
+ "6419": {
+  "desc": "Cuando Invocas mediante una Invocación Normal esta carta, ponle 3 contadores. Esta carta no es destruida como resultado de una batalla. Si esta carta lucha, retira 1 contador de esta carta al final del Damage Step. Si esta carta lucha sin un contador, destruye esta carta al final del Damage Step. Una vez por turno, durante tu Main Phase, puedes cambiar 1 monstruo en Posición de Ataque boca arriba en el Campo de tu adversario a Posición de Defensa boca arriba."
+ },
+ "6424": {
+  "desc": "Cuando esta carta es Invocada con éxito mediante una Invocación de Sacrificio, puedes Invocar mediante una Invocación Especial \"Des RANA\"/s de tu mano o Deck hasta el mismo número de \"T.A.D.P.O.L.E.\"/s en tu Cementerio.",
+  "name": "Des RANA"
+ },
+ "6426": {
+  "name": "RANA del Robo Tóxica"
+ },
+ "6435": {
+  "desc": "Sólo puedes activar esta carta cuando haya 3 \"Des RANA\" boca arriba en tu Campo. Destruye todas las cartas en el Campo de tu adversario."
+ },
+ "6450": {
+  "name": "La Selección"
+ },
+ "6454": {
+  "desc": "\"Escolta de la Reina\" + \"Escolta de la Sota\" + \"Escolta del Rey\"\nUna Invocación de Fusión de esta carta sólo se puede realizar con los Monstruos Material de Fusión nombrados arriba. Mientras esta carta permanece en el Campo en posición boca arriba, puedes cancelar el efecto de Carta Mágica, de Trampa y de Monstruos de Efecto descartando una carta del mismo tipo desde tu mano (puede descartarse cualquier Carta de Monstruo para cancelar el efecto de una Carta de Monstruo de Efecto). Este efecto sólo puede activarse una vez por turno.",
+  "name": "Bufón Escolta Arcano"
+ },
+ "6465": {
+  "name": "Cosechador de la Guadaña del Terror"
+ },
+ "6467": {
+  "desc": "\"HÉROE Elemental de la Llama Wingman\" + \"HÉROE Elemental Sparkman\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Aumenta el ATK de esta carta en 300 puntos por cada carta en tu Cementerio que incluya \"Héroe Elemental\" en su nombre. Cuando esta carta destruye un monstruo como resultado de una batalla y lo manda al Cementerio, inflige daño a los Life Points de tu adversario igual al ATK del monstruo destruido.",
+  "name": "HÉROE Elemental Shining Flare Wingman"
+ },
+ "6477": {
+  "name": "HÉROE Elemental Bladedge"
+ },
+ "6478": {
+  "name": "HÉROE Elemental Wildheart"
+ },
+ "6484": {
+  "desc": "\"VW-Tigre Catapulta\" + \"XYZ-Dragón Cañón\"\nEsta carta sólo puede ser Invocada mediante una Invocación Especial de tu Deck de Fusión retirando del juego las cartas nombradas arriba en tu Campo (No usas \"Polimerización\"). Una vez por turno, retira del juego 1 carta del Campo de tu adversario. Cuando esta carta ataca, puedes cambiar la posición de batalla del monstruo atacado. (Efectos de Volteo no se activan por esto.)",
+  "name": "VWXYZ-Dragón Catapulta Cañón"
+ },
+ "6486": {
+  "desc": "\"HÉROE Elemental Clayman\" + \"HÉROE Elemental Burstinatrix\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Mientras esta carta esté en Posición de Defensa boca arriba, esta carta puede atacar los Life Points de tu adversario directamente. En ese caso, aplica sólo la mitad del ATK de esta carta durante el cálculo de daño.",
+  "name": "HÉROE Elemental Rampart Blaster"
+ },
+ "6487": {
+  "desc": "\"HÉROE Elemental Avian\" + \"HÉROE Elemental Sparkman\" + \"HÉROE Elemental Bubbleman\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Manda 1 carta (exceptuando ésta) de tu Campo al Cementerio para seleccionar 1 monstruo en tu Campo. Mientras esta carta esté boca arriba en el Campo, el monstruo seleccionado no es destruido como resultado de una batalla. (El cálculo de daño se aplica normalmente.)",
+  "name": "HÉROE Elemental Tempest"
+ },
+ "6488": {
+  "desc": "\"HÉROE Elemental Wildheart\" + \"HÉROE Elemental Bladedge\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Esta carta puede atacar una vez a cada uno de los monstruos en el Campo de tu adversario.",
+  "name": "HÉROE Elemental Wildedge"
+ },
+ "6491": {
+  "desc": "Selecciona 1 \"HÉROE Elemental Avian\" boca arriba en tu Campo para activar esta carta. Este turno, la carta seleccionada puede atacar tantas veces como monstruos tengas en tu Campo cuando se resuelve esta carta. En ese caso, la carta seleccionada no puede atacar los Life Points de tu adversario directamente y tus otros monstruos no pueden atacar."
+ },
+ "6494": {
+  "desc": "Sólo puedes activar esta carta cuando un monstruo boca arriba en tu Campo es destruido y mandado al Cementerio. Destruye el monstruo boca arriba que tenga el ATK más bajo en el Campo, y ambos jugadores reciben daño igual a la mitad del ATK del monstruo."
+ },
+ "6496": {
+  "desc": "Sólo puedes activar esta carta si hay un \"HÉROE Elemental Avian\" boca arriba en tu Campo. Niega la activación de 1 Carta Mágica o de Trampa y destrúyela."
+ },
+ "6498": {
+  "desc": "Cuando Invocas mediante una Invocación Normal esta carta, ponle 3 contadores. Esta carta no es destruida como resultado de una batalla. Si esta carta lucha, retira 1 contador de esta carta al final del Damage Step. Si esta carta lucha sin un contador, destruye esta carta al final del Damage Step. Retira un contador de esta carta para destruir 1 Carta Mágica o de Trampa en el Campo. Puedes usar este efecto sólo una vez por turno."
+ },
+ "6514": {
+  "desc": "El controlador de esta carta no puede realizar Invocaciones Normales o Colocar cartas. Durante la End Phase del turno en el que un monstruo en tu Campo que incluya \"B.E.S.\" en su nombre o se llame \"B.E.S. Núcleo Grande\" sea destruido y mandado al Cementerio, puedes Invocar mediante una Invocación Especial de tu Deck 1 monstruo que incluya \"B.E.S.\" en su nombre o se llame \"B.E.S. Núcleo Grande\"."
+ },
+ "6517": {
+  "desc": "Sólo puedes activar esta carta pagando 1000 Life Points cuando tu adversario activa una Carta Mágica Normal. El efecto de esa carta se convierte en \"Tu adversario descarta 1 carta al azar de su mano\"."
+ },
+ "6527": {
+  "name": "HÉROE Elemental Necroshade"
+ },
+ "6529": {
+  "desc": "\"HÉROE Elemental Bubbleman\" + \"HÉROE Elemental Clayman\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión.",
+  "name": "HÉROE Elemental Mudballman"
+ },
+ "6533": {
+  "desc": "A esta carta no puede hacérsele Invocación Especial. A esta carta debe hacérsele Invocación por Sacrificio ofreciendo como Sacrificio 3 monstruos Tipo Demonio en tu lado del campo. Si esta carta ataca directamente a los Life Points de tu oponente y los hace 0, el controlador de esta carta gana el Match."
+ },
+ "6534": {
+  "desc": "A esta carta no puede hacérsele Invocación Especial. A esta carta debe hacérsele Invocación por Sacrificio ofreciendo como Sacrificio 3 monstruos Tipo Hada en tu lado del campo. Si esta carta ataca directamente a los Life Points de tu oponente y los hace 0, el controlador de esta carta gana el Match."
+ },
+ "6535": {
+  "desc": "\"HÉROE Elemental Burstinatrix\" + \"HÉROE Elemental Bubbleman\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Cuando esta carta destruye un monstruo como resultado de una batalla y lo manda al Cementerio, aumenta tus Life Points en la misma cantidad que el ATK del monstruo destruido.",
+  "name": "HÉROE Elemental Steam Healer"
+ },
+ "6536": {
+  "desc": "Sólo puedes activar esta carta si hay un \"HÉROE Elemental Burstinatrix\" boca arriba en tu Campo. Devuelve a las manos de sus respectivos propietarios todos los monstruos en el Campo que incluyan \"Héroe Elemental\" en su nombre, exceptuando a \"HÉROE Elemental Burstinatrix\"."
+ },
+ "6537": {
+  "desc": "Sólo puedes equipar esta carta a \"HÉROE Elemental Bubbleman\". Aumenta el ATK del monstruo equipado en 800 puntos. Si el monstruo equipado es destruido como resultado de una batalla, destruye esta carta en su lugar, y haz que el daño de batalla infligido al controlador del monstruo equipado sea 0."
+ },
+ "6538": {
+  "desc": "Sólo puedes activar esta carta si hay un \"HÉROE Elemental Bubbleman\" boca arriba en tu Campo. Durante este turno puedes activar 1 Carta de Trampa desde tu mano."
+ },
+ "6539": {
+  "desc": "Sólo puedes activar esta carta cuando un \"HÉROE Elemental Clayman\" en tu Campo es seleccionado como objetivo de un ataque (si está boca abajo, muéstrale la carta a tu adversario). Destruye el monstruo atacante y el \"HÉROE Elemental Clayman\" atacado para infligir 800 puntos de daño a los Life Points de tu adversario."
+ },
+ "6545": {
+  "name": "Draconiano de la Lanza"
+ },
+ "6546": {
+  "name": "Cuerpo de Niebla"
+ },
+ "6547": {
+  "name": "Draconiano del Hacha"
+ },
+ "6550": {
+  "desc": "Cuando a esta carta se le hace Invocación/Invocación Especial con éxito, puedes elegir hasta 5 Cartas Mágicas desde el Cementerio de tu oponente y retirarlas de la partida. Por cada carta retirada usando este efecto, el ATK de esta carta aumenta en 300 puntos.",
+  "name": "Dragón de Cuerno Blanco"
+ },
+ "6566": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Normal o Colocada. Esta carta no puede ser Invocada mediante una Invocación Especial excepto mandando a \"HÉROE Elemental Bubbleman\" en tu Campo y \"Metamorfosis\" en tu mano al Cementerio. El nombre de esta carta se considera \"HÉROE Elemental Bubbleman\" mientras está boca arriba en el Campo. Al final del Damage Step, destruye al monstruo que luche con esta carta.",
+  "name": "HÉROE Elemental Neo-Bubbleman"
+ },
+ "6568": {
+  "name": "Dragón Ciber Barrera"
+ },
+ "6569": {
+  "name": "Dragón Ciber Láser"
+ },
+ "6574": {
+  "desc": "Sólo puedes activar esta carta descartando 1 carta de tu mano mientras tengas un monstruo que incluya \"Mecanismo Antiguo\" en su nombre boca arriba en tu Campo. Selecciona 1 Carta Mágica de tu Deck y colócala en tu Campo. No puedes usar esa Carta Mágica este turno."
+ },
+ "6576": {
+  "desc": "Sólo puedes equipar esta carta a \"HÉROE Elemental Wildheart\". Aumenta el ATK del monstruo equipado en 500 puntos. Cuando el monstruo equipado es destruido por el efecto de una carta y mandado al Cementerio, destruye todas las Cartas Mágicas y de Trampa en el Campo. Inflige 100 puntos de daño a los Life Points de tu adversario por cada Carta Mágica o de Trampa destruida por este efecto."
+ },
+ "6577": {
+  "desc": "Sacrifica 2 \"Ciber Dragón\" en tu Campo para activar esta carta. Invoca mediante una Invocación Especial 1 \"Dragón Ciber Láser\" de tu mano, Deck o Cementerio."
+ },
+ "6581": {
+  "desc": "Sacrifica 1 \"Ciber Dragón\" en tu Campo para activar esta carta. Invoca mediante una Invocación Especial 1 \"Dragón Ciber Barrera\" de tu mano o Deck."
+ },
+ "6586": {
+  "name": "Ficha de Mártir Fantasmal"
+ },
+ "6598": {
+  "desc": "Si es Invocada mediante una Invocación Normal o una Invocación de Volteo, esta carta es cambiada a Posición de Defensa. Mientras esta carta está boca arriba en el Campo, niega los efectos de todas las Cartas Mágicas Continuas y las Cartas de Trampa Continuas."
+ },
+ "6603": {
+  "desc": "Si esta carta está en tu Cementerio durante tu Standby Phase y no hay Cartas Mágicas o de Trampa en tu Campo, puedes Invocarla mediante una Invocación Especial a tu Campo. Este efecto no puede ser activado si hay una \"RANA Arbórea\" boca arriba en tu Campo.",
+  "name": "RANA Arbórea"
+ },
+ "6604": {
+  "name": "RANA Beelze"
+ },
+ "6608": {
+  "desc": "Mientras esta carta está boca arriba en el Campo, durante la Standby Phase de tu adversario, manda un número de cartas de la parte superior del Deck de tu adversario a su Cementerio igual al número de cartas \"Malicia en Alza\" en tu Cementerio."
+ },
+ "6613": {
+  "name": "Demise, Rey del Armagedón"
+ },
+ "6614": {
+  "desc": "\"Des RANA\" + \"Des RANA\" + \"Des RANA\"\nUna Invocación de Fusión de esta carta sólo se puede realizar con los Monstruos Material de Fusión nombrados arriba. Aumenta el ATK de esta carta en 500 puntos por cada \"RANA Arbórea\" en tu Cementerio.",
+  "name": "RANA D.3.S."
+ },
+ "6617": {
+  "desc": "Esta carta puede ser utilizada para Invocar mediante una Invocación de Ritual a \"Ruina, Reina del Olvido\" o a \"Demise, Rey del Armagedón\". Debes también Sacrificar monstruos de tu Campo o mano cuya suma de niveles totales sea igual al Nivel del Monstruo de Ritual que estás intentando Invocar mediante esta Invocación de Ritual."
+ },
+ "6636": {
+  "desc": "Puedes añadir un \"Kuriboh\" o \"Kuriboh Alado\" a tu mano o hacerles Invocación Especial a tu Campo desde tu Deck."
+ },
+ "6638": {
+  "desc": "Invocación Especial con el efecto de \"Diente de León\". Esta Ficha no puede ser usada como Sacrificio para una Invocación por Sacrificio durante el turno en el que se la hace Invocación Especial.",
+  "name": "Ficha Pelusa"
+ },
+ "6639": {
+  "desc": "\"HÉROE Elemental Avian\" + \"HÉROE Elemental Burstinatrix\" + \"HÉROE Elemental Clayman\" + \"HÉROE Elemental Bubbleman\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. El atributo de esta carta también se trata como VIENTO, AGUA, FUEGO y TIERRA. Cuando a esta carta se le hace Invocación de Fusión con éxito, todas las cartas que han sido retiradas de la partida son devueltas al Deck de su propietario y el Deck es barajado. Por cada Carta de Monstruo con el mismo atributo que esta carta en el campo de tu oponente, el ATK de esta carta aumenta en 300 puntos.",
+  "name": "HÉROE Elemental Electrum"
+ },
+ "6643": {
+  "desc": "\"HÉROE Elemental Wildheart\" + \"HÉROE Elemental Avian\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Descarta 1 carta de tu mano para destruir 1 Carta Mágica o de Trampa en el Campo.",
+  "name": "HÉROE Elemental Wild Wingman"
+ },
+ "6644": {
+  "desc": "\"HÉROE Elemental Wildheart\" + \"HÉROE Elemental Necroshade\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Cuando esta carta es Invocada mediante una Invocación Especial, destruye 1 monstruo en el Campo de tu adversario. Luego selecciona 1 monstruo del Cementerio de tu adversario e Invócalo mediante una Invocación Especial al Campo de tu adversario.",
+  "name": "HÉROE Elemental Necroid Shaman"
+ },
+ "6646": {
+  "desc": "El ATK y la DEF de esta carta se convierten en el número de monstruos que hayan sido retirados del juego x 100 puntos."
+ },
+ "6647": {
+  "desc": "Esta carta puede ser Invocada mediante una Invocación Especial Sacrificando 1 \"Helios - El Sol Primordial\" en tu Campo. El ATK y la DEF de esta carta se convierten en el número de monstruos que hayan sido retirados del juego x 200 puntos. Si esta carta es destruida como resultado de una batalla y mandada al Cementerio, esta carta es Invocada mediante una Invocación Especial durante la End Phase, aumentando su ATK y DEF en 300 puntos.",
+  "name": "Helios Dúo Megistus"
+ },
+ "6648": {
+  "desc": "A esta carta puede hacérsele Invocación por Sacrificio dando una carta \"Helios Dúo Megistus\" desde tu Campo como un Sacrificio. El ATK y la DEF de esta carta son iguales al total de la cantidad de Cartas de Monstruos que han sido retiradas de la partida x 200. Si esta carta es destruida en batalla y enviada al Cementerio, se le hace automáticamente Invocación Especial en la End Phase y su ATK/DEF aumenta en 500 puntos. Si tu oponente tiene Cartas de Monstruos en el Campo en este momento, esta carta puede atacarlas una vez más."
+ },
+ "6653": {
+  "name": "HÉROE Elemental Neos"
+ },
+ "6654": {
+  "name": "Diente de León"
+ },
+ "6655": {
+  "desc": "\"HÉROE Elemental Avian\" + \"HÉROE Elemental Burstinatrix\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Esta carta no puede ser destruida como resultado de una batalla.",
+  "name": "HÉROE Elemental Phoenix Enforcer"
+ },
+ "6656": {
+  "desc": "\"HÉROE Elemental Phoenix Enforcer\" + \"HÉROE Elemental Sparkman\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Aumenta el ATK de esta carta en 300 puntos por cada carta en tu Cementerio que incluya \"Héroe Elemental\" en su nombre. Esta carta no puede ser destruida como resultado de una batalla.",
+  "name": "HÉROE Elemental Phoenix Enforcer Brillante"
+ },
+ "6657": {
+  "desc": "\"HÉROE Elemental Bubbleman\" + \"HÉROE Elemental Avian\"\nEste monstruo no puede ser Invocado mediante una Invocación Especial excepto mediante una Invocación de Fusión. Si tienes cartas boca abajo en tu Zona de Cartas Mágicas y de Trampa, esta carta puede atacar los Life Points de tu adversario directamente.",
+  "name": "HÉROE Elemental Mariner"
+ },
+ "6658": {
+  "name": "HÉROE del Destino - Doom Lord"
+ },
+ "6659": {
+  "name": "HÉROE del Destino - Captain Tenacious"
+ },
+ "6660": {
+  "name": "HÉROE del Destino - Diamond Dude"
+ },
+ "6661": {
+  "name": "HÉROE del Destino - Dreadmaster"
+ },
+ "6666": {
+  "desc": "Cuando esta carta es Invocada mediante una Invocación de Sacrificio, destruye todas las Cartas Mágicas boca arriba en el Campo."
+ },
+ "6668": {
+  "desc": "Pon 1 Contador de Reloj en esta carta durante cada una de las Standby Phases de tu adversario. Mientras haya 4 o más Contadores de Reloj en esta carta, el controlador de esta carta no recibe daño de batalla. Cuando esta carta con 4 o más Contadores de Reloj es destruida y mandada al Cementerio, Invoca mediante una Invocación Especial 1 \"HÉROE del Destino - Dreadmaster\" de tu mano o Deck."
+ },
+ "6675": {
+  "desc": "Retira del juego estas cartas en tu Cementerio para activar esta carta: \"H- Corazón Ardiente\", \"E- Llamada de Emergencia\", \"R- Justicia Honesta\", \"O- Sobrealma\". Invoca mediante una Invocación Especial 1 Monstruo Normal de tu Deck que incluya \"Héroe Elemental\" en su nombre. Este turno, los Monstruos Normales en tu Campo que incluyan \"Héroe Elemental\" en su nombre pueden atacar los Life Points de tu adversario directamente.",
+  "name": "Flash Hero!!"
+ },
+ "6684": {
+  "desc": "Cuando esta carta destruye a un monstruo de tu adversario como resultado de una batalla, selecciona y activa 1 de los siguientes efectos:\n●Aumenta el ATK de esta carta en 400 puntos.\n●Destruye 1 Carta Mágica o de Trampa boca arriba en el Campo.\n●Invoca mediante una Invocación Especial 1 \"Ficha de Opción\" a tu Campo. Tiene el mismo Tipo, Atributo, Nivel, ATK y DEF que esta carta."
+ },
+ "6685": {
+  "desc": "Si Invocas esta carta mediante una Invocación de Sacrificio Sacrificando 1 de los siguientes monstruos, esta carta obtiene el efecto correspondiente:\n●Hombre Pila D: Niega los efectos de cualquier Carta Mágica o de Trampa que designe a esta 1 carta como objetivo.\n●Hombre Pila C: Durante una batalla en la que esta carta esté atacando a un monstruo en Posición de Defensa cuya DEF sea inferior al ATK de esta carta, inflige la diferencia como daño de batalla a los Life Points de tu adversario.\n● Hombre Pila AA: Aumenta el ATK de esta carta en 1000 puntos."
+ },
+ "6686": {
+  "desc": "Esta carta acumula efectos de acuerdo a la cantidad de monstruos en tu Campo que incluyan \"Arpía\" en su nombre (exceptuando \"Dragón Bebé, Mascota de la Arpía\" y \"Explorador del Cielo\"). Por lo menos uno: Mientras esta carta esté boca arriba en el Campo, tu adversario no puede seleccionar monstruos de tu Campo como objetivos de ataques si éstos incluyen \"Arpía\" en su nombre (exceptuando a \"Dragón Bebé, Mascota de la Arpía\" y \"Explorador del Cielo\"). Por lo menos dos: Duplica el ATK y la DEF originales de esta carta. Por lo menos tres: Una vez por turno puedes destruir 1 carta en el Campo de tu adversario."
+ },
+ "6720": {
+  "desc": "Esta carta no puede ser Invocada mediante una Invocación Especial. Si la Invocas mediante una Invocación de Sacrificio, los monstruos Sacrificados deben ser de VIENTO. Mientras esta carta esté boca arriba en el Campo, ambos jugadores reciben 1000 puntos de daño durante la End Phase de cada jugador. Disminuye en 500 puntos el daño que cada jugador recibe por cada Carta Mágica o de Trampa que ese jugador controle."
+ },
+ "6752": {
+  "name": "HÉROE del Destino - Blade Master"
+ },
+ "6753": {
+  "name": "HÉROE del Destino - Dasher"
+ },
+ "6754": {
+  "name": "HÉROE del Destino - Double Dude"
+ },
+ "6755": {
+  "name": "HÉROE del Destino - Defender"
+ },
+ "6756": {
+  "name": "HÉROE del Destino - Fear Monger"
+ },
+ "6757": {
+  "name": "HÉROE del Destino - Dogma"
+ },
+ "6765": {
+  "desc": "\"HÉROE Elemental Neos\" + \"Pantera Oscura Neo Espacial\"\nEsta carta sólo puede ser Invocada mediante una Invocación Especial de tu Deck de Fusión devolviendo de tu Campo al Deck las cartas nombradas arriba (no usas \"Polimerización\"). Puedes seleccionar 1 Monstruo de Efecto en el Campo si es que ya no tienes uno seleccionado por esta carta. Mientras esta carta esté boca arriba en tu Campo, el efecto del monstruo seleccionado es negado hasta que sea retirado del Campo (Sólo puedes seleccionar hasta 1 monstruo en cada momento con este efecto). Esta carta vuelve al Deck de Fusión durante la End Phase.",
+  "name": "HÉROE Elemental Dark Neos"
+ },
+ "6766": {
+  "desc": "\"HÉROE Elemental Neos\" + \"Delfín Aqua Neo Espacial\"\r\nEsta carta sólo puede ser Invocada mediante una Invocación Especial de tu Deck de Fusión devolviendo de tu Campo al Deck las cartas nombradas arriba (no usas \"Polimerización\"). Descarta una carta de tu mano para seleccionar una carta al azar de la mano de tu adversario y destruirla. Sólo puedes usar este efecto una vez por turno. Esta carta vuelve al Deck de Fusión durante la End Phase.",
+  "name": "HÉROE Elemental Aqua Neos"
+ },
+ "6767": {
+  "desc": "\"HÉROE Elemental Neos\" + \"Escarabajo Brillante Neo Espacial\"\nEsta carta sólo puede ser Invocada mediante una Invocación Especial de tu Deck de Fusión devolviendo de tu Campo al Deck las cartas nombradas arriba (no usas \"Polimerización\"). Aumenta el ATK de esta carta en 400 puntos por cada Carta Mágica y de Trampa en el Campo. Esta carta vuelve al Deck de Fusión durante la End Phase.",
+  "name": "HÉROE Elemental Flare Neos"
+ },
+ "6775": {
+  "desc": "Aumenta en 500 puntos el ATK de \"HÉROE Elemental Neos\" y de todos los Monstruos de Fusión que nombren a \"HÉROE Elemental Neos\" como Monstruo Material de Fusión. Los Monstruos Material de Fusión que nombren a \"HÉROE Elemental Neos\" como uno de sus Monstruos Material de Fusión no tienen que activar los efectos que los devuelven al Deck de Fusión durante la End Phase."
+ },
+ "6781": {
+  "desc": "Cuando esta carta boca abajo es destruida y mandada al Cementerio por el efecto de una Carta Mágica o de Trampa controlada por tu adversario, selecciona 1 Carta Mágica de Juego Rápido de tu Deck, y colócala en tu Campo después de mostrársela a tu adversario."
+ },
+ "6815": {
+  "desc": "Esta carta puede ser tratada como una Carta Mágica y Colocarse en tu Zona de Cartas Mágicas y de Trampa. Cuando esta carta es destruida y enviada al Cementerio por el efecto de la carta de tu oponente mientras esta carta estaba colocada en tu Zona de Cartas Mágicas y de Trampa, Invocación Especial a esta carta desde tu lado del campo durante la End Phase de este turno. También, cuando a esta carta se le hace Invocación de Volteo con éxito, destruye un número de Cartas Mágicas o de Trampa en el campo, iguales al número de cartas \"Mago de Juguete\" boca arriba en el campo."
+ },
+ "6825": {
+  "desc": "Sólo puedes activar esta carta cuando un monstruo de Tipo Dinosaurio en tu Campo es destruido y mandado al Cementerio. Selecciona 3 de las Zonas de Cartas Mágicas y de Trampa de tu adversario. No puedes seleccionar una Zona si ya tiene una carta. Las Zonas seleccionadas no pueden ser utilizadas. Destruye esta carta durante tu 3ª Standby Phase luego de ser activada. Luego puedes devolver 1 monstruo de Tipo Dinosaurio de tu Cementerio a tu mano."
+ },
+ "6955": {
+  "desc": "Durante una batalla entre esta carta atacante y un monstruo en Posición de Defensa cuya DEF es más baja que el ATK de esta carta, inflige la diferencia como daño de batalla a tu adversario."
+ },
+ "6957": {
+  "desc": "Puedes hacer una Invocación de Sacrificio para esta carta con 1 Sacrificio si ofreces a \"Gazelle el Rey de las Bestias Míticas\" o un monstruo \"Bestia Fantasma\" como Sacrificio. Cuando esta carta destruye un monstruo como resultado de una batalla, inflige 500 puntos de daño en los Life Points de tu oponente. Cuando esta carta sea destruida y mandada al Cementerio por el efecto de una carta controlada por tu oponente, inflige 2000 puntos de daño en los Life Points de tu oponente.",
+  "name": "Bestia Fantasma Rock-Lizard"
+ }
+}

@@ -1,0 +1,308 @@
+{
+ "esatte": {
+  "Not you too, 《C003_3》.": "Anche tu no, 《C003_3》.",
+  "Huh? E tu chi sei?⏎Oh sei il nuovo arrivato..": "Eh? E tu chi sei?⏎Oh, sei il nuovo arrivato...",
+  "L'Imperatore 《C007_4》abbia⏎un fratello minore e che si": "Si dice che l'Imperatore 《C007_4》⏎abbia un fratello minore e che si",
+  "E tu che vuoi?⏎Vuoi farti un Duello, Huh?.": "E tu che vuoi?⏎Vuoi farti un Duello, eh?",
+  "Ecco, usa questo!": "Ecco, usa questo vestito da cameriera!",
+  "Oddio, sto sbavando un po'...": "Beh, non sono poi così bravo..."
+ },
+ "parti": [
+  [
+   "inslutarmi",
+   "insultarmi"
+  ],
+  [
+   "Uh. Gran folla.",
+   "Uh. Che folla."
+  ],
+  [
+   "Huh?",
+   "Eh?"
+  ],
+  [
+   "Um...",
+   "Ehm..."
+  ],
+  [
+   "Um, ",
+   "Ehm, "
+  ],
+  [
+   "Heh? Perché?",
+   "Eh? Perché?"
+  ],
+  [
+   "Whoa! Tu sei",
+   "Oh! Tu sei"
+  ],
+  [
+   "Wow, Ho vinto",
+   "Wow, ho vinto"
+  ],
+  [
+   "un po’",
+   "un po'"
+  ],
+  [
+   "Uh...Umm...",
+   "Ehm..."
+  ],
+  [
+   "Umm-mmm!",
+   "Mmm-mmm!"
+  ],
+  [
+   "Umm",
+   "Ehm"
+  ],
+  [
+   "umm",
+   "ehm"
+  ],
+  [
+   "Chancelliere",
+   "Cancelliere"
+  ],
+  [
+   "’",
+   "'"
+  ],
+  [
+   "Eek!",
+   "Aah!"
+  ],
+  [
+   "Ouch!",
+   "Ahi!"
+  ],
+  [
+   "Duel...",
+   "Duello..."
+  ],
+  [
+   "Yaaaaawn",
+   "Uaaah"
+  ],
+  [
+   "Yaaawn",
+   "Uaaah"
+  ],
+  [
+   "Yawn...",
+   "Uaaah..."
+  ],
+  [
+   "Uaaah...  ",
+   "Uaaah..."
+  ],
+  [
+   "  ",
+   " "
+  ],
+  [
+   "Yawn!",
+   "Uaaah!"
+  ],
+  [
+   "Whoa,",
+   "Oh,"
+  ],
+  [
+   "finiti a Slifer Rosso",
+   "finiti allo Slifer Rosso"
+  ],
+  [
+   "Ooops!",
+   "Ops!"
+  ],
+  [
+   "Oops",
+   "Ops"
+  ],
+  [
+   " Sandwich di bistecca...",
+   "Sandwich di bistecca..."
+  ],
+  [
+   "huh?",
+   "eh?"
+  ],
+  [
+   "MI stai sfidando",
+   "Mi stai sfidando"
+  ],
+  [
+   "rossa..",
+   "rossa..."
+  ],
+  [
+   "Er... ",
+   "Ehm... "
+  ],
+  [
+   "Ughh..",
+   "Ughh..."
+  ],
+  [
+   "Hey,",
+   "Ehi,"
+  ],
+  [
+   "di Slifer Rosso",
+   "dello Slifer Rosso"
+  ],
+  [
+   "il mio deck",
+   "il mio Deck"
+  ],
+  [
+   "i panino",
+   "i panini"
+  ],
+  [
+   "Err...",
+   "Ehm..."
+  ],
+  [
+   "er... ",
+   "ehm... "
+  ],
+  [
+   "Uhm....",
+   "Uhm..."
+  ],
+  [
+   "chiaccherare",
+   "chiacchierare"
+  ],
+  [
+   "Odia I gatti",
+   "Odia i gatti"
+  ],
+  [
+   "vuoi farti Duello",
+   "vuoi farti un Duello"
+  ],
+  [
+   "Whoaaa!!",
+   "Oh!!"
+  ],
+  [
+   "Whoa!",
+   "Oh!"
+  ],
+  [
+   "Hey!",
+   "Ehi!"
+  ],
+  [
+   "Oh, hey,",
+   "Oh, ehi,"
+  ],
+  [
+   "Sei Attributi Deck Masters",
+   "Sei Deck Master degli Attributi"
+  ],
+  [
+   "Uups",
+   "Ops"
+  ],
+  [
+   "di Ra Giallo",
+   "del Ra Giallo"
+  ],
+  [
+   "Whoopee!",
+   "Evviva!"
+  ],
+  [
+   "Boo hoo!",
+   "Buu huu!"
+  ],
+  [
+   "WoW!",
+   "Wow!"
+  ],
+  [
+   "Duello tag",
+   "Tag Duel"
+  ],
+  [
+   "*sob*",
+   "*snif*"
+  ],
+  [
+   "cosi' in gamba",
+   "così in gamba"
+  ],
+  [
+   "Ooops",
+   "Ops"
+  ],
+  [
+   "interessato in Duelli",
+   "interessato ai Duelli"
+  ],
+  [
+   "Huh...?",
+   "Eh...?"
+  ],
+  [
+   "Huh,",
+   "Eh,"
+  ],
+  [
+   "Huh!",
+   "Eh!"
+  ],
+  [
+   "Okay",
+   "Ok"
+  ],
+  [
+   "Yay",
+   "Evviva"
+  ],
+  [
+   "Yo, ",
+   "Ehi, "
+  ],
+  [
+   "Yo!",
+   "Ehi!"
+  ],
+  [
+   "Sigh...",
+   "Uff..."
+  ],
+  [
+   "Ahem",
+   "Ehm"
+  ],
+  [
+   "Erm!",
+   "Ehm!"
+  ],
+  [
+   "Whoa...!",
+   "Oh...!"
+  ],
+  [
+   "Yeah!",
+   "Sì!"
+  ],
+  [
+   "diamine... ?!",
+   "diamine...?!"
+  ],
+  [
+   "Cancelliere",
+   "Preside"
+  ],
+  [
+   "cancelliere",
+   "preside"
+  ]
+ ]
+}

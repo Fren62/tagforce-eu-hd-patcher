@@ -1,6 +1,6 @@
 # Yu-Gi-Oh! GX Tag Force 1 — European HD & text-fix patcher
 
-*[Leggi in italiano](README.it.md)*
+[English](README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md)
 
 A free, open-source patcher for **Yu-Gi-Oh! GX Tag Force** (PSP), European version **ULES00600 v1.01**.
 Starting from *your own* ISO it produces a copy in the language you choose (**English, French, German, Spanish, Italian**) with:
@@ -19,9 +19,11 @@ Starting from *your own* ISO it produces a copy in the language you choose (**En
 
 This repository **does not contain** the game or any data extracted from it: the patches (`.tfp`) hold only binary differences from the original files.
 
-## How to use (Windows, command line)
+## How to use (command line)
 
-Download from the [Releases](../../releases) page: `tfpatch.exe` and the patch for your language (`patch_en.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp` or `patch_it.tfp`).
+Download from the [Releases](../../releases) page: `tfpatch.exe` (Windows) or `tfpatch-linux-x86_64` (Linux; run `chmod +x tfpatch-linux-x86_64` first), and the patch for your language (`patch_en.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp` or `patch_it.tfp`).
+
+The commands below use `tfpatch`; on Linux type `./tfpatch-linux-x86_64` instead.
 
 1. Patch the ISO (your original is never modified):
 

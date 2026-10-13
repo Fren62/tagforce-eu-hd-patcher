@@ -1,58 +1,76 @@
-# Yu-Gi-Oh! GX Tag Force 1 — Patcher europeo (HD + testi corretti)
+# Yu-Gi-Oh! GX Tag Force 1 — European HD & text-fix patcher
 
-Patcher gratuito e open source per **Yu-Gi-Oh! GX Tag Force** (PSP) nella versione europea **ULES00600 v1.01**.
-Partendo dalla *tua* ISO, produce una copia con la lingua scelta (**italiano, francese, tedesco, spagnolo, inglese**) con:
+*[Leggi in italiano](README.it.md)*
 
-- **testi corretti**: nomi e descrizioni delle carte, dialoghi, frasi dei duelli, stringhe dell'interfaccia (refusi, accenti, spazi, residui di altre lingue);
-- **texture HD** per PPSSPP: carte grandi e piccole con testo ridisegnato nella lingua, scritte dell'interfaccia, banner del titolo;
-- **niente selettore lingua**: la schermata di scelta all'avvio e la voce "Parametri lingua" del menu principale sono rimosse (la lingua è fissa), perché sarebbero inutili;
-- una sola lingua nella ISO: le voci delle altre lingue puntano ai dati della lingua scelta, quindi il gioco resta in quella lingua qualunque sia la lingua di sistema del PSP.
+A free, open-source patcher for **Yu-Gi-Oh! GX Tag Force** (PSP), European version **ULES00600 v1.01**.
+Starting from *your own* ISO it produces a copy in the language you choose (**English, French, German, Spanish, Italian**) with:
 
-> **Stato: lavori in corso.** La patch della ISO funziona per tutte e cinque le lingue (verificata file per file); mancano ancora il download dei moduli texture, l'interfaccia grafica e le prove complete in PPSSPP per fr/de/es/en.
+- **corrected texts**: card names and descriptions, dialogues, in-duel lines and interface strings (typos, accents, spacing, leftovers from other languages);
+- **HD textures** for PPSSPP: large and small cards with the text redrawn in your language, interface texts, title banner;
+- **no language selector**: the language screen at first boot and the "Language Settings" entry of the main menu are removed (the language is fixed), since they would be pointless;
+- **a single language in the ISO**: the other languages are dropped, so the ISO is smaller (about 610 MB instead of 835 MB) and the game stays in the chosen language whatever the PSP system language is.
 
-## Cosa serve
+> **Status: early release (v0.1.0).** All five ISO patches are verified file by file. Played in PPSSPP so far: Italian and French (boot, title, main menu). English, German and Spanish still need a full playthrough check. There is no GUI yet, only a command-line tool.
 
-- La tua ISO **ULES00600 v1.01** (europea). MD5 della ISO completa: `719c99478032a4210ae877832061e9fd` (redump.org). Sono accettate anche le copie senza i 2 KB finali di zeri.
-- [PPSSPP](https://www.ppsspp.org/) con "Sostituisci texture" attivo.
+## What you need
 
-Il repository **non contiene** il gioco né dati estratti dal gioco: le patch (`.tfp`) contengono solo differenze binarie rispetto ai file originali.
+- Your own **ULES00600 v1.01** (European) ISO. MD5 of the complete dump: `719c99478032a4210ae877832061e9fd` ([redump.org](http://redump.org/)). Copies missing the final 2 KB of zeros are accepted too.
+- [PPSSPP](https://www.ppsspp.org/) with **Replace textures** enabled; rendering resolution 4x is recommended.
 
-## Uso (riga di comando)
+This repository **does not contain** the game or any data extracted from it: the patches (`.tfp`) hold only binary differences from the original files.
 
-```
-tfpatch --iso ULES00600.iso --patch patch_it.tfp --out ULES00600_it.iso
-```
+## How to use (Windows, command line)
 
-Texture HD (scarica `base.zip` + il modulo della lingua, ne verifica l'SHA-256 e compone `textures.zip`):
+Download from the [Releases](../../releases) page: `tfpatch.exe` and the patch for your language (`patch_en.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp` or `patch_it.tfp`).
 
-```
-tfpatch textures --lang it --out PSP/TEXTURES/ULES00600/textures.zip
-```
+1. Patch the ISO (your original is never modified):
 
-Le patch (`patch_it.tfp`, …) e i moduli texture (`base.zip`, `<lingua>.zip`, `manifest.json`) sono allegati delle [Release](../../releases). Con `--source CARTELLA` si usano file già scaricati.
+   ```
+   tfpatch iso --iso ULES00600.iso --patch patch_en.tfp --out ULES00600_en.iso
+   ```
 
-## Come funziona
+2. Build the HD texture pack. This downloads `base.zip` and your language module from the Releases, checks their SHA-256 and merges them into a single `textures.zip`:
 
-1. `patcher/strumenti/crea_patch.py` confronta la ISO originale con la ISO finale di una lingua e scrive un pacchetto `.tfp` (zip con `patch.json` e differenze bsdiff).
-2. `patcher/tfpatch` (Rust) controlla l'MD5, copia la ISO, applica le differenze riscrivendo la ISO in forma compatta: stessa intestazione e directory, poi solo i dati ancora usati (le altre lingue restano fuori, circa 610 MB invece di 835).
-3. `patcher/strumenti/verifica_iso.py` confronta due ISO file per file; `costruisci_patch.sh LINGUA...` rifà l'intera catena e verifica.
+   ```
+   tfpatch textures --lang en --out textures.zip
+   ```
 
-I testi e le regole editoriali stanno in `strumenti/` (`correzioni/`, `dati/`); `GUIDA_NUOVA_LINGUA.md`, `REGISTRO_SCELTE.md` e `MODIFICHE_<LINGUA>.md` documentano metodo e scelte.
+3. Copy `textures.zip` to `<PPSSPP data folder>/PSP/TEXTURES/ULES00600/textures.zip` (the same path works on Android; do not unzip it). To extract into a folder instead, pass a folder to `--out`. Use `--source FOLDER` to read files you already downloaded.
 
-## Compilare
+4. In PPSSPP: Settings → Graphics → enable **Replace textures**, then play `ULES00600_en.iso`.
+
+`--lang` / patch codes: `en`, `fr`, `de`, `es`, `it`.
+
+## Known limits
+
+- A save file created in a different language than the patch is not re-aligned to it.
+- Only the PPSSPP emulator is supported (the patch replaces a game module in the ISO and the textures are PPSSPP replacement textures).
+- Texture modules are about 1 GB per language (`base.zip` 1.4 GB, shared by all languages; the English module is small).
+
+## How it works
+
+1. `patcher/strumenti/crea_patch.py` compares the original ISO with the final ISO of a language and writes a `.tfp` package (a zip with `patch.json` and bsdiff deltas).
+2. `patcher/tfpatch` (Rust) checks the MD5, applies the deltas and rewrites the ISO in compact form: same header and directories, then only the data still in use (the other languages are left out).
+3. `patcher/strumenti/salta_lingua.py` patches `libtitle.prx` to remove the language screen and menu entry and to set the fixed language.
+4. `patcher/strumenti/crea_moduli.py` builds `base.zip`, one `<lang>.zip` per language and `manifest.json` (SHA-256).
+5. `patcher/strumenti/verifica_iso.py` and `verifica_texture.py` check the results; `costruisci_patch.sh LANG...` rebuilds and verifies the whole chain.
+
+Texts, editorial rules and corrections live in `strumenti/` (`correzioni/`, `dati/`). `GUIDA_NUOVA_LINGUA.md`, `REGISTRO_SCELTE.md` and `MODIFICHE_<LANGUAGE>.md` document the method and the choices (in Italian).
+
+## Building from source
 
 ```
 cd patcher/tfpatch && cargo build --release
 ```
 
-## Crediti
+## Credits
 
-- **MikeyMK** — *Yu-Gi-Oh! GX Tag Force 1 HD Remastered* (base delle texture HD, versione USA).
-- **chrisfand** — carte HD.
-- Font liberi (OFL): XCharter, Libre Baskerville, Newsreader, Alegreya e altri in `strumenti/font_alternativi`.
+- **MikeyMK** — *Yu-Gi-Oh! GX Tag Force 1 HD Remastered* (base of the HD textures, US version).
+- **chrisfand** — HD cards.
+- Free fonts (OFL): XCharter, Libre Baskerville, Newsreader, Alegreya and others, downloaded by `strumenti/font_alternativi/scarica_font.sh`.
 
-Progetto non ufficiale, senza scopo di lucro, non affiliato a Konami. *Yu-Gi-Oh!* è un marchio di Konami.
+Unofficial, non-profit fan project, not affiliated with Konami. *Yu-Gi-Oh!* is a trademark of Konami.
 
-## Licenza
+## License
 
-Il codice è rilasciato con licenza [MIT](LICENSE). La licenza copre solo il codice: i testi del gioco appartengono a Konami e le texture HD si basano sul lavoro di MikeyMK e chrisfand citato nei crediti.
+The code is released under the [MIT License](LICENSE). The license covers the code only: the game's texts belong to Konami, and the HD textures are based on the work of MikeyMK and chrisfand credited above.

@@ -55,4 +55,4 @@ Progetto non ufficiale, senza scopo di lucro, non affiliato a Konami. *Yu-Gi-Oh!
 
 ## Licenza
 
-Il codice è rilasciato con licenza [MIT](LICENSE). La licenza copre solo il codice: i testi del gioco appartengono a Konami e le texture HD si basano sul lavoro di MikeyMK e chrisfand citato nei crediti; i moduli texture vengono pubblicati solo con il consenso degli autori.
+Il codice è rilasciato con licenza [MIT](LICENSE). La licenza copre solo il codice: i testi del gioco appartengono a Konami e le texture HD si basano sul lavoro di MikeyMK e chrisfand citato nei crediti.

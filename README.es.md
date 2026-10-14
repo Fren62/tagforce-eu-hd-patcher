@@ -26,15 +26,15 @@ Textos modificados por el parche en cada idioma (contados comparando la ISO parc
 
 Texturas HD por idioma. Para francés, alemán, español e italiano **cada una de las cartas del juego (las 2.833) se redibuja en HD con su texto en tu idioma, tanto en la versión grande como en la pequeña**, junto con las páginas de miniaturas del deck, la tabla de atributos y la etiqueta Mágica/Trampa. Las texturas de la interfaz también se redibujan en HD:
 
-| Idioma | Cartas grandes | Cartas pequeñas | Páginas de miniaturas del deck | Texturas de la interfaz |
-|---|---:|---:|---:|---:|
-| Inglés | 87 | 87 | – | 50 |
-| Francés | 2.833 | 2.833 | 7 | 93 |
-| Alemán | 2.833 | 2.833 | 7 | 106 |
-| Español | 2.833 | 2.833 | 7 | 95 |
-| Italiano | 2.833 | 2.833 | 7 | 113 |
+| Idioma | Cartas grandes | Cartas pequeñas | Páginas de miniaturas del deck | Texturas de la interfaz y de las escenas (total) | de ellas redibujadas por nosotros |
+|---|---:|---:|---:|---:|---:|
+| Inglés | 2.833 | 2.833 | – | 3.110 | 50 |
+| Francés | 2.833 | 2.833 | 7 | 3.107 | 93 |
+| Alemán | 2.833 | 2.833 | 7 | 3.110 | 106 |
+| Español | 2.833 | 2.833 | 7 | 3.111 | 95 |
+| Italiano | 2.833 | 2.833 | 7 | 3.213 | 113 |
 
-El inglés ya tiene todas sus cartas en HD gracias al pack de MikeyMK y chrisfand; solo se regeneran las 87 cartas cuyo texto hemos corregido (grandes y pequeñas) y se redibujan 50 texturas de la interfaz que ese pack no cubre. Las texturas idénticas en todos los idiomas vienen de la base compartida.
+Los cinco idiomas tienen las 2.833 cartas en HD, grandes y pequeñas. Para el inglés vienen del pack de MikeyMK y chrisfand, y 87 las regeneramos nosotros porque corregimos su texto. «Texturas de la interfaz y de las escenas» cuenta cada otra textura HD que usa el idioma (menús, tienda, mapa, personajes...: la base compartida más el módulo del idioma); «de ellas redibujadas por nosotros» son las dibujadas para ese idioma, que para el inglés son las 50 que el pack no cubre. Las texturas idénticas en todos los idiomas vienen de la base compartida.
 
 > **Estado: primera versión.** Los parches están verificados archivo por archivo para cada combinación de módulos, y los cinco idiomas se probaron en PPSSPP (arranque, pantalla de título, duelos de demostración). El modo historia, el editor de mazos y la tienda aún no se han jugado a fondo. El instalador gráfico es nuevo: probado en Windows; la versión de Linux la genera GitHub Actions y aún no se ha ejecutado en un escritorio Linux real.
 

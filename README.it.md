@@ -26,15 +26,15 @@ Testi modificati dalla patch in ciascuna lingua (contati confrontando la ISO pat
 
 Texture HD per lingua. Per francese, tedesco, spagnolo e italiano **ogni singola carta del gioco (tutte e 2.833) è ridisegnata in HD con il testo nella tua lingua, sia nella versione grande sia in quella piccola**, insieme alle pagine delle miniature del deck, alla tabella degli attributi e all'etichetta Magia/Trappola. Anche le texture dell'interfaccia sono ridisegnate in HD:
 
-| Lingua | Carte grandi | Carte piccole | Pagine miniature del deck | Texture dell'interfaccia |
-|---|---:|---:|---:|---:|
-| Inglese | 87 | 87 | – | 50 |
-| Francese | 2.833 | 2.833 | 7 | 93 |
-| Tedesco | 2.833 | 2.833 | 7 | 106 |
-| Spagnolo | 2.833 | 2.833 | 7 | 95 |
-| Italiano | 2.833 | 2.833 | 7 | 113 |
+| Lingua | Carte grandi | Carte piccole | Pagine miniature del deck | Texture dell'interfaccia e delle scene (totale) | di cui ridisegnate da noi |
+|---|---:|---:|---:|---:|---:|
+| Inglese | 2.833 | 2.833 | – | 3.110 | 50 |
+| Francese | 2.833 | 2.833 | 7 | 3.107 | 93 |
+| Tedesco | 2.833 | 2.833 | 7 | 3.110 | 106 |
+| Spagnolo | 2.833 | 2.833 | 7 | 3.111 | 95 |
+| Italiano | 2.833 | 2.833 | 7 | 3.213 | 113 |
 
-L'inglese ha già tutte le carte in HD dal pack di MikeyMK e chrisfand, quindi si rigenerano solo le 87 carte di cui abbiamo corretto il testo (grandi e piccole) e si ridisegnano 50 texture dell'interfaccia che quel pack non copre. Le texture identiche in tutte le lingue arrivano dalla base condivisa.
+Tutte e cinque le lingue hanno tutte le 2.833 carte in HD, grandi e piccole. Per l'inglese vengono dal pack di MikeyMK e chrisfand, e 87 sono rigenerate da noi perché ne abbiamo corretto il testo. «Texture dell'interfaccia e delle scene» conta ogni altra texture HD usata dalla lingua (menu, negozio, mappa, personaggi...: la base condivisa più il modulo della lingua); «di cui ridisegnate da noi» sono quelle disegnate per quella lingua, che per l'inglese sono le 50 che il pack non copre. Le texture identiche in tutte le lingue arrivano dalla base condivisa.
 
 > **Stato: prima versione.** Le patch sono verificate file per file per ogni combinazione di moduli, e le cinque lingue sono state provate in PPSSPP (avvio, titolo, duelli dimostrativi). Modalità storia, editor del deck e negozio non sono ancora stati giocati a fondo. L'installer grafico è nuovo: provato su Windows; la versione Linux è prodotta da GitHub Actions e non è ancora stata eseguita su un vero desktop Linux.
 

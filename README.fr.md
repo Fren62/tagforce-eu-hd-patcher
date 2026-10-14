@@ -26,15 +26,15 @@ Textes modifiés par le patch dans chaque langue (comptés en comparant l'ISO pa
 
 Textures HD par langue. Pour le français, l'allemand, l'espagnol et l'italien, **chaque carte du jeu sans exception (les 2 833) est redessinée en HD avec son texte dans votre langue, en version grande comme en version petite**, avec les pages de miniatures du deck, la table des attributs et l'étiquette Magie/Piège. Les textures de l'interface sont elles aussi redessinées en HD :
 
-| Langue | Grandes cartes | Petites cartes | Pages de miniatures du deck | Textures de l'interface |
-|---|---:|---:|---:|---:|
-| Anglais | 87 | 87 | – | 50 |
-| Français | 2 833 | 2 833 | 7 | 93 |
-| Allemand | 2 833 | 2 833 | 7 | 106 |
-| Espagnol | 2 833 | 2 833 | 7 | 95 |
-| Italien | 2 833 | 2 833 | 7 | 113 |
+| Langue | Grandes cartes | Petites cartes | Pages de miniatures du deck | Textures de l'interface et des scènes (total) | dont redessinées par nous |
+|---|---:|---:|---:|---:|---:|
+| Anglais | 2 833 | 2 833 | – | 3 110 | 50 |
+| Français | 2 833 | 2 833 | 7 | 3 107 | 93 |
+| Allemand | 2 833 | 2 833 | 7 | 3 110 | 106 |
+| Espagnol | 2 833 | 2 833 | 7 | 3 111 | 95 |
+| Italien | 2 833 | 2 833 | 7 | 3 213 | 113 |
 
-L'anglais a déjà toutes ses cartes en HD grâce au pack de MikeyMK et chrisfand ; seules les 87 cartes dont nous avons corrigé le texte sont régénérées (grandes et petites), et 50 textures d'interface que ce pack ne couvre pas sont redessinées. Les textures identiques dans toutes les langues viennent de la base partagée.
+Les cinq langues ont les 2 833 cartes en HD, grandes et petites. Pour l'anglais elles viennent du pack de MikeyMK et chrisfand, et 87 sont régénérées par nous car nous avons corrigé leur texte. « Textures de l'interface et des scènes » compte toutes les autres textures HD utilisées par la langue (menus, boutique, carte, personnages... : la base partagée plus le module de la langue) ; « dont redessinées par nous » sont celles dessinées pour cette langue, soit pour l'anglais les 50 que le pack ne couvre pas. Les textures identiques dans toutes les langues viennent de la base partagée.
 
 > **État : première version.** Les patchs sont vérifiés fichier par fichier pour chaque combinaison de modules, et les cinq langues ont été testées dans PPSSPP (démarrage, écran titre, duels de démonstration). Le mode histoire, l'éditeur de deck et la boutique n'ont pas encore été joués à fond. L'installateur graphique est nouveau : testé sous Windows ; la version Linux est produite par GitHub Actions et n'a pas encore été lancée sur un vrai bureau Linux.
 

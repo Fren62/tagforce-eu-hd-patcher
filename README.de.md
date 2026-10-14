@@ -26,15 +26,15 @@ Vom Patch geänderte Texte je Sprache (durch Vergleich der gepatchten ISO mit de
 
 HD-Texturen pro Sprache. Für Französisch, Deutsch, Spanisch und Italienisch **wird jede einzelne Karte des Spiels (alle 2.833) in HD mit dem Text in Ihrer Sprache neu gezeichnet, sowohl in der großen als auch in der kleinen Version**, dazu die Seiten der Deck-Miniaturen, die Attributtabelle und das Zauber-/Fallen-Etikett. Auch die Oberflächentexturen sind in HD neu gezeichnet:
 
-| Sprache | Große Karten | Kleine Karten | Seiten der Deck-Miniaturen | Oberflächentexturen |
-|---|---:|---:|---:|---:|
-| Englisch | 87 | 87 | – | 50 |
-| Französisch | 2.833 | 2.833 | 7 | 93 |
-| Deutsch | 2.833 | 2.833 | 7 | 106 |
-| Spanisch | 2.833 | 2.833 | 7 | 95 |
-| Italienisch | 2.833 | 2.833 | 7 | 113 |
+| Sprache | Große Karten | Kleine Karten | Seiten der Deck-Miniaturen | Oberflächen- und Szenentexturen (gesamt) | davon von uns neu gezeichnet |
+|---|---:|---:|---:|---:|---:|
+| Englisch | 2.833 | 2.833 | – | 3.110 | 50 |
+| Französisch | 2.833 | 2.833 | 7 | 3.107 | 93 |
+| Deutsch | 2.833 | 2.833 | 7 | 3.110 | 106 |
+| Spanisch | 2.833 | 2.833 | 7 | 3.111 | 95 |
+| Italienisch | 2.833 | 2.833 | 7 | 3.213 | 113 |
 
-Englisch hat dank des Packs von MikeyMK und chrisfand schon alle Karten in HD; neu erzeugt werden nur die 87 Karten, deren Text wir korrigiert haben (groß und klein), und 50 Oberflächentexturen, die dieses Pack nicht abdeckt, werden neu gezeichnet. Texturen, die in allen Sprachen gleich sind, kommen aus der gemeinsamen Basis.
+Alle fünf Sprachen haben alle 2.833 Karten in HD, groß und klein. Beim Englischen stammen sie aus dem Pack von MikeyMK und chrisfand, und 87 davon werden von uns neu erzeugt, weil wir ihren Text korrigiert haben. „Oberflächen- und Szenentexturen“ zählt jede weitere HD-Textur, die die Sprache nutzt (Menüs, Laden, Karte, Figuren...: die gemeinsame Basis plus das Sprachmodul); „davon von uns neu gezeichnet“ sind die für diese Sprache gezeichneten, beim Englischen die 50, die das Pack nicht abdeckt. Texturen, die in allen Sprachen gleich sind, kommen aus der gemeinsamen Basis.
 
 > **Status: erste Version.** Die Patches sind für jede Modulkombination Datei für Datei geprüft, und alle fünf Sprachen wurden in PPSSPP getestet (Start, Titelbildschirm, Demo-Duelle). Story-Modus, Deck-Editor und Shop wurden noch nicht gründlich durchgespielt. Der grafische Installer ist neu: unter Windows getestet; die Linux-Version wird von GitHub Actions erzeugt und wurde noch nicht auf einem echten Linux-Desktop ausgeführt.
 

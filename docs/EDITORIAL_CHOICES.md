@@ -59,7 +59,7 @@ e **6 hanno wording locale nell'originale** (`pda_pack01`, `icon06`, `mein_menu0
 Scelta: il francese **resta come l'originale** (`NEW`). Variante opzionale da proporre all'utente per fr/de/es: `N` come icona iniziale (Nouveau/Neu/Nuevo).
 
 ## Italiano
-- **Linguetta dell'editor deck: `Fusion`** (non `Fusione`): "Fusion Deck" e' il nome in tutte le lingue (come Side Deck, Deck). Texture `ui_it/schede_deck/all_i__d_window00016.png`, generata da `schede_deck.py`.
+- **Linguetta dell'editor deck: `Fusion`** (non `Fusione`): "Fusion Deck" e' il nome in tutte le lingue (come Side Deck, Deck). Texture `ui_it/deck_screens/all_i__d_window00016.png`, generata da `deck_screens.py`.
 - **Sheppard e' sempre "Preside"** (mai "Cancelliere"): dialoghi (`dialogue_touchups_it.json`: `Cancelliere`/`cancelliere` -> `Preside`/`preside`, compreso
   "Ufficio del Preside" e la battuta di Crowler "Preside Crowler... Preside Crowler provvisorio") e interfaccia ("Profilo del Preside Sheppard").
 - **I Token si chiamano "Segna-Mostro"** (non "Gettoni"): aiuti dell'editor e del duello, record dei duelli ("Segna-Mostro Evocati"). Nei testi delle carte non compare ne' "Gettone" ne' "Segna".
@@ -79,7 +79,7 @@ Vedi sezione "Tedesco: scelte della rilettura" piu' sotto.
 ## Inglese (europeo, 2026-10-13)
 - Solo errori oggettivi (refusi, articoli e concordanze, apostrofi, `Sryus`->`Syrus`, `Principle's`->`Chancellor`, `Bandanna`->`Bandana`): carte 82, dialoghi 402 righe (79 parti, 5 regex, 2 esatte), frasi dei duelli 3 esatte + 6 parti, stringhe UI ~70 (`string_rules_en.py`). Nessuna riscrittura di stile.
 - `ocg_packname_e.bin` non esiste nel gioco inglese: tolta la tabella OG.
-- Texture: il pack USA (MikeyMK) copre gia' 621 delle 917 texture inglesi (stesso hash). Per le 39 che il pack USA non copre (hash europeo diverso) e che avevano solo xBRZ: ridisegnate in HD con gli script `ui_it` (`TF1_LANG=en`) in `moduli/en/ui_en` (schede_deck 14, schede_ricette 11, tutorial 6, fogli_icone 3, schermata_vs 3, menu_liste 2). Stesse parole dell'originale. Ridisegnate anche le 4 tessere DRAW (`lettere_esito`, richiesta dell'utente 2026-10-13); nome logo `VERSION MYSTIC TOMATO` e `DOWNLOADED CARD LIST` confermati dall'utente. 17 texture ITA-SU-ING controllate: neutre. Elenco in `docs/changes_en/texture_inventory_en.txt`, testi in `texture_texts_en.md`.
+- Texture: il pack USA (MikeyMK) copre gia' 621 delle 917 texture inglesi (stesso hash). Per le 39 che il pack USA non copre (hash europeo diverso) e che avevano solo xBRZ: ridisegnate in HD con gli script `ui_it` (`TF1_LANG=en`) in `moduli/en/ui_en` (deck_screens 14, recipe_screens 11, tutorial 6, icon_sheets 3, vs_screen 3, menu_lists 2). Stesse parole dell'originale. Ridisegnate anche le 4 tessere DRAW (`result_letters`, richiesta dell'utente 2026-10-13); nome logo `VERSION MYSTIC TOMATO` e `DOWNLOADED CARD LIST` confermati dall'utente. 17 texture ITA-SU-ING controllate: neutre. Elenco in `docs/changes_en/texture_inventory_en.txt`, testi in `texture_texts_en.md`.
 - Immagini carte: 82 carte corrette rigenerate in `moduli/en/cards` (small_en/large_en).
 
 ## Spagnolo (2026-10-11/12)

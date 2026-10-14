@@ -710,7 +710,7 @@ def clean_alpha(hd, low):
 
 
 def main(argv):
-    fam = common.Family('schede_deck', argv)
+    fam = common.Family('deck_screens', argv)
     F = fonts()
     import os
     fr = LANG != 'it'

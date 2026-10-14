@@ -1,4 +1,4 @@
-"""Checks a composed textures.zip: every file named in the textures.ini files (main and _SCEGLI...) exists in the zip.
+"""Checks a composed textures.zip: every file named in the textures.ini files (main and _CHOOSE...) exists in the zip.
 usage: verify_texture_pack.py textures.zip"""
 import re, sys, zipfile
 z = zipfile.ZipFile(sys.argv[1])

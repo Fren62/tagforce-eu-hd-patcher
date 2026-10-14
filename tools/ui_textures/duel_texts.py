@@ -833,7 +833,7 @@ def do_turn(fam, U, P):
 def do_icons_fr(fam, U, P):
     """French: the texture differs from the Italian one only in a 10-pixel cell; start from the HD Italian version
     (already corrected: smooth LP/TURNO digits, border rows emptied) and put the French pixels x4 there without smoothing."""
-    base = _os.path.join(HERE, '..', '..', 'PSP', 'TEXTURES', 'ULES00600', 'ui_it', 'scritte_duello', 'basic_ii__card_icon03.png')
+    base = _os.path.join(HERE, '..', '..', 'PSP', 'TEXTURES', 'ULES00600', 'ui_it', 'duel_texts', 'basic_ii__card_icon03.png')
     hd = np.asarray(Image.open(base).convert('RGBA')).copy()
     fr, _, (h,) = load(U, 'card_icon03.gim')
     it = common.texture(U, 'duel/basic_ii.ehp', 'card_icon03.gim')[0]
@@ -868,7 +868,7 @@ GROUPS = {'chain': do_chain, 'turn': do_turn, 'next': do_next, 'start': do_start
 
 
 def main(argv):
-    fam = common.Family('scritte_duello', argv[:4])
+    fam = common.Family('duel_texts', argv[:4])
     sel = argv[4:] or list(GROUPS)
     for name in sel:
         GROUPS[name](fam, fam.usrdir, fam.pack_us)

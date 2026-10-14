@@ -683,7 +683,7 @@ PACK = [None]
 
 
 def main(argv):
-    fam = common.Family('schede_ricette', argv)
+    fam = common.Family('recipe_screens', argv)
     PACK[0] = fam.pack_us
     low, _ = common.texture(fam.usrdir, TM, 'dmenu_recipe.gim')
     x0, y0, x1, y1 = BOLT_BOX

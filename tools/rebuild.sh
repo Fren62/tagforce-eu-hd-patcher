@@ -50,9 +50,9 @@ cp -R "$T/data/upscale_extra" "$OUT/upscale_extra"
 echo "7/8 textures.ini for ULES00600 (all 5 languages, Italian localized)"
 "$PY" -I "$T/gen_ini.py" "$T" "$US/textures.ini" "$CARD" "$OUT/textures.ini" i=it "+$T/extra_it.ini" "+$WORK/ui_it.ini" "+$T/data/upscale_extra.ini"
 for v in mikeymk official_english official_japanese; do
-  mkdir -p "$OUT/_SCEGLI LO STILE DELLE CARTE/$v"
+  mkdir -p "$OUT/_CHOOSE YOUR CARD STYLE/$v"
   "$PY" -I "$T/gen_ini.py" "$T" "$US/_PICK YOUR CARD STYLE HERE/$v/textures.ini" "$CARD" \
-    "$OUT/_SCEGLI LO STILE DELLE CARTE/$v/textures.ini" i=it "+$T/extra_it.ini" "+$WORK/ui_it.ini" "+$T/data/upscale_extra.ini" >/dev/null
+    "$OUT/_CHOOSE YOUR CARD STYLE/$v/textures.ini" i=it "+$T/extra_it.ini" "+$WORK/ui_it.ini" "+$T/data/upscale_extra.ini" >/dev/null
 done
 [ -f "$T/../LEGGIMI_PACK.txt" ] && cp "$T/../LEGGIMI_PACK.txt" "$OUT/LEGGIMI.txt"
 rm -rf "$WORK"

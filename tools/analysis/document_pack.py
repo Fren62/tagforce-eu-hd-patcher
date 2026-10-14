@@ -17,8 +17,8 @@ T = os.path.join(B, 'PSP', 'TEXTURES')
 BASE = os.path.join(T, 'ULES00600')
 MOD = BASE if L == 'it' else os.path.join(T, 'modules', L)
 UI = f'ui_{L}'
-SCRIPT = {'scritte_duello': 'duel_texts.py', 'lettere_esito': 'result_letters.py', 'menu_liste': 'menu_lists.py', 'fogli_icone': 'icon_sheets.py',
-          'schede_deck': 'deck_screens.py', 'schede_ricette': 'recipe_screens.py', 'schermata_vs': 'vs_screen.py', 'tutorial': 'tutorial.py'}
+SCRIPT = {'duel_texts': 'duel_texts.py', 'result_letters': 'result_letters.py', 'menu_lists': 'menu_lists.py', 'icon_sheets': 'icon_sheets.py',
+          'deck_screens': 'deck_screens.py', 'recipe_screens': 'recipe_screens.py', 'vs_screen': 'vs_screen.py', 'tutorial': 'tutorial.py'}
 I = pycdlib.PyCdlib(); I.open(iso_p)
 idx = collections.defaultdict(list)
 

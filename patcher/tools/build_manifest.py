@@ -1,8 +1,6 @@
 """Composes the Release folder: manifest.json (texture modules, patches, ISO sizes for every combination of
 modules, accepted MD5s) + patch_<l>.tfp + base.zip / <l>.zip (linked, not copied).
-usage: build_manifest.py ORIGINAL_ISO MODULES_DIR(texture) PATCH_DIR(patch2_<l>.tfp) OUT_DIR
-
-The manifest keeps the legacy key `lingue` (languages) of the released v0.x manifests: the Rust patcher reads it."""
+usage: build_manifest.py ORIGINAL_ISO MODULES_DIR(texture) PATCH_DIR(patch2_<l>.tfp) OUT_DIR"""
 import hashlib, itertools, json, os, shutil, subprocess, sys, zipfile
 HERE = os.path.dirname(os.path.abspath(__file__))
 iso, modules, patches, out = sys.argv[1:5]

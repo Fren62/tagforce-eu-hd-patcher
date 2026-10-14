@@ -47,7 +47,7 @@ La base grafica e' il pack *Yu-Gi-Oh! GX Tag Force 1 HD Remastered* di **MikeyMK
 PPSSPP riconosce una texture dall'**hash dei suoi dati** (xxhash dei pixel, piu' la CLUT se paletted). Nel `textures.ini` (sezione `[hashes]`) ogni riga dice quale PNG usare:
 
 ```
-0000000000000000<hash dati a 8 cifre> = ui_fr/scritte_duello/basic_ff__chain010005.png
+0000000000000000<hash dati a 8 cifre> = ui_fr/duel_texts/basic_ff__chain010005.png
 ```
 Con indirizzo/CLUT a zero PPSSPP riconosce la texture dal solo hash dei dati (verificato su tutte le texture del gioco senza collisioni; `common.py`). Lo strumento `tools/gim.py` legge i `.gim` e calcola `gim.data_hash(gim.parse(...))`. I PNG sostitutivi devono essere esattamente **4x** la texture originale (es. 128x32 -> 512x128) e ridisegnare **esattamente** la stessa area di contenuto: il gioco compone le parole da pezzi a posizioni fisse (una scritta spezzata in due texture, una lettera per texture, ecc.).
 
@@ -56,7 +56,7 @@ Con indirizzo/CLUT a zero PPSSPP riconosce la texture dal solo hash dei dati (ve
 ### 2.2 Pack di base + moduli per lingua
 ```
 PSP/TEXTURES/ULES00600/            pack di base (EU): cards/, characters/, events/, map/, shop/, ui/, ui_it/, upscale_extra/, intro/ ... + textures.ini
-PSP/TEXTURES/ULES00600/_SCEGLI LO STILE DELLE CARTE/{mikeymk,official_english,official_japanese}/textures.ini   3 stili di carte
+PSP/TEXTURES/ULES00600/_CHOOSE YOUR CARD STYLE/{mikeymk,official_english,official_japanese}/textures.ini   3 stili di carte
 PSP/TEXTURES/modules/<lingua>/      un modulo per lingua:
     cards/small_<l>, large_<l>, tiny_<l>, frame/icons_attribute_race_<l>.png, frame/icons_spell_trap_<l>.png
     intro/title_screen/*.png       targa del titolo (solo di quella lingua)
@@ -193,7 +193,7 @@ Regole di qualita' (dall'italiano, valgono sempre):
 3. **Parametrizza lo script** per la lingua (vedi 7.3): archivio/lettera, stringhe, e **geometrie** che cambiano (le righe di testo, le caselle bianche, le larghezze, il numero di righe).
 4. **Genera in una cartella temporanea** (non nel modulo): `TF1_LANG=de python ui_it/<f>.py USRDIR ULUS10136 tmp`.
 5. **Confronta con l'originale** (contact sheet originale vs HD): testi corretti, posizione, dimensione, accenti non tagliati e non sulla riga vicina, colori. Il numero "alfa MAE / colore MAE" stampato dagli script e' solo un indizio: le parole diverse dall'italiano danno errori piu' alti anche se vanno bene a occhio.
-6. **Installa nel modulo**: stesso comando con `OUT = PSP/TEXTURES/modules/<l>`. `common.Family.finish()` scrive `OUT/ui_<l>/<famiglia>/*.png`, `OUT/ui_<l>/<famiglia>.ini` e **aggiunge/sostituisce** le righe nel frammento `OUT/<l>.ini` (togliendo prima tutte le righe di quella famiglia). **Trappola:** se rilanci una famiglia con soli sotto-gruppi (es. `scritte_duello icons`), le righe degli altri gruppi vanno perse dal `<l>.ini`; rilancia sempre la famiglia **intera** (successo con `scritte_duello`: bastava rilanciarlo senza gruppi).
+6. **Installa nel modulo**: stesso comando con `OUT = PSP/TEXTURES/modules/<l>`. `common.Family.finish()` scrive `OUT/ui_<l>/<famiglia>/*.png`, `OUT/ui_<l>/<famiglia>.ini` e **aggiunge/sostituisce** le righe nel frammento `OUT/<l>.ini` (togliendo prima tutte le righe di quella famiglia). **Trappola:** se rilanci una famiglia con soli sotto-gruppi (es. `duel_texts icons`), le righe degli altri gruppi vanno perse dal `<l>.ini`; rilancia sempre la famiglia **intera** (successo con `duel_texts`: bastava rilanciarlo senza gruppi).
 7. **Controlla** `<l>.ini`: ogni riga `ui_<l>/...` punta a un file esistente (snippet in 9.2).
 
 ### 7.3 Come sono stati parametrizzati gli script (modello da imitare)
@@ -205,21 +205,21 @@ Ogni script ha in testa `LANG = os.environ.get('TF1_LANG', 'it')` e una tabella 
 
 Legenda: **IT** = come e' fatto per l'italiano; **FR** = adattamento francese; **DE/ES** = cosa fare/attenzione.
 
-#### A. `scritte_duello` (13 texture + `card_icon03`) - archivio `duel/basic_<l><l>.ehp`
+#### A. `duel_texts` (13 texture + `card_icon03`) - archivio `duel/basic_<l><l>.ehp`
 Texture: `chain010005` (parola "Catena"), `chain010003` (bagliore grigio), `score-top100011/13` (badge "TURNO" blu/rosso), `next_player0002+0001` e `0005+0004` ("TOCCA AL GIOCATORE SUCCESSIVO" spezzata su 2 texture, **il taglio sta in un varco tra due lettere**), `start_duel10002+10001` ("INIZIA IL DUEL|LO", taglio tra le lettere), `start_duel10005` (bagliore), `dilect_atk00001/3` ("Attacco Diretto!" + bagliore), `card_icon03` (foglio di cifre/segni).
 - **IT**: parole composte con un unico font (SF Rounded/Chalkboard/Comic -> font liberi via `alt_font`), stile misurato sull'inglese (`ui/text/chain.png`, `nextplayersturn_blue/red.png`, `start.png`, `duel_2.png`, `direct_attack.png`, `turn_blue/red.png`).
 - **FR** (tabella `TXT` in testa, con `b`='ff'): chain `Chaîne`; next `TOUR DU JOUEUR SUIVANT` con `next_cut='TOUR DU JOUEUR SUIV'` (cut tra V e A: l'originale taglia li); start `DÉMARRER DUEL`, `start_cut='DÉMARRER DU'`; attack `Attaque Directe!`; turn `TOUR`. I caratteri `rnext/rstart/rturn` (`'TE'`, `'ED'`, `'TUR'`) sono le lettere **che devono esistere nel testo** e servono a misurare l'altezza delle maiuscole (`solve_line`: `ref` deve essere un sottoinsieme del testo; `TOUR` non ha N, per questo `TUR`).
-- **`card_icon03`** (`do_icons_fr`): la texture francese differisce da quella italiana solo in 10 pixel (cella 88,38-97,45); si parte dall'**HD italiano gia' corretto** (`PSP/TEXTURES/ULES00600/ui_it/scritte_duello/basic_ii__card_icon03.png`: cifre LP/TURNO lisce, righe 104-111 ricostruite, 100-103 e 148-151 svuotate) e si incollano x4 i pixel francesi che differiscono. **Questo e' il trattamento che toglie i trattini sotto gli LP.** Per de/es fai lo stesso: confronta l'originale con l'italiano (`np.abs(a-b).max(-1)>30`) e incolla le celle diverse.
+- **`card_icon03`** (`do_icons_fr`): la texture francese differisce da quella italiana solo in 10 pixel (cella 88,38-97,45); si parte dall'**HD italiano gia' corretto** (`PSP/TEXTURES/ULES00600/ui_it/duel_texts/basic_ii__card_icon03.png`: cifre LP/TURNO lisce, righe 104-111 ricostruite, 100-103 e 148-151 svuotate) e si incollano x4 i pixel francesi che differiscono. **Questo e' il trattamento che toglie i trattini sotto gli LP.** Per de/es fai lo stesso: confronta l'originale con l'italiano (`np.abs(a-b).max(-1)>30`) e incolla le celle diverse.
 - **DE/ES**: i testi possono essere molto piu' lunghi: leggi l'originale tedesco/spagnolo. Il vincolo e' la larghezza degli slot: il banner "TOCCA AL GIOCATORE" riempie la texture, il solver `place_line` comprime (<=10%), allarga i bordi (`grow`), e restringe il kerning; se non basta riduci la dimensione. Maiuscole accentate (Ä Ö Ü É Ñ): vedi 13.
-- Comando: `TF1_LANG=fr python ui_it/scritte_duello.py USRDIR ULUS10136 <modulo>` (senza gruppi = tutti: `chain next start attack turn icons`).
+- Comando: `TF1_LANG=fr python ui_it/duel_texts.py USRDIR ULUS10136 <modulo>` (senza gruppi = tutti: `chain next start attack turn icons`).
 
-#### B. `lettere_esito` (22 texture) - `duel/basic_<l><l>.ehp`
+#### B. `result_letters` (22 texture) - `duel/basic_<l><l>.ehp`
 Una **tessera 64x64 per lettera**, composte dal gioco: win `duel_win1000{02..14}` + silhouette `duel_win100016`, lose `duel_lose1000{02..16}`, draw `duel_draw1000{02..12}`.
 - **IT**: "HAI VINTO" (HAIVNTO, 7 tessere + silhouette), "HAI PERSO" (HAIPERSO, 8), "PAREGGIO" (PAREGIO, 7). Lettere Times Bold con gradiente, contorno viola, ombra; lettere I N O S dal contorno inglese; gradienti e colori misurati.
 - **FR** (`LETTERS`): win `TUASGNÉ` (7: T U A S G N É) + silhouette 16 "TU AS GAGNÉ"; lose `TUASPERD` (8); draw `EGALIT` (6: l'originale usa E senza accento, **non c'e' una tessera É nel pareggio**). Differenze di codice: `'S'` anche nel set "win" (forma presa da `ui/text/lose/s.png`); `accent_down()` abbassa l'accento di Times sulla É (era piu' alto di quello del gioco e veniva tagliato); parametro **`wide`** (calibrato, solo fr) per le tessere di EGALIT piu' larghe; il test per la silhouette della win cambia (`let.member == 'duel_win100014.gim'` per fr).
 - **DE/ES**: conta le tessere reali (`duel_win1000NN` fino a...): il numero e l'ordine delle lettere dipendono dalla lingua e **vanno letti dall'originale** (contact sheet delle tessere), incluse le lettere ripetute (il gioco riusa la stessa tessera). Controlla le lettere accentate.
 
-#### C. `menu_liste` (6 texture) - `title_menu/title_menu_<l>.ehp`, `duel/result/result_<l>.ehp`, `field/always_bri_<ita|fra|ger|spa>.ehp`
+#### C. `menu_lists` (6 texture) - `title_menu/title_menu_<l>.ehp`, `duel/result/result_<l>.ehp`, `field/always_bri_<ita|fra|ger|spa>.ehp`
 Liste di titoli (`m_menu_title01` giallo, `trnsmt02` lista wireless argento, `menu02` risultato duello, `press_start0003`), foglio icone dei risultati (`result_<l>__menu01` con 3 parole), calendario (`story_sys02`).
 - **IT**: righe di testo a passo fisso di **21 righe** per riga (`line_rows`), font Futura Bold (-> libero) con peso/corpo fissi (`size`, `bold`), stile e colori misurati sulle immagini inglesi (`en_text`, `en_use`: quale riga inglese serve per i colori), righe condensate (`cond`) dove lo e' anche l'originale.
 - **FR** (`FR` dict): testi in 6+11+6+1 righe (vedi appendice). Gotcha:
@@ -230,23 +230,23 @@ Liste di titoli (`m_menu_title01` giallo, `trnsmt02` lista wireless argento, `me
   5. Calendario: `CAL_SERIF` (giorni/mesi, Times Bold), `CAL_ROUND` (parole crema con contorno marrone), cifre `0123456789月日ー` (Hiragino, uguali in tutte le lingue). Per fr: Dimanche, Lundi, Mardi, Mercredi, Jeudi, Vendredi, Samedi; Mai, Juillet, Juin, Août; "jours" / "avant le tournoi"; Matin / Soir. Le caselle (box) sono le stesse dell'italiano. Per de/es i nomi cambiano (giorni/mesi lunghi: controlla che entrino nei box: `Fitter.fit_set` comprime fino a `sx_min=0.9`, poi riduce il corpo).
 - **DE/ES**: testi dei menu **diversi per lunghezza**: le righe di `trnsmt02` e `m_menu_title01` hanno ampiezza fissa (256 px): `LISTE CARTES TÉLÉCHARGÉE` entra a ~0.93, parole tedesche lunghe (es. "Kartenliste heruntergeladen") richiedono compressione/corpo piccolo. Valuta se le stringhe del gioco originale sono gia' abbreviate: **riproduci quelle**.
 
-#### D. `fogli_icone` (3 texture per fr) - `deck/all_<l>.ehp`, `shop/all_<l>.ehp`
+#### D. `icon_sheets` (3 texture per fr) - `deck/all_<l>.ehp`, `shop/all_<l>.ehp`
 Fogli di icone dove cambiano poche parole: `icon04` (partenza dal foglio inglese HD e **solo i pixel che cambiano** in pixel x4, es. "Mia/Moi" e distintivi "A/L"), `s_pack` ("ESAURITE"/"ÉPUISÉ" in PT Sans Bold sul rosso del pack), `panel` (la scritta del tab "prati"/"hetés": **e' un frammento** di una parola che continua in un'altra texture; riproduci il frammento dell'originale, non la parola intera).
 - **FR**: costanti `SP_TEXT`/`SP_X` (x0..x1 dell'inchiostro in HD: 45..228), `PANEL_TEXT='hetés'`, `TEXTURES_FR` (solo 3 voci; `pda_pack01`, `ocglist`, `icon06`, `mein_menu00`, `trnsmt01` hanno **lo stesso hash dell'inglese in francese** e non vanno rifatte), `build_icon04_fr` (usa `EN_LOW`, la texture inglese a bassa risoluzione, per trovare i pixel che differiscono; dilata di 1 px; il documento col fulmine `bolt_doc(...)` resta come nell'italiano).
 - **DE/ES**: stesso controllo hash: probabilmente solo `icon04`, `s_pack`, `panel` differiscono. Misura x0/x1 della parola con la stampa ASCII (`low[232:246]`) o guardando l'originale a 8x.
 
-#### E. `schede_deck` (10 texture per fr) - `deck/all_<l>.ehp`, `labo/*.ehp`, `shop/all_<l>.ehp`
+#### E. `deck_screens` (10 texture per fr) - `deck/all_<l>.ehp`, `labo/*.ehp`, `shop/all_<l>.ehp`
 Linguette dell'editor del deck, del laboratorio, del negozio (Cassa, Affitto, Laboratorio, Convertitore, "Tipi di Carte Posseduti", "Carte Comprate / Tipi di Carte com...", tasto INVIO).
 - **FR** (`TEX_FR`): Coffre x2, Location x3, Labo, Convertisseur, "Types de cartes acquis", "Cartes achetées" + "Types de cartes ac" (la seconda e' un **frammento** al bordo della texture), ENTRÉE. `white_box(low)` ricava automaticamente (colonne con >=9 righe bianche) i parametri `box_x0`, `right` che per l'italiano erano scritti a mano; regola: larghezza <20 -> margine 2, altrimenti 1. `key_caption(low)` (ENTRÉE) vettorizza dall'originale: vale per ogni lingua. Stesse parole in francese di "Fusion/Side/Deck" (hash = inglese: lo fa il pack).
 - **DE/ES**: elenca quali di queste texture differiscono dall'inglese; scrivi le parole; verifica che la linguetta non vada fuori dal tab (parole lunghe: `tabword.render_tab_word` comprime e riduce il corpo; `TAB_CAP=44`).
 
-#### F. `schede_ricette` (11 texture per fr) - `deck/recipe_view_<l>.ehp`, `title_menu/title_menu_<l>.ehp`, `database/limitlist.ehp`
+#### F. `recipe_screens` (11 texture per fr) - `deck/recipe_view_<l>.ehp`, `title_menu/title_menu_<l>.ehp`, `database/limitlist.ehp`
 Linguette: Personnage / Utilisateur / Téléchargée / Limitée / Semi-limitée / Interdite / Échange.
 - **FR** (`FR_WORDS` + `TABS_FR`): la **geometria** (`ix`, icona, `tx`, `slot`) e' quella italiana (stessi riquadri); cambiano parola e **limite destro** del testo `tx[1]` misurato sull'originale (script: colonne di pixel bianchi >=230 tra x0 e la casella). Pannelli `recipe_panel`, `dmenu_recipe`, `parts`, `recipe010002/4/6` hanno lo **stesso hash in tutte le lingue**: restano `ui_it`.
 - `Scambia` nel francese e' un **residuo italiano** del gioco: scritto `Échange` (come l'italiano ha "Scambio" al posto del tedesco "Tauschen").
 - **DE/ES**: stessa cosa; per i limiti usa le parole dell'originale (es. "Eingeschränkt/Halb eingeschränkt/Verboten" sono lunghe: attenzione al limite destro).
 
-#### G. `schermata_vs` (14 texture) - `duel/start/start_e.ehp` (membri `_<l>`), `start_all.ehp`, `start_<l>.ehp`
+#### G. `vs_screen` (14 texture) - `duel/start/start_e.ehp` (membri `_<l>`), `start_all.ehp`, `start_<l>.ehp`
 DUEL / NORMAL / TAG (banner grandi in Times Bold con gradiente rosso-giallo), bagliori "DUEL NORMAL" / "TAG DUEL", "Modalita' ..." (due), "n A GIOCARE" (due), "n Duello" (tre: `vs_much1..3`), foglio sasso-carta-forbici (`jnk_card01` con le parole VITTORIA/SCONFITTA/PAREGGIO), foglio giocatori (`d_menu01_<l>` con i 4 distintivi "n° GIOCATORE" e la linguetta GIOCATORE).
 - **FR** (`main_fr`, `FILES_FR` derivato da `FILES` sostituendo `_i0`->`_f0`, `start_i`->`start_f`):
   1. **Banner**: `banner_fit(text, low)` cerca corpo, compressione, posizione e base in modo che il riquadro dell'inchiostro (alfa>1/2, contorno e ombra inclusi) coincida con quello dell'originale (6 iterazioni): il gioco **allarga** le parole a riempire la texture, quindi i parametri fissi dell'italiano non vanno bene. Parole fr: `DUEL`, `NORMAL`, `TAG`.
@@ -375,8 +375,8 @@ Cronologia (2026-10-10 / 11):
 
 **Questa passata:**
 1. **Recuperato il pack USA** (era sparito): scaricato da Mega (`mega_dl.py`, thread 29487) e **estratta la USRDIR** dalla ISO (`extract_usrdir.py`).
-2. **Script parametrizzati per lingua** (`TF1_LANG`): `common.py`, `scritte_duello.py`, `lettere_esito.py`, `menu_liste.py`, `fogli_icone.py`, `schede_deck.py`, `schede_ricette.py`, `schermata_vs.py`, `tutorial.py`. `compose_pack.py` copia anche `ui_<l>`.
-3. **86 texture francesi** nel modulo `moduli/fr/ui_fr` (86 righe `ui_fr` in `fr.ini`): scritte_duello 14 (compresa `card_icon03`), lettere_esito 22, menu_liste 6, fogli_icone 3, schede_deck 10, schede_ricette 11, schermata_vs 14, tutorial 6. Testi francesi in appendice.
+2. **Script parametrizzati per lingua** (`TF1_LANG`): `common.py`, `duel_texts.py`, `result_letters.py`, `menu_lists.py`, `icon_sheets.py`, `deck_screens.py`, `recipe_screens.py`, `vs_screen.py`, `tutorial.py`. `compose_pack.py` copia anche `ui_<l>`.
+3. **86 texture francesi** nel modulo `moduli/fr/ui_fr` (86 righe `ui_fr` in `fr.ini`): duel_texts 14 (compresa `card_icon03`), result_letters 22, menu_lists 6, icon_sheets 3, deck_screens 10, recipe_screens 11, vs_screen 14, tutorial 6. Testi francesi in appendice.
 4. **Correzioni scoperte dalla prova in gioco**: (a) i trattini sotto gli LP e le cifre TURNO erano la vecchia texture xBRZ di `card_icon03` -> rifatta dall'HD italiano con i 10 pixel francesi; (b) accenti delle maiuscole che uscivano dal riquadro ("SAISIR NOM") -> riduzione fino a -8% + `clip`.
 5. **Prove in gioco** (ISO originale e `_definitiva`, `Language = fr_FR`): titolo, menu principale, Base de données, Deck editor, Recettes, calendario, VS, duello dimostrativo, dialoghi dell'ufficio: tutte le texture sostituite risultavano corrette. Il salvataggio di prova e' in `SAVEDATA\ULES006000001.FR_PROVA`; il pack francese di prova in `TEXTURES\ULES00600_fr_prova`.
 6. **Scelte di traduzione** (da confermare dall'utente se vuole altro): "ÉCHANGE" al posto di "SCAMBIA"; "2e/3e round" al posto di "2è/3è"; "EGALITE" senza accento (limite del gioco); "Mode Un Duel" mantenuto come nell'originale (si potrebbe preferire "Mode Duel Simple"); "DÉMARRER DUEL" come nell'originale (non "DÉMARRER LE DUEL": troppo lungo per la texture).
@@ -403,7 +403,7 @@ Cronologia (2026-10-10 / 11):
 ### 12.2 Cose specifiche
 - **Tedesco** (lettera `g`, `basic_gg`):
   - Parole molto lunghe: compressione maggiore, corpo piu' piccolo; attenzione a `Fitter.fit_set` (`sx_min`, `size_min`) e ai riquadri fissi delle linguette. Prima di disegnare **leggi cosa dice l'originale tedesco**: spesso e' gia' abbreviato.
-  - `ß`, `Ä Ö Ü` **maiuscoli** (come la É francese: toccano la riga sopra): applica le due soluzioni di `menu_liste` (riduzione fino a -8% + `clip`) o `accent_down` per le tessere di lettere.
+  - `ß`, `Ä Ö Ü` **maiuscoli** (come la É francese: toccano la riga sopra): applica le due soluzioni di `menu_lists` (riduzione fino a -8% + `clip`) o `accent_down` per le tessere di lettere.
   - Virgolette „ “, spazi (`《》s` caso `SPAZIO_DOPO_DE`), "Tauschen" gia' tedesco (nell'italiano originale era rimasto tedesco).
   - Residui di altre lingue nelle tabelle (de `ddstrtbl_g` 66 era francese: gia' corretto).
 - **Spagnolo** (lettera `s`, `basic_ss`):
@@ -423,9 +423,9 @@ Cronologia (2026-10-10 / 11):
 4. **Heredoc/escape**: `\u00cc`, `\\u00a0`, percorsi con backslash. Scrivi file con lo strumento di scrittura; usa `chr()`.
 5. **La rilevazione automatica delle righe** (`line_rows`) si rompe con le maiuscole accentate (righe fuse): usa `n=` e il passo fisso (max altezza pulita).
 6. **Parola di una lingua diversa nella texture originale** (SCAMBIA, TAUSCHEN): trattala come bug del gioco; usa `orig_text`.
-7. **Rilanciare un solo gruppo di `scritte_duello`** (`icons`) cancella dal `.ini` le righe degli altri gruppi.
+7. **Rilanciare un solo gruppo di `duel_texts`** (`icons`) cancella dal `.ini` le righe degli altri gruppi.
 8. **Geometria specifica della lingua**: il dialogo del tutorial francese ha 2 righe e il riquadro piu' basso; i banner del VS sono allargati dal gioco a riempire la texture; la linguetta "JOUEUR" e' piu' stretta. Non dare per scontato che i numeri italiani valgano: **misura sempre sull'originale**.
-9. **Tessere spezzate**: parole su 2 texture (TOCCA... SUCCE|SSIVO) -> il taglio va in un varco tra lettere (`seam_shift`); le tessere di lettere (lettere_esito) una per lettera.
+9. **Tessere spezzate**: parole su 2 texture (TOCCA... SUCCE|SSIVO) -> il taglio va in un varco tra lettere (`seam_shift`); le tessere di lettere (result_letters) una per lettera.
 10. **L'accento della maiuscola** in Times/Futura e' piu' alto del gioco: abbassalo (`accent_down`) o riduci il corpo + `clip`.
 11. **Test con la ISO sbagliata**: l'originale non ha le correzioni di dialoghi/stringhe/etichetta grande; usa `_definitiva` per quelle.
 12. **Salvataggio e lingua**: la lingua e' nel save. Non lasciare il save di prova al posto di quello dell'utente (e viceversa).
@@ -476,13 +476,13 @@ Come documentare: aggiungi in `STATO_LAVORI.md` una sezione "Interfaccia HD in <
 | `rebuild.sh` | ricostruzione completa del pack italiano |
 
 ### 15.2 Testi francesi usati (riferimento per tradurre in de/es)
-- **scritte_duello**: Chaîne · TOUR (blu/rosso) · TOUR DU JOUEUR SUIVANT · DÉMARRER DUEL · Attaque Directe!
-- **lettere_esito**: TU AS GAGNÉ · TU AS PERDU · EGALITE
-- **menu_liste**: MENU PRINCIPAL / SAISIR NOM / LISTE CARTES TÉLÉCHARGÉE / PUZZLE DUEL / OPTIONS / SÉLECTION DE LA LANGUE · LISTE DE GROUPE / FAIRE UN NOUVEAU GROUPE / LISTE D'ENTRÉE / DUEL / ÉCHANGE / ENVOYER UNE RECETTE / ENVOYER UNE CARTE / ENVOYER UN PUZZLE DUEL / DUEL LIBRE / DUEL NORMAL / TAG DUEL · RÉSULTAT DU DUEL / BONUS DUEL / BONUS NOUVEAU MEILLEUR SCORE / BONUS DÉFI COMPLÉTÉ / RÉSULTAT INTERMÉDIAIRE / RÉSULTAT FINAL · APPUYEZ SUR LA TOUCHE START · GAGNÉ / ÉGALITÉ / PERDU · Dimanche Lundi Mardi Mercredi Jeudi Vendredi Samedi · Mai Juillet Juin Août · jours / avant le tournoi · Matin / Soir
-- **fogli_icone**: ÉPUISÉ · hetés (frammento di "Cartes achetées")
-- **schede_deck**: Coffre · Location · Labo · Convertisseur · Types de cartes acquis · Cartes achetées · Types de cartes ac(quis) · ENTRÉE
-- **schede_ricette**: Personnage · Utilisateur · Téléchargée · Limitée · Semi-limitée · Interdite · Échange
-- **schermata_vs**: DUEL / NORMAL / TAG · DEUXIÈME À JOUER / PREMIER À JOUER · 1er round / 2e round / 3e round · Mode Un Duel / Mode Match · GAGNÉ / PERDU / EGALITE · 1er JOUEUR / 2e JOUEUR · JOUEUR
+- **duel_texts**: Chaîne · TOUR (blu/rosso) · TOUR DU JOUEUR SUIVANT · DÉMARRER DUEL · Attaque Directe!
+- **result_letters**: TU AS GAGNÉ · TU AS PERDU · EGALITE
+- **menu_lists**: MENU PRINCIPAL / SAISIR NOM / LISTE CARTES TÉLÉCHARGÉE / PUZZLE DUEL / OPTIONS / SÉLECTION DE LA LANGUE · LISTE DE GROUPE / FAIRE UN NOUVEAU GROUPE / LISTE D'ENTRÉE / DUEL / ÉCHANGE / ENVOYER UNE RECETTE / ENVOYER UNE CARTE / ENVOYER UN PUZZLE DUEL / DUEL LIBRE / DUEL NORMAL / TAG DUEL · RÉSULTAT DU DUEL / BONUS DUEL / BONUS NOUVEAU MEILLEUR SCORE / BONUS DÉFI COMPLÉTÉ / RÉSULTAT INTERMÉDIAIRE / RÉSULTAT FINAL · APPUYEZ SUR LA TOUCHE START · GAGNÉ / ÉGALITÉ / PERDU · Dimanche Lundi Mardi Mercredi Jeudi Vendredi Samedi · Mai Juillet Juin Août · jours / avant le tournoi · Matin / Soir
+- **icon_sheets**: ÉPUISÉ · hetés (frammento di "Cartes achetées")
+- **deck_screens**: Coffre · Location · Labo · Convertisseur · Types de cartes acquis · Cartes achetées · Types de cartes ac(quis) · ENTRÉE
+- **recipe_screens**: Personnage · Utilisateur · Téléchargée · Limitée · Semi-limitée · Interdite · Échange
+- **vs_screen**: DUEL / NORMAL / TAG · DEUXIÈME À JOUER / PREMIER À JOUER · 1er round / 2e round / 3e round · Mode Un Duel / Mode Match · GAGNÉ / PERDU / EGALITE · 1er JOUEUR / 2e JOUEUR · JOUEUR
 - **tutorial**: Ton adversaire a déclaré le duel. / Activer l'effet de la carte ? · OUI / NON · carte: Pendentif Noir, Bouclier du Lustre Jaune, ... da `cardinfo_fra.ehp`
 
 ### 15.3 Quando lo script non basta

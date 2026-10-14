@@ -783,7 +783,7 @@ TEXTURES = [
 
 
 def main():
-    fam = common.Family('fogli_icone', sys.argv)
+    fam = common.Family('icon_sheets', sys.argv)
     global EN_LOW
     for tex_id, file, member, ref, build, *en in ([t + (None,) if len(t) == 5 else t for t in TEXTURES] if LANG == 'it' else TEXTURES_EN if LANG == 'en' else TEXTURES_FR):
         if en and en[0]:

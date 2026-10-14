@@ -33,12 +33,10 @@ pub struct Asset {
     pub sha256: String,
 }
 
-/// Contents of manifest.json. The JSON key `lingue` keeps its original (Italian) name: it is part of the file
-/// format shared with the released tools, so it must not change.
+/// Contents of manifest.json.
 #[derive(Deserialize)]
 pub struct Manifest {
     pub base: Asset,
-    #[serde(rename = "lingue")]
     pub languages: BTreeMap<String, Asset>,
     /// ISO patches per language (patch_<language>.tfp)
     #[serde(default)]

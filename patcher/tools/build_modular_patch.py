@@ -8,9 +8,7 @@ Every entry has `needs`: the modules that must be active for it to be applied.
   strip  : removes the other languages from the ISO, fixes the language and removes the selector and the menu entry (libtitle.prx)
 For every file the entry with the most `needs`, all of them active, is applied (the "cards+text" entries are for the files touched by both).
 The `link` entries (only with `strip`) make the files of the other languages point to the data of the chosen language.
-The delta is always against the same file of the original ISO (no game data in the package).
-
-The keys `formato`, `lingua` and `voci` of patch.json are the legacy names of the released v0.x patches: the Rust patcher reads them."""
+The delta is always against the same file of the original ISO (no game data in the package)."""
 import hashlib, io, json, os, subprocess, sys, zipfile
 import bsdiff4
 import pycdlib
@@ -100,7 +98,7 @@ def main(orig, language, out, tmp=None):
     for k in iso_x.values():
         k.close()
     iso_o.close()
-    meta = dict(formato=2, lingua=language, iso_size=os.path.getsize(orig), iso_md5=md5_file(orig), voci=[])
+    meta = dict(format=2, language=language, iso_size=os.path.getsize(orig), iso_md5=md5_file(orig), entries=[])
     with zipfile.ZipFile(out, 'w', zipfile.ZIP_DEFLATED, compresslevel=9) as z:
         bi = 0
         for v in entries:
@@ -108,7 +106,7 @@ def main(orig, language, out, tmp=None):
                 v['blob'] = f'blobs/{bi:04d}'
                 z.writestr(v['blob'], blobs[bi])
                 bi += 1
-            meta['voci'].append(v)
+            meta['entries'].append(v)
         z.writestr('patch.json', json.dumps(meta, indent=1))
     n = {k: sum(1 for v in entries if v['op'] == 'delta' and v['needs'] == w) for k, w in
          (('cards', ['cards']), ('text', ['text']), ('cards+text', ['cards', 'text']), ('strip', ['strip']))}

@@ -4,7 +4,7 @@
   "Modalità Singolo" / "Modalità Match", "1° / 2° / 3° Duello", "1° / 2° A GIOCARE" (rock-paper-scissors turn order),
   the janken card sheet (VITTORIA / SCONFITTA / PAREGGIO) and the player-slot sheet d_menu01_i ("n° GIOCATORE").
 
-run:  python3 -I vs_screen.py USRDIR PACK_US OUT      (writes OUT/ui_it/schermata_vs/<id>.png + OUT/ui_it/schermata_vs.ini)
+run:  python3 -I vs_screen.py USRDIR PACK_US OUT      (writes OUT/ui_it/vs_screen/<id>.png + OUT/ui_it/vs_screen.ini)
 
 Method.  The English HD pack (MikeyMK) is a STYLE reference, never a source of letters: its lettering is AI-upscaled
 (wobbly outlines, glitches).  For every lettering of the pack the macOS system font whose glyphs best match the mod's real
@@ -934,7 +934,7 @@ TXT_VS = {
 
 def main_fr(argv):
     """French: same styles as Italian, words and widths (measured on the French textures) in a table"""
-    fam = common.Family('schermata_vs', argv)
+    fam = common.Family('vs_screen', argv)
     low, hsh = {}, {}
     for k, (f, m) in FILES_FR.items():
         low[k], hsh[k] = common.texture(fam.usrdir, f, m)
@@ -968,7 +968,7 @@ def main_fr(argv):
 
 def main_en(argv):
     """European English: only the textures the US pack does not cover (2nd/3rd round and the 1st/2nd PLAYER badge sheet)"""
-    fam = common.Family('schermata_vs', argv)
+    fam = common.Family('vs_screen', argv)
     ROUND.update(sx=1.7, size=54.0)         # the English text is wider and more compact than that of the other languages (searched on vs_much2/3)
     for tid, (f, m), text, lr in [('start_e__vs_much2_e0001', ('duel/start/start_e.ehp', 'vs_much2_e0001.gim'), '2nd round', (40.0, 472.0)),
                                   ('start_e__vs_much3_e0001', ('duel/start/start_e.ehp', 'vs_much3_e0001.gim'), '3rd round', (48.0, 464.0))]:
@@ -986,7 +986,7 @@ def main(argv):
         return main_en(argv)
     if LANG != 'it':
         return main_fr(argv)
-    fam = common.Family('schermata_vs', argv)
+    fam = common.Family('vs_screen', argv)
     low = {}
     hsh = {}
     for k, (f, m) in FILES.items():

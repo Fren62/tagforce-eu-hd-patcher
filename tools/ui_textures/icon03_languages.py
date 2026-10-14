@@ -54,7 +54,7 @@ for lang, arch in LANGUAGES.items():
     im = Image.fromarray(out, 'RGBA')
     im.save(os.path.join(OUT, f'icon03_{lang}_{h}.png'))
     if '--apply' in sys.argv:
-        dst = os.path.join(T, 'ui_it', 'scritte_duello', 'basic_ii__card_icon03.png') if lang == 'it' else os.path.join(T, 'upscale_extra', f'{h}.png')
+        dst = os.path.join(T, 'ui_it', 'duel_texts', 'basic_ii__card_icon03.png') if lang == 'it' else os.path.join(T, 'upscale_extra', f'{h}.png')
         im.save(dst); print('written', lang, h, dst)
     else:
         print('anteprima', lang, h)

@@ -41,7 +41,7 @@ import common
 
 cv2.setNumThreads(1)                                       # bit-identical results from run to run
 
-NAME = 'lettere_esito'
+NAME = 'result_letters'
 LANG = os.environ.get('TF1_LANG', 'it')
 B = {'it': 'ii', 'fr': 'ff', 'es': 'ss', 'de': 'gg', 'en': 'be'}[LANG]
 ARCH = f'duel/basic_{B}.ehp'

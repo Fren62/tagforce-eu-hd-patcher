@@ -479,7 +479,7 @@ PPSSPP riconosce una texture dall'**hash dei suoi pixel** (xxhash dei dati, `gim
 | radice | cartella | file | MB | contenuto |
 |---|---|---|---|---|
 | ULES00600 (pack di base) | LEGGIMI.txt | 1 | 0.0 |  |
-| ULES00600 (pack di base) | _SCEGLI LO STILE DELLE CARTE/ | 3 | 7.8 | mikeymk, official_english, official_japanese |
+| ULES00600 (pack di base) | _CHOOSE YOUR CARD STYLE/ | 3 | 7.8 | mikeymk, official_english, official_japanese |
 | ULES00600 (pack di base) | cards/ | 11373 | 2161.9 | frame, large, large_it, small, small_it, tinyEN, tinyJP, tinyMikeyMK, tiny_it |
 | ULES00600 (pack di base) | characters/ | 1468 | 134.3 | 3d, combinations, portraits, sprites |
 | ULES00600 (pack di base) | events/ | 17 | 40.5 | academy_festival.png, alexis_rhodes.png, atticus_rhodes_beach.png, bastion_decks.png, bastion_misawa.png, chazz_dueldisk.png, chazz_on_tv.png, chazz_princeton.png, chumley_huffington.png, duel_tower.png ... |
@@ -488,12 +488,12 @@ PPSSPP riconosce una texture dall'**hash dei suoi pixel** (xxhash dei dati, `gim
 | ULES00600 (pack di base) | shop/ | 153 | 69.5 | blue_eyes_jp.png, card_pack_results_ui.png, dorothy, packs, purchase_text_box.png, room_textures, sadie, sandwiches.png, store_purchasing_background.png, store_purchasing_ui.png |
 | ULES00600 (pack di base) | textures.ini | 1 | 2.59 |  |
 | ULES00600 (pack di base) | ui/ | 331 | 22.3 | cardalbum, deckedit, duels, horizontal_bar_black.png, horizontal_bar_red.png, horizontal_bar_silver.png, horizontal_bar_yellow.png, janken.png, limited.png, loading ... |
-| ULES00600 (pack di base) | ui_it/ | 113 | 9.8 | fogli_icone, fogli_icone.ini, lettere_esito, lettere_esito.ini, menu_liste, menu_liste.ini, schede_deck, schede_deck.ini, schede_ricette, schede_ricette.ini ... |
+| ULES00600 (pack di base) | ui_it/ | 113 | 9.8 | icon_sheets, icon_sheets.ini, result_letters, result_letters.ini, menu_lists, menu_lists.ini, deck_screens, deck_screens.ini, recipe_screens, recipe_screens.ini ... |
 | ULES00600 (pack di base) | upscale_extra/ | 1192 | 55.8 | 00085186.png, 00162f3c.png, 003fd929.png, 0047e8d4.png, 00b99210.png, 00c5c424.png, 01673953.png, 01692dff.png, 01f7d8fe.png, 01faa502.png ... |
 | moduli/en | cards/ | 174 | 30.7 | frame, large_en, small_en |
 | moduli/en | en.ini | 1 | 0.0 |  |
 | moduli/en | intro/ | 2 | 0.4 | title_screen |
-| moduli/en | ui_en/ | 50 | 3.5 | fogli_icone, fogli_icone.ini, lettere_esito, lettere_esito.ini, menu_liste, menu_liste.ini, schede_deck, schede_deck.ini, schede_ricette, schede_ricette.ini ... |
+| moduli/en | ui_en/ | 50 | 3.5 | icon_sheets, icon_sheets.ini, result_letters, result_letters.ini, menu_lists, menu_lists.ini, deck_screens, deck_screens.ini, recipe_screens, recipe_screens.ini ... |
 
 Ogni lingua tranne l'italiano e' un **modulo** (`PSP/TEXTURES/modules/en`) da comporre sopra il pack di base con `tools/compose_pack.py BASE MODULI CARD_DIR OUT en [--copia]`: copia il base e **solo** le cartelle `cards`, `intro` e `ui_en` del modulo (hard link o copia), poi `module_ini.py` riscrive i `textures.ini`: le righe delle carte localizzate puntano a `cards/small_en`/`large_en` e le righe di `en.ini` **sostituiscono** quelle del base con la stessa chiave (hash).
 
@@ -510,7 +510,7 @@ Ogni lingua tranne l'italiano e' un **modulo** (`PSP/TEXTURES/modules/en`) da co
 | `shop` | negozio, pacchetti, stanze |
 | `ui` | interfaccia HD inglese di MikeyMK (per tutte le lingue con gli stessi hash) |
 | `upscale_extra` | texture non coperte dal pack, ingrandite 4x con xBRZ (1.192 file, ~56 MB; a risoluzione 4x/Auto lo shader 4xBRZ di PPSSPP e' spento): include le varianti di `card_icon03` di en/fr/de/es |
-| `_SCEGLI LO STILE DELLE CARTE` | 3 `textures.ini` alternativi (mikeymk, official_english, official_japanese): copiare uno al posto di `textures.ini` per cambiare lo stile delle carte |
+| `_CHOOSE YOUR CARD STYLE` | 3 `textures.ini` alternativi (mikeymk, official_english, official_japanese): copiare uno al posto di `textures.ini` per cambiare lo stile delle carte |
 
 ## B2. Immagini delle carte
 
@@ -522,16 +522,16 @@ Tipografia: spazio non separabile prima di `: ; ! ?` e virgolette « ».
 
 ## B3. Interfaccia HD in inglese (`ui_en`)
 
-**43 texture** (`docs/changes_en/ui_textures.csv`: file, hash PPSSPP, famiglia, script, dimensioni originale/HD, neutra/specifica, origine nella ISO). Per famiglia: fogli_icone 3, lettere_esito 4, menu_liste 2, schede_deck 14, schede_ricette 11, schermata_vs 3, tutorial 6. Di queste 0 sono neutre (stesso hash in tutte le lingue) e 43 specifiche. Ogni famiglia ha uno script in `tools/ui_textures/<famiglia>.py` (lettura `TF1_LANG`): ridisegna le scritte texture per texture partendo dall'originale a bassa risoluzione della ISO e dallo stile del pack inglese; stessa area e stesse posizioni (il gioco ritaglia da rettangoli fissi); un font/peso/linea di base/ombra per scritta; font liberi (`alt_font.py`).
+**43 texture** (`docs/changes_en/ui_textures.csv`: file, hash PPSSPP, famiglia, script, dimensioni originale/HD, neutra/specifica, origine nella ISO). Per famiglia: icon_sheets 3, result_letters 4, menu_lists 2, deck_screens 14, recipe_screens 11, vs_screen 3, tutorial 6. Di queste 0 sono neutre (stesso hash in tutte le lingue) e 43 specifiche. Ogni famiglia ha uno script in `tools/ui_textures/<famiglia>.py` (lettura `TF1_LANG`): ridisegna le scritte texture per texture partendo dall'originale a bassa risoluzione della ISO e dallo stile del pack inglese; stessa area e stesse posizioni (il gioco ritaglia da rettangoli fissi); un font/peso/linea di base/ombra per scritta; font liberi (`alt_font.py`).
 
 | famiglia | texture | script | archivio ISO sorgente | testi della lingua |
 |---|---|---|---|---|
-| fogli_icone | 3 | `tools/ui_textures/icon_sheets.py` | deck/all_e.ehp, shop/all_e.ehp, field/always_* | `icon04` (pixel europei sul foglio USA), `panel` (frammento `ased` della linguetta), `pda_pack01` (colonna NEW) |
-| lettere_esito | 4 | `tools/ui_textures/result_letters.py` | duel/basic_ee.ehp | tessere `D R A W` della schermata dei risultati (`result_e`) e del banner (`basic_be`): stesso hash, 4 file |
-| menu_liste | 2 | `tools/ui_textures/menu_lists.py` | title_menu/title_menu_e.ehp, duel/result/result_e.ehp, field/always_bri_<cod>.ehp | `result_e__menu01` (WIN/DRAW/LOSE e icone), `title_menu_e__m_menu_title01` (MAIN MENU · ENTER NAME · DOWNLOADED CARD LIST · DUEL PUZZLE · OPTIONS · LANGUAGE SETTINGS) |
-| schede_deck | 14 | `tools/ui_textures/deck_screens.py` | deck/all_e.ehp, labo/*.ehp, shop/all_e.ehp | linguette Trunk, Rental, Lab, Converter; `Card types in possession`; `Purchased Cards` / `Card Types Purche`; barra dorata; tasto ENTER |
-| schede_ricette | 11 | `tools/ui_textures/recipe_screens.py` | deck/recipe_view_e.ehp, title_menu/title_menu_e.ehp, database/limitlist.ehp | Character, User, Downloaded Recipes, Character Recipes, User Recipes, Limited, Semi-Limited, Forbidden, Trade |
-| schermata_vs | 3 | `tools/ui_textures/vs_screen.py` | duel/start/start_e.ehp (membri _e), start_all.ehp, start_e.ehp | `2nd round`, `3rd round`, foglio distintivi `1st PLAYER` / `2nd PLAYER` / `PLAYER` |
+| icon_sheets | 3 | `tools/ui_textures/icon_sheets.py` | deck/all_e.ehp, shop/all_e.ehp, field/always_* | `icon04` (pixel europei sul foglio USA), `panel` (frammento `ased` della linguetta), `pda_pack01` (colonna NEW) |
+| result_letters | 4 | `tools/ui_textures/result_letters.py` | duel/basic_ee.ehp | tessere `D R A W` della schermata dei risultati (`result_e`) e del banner (`basic_be`): stesso hash, 4 file |
+| menu_lists | 2 | `tools/ui_textures/menu_lists.py` | title_menu/title_menu_e.ehp, duel/result/result_e.ehp, field/always_bri_<cod>.ehp | `result_e__menu01` (WIN/DRAW/LOSE e icone), `title_menu_e__m_menu_title01` (MAIN MENU · ENTER NAME · DOWNLOADED CARD LIST · DUEL PUZZLE · OPTIONS · LANGUAGE SETTINGS) |
+| deck_screens | 14 | `tools/ui_textures/deck_screens.py` | deck/all_e.ehp, labo/*.ehp, shop/all_e.ehp | linguette Trunk, Rental, Lab, Converter; `Card types in possession`; `Purchased Cards` / `Card Types Purche`; barra dorata; tasto ENTER |
+| recipe_screens | 11 | `tools/ui_textures/recipe_screens.py` | deck/recipe_view_e.ehp, title_menu/title_menu_e.ehp, database/limitlist.ehp | Character, User, Downloaded Recipes, Character Recipes, User Recipes, Limited, Semi-Limited, Forbidden, Trade |
+| vs_screen | 3 | `tools/ui_textures/vs_screen.py` | duel/start/start_e.ehp (membri _e), start_all.ehp, start_e.ehp | `2nd round`, `3rd round`, foglio distintivi `1st PLAYER` / `2nd PLAYER` / `PLAYER` |
 | tutorial | 6 | `tools/ui_textures/tutorial.py` | tutorial/tutorial_e.ehp (tuto_duelimg01..06) | dialogo `Your opponent has declared battle. Activate the effect of a card?` (YES/NO) e 5 carte-esempio con il testo del gioco |
 
 Regole di qualita' (valgono per ogni lingua): lettere regolari, mai deformate una per una; stessa area dell'originale; niente sfocature; il testo e' quello dell'originale della lingua (si correggono solo errori evidenti: residui di altre lingue, accenti); pixel art **non** levigata senza conferma; geometrie sempre misurate sull'originale.
@@ -544,43 +544,43 @@ Tabella letta a occhio, texture per texture: `docs/changes_en/texture_texts_en.m
 
 | file nel pack | hash | famiglia | originale px | HD px | tipo | origine ISO |
 |---|---|---|---|---|---|---|
-| ui_en/fogli_icone/all_e__icon04.png | a51fdf03 | fogli_icone | 128x128 | 512x512 | SPECIFICA | deck/all_e.ehp:icon04.gim |
-| ui_en/fogli_icone/all_e__panel.png | 4301b477 | fogli_icone | 256x256 | 1024x1024 | SPECIFICA | shop/all_e.ehp:panel.gim |
-| ui_en/fogli_icone/always_bri_eng__pda_pack01.png | 180fee24 | fogli_icone | 512x256 | 2048x1024 | SPECIFICA | field/always_bri_eng.ehp:pda_pack01.gim; field/always_bri_fra.ehp:pda_pack01.gim; field/always_bri_spa.ehp:pda_pack01.gim |
-| ui_en/lettere_esito/basic_be__duel_draw100002.png | b4fda5d3 | lettere_esito | 64x64 | 256x256 | SPECIFICA | duel/basic_be.ehp:duel_draw100002.gim; duel/basic_fe.ehp:duel_draw100002.gim; duel/basic_ge.ehp:duel_draw100002.gim |
-| ui_en/lettere_esito/basic_be__duel_draw100004.png | 2973446a | lettere_esito | 64x64 | 256x256 | SPECIFICA | duel/basic_be.ehp:duel_draw100004.gim; duel/basic_fe.ehp:duel_draw100004.gim; duel/basic_ge.ehp:duel_draw100004.gim |
-| ui_en/lettere_esito/basic_be__duel_draw100006.png | 4b73998e | lettere_esito | 64x64 | 256x256 | SPECIFICA | duel/basic_be.ehp:duel_draw100006.gim; duel/basic_fe.ehp:duel_draw100006.gim; duel/basic_ge.ehp:duel_draw100006.gim |
-| ui_en/lettere_esito/basic_be__duel_draw100008.png | f720182b | lettere_esito | 64x64 | 256x256 | SPECIFICA | duel/basic_be.ehp:duel_draw100008.gim; duel/basic_fe.ehp:duel_draw100008.gim; duel/basic_ge.ehp:duel_draw100008.gim |
-| ui_en/menu_liste/result_e__menu01.png | b602d300 | menu_liste | 256x64 | 1024x256 | SPECIFICA | duel/result/result_e.ehp:menu01.gim; duel/result/result_j.ehp:menu01.gim |
-| ui_en/menu_liste/title_menu_e__m_menu_title01.png | 1d377d3b | menu_liste | 256x128 | 1024x512 | SPECIFICA | title_menu/title_menu_e.ehp:m_menu_title01.gim |
-| ui_en/schede_deck/all_e__d_window00008.png | 92c07948 | schede_deck | 128x32 | 512x128 | SPECIFICA | deck/all_e.ehp:d_window00008.gim |
-| ui_en/schede_deck/all_e__d_window00033.png | 4400d119 | schede_deck | 256x32 | 1024x128 | SPECIFICA | deck/all_e.ehp:d_window00033.gim |
-| ui_en/schede_deck/all_e__d_window00051.png | b7e9dc1a | schede_deck | 64x32 | 256x128 | SPECIFICA | deck/all_e.ehp:d_window00051.gim |
-| ui_en/schede_deck/all_e__d_window00062.png | 61dffec6 | schede_deck | 128x32 | 512x128 | SPECIFICA | deck/all_e.ehp:d_window00062.gim; labo/conv_machine.ehp:window_e0016.gim; title_menu/title_menu_e.ehp:t_window0015.gim |
-| ui_en/schede_deck/all_e__d_window00101.png | 082a50da | schede_deck | 64x32 | 256x128 | SPECIFICA | deck/all_e.ehp:d_window00101.gim; labo/rental.ehp:window_e0008.gim |
-| ui_en/schede_deck/all_e__tab_title.png | 80de9436 | schede_deck | 256x32 | 1024x128 | SPECIFICA | shop/all_e.ehp:tab_title.gim |
-| ui_en/schede_deck/conv_machine__window_e0009.png | 9c07916c | schede_deck | 128x32 | 512x128 | SPECIFICA | labo/conv_machine.ehp:window_e0009.gim; labo/conv_machine.ehp:window_e0026.gim |
-| ui_en/schede_deck/conv_machine__window_e0016.png | 61dffec6 | schede_deck | 128x32 | 512x128 | SPECIFICA | deck/all_e.ehp:d_window00062.gim; labo/conv_machine.ehp:window_e0016.gim; title_menu/title_menu_e.ehp:t_window0015.gim |
-| ui_en/schede_deck/conv_machine__window_e0022.png | cad9bed1 | schede_deck | 256x32 | 1024x128 | SPECIFICA | labo/conv_machine.ehp:window_e0022.gim; labo/rental.ehp:window_e0021.gim; title_menu/title_menu_e.ehp:t_window0021.gim |
-| ui_en/schede_deck/conv_machine__window_e0026.png | 9c07916c | schede_deck | 128x32 | 512x128 | SPECIFICA | labo/conv_machine.ehp:window_e0009.gim; labo/conv_machine.ehp:window_e0026.gim |
-| ui_en/schede_deck/password__key_e0027.png | 80e78a95 | schede_deck | 128x32 | 512x128 | SPECIFICA | labo/password.ehp:key_e0027.gim; labo/password.ehp:key_j0027.gim |
-| ui_en/schede_deck/rental__window_e0008.png | 082a50da | schede_deck | 64x32 | 256x128 | SPECIFICA | deck/all_e.ehp:d_window00101.gim; labo/rental.ehp:window_e0008.gim |
-| ui_en/schede_deck/rental__window_e0015.png | 93c88910 | schede_deck | 128x32 | 512x128 | SPECIFICA | labo/rental.ehp:window_e0015.gim |
-| ui_en/schede_deck/rental__window_e0026.png | 4fa2b5e3 | schede_deck | 64x32 | 256x128 | SPECIFICA | labo/rental.ehp:window_e0026.gim |
-| ui_en/schede_ricette/limitlist__window_e0002.png | c1e2ff0d | schede_ricette | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_e0002.gim |
-| ui_en/schede_ricette/limitlist__window_e0004.png | 6f593093 | schede_ricette | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_e0004.gim |
-| ui_en/schede_ricette/limitlist__window_e0012.png | 5e3bc044 | schede_ricette | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_e0012.gim |
-| ui_en/schede_ricette/recipe_view_e__recipe010008.png | 72966f8d | schede_ricette | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010008.gim; title_menu/title_menu_e.ehp:recipe_sel00002.gim |
-| ui_en/schede_ricette/recipe_view_e__recipe010015.png | 4efbece8 | schede_ricette | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010015.gim; title_menu/title_menu_e.ehp:recipe_sel00009.gim |
-| ui_en/schede_ricette/recipe_view_e__recipe010027.png | 4d84d0c5 | schede_ricette | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010027.gim; title_menu/title_menu_e.ehp:recipe_sel00020.gim |
-| ui_en/schede_ricette/recipe_view_e__recipe010029.png | e2538eef | schede_ricette | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010029.gim; title_menu/title_menu_e.ehp:recipe_sel00022.gim |
-| ui_en/schede_ricette/recipe_view_e__recipe010031.png | 6ca29a28 | schede_ricette | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010031.gim; title_menu/title_menu_e.ehp:recipe_sel00024.gim |
-| ui_en/schede_ricette/title_menu_e__recipe_sel00033.png | 96fe0ef6 | schede_ricette | 128x32 | 512x128 | SPECIFICA | title_menu/title_menu_e.ehp:recipe_sel00033.gim |
-| ui_en/schede_ricette/title_menu_e__t_window0008.png | 05ec86c0 | schede_ricette | 64x32 | 256x128 | SPECIFICA | title_menu/title_menu_e.ehp:t_window0008.gim |
-| ui_en/schede_ricette/title_menu_e__t_window0026.png | 45902d92 | schede_ricette | 64x32 | 256x128 | SPECIFICA | title_menu/title_menu_e.ehp:t_window0026.gim |
-| ui_en/schermata_vs/start_e__d_menu01_e.png | 905aa050 | schermata_vs | 256x256 | 1024x1024 | SPECIFICA | duel/start/start_e.ehp:d_menu01_e.gim; duel/start/start_f.ehp:d_menu01_e.gim; duel/start/start_g.ehp:d_menu01_e.gim |
-| ui_en/schermata_vs/start_e__vs_much2_e0001.png | 7b22a421 | schermata_vs | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much2_e0001.gim; duel/start/start_e.ehp:vs_much2_e0001.gim; duel/start/start_f.ehp:vs_much2_e0001.gim |
-| ui_en/schermata_vs/start_e__vs_much3_e0001.png | e71966a5 | schermata_vs | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much3_e0001.gim; duel/start/start_e.ehp:vs_much3_e0001.gim; duel/start/start_f.ehp:vs_much3_e0001.gim |
+| ui_en/icon_sheets/all_e__icon04.png | a51fdf03 | icon_sheets | 128x128 | 512x512 | SPECIFICA | deck/all_e.ehp:icon04.gim |
+| ui_en/icon_sheets/all_e__panel.png | 4301b477 | icon_sheets | 256x256 | 1024x1024 | SPECIFICA | shop/all_e.ehp:panel.gim |
+| ui_en/icon_sheets/always_bri_eng__pda_pack01.png | 180fee24 | icon_sheets | 512x256 | 2048x1024 | SPECIFICA | field/always_bri_eng.ehp:pda_pack01.gim; field/always_bri_fra.ehp:pda_pack01.gim; field/always_bri_spa.ehp:pda_pack01.gim |
+| ui_en/result_letters/basic_be__duel_draw100002.png | b4fda5d3 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_be.ehp:duel_draw100002.gim; duel/basic_fe.ehp:duel_draw100002.gim; duel/basic_ge.ehp:duel_draw100002.gim |
+| ui_en/result_letters/basic_be__duel_draw100004.png | 2973446a | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_be.ehp:duel_draw100004.gim; duel/basic_fe.ehp:duel_draw100004.gim; duel/basic_ge.ehp:duel_draw100004.gim |
+| ui_en/result_letters/basic_be__duel_draw100006.png | 4b73998e | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_be.ehp:duel_draw100006.gim; duel/basic_fe.ehp:duel_draw100006.gim; duel/basic_ge.ehp:duel_draw100006.gim |
+| ui_en/result_letters/basic_be__duel_draw100008.png | f720182b | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_be.ehp:duel_draw100008.gim; duel/basic_fe.ehp:duel_draw100008.gim; duel/basic_ge.ehp:duel_draw100008.gim |
+| ui_en/menu_lists/result_e__menu01.png | b602d300 | menu_lists | 256x64 | 1024x256 | SPECIFICA | duel/result/result_e.ehp:menu01.gim; duel/result/result_j.ehp:menu01.gim |
+| ui_en/menu_lists/title_menu_e__m_menu_title01.png | 1d377d3b | menu_lists | 256x128 | 1024x512 | SPECIFICA | title_menu/title_menu_e.ehp:m_menu_title01.gim |
+| ui_en/deck_screens/all_e__d_window00008.png | 92c07948 | deck_screens | 128x32 | 512x128 | SPECIFICA | deck/all_e.ehp:d_window00008.gim |
+| ui_en/deck_screens/all_e__d_window00033.png | 4400d119 | deck_screens | 256x32 | 1024x128 | SPECIFICA | deck/all_e.ehp:d_window00033.gim |
+| ui_en/deck_screens/all_e__d_window00051.png | b7e9dc1a | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_e.ehp:d_window00051.gim |
+| ui_en/deck_screens/all_e__d_window00062.png | 61dffec6 | deck_screens | 128x32 | 512x128 | SPECIFICA | deck/all_e.ehp:d_window00062.gim; labo/conv_machine.ehp:window_e0016.gim; title_menu/title_menu_e.ehp:t_window0015.gim |
+| ui_en/deck_screens/all_e__d_window00101.png | 082a50da | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_e.ehp:d_window00101.gim; labo/rental.ehp:window_e0008.gim |
+| ui_en/deck_screens/all_e__tab_title.png | 80de9436 | deck_screens | 256x32 | 1024x128 | SPECIFICA | shop/all_e.ehp:tab_title.gim |
+| ui_en/deck_screens/conv_machine__window_e0009.png | 9c07916c | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/conv_machine.ehp:window_e0009.gim; labo/conv_machine.ehp:window_e0026.gim |
+| ui_en/deck_screens/conv_machine__window_e0016.png | 61dffec6 | deck_screens | 128x32 | 512x128 | SPECIFICA | deck/all_e.ehp:d_window00062.gim; labo/conv_machine.ehp:window_e0016.gim; title_menu/title_menu_e.ehp:t_window0015.gim |
+| ui_en/deck_screens/conv_machine__window_e0022.png | cad9bed1 | deck_screens | 256x32 | 1024x128 | SPECIFICA | labo/conv_machine.ehp:window_e0022.gim; labo/rental.ehp:window_e0021.gim; title_menu/title_menu_e.ehp:t_window0021.gim |
+| ui_en/deck_screens/conv_machine__window_e0026.png | 9c07916c | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/conv_machine.ehp:window_e0009.gim; labo/conv_machine.ehp:window_e0026.gim |
+| ui_en/deck_screens/password__key_e0027.png | 80e78a95 | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/password.ehp:key_e0027.gim; labo/password.ehp:key_j0027.gim |
+| ui_en/deck_screens/rental__window_e0008.png | 082a50da | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_e.ehp:d_window00101.gim; labo/rental.ehp:window_e0008.gim |
+| ui_en/deck_screens/rental__window_e0015.png | 93c88910 | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/rental.ehp:window_e0015.gim |
+| ui_en/deck_screens/rental__window_e0026.png | 4fa2b5e3 | deck_screens | 64x32 | 256x128 | SPECIFICA | labo/rental.ehp:window_e0026.gim |
+| ui_en/recipe_screens/limitlist__window_e0002.png | c1e2ff0d | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_e0002.gim |
+| ui_en/recipe_screens/limitlist__window_e0004.png | 6f593093 | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_e0004.gim |
+| ui_en/recipe_screens/limitlist__window_e0012.png | 5e3bc044 | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_e0012.gim |
+| ui_en/recipe_screens/recipe_view_e__recipe010008.png | 72966f8d | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010008.gim; title_menu/title_menu_e.ehp:recipe_sel00002.gim |
+| ui_en/recipe_screens/recipe_view_e__recipe010015.png | 4efbece8 | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010015.gim; title_menu/title_menu_e.ehp:recipe_sel00009.gim |
+| ui_en/recipe_screens/recipe_view_e__recipe010027.png | 4d84d0c5 | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010027.gim; title_menu/title_menu_e.ehp:recipe_sel00020.gim |
+| ui_en/recipe_screens/recipe_view_e__recipe010029.png | e2538eef | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010029.gim; title_menu/title_menu_e.ehp:recipe_sel00022.gim |
+| ui_en/recipe_screens/recipe_view_e__recipe010031.png | 6ca29a28 | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_e.ehp:recipe010031.gim; title_menu/title_menu_e.ehp:recipe_sel00024.gim |
+| ui_en/recipe_screens/title_menu_e__recipe_sel00033.png | 96fe0ef6 | recipe_screens | 128x32 | 512x128 | SPECIFICA | title_menu/title_menu_e.ehp:recipe_sel00033.gim |
+| ui_en/recipe_screens/title_menu_e__t_window0008.png | 05ec86c0 | recipe_screens | 64x32 | 256x128 | SPECIFICA | title_menu/title_menu_e.ehp:t_window0008.gim |
+| ui_en/recipe_screens/title_menu_e__t_window0026.png | 45902d92 | recipe_screens | 64x32 | 256x128 | SPECIFICA | title_menu/title_menu_e.ehp:t_window0026.gim |
+| ui_en/vs_screen/start_e__d_menu01_e.png | 905aa050 | vs_screen | 256x256 | 1024x1024 | SPECIFICA | duel/start/start_e.ehp:d_menu01_e.gim; duel/start/start_f.ehp:d_menu01_e.gim; duel/start/start_g.ehp:d_menu01_e.gim |
+| ui_en/vs_screen/start_e__vs_much2_e0001.png | 7b22a421 | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much2_e0001.gim; duel/start/start_e.ehp:vs_much2_e0001.gim; duel/start/start_f.ehp:vs_much2_e0001.gim |
+| ui_en/vs_screen/start_e__vs_much3_e0001.png | e71966a5 | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much3_e0001.gim; duel/start/start_e.ehp:vs_much3_e0001.gim; duel/start/start_f.ehp:vs_much3_e0001.gim |
 | ui_en/tutorial/tutorial_e__tuto_duelimg01.png | 5fb78e9f | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_e.ehp:tuto_duelimg01.gim |
 | ui_en/tutorial/tutorial_e__tuto_duelimg02.png | 0a1af418 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_e.ehp:tuto_duelimg02.gim |
 | ui_en/tutorial/tutorial_e__tuto_duelimg03.png | 57602964 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_e.ehp:tuto_duelimg03.gim |
@@ -589,7 +589,7 @@ Tabella letta a occhio, texture per texture: `docs/changes_en/texture_texts_en.m
 | ui_en/tutorial/tutorial_e__tuto_duelimg06.png | 7bbf6d19 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_e.ehp:tuto_duelimg06.gim |
 
 ### Texture inglesi che restano com'erano
-Le texture inglesi gia' coperte dal pack USA (stesso hash: 621) vengono da MikeyMK e non si toccano. Restano **ingrandite con xBRZ** (`upscale_extra`) o senza file (14, frammenti senza testo: si vedono come l'originale) le texture senza testo o comuni a tutte le lingue (le 4 tessere DRAW della schermata dei risultati sono ridisegnate in `lettere_esito`). 17 texture del pack italiano hanno lo stesso hash di quelle inglesi (`ITA-SU-ING`): controllate una a una, sono senza testo. Elenco completo: `docs/changes_en/texture_inventory_en.txt`.
+Le texture inglesi gia' coperte dal pack USA (stesso hash: 621) vengono da MikeyMK e non si toccano. Restano **ingrandite con xBRZ** (`upscale_extra`) o senza file (14, frammenti senza testo: si vedono come l'originale) le texture senza testo o comuni a tutte le lingue (le 4 tessere DRAW della schermata dei risultati sono ridisegnate in `result_letters`). 17 texture del pack italiano hanno lo stesso hash di quelle inglesi (`ITA-SU-ING`): controllate una a una, sono senza testo. Elenco completo: `docs/changes_en/texture_inventory_en.txt`.
 
 ## B4. Il foglio dei numeri del duello (`card_icon03`)
 
@@ -599,7 +599,7 @@ Foglio unico con cifre LP, tempo, tasti e moltiplicatori; hash diverso per lingu
 - righe >= 181 (moltiplicatori x1..x12, icone, carte, frecce): dal foglio italiano gia' nel pack (`tools/data/card_icon03_base_it.png`);
 - le celle europee si incollano **solo nella loro fascia** di righe (altrimenti rovinano la parte alta delle cifre grandi).
 
-File: it -> `ui_it/scritte_duello/basic_ii__card_icon03.png` (hash 376925c7); fr -> `upscale_extra/3e5482fd.png`; en ee0c44c3; de ffe309a6; es 859eea2b. Anteprime in `confronti/icon03/`.
+File: it -> `ui_it/duel_texts/basic_ii__card_icon03.png` (hash 376925c7); fr -> `upscale_extra/3e5482fd.png`; en ee0c44c3; de ffe309a6; es 859eea2b. Anteprime in `confronti/icon03/`.
 
 ## B5. Targa del titolo
 

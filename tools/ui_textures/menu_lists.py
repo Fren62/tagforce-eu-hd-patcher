@@ -946,7 +946,7 @@ def calibrate(argv):
 def main(argv):
     if len(argv) > 5 and argv[4] == 'calibrate':
         return calibrate(argv)
-    fam = common.Family('menu_liste', argv)
+    fam = common.Family('menu_lists', argv)
     only = set(argv[4:])
     for d in LISTS:
         if not only or d['id'] in only:

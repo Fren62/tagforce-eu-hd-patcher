@@ -63,16 +63,12 @@ pub struct Entry {
     pub needs: Vec<String>,
 }
 
-/// Contents of `patch.json`. The JSON keys keep their original (Italian) names: they are part of the file format
-/// shared with the released tools, so they must not change.
+/// Contents of `patch.json`.
 #[derive(Deserialize)]
 pub struct PatchMeta {
-    #[serde(rename = "formato")]
     pub format: u32,
-    #[serde(rename = "lingua")]
     pub language: String,
     pub iso_md5: String,
-    #[serde(rename = "voci")]
     pub entries: Vec<Entry>,
 }
 

@@ -5,9 +5,6 @@ usage: build_texture_modules.py TEXTURES_DIR CARD_DIR OUT_DIR [LANGUAGE ...]
   CARD_DIR      PSP_GAME/USRDIR/card of the ISO (module_ini needs it for the card hashes)
 Extracted one over the other (first base.zip, then <language>.zip) they give the complete pack of that language: the files of the
 language overwrite those of the base and bring the already composed textures.ini. Uncompressed archives (the PNGs already are).
-
-The manifest keeps the legacy keys `formato` and `lingue` of the released v0.x manifests: the Rust patcher reads them.
-The folder `_SCEGLI LO STILE DELLE CARTE` ("choose the card style") is the name the users see in the PPSSPP texture pack, so it is kept.
 """
 import hashlib, json, os, re, sys, tempfile, zipfile
 
@@ -17,7 +14,7 @@ import module_ini
 
 LANGUAGES = ['it', 'fr', 'de', 'es', 'en']
 ITALIAN = ('cards/large_it', 'cards/small_it', 'cards/tiny_it', 'ui_it')   # in the installed base pack Italian is already inside
-STYLE_DIR = '_SCEGLI LO STILE DELLE CARTE'
+STYLE_DIR = '_CHOOSE YOUR CARD STYLE'
 
 
 def files(root, sub=None):
@@ -68,7 +65,7 @@ def main(tex, card_dir, out, languages):
 
     everything = files(base_dir)
     base = [(n, p) for n, p in everything if n not in inis and not is_italian(n) and n not in it_intro]
-    man = dict(formato=1, base=write_zip(os.path.join(out, 'base.zip'), base), lingue={})
+    man = dict(format=1, base=write_zip(os.path.join(out, 'base.zip'), base), languages={})
     print('base.zip', man['base']['size'] >> 20, 'MB')
     for l in languages:
         if l == 'it':
@@ -85,8 +82,8 @@ def main(tex, card_dir, out, languages):
                 entries.append((rel, dst))
         # a name present twice (base and module) goes once only in the language archive
         entries = list({n: p for n, p in entries}.items())
-        man['lingue'][l] = write_zip(os.path.join(out, f'{l}.zip'), entries)
-        print(l + '.zip', man['lingue'][l]['size'] >> 20, 'MB', len(entries), 'files')
+        man['languages'][l] = write_zip(os.path.join(out, f'{l}.zip'), entries)
+        print(l + '.zip', man['languages'][l]['size'] >> 20, 'MB', len(entries), 'files')
     json.dump(man, open(os.path.join(out, 'manifest.json'), 'w'), indent=1)
 
 

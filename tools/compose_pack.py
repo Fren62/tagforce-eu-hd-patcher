@@ -1,6 +1,6 @@
 """Composes a ULES00600 pack with the chosen languages: base pack + language modules + localized textures.ini.
 usage: compose_pack.py BASE MODULES CARD_DIR OUT LANGUAGE [LANGUAGE ...] [--copy]
-  BASE      base ULES00600 pack (cards/small, cards/large, ... textures.ini and _SCEGLI LO STILE DELLE CARTE/*/textures.ini)
+  BASE      base ULES00600 pack (cards/small, cards/large, ... textures.ini and _CHOOSE YOUR CARD STYLE/*/textures.ini)
   MODULES   folder with the modules (generate_language.py): MODULES/<language>/cards/..., MODULES/<language>/<language>.ini
   CARD_DIR  PSP_GAME/USRDIR/card of the ISO
   OUT       folder of the pack to create
@@ -45,8 +45,8 @@ for c in codes:
             n += 1
 print('file', n)
 inis = [('textures.ini', 'textures.ini')]
-for v in os.listdir(os.path.join(base, '_SCEGLI LO STILE DELLE CARTE')):
-    inis.append((f'_SCEGLI LO STILE DELLE CARTE/{v}/textures.ini',) * 2)
+for v in os.listdir(os.path.join(base, '_CHOOSE YOUR CARD STYLE')):
+    inis.append((f'_CHOOSE YOUR CARD STYLE/{v}/textures.ini',) * 2)
 for rel_in, rel_out in inis:
     dst = os.path.join(out, rel_out)
     os.makedirs(os.path.dirname(dst), exist_ok=True)

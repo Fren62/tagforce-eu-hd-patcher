@@ -127,11 +127,11 @@ for p, type, sa, sd in touched:
         if k in fa and k in fdz and bytes(fa[k]) == bytes(fdz[k]):
             continue
         if k.endswith('-ptrs.txt'):
-            others.append((p, k, 'tecnico: offset assoluti dei membri ricalcolati dopo la riscrittura di una tabella')); continue
+            others.append((p, k, 'technical: absolute member offsets recomputed after rewriting a table')); continue
         lg = language_di(p, k)
         if lg not in (LET,):
             if lg == '-':
-                others.append((p, k, 'membro modificato senza lingua riconoscibile'))
+                others.append((p, k, 'member modified without a recognizable language'))
             continue
         if k not in fa or k not in fdz:
             others.append((p, k, 'membro aggiunto/rimosso')); continue
@@ -142,10 +142,10 @@ for p, type, sa, sd in touched:
                 ha = hb = '?'
             imm.append((p, k, ha, hb)); continue
         if k.endswith('-ptrs.txt'):
-            others.append((p, k, 'tecnico: offset assoluti dei membri ricalcolati dopo la riscrittura di una tabella')); continue
+            others.append((p, k, 'technical: absolute member offsets recomputed after rewriting a table')); continue
         ta, tb = tab_ok(bytes(fa[k])), tab_ok(bytes(fdz[k]))
         if ta is None or tb is None or len(ta) != len(tb):
-            others.append((p, k, 'binario/tabella non confrontabile (modificato)')); continue
+            others.append((p, k, 'binary/table not comparable (modified)')); continue
         isf = re.match(r'(02)?chr_wordstbl_', k)
         for i, (x, y) in enumerate(zip(ta, tb)):
             if x != y:
@@ -161,22 +161,22 @@ def csv_w(name, header, rows):
             w.writerow([nl(x) for x in r])
 
 
-csv_w('cards.csv', ['id', 'nome (originale)', 'campo', 'originale', 'nuovo'], cards)
-csv_w('dialogues.csv', ['id scena#riga', 'originale', 'nuovo', 'inglese', 'giapponese'], dial)
+csv_w('cards.csv', ['id', 'name (original)', 'campo', 'original', 'new'], cards)
+csv_w('dialogues.csv', ['id scene#line', 'original', 'new', 'inglese', 'giapponese'], dial)
 # duel sentences: one row per unique sentence (the same sentence appears in dozens of archives)
 unique = collections.OrderedDict()
 for p, k, i, x, y in sentences:
     e = unique.setdefault((x, y), [])
     e.append(os.path.basename(p))
-csv_w('duel_lines.csv', ['originale', 'nuovo', 'occorrenze (voci in archivi)', 'esempi di archivio'],
+csv_w('duel_lines.csv', ['original', 'new', 'occorrenze (voci in archivi)', 'esempi di archivio'],
       [(x, y, len(v), ', '.join(sorted(set(v))[:4])) for (x, y), v in unique.items()])
 ug = collections.OrderedDict()
 for p, k, i, x, y in strs:
     ug.setdefault((k, i, x, y), []).append(p.replace('/PSP_GAME/USRDIR/', ''))
-csv_w('ui_strings.csv', ['membro', 'indice (0-based)', 'originale', 'nuovo', 'archivi in cui compare (stessa tabella copiata)'],
+csv_w('ui_strings.csv', ['membro', 'indice (0-based)', 'original', 'new', 'archivi in cui compare (stessa tabella copiata)'],
       [(k, i, x, y, '; '.join(v)) for (k, i, x, y), v in ug.items()])
-csv_w('iso_images.csv', ['archivio', 'membro', 'hash originale', 'hash nuovo'], imm)
-csv_w('touched_files.csv', ['percorso nella ISO', 'tipo', 'byte originale', 'byte nuovo'], touched)
+csv_w('iso_images.csv', ['archivio', 'membro', 'original hash', 'new hash'], imm)
+csv_w('touched_files.csv', ['path in the ISO', 'tipo', 'original bytes', 'new bytes'], touched)
 csv_w('other.csv', ['archivio', 'membro', 'nota'], others)
 
 summary = dict(language=L, cards=len(cards), cards_unique=len({c[0] for c in cards}), dialogues=len(dial), sentences_entries=len(sentences), sentences_unique=len(unique),

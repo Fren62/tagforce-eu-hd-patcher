@@ -23,10 +23,10 @@ struct IsoArgs {
     /// output ISO (not needed with --dry-run)
     #[arg(long)]
     out: Option<PathBuf>,
-    /// do not apply the card corrections
+    /// do not apply the card text re-adaptations and corrections
     #[arg(long)]
     no_cards: bool,
-    /// do not apply the corrections to dialogues, in-duel lines and interface texts
+    /// do not apply the re-adapted and corrected dialogues, in-duel lines and interface texts
     #[arg(long)]
     no_text: bool,
     /// keep the other languages in the ISO (and the language selection screen)

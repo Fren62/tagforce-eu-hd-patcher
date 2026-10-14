@@ -1,313 +1,313 @@
-# MODIFICHE PER LA VERSIONE POMODORO MISTICO IN TEDESCO
+# CHANGES OF THE MYSTIC TOMATO VERSION FOR GERMAN
 
-Documento **completo** di tutto cio' che la "Versione Pomodoro Mistico" cambia per il tedesco: (A) le modifiche **dirette alla ISO**, (B) il **texture pack** (com'e' fatto, cosa contiene, come si compone), (C) le scelte editoriali, (D) cosa e' verificato in gioco e cosa no, (E) come rigenerare tutto.
+**Complete** document of everything the "Mystic Tomato Version" changes for german: (A) the **direct changes to the ISO**, (B) the **texture pack** (how it is made, what it contains, how it is composed), (C) the editorial choices, (D) what has been verified in game and what has not, (E) how to regenerate everything.
 
-**Questo file e' generato** da `tools/analysis/write_changes_document.py de` a partire dai dati reali: confronto byte per byte tra la ISO originale `PSP/GAME/ULES00600_YuGiOh_GX_TagForce_EUR.iso` e la ISO corretta `..._definitiva.iso` (`document_changes.py`) e scansione del pack (`document_pack.py`). Gli elenchi riga per riga stanno in `docs/changes_de/*.csv` (separatore `;`, UTF-8 con BOM, a capo come `⏎`): sono la **lista esatta** di ogni cambiamento. Rigenera tutto dopo ogni modifica.
+**This file is generated** by `tools/analysis/write_changes_document.py de` from the real data: byte-by-byte comparison between the original ISO `PSP/GAME/ULES00600_YuGiOh_GX_TagForce_EUR.iso` and the corrected ISO `..._definitiva.iso` (`document_changes.py`) and a scan of the pack (`document_pack.py`). The row-by-row lists are in `docs/changes_de/*.csv` (`;` separator, UTF-8 with BOM, line breaks as `⏎`): they are the **exact list** of every change. Regenerate everything after each modification.
 
-Per il metodo generale e per le altre lingue: `docs/NEW_LANGUAGE_GUIDE.md`; dettagli tecnici degli script: `TUTORIAL.md`; decisioni: `docs/EDITORIAL_CHOICES.md`; texture neutre/specifiche: `docs/TEXTURE_INVENTORY.md`.
+For the general method and for the other languages: `docs/NEW_LANGUAGE_GUIDE.md`; technical details of the scripts: `docs/TUTORIAL.md`; decisions: `docs/EDITORIAL_CHOICES.md`; neutral/specific textures: `docs/TEXTURE_INVENTORY.md`.
 
-## Indice
-- A. Modifiche alla ISO: A1 panoramica · A2 carte · A3 dialoghi · A4 frasi dei duelli · A5 stringhe dell'interfaccia · A6 etichetta Magia/Trappola · A7 file toccati e dettagli tecnici · A8 cosa non si puo' cambiare
-- B. Texture pack: B1 provenienza e struttura · B2 immagini delle carte · B3 interfaccia HD (`ui_de`) · B4 foglio numeri (`card_icon03`) · B5 targa del titolo · B6 textures.ini e composizione · B7 installazione
-- C. Scelte editoriali · D. Verifica in gioco · E. Come rigenerare · F. Limiti e punti aperti
+## Index
+- A. Changes to the ISO: A1 overview · A2 cards · A3 dialogues · A4 duel sentences · A5 interface strings · A6 Spell/Trap label · A7 touched files and technical details · A8 what cannot be changed
+- B. Texture pack: B1 origin and structure · B2 card images · B3 HD interface (`ui_de`) · B4 number sheet (`card_icon03`) · B5 title plate · B6 textures.ini and composition · B7 installation
+- C. Editorial choices · D. In-game verification · E. How to regenerate · F. Limits and open points
 
 ---
 
-# A. MODIFICHE ALLA ISO
+# A. CHANGES TO THE ISO
 
-## A1. Panoramica
+## A1. Overview
 
-La ISO originale **non viene mai modificata**. `tools/corrections/apply_to_iso.py ISO_ORIG ISO_OUT [lingue]` ne crea una copia in cui alcuni archivi `.ehp` sono riscritti. Se un archivio cresce (testo piu' lungo) viene **rimesso in fondo alla ISO** in un nuovo settore e il suo voce nella directory ISO9660 viene riassegnata (`pycdlib`); la ISO `_definitiva` pesa per questo ~909 MB (l'originale ~761 MB). **Lanciarlo sempre senza elenco di lingue (o con tutte)**: con una lingua sola sovrascrive le altre.
+The original ISO is **never modified**. `tools/corrections/apply_to_iso.py ISO_ORIG ISO_OUT [languages]` creates a copy in which some `.ehp` archives are rewritten. If an archive grows (longer text) it is **put again at the end of the ISO** in a new sector and its entry in the ISO9660 directory is reassigned (`pycdlib`); for this reason the `_definitiva` ISO weighs ~909 MB (the original ~761 MB). **Always run it without a list of languages (or with all of them)**: with a single language it overwrites the others.
 
-| Cosa | Quantita' (derivata dal confronto ISO) | Dove sta il dato | File CSV |
+| What | Quantity (derived from the ISO comparison) | Where the data lives | CSV file |
 |---|---|---|---|
-| Carte con testo cambiato (nome e/o descrizione) | 258 carte (258 campi) | `tools/data/card_corrections_de.json` da `correzioni/rules_de.py` | cards.csv |
-| Righe di dialogo della storia | 1649 righe | `tools/data/dialogue_touchups_de.json` (+ base) | dialogues.csv |
-| Frasi dei duellanti nei duelli | 40 frasi uniche (66 voci in tutti gli archivi) | `tools/data/duel_line_corrections_de.json` | duel_lines.csv |
-| Stringhe dell'interfaccia (aiuti, schede, record, tutorial, menu...) | 581 stringhe uniche (1426 voci, 55 archivi) | `correzioni/string_rules_de.py` + `dati/ui_texts.json` | ui_strings.csv |
-| Immagini sostituite dentro la ISO | 6 (etichetta [CARTA MAGIA/TRAPPOLA] della carta grande) | `apply_to_iso.py` (copia `card_spell_trap.gim` della lingua) | iso_images.csv |
-| File della ISO toccati (archivi `.ehp`) | 179 | - | touched_files.csv |
-| Altre differenze tecniche (offset ricalcolati) | 254 | - | other.csv |
+| Cards with changed text (name and/or description) | 258 cards (258 fields) | `tools/data/card_corrections_de.json` from `tools/corrections/rules_de.py` | cards.csv |
+| Story dialogue lines | 1649 lines | `tools/data/dialogue_touchups_de.json` (+ base) | dialogues.csv |
+| Duelist sentences in duels | 40 unique sentences (66 entries in all the archives) | `tools/data/duel_line_corrections_de.json` | duel_lines.csv |
+| Interface strings (help, cards, records, tutorial, menus...) | 581 unique strings (1426 entries, 55 archives) | `tools/corrections/string_rules_de.py` + `tools/data/ui_texts.json` | ui_strings.csv |
+| Images replaced inside the ISO | 6 ([SPELL CARD/TRAP CARD] label of the large card) | `apply_to_iso.py` (copies the language's `card_spell_trap.gim`) | iso_images.csv |
+| ISO files touched (`.ehp` archives) | 179 | - | touched_files.csv |
+| Other technical differences (recomputed offsets) | 254 | - | other.csv |
 
-## A2. Testi delle carte
+## A2. Card texts
 
-Archivio: `PSP_GAME/USRDIR/duelsys/cardinfo_fra.ehp` (tabelle `CARD_Name_*`, `CARD_Desc_*`, `CARD_Indx_*`). **258 carte** hanno nome e/o descrizione modificati. Si correggono **solo errori oggettivi** (refusi, accenti, apostrofi, spazi, maiuscole incoerenti, concordanze, plurali fissi, residui di altre lingue); nomi ufficiali e terminologia del gioco non si toccano.
+Archive: `PSP_GAME/USRDIR/duelsys/cardinfo_fra.ehp` (tables `CARD_Name_*`, `CARD_Desc_*`, `CARD_Indx_*`). **258 cards** have a modified name and/or description. Only **objective errors** are corrected (typos, accents, apostrophes, spaces, inconsistent capitalization, agreement, fixed plurals, leftovers from other languages); official names and the game's terminology are not touched.
 
-Come: ogni carta e' stata letta (it: 2.479 testi, uno per uno; fr: audit contro database ufficiale + lettura). Regole in `tools/corrections/rules_de.py`: **18 regole globali** (regex applicate a nomi e descrizioni di tutte le carte) e **243 correzioni per carta** (`PER_CARTA`: id, campo, vecchio, nuovo, motivo; il vecchio testo deve esistere esattamente). `generate_card_corrections.py de CARDINFO` (scrive `card_corrections_{L}.json` partendo dai testi originali) produce il json; `apply_to_iso` lo scrive nella ISO; le immagini HD delle carte toccate si rigenerano (sezione B2).
+How: every card was read (it: 2,479 texts, one by one; fr: audit against the official database + reading). Rules in `tools/corrections/rules_de.py`: **18 global rules** (regexes applied to the names and descriptions of all the cards) and **243 per-card corrections** (`PER_CARD`: id, field, old, new, reason; the old text must exist exactly). `generate_card_corrections.py de CARDINFO` (writes `card_corrections_{L}.json` starting from the original texts) produces the json; `apply_to_iso` writes it into the ISO; the HD images of the touched cards are regenerated (section B2).
 
-### Regole globali (tutte)
-| modello (regex) | sostituzione | motivo |
+### Global rules (all)
+| pattern (regex) | replacement | reason |
 |---|---|---|
-| \baugezeichneten\b | ausgezeichneten | refuso |
-| \bausgestatte\b | ausgestattete | refuso |
-| \benstanden\b | entstanden | refuso |
-| \bsprirituelle\b | spirituelle | refuso |
-| \bbeeinflußt\b | beeinflusst | ortografia: ss dopo vocale breve |
-| \bAnulliere\b | Annulliere | refuso |
-| \bZauberabsorbtion\b | Zauberabsorption | refuso (Absorption) |
-| \bSchadensverrechnung\b | Schadensberechnung | terminologia del gioco: altrove "Schadensberechnung" |
-| \bKartename\b | Kartenname | refuso |
-| auf deiner Spielfeldseite ist, und dein Gegner keine | auf deiner Spielfeldseite ist und dein Gegner keine | virgola superflua (Toon-Karten) |
-| dessen DEF niedriger sind als die ATK | dessen DEF niedriger ist als die ATK | concordanza (DEF e' singolare) |
-| auf die Hand seines Besitzers zurück gegeben | auf die Hand seines Besitzers zurückgegeben | Zusammenschreibung |
-| die Karte auf zu decken | die Karte aufzudecken | Zusammenschreibung |
-| in der gleichen Höhe, wie die ursprüngliche ATK des Monsters, zu zufügen | in der gleichen Höhe wie die ursprüngliche ATK des Monsters zuzufügen | Zusammenschreibung e virgole |
-| an Stelle 1 beliebigen Fusionsmaterial-Monsterkarte | an Stelle einer beliebigen Fusionsmaterial-Monsterkarte | articolo (come nelle altre carte) |
-| \bJedesmal\b | Jedes Mal | ortografia |
-| \bjedesmal\b | jedes Mal | ortografia |
-| Spezialaktivierung | Spezialbeschwörung | traduzione: Special Summon (EN) non e' un'attivazione |
+| \baugezeichneten\b | ausgezeichneten | typo |
+| \bausgestatte\b | ausgestattete | typo |
+| \benstanden\b | entstanden | typo |
+| \bsprirituelle\b | spirituelle | typo |
+| \bbeeinflußt\b | beeinflusst | spelling: ss after a short vowel |
+| \bAnulliere\b | Annulliere | typo |
+| \bZauberabsorbtion\b | Zauberabsorption | typo (Absorption) |
+| \bSchadensverrechnung\b | Schadensberechnung | game terminology: elsewhere "Schadensberechnung" |
+| \bKartename\b | Kartenname | typo |
+| auf deiner Spielfeldseite ist, und dein Gegner keine | auf deiner Spielfeldseite ist und dein Gegner keine | superfluous comma (Toon-Karten) |
+| dessen DEF niedriger sind als die ATK | dessen DEF niedriger ist als die ATK | agreement (DEF is singular) |
+| auf die Hand seines Besitzers zurück gegeben | auf die Hand seines Besitzers zurückgegeben | compound written as one word (Zusammenschreibung) |
+| die Karte auf zu decken | die Karte aufzudecken | compound written as one word (Zusammenschreibung) |
+| in der gleichen Höhe, wie die ursprüngliche ATK des Monsters, zu zufügen | in der gleichen Höhe wie die ursprüngliche ATK des Monsters zuzufügen | compound written as one word and commas |
+| an Stelle 1 beliebigen Fusionsmaterial-Monsterkarte | an Stelle einer beliebigen Fusionsmaterial-Monsterkarte | article (as in the other cards) |
+| \bJedesmal\b | Jedes Mal | spelling |
+| \bjedesmal\b | jedes Mal | spelling |
+| Spezialaktivierung | Spezialbeschwörung | translation: Special Summon (EN) is not an activation |
 
-### Correzioni per carta (tutte)
-| id | campo | vecchio | nuovo | motivo |
+### Per-card corrections (all)
+| id | field | old | new | reason |
 |---|---|---|---|---|
-| 4452 | desc | Schanz | Schwanz | refuso (EN: tail) |
-| 4667 | desc | uberprufen | überprüfen | dieresi sostituite da vocali semplici |
-| 4667 | desc | nachsten | nächsten | dieresi sostituite da vocali semplici |
-| 4667 | desc | Spielzugen | Spielzügen | dieresi sostituite da vocali semplici |
-| 4667 | desc | zerstoren | zerstören | dieresi sostituite da vocali semplici |
-| 4667 | desc | oder hoher | oder höher | dieresi sostituite da vocali semplici |
-| 5575 | name | verrringern | verringern | refuso |
-| 5824 | desc | Entfere | Entferne | refuso |
-| 5829 | desc | Friehof | Friedhof | refuso |
-| 5930 | desc | Verteidigungepsoition | Verteidigungsposition | refuso |
-| 6085 | desc | enfernen | entfernen | refuso |
-| 6133 | desc | Spielfeld , | Spielfeld, | spazio prima della virgola |
-| 6168 | desc | aktiveren | aktivieren | refuso |
-| 6368 | desc | enfernt | entfernt | refuso |
-| 6542 | desc | Spezialbschwörung | Spezialbeschwörung | refuso |
-| 6582 | desc | erhälst | erhältst | refuso |
-| 6681 | desc | Enterne | Entferne | refuso |
-| 6076 | desc | Fur jede | Für jede | dieresi sostituita da vocale semplice |
-| 4017 | desc | Schwert ähnlicher Dornen | schwertähnlicher Dornen | Zusammenschreibung |
-| 4035 | desc | rauhesten | rauesten | ortografia (come beeinflusst: ortografia riformata) |
-| 4069 | desc | Dieses Karte | Diese Karte | concordanza |
-| 4074 | desc | Ein Axt schwingende Ungeheuer-Krieger | Ein Axt schwingender Ungeheuer-Krieger | concordanza |
-| 4172 | desc | Jedesmal | Jedes Mal | ortografia |
-| 4208 | desc | Es greift an indem | Es greift an, indem | virgola |
-| 4235 | desc | Macht anstatt das Leben | Macht, anstatt das Leben | virgola prima dell'infinitiva con anstatt |
-| 4238 | desc | Waffe,die | Waffe, die | spazio dopo la virgola |
-| 4239 | desc | Unterweltler, des angeblich | Unterweltler, der angeblich | refuso |
-| 4258 | desc | Schönheit, zerkratzt sie | Schönheit zerkratzt sie | virgola superflua dopo il complemento iniziale |
-| 4292 | desc | erschaffen nur um die Tore | erschaffen nur, um die Tore | virgola prima di um ... zu |
-| 4312 | desc | ATK- Wert | ATK-Wert | spazio superfluo |
-| 4373 | desc | Life Points, und greifst | Life Points und greifst | virgola superflua (stesso soggetto) |
-| 4374 | desc | Erhöht sich die ATK dieser Karte um 100 Punkte für jede Monsterkarte im deinem Friedhof. | Die ATK dieser Karte erhöht sich um 100 Punkte für jede Monsterkarte in deinem Friedhof. | ordine delle parole (EN: Increase) e "im deinem" |
-| 4398 | desc | kann per Spezialaktivierung vom Deck | kann als Spezialbeschwörung vom Deck | traduzione (EN: Special Summoned) |
-| 4400 | desc | Typ Maschine ist, und den | Typ Maschine ist und den | virgola superflua |
-| 4431 | desc | ab um bis zu 2 | ab, um bis zu 2 | virgola prima di um ... zu |
-| 4496 | desc | Life Pointsn | Life Points | refuso |
-| 4506 | desc | als einer Normalbeschwörung oder Flippbeschwörung | als Normalbeschwörung oder Flippbeschwörung | grammatica |
-| 4512 | desc | FusionsDeck | Fusionsdeck | maiuscola (come altrove: Fusionsdeck) |
-| 4522 | desc | erhöht sich die ATK und DEF dieser Karte | erhöhen sich ATK und DEF dieser Karte | concordanza (plurale) |
-| 4541 | desc | Ein Menschen ähnlicher Mantis | Eine menschenähnliche Mantis | genere e Zusammenschreibung |
-| 4574 | desc | Ein Menschen ähnlicher Dinosaurier | Ein menschenähnlicher Dinosaurier | Zusammenschreibung |
-| 4576 | desc | Eine getigerter Drache | Ein getigerter Drache | concordanza |
-| 4596 | desc | riesigen Rüssel | riesigen Schnabel | traduzione (EN: beak; nome: Schnabelschlange) |
-| 4609 | desc | Eine schöner und starker | Ein schöner und starker | concordanza |
-| 4622 | desc | „Flipp“-Aktivierung), sind ATK- und DEF-Werte | „Flipp“-Aktivierung) sind die ATK- und DEF-Werte | virgola superflua e articolo |
-| 4022 | desc | soviel Schaden wie | so viel Schaden wie | ortografia |
-| 4738 | desc | soviel Schaden zuzufügen | so viel Schaden zuzufügen | ortografia |
-| 4652 | desc | härter ist als er aussieht | härter ist, als er aussieht | virgola |
-| 4654 | desc | durch sein Vorwärtsstürzen | durch ihr Vorwärtsstürzen | concordanza (die Maschine) |
-| 4660 | desc | erhöht seinen ATK neben 700 Punkten | erhöht seine ATK um 700 Punkte | traduzione (EN: increases its ATK by 700) |
-| 4664 | desc | Wenn ein mit dieser Karte ausgerüstetes Monster angegriffen wird, kannst du seinen ATK-Wert um die Hälfte des ATK-Werts des Angegriffenen erhöhen. | Wenn ein mit dieser Karte ausgerüstetes Monster angreift, kannst du seinen ATK-Wert um die Hälfte des ATK-Werts des angegriffenen Monsters erhöhen. | traduzione (EN: When attacking with a monster equipped with this card) |
-| 4687 | desc | Spezialbeschwörung) eine DEF | Spezialbeschwörung), eine DEF | virgola che chiude la relativa |
-| 4688 | desc | Spezialbeschwörung) eine ATK | Spezialbeschwörung), eine ATK | virgola che chiude la relativa |
-| 4691 | desc | mehr als 2000 Punkte sind | mehr als 2000 Punkte beträgt | concordanza |
-| 4692 | desc | auf der Angriffsposition | in Angriffsposition | grammatica |
-| 4694 | desc | statt dessen | stattdessen | ortografia |
-| 4748 | desc | spezialaktiviert werden | als Spezialbeschwörung beschworen werden | traduzione (EN: Special Summoned) |
-| 4750 | desc | maximal einen Zauberzählmarke | maximal eine Zauberzählmarke | genere |
-| 4750 | desc | den Zauberzählmarke | die Zauberzählmarke | genere |
-| 4755 | desc | aktiviert wird (ohne Spezialaktivierung) | beschworen wird (ohne Spezialbeschwörung) | traduzione (EN: summoned) |
-| 4795 | desc | aktiviert wird (einschließlich Spezialaktivierung) | beschworen wird (einschließlich Spezialbeschwörung) | traduzione (EN: Summoned) |
-| 4780 | desc | Kampf mit ein Monster der Stufe 7 oder niedriger zerstört. | Kampf mit einem Monster der Stufe 7 oder niedriger zerstört werden. | grammatica |
-| 4803 | desc | des Spielzugs in dem diese | des Spielzugs, in dem diese | virgola |
-| 4804 | desc | Monster deines Gegner angreift | Monster deines Gegners angreift | refuso |
-| 4814 | desc | deines Gegners nachdem du diese Karte aktiviert hast, kann | deines Gegners, nachdem du diese Karte aktiviert hast, kann | virgola |
-| 4817 | desc | Diese Monster kann | Dieses Monster kann | concordanza |
-| 4830 | desc | keine Monster aktivieren (einschließlich „Flipp“- und Spezialaktivierung) | keine Monster beschwören (einschließlich „Flipp“- und Spezialbeschwörung) | traduzione (EN: summon) |
-| 4834 | desc | Am Ende der Battle Phase, gib | Am Ende der Battle Phase gib | virgola |
-| 4855 | desc | Wenn Dein Gegner | Wenn dein Gegner | maiuscola |
-| 4861 | desc | Normal-, Flipp, oder Spezialbeschwörung | Normal-, Flipp- oder Spezialbeschwörung | trattino e virgola |
-| 4861 | desc | das Beschworene Monster | das beschworene Monster | maiuscola |
-| 4892 | desc | statt dessen | stattdessen | ortografia |
-| 4944 | desc | Permante Zauberkarte | Permanente Zauberkarte | refuso |
-| 5030 | desc | beschwöre dieses Karte | beschwöre diese Karte | concordanza |
-| 5033 | desc | ATK und DEF dieses Monster zu 1000 | ATK und DEF dieses Monsters zu 1000 | genitivo |
-| 5042 | desc | Jedesmal | Jedes Mal | ortografia |
-| 5067 | desc | Nach der Schadensberechnung, verringere | Nach der Schadensberechnung verringere | virgola |
-| 5113 | desc | Jedesmal | Jedes Mal | ortografia |
-| 5197 | desc | Jedesmal | Jedes Mal | ortografia |
-| 5164 | desc | jedesmal | jedes Mal | ortografia |
-| 5116 | desc | Die Spielsteine | Die Spielmarken | terminologia (Spielmarke) |
-| 5129 | desc | Während deiner End Phase, zerstöre | Während deiner End Phase zerstöre | virgola |
-| 5142 | desc | dessen DEF niedriger sind als | dessen DEF niedriger ist als | concordanza |
-| 5173 | desc | geschickt wird während sie verdeckt liegt, dann wird deinem Gegner 500 Punkte Schaden an seiner LP verursacht. | geschickt wird, während sie verdeckt liegt, dann werden deinem Gegner 500 Punkte Schaden an seinen LP verursacht. | virgola e concordanza |
-| 5175 | desc | auf 3000 gesetzt solange | auf 3000 gesetzt, solange | virgola |
-| 5177 | desc | wird ein „Jungfernmarke“ getan | wird eine „Jungfernmarke“ getan | genere |
-| 5178 | desc | mit einem „Jungfernmarke“ darauf | mit einer „Jungfernmarke“ darauf | genere |
-| 5178 | desc | das ausgerüstet Monster | das ausgerüstete Monster | concordanza |
-| 5179 | desc | seines Angriffs, eine aufgedeckte | seines Angriffs eine aufgedeckte | virgola superflua |
-| 5180 | desc | die ATK des anderen Monster. | die ATK des anderen Monsters. | genitivo |
-| 5181 | desc | auf dem Spielfeld deines Feldes | auf der Spielfeldseite deines Gegners | traduzione (EN: opponent's side of the field) |
-| 5182 | desc | um 600 erhöht Jedesmal, | um 600 erhöht. Jedes Mal, | punto mancante e ortografia |
-| 5182 | desc | bezahlen um am Ende | bezahlen, um am Ende | virgola |
-| 5185 | desc | zugefügt wird der die Karte kontrolliert | zugefügt wird, der die Karte kontrolliert | virgola |
-| 5189 | desc | Life Points um eine Karte | Life Points, um eine Karte | virgola |
-| 5189 | desc | drei Mal benutzt hast, dann erhält | drei Mal benutzt hast, erhält | sintassi |
-| 5190 | desc | ab.  Wähle ein 1 Monster | ab. Wähle 1 Monster | doppio spazio e "ein 1" |
-| 5202 | desc | gelegt wurden, unter dein Deck | gelegt wurde, unter dein Deck | concordanza |
-| 5223 | desc | Nur der „Dunkler Magier“ oder die „Dunkles Magier-Mädchen“ darf | Nur „Dunkler Magier“ oder „Dunkles Magier-Mädchen“ darf | articoli errati davanti ai nomi |
-| 5239 | desc | Regelgzwecken | Regelzwecken | refuso |
-| 5242 | desc | wenn sich der „Kathedrale der Adligen“ | wenn sich die „Kathedrale der Adligen“ | genere |
-| 5260 | desc | im Spielzugs deines Gegners | im Spielzug deines Gegners | caso |
-| 5263 | desc | bestimmt, und zerstört die Zauberkarte | bestimmt, und zerstöre die Zauberkarte | modo imperativo (come tutto il testo) |
-| 5275 | desc | zurück ihn ihre ursprüngliche | zurück in ihre ursprüngliche | refuso |
-| 5286 | desc | mit allen seiner Monster | mit allen seinen Monstern | caso |
-| 5290 | desc | jede zerstöre Zauberkarte | jede zerstörte Zauberkarte | refuso |
-| 5295 | desc | Beherscher | Beherrscher | refuso |
-| 5295 | desc | aus einen Kampf | aus einem Kampf | caso |
-| 5299 | desc | Gibt das als Ziel bestimmte Monster | Gib das als Ziel bestimmte Monster | modo imperativo |
-| 5313 | desc | genau soviel Stufen haben wie | genauso viele Stufen haben wie | ortografia |
-| 5334 | desc | dessen DEF niedriger sind als | dessen DEF niedriger ist als | concordanza |
-| 5351 | desc | wähle 2 Karte im Friedhof | wähle 2 Karten im Friedhof | plurale |
-| 5384 | desc | beschworen wurde Zusätzlich | beschworen wurde. Zusätzlich | punto mancante |
-| 5433 | desc | Standby Phase deines Gegner so | Standby Phase deines Gegners so | genitivo |
-| 5453 | desc | wird der ATK dieser Karte | wird die ATK dieser Karte | genere |
-| 5452 | desc | dessen DEF niedriger sind als | dessen DEF niedriger ist als | concordanza |
-| 5452 | desc | Life Points deines Gegner als | Life Points deines Gegners als | genitivo |
-| 5477 | desc | als Tribut an um den Life Points | als Tribut an, um den Life Points | virgola |
-| 5479 | desc | Ziehe Karten bis du | Ziehe Karten, bis du | virgola |
-| 5482 | desc | in der entsprechenden Spielzug | in dem entsprechenden Spielzug | caso |
-| 5499 | desc | bleibt bestehen bis die | bleibt bestehen, bis die | virgola |
-| 5531 | desc | Life Points deines Gegner Schaden | Life Points deines Gegners Schaden | genitivo |
-| 5530 | desc | Stufe hat wie dein Gegner genannt hat | Stufe hat, wie dein Gegner genannt hat | virgola |
-| 5546 | desc | zu sein Deck hinzu | zu seinem Deck hinzu | caso |
-| 5546 | desc | von seinem Deck wie er vorher in sein Deck zurück gelegt hat | von seinem Deck, wie er vorher in sein Deck zurückgelegt hat | virgola e Zusammenschreibung |
-| 5574 | desc | Diese „Klon-Spielmarken“ hat | Diese „Klon-Spielmarke“ hat | concordanza |
-| 5574 | desc | das gleiche Eigenschaft | die gleiche Eigenschaft | genere |
-| 5604 | desc | Battle Phase kannst diesen Effekt | Battle Phase kannst du diesen Effekt | pronome mancante |
-| 5608 | desc | auf die Hand zurück gegeben | auf die Hand zurückgegeben | Zusammenschreibung |
-| 5608 | desc | werden beide gewählte Karten | werden beide gewählten Karten | declinazione |
-| 5614 | desc | Karte vergangen sind. | Karte vergangen sind, zu. | verbo separabile mancante (zufügen) |
-| 5676 | desc | oben auf sein Deck zurück | oben auf dein Deck zurück | pronome (sein/dein) |
-| 5678 | desc | deines Gegners niedriger als die DEF | deines Gegners niedriger ist als die DEF | verbo mancante |
-| 5689 | desc | Kampf mit der diese Spielmarke werden | Kampf mit dieser Spielmarke werden | refuso |
-| 5689 | desc | wird die diese Spielmarke zerstört | wird diese Spielmarke zerstört | refuso |
-| 5699 | desc | Während der Schadensberechnung, erhöhe | Während der Schadensberechnung erhöhe | virgola |
-| 5754 | desc | in deiner Hand ist, kannst du sie | in deiner Hand hast, kannst du sie | verbo (EN: if you have) |
-| 5755 | desc | Der DEF dieses Monsters | Die DEF dieses Monsters | genere |
-| 5784 | desc | soviele Stufen wie | so viele Stufen wie | ortografia |
-| 5788 | desc | dieser Karte, gewinnst du | dieser Karte gewinnst du | virgola |
-| 5815 | desc | niedriger sind als die DEF dieses Monsters | niedriger ist als die DEF dieses Monsters | concordanza |
-| 5817 | desc | indem Du 2 FINSTERNIS Monster in deinem Friedhof aus dem Spiel entfernt. | indem du 2 FINSTERNIS Monster in deinem Friedhof aus dem Spiel entfernst. | persona del verbo e maiuscola |
-| 5818 | desc | auf die Hand ihres Besitzers. | auf die Hand ihres Besitzers zurück. | verbo mancante (EN: return) |
-| 5824 | desc | als diese Karte aus dem Spiel zu entfernen. | als diese Karte zu zerstören. | traduzione (EN: destroy) |
-| 5828 | desc | gegnerischen um Spielzugs 300 Punkte | gegnerischen Spielzugs um 300 Punkte | ordine delle parole |
-| 5830 | desc | aus dem Spiel entfernt wird. Falls diese Karte | aus dem Spiel entfernt werden. Falls diese Karte | concordanza |
-| 5830 | desc | des nächsten Spielzug deines Gegners | des nächsten Spielzugs deines Gegners | genitivo |
-| 5836 | desc | erhöhen dein Gegner 700 Punkte Schaden | erhält dein Gegner 700 Punkte Schaden | verbo (EN: inflict) |
-| 5843 | desc | auf Deiner Hand | auf deiner Hand | maiuscola |
-| 5844 | desc | keine Zauberkarte in deinem Friedhof befinden | keine Zauberkarte in deinem Friedhof befindet | concordanza |
-| 5854 | desc | erhält diese Karte einen Zauberzählmarke | erhält diese Karte eine Zauberzählmarke | genere |
-| 5854 | desc | Wenn der 4. Zauberzählmarke | Wenn die 4. Zauberzählmarke | genere |
-| 5854 | desc | eine Zauberkarte aktiviert hat, erhält | eine Zauberkarte aktiviert, erhält | concordanza |
-| 5854 | desc | Zauberkarte aktiviert hat erhält 3000 | Zauberkarte aktiviert hat, erhält 3000 | virgola |
-| 5860 | desc | beschworen werden indem, 1 LICHT | beschworen werden, indem 1 LICHT | virgola |
-| 5860 | desc | Zahle 1000 Life Points um alle | Zahle 1000 Life Points, um alle | virgola |
-| 5871 | desc | verlor seine Herz | verlor sein Herz | genere |
-| 5884 | desc | eines gegnerischen in Verteidigungsposition liegendes Monster angreift | eines gegnerischen, in Verteidigungsposition liegenden Monsters angreift | caso |
-| 5895 | desc | auf den Friedhof um alle Karten auf dem Spielfeld, außer dieser Karte, zu auf den Friedhof zu legen. | auf den Friedhof, um alle Karten auf dem Spielfeld, außer dieser Karte, zu zerstören. | traduzione (EN: destroy) e sintassi |
-| 5896 | desc | als Tribut an um 1 Zauber- oder Fallenkarte | als Tribut an, um 1 Zauber- oder Fallenkarte | virgola |
-| 5897 | desc | Solange „Umi“ offen auf dem Spielfeld befindet | Solange sich „Umi“ offen auf dem Spielfeld befindet | pronome riflessivo mancante |
-| 5912 | desc | auf deiner Spielfeldseite um den Life Points | auf deiner Spielfeldseite, um den Life Points | virgola |
-| 5922 | desc | offen auf auf dem Spielfeld | offen auf dem Spielfeld | parola doppia |
-| 5943 | desc | Würfelergebnis solange die Karte | Würfelergebnis, solange die Karte | virgola |
-| 5987 | desc | auf dem Spielfeld werden bis zum Ende dieses Spielzugs zu 0. | auf dem Spielfeld wird bis zum Ende dieses Spielzugs zu 0. | concordanza (DEF singolare) |
-| 6001 | desc | nicht Spezialbeschworen werden | nicht spezialbeschworen werden | minuscola |
-| 6048 | desc | des ausgerüsteten Monster um 1000 | des ausgerüsteten Monsters um 1000 | genitivo |
-| 6066 | desc | deiner normalen Monstern der Stufe | deiner normalen Monster der Stufe | genitivo plurale |
-| 6076 | desc | erhöht sich der ATK dieser Karte | erhöht sich die ATK dieser Karte | genere |
-| 6097 | desc | diese offene Karten auf den Friedhof | diese offene Karte auf den Friedhof | numero |
-| 6133 | desc | auf deiner Spielfeld, dessen | auf deiner Spielfeldseite, dessen | parola troncata (dopo la regola dello spazio) |
-| 6158 | desc | Diese Spielmarke können nicht | Diese Spielmarken können nicht | concordanza |
-| 6166 | desc | annuliere die Effekt von allen | annuliere die Effekte von allen | plurale |
-| 6167 | desc | Falls 5 Zauberzählmarke auf | Falls 5 Zauberzählmarken auf | plurale |
-| 6167 | desc | mit 5 Zauberzählmarke auf den Friedhof | mit 5 Zauberzählmarken auf den Friedhof | plurale |
-| 6168 | desc | mit einem ATK von 2000 oder weniger | mit einer ATK von 2000 oder weniger | genere |
-| 6234 | desc | durch die Welt wandernd um der stärkste | durch die Welt wandernd, um der stärkste | virgola |
-| 6234 | desc | Sei vorsichtig ihn nicht zu berühren, oder | Sei vorsichtig, ihn nicht zu berühren, oder | virgola |
-| 6244 | desc | In diesem Fall, wird die Grund-ATK | In diesem Fall wird die Grund-ATK | virgola |
-| 6249 | desc | in den Friedhof gelegt wird, fügen den Life Points beider Spieler | in den Friedhof gelegt wird, füge den Life Points beider Spieler | modo imperativo |
-| 6250 | desc | Zauberzählmarken um ein offenes Monster | Zauberzählmarken, um ein offenes Monster | virgola |
-| 6254 | desc | wird, gebe 1 Monster | wird, gib 1 Monster | modo imperativo |
-| 6262 | desc | in den Friedhof um 2 Monster | in den Friedhof, um 2 Monster | virgola |
-| 6262 | desc | Die Monster die auf diese Weise | Die Monster, die auf diese Weise | virgola |
-| 6282 | desc | Spielfeldseite um diese Karte zu aktivieren | Spielfeldseite, um diese Karte zu aktivieren | virgola |
-| 6285 | desc | als Tribut an um diese Karte zu aktivieren | als Tribut an, um diese Karte zu aktivieren | virgola |
-| 6287 | desc | Spezialbeschwörung wieder auf dein Feld zu bringen. | Spezialbeschwörung wieder auf dein Feld bringen. | sintassi |
-| 6287 | desc | wird ihr ATK um 500 Punkte erhöht | wird ihre ATK um 500 Punkte erhöht | genere |
-| 6293 | desc | Friedhof ab um 1 Monster vom Typ Zombie | Friedhof ab, um 1 Monster vom Typ Zombie | virgola |
-| 6293 | desc | mit einem niedrigeren Stufe | mit einer niedrigeren Stufe | genere |
-| 6303 | desc | und nehme sie auf deine Hand | und nimm sie auf deine Hand | modo imperativo |
-| 6308 | desc | es sei denn du zahlst | es sei denn, du zahlst | virgola |
-| 6320 | desc | Monster vom Typ Fels die vom Spiel entfernten wurden | Monster vom Typ Fels, die aus dem Spiel entfernt wurden | sintassi |
-| 6324 | desc | Die Grund-ATK und -DEF dieser Karte wird zur Anzahl | Die Grund-ATK und -DEF dieser Karte werden zur Anzahl | concordanza |
-| 6343 | desc | Das Eigenschaft dieser Karte | Die Eigenschaft dieser Karte | genere |
-| 6344 | desc | ATK des zerstörten Monster zu | ATK des zerstörten Monsters zu | genitivo |
-| 6345 | desc | mit geringeren Grund-ATK als die ATK dieser Karte | mit geringerer Grund-ATK als die ATK dieser Karte | concordanza |
-| 6346 | desc | des Spielzuges in dem diese Karte | des Spielzugs, in dem diese Karte | virgola |
-| 6354 | desc | Zahle 300 Life Points um die verdeckten | Zahle 300 Life Points, um die verdeckten | virgola |
-| 6355 | desc | auf deiner Spielfeldseite um diese Karte zu aktivieren | auf deiner Spielfeldseite, um diese Karte zu aktivieren | virgola |
-| 6359 | desc | diese gesetzte Karte zerstört 1000 | diese gesetzte Karte zerstört, 1000 | virgola |
-| 6376 | desc | auf den Friedhof um alle Karten, außer dieser Karte, in den Händen | auf den Friedhof, um alle Karten, außer dieser Karte, in den Händen | virgola |
-| 6399 | desc | seine ATK niedriger sind als die ATK des Ziels | seine ATK niedriger ist als die ATK des Ziels | concordanza |
-| 6400 | desc | in deiner Haupt Phase | in deiner Main Phase | terminologia (Main Phase) |
-| 6400 | desc | eines Level 4 Monsters | eines Monsters der Stufe 4 | inglese residuo (Level) |
-| 6409 | desc | Effekt 3 mal benutzt | Effekt dreimal benutzt | ortografia |
-| 6410 | desc | werden die die folgenden Effekte | werden die folgenden Effekte | parola doppia |
-| 6414 | desc | Die ATK von 1 offenen Monster auf dem Spielfeld werden bis zur End Phase | Die ATK von 1 offenen Monster auf dem Spielfeld wird bis zur End Phase | concordanza |
-| 6427 | desc | Die Grund-ATK dieser Karte werden zur Anzahl | Die Grund-ATK dieser Karte wird zur Anzahl | concordanza |
-| 6438 | desc | Würfel 3 mal | Würfel dreimal | ortografia |
+| 4452 | desc | Schanz | Schwanz | typo (EN: tail) |
+| 4667 | desc | uberprufen | überprüfen | umlauts replaced by plain vowels |
+| 4667 | desc | nachsten | nächsten | umlauts replaced by plain vowels |
+| 4667 | desc | Spielzugen | Spielzügen | umlauts replaced by plain vowels |
+| 4667 | desc | zerstoren | zerstören | umlauts replaced by plain vowels |
+| 4667 | desc | oder hoher | oder höher | umlauts replaced by plain vowels |
+| 5575 | name | verrringern | verringern | typo |
+| 5824 | desc | Entfere | Entferne | typo |
+| 5829 | desc | Friehof | Friedhof | typo |
+| 5930 | desc | Verteidigungepsoition | Verteidigungsposition | typo |
+| 6085 | desc | enfernen | entfernen | typo |
+| 6133 | desc | Spielfeld , | Spielfeld, | space before the comma |
+| 6168 | desc | aktiveren | aktivieren | typo |
+| 6368 | desc | enfernt | entfernt | typo |
+| 6542 | desc | Spezialbschwörung | Spezialbeschwörung | typo |
+| 6582 | desc | erhälst | erhältst | typo |
+| 6681 | desc | Enterne | Entferne | typo |
+| 6076 | desc | Fur jede | Für jede | umlaut replaced by a plain vowel |
+| 4017 | desc | Schwert ähnlicher Dornen | schwertähnlicher Dornen | compound written as one word (Zusammenschreibung) |
+| 4035 | desc | rauhesten | rauesten | spelling (as in beeinflusst: reformed spelling) |
+| 4069 | desc | Dieses Karte | Diese Karte | agreement |
+| 4074 | desc | Ein Axt schwingende Ungeheuer-Krieger | Ein Axt schwingender Ungeheuer-Krieger | agreement |
+| 4172 | desc | Jedesmal | Jedes Mal | spelling |
+| 4208 | desc | Es greift an indem | Es greift an, indem | comma |
+| 4235 | desc | Macht anstatt das Leben | Macht, anstatt das Leben | comma before the infinitive clause with anstatt |
+| 4238 | desc | Waffe,die | Waffe, die | space after the comma |
+| 4239 | desc | Unterweltler, des angeblich | Unterweltler, der angeblich | typo |
+| 4258 | desc | Schönheit, zerkratzt sie | Schönheit zerkratzt sie | superfluous comma after the initial complement |
+| 4292 | desc | erschaffen nur um die Tore | erschaffen nur, um die Tore | comma before um ... zu |
+| 4312 | desc | ATK- Wert | ATK-Wert | superfluous space |
+| 4373 | desc | Life Points, und greifst | Life Points und greifst | superfluous comma (same subject) |
+| 4374 | desc | Erhöht sich die ATK dieser Karte um 100 Punkte für jede Monsterkarte im deinem Friedhof. | Die ATK dieser Karte erhöht sich um 100 Punkte für jede Monsterkarte in deinem Friedhof. | word order (EN: Increase) and "im deinem" |
+| 4398 | desc | kann per Spezialaktivierung vom Deck | kann als Spezialbeschwörung vom Deck | translation (EN: Special Summoned) |
+| 4400 | desc | Typ Maschine ist, und den | Typ Maschine ist und den | superfluous comma |
+| 4431 | desc | ab um bis zu 2 | ab, um bis zu 2 | comma before um ... zu |
+| 4496 | desc | Life Pointsn | Life Points | typo |
+| 4506 | desc | als einer Normalbeschwörung oder Flippbeschwörung | als Normalbeschwörung oder Flippbeschwörung | grammar |
+| 4512 | desc | FusionsDeck | Fusionsdeck | capital letter (as elsewhere: Fusionsdeck) |
+| 4522 | desc | erhöht sich die ATK und DEF dieser Karte | erhöhen sich ATK und DEF dieser Karte | agreement (plural) |
+| 4541 | desc | Ein Menschen ähnlicher Mantis | Eine menschenähnliche Mantis | gender and compound written as one word |
+| 4574 | desc | Ein Menschen ähnlicher Dinosaurier | Ein menschenähnlicher Dinosaurier | compound written as one word (Zusammenschreibung) |
+| 4576 | desc | Eine getigerter Drache | Ein getigerter Drache | agreement |
+| 4596 | desc | riesigen Rüssel | riesigen Schnabel | translation (EN: beak; name: Schnabelschlange) |
+| 4609 | desc | Eine schöner und starker | Ein schöner und starker | agreement |
+| 4622 | desc | „Flipp“-Aktivierung), sind ATK- und DEF-Werte | „Flipp“-Aktivierung) sind die ATK- und DEF-Werte | superfluous comma and article |
+| 4022 | desc | soviel Schaden wie | so viel Schaden wie | spelling |
+| 4738 | desc | soviel Schaden zuzufügen | so viel Schaden zuzufügen | spelling |
+| 4652 | desc | härter ist als er aussieht | härter ist, als er aussieht | comma |
+| 4654 | desc | durch sein Vorwärtsstürzen | durch ihr Vorwärtsstürzen | agreement (die Maschine) |
+| 4660 | desc | erhöht seinen ATK neben 700 Punkten | erhöht seine ATK um 700 Punkte | translation (EN: increases its ATK by 700) |
+| 4664 | desc | Wenn ein mit dieser Karte ausgerüstetes Monster angegriffen wird, kannst du seinen ATK-Wert um die Hälfte des ATK-Werts des Angegriffenen erhöhen. | Wenn ein mit dieser Karte ausgerüstetes Monster angreift, kannst du seinen ATK-Wert um die Hälfte des ATK-Werts des angegriffenen Monsters erhöhen. | translation (EN: When attacking with a monster equipped with this card) |
+| 4687 | desc | Spezialbeschwörung) eine DEF | Spezialbeschwörung), eine DEF | comma closing the relative clause |
+| 4688 | desc | Spezialbeschwörung) eine ATK | Spezialbeschwörung), eine ATK | comma closing the relative clause |
+| 4691 | desc | mehr als 2000 Punkte sind | mehr als 2000 Punkte beträgt | agreement |
+| 4692 | desc | auf der Angriffsposition | in Angriffsposition | grammar |
+| 4694 | desc | statt dessen | stattdessen | spelling |
+| 4748 | desc | spezialaktiviert werden | als Spezialbeschwörung beschworen werden | translation (EN: Special Summoned) |
+| 4750 | desc | maximal einen Zauberzählmarke | maximal eine Zauberzählmarke | gender |
+| 4750 | desc | den Zauberzählmarke | die Zauberzählmarke | gender |
+| 4755 | desc | aktiviert wird (ohne Spezialaktivierung) | beschworen wird (ohne Spezialbeschwörung) | translation (EN: summoned) |
+| 4795 | desc | aktiviert wird (einschließlich Spezialaktivierung) | beschworen wird (einschließlich Spezialbeschwörung) | translation (EN: Summoned) |
+| 4780 | desc | Kampf mit ein Monster der Stufe 7 oder niedriger zerstört. | Kampf mit einem Monster der Stufe 7 oder niedriger zerstört werden. | grammar |
+| 4803 | desc | des Spielzugs in dem diese | des Spielzugs, in dem diese | comma |
+| 4804 | desc | Monster deines Gegner angreift | Monster deines Gegners angreift | typo |
+| 4814 | desc | deines Gegners nachdem du diese Karte aktiviert hast, kann | deines Gegners, nachdem du diese Karte aktiviert hast, kann | comma |
+| 4817 | desc | Diese Monster kann | Dieses Monster kann | agreement |
+| 4830 | desc | keine Monster aktivieren (einschließlich „Flipp“- und Spezialaktivierung) | keine Monster beschwören (einschließlich „Flipp“- und Spezialbeschwörung) | translation (EN: summon) |
+| 4834 | desc | Am Ende der Battle Phase, gib | Am Ende der Battle Phase gib | comma |
+| 4855 | desc | Wenn Dein Gegner | Wenn dein Gegner | capital letter |
+| 4861 | desc | Normal-, Flipp, oder Spezialbeschwörung | Normal-, Flipp- oder Spezialbeschwörung | hyphen and comma |
+| 4861 | desc | das Beschworene Monster | das beschworene Monster | capital letter |
+| 4892 | desc | statt dessen | stattdessen | spelling |
+| 4944 | desc | Permante Zauberkarte | Permanente Zauberkarte | typo |
+| 5030 | desc | beschwöre dieses Karte | beschwöre diese Karte | agreement |
+| 5033 | desc | ATK und DEF dieses Monster zu 1000 | ATK und DEF dieses Monsters zu 1000 | genitive |
+| 5042 | desc | Jedesmal | Jedes Mal | spelling |
+| 5067 | desc | Nach der Schadensberechnung, verringere | Nach der Schadensberechnung verringere | comma |
+| 5113 | desc | Jedesmal | Jedes Mal | spelling |
+| 5197 | desc | Jedesmal | Jedes Mal | spelling |
+| 5164 | desc | jedesmal | jedes Mal | spelling |
+| 5116 | desc | Die Spielsteine | Die Spielmarken | terminology (Spielmarke) |
+| 5129 | desc | Während deiner End Phase, zerstöre | Während deiner End Phase zerstöre | comma |
+| 5142 | desc | dessen DEF niedriger sind als | dessen DEF niedriger ist als | agreement |
+| 5173 | desc | geschickt wird während sie verdeckt liegt, dann wird deinem Gegner 500 Punkte Schaden an seiner LP verursacht. | geschickt wird, während sie verdeckt liegt, dann werden deinem Gegner 500 Punkte Schaden an seinen LP verursacht. | comma and agreement |
+| 5175 | desc | auf 3000 gesetzt solange | auf 3000 gesetzt, solange | comma |
+| 5177 | desc | wird ein „Jungfernmarke“ getan | wird eine „Jungfernmarke“ getan | gender |
+| 5178 | desc | mit einem „Jungfernmarke“ darauf | mit einer „Jungfernmarke“ darauf | gender |
+| 5178 | desc | das ausgerüstet Monster | das ausgerüstete Monster | agreement |
+| 5179 | desc | seines Angriffs, eine aufgedeckte | seines Angriffs eine aufgedeckte | superfluous comma |
+| 5180 | desc | die ATK des anderen Monster. | die ATK des anderen Monsters. | genitive |
+| 5181 | desc | auf dem Spielfeld deines Feldes | auf der Spielfeldseite deines Gegners | translation (EN: opponent's side of the field) |
+| 5182 | desc | um 600 erhöht Jedesmal, | um 600 erhöht. Jedes Mal, | missing full stop and spelling |
+| 5182 | desc | bezahlen um am Ende | bezahlen, um am Ende | comma |
+| 5185 | desc | zugefügt wird der die Karte kontrolliert | zugefügt wird, der die Karte kontrolliert | comma |
+| 5189 | desc | Life Points um eine Karte | Life Points, um eine Karte | comma |
+| 5189 | desc | drei Mal benutzt hast, dann erhält | drei Mal benutzt hast, erhält | syntax |
+| 5190 | desc | ab.  Wähle ein 1 Monster | ab. Wähle 1 Monster | double space and "ein 1" |
+| 5202 | desc | gelegt wurden, unter dein Deck | gelegt wurde, unter dein Deck | agreement |
+| 5223 | desc | Nur der „Dunkler Magier“ oder die „Dunkles Magier-Mädchen“ darf | Nur „Dunkler Magier“ oder „Dunkles Magier-Mädchen“ darf | wrong articles before the names |
+| 5239 | desc | Regelgzwecken | Regelzwecken | typo |
+| 5242 | desc | wenn sich der „Kathedrale der Adligen“ | wenn sich die „Kathedrale der Adligen“ | gender |
+| 5260 | desc | im Spielzugs deines Gegners | im Spielzug deines Gegners | case |
+| 5263 | desc | bestimmt, und zerstört die Zauberkarte | bestimmt, und zerstöre die Zauberkarte | imperative mood (as in the whole text) |
+| 5275 | desc | zurück ihn ihre ursprüngliche | zurück in ihre ursprüngliche | typo |
+| 5286 | desc | mit allen seiner Monster | mit allen seinen Monstern | case |
+| 5290 | desc | jede zerstöre Zauberkarte | jede zerstörte Zauberkarte | typo |
+| 5295 | desc | Beherscher | Beherrscher | typo |
+| 5295 | desc | aus einen Kampf | aus einem Kampf | case |
+| 5299 | desc | Gibt das als Ziel bestimmte Monster | Gib das als Ziel bestimmte Monster | imperative mood |
+| 5313 | desc | genau soviel Stufen haben wie | genauso viele Stufen haben wie | spelling |
+| 5334 | desc | dessen DEF niedriger sind als | dessen DEF niedriger ist als | agreement |
+| 5351 | desc | wähle 2 Karte im Friedhof | wähle 2 Karten im Friedhof | plural |
+| 5384 | desc | beschworen wurde Zusätzlich | beschworen wurde. Zusätzlich | missing full stop |
+| 5433 | desc | Standby Phase deines Gegner so | Standby Phase deines Gegners so | genitive |
+| 5453 | desc | wird der ATK dieser Karte | wird die ATK dieser Karte | gender |
+| 5452 | desc | dessen DEF niedriger sind als | dessen DEF niedriger ist als | agreement |
+| 5452 | desc | Life Points deines Gegner als | Life Points deines Gegners als | genitive |
+| 5477 | desc | als Tribut an um den Life Points | als Tribut an, um den Life Points | comma |
+| 5479 | desc | Ziehe Karten bis du | Ziehe Karten, bis du | comma |
+| 5482 | desc | in der entsprechenden Spielzug | in dem entsprechenden Spielzug | case |
+| 5499 | desc | bleibt bestehen bis die | bleibt bestehen, bis die | comma |
+| 5531 | desc | Life Points deines Gegner Schaden | Life Points deines Gegners Schaden | genitive |
+| 5530 | desc | Stufe hat wie dein Gegner genannt hat | Stufe hat, wie dein Gegner genannt hat | comma |
+| 5546 | desc | zu sein Deck hinzu | zu seinem Deck hinzu | case |
+| 5546 | desc | von seinem Deck wie er vorher in sein Deck zurück gelegt hat | von seinem Deck, wie er vorher in sein Deck zurückgelegt hat | comma and compound written as one word |
+| 5574 | desc | Diese „Klon-Spielmarken“ hat | Diese „Klon-Spielmarke“ hat | agreement |
+| 5574 | desc | das gleiche Eigenschaft | die gleiche Eigenschaft | gender |
+| 5604 | desc | Battle Phase kannst diesen Effekt | Battle Phase kannst du diesen Effekt | missing pronoun |
+| 5608 | desc | auf die Hand zurück gegeben | auf die Hand zurückgegeben | compound written as one word (Zusammenschreibung) |
+| 5608 | desc | werden beide gewählte Karten | werden beide gewählten Karten | declension |
+| 5614 | desc | Karte vergangen sind. | Karte vergangen sind, zu. | missing separable verb (zufügen) |
+| 5676 | desc | oben auf sein Deck zurück | oben auf dein Deck zurück | pronoun (sein/dein) |
+| 5678 | desc | deines Gegners niedriger als die DEF | deines Gegners niedriger ist als die DEF | missing verb |
+| 5689 | desc | Kampf mit der diese Spielmarke werden | Kampf mit dieser Spielmarke werden | typo |
+| 5689 | desc | wird die diese Spielmarke zerstört | wird diese Spielmarke zerstört | typo |
+| 5699 | desc | Während der Schadensberechnung, erhöhe | Während der Schadensberechnung erhöhe | comma |
+| 5754 | desc | in deiner Hand ist, kannst du sie | in deiner Hand hast, kannst du sie | verb (EN: if you have) |
+| 5755 | desc | Der DEF dieses Monsters | Die DEF dieses Monsters | gender |
+| 5784 | desc | soviele Stufen wie | so viele Stufen wie | spelling |
+| 5788 | desc | dieser Karte, gewinnst du | dieser Karte gewinnst du | comma |
+| 5815 | desc | niedriger sind als die DEF dieses Monsters | niedriger ist als die DEF dieses Monsters | agreement |
+| 5817 | desc | indem Du 2 FINSTERNIS Monster in deinem Friedhof aus dem Spiel entfernt. | indem du 2 FINSTERNIS Monster in deinem Friedhof aus dem Spiel entfernst. | verb person and capital letter |
+| 5818 | desc | auf die Hand ihres Besitzers. | auf die Hand ihres Besitzers zurück. | missing verb (EN: return) |
+| 5824 | desc | als diese Karte aus dem Spiel zu entfernen. | als diese Karte zu zerstören. | translation (EN: destroy) |
+| 5828 | desc | gegnerischen um Spielzugs 300 Punkte | gegnerischen Spielzugs um 300 Punkte | word order |
+| 5830 | desc | aus dem Spiel entfernt wird. Falls diese Karte | aus dem Spiel entfernt werden. Falls diese Karte | agreement |
+| 5830 | desc | des nächsten Spielzug deines Gegners | des nächsten Spielzugs deines Gegners | genitive |
+| 5836 | desc | erhöhen dein Gegner 700 Punkte Schaden | erhält dein Gegner 700 Punkte Schaden | verb (EN: inflict) |
+| 5843 | desc | auf Deiner Hand | auf deiner Hand | capital letter |
+| 5844 | desc | keine Zauberkarte in deinem Friedhof befinden | keine Zauberkarte in deinem Friedhof befindet | agreement |
+| 5854 | desc | erhält diese Karte einen Zauberzählmarke | erhält diese Karte eine Zauberzählmarke | gender |
+| 5854 | desc | Wenn der 4. Zauberzählmarke | Wenn die 4. Zauberzählmarke | gender |
+| 5854 | desc | eine Zauberkarte aktiviert hat, erhält | eine Zauberkarte aktiviert, erhält | agreement |
+| 5854 | desc | Zauberkarte aktiviert hat erhält 3000 | Zauberkarte aktiviert hat, erhält 3000 | comma |
+| 5860 | desc | beschworen werden indem, 1 LICHT | beschworen werden, indem 1 LICHT | comma |
+| 5860 | desc | Zahle 1000 Life Points um alle | Zahle 1000 Life Points, um alle | comma |
+| 5871 | desc | verlor seine Herz | verlor sein Herz | gender |
+| 5884 | desc | eines gegnerischen in Verteidigungsposition liegendes Monster angreift | eines gegnerischen, in Verteidigungsposition liegenden Monsters angreift | case |
+| 5895 | desc | auf den Friedhof um alle Karten auf dem Spielfeld, außer dieser Karte, zu auf den Friedhof zu legen. | auf den Friedhof, um alle Karten auf dem Spielfeld, außer dieser Karte, zu zerstören. | translation (EN: destroy) and syntax |
+| 5896 | desc | als Tribut an um 1 Zauber- oder Fallenkarte | als Tribut an, um 1 Zauber- oder Fallenkarte | comma |
+| 5897 | desc | Solange „Umi“ offen auf dem Spielfeld befindet | Solange sich „Umi“ offen auf dem Spielfeld befindet | missing reflexive pronoun |
+| 5912 | desc | auf deiner Spielfeldseite um den Life Points | auf deiner Spielfeldseite, um den Life Points | comma |
+| 5922 | desc | offen auf auf dem Spielfeld | offen auf dem Spielfeld | doubled word |
+| 5943 | desc | Würfelergebnis solange die Karte | Würfelergebnis, solange die Karte | comma |
+| 5987 | desc | auf dem Spielfeld werden bis zum Ende dieses Spielzugs zu 0. | auf dem Spielfeld wird bis zum Ende dieses Spielzugs zu 0. | agreement (DEF singular) |
+| 6001 | desc | nicht Spezialbeschworen werden | nicht spezialbeschworen werden | lowercase |
+| 6048 | desc | des ausgerüsteten Monster um 1000 | des ausgerüsteten Monsters um 1000 | genitive |
+| 6066 | desc | deiner normalen Monstern der Stufe | deiner normalen Monster der Stufe | genitive plural |
+| 6076 | desc | erhöht sich der ATK dieser Karte | erhöht sich die ATK dieser Karte | gender |
+| 6097 | desc | diese offene Karten auf den Friedhof | diese offene Karte auf den Friedhof | number |
+| 6133 | desc | auf deiner Spielfeld, dessen | auf deiner Spielfeldseite, dessen | truncated word (after the space rule) |
+| 6158 | desc | Diese Spielmarke können nicht | Diese Spielmarken können nicht | agreement |
+| 6166 | desc | annuliere die Effekt von allen | annuliere die Effekte von allen | plural |
+| 6167 | desc | Falls 5 Zauberzählmarke auf | Falls 5 Zauberzählmarken auf | plural |
+| 6167 | desc | mit 5 Zauberzählmarke auf den Friedhof | mit 5 Zauberzählmarken auf den Friedhof | plural |
+| 6168 | desc | mit einem ATK von 2000 oder weniger | mit einer ATK von 2000 oder weniger | gender |
+| 6234 | desc | durch die Welt wandernd um der stärkste | durch die Welt wandernd, um der stärkste | comma |
+| 6234 | desc | Sei vorsichtig ihn nicht zu berühren, oder | Sei vorsichtig, ihn nicht zu berühren, oder | comma |
+| 6244 | desc | In diesem Fall, wird die Grund-ATK | In diesem Fall wird die Grund-ATK | comma |
+| 6249 | desc | in den Friedhof gelegt wird, fügen den Life Points beider Spieler | in den Friedhof gelegt wird, füge den Life Points beider Spieler | imperative mood |
+| 6250 | desc | Zauberzählmarken um ein offenes Monster | Zauberzählmarken, um ein offenes Monster | comma |
+| 6254 | desc | wird, gebe 1 Monster | wird, gib 1 Monster | imperative mood |
+| 6262 | desc | in den Friedhof um 2 Monster | in den Friedhof, um 2 Monster | comma |
+| 6262 | desc | Die Monster die auf diese Weise | Die Monster, die auf diese Weise | comma |
+| 6282 | desc | Spielfeldseite um diese Karte zu aktivieren | Spielfeldseite, um diese Karte zu aktivieren | comma |
+| 6285 | desc | als Tribut an um diese Karte zu aktivieren | als Tribut an, um diese Karte zu aktivieren | comma |
+| 6287 | desc | Spezialbeschwörung wieder auf dein Feld zu bringen. | Spezialbeschwörung wieder auf dein Feld bringen. | syntax |
+| 6287 | desc | wird ihr ATK um 500 Punkte erhöht | wird ihre ATK um 500 Punkte erhöht | gender |
+| 6293 | desc | Friedhof ab um 1 Monster vom Typ Zombie | Friedhof ab, um 1 Monster vom Typ Zombie | comma |
+| 6293 | desc | mit einem niedrigeren Stufe | mit einer niedrigeren Stufe | gender |
+| 6303 | desc | und nehme sie auf deine Hand | und nimm sie auf deine Hand | imperative mood |
+| 6308 | desc | es sei denn du zahlst | es sei denn, du zahlst | comma |
+| 6320 | desc | Monster vom Typ Fels die vom Spiel entfernten wurden | Monster vom Typ Fels, die aus dem Spiel entfernt wurden | syntax |
+| 6324 | desc | Die Grund-ATK und -DEF dieser Karte wird zur Anzahl | Die Grund-ATK und -DEF dieser Karte werden zur Anzahl | agreement |
+| 6343 | desc | Das Eigenschaft dieser Karte | Die Eigenschaft dieser Karte | gender |
+| 6344 | desc | ATK des zerstörten Monster zu | ATK des zerstörten Monsters zu | genitive |
+| 6345 | desc | mit geringeren Grund-ATK als die ATK dieser Karte | mit geringerer Grund-ATK als die ATK dieser Karte | agreement |
+| 6346 | desc | des Spielzuges in dem diese Karte | des Spielzugs, in dem diese Karte | comma |
+| 6354 | desc | Zahle 300 Life Points um die verdeckten | Zahle 300 Life Points, um die verdeckten | comma |
+| 6355 | desc | auf deiner Spielfeldseite um diese Karte zu aktivieren | auf deiner Spielfeldseite, um diese Karte zu aktivieren | comma |
+| 6359 | desc | diese gesetzte Karte zerstört 1000 | diese gesetzte Karte zerstört, 1000 | comma |
+| 6376 | desc | auf den Friedhof um alle Karten, außer dieser Karte, in den Händen | auf den Friedhof, um alle Karten, außer dieser Karte, in den Händen | comma |
+| 6399 | desc | seine ATK niedriger sind als die ATK des Ziels | seine ATK niedriger ist als die ATK des Ziels | agreement |
+| 6400 | desc | in deiner Haupt Phase | in deiner Main Phase | terminology (Main Phase) |
+| 6400 | desc | eines Level 4 Monsters | eines Monsters der Stufe 4 | leftover English (Level) |
+| 6409 | desc | Effekt 3 mal benutzt | Effekt dreimal benutzt | spelling |
+| 6410 | desc | werden die die folgenden Effekte | werden die folgenden Effekte | doubled word |
+| 6414 | desc | Die ATK von 1 offenen Monster auf dem Spielfeld werden bis zur End Phase | Die ATK von 1 offenen Monster auf dem Spielfeld wird bis zur End Phase | agreement |
+| 6427 | desc | Die Grund-ATK dieser Karte werden zur Anzahl | Die Grund-ATK dieser Karte wird zur Anzahl | agreement |
+| 6438 | desc | Würfel 3 mal | Würfel dreimal | spelling |
 | 6450 | desc | verhindern, das irgendwelche | verhindern, dass irgendwelche | dass/das |
-| 6454 | desc | darfst die Effekte von Zauber-, Fallen und Effektmonsterkarten durch das Ablegen einer Karte vom gleichen Typ, unterbrechen | darfst du die Effekte von Zauber-, Fallen- und Effektmonsterkarten durch das Ablegen einer Karte vom gleichen Typ unterbrechen | pronome mancante e punteggiatura |
-| 6500 | desc | Schaden zu, jedes Mal wenn du | Schaden zu, jedes Mal, wenn du | virgola |
-| 6505 | desc | Spielfeldseite deines Gegner wählen | Spielfeldseite deines Gegners wählen | genitivo |
-| 6522 | desc | Keiner der Spieler kann als Fusionsbeschwörungen beschwören. | Keiner der Spieler kann Fusionsbeschwörungen durchführen. | sintassi |
-| 6524 | desc | kleiner oder gleich den ATK des ausgerüsteten Monsters sind | kleiner oder gleich der ATK des ausgerüsteten Monsters ist | concordanza |
-| 6530 | desc | Schaden zu, jedes Mal wenn ein Spieler | Schaden zu, jedes Mal, wenn ein Spieler | virgola |
-| 6541 | desc | ziehe soviele Karten | ziehe so viele Karten | ortografia |
-| 6543 | desc | Fallenkarteneffekts der Schaden zufügt | Fallenkarteneffekts, der Schaden zufügt | virgola |
-| 6550 | desc | die durch diesen Effekt zerstört wird, erhöht sich der ATK dieser Karte | die durch diesen Effekt aus dem Spiel entfernt wird, erhöht sich die ATK dieser Karte | traduzione (EN: removed from play) e genere |
-| 6569 | desc | gleich oder höher als die ATK dieser Karte sind. | gleich oder höher als die ATK dieser Karte ist. | concordanza |
-| 6571 | desc | werden die ATK des gewählten Monsters halbiert | wird die ATK des gewählten Monsters halbiert | concordanza |
-| 6582 | desc | dessen ATK kleiner oder gleich dem Kampfschaden sind | dessen ATK kleiner oder gleich dem Kampfschaden ist | concordanza |
-| 6589 | desc | Monster deines Gegner diese | Monster deines Gegners diese | genitivo |
-| 6610 | desc | Wenn diese verdeckt Karte | Wenn diese verdeckte Karte | declinazione |
-| 6617 | desc | kann benutzt werde, um | kann benutzt werden, um | refuso |
-| 6637 | desc | und das gleiche Eigenschaft wie | und die gleiche Eigenschaft wie | genere |
-| 6638 | desc | in der Runde, in der es spezialbeschworen wurde | in der Runde, in der sie spezialbeschworen wurde | concordanza |
-| 6639 | desc | Das Eigenschaft dieser Karte | Die Eigenschaft dieser Karte | genere |
-| 6639 | desc | Wenn dieser Karte erfolgreich Fusions beschworen werden, dann werden alle | Wenn diese Karte erfolgreich fusionsbeschworen wird, werden alle | grammatica |
-| 6639 | desc | mit den gleichen Attributen, steigt der ATK dieser hier um 300 Punkte | mit der gleichen Eigenschaft steigt die ATK dieser Karte um 300 Punkte | grammatica |
-| 6642 | desc | verdoppele allen Kampfschaden | verdopple allen Kampfschaden | imperativo (come nelle altre carte) |
-| 6654 | desc | Diese Spielmarke können nicht | Diese Spielmarken können nicht | concordanza |
-| 6661 | desc | auf deiner Spielfeldseite, nicht zerstört werden | auf deiner Spielfeldseite nicht zerstört werden | virgola superflua |
-| 6664 | desc | höher als die ATK dieser Karte sind, kann | höher als die ATK dieser Karte ist, kann | concordanza |
-| 6688 | desc | als Normalbeschwörung beschwören ohne ein Monster | als Normalbeschwörung beschwören, ohne ein Monster | virgola |
-| 6722 | desc | zerstöre alle die Monster | zerstöre alle Monster | articolo superfluo |
-| 6736 | desc | deiner Hand hingefügt wird | deiner Hand hinzugefügt wird | refuso |
-| 6758 | desc | seine ATK kleiner sind als die ATK des Angriffsziels | seine ATK kleiner ist als die ATK des Angriffsziels | concordanza |
-| 6815 | desc | auf den Friedhof geschickt wird während sie sich in deiner Zauber- & Fallenkartezone befindet | auf den Friedhof geschickt wird, während sie sich in deiner Zauber- & Fallenkartenzone befindet | virgola e refuso |
-| 6410 | desc | ●Zauber : die | ●Zauber: die | spazio prima dei due punti |
-| 6410 | desc | ●Falle : wähle | ●Falle: wähle | spazio prima dei due punti |
-| 6410 | desc | ●Effektmonster : wähle | ●Effektmonster: wähle | spazio prima dei due punti |
+| 6454 | desc | darfst die Effekte von Zauber-, Fallen und Effektmonsterkarten durch das Ablegen einer Karte vom gleichen Typ, unterbrechen | darfst du die Effekte von Zauber-, Fallen- und Effektmonsterkarten durch das Ablegen einer Karte vom gleichen Typ unterbrechen | missing pronoun and punctuation |
+| 6500 | desc | Schaden zu, jedes Mal wenn du | Schaden zu, jedes Mal, wenn du | comma |
+| 6505 | desc | Spielfeldseite deines Gegner wählen | Spielfeldseite deines Gegners wählen | genitive |
+| 6522 | desc | Keiner der Spieler kann als Fusionsbeschwörungen beschwören. | Keiner der Spieler kann Fusionsbeschwörungen durchführen. | syntax |
+| 6524 | desc | kleiner oder gleich den ATK des ausgerüsteten Monsters sind | kleiner oder gleich der ATK des ausgerüsteten Monsters ist | agreement |
+| 6530 | desc | Schaden zu, jedes Mal wenn ein Spieler | Schaden zu, jedes Mal, wenn ein Spieler | comma |
+| 6541 | desc | ziehe soviele Karten | ziehe so viele Karten | spelling |
+| 6543 | desc | Fallenkarteneffekts der Schaden zufügt | Fallenkarteneffekts, der Schaden zufügt | comma |
+| 6550 | desc | die durch diesen Effekt zerstört wird, erhöht sich der ATK dieser Karte | die durch diesen Effekt aus dem Spiel entfernt wird, erhöht sich die ATK dieser Karte | translation (EN: removed from play) and gender |
+| 6569 | desc | gleich oder höher als die ATK dieser Karte sind. | gleich oder höher als die ATK dieser Karte ist. | agreement |
+| 6571 | desc | werden die ATK des gewählten Monsters halbiert | wird die ATK des gewählten Monsters halbiert | agreement |
+| 6582 | desc | dessen ATK kleiner oder gleich dem Kampfschaden sind | dessen ATK kleiner oder gleich dem Kampfschaden ist | agreement |
+| 6589 | desc | Monster deines Gegner diese | Monster deines Gegners diese | genitive |
+| 6610 | desc | Wenn diese verdeckt Karte | Wenn diese verdeckte Karte | declension |
+| 6617 | desc | kann benutzt werde, um | kann benutzt werden, um | typo |
+| 6637 | desc | und das gleiche Eigenschaft wie | und die gleiche Eigenschaft wie | gender |
+| 6638 | desc | in der Runde, in der es spezialbeschworen wurde | in der Runde, in der sie spezialbeschworen wurde | agreement |
+| 6639 | desc | Das Eigenschaft dieser Karte | Die Eigenschaft dieser Karte | gender |
+| 6639 | desc | Wenn dieser Karte erfolgreich Fusions beschworen werden, dann werden alle | Wenn diese Karte erfolgreich fusionsbeschworen wird, werden alle | grammar |
+| 6639 | desc | mit den gleichen Attributen, steigt der ATK dieser hier um 300 Punkte | mit der gleichen Eigenschaft steigt die ATK dieser Karte um 300 Punkte | grammar |
+| 6642 | desc | verdoppele allen Kampfschaden | verdopple allen Kampfschaden | imperative (as in the other cards) |
+| 6654 | desc | Diese Spielmarke können nicht | Diese Spielmarken können nicht | agreement |
+| 6661 | desc | auf deiner Spielfeldseite, nicht zerstört werden | auf deiner Spielfeldseite nicht zerstört werden | superfluous comma |
+| 6664 | desc | höher als die ATK dieser Karte sind, kann | höher als die ATK dieser Karte ist, kann | agreement |
+| 6688 | desc | als Normalbeschwörung beschwören ohne ein Monster | als Normalbeschwörung beschwören, ohne ein Monster | comma |
+| 6722 | desc | zerstöre alle die Monster | zerstöre alle Monster | superfluous article |
+| 6736 | desc | deiner Hand hingefügt wird | deiner Hand hinzugefügt wird | typo |
+| 6758 | desc | seine ATK kleiner sind als die ATK des Angriffsziels | seine ATK kleiner ist als die ATK des Angriffsziels | agreement |
+| 6815 | desc | auf den Friedhof geschickt wird während sie sich in deiner Zauber- & Fallenkartezone befindet | auf den Friedhof geschickt wird, während sie sich in deiner Zauber- & Fallenkartenzone befindet | comma and typo |
+| 6410 | desc | ●Zauber : die | ●Zauber: die | space before the colon |
+| 6410 | desc | ●Falle : wähle | ●Falle: wähle | space before the colon |
+| 6410 | desc | ●Effektmonster : wähle | ●Effektmonster: wähle | space before the colon |
 
-### Elenco completo delle carte cambiate
-**Confronto completo originale -> nuovo con le parole cambiate evidenziate: `docs/changes_de/cards_diff.md`** (tutte le 258 voci). Dati grezzi: `docs/changes_de/cards.csv`. Prime 40 righe:
+### Complete list of changed cards
+**Complete original -> new comparison with the changed words highlighted: `docs/changes_de/cards_diff.md`** (all 258 entries). Raw data: `docs/changes_de/cards.csv`. First 40 rows:
 
-| id | nome originale | campo | originale | nuovo |
+| id | original name | field | original | new |
 |---|---|---|---|---|
 | 4017 | Schwertdorndrache | desc | Mit einem Körper voller Schwert ähnlicher Dornen wagt nichts und niemand, sich diesem geladenen Monster in den Weg zu stellen. | Mit einem Körper voller schwertähnlicher Dornen wagt nichts und niemand, sich diesem geladenen Monster in den Weg zu stellen. |
 | 4022 | Zeitzauberer | desc | Wirf eine Münze und wähle Kopf oder Zahl. Falls du richtig vorausgesagt hast, zerstöre alle Monster auf der Spielfeldseite deines Gegners. Wenn du falsch vorausgesagt hast, zerstöre alle Monster auf deiner Spielfeldseite und deine Life Points erhalten soviel Schaden wie die Hälfte der addierten ATK aller zerstörten Monster beträgt. Du kannst diese Karte nur in deinem Zug aktivieren und nur einmal pro Zug. | Wirf eine Münze und wähle Kopf oder Zahl. Falls du richtig vorausgesagt hast, zerstöre alle Monster auf der Spielfeldseite deines Gegners. Wenn du falsch vorausgesagt hast, zerstöre alle Monster auf deiner Spielfeldseite und deine Life Points erhalten so viel Schaden wie die Hälfte der addierten ATK aller zerstörten Monster beträgt. Du kannst diese Karte nur in deinem Zug aktivieren und nur einmal pro Zug. |
@@ -350,24 +350,24 @@ Come: ogni carta e' stata letta (it: 2.479 testi, uno per uno; fr: audit contro 
 | 4688 | Fressgaboon | desc | Wenn ein Monster, das dein Gegner beschwört (mit Ausnahme von Spezialbeschwörung) eine ATK von 500 oder weniger hat, ist es zerstört. | Wenn ein Monster, das dein Gegner beschwört (mit Ausnahme von Spezialbeschwörung), eine ATK von 500 oder weniger hat, ist es zerstört. |
 | 4691 | Säurefallgrube | desc | Wähle 1 verdecktes Monster in Verteidigungsposition. Decke es auf und falls die DEF dieses Monsters 2000 Punkte oder geringer ist, zerstöre das Monster. Falls die DEF mehr als 2000 Punkte sind, lege das Monster in verdeckte Verteidigungsposition zurück. | Wähle 1 verdecktes Monster in Verteidigungsposition. Decke es auf und falls die DEF dieses Monsters 2000 Punkte oder geringer ist, zerstöre das Monster. Falls die DEF mehr als 2000 Punkte beträgt, lege das Monster in verdeckte Verteidigungsposition zurück. |
 
-(... altre 218 righe nel CSV)
+(... 218 more rows in the CSV)
 
-## A3. Dialoghi della storia
+## A3. Story dialogues
 
-Archivi: `script/stNN_<scena>_f.ehp`, ogni scena e' una coppia di membri `...If.bin` (offset in caratteri UTF-16) e `...Lf.bin` (stringhe UTF-16LE chiuse da NUL, alcune compresse in gzip). **1649 righe** cambiate (comprese quelle che **ereditano** la correzione perche' hanno lo stesso testo originale e lo stesso giapponese di una riga corretta).
+Archives: `script/stNN_<scene>_f.ehp`, every scene is a pair of members `...If.bin` (offsets in UTF-16 characters) and `...Lf.bin` (UTF-16LE strings terminated by NUL, some gzip-compressed). **1649 lines** changed (including those that **inherit** the correction because they have the same original text and the same Japanese as a corrected line).
 
-Flusso: lettura riga per riga confrontata con inglese e giapponese -> ritocchi in `tools/data/dialogue_touchups_de.json` (`esatte` e `parti`) -> `build_dialogues.py de` -> `dialogue_corrections_de.json` -> `apply_to_iso.py`. Regole automatiche di impaginazione in `build_dialogues.py`: spazio non separabile prima di `! ? : ;` anche dopo `》` (regola `FR_PUNT`), spazio dopo i segnaposto, "Mode histoire" -> "Mode aventure". Vincoli del box: ~46 caratteri per riga, max 3 righe (un segnaposto vale ~6 caratteri): `apply_to_iso` segnala le righe che potrebbero non starci.
+Flow: line-by-line reading compared with English and Japanese -> touch-ups in `tools/data/dialogue_touchups_de.json` (`exact` and `parts`) -> `build_dialogues.py de` -> `dialogue_corrections_de.json` -> `apply_to_iso.py`. Automatic layout rules in `build_dialogues.py`: non-breaking space before `! ? : ;` also after `》` (rule `FR_PUNCT`), space after the placeholders, "Mode histoire" -> "Mode aventure". Box constraints: ~46 characters per line, max 3 lines (a placeholder counts ~6 characters): `apply_to_iso` reports the lines that might not fit.
 
-### Ritocchi di rilettura: `esatte` (4) — frase intera originale -> frase nuova
-| originale | nuovo |
+### Re-reading touch-ups: `exact` (4) — whole original sentence -> new sentence
+| original | new |
 |---|---|
 | Hier, du kannst den hier nehmen! | Hier, nimm dieses Dienstmädchen-Outfit! |
 | Warum bist du hier | Warum bist du hier? |
 | Tag-Duelle erfordern noch⏎mehr Strategie | Tag-Duelle erfordern noch⏎mehr Strategie. |
 | OK!⏎Los geht's | OK!⏎Los geht's! |
 
-### Ritocchi di rilettura: `parti` (331) — sostituzioni di testo applicate a ogni riga (in ordine)
-| vecchio | nuovo |
+### Re-reading touch-ups: `parts` (331) — text replacements applied to every line (in order)
+| old | new |
 |---|---|
 | euchgegeben | euch gegeben |
 | anhöhren | anhören |
@@ -701,10 +701,10 @@ Flusso: lettura riga per riga confrontata con inglese e giapponese -> ritocchi i
 | Duellant von 《M001_1》 | Duellant der 《M001_1》 |
 | Duellanten von 《M001_1》 | Duellanten der 《M001_1》 |
 
-### Elenco completo delle righe
-**Confronto completo originale -> nuovo (con inglese e giapponese): `docs/changes_de/dialogues_diff.md`** (tutte le 1649 righe). Dati grezzi: `docs/changes_de/dialogues.csv`. Prime 30:
+### Complete list of lines
+**Complete original -> new comparison (with English and Japanese): `docs/changes_de/dialogues_diff.md`** (all 1649 lines). Raw data: `docs/changes_de/dialogues.csv`. First 30:
 
-| id | originale | nuovo | inglese |
+| id | original | new | English |
 |---|---|---|---|
 | st01_t01/ImpMapMsg#9 | Das Büro von Kanzler | Büro des Kanzlers | Duel Academy - Chancellor's Office |
 | st01_t01/ImpMapMsg#10 | Das Büro von Kanzler | Büro des Kanzlers | Chancellor's Office |
@@ -737,15 +737,15 @@ Flusso: lettura riga per riga confrontata con inglese e giapponese -> ritocchi i
 | st01_t01/Iso010E#2 | Das Tag Force-Turnier wird⏎bald beginnen! | Das Tag-Force-Turnier wird⏎bald beginnen! | The Tag Force Tournament⏎will begin soon! |
 | st01_t01/Iso010E#7 | Wenn du das Gelände verlassen⏎möchtest, spricht einfach mit mir. | Wenn du das Gelände verlassen⏎möchtest, sprich einfach mit mir. | If you want to leave,⏎simply talk to me. |
 
-(... altre 1619 righe nel CSV)
+(... 1619 more rows in the CSV)
 
-## A4. Frasi dei duellanti nei duelli
+## A4. Duelist sentences in duels
 
-Tabelle `chr_wordstbl_f.bin` e `02chr_wordstbl_...` dentro ~72 archivi `duel/cutin_*.ehp` (e `zakov*`). Le frasi uniche sono ~1.800: tutte rilette. **40 frasi cambiate** (66 voci). Dati: `esatte` (3) e `parti` (38) in `duel_line_corrections_de.json`. I file `*-ptrs.txt` degli archivi dei personaggi contengono offset assoluti: se una tabella cresce vanno ricalcolati (`rimappa_puntatori`), altrimenti il duello va in crash.
+Tables `chr_wordstbl_f.bin` and `02chr_wordstbl_...` inside ~72 `duel/cutin_*.ehp` archives (and `zakov*`). The unique sentences are ~1,800: all re-read. **40 sentences changed** (66 entries). Data: `exact` (3) and `parts` (38) in `duel_line_corrections_de.json`. The `*-ptrs.txt` files of the character archives contain absolute offsets: if a table grows they must be recomputed (`remap_pointers`), otherwise the duel crashes.
 
-Confronto con parole evidenziate: `docs/changes_de/duel_lines_diff.md`.
+Comparison with highlighted words: `docs/changes_de/duel_lines_diff.md`.
 
-| originale | nuovo | voci | esempi di archivio |
+| original | new | entries | archive examples |
 |---|---|---|---|
 | Du fordest mich heraus?⏎Den größten Duellanten der Geschichte? | Du forderst mich heraus?⏎Den größten Duellanten der Geschichte? | 1 | cutin_abdos01.ehp |
 | Siehe mal, mein Schnellzauber! | Sieh mal, mein Schnellzauber! | 1 | cutin_abdos01.ehp |
@@ -788,12 +788,12 @@ Confronto con parole evidenziate: `docs/changes_de/duel_lines_diff.md`.
 | Ich setze eine Ausrüstungszauber ein! | Ich setze einen Ausrüstungszauber ein! | 5 | zakov75.ehp, zakov76.ehp, zakov77.ehp, zakov78.ehp |
 | Wie unentschieden?⏎Wir wiederholen das Duell! | Wie, unentschieden?⏎Wir wiederholen das Duell! | 1 | zakov82.ehp |
 
-## A5. Stringhe lunghe e corte dell'interfaccia
+## A5. Long and short interface strings
 
-Tabelle `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (formato `(n, 12, 12+4n)` + offset + UTF-16) in 55 archivi (la stessa tabella e' copiata in piu' archivi, es. `field/always_*_fra.ehp` x6). **581 stringhe uniche cambiate**. Regole: `tools/corrections/string_rules_de.py` — **491 voci `STRINGHE`** (archivio, membro, indice 0-based, [(vecchio, nuovo)], motivo), **37 `GLOBALI`** (regex/callable, applicate dopo le STRINGHE) su **33 tabelle** (`TABELLE`); piu' 0 correzioni puntuali in `tools/data/ui_texts.json` (scrittura sul posto, testo piu' corto o uguale).
+Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12, 12+4n)` + offsets + UTF-16) in 55 archives (the same table is copied into several archives, e.g. `field/always_*_fra.ehp` x6). **581 unique strings changed**. Rules: `tools/corrections/string_rules_de.py` — **491 `STRINGS` entries** (archive, member, 0-based index, [(old, new)], reason), **37 `GLOBALS`** (regex/callable, applied after the STRINGS) on **33 tables** (`TABLES`); plus 0 targeted corrections in `tools/data/ui_texts.json` (in-place writes, text shorter than or equal to the original).
 
-### Per membro (stringhe uniche cambiate)
-| membro | stringhe |
+### By member (unique strings changed)
+| member | strings |
 |---|---|
 | strTbl_g.bin | 172 |
 | help_strtbl_contents_duel_g.bin | 67 |
@@ -812,550 +812,550 @@ Tabelle `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (formato `(n, 
 | title_msg_g.bin | 7 |
 | option_msg_g.bin | 4 |
 
-### Regole globali (tutte)
-| modello | sostituzione | motivo |
+### Global rules (all)
+| pattern | replacement | reason |
 |---|---|---|
-| Seitendeck | Side Deck | una sola grafia (Side Deck nel resto del gioco) |
-| \b([Tt]ut mir) Leid\b | \1 leid | ortografia riformata |
-| \bspielzug | Spielzug | maiuscola |
-| \$C0\$(?=[ \n.,!?]) | $C0 | $ vagante dopo il codice colore |
-| Monster-kartenzone | Monsterkartenzone | trattino di sillabazione rimasto |
-| (Fallen\|Fallenkarten)- (karten\|zone) | \1\2 | spazio dopo trattino di sillabazione |
-| Geg-ner | Gegner | trattino di sillabazione rimasto |
-| Ausrüstungs-zauberkarten | Ausrüstungszauberkarten | trattino di sillabazione rimasto |
-| Karten-effekte | Karteneffekte | trattino di sillabazione rimasto |
-| Aktivier-ung | Aktivierung | trattino di sillabazione rimasto |
-| gleich-zeitig | gleichzeitig | trattino di sillabazione rimasto |
-| (\$CA[\d.]+)\$(?=[ \n.,!?]) | \1$C0 | codice colore di chiusura incompleto |
-| An-griffsabsicht | Angriffsabsicht | trattino di sillabazione rimasto |
-| (Angriffs\|Verteidigungs)-position | \1position | trattino di sillabazione rimasto |
-| gegner-isch | gegnerisch | trattino di sillabazione rimasto |
-| zer-stört | zerstört | trattino di sillabazione rimasto |
-| Restscha-den | Restschaden | trattino di sillabazione rimasto |
-| Angriffspo-sition\|An-griffsposition | Angriffsposition | trattino di sillabazione rimasto |
-| Ausnahme-fälle | Ausnahmefälle | trattino di sillabazione rimasto |
-| den-selben | denselben | trattino di sillabazione rimasto |
-| (?<=[a-zäöüßA-ZÄÖÜ\)“]) um (?=[^.,!?\n\r]{0,70}?\bzu\b) | , um  | virgola prima dell'infinitiva con um ... zu |
-| ([.!?“])  (?=[A-ZÄÖÜ]) | \1  | doppio spazio dopo il punto |
-| \bkennen zu lernen\b | kennenzulernen | ortografia riformata |
-| \bkennen lernen\b | kennenlernen | ortografia riformata |
-| \bkennen gelernt\b | kennengelernt | ortografia riformata |
-| Duell Akademie | Duellakademie | grafia unica |
-| „([^„“"\n\r]{1,60})" | „\1“ | virgolette di chiusura dritte al posto di “ |
-| Zauber- Und  | Zauber- und  | maiuscola |
-| Algemeinen | Allgemeinen | refuso |
-| Vorraussetzung | Voraussetzung | refuso |
-| Konter-Fall | Konterfall | come nelle carte |
-| Deck Bearbeitungs | Deck-Bearbeitungs | trattino |
-| ([×△○□])–Taste | \1-Taste | trattino |
-| Story Modus | Story-Modus | trattino |
-| \bSlifer[- ]Red\b | Slifer Rot | residuo inglese (nel resto del gioco: Slifer Rot / Ra Gelb / Obelisk Blau) |
-| \bRa[- ]Yellow\b | Ra Gelb | residuo inglese |
-| \bObelisk[- ]Blue\b | Obelisk Blau | residuo inglese |
+| Seitendeck | Side Deck | a single spelling (Side Deck in the rest of the game) |
+| \b([Tt]ut mir) Leid\b | \1 leid | reformed spelling |
+| \bspielzug | Spielzug | capital letter |
+| \$C0\$(?=[ \n.,!?]) | $C0 | stray $ after the color code |
+| Monster-kartenzone | Monsterkartenzone | leftover hyphenation hyphen |
+| (Fallen\|Fallenkarten)- (karten\|zone) | \1\2 | space after a hyphenation hyphen |
+| Geg-ner | Gegner | leftover hyphenation hyphen |
+| Ausrüstungs-zauberkarten | Ausrüstungszauberkarten | leftover hyphenation hyphen |
+| Karten-effekte | Karteneffekte | leftover hyphenation hyphen |
+| Aktivier-ung | Aktivierung | leftover hyphenation hyphen |
+| gleich-zeitig | gleichzeitig | leftover hyphenation hyphen |
+| (\$CA[\d.]+)\$(?=[ \n.,!?]) | \1$C0 | incomplete closing color code |
+| An-griffsabsicht | Angriffsabsicht | leftover hyphenation hyphen |
+| (Angriffs\|Verteidigungs)-position | \1position | leftover hyphenation hyphen |
+| gegner-isch | gegnerisch | leftover hyphenation hyphen |
+| zer-stört | zerstört | leftover hyphenation hyphen |
+| Restscha-den | Restschaden | leftover hyphenation hyphen |
+| Angriffspo-sition\|An-griffsposition | Angriffsposition | leftover hyphenation hyphen |
+| Ausnahme-fälle | Ausnahmefälle | leftover hyphenation hyphen |
+| den-selben | denselben | leftover hyphenation hyphen |
+| (?<=[a-zäöüßA-ZÄÖÜ\)“]) um (?=[^.,!?\n\r]{0,70}?\bzu\b) | , um  | comma before the infinitive clause with um ... zu |
+| ([.!?“])  (?=[A-ZÄÖÜ]) | \1  | double space after the full stop |
+| \bkennen zu lernen\b | kennenzulernen | reformed spelling |
+| \bkennen lernen\b | kennenlernen | reformed spelling |
+| \bkennen gelernt\b | kennengelernt | reformed spelling |
+| Duell Akademie | Duellakademie | single spelling |
+| „([^„“"\n\r]{1,60})" | „\1“ | straight closing quotation marks instead of “ |
+| Zauber- Und  | Zauber- und  | capital letter |
+| Algemeinen | Allgemeinen | typo |
+| Vorraussetzung | Voraussetzung | typo |
+| Konter-Fall | Konterfall | as in the cards |
+| Deck Bearbeitungs | Deck-Bearbeitungs | hyphen |
+| ([×△○□])–Taste | \1-Taste | hyphen |
+| Story Modus | Story-Modus | hyphen |
+| \bSlifer[- ]Red\b | Slifer Rot | leftover English (in the rest of the game: Slifer Rot / Ra Gelb / Obelisk Blau) |
+| \bRa[- ]Yellow\b | Ra Gelb | leftover English |
+| \bObelisk[- ]Blue\b | Obelisk Blau | leftover English |
 
-### Voci STRINGHE (tutte): dove e perche'
-| archivio | membro | indice | cambiamenti | motivo |
+### STRINGS entries (all): where and why
+| archive | member | index | changes | reason |
 |---|---|---|---|---|
-| database/charalist.ehp | strTbl_g.bin | 12 | 5 sostituzione/i | concordanza, grafia |
-| database/charalist.ehp | strTbl_g.bin | 13 | 1 sostituzione/i | genitivo di un nome in -s, residuo inglese |
-| database/charalist.ehp | strTbl_g.bin | 14 | 1 sostituzione/i | spazio |
-| database/charalist.ehp | strTbl_g.bin | 15 | 1 sostituzione/i | caso |
-| database/charalist.ehp | strTbl_g.bin | 16 | 2 sostituzione/i | punto mancante, refuso |
-| database/charalist.ehp | strTbl_g.bin | 17 | 2 sostituzione/i | refuso, caso |
-| database/charalist.ehp | strTbl_g.bin | 18 | 3 sostituzione/i | maiuscole, verbo sbagliato (EN: He likes to eat vegetables) |
-| database/charalist.ehp | strTbl_g.bin | 19 | 1 sostituzione/i | refuso |
-| database/charalist.ehp | strTbl_g.bin | 20 | 3 sostituzione/i | caso, concordanza, virgolette mancanti |
-| database/charalist.ehp | strTbl_g.bin | 21 | 1 sostituzione/i | grammatica |
-| database/charalist.ehp | strTbl_g.bin | 22 | 2 sostituzione/i | genitivo di un nome in -s |
-| database/charalist.ehp | strTbl_g.bin | 24 | 2 sostituzione/i | grammatica |
-| database/charalist.ehp | strTbl_g.bin | 25 | 1 sostituzione/i | caso |
-| database/charalist.ehp | strTbl_g.bin | 28 | 1 sostituzione/i | refuso |
-| database/charalist.ehp | strTbl_g.bin | 29 | 1 sostituzione/i | concordanza |
-| database/charalist.ehp | strTbl_g.bin | 31 | 2 sostituzione/i | concordanza |
-| database/charalist.ehp | strTbl_g.bin | 33 | 1 sostituzione/i | nome scritto in due modi nello stesso testo |
-| database/charalist.ehp | strTbl_g.bin | 35 | 1 sostituzione/i | maiuscola |
-| database/charalist.ehp | strTbl_g.bin | 37 | 2 sostituzione/i | refuso, grammatica (EN: high school level Duel Academy) |
-| database/charalist.ehp | strTbl_g.bin | 38 | 1 sostituzione/i | parola doppia |
-| database/charalist.ehp | strTbl_g.bin | 40 | 1 sostituzione/i | virgola sbagliata |
-| database/charalist.ehp | strTbl_g.bin | 41 | 3 sostituzione/i | genere (EN: A card spirit), dass |
-| database/charalist.ehp | strTbl_g.bin | 43 | 2 sostituzione/i | maiuscola, grammatica |
-| database/charalist.ehp | strTbl_g.bin | 44 | 1 sostituzione/i | grammatica |
-| database/charalist.ehp | strTbl_g.bin | 45 | 1 sostituzione/i | refuso, articolo |
-| database/charalist.ehp | strTbl_g.bin | 49 | 1 sostituzione/i | concordanza |
-| database/charalist.ehp | strTbl_g.bin | 50 | 1 sostituzione/i | termine come nelle carte (Grabwächters Attentäter) |
-| database/charalist.ehp | strTbl_g.bin | 52 | 1 sostituzione/i | genitivo senza apostrofo |
-| database/charalist.ehp | strTbl_g.bin | 65 | 1 sostituzione/i | come nei tipi di carta (permanent) |
-| database/charalist.ehp | strTbl_g.bin | 69 | 1 sostituzione/i | refuso, come nei tipi di carta (permanent) |
-| database/charalist.ehp | strTbl_g.bin | 70 | 1 sostituzione/i | come nelle carte (Konterfalle) |
-| database/duelrecord.ehp | strTbl_g.bin | 5 | 1 sostituzione/i | residuo inglese |
-| duel/result/result_g.ehp | strTbl.bin | 5 | 1 sostituzione/i | residuo inglese |
-| database/duelrecord.ehp | strTbl_g.bin | 6 | 1 sostituzione/i | residuo inglese |
-| duel/result/result_g.ehp | strTbl.bin | 6 | 1 sostituzione/i | residuo inglese |
-| database/duelrecord.ehp | strTbl_g.bin | 9 | 1 sostituzione/i | residuo inglese |
-| duel/result/result_g.ehp | strTbl.bin | 9 | 1 sostituzione/i | residuo inglese |
-| database/duelrecord.ehp | strTbl_g.bin | 10 | 1 sostituzione/i | trattino |
-| duel/result/result_g.ehp | strTbl.bin | 10 | 1 sostituzione/i | trattino |
-| database/duelrecord.ehp | strTbl_g.bin | 16 | 1 sostituzione/i | maiuscola |
-| duel/result/result_g.ehp | strTbl.bin | 16 | 1 sostituzione/i | maiuscola |
-| database/duelrecord.ehp | strTbl_g.bin | 17 | 1 sostituzione/i | maiuscola |
-| duel/result/result_g.ehp | strTbl.bin | 17 | 1 sostituzione/i | maiuscola |
-| database/duelrecord.ehp | strTbl_g.bin | 30 | 1 sostituzione/i | genere (die ATK), trattino |
-| duel/result/result_g.ehp | strTbl.bin | 30 | 1 sostituzione/i | genere (die ATK), trattino |
-| database/duelrecord.ehp | strTbl_g.bin | 32 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 32 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 34 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 34 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 35 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 35 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 36 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 36 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 37 | 1 sostituzione/i | concordanza |
-| duel/result/result_g.ehp | strTbl.bin | 37 | 1 sostituzione/i | concordanza |
-| database/duelrecord.ehp | strTbl_g.bin | 38 | 1 sostituzione/i | concordanza |
-| duel/result/result_g.ehp | strTbl.bin | 38 | 1 sostituzione/i | concordanza |
-| database/duelrecord.ehp | strTbl_g.bin | 49 | 1 sostituzione/i | trattino |
-| duel/result/result_g.ehp | strTbl.bin | 49 | 1 sostituzione/i | trattino |
-| database/duelrecord.ehp | strTbl_g.bin | 63 | 1 sostituzione/i | trattino |
-| duel/result/result_g.ehp | strTbl.bin | 63 | 1 sostituzione/i | trattino |
-| database/duelrecord.ehp | strTbl_g.bin | 64 | 1 sostituzione/i | punto delle migliaia come nelle altre voci |
-| duel/result/result_g.ehp | strTbl.bin | 64 | 1 sostituzione/i | punto delle migliaia come nelle altre voci |
-| database/duelrecord.ehp | strTbl_g.bin | 67 | 1 sostituzione/i | come la voce prima |
-| duel/result/result_g.ehp | strTbl.bin | 67 | 1 sostituzione/i | come la voce prima |
-| database/duelrecord.ehp | strTbl_g.bin | 70 | 1 sostituzione/i | trattini (come Keine-Karten-mehr-Bonus) |
-| duel/result/result_g.ehp | strTbl.bin | 70 | 1 sostituzione/i | trattini (come Keine-Karten-mehr-Bonus) |
-| database/duelrecord.ehp | strTbl_g.bin | 71 | 1 sostituzione/i | trattini |
-| duel/result/result_g.ehp | strTbl.bin | 71 | 1 sostituzione/i | trattini |
-| database/duelrecord.ehp | strTbl_g.bin | 87 | 1 sostituzione/i | composto |
-| duel/result/result_g.ehp | strTbl.bin | 87 | 1 sostituzione/i | composto |
-| database/duelrecord.ehp | strTbl_g.bin | 88 | 1 sostituzione/i | composto |
-| duel/result/result_g.ehp | strTbl.bin | 88 | 1 sostituzione/i | composto |
-| database/duelrecord.ehp | strTbl_g.bin | 126 | 1 sostituzione/i | caso, maiuscola |
-| duel/result/result_g.ehp | strTbl.bin | 126 | 1 sostituzione/i | caso, maiuscola |
-| database/duelrecord.ehp | strTbl_g.bin | 127 | 1 sostituzione/i | caso |
-| duel/result/result_g.ehp | strTbl.bin | 127 | 1 sostituzione/i | caso |
-| database/duelrecord.ehp | strTbl_g.bin | 140 | 1 sostituzione/i | refusi, punto delle migliaia, Toon-Monster come nelle carte |
-| duel/result/result_g.ehp | strTbl.bin | 140 | 1 sostituzione/i | refusi, punto delle migliaia, Toon-Monster come nelle carte |
-| database/duelrecord.ehp | strTbl_g.bin | 151 | 1 sostituzione/i | refuso |
-| duel/result/result_g.ehp | strTbl.bin | 151 | 1 sostituzione/i | refuso |
-| database/duelrecord.ehp | strTbl_g.bin | 152 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 152 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 153 | 1 sostituzione/i | punto delle migliaia |
-| duel/result/result_g.ehp | strTbl.bin | 153 | 1 sostituzione/i | punto delle migliaia |
-| database/duelrecord.ehp | strTbl_g.bin | 154 | 1 sostituzione/i | punto delle migliaia |
-| duel/result/result_g.ehp | strTbl.bin | 154 | 1 sostituzione/i | punto delle migliaia |
-| database/duelrecord.ehp | strTbl_g.bin | 163 | 1 sostituzione/i | caso, maiuscola |
-| duel/result/result_g.ehp | strTbl.bin | 163 | 1 sostituzione/i | caso, maiuscola |
-| database/duelrecord.ehp | strTbl_g.bin | 182 | 1 sostituzione/i | traduzione sbagliata (JA: 全レベルのモンスターが入った, EN: monsters of every Level) |
-| duel/result/result_g.ehp | strTbl.bin | 182 | 1 sostituzione/i | traduzione sbagliata (JA: 全レベルのモンスターが入った, EN: monsters of every Level) |
-| database/duelrecord.ehp | strTbl_g.bin | 213 | 1 sostituzione/i | come nei nomi delle carte |
-| duel/result/result_g.ehp | strTbl.bin | 213 | 1 sostituzione/i | come nei nomi delle carte |
-| database/duelrecord.ehp | strTbl_g.bin | 215 | 1 sostituzione/i | come nelle carte |
-| duel/result/result_g.ehp | strTbl.bin | 215 | 1 sostituzione/i | come nelle carte |
-| database/duelrecord.ehp | strTbl_g.bin | 224 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 224 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 225 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 225 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 226 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 226 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 229 | 1 sostituzione/i | come nei dialoghi |
-| duel/result/result_g.ehp | strTbl.bin | 229 | 1 sostituzione/i | come nei dialoghi |
-| database/duelrecord.ehp | strTbl_g.bin | 238 | 1 sostituzione/i | virgola |
-| duel/result/result_g.ehp | strTbl.bin | 238 | 1 sostituzione/i | virgola |
-| database/duelrecord.ehp | strTbl_g.bin | 240 | 1 sostituzione/i | trattino |
-| duel/result/result_g.ehp | strTbl.bin | 240 | 1 sostituzione/i | trattino |
-| database/duelrecord.ehp | strTbl_g.bin | 242 | 1 sostituzione/i | ortografia tedesca |
-| duel/result/result_g.ehp | strTbl.bin | 242 | 1 sostituzione/i | ortografia tedesca |
-| database/duelrecord.ehp | strTbl_g.bin | 244 | 1 sostituzione/i | residuo inglese |
-| duel/result/result_g.ehp | strTbl.bin | 244 | 1 sostituzione/i | residuo inglese |
-| database/duelrecord.ehp | strTbl_g.bin | 245 | 1 sostituzione/i | residuo inglese |
-| duel/result/result_g.ehp | strTbl.bin | 245 | 1 sostituzione/i | residuo inglese |
-| database/duelrecord.ehp | strTbl_g.bin | 248 | 1 sostituzione/i | residuo inglese |
-| duel/result/result_g.ehp | strTbl.bin | 248 | 1 sostituzione/i | residuo inglese |
-| database/duelrecord.ehp | strTbl_g.bin | 249 | 1 sostituzione/i | residuo inglese |
-| duel/result/result_g.ehp | strTbl.bin | 249 | 1 sostituzione/i | residuo inglese |
-| database/duelrecord.ehp | strTbl_g.bin | 250 | 1 sostituzione/i | spazio |
-| duel/result/result_g.ehp | strTbl.bin | 250 | 1 sostituzione/i | spazio |
-| database/duelrecord.ehp | strTbl_g.bin | 260 | 1 sostituzione/i | frase mancante (EN: The duel will now end.) |
-| duel/result/result_g.ehp | strTbl.bin | 260 | 1 sostituzione/i | frase mancante (EN: The duel will now end.) |
-| database/duelrecord.ehp | strTbl_g.bin | 268 | 1 sostituzione/i | termine (EN: duel) |
-| duel/result/result_g.ehp | strTbl.bin | 268 | 1 sostituzione/i | termine (EN: duel) |
-| database/duelrecord.ehp | strTbl_g.bin | 269 | 1 sostituzione/i | ortografia tedesca |
-| duel/result/result_g.ehp | strTbl.bin | 269 | 1 sostituzione/i | ortografia tedesca |
-| database/limitlist.ehp | strTbl_g.bin | 1 | 1 sostituzione/i | aggettivi minuscoli |
-| database/limitlist.ehp | strTbl_g.bin | 2 | 1 sostituzione/i | aggettivi minuscoli |
-| database/limitlist.ehp | strTbl_g.bin | 4 | 1 sostituzione/i | abbreviazione inglese (Ltd.), voce di menu |
-| database/tutoriallist.ehp | strTbl_g.bin | 13 | 1 sostituzione/i | costruzione mista (EN: Changing Battle Positions) |
-| deck/all_g.ehp | strTbl.bin | 31 | 1 sostituzione/i | trattino |
-| deck/all_g.ehp | strTbl.bin | 41 | 1 sostituzione/i | avverbio |
-| deck/all_g.ehp | strTbl.bin | 83 | 1 sostituzione/i | doppio spazio |
-| deck/all_g.ehp | strTbl.bin | 112 | 1 sostituzione/i | composto |
-| deck/all_g.ehp | strTbl.bin | 73 | 1 sostituzione/i | incompleto (JA: デッキを元の状態に戻す) |
-| deck/all_g.ehp | strTbl.bin | 132 | 1 sostituzione/i | refuso |
-| deck/all_g.ehp | strTbl.bin | 134 | 1 sostituzione/i | parola in piu' |
-| deck/all_g.ehp | strTbl.bin | 172 | 1 sostituzione/i | costruzione mista (EN: Changing Battle Positions) |
-| deck/all_g.ehp | help_strtbl_contents.bin | 4 | 1 sostituzione/i | trattino |
-| deck/all_g.ehp | help_strtbl_contents.bin | 23 | 1 sostituzione/i | trattino |
-| deck/all_g.ehp | help_strtbl_contents.bin | 29 | 1 sostituzione/i | composto |
-| deck/all_g.ehp | help_strtbl_contents.bin | 37 | 1 sostituzione/i | composto (come Deckrezepte) |
-| deck/all_g.ehp | help_strtbl_contents.bin | 41 | 1 sostituzione/i | incompleto (JA: デッキを元の状態に戻す) |
-| deck/all_g.ehp | help_strtbl_contents.bin | 53 | 1 sostituzione/i | costruzione |
-| deck/all_g.ehp | help_strtbl_contents.bin | 70 | 1 sostituzione/i | plurale |
-| deck/all_g.ehp | help_strtbl_contents.bin | 84 | 1 sostituzione/i | senza senso (JA: カードをめくる; stessa voce di 166) |
-| deck/all_g.ehp | help_strtbl_contents.bin | 93 | 1 sostituzione/i | maiuscola, punto |
-| deck/all_g.ehp | help_strtbl_contents.bin | 94 | 1 sostituzione/i | maiuscola, punto |
-| deck/all_g.ehp | help_strtbl_contents.bin | 97 | 2 sostituzione/i | pronome mancante (EN: you will draw), refuso, virgola |
-| deck/all_g.ehp | help_strtbl_contents.bin | 99 | 4 sostituzione/i | concordanza, caso |
-| deck/all_g.ehp | help_strtbl_contents.bin | 106 | 1 sostituzione/i | trattino |
-| deck/all_g.ehp | help_strtbl_contents.bin | 107 | 1 sostituzione/i | plurale |
-| deck/all_g.ehp | help_strtbl_contents.bin | 109 | 1 sostituzione/i | nachdem, articolo mancante |
-| deck/all_g.ehp | help_strtbl_contents.bin | 112 | 1 sostituzione/i | concordanza |
-| deck/all_g.ehp | help_strtbl_contents.bin | 123 | 1 sostituzione/i | virgola, caso |
-| deck/all_g.ehp | help_strtbl_contents.bin | 126 | 1 sostituzione/i | spazio |
-| deck/all_g.ehp | help_strtbl_contents.bin | 129 | 3 sostituzione/i | plurale, refuso, je ... desto |
-| deck/all_g.ehp | help_strtbl_contents.bin | 133 | 1 sostituzione/i | das/dass |
-| deck/all_g.ehp | help_strtbl_contents.bin | 135 | 3 sostituzione/i | plurale, trattino, caso |
-| deck/all_g.ehp | help_strtbl_contents.bin | 136 | 1 sostituzione/i | frase sbagliata (soggetto) |
-| deck/all_g.ehp | help_strtbl_contents.bin | 137 | 3 sostituzione/i | maiuscola, 'solange' di troppo |
-| deck/all_g.ehp | help_strtbl_contents.bin | 141 | 2 sostituzione/i | articolo, verbo (EN: activated) |
-| deck/all_g.ehp | help_strtbl_contents.bin | 142 | 1 sostituzione/i | virgola |
-| deck/all_g.ehp | help_strtbl_contents.bin | 144 | 1 sostituzione/i | virgola |
-| deck/all_g.ehp | help_strtbl_contents.bin | 147 | 1 sostituzione/i | verbo mancante |
-| deck/all_g.ehp | help_strtbl_contents.bin | 148 | 1 sostituzione/i | nachdem |
-| deck/all_g.ehp | help_strtbl_contents.bin | 149 | 2 sostituzione/i | pronome mancante, relativo |
-| deck/all_g.ehp | help_strtbl_contents.bin | 150 | 3 sostituzione/i | concordanza, caso |
-| deck/all_g.ehp | help_strtbl_contents.bin | 153 | 1 sostituzione/i | nachdem |
-| deck/all_g.ehp | help_strtbl_contents.bin | 154 | 1 sostituzione/i | virgola, punto |
-| deck/all_g.ehp | help_strtbl_contents.bin | 156 | 3 sostituzione/i | frase non grammaticale, refusi |
-| deck/all_g.ehp | help_strtbl_contents.bin | 157 | 1 sostituzione/i | verbo mancante |
-| deck/all_g.ehp | help_strtbl_contents.bin | 158 | 1 sostituzione/i | frase sbagliata |
-| deck/all_g.ehp | help_strtbl_contents.bin | 159 | 1 sostituzione/i | refuso |
-| deck/all_g.ehp | help_strtbl_contents.bin | 161 | 1 sostituzione/i | maiuscola |
-| deck/all_g.ehp | help_strtbl_contents.bin | 162 | 3 sostituzione/i | parola doppia, caso, virgola |
-| deck/all_g.ehp | help_strtbl_contents.bin | 163 | 2 sostituzione/i | refuso, costruzione |
-| deck/all_g.ehp | help_strtbl_contents.bin | 165 | 2 sostituzione/i | concordanza |
-| deck/all_g.ehp | help_strtbl_contents.bin | 166 | 1 sostituzione/i | plurale, trattino |
-| deck/all_g.ehp | help_strtbl_contents.bin | 167 | 1 sostituzione/i | refuso |
-| deck/all_g.ehp | help_strtbl_contents.bin | 171 | 1 sostituzione/i | plurale |
-| deck/all_g.ehp | help_strtbl_contents.bin | 172 | 2 sostituzione/i | caso, refuso |
-| deck/all_g.ehp | help_strtbl_contents.bin | 173 | 1 sostituzione/i | pronome |
-| deck/tutorial.ehp | strTbl_g.bin | 9 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 16 | 1 sostituzione/i | virgola, trattino |
-| deck/tutorial.ehp | strTbl_g.bin | 18 | 1 sostituzione/i | frase non grammaticale |
-| deck/tutorial.ehp | strTbl_g.bin | 20 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 21 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 26 | 1 sostituzione/i | punto interrogativo |
-| deck/tutorial.ehp | strTbl_g.bin | 27 | 1 sostituzione/i | caso, verbo |
-| deck/tutorial.ehp | strTbl_g.bin | 34 | 1 sostituzione/i | parola mancante |
-| deck/tutorial.ehp | strTbl_g.bin | 39 | 1 sostituzione/i | maiuscole |
-| deck/tutorial.ehp | strTbl_g.bin | 55 | 1 sostituzione/i | plurale |
-| deck/tutorial.ehp | strTbl_g.bin | 58 | 1 sostituzione/i | punto interrogativo |
-| deck/tutorial.ehp | strTbl_g.bin | 66 | 1 sostituzione/i | congiunzione |
-| deck/tutorial.ehp | strTbl_g.bin | 76 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_g.bin | 81 | 1 sostituzione/i | frase incompleta |
-| deck/tutorial.ehp | strTbl_g.bin | 82 | 1 sostituzione/i | maiuscole |
-| deck/tutorial.ehp | strTbl_g.bin | 87 | 1 sostituzione/i | parola doppia |
-| deck/tutorial.ehp | strTbl_g.bin | 91 | 1 sostituzione/i | caso |
-| deck/tutorial.ehp | strTbl_g.bin | 93 | 1 sostituzione/i | genere |
-| deck/tutorial.ehp | strTbl_g.bin | 94 | 1 sostituzione/i | caso |
-| deck/tutorial.ehp | strTbl_g.bin | 97 | 1 sostituzione/i | frase incompleta |
-| deck/tutorial.ehp | strTbl_g.bin | 98 | 1 sostituzione/i | parola mancante |
-| deck/tutorial.ehp | strTbl_g.bin | 60 | 1 sostituzione/i | virgola / costruzione |
-| deck/tutorial.ehp | strTbl_g.bin | 113 | 1 sostituzione/i | genere (die ATK) |
-| deck/tutorial.ehp | strTbl_g.bin | 116 | 1 sostituzione/i | concordanza |
-| deck/tutorial.ehp | strTbl_g.bin | 117 | 2 sostituzione/i | concordanza |
-| deck/tutorial.ehp | strTbl_g.bin | 125 | 1 sostituzione/i | registro |
-| deck/tutorial.ehp | strTbl_g.bin | 133 | 1 sostituzione/i | plurale |
-| deck/tutorial.ehp | strTbl_g.bin | 137 | 1 sostituzione/i | registro |
-| deck/tutorial.ehp | strTbl_g.bin | 138 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 147 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_g.bin | 150 | 1 sostituzione/i | virgole |
-| deck/tutorial.ehp | strTbl_g.bin | 154 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 155 | 1 sostituzione/i | virgola / costruzione |
-| deck/tutorial.ehp | strTbl_g.bin | 156 | 1 sostituzione/i | ortografia |
-| deck/tutorial.ehp | strTbl_g.bin | 157 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 159 | 1 sostituzione/i | virgole |
-| deck/tutorial.ehp | strTbl_g.bin | 161 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 163 | 1 sostituzione/i | pronome mancante |
-| deck/tutorial.ehp | strTbl_g.bin | 165 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 169 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 179 | 1 sostituzione/i | frase non grammaticale |
-| deck/tutorial.ehp | strTbl_g.bin | 180 | 1 sostituzione/i | plurale |
-| deck/tutorial.ehp | strTbl_g.bin | 186 | 1 sostituzione/i | maiuscola, virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 189 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_g.bin | 190 | 1 sostituzione/i | virgola, trattino |
-| deck/tutorial.ehp | strTbl_g.bin | 198 | 1 sostituzione/i | ortografia |
-| deck/tutorial.ehp | strTbl_g.bin | 203 | 1 sostituzione/i | virgole |
-| deck/tutorial.ehp | strTbl_g.bin | 209 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 210 | 1 sostituzione/i | voce di menu sbagliata (EN: Run), virgola |
-| deck/tutorial.ehp | strTbl_g.bin | 215 | 1 sostituzione/i | plurale |
-| deck/tutorial.ehp | strTbl_g.bin | 216 | 1 sostituzione/i | grammatica |
-| deck/tutorial.ehp | strTbl_g.bin | 218 | 1 sostituzione/i | parola doppia |
-| deck/tutorial.ehp | strTbl_g.bin | 220 | 1 sostituzione/i | virgola |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 23 | 1 sostituzione/i | maiuscola/trattino |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 24 | 1 sostituzione/i | maiuscola/trattino |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 48 | 1 sostituzione/i | grammatica (EN: Press the □ button to go back.) |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 60 | 1 sostituzione/i | maiuscola |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 63 | 1 sostituzione/i | parola tagliata |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 66 | 1 sostituzione/i | residuo francese |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 68 | 1 sostituzione/i | plurale (LP) |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 75 | 1 sostituzione/i | maiuscola |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 76 | 1 sostituzione/i | virgola |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 80 | 1 sostituzione/i | concordanza (LP plurale) |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 87 | 1 sostituzione/i | maiuscola |
-| duel/basic_*g.ehp | ddstrtbl_g.bin | 88 | 1 sostituzione/i | virgola |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 59 | 1 sostituzione/i | ortografia |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 66 | 1 sostituzione/i | composto |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 115 | 2 sostituzione/i | refuso, maiuscola |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 118 | 1 sostituzione/i | virgola |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 119 | 3 sostituzione/i | preposizione, virgola, relativo |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 120 | 1 sostituzione/i | refuso |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 136 | 1 sostituzione/i | virgolette e virgola |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 150 | 3 sostituzione/i | grammatica, Duell (EN: loser of the previous Duel) |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 154 | 2 sostituzione/i | concordanza |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 155 | 1 sostituzione/i | virgola |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 157 | 1 sostituzione/i | das/dass |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 158 | 1 sostituzione/i | articolo, maiuscola |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 159 | 3 sostituzione/i | refusi |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 160 | 1 sostituzione/i | grammatica |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 161 | 1 sostituzione/i | concordanza |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 163 | 3 sostituzione/i | refuso, virgola, plurale |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 167 | 1 sostituzione/i | grammatica |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 168 | 3 sostituzione/i | virgole, verbo mancante |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 169 | 2 sostituzione/i | refuso, caso |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 171 | 2 sostituzione/i | refuso, virgola, preposizione |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 172 | 2 sostituzione/i | virgola, parola doppia |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 173 | 1 sostituzione/i | maiuscola |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 174 | 1 sostituzione/i | grammatica |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 175 | 1 sostituzione/i | parentesi chiusa mancante |
-| field/always_*_ger.ehp | field_strtbl.bin | 14 | 1 sostituzione/i | refuso, pronome |
-| field/always_*_ger.ehp | field_strtbl.bin | 21 | 1 sostituzione/i | voce di menu in minuscolo (EN: Give) |
-| field/always_*_ger.ehp | field_strtbl.bin | 22 | 1 sostituzione/i | voce di menu (EN: Eat) |
-| field/always_*_ger.ehp | field_strtbl.bin | 47 | 1 sostituzione/i | aggettivi minuscoli |
-| field/always_*_ger.ehp | field_strtbl.bin | 64 | 1 sostituzione/i | trattino |
-| field/always_*_ger.ehp | field_strtbl.bin | 67 | 1 sostituzione/i | residuo inglese |
-| field/always_*_ger.ehp | field_strtbl.bin | 100 | 1 sostituzione/i | virgola |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 70 | 1 sostituzione/i | trattino (come nei dialoghi) |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 75 | 1 sostituzione/i | trattino (come nei dialoghi) |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 88 | 1 sostituzione/i | refuso, concordanza (come nei dialoghi) |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 94 | 1 sostituzione/i | genitivo senza apostrofo (come nei dialoghi) |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 98 | 1 sostituzione/i | interfisso -s- |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 105 | 1 sostituzione/i | ortografia riformata |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 107 | 1 sostituzione/i | virgola |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 156 | 1 sostituzione/i | caso |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 160 | 1 sostituzione/i | composto |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 164 | 2 sostituzione/i | maiuscola, punto |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 168 | 1 sostituzione/i | caso |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 169 | 1 sostituzione/i | caso, frase |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 170 | 2 sostituzione/i | caso, trattino |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 172 | 1 sostituzione/i | refuso |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 177 | 1 sostituzione/i | caso, virgola |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 182 | 1 sostituzione/i | caso |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 189 | 1 sostituzione/i | grammatica |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 193 | 1 sostituzione/i | refuso, come nei dialoghi |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 194 | 1 sostituzione/i | plurale |
-| field/always_*_ger.ehp | field_strtbl_item.bin | 200 | 1 sostituzione/i | concordanza |
-| field/always_*_ger.ehp | field_strtbl_mapname.bin | 1 | 1 sostituzione/i | trattini |
-| field/always_*_ger.ehp | field_strtbl_mapname.bin | 19 | 1 sostituzione/i | caso; senza articolo come gli altri luoghi (il dialogo dice 'Verlasse das 《M006_2》') |
-| field/always_*_ger.ehp | field_strtbl_mapname.bin | 20 | 1 sostituzione/i | traduzione mancante (EN: Library) |
-| field/always_*_ger.ehp | field_strtbl_mapname.bin | 21 | 1 sostituzione/i | traduzione mancante (EN: Roof) |
-| field/always_*_ger.ehp | field_strtbl_mapname.bin | 25 | 1 sostituzione/i | traduzione mancante (EN: Ruins) |
-| field/always_*_ger.ehp | field_strtbl_mapname.bin | 22 | 1 sostituzione/i | residuo inglese |
-| field/always_*_ger.ehp | field_strtbl_mapname.bin | 24 | 1 sostituzione/i | traduzione sbagliata (EN: Abandoned Dorm) |
-| field/always_*_ger.ehp | field_strtbl_mapname.bin | 30 | 1 sostituzione/i | residuo inglese (come nei dialoghi: Spezial-Finalarena) |
-| labo/conv_machine.ehp | strTbl_g.bin | 2 | 1 sostituzione/i | maiuscola |
-| labo/password.ehp | strTbl_g.bin | 1 | 1 sostituzione/i | virgola |
-| labo/password.ehp | strTbl_g.bin | 10 | 1 sostituzione/i | composto |
-| labo/password.ehp | strTbl_g.bin | 11 | 1 sostituzione/i | articolo |
-| title_menu/title_menu_?.ehp | title_msg_g.bin | 4 | 1 sostituzione/i | numero (EN: Opened File) |
-| title_menu/title_menu_?.ehp | title_msg_g.bin | 5 | 1 sostituzione/i | refuso |
-| title_menu/title_menu_?.ehp | title_msg_g.bin | 19 | 1 sostituzione/i | maiuscola |
-| title_menu/title_menu_?.ehp | title_msg_g.bin | 71 | 1 sostituzione/i | spazio prima dell'a capo |
-| title_menu/title_menu_?.ehp | title_msg_g.bin | 72 | 1 sostituzione/i | spazio prima dell'a capo |
-| title_menu/title_menu_?.ehp | title_msg_g.bin | 73 | 2 sostituzione/i | grammatica, virgola |
-| title_menu/title_menu_?.ehp | title_msg_g.bin | 74 | 1 sostituzione/i | refuso |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 34 | 1 sostituzione/i | grammatica |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 36 | 1 sostituzione/i | spazio |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 40 | 1 sostituzione/i | grammatica |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 41 | 1 sostituzione/i | grammatica |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 45 | 1 sostituzione/i | virgola, articolo |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 46 | 1 sostituzione/i | refuso, spazio |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 66 | 1 sostituzione/i | articolo, virgola |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 71 | 1 sostituzione/i | grammatica |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 72 | 1 sostituzione/i | refuso |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 115 | 1 sostituzione/i | caso |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 117 | 1 sostituzione/i | virgola |
-| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 121 | 2 sostituzione/i | Sie/du misto, traduzione sbagliata (EN: main menu) |
-| field/always_*_ger.ehp | event_name.bin | 1 | 1 sostituzione/i | grammatica |
-| field/always_*_ger.ehp | event_name.bin | 2 | 1 sostituzione/i | articolo |
-| field/always_*_ger.ehp | event_name.bin | 3 | 1 sostituzione/i | articolo |
-| field/always_*_ger.ehp | event_name.bin | 7 | 1 sostituzione/i | articolo |
-| field/always_*_ger.ehp | event_name.bin | 4 | 1 sostituzione/i | grammatica |
-| field/always_*_ger.ehp | event_name.bin | 5 | 1 sostituzione/i | residuo inglese |
-| field/always_*_ger.ehp | event_name.bin | 11 | 1 sostituzione/i | trattini |
-| duel/basic_*.ehp | option_msg_g.bin | 19 | 1 sostituzione/i | virgola |
-| duel/basic_*.ehp | option_msg_g.bin | 24 | 1 sostituzione/i | virgola |
-| duel/basic_*.ehp | option_msg_g.bin | 26 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 1 | 1 sostituzione/i | refuso |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 9 | 1 sostituzione/i | plurale |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 19 | 1 sostituzione/i | maiuscola |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 24 | 1 sostituzione/i | maiuscola, genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 35 | 1 sostituzione/i | maiuscola, genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 37 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 40 | 1 sostituzione/i | maiuscola, genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 45 | 1 sostituzione/i | maiuscola, genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 56 | 1 sostituzione/i | spazio, genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 57 | 2 sostituzione/i | maiuscola, genere, coniugazione |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 59 | 2 sostituzione/i | refuso, genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 60 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 61 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 71 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 87 | 2 sostituzione/i | spazio, refuso |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 104 | 1 sostituzione/i | separatore migliaia coerente |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 106 | 1 sostituzione/i | composto |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 108 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 112 | 1 sostituzione/i | punteggiatura |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 121 | 1 sostituzione/i | parola doppia |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 128 | 1 sostituzione/i | spazio/virgola |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 134 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 135 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 137 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 01_message_res.bin | 140 | 1 sostituzione/i | parola mancante |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 19 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 21 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 15 | 1 sostituzione/i | parola doppia |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 29 | 1 sostituzione/i | genitivo |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 35 | 1 sostituzione/i | separatore migliaia coerente |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 39 | 1 sostituzione/i | trattino residuo |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 55 | 1 sostituzione/i | refuso |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 60 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 61 | 1 sostituzione/i | articolo mancante |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 67 | 1 sostituzione/i | parola doppia |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 69 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 70 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 74 | 1 sostituzione/i | spazio |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 82 | 1 sostituzione/i | puntini |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 87 | 1 sostituzione/i | participio |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 88 | 2 sostituzione/i | traduzione sbagliata, negazione mancante |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 89 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 92 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 02_message_res.bin | 101 | 4 sostituzione/i | traduzione sbagliata (EN: Remember), genere, caso |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 7 | 1 sostituzione/i | trattino |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 8 | 1 sostituzione/i | trattino, plurale |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 10 | 1 sostituzione/i | plurale |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 23 | 1 sostituzione/i | traduzione sbagliata (EN: DEF) |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 47 | 1 sostituzione/i | caso |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 42 | 1 sostituzione/i | frase troncata |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 54 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 55 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 56 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 59 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 61 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 69 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 74 | 1 sostituzione/i | maiuscola |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 76 | 1 sostituzione/i | caso |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 102 | 1 sostituzione/i | traduzione sbagliata (EN: set or use) |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 103 | 1 sostituzione/i | maiuscola |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 115 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 121 | 1 sostituzione/i | parola doppia |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 122 | 1 sostituzione/i | grammatica, traduzione (EN: face-down) |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 127 | 1 sostituzione/i | coniugazione |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 131 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 132 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 133 | 2 sostituzione/i | tasti scambiati (EN: ○ apre, × conferma) |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 134 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 137 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 140 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 141 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 144 | 1 sostituzione/i | imperativo |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 148 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 149 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 150 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 151 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 152 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 153 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 154 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 161 | 1 sostituzione/i | numero |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 164 | 1 sostituzione/i | coniugazione |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 169 | 1 sostituzione/i | coniugazione |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 172 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 176 | 1 sostituzione/i | nome diverso dall'inglese (EN: Syrus) |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 178 | 1 sostituzione/i | composto |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 186 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 187 | 3 sostituzione/i | genere, sillabazione, frase troncata |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 188 | 2 sostituzione/i | negazione sbagliata (EN: can be used in the following cases) |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 189 | 1 sostituzione/i | sillabazione |
-| tutorial/tutorial_g.ehp | 03_message_res.bin | 192 | 1 sostituzione/i | sillabazione |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 15 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 25 | 1 sostituzione/i | codice colore sbagliato |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 27 | 1 sostituzione/i | sillabazione |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 30 | 1 sostituzione/i | refuso |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 33 | 2 sostituzione/i | genere, grammatica |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 35 | 2 sostituzione/i | grammatica, genere |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 36 | 1 sostituzione/i | traduzione sbagliata (EN: cut its original ATK in half) |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 37 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 47 | 2 sostituzione/i | virgola, punto |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 49 | 1 sostituzione/i | virgola, composto |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 55 | 1 sostituzione/i | numero |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 56 | 1 sostituzione/i | numero |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 60 | 1 sostituzione/i | numero |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 69 | 1 sostituzione/i | codice colore sbagliato |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 85 | 1 sostituzione/i | numero, sillabazione |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 90 | 1 sostituzione/i | numero |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 92 | 1 sostituzione/i | refuso |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 109 | 2 sostituzione/i | grammatica, genere |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 121 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 122 | 1 sostituzione/i | termine incoerente (Gegnerrunde) |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 125 | 1 sostituzione/i | caso |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 128 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 129 | 2 sostituzione/i | nome carta sbagliato (EN: Shrink), spazio |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 135 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 151 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 152 | 1 sostituzione/i | genere |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 153 | 1 sostituzione/i | grammatica |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 175 | 2 sostituzione/i | spazio, articolo |
-| tutorial/tutorial_g.ehp | 04_message_res.bin | 179 | 1 sostituzione/i | genere |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 38 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 55 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 95 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 104 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 105 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 112 | 4 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 123 | 3 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 127 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 129 | 3 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 130 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 131 | 3 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 135 | 2 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 138 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 141 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 142 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 143 | 2 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 144 | 3 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 145 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 147 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 148 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 176 | 3 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 177 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 178 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 179 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 181 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 182 | 3 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 183 | 2 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 185 | 2 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 186 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 187 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 191 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 192 | 2 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
-| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 193 | 1 sostituzione/i | come in deck/all_g.ehp help_strtbl_contents.bin |
+| database/charalist.ehp | strTbl_g.bin | 12 | 5 replacement(s) | agreement, spelling |
+| database/charalist.ehp | strTbl_g.bin | 13 | 1 replacement(s) | genitive of a name in -s, leftover English |
+| database/charalist.ehp | strTbl_g.bin | 14 | 1 replacement(s) | space |
+| database/charalist.ehp | strTbl_g.bin | 15 | 1 replacement(s) | case |
+| database/charalist.ehp | strTbl_g.bin | 16 | 2 replacement(s) | missing full stop, typo |
+| database/charalist.ehp | strTbl_g.bin | 17 | 2 replacement(s) | typo, case |
+| database/charalist.ehp | strTbl_g.bin | 18 | 3 replacement(s) | capital letters, wrong verb (EN: He likes to eat vegetables) |
+| database/charalist.ehp | strTbl_g.bin | 19 | 1 replacement(s) | typo |
+| database/charalist.ehp | strTbl_g.bin | 20 | 3 replacement(s) | case, agreement, missing quotation marks |
+| database/charalist.ehp | strTbl_g.bin | 21 | 1 replacement(s) | grammar |
+| database/charalist.ehp | strTbl_g.bin | 22 | 2 replacement(s) | genitive of a name in -s |
+| database/charalist.ehp | strTbl_g.bin | 24 | 2 replacement(s) | grammar |
+| database/charalist.ehp | strTbl_g.bin | 25 | 1 replacement(s) | case |
+| database/charalist.ehp | strTbl_g.bin | 28 | 1 replacement(s) | typo |
+| database/charalist.ehp | strTbl_g.bin | 29 | 1 replacement(s) | agreement |
+| database/charalist.ehp | strTbl_g.bin | 31 | 2 replacement(s) | agreement |
+| database/charalist.ehp | strTbl_g.bin | 33 | 1 replacement(s) | name written two ways in the same text |
+| database/charalist.ehp | strTbl_g.bin | 35 | 1 replacement(s) | capital letter |
+| database/charalist.ehp | strTbl_g.bin | 37 | 2 replacement(s) | typo, grammar (EN: high school level Duel Academy) |
+| database/charalist.ehp | strTbl_g.bin | 38 | 1 replacement(s) | doubled word |
+| database/charalist.ehp | strTbl_g.bin | 40 | 1 replacement(s) | wrong comma |
+| database/charalist.ehp | strTbl_g.bin | 41 | 3 replacement(s) | gender (EN: A card spirit), dass |
+| database/charalist.ehp | strTbl_g.bin | 43 | 2 replacement(s) | capital letter, grammar |
+| database/charalist.ehp | strTbl_g.bin | 44 | 1 replacement(s) | grammar |
+| database/charalist.ehp | strTbl_g.bin | 45 | 1 replacement(s) | typo, article |
+| database/charalist.ehp | strTbl_g.bin | 49 | 1 replacement(s) | agreement |
+| database/charalist.ehp | strTbl_g.bin | 50 | 1 replacement(s) | term as in the cards (Grabwächters Attentäter) |
+| database/charalist.ehp | strTbl_g.bin | 52 | 1 replacement(s) | genitive without apostrophe |
+| database/charalist.ehp | strTbl_g.bin | 65 | 1 replacement(s) | as in the card types (permanent) |
+| database/charalist.ehp | strTbl_g.bin | 69 | 1 replacement(s) | typo, as in the card types (permanent) |
+| database/charalist.ehp | strTbl_g.bin | 70 | 1 replacement(s) | as in the cards (Konterfalle) |
+| database/duelrecord.ehp | strTbl_g.bin | 5 | 1 replacement(s) | leftover English |
+| duel/result/result_g.ehp | strTbl.bin | 5 | 1 replacement(s) | leftover English |
+| database/duelrecord.ehp | strTbl_g.bin | 6 | 1 replacement(s) | leftover English |
+| duel/result/result_g.ehp | strTbl.bin | 6 | 1 replacement(s) | leftover English |
+| database/duelrecord.ehp | strTbl_g.bin | 9 | 1 replacement(s) | leftover English |
+| duel/result/result_g.ehp | strTbl.bin | 9 | 1 replacement(s) | leftover English |
+| database/duelrecord.ehp | strTbl_g.bin | 10 | 1 replacement(s) | hyphen |
+| duel/result/result_g.ehp | strTbl.bin | 10 | 1 replacement(s) | hyphen |
+| database/duelrecord.ehp | strTbl_g.bin | 16 | 1 replacement(s) | capital letter |
+| duel/result/result_g.ehp | strTbl.bin | 16 | 1 replacement(s) | capital letter |
+| database/duelrecord.ehp | strTbl_g.bin | 17 | 1 replacement(s) | capital letter |
+| duel/result/result_g.ehp | strTbl.bin | 17 | 1 replacement(s) | capital letter |
+| database/duelrecord.ehp | strTbl_g.bin | 30 | 1 replacement(s) | gender (die ATK), hyphen |
+| duel/result/result_g.ehp | strTbl.bin | 30 | 1 replacement(s) | gender (die ATK), hyphen |
+| database/duelrecord.ehp | strTbl_g.bin | 32 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 32 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 34 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 34 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 35 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 35 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 36 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 36 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 37 | 1 replacement(s) | agreement |
+| duel/result/result_g.ehp | strTbl.bin | 37 | 1 replacement(s) | agreement |
+| database/duelrecord.ehp | strTbl_g.bin | 38 | 1 replacement(s) | agreement |
+| duel/result/result_g.ehp | strTbl.bin | 38 | 1 replacement(s) | agreement |
+| database/duelrecord.ehp | strTbl_g.bin | 49 | 1 replacement(s) | hyphen |
+| duel/result/result_g.ehp | strTbl.bin | 49 | 1 replacement(s) | hyphen |
+| database/duelrecord.ehp | strTbl_g.bin | 63 | 1 replacement(s) | hyphen |
+| duel/result/result_g.ehp | strTbl.bin | 63 | 1 replacement(s) | hyphen |
+| database/duelrecord.ehp | strTbl_g.bin | 64 | 1 replacement(s) | thousands separator as in the other entries |
+| duel/result/result_g.ehp | strTbl.bin | 64 | 1 replacement(s) | thousands separator as in the other entries |
+| database/duelrecord.ehp | strTbl_g.bin | 67 | 1 replacement(s) | as in the previous entry |
+| duel/result/result_g.ehp | strTbl.bin | 67 | 1 replacement(s) | as in the previous entry |
+| database/duelrecord.ehp | strTbl_g.bin | 70 | 1 replacement(s) | hyphens (as in Keine-Karten-mehr-Bonus) |
+| duel/result/result_g.ehp | strTbl.bin | 70 | 1 replacement(s) | hyphens (as in Keine-Karten-mehr-Bonus) |
+| database/duelrecord.ehp | strTbl_g.bin | 71 | 1 replacement(s) | hyphens |
+| duel/result/result_g.ehp | strTbl.bin | 71 | 1 replacement(s) | hyphens |
+| database/duelrecord.ehp | strTbl_g.bin | 87 | 1 replacement(s) | compound |
+| duel/result/result_g.ehp | strTbl.bin | 87 | 1 replacement(s) | compound |
+| database/duelrecord.ehp | strTbl_g.bin | 88 | 1 replacement(s) | compound |
+| duel/result/result_g.ehp | strTbl.bin | 88 | 1 replacement(s) | compound |
+| database/duelrecord.ehp | strTbl_g.bin | 126 | 1 replacement(s) | case, capital letter |
+| duel/result/result_g.ehp | strTbl.bin | 126 | 1 replacement(s) | case, capital letter |
+| database/duelrecord.ehp | strTbl_g.bin | 127 | 1 replacement(s) | case |
+| duel/result/result_g.ehp | strTbl.bin | 127 | 1 replacement(s) | case |
+| database/duelrecord.ehp | strTbl_g.bin | 140 | 1 replacement(s) | typos, thousands separator, Toon-Monster as in the cards |
+| duel/result/result_g.ehp | strTbl.bin | 140 | 1 replacement(s) | typos, thousands separator, Toon-Monster as in the cards |
+| database/duelrecord.ehp | strTbl_g.bin | 151 | 1 replacement(s) | typo |
+| duel/result/result_g.ehp | strTbl.bin | 151 | 1 replacement(s) | typo |
+| database/duelrecord.ehp | strTbl_g.bin | 152 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 152 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 153 | 1 replacement(s) | thousands separator |
+| duel/result/result_g.ehp | strTbl.bin | 153 | 1 replacement(s) | thousands separator |
+| database/duelrecord.ehp | strTbl_g.bin | 154 | 1 replacement(s) | thousands separator |
+| duel/result/result_g.ehp | strTbl.bin | 154 | 1 replacement(s) | thousands separator |
+| database/duelrecord.ehp | strTbl_g.bin | 163 | 1 replacement(s) | case, capital letter |
+| duel/result/result_g.ehp | strTbl.bin | 163 | 1 replacement(s) | case, capital letter |
+| database/duelrecord.ehp | strTbl_g.bin | 182 | 1 replacement(s) | wrong translation (JA: 全レベルのモンスターが入った, EN: monsters of every Level) |
+| duel/result/result_g.ehp | strTbl.bin | 182 | 1 replacement(s) | wrong translation (JA: 全レベルのモンスターが入った, EN: monsters of every Level) |
+| database/duelrecord.ehp | strTbl_g.bin | 213 | 1 replacement(s) | as in the card names |
+| duel/result/result_g.ehp | strTbl.bin | 213 | 1 replacement(s) | as in the card names |
+| database/duelrecord.ehp | strTbl_g.bin | 215 | 1 replacement(s) | as in the cards |
+| duel/result/result_g.ehp | strTbl.bin | 215 | 1 replacement(s) | as in the cards |
+| database/duelrecord.ehp | strTbl_g.bin | 224 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 224 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 225 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 225 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 226 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 226 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 229 | 1 replacement(s) | as in the dialogues |
+| duel/result/result_g.ehp | strTbl.bin | 229 | 1 replacement(s) | as in the dialogues |
+| database/duelrecord.ehp | strTbl_g.bin | 238 | 1 replacement(s) | comma |
+| duel/result/result_g.ehp | strTbl.bin | 238 | 1 replacement(s) | comma |
+| database/duelrecord.ehp | strTbl_g.bin | 240 | 1 replacement(s) | hyphen |
+| duel/result/result_g.ehp | strTbl.bin | 240 | 1 replacement(s) | hyphen |
+| database/duelrecord.ehp | strTbl_g.bin | 242 | 1 replacement(s) | German spelling |
+| duel/result/result_g.ehp | strTbl.bin | 242 | 1 replacement(s) | German spelling |
+| database/duelrecord.ehp | strTbl_g.bin | 244 | 1 replacement(s) | leftover English |
+| duel/result/result_g.ehp | strTbl.bin | 244 | 1 replacement(s) | leftover English |
+| database/duelrecord.ehp | strTbl_g.bin | 245 | 1 replacement(s) | leftover English |
+| duel/result/result_g.ehp | strTbl.bin | 245 | 1 replacement(s) | leftover English |
+| database/duelrecord.ehp | strTbl_g.bin | 248 | 1 replacement(s) | leftover English |
+| duel/result/result_g.ehp | strTbl.bin | 248 | 1 replacement(s) | leftover English |
+| database/duelrecord.ehp | strTbl_g.bin | 249 | 1 replacement(s) | leftover English |
+| duel/result/result_g.ehp | strTbl.bin | 249 | 1 replacement(s) | leftover English |
+| database/duelrecord.ehp | strTbl_g.bin | 250 | 1 replacement(s) | space |
+| duel/result/result_g.ehp | strTbl.bin | 250 | 1 replacement(s) | space |
+| database/duelrecord.ehp | strTbl_g.bin | 260 | 1 replacement(s) | missing sentence (EN: The duel will now end.) |
+| duel/result/result_g.ehp | strTbl.bin | 260 | 1 replacement(s) | missing sentence (EN: The duel will now end.) |
+| database/duelrecord.ehp | strTbl_g.bin | 268 | 1 replacement(s) | term (EN: duel) |
+| duel/result/result_g.ehp | strTbl.bin | 268 | 1 replacement(s) | term (EN: duel) |
+| database/duelrecord.ehp | strTbl_g.bin | 269 | 1 replacement(s) | German spelling |
+| duel/result/result_g.ehp | strTbl.bin | 269 | 1 replacement(s) | German spelling |
+| database/limitlist.ehp | strTbl_g.bin | 1 | 1 replacement(s) | lowercase adjectives |
+| database/limitlist.ehp | strTbl_g.bin | 2 | 1 replacement(s) | lowercase adjectives |
+| database/limitlist.ehp | strTbl_g.bin | 4 | 1 replacement(s) | English abbreviation (Ltd.), menu entry |
+| database/tutoriallist.ehp | strTbl_g.bin | 13 | 1 replacement(s) | mixed construction (EN: Changing Battle Positions) |
+| deck/all_g.ehp | strTbl.bin | 31 | 1 replacement(s) | hyphen |
+| deck/all_g.ehp | strTbl.bin | 41 | 1 replacement(s) | adverb |
+| deck/all_g.ehp | strTbl.bin | 83 | 1 replacement(s) | double space |
+| deck/all_g.ehp | strTbl.bin | 112 | 1 replacement(s) | compound |
+| deck/all_g.ehp | strTbl.bin | 73 | 1 replacement(s) | incomplete (JA: デッキを元の状態に戻す) |
+| deck/all_g.ehp | strTbl.bin | 132 | 1 replacement(s) | typo |
+| deck/all_g.ehp | strTbl.bin | 134 | 1 replacement(s) | extra word |
+| deck/all_g.ehp | strTbl.bin | 172 | 1 replacement(s) | mixed construction (EN: Changing Battle Positions) |
+| deck/all_g.ehp | help_strtbl_contents.bin | 4 | 1 replacement(s) | hyphen |
+| deck/all_g.ehp | help_strtbl_contents.bin | 23 | 1 replacement(s) | hyphen |
+| deck/all_g.ehp | help_strtbl_contents.bin | 29 | 1 replacement(s) | compound |
+| deck/all_g.ehp | help_strtbl_contents.bin | 37 | 1 replacement(s) | compound (as Deckrezepte) |
+| deck/all_g.ehp | help_strtbl_contents.bin | 41 | 1 replacement(s) | incomplete (JA: デッキを元の状態に戻す) |
+| deck/all_g.ehp | help_strtbl_contents.bin | 53 | 1 replacement(s) | construction |
+| deck/all_g.ehp | help_strtbl_contents.bin | 70 | 1 replacement(s) | plural |
+| deck/all_g.ehp | help_strtbl_contents.bin | 84 | 1 replacement(s) | meaningless (JA: カードをめくる; same entry as 166) |
+| deck/all_g.ehp | help_strtbl_contents.bin | 93 | 1 replacement(s) | capital letter, full stop |
+| deck/all_g.ehp | help_strtbl_contents.bin | 94 | 1 replacement(s) | capital letter, full stop |
+| deck/all_g.ehp | help_strtbl_contents.bin | 97 | 2 replacement(s) | missing pronoun (EN: you will draw), typo, comma |
+| deck/all_g.ehp | help_strtbl_contents.bin | 99 | 4 replacement(s) | agreement, case |
+| deck/all_g.ehp | help_strtbl_contents.bin | 106 | 1 replacement(s) | hyphen |
+| deck/all_g.ehp | help_strtbl_contents.bin | 107 | 1 replacement(s) | plural |
+| deck/all_g.ehp | help_strtbl_contents.bin | 109 | 1 replacement(s) | nachdem, missing article |
+| deck/all_g.ehp | help_strtbl_contents.bin | 112 | 1 replacement(s) | agreement |
+| deck/all_g.ehp | help_strtbl_contents.bin | 123 | 1 replacement(s) | comma, case |
+| deck/all_g.ehp | help_strtbl_contents.bin | 126 | 1 replacement(s) | space |
+| deck/all_g.ehp | help_strtbl_contents.bin | 129 | 3 replacement(s) | plural, typo, je ... desto |
+| deck/all_g.ehp | help_strtbl_contents.bin | 133 | 1 replacement(s) | das/dass |
+| deck/all_g.ehp | help_strtbl_contents.bin | 135 | 3 replacement(s) | plural, hyphen, case |
+| deck/all_g.ehp | help_strtbl_contents.bin | 136 | 1 replacement(s) | wrong sentence (subject) |
+| deck/all_g.ehp | help_strtbl_contents.bin | 137 | 3 replacement(s) | capital letter, extra 'solange' |
+| deck/all_g.ehp | help_strtbl_contents.bin | 141 | 2 replacement(s) | article, verb (EN: activated) |
+| deck/all_g.ehp | help_strtbl_contents.bin | 142 | 1 replacement(s) | comma |
+| deck/all_g.ehp | help_strtbl_contents.bin | 144 | 1 replacement(s) | comma |
+| deck/all_g.ehp | help_strtbl_contents.bin | 147 | 1 replacement(s) | missing verb |
+| deck/all_g.ehp | help_strtbl_contents.bin | 148 | 1 replacement(s) | nachdem |
+| deck/all_g.ehp | help_strtbl_contents.bin | 149 | 2 replacement(s) | missing pronoun, relative |
+| deck/all_g.ehp | help_strtbl_contents.bin | 150 | 3 replacement(s) | agreement, case |
+| deck/all_g.ehp | help_strtbl_contents.bin | 153 | 1 replacement(s) | nachdem |
+| deck/all_g.ehp | help_strtbl_contents.bin | 154 | 1 replacement(s) | comma, full stop |
+| deck/all_g.ehp | help_strtbl_contents.bin | 156 | 3 replacement(s) | ungrammatical sentence, typos |
+| deck/all_g.ehp | help_strtbl_contents.bin | 157 | 1 replacement(s) | missing verb |
+| deck/all_g.ehp | help_strtbl_contents.bin | 158 | 1 replacement(s) | wrong sentence |
+| deck/all_g.ehp | help_strtbl_contents.bin | 159 | 1 replacement(s) | typo |
+| deck/all_g.ehp | help_strtbl_contents.bin | 161 | 1 replacement(s) | capital letter |
+| deck/all_g.ehp | help_strtbl_contents.bin | 162 | 3 replacement(s) | doubled word, case, comma |
+| deck/all_g.ehp | help_strtbl_contents.bin | 163 | 2 replacement(s) | typo, construction |
+| deck/all_g.ehp | help_strtbl_contents.bin | 165 | 2 replacement(s) | agreement |
+| deck/all_g.ehp | help_strtbl_contents.bin | 166 | 1 replacement(s) | plural, hyphen |
+| deck/all_g.ehp | help_strtbl_contents.bin | 167 | 1 replacement(s) | typo |
+| deck/all_g.ehp | help_strtbl_contents.bin | 171 | 1 replacement(s) | plural |
+| deck/all_g.ehp | help_strtbl_contents.bin | 172 | 2 replacement(s) | case, typo |
+| deck/all_g.ehp | help_strtbl_contents.bin | 173 | 1 replacement(s) | pronoun |
+| deck/tutorial.ehp | strTbl_g.bin | 9 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 16 | 1 replacement(s) | comma, hyphen |
+| deck/tutorial.ehp | strTbl_g.bin | 18 | 1 replacement(s) | ungrammatical sentence |
+| deck/tutorial.ehp | strTbl_g.bin | 20 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 21 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 26 | 1 replacement(s) | question mark |
+| deck/tutorial.ehp | strTbl_g.bin | 27 | 1 replacement(s) | case, verb |
+| deck/tutorial.ehp | strTbl_g.bin | 34 | 1 replacement(s) | missing word |
+| deck/tutorial.ehp | strTbl_g.bin | 39 | 1 replacement(s) | capital letters |
+| deck/tutorial.ehp | strTbl_g.bin | 55 | 1 replacement(s) | plural |
+| deck/tutorial.ehp | strTbl_g.bin | 58 | 1 replacement(s) | question mark |
+| deck/tutorial.ehp | strTbl_g.bin | 66 | 1 replacement(s) | conjunction |
+| deck/tutorial.ehp | strTbl_g.bin | 76 | 1 replacement(s) | typo |
+| deck/tutorial.ehp | strTbl_g.bin | 81 | 1 replacement(s) | incomplete sentence |
+| deck/tutorial.ehp | strTbl_g.bin | 82 | 1 replacement(s) | capital letters |
+| deck/tutorial.ehp | strTbl_g.bin | 87 | 1 replacement(s) | doubled word |
+| deck/tutorial.ehp | strTbl_g.bin | 91 | 1 replacement(s) | case |
+| deck/tutorial.ehp | strTbl_g.bin | 93 | 1 replacement(s) | gender |
+| deck/tutorial.ehp | strTbl_g.bin | 94 | 1 replacement(s) | case |
+| deck/tutorial.ehp | strTbl_g.bin | 97 | 1 replacement(s) | incomplete sentence |
+| deck/tutorial.ehp | strTbl_g.bin | 98 | 1 replacement(s) | missing word |
+| deck/tutorial.ehp | strTbl_g.bin | 60 | 1 replacement(s) | comma / construction |
+| deck/tutorial.ehp | strTbl_g.bin | 113 | 1 replacement(s) | gender (die ATK) |
+| deck/tutorial.ehp | strTbl_g.bin | 116 | 1 replacement(s) | agreement |
+| deck/tutorial.ehp | strTbl_g.bin | 117 | 2 replacement(s) | agreement |
+| deck/tutorial.ehp | strTbl_g.bin | 125 | 1 replacement(s) | register |
+| deck/tutorial.ehp | strTbl_g.bin | 133 | 1 replacement(s) | plural |
+| deck/tutorial.ehp | strTbl_g.bin | 137 | 1 replacement(s) | register |
+| deck/tutorial.ehp | strTbl_g.bin | 138 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 147 | 1 replacement(s) | typo |
+| deck/tutorial.ehp | strTbl_g.bin | 150 | 1 replacement(s) | commas |
+| deck/tutorial.ehp | strTbl_g.bin | 154 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 155 | 1 replacement(s) | comma / construction |
+| deck/tutorial.ehp | strTbl_g.bin | 156 | 1 replacement(s) | spelling |
+| deck/tutorial.ehp | strTbl_g.bin | 157 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 159 | 1 replacement(s) | commas |
+| deck/tutorial.ehp | strTbl_g.bin | 161 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 163 | 1 replacement(s) | missing pronoun |
+| deck/tutorial.ehp | strTbl_g.bin | 165 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 169 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 179 | 1 replacement(s) | ungrammatical sentence |
+| deck/tutorial.ehp | strTbl_g.bin | 180 | 1 replacement(s) | plural |
+| deck/tutorial.ehp | strTbl_g.bin | 186 | 1 replacement(s) | capital letter, comma |
+| deck/tutorial.ehp | strTbl_g.bin | 189 | 1 replacement(s) | typo |
+| deck/tutorial.ehp | strTbl_g.bin | 190 | 1 replacement(s) | comma, hyphen |
+| deck/tutorial.ehp | strTbl_g.bin | 198 | 1 replacement(s) | spelling |
+| deck/tutorial.ehp | strTbl_g.bin | 203 | 1 replacement(s) | commas |
+| deck/tutorial.ehp | strTbl_g.bin | 209 | 1 replacement(s) | comma |
+| deck/tutorial.ehp | strTbl_g.bin | 210 | 1 replacement(s) | wrong menu entry (EN: Run), comma |
+| deck/tutorial.ehp | strTbl_g.bin | 215 | 1 replacement(s) | plural |
+| deck/tutorial.ehp | strTbl_g.bin | 216 | 1 replacement(s) | grammar |
+| deck/tutorial.ehp | strTbl_g.bin | 218 | 1 replacement(s) | doubled word |
+| deck/tutorial.ehp | strTbl_g.bin | 220 | 1 replacement(s) | comma |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 23 | 1 replacement(s) | capital letter/hyphen |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 24 | 1 replacement(s) | capital letter/hyphen |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 48 | 1 replacement(s) | grammar (EN: Press the □ button to go back.) |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 60 | 1 replacement(s) | capital letter |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 63 | 1 replacement(s) | cut word |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 66 | 1 replacement(s) | French leftover |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 68 | 1 replacement(s) | plural (LP) |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 75 | 1 replacement(s) | capital letter |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 76 | 1 replacement(s) | comma |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 80 | 1 replacement(s) | agreement (LP plural) |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 87 | 1 replacement(s) | capital letter |
+| duel/basic_*g.ehp | ddstrtbl_g.bin | 88 | 1 replacement(s) | comma |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 59 | 1 replacement(s) | spelling |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 66 | 1 replacement(s) | compound |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 115 | 2 replacement(s) | typo, capital letter |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 118 | 1 replacement(s) | comma |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 119 | 3 replacement(s) | preposition, comma, relative |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 120 | 1 replacement(s) | typo |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 136 | 1 replacement(s) | quotation marks and comma |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 150 | 3 replacement(s) | grammar, Duell (EN: loser of the previous Duel) |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 154 | 2 replacement(s) | agreement |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 155 | 1 replacement(s) | comma |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 157 | 1 replacement(s) | das/dass |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 158 | 1 replacement(s) | article, capital letter |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 159 | 3 replacement(s) | typos |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 160 | 1 replacement(s) | grammar |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 161 | 1 replacement(s) | agreement |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 163 | 3 replacement(s) | typo, comma, plural |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 167 | 1 replacement(s) | grammar |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 168 | 3 replacement(s) | commas, missing verb |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 169 | 2 replacement(s) | typo, case |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 171 | 2 replacement(s) | typo, comma, preposition |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 172 | 2 replacement(s) | comma, doubled word |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 173 | 1 replacement(s) | capital letter |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 174 | 1 replacement(s) | grammar |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 175 | 1 replacement(s) | missing closing parenthesis |
+| field/always_*_ger.ehp | field_strtbl.bin | 14 | 1 replacement(s) | typo, pronoun |
+| field/always_*_ger.ehp | field_strtbl.bin | 21 | 1 replacement(s) | menu entry in lowercase (EN: Give) |
+| field/always_*_ger.ehp | field_strtbl.bin | 22 | 1 replacement(s) | menu entry (EN: Eat) |
+| field/always_*_ger.ehp | field_strtbl.bin | 47 | 1 replacement(s) | lowercase adjectives |
+| field/always_*_ger.ehp | field_strtbl.bin | 64 | 1 replacement(s) | hyphen |
+| field/always_*_ger.ehp | field_strtbl.bin | 67 | 1 replacement(s) | leftover English |
+| field/always_*_ger.ehp | field_strtbl.bin | 100 | 1 replacement(s) | comma |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 70 | 1 replacement(s) | hyphen (as in the dialogues) |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 75 | 1 replacement(s) | hyphen (as in the dialogues) |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 88 | 1 replacement(s) | typo, agreement (as in the dialogues) |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 94 | 1 replacement(s) | genitive without apostrophe (as in the dialogues) |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 98 | 1 replacement(s) | linking -s- |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 105 | 1 replacement(s) | reformed spelling |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 107 | 1 replacement(s) | comma |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 156 | 1 replacement(s) | case |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 160 | 1 replacement(s) | compound |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 164 | 2 replacement(s) | capital letter, full stop |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 168 | 1 replacement(s) | case |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 169 | 1 replacement(s) | case, sentence |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 170 | 2 replacement(s) | case, hyphen |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 172 | 1 replacement(s) | typo |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 177 | 1 replacement(s) | case, comma |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 182 | 1 replacement(s) | case |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 189 | 1 replacement(s) | grammar |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 193 | 1 replacement(s) | typo, as in the dialogues |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 194 | 1 replacement(s) | plural |
+| field/always_*_ger.ehp | field_strtbl_item.bin | 200 | 1 replacement(s) | agreement |
+| field/always_*_ger.ehp | field_strtbl_mapname.bin | 1 | 1 replacement(s) | hyphens |
+| field/always_*_ger.ehp | field_strtbl_mapname.bin | 19 | 1 replacement(s) | case; without article like the other places (the dialogue says 'Verlasse das 《M006_2》') |
+| field/always_*_ger.ehp | field_strtbl_mapname.bin | 20 | 1 replacement(s) | missing translation (EN: Library) |
+| field/always_*_ger.ehp | field_strtbl_mapname.bin | 21 | 1 replacement(s) | missing translation (EN: Roof) |
+| field/always_*_ger.ehp | field_strtbl_mapname.bin | 25 | 1 replacement(s) | missing translation (EN: Ruins) |
+| field/always_*_ger.ehp | field_strtbl_mapname.bin | 22 | 1 replacement(s) | leftover English |
+| field/always_*_ger.ehp | field_strtbl_mapname.bin | 24 | 1 replacement(s) | wrong translation (EN: Abandoned Dorm) |
+| field/always_*_ger.ehp | field_strtbl_mapname.bin | 30 | 1 replacement(s) | leftover English (as in the dialogues: Spezial-Finalarena) |
+| labo/conv_machine.ehp | strTbl_g.bin | 2 | 1 replacement(s) | capital letter |
+| labo/password.ehp | strTbl_g.bin | 1 | 1 replacement(s) | comma |
+| labo/password.ehp | strTbl_g.bin | 10 | 1 replacement(s) | compound |
+| labo/password.ehp | strTbl_g.bin | 11 | 1 replacement(s) | article |
+| title_menu/title_menu_?.ehp | title_msg_g.bin | 4 | 1 replacement(s) | number (EN: Opened File) |
+| title_menu/title_menu_?.ehp | title_msg_g.bin | 5 | 1 replacement(s) | typo |
+| title_menu/title_menu_?.ehp | title_msg_g.bin | 19 | 1 replacement(s) | capital letter |
+| title_menu/title_menu_?.ehp | title_msg_g.bin | 71 | 1 replacement(s) | space before the line break |
+| title_menu/title_menu_?.ehp | title_msg_g.bin | 72 | 1 replacement(s) | space before the line break |
+| title_menu/title_menu_?.ehp | title_msg_g.bin | 73 | 2 replacement(s) | grammar, comma |
+| title_menu/title_menu_?.ehp | title_msg_g.bin | 74 | 1 replacement(s) | typo |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 34 | 1 replacement(s) | grammar |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 36 | 1 replacement(s) | space |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 40 | 1 replacement(s) | grammar |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 41 | 1 replacement(s) | grammar |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 45 | 1 replacement(s) | comma, article |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 46 | 1 replacement(s) | typo, space |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 66 | 1 replacement(s) | article, comma |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 71 | 1 replacement(s) | grammar |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 72 | 1 replacement(s) | typo |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 115 | 1 replacement(s) | case |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 117 | 1 replacement(s) | comma |
+| title_menu/title_menu_?.ehp | tushin_msg_g.bin | 121 | 2 replacement(s) | mixed Sie/du, wrong translation (EN: main menu) |
+| field/always_*_ger.ehp | event_name.bin | 1 | 1 replacement(s) | grammar |
+| field/always_*_ger.ehp | event_name.bin | 2 | 1 replacement(s) | article |
+| field/always_*_ger.ehp | event_name.bin | 3 | 1 replacement(s) | article |
+| field/always_*_ger.ehp | event_name.bin | 7 | 1 replacement(s) | article |
+| field/always_*_ger.ehp | event_name.bin | 4 | 1 replacement(s) | grammar |
+| field/always_*_ger.ehp | event_name.bin | 5 | 1 replacement(s) | leftover English |
+| field/always_*_ger.ehp | event_name.bin | 11 | 1 replacement(s) | hyphens |
+| duel/basic_*.ehp | option_msg_g.bin | 19 | 1 replacement(s) | comma |
+| duel/basic_*.ehp | option_msg_g.bin | 24 | 1 replacement(s) | comma |
+| duel/basic_*.ehp | option_msg_g.bin | 26 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 1 | 1 replacement(s) | typo |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 9 | 1 replacement(s) | plural |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 19 | 1 replacement(s) | capital letter |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 24 | 1 replacement(s) | capital letter, gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 35 | 1 replacement(s) | capital letter, gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 37 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 40 | 1 replacement(s) | capital letter, gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 45 | 1 replacement(s) | capital letter, gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 56 | 1 replacement(s) | space, gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 57 | 2 replacement(s) | capital letter, gender, conjugation |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 59 | 2 replacement(s) | typo, gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 60 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 61 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 71 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 87 | 2 replacement(s) | space, typo |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 104 | 1 replacement(s) | consistent thousands separator |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 106 | 1 replacement(s) | compound |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 108 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 112 | 1 replacement(s) | punctuation |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 121 | 1 replacement(s) | doubled word |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 128 | 1 replacement(s) | space/comma |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 134 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 135 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 137 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 01_message_res.bin | 140 | 1 replacement(s) | missing word |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 19 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 21 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 15 | 1 replacement(s) | doubled word |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 29 | 1 replacement(s) | genitive |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 35 | 1 replacement(s) | consistent thousands separator |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 39 | 1 replacement(s) | leftover hyphen |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 55 | 1 replacement(s) | typo |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 60 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 61 | 1 replacement(s) | missing article |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 67 | 1 replacement(s) | doubled word |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 69 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 70 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 74 | 1 replacement(s) | space |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 82 | 1 replacement(s) | ellipsis dots |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 87 | 1 replacement(s) | participle |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 88 | 2 replacement(s) | wrong translation, missing negation |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 89 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 92 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 02_message_res.bin | 101 | 4 replacement(s) | wrong translation (EN: Remember), gender, case |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 7 | 1 replacement(s) | hyphen |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 8 | 1 replacement(s) | hyphen, plural |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 10 | 1 replacement(s) | plural |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 23 | 1 replacement(s) | wrong translation (EN: DEF) |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 47 | 1 replacement(s) | case |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 42 | 1 replacement(s) | truncated sentence |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 54 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 55 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 56 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 59 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 61 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 69 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 74 | 1 replacement(s) | capital letter |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 76 | 1 replacement(s) | case |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 102 | 1 replacement(s) | wrong translation (EN: set or use) |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 103 | 1 replacement(s) | capital letter |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 115 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 121 | 1 replacement(s) | doubled word |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 122 | 1 replacement(s) | grammar, translation (EN: face-down) |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 127 | 1 replacement(s) | conjugation |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 131 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 132 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 133 | 2 replacement(s) | swapped buttons (EN: ○ opens, × confirms) |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 134 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 137 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 140 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 141 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 144 | 1 replacement(s) | imperative |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 148 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 149 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 150 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 151 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 152 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 153 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 154 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 161 | 1 replacement(s) | number |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 164 | 1 replacement(s) | conjugation |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 169 | 1 replacement(s) | conjugation |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 172 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 176 | 1 replacement(s) | name different from English (EN: Syrus) |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 178 | 1 replacement(s) | compound |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 186 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 187 | 3 replacement(s) | gender, hyphenation, truncated sentence |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 188 | 2 replacement(s) | wrong negation (EN: can be used in the following cases) |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 189 | 1 replacement(s) | hyphenation |
+| tutorial/tutorial_g.ehp | 03_message_res.bin | 192 | 1 replacement(s) | hyphenation |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 15 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 25 | 1 replacement(s) | wrong color code |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 27 | 1 replacement(s) | hyphenation |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 30 | 1 replacement(s) | typo |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 33 | 2 replacement(s) | gender, grammar |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 35 | 2 replacement(s) | grammar, gender |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 36 | 1 replacement(s) | wrong translation (EN: cut its original ATK in half) |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 37 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 47 | 2 replacement(s) | comma, full stop |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 49 | 1 replacement(s) | comma, compound |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 55 | 1 replacement(s) | number |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 56 | 1 replacement(s) | number |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 60 | 1 replacement(s) | number |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 69 | 1 replacement(s) | wrong color code |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 85 | 1 replacement(s) | number, hyphenation |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 90 | 1 replacement(s) | number |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 92 | 1 replacement(s) | typo |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 109 | 2 replacement(s) | grammar, gender |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 121 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 122 | 1 replacement(s) | inconsistent term (Gegnerrunde) |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 125 | 1 replacement(s) | case |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 128 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 129 | 2 replacement(s) | wrong card name (EN: Shrink), space |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 135 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 151 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 152 | 1 replacement(s) | gender |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 153 | 1 replacement(s) | grammar |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 175 | 2 replacement(s) | space, article |
+| tutorial/tutorial_g.ehp | 04_message_res.bin | 179 | 1 replacement(s) | gender |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 38 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 55 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 95 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 104 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 105 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 112 | 4 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 123 | 3 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 127 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 129 | 3 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 130 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 131 | 3 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 135 | 2 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 138 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 141 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 142 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 143 | 2 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 144 | 3 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 145 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 147 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 148 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 176 | 3 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 177 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 178 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 179 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 181 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 182 | 3 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 183 | 2 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 185 | 2 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 186 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 187 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 191 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 192 | 2 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
+| duel/basic_*g.ehp | help_strtbl_contents_duel_g.bin | 193 | 1 replacement(s) | as in deck/all_g.ehp help_strtbl_contents.bin |
 
-### Correzioni puntuali `ui_texts.json`
-| file | membro | indice | vecchio | nuovo | motivo |
+### Targeted corrections `ui_texts.json`
+| file | member | index | old | new | reason |
 |---|---|---|---|---|---|
 
-### Elenco completo
-**Confronto completo con parole evidenziate: `docs/changes_de/ui_strings_diff.md`.** Dati grezzi: `docs/changes_de/ui_strings.csv`. Prime 40:
+### Complete list
+**Complete comparison with highlighted words: `docs/changes_de/ui_strings_diff.md`.** Raw data: `docs/changes_de/ui_strings.csv`. First 40:
 
-| membro | indice | originale | nuovo |
+| member | index | original | new |
 |---|---|---|---|
 | strTbl_g.bin | 4 | Slifer-Red | Slifer Rot |
 | strTbl_g.bin | 5 | Ra-Yellow | Ra Gelb |
@@ -1398,13 +1398,13 @@ Tabelle `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (formato `(n, 
 | strTbl_g.bin | 5 | New High Score Bonus | Neuer Highscore-Bonus |
 | strTbl_g.bin | 6 | New Challenge Bonus | Neuer Challenge-Bonus |
 
-(... altre 541 righe nel CSV)
+(... 541 more rows in the CSV)
 
-## A6. Etichetta [CARTA MAGIA] / [CARTA TRAPPOLA] della carta grande nel duello
+## A6. [SPELL CARD] / [TRAP CARD] label of the large card in the duel
 
-In tutti i `duel/basic_<regione><lingua>.ehp` l'etichetta era in inglese (hash `c2268340`): `apply_to_iso.py` la sostituisce con `card_spell_trap.gim` di `field/always_<lingua>_<lingua>.ehp` (hash `9622cd75`).
+In all the `duel/basic_<region><language>.ehp` the label was in English (hash `c2268340`): `apply_to_iso.py` replaces it with `card_spell_trap.gim` of `field/always_<language>_<language>.ehp` (hash `9622cd75`).
 
-| archivio | membro | hash originale | hash nuovo |
+| archive | member | original hash | new hash |
 |---|---|---|---|
 | /PSP_GAME/USRDIR/duel/basic_bg.ehp | card_spell_trap.gim | c2268340 | be08846c |
 | /PSP_GAME/USRDIR/duel/basic_fg.ehp | card_spell_trap.gim | c2268340 | be08846c |
@@ -1413,31 +1413,31 @@ In tutti i `duel/basic_<regione><lingua>.ehp` l'etichetta era in inglese (hash `
 | /PSP_GAME/USRDIR/duel/basic_sg.ehp | card_spell_trap.gim | c2268340 | be08846c |
 | /PSP_GAME/USRDIR/duel/basic_ug.ehp | card_spell_trap.gim | c2268340 | be08846c |
 
-## A7. File della ISO toccati e dettagli tecnici
+## A7. ISO files touched and technical details
 
-179 archivi `.ehp` risultano diversi dall'originale (tutte le lingue insieme, perche' la ISO e' unica; elenco in `docs/changes_de/touched_files.csv`). Gli altri file (video, audio, eseguibile `EBOOT.BIN`, `PARAM.SFO`) sono identici. Differenze tecniche non testuali: `*-ptrs.txt` (offset assoluti dei membri, ricalcolati quando una tabella cambia lunghezza), nuova posizione degli archivi in fondo alla ISO.
+179 `.ehp` archives differ from the original (all languages together, because the ISO is a single one; list in `docs/changes_de/touched_files.csv`). The other files (video, audio, `EBOOT.BIN` executable, `PARAM.SFO`) are identical. Non-textual technical differences: `*-ptrs.txt` (absolute member offsets, recomputed when a table changes length), new position of the archives at the end of the ISO.
 
-## A8. Cosa NON si puo' cambiare (limiti del gioco)
+## A8. What can NOT be changed (game limits)
 
-- Il **nome del parlante** nella casella del dialogo (es. "Preside Sheppard"/"Cancelliere" in italiano, "Doyen Sheppard" in francese, "Rector Sheppard" in spagnolo) sta nell'EBOOT cifrato: non modificabile.
-- Testi disegnati dal gioco con il suo font (dialoghi, nomi, descrizioni nel deck, menu a tendina, tastiera di sistema, schermata di scelta lingua) non sono sostituibili dal texture pack: si cambiano solo nella ISO.
-- Le 438 texture di mappa/sfondi non sono sostituite (il gioco ne cambia la palette): limite del pack di MikeyMK, non del nostro lavoro.
+- The **speaker name** in the dialogue box (e.g. "Preside Sheppard"/"Cancelliere" in Italian, "Doyen Sheppard" in French, "Rector Sheppard" in Spanish) lives in the encrypted EBOOT: it cannot be modified.
+- Texts drawn by the game with its own font (dialogues, names, descriptions in the deck, drop-down menus, system keyboard, language selection screen) cannot be replaced by the texture pack: they can only be changed in the ISO.
+- The 438 map/background textures are not replaced (the game changes their palette): a limit of MikeyMK's pack, not of our work.
 
 ---
 
 # B. TEXTURE PACK
 
-## B1. Provenienza e struttura
+## B1. Origin and structure
 
-Base: **Yu-Gi-Oh! GX Tag Force 1 HD Remastered** di **MikeyMK** (pack USA `ULUS10136`) e carte HD di **chrisfand**, adattati alla ISO europea `ULES00600`. Il progetto non ridistribuisce il pack di terzi (`PERMESSI_AUTORI.md`): il patcher se lo fa dare dall'utente. Il nostro lavoro: (1) rimappare gli **hash** del pack USA su quelli EU (`tools/gen_ini.py`), (2) rifare nella lingua carte e scritte dell'interfaccia, (3) correggere i testi, (4) `upscale_extra` per le texture non coperte.
+Base: **Yu-Gi-Oh! GX Tag Force 1 HD Remastered** by **MikeyMK** (US pack `ULUS10136`) and HD cards by **chrisfand**, adapted to the European ISO `ULES00600`. The project does not redistribute the third-party pack: the patcher gets it from the user. Our work: (1) remap the US pack's **hashes** to the EU ones (`tools/gen_ini.py`), (2) redo the cards and interface lettering in the language, (3) correct the texts, (4) `upscale_extra` for the textures that are not covered.
 
-PPSSPP riconosce una texture dall'**hash dei suoi pixel** (xxhash dei dati, `gim.data_hash`); ogni riga del `textures.ini` e' `0000000000000000<hash8> = percorso/png`. I PNG sono **4x** l'originale e ridisegnano esattamente la stessa area. Texture identiche tra lingue hanno lo stesso hash: la sostituzione vale per tutte (vedi `docs/TEXTURE_INVENTORY.md`).
+PPSSPP recognizes a texture by the **hash of its pixels** (xxhash of the data, `gim.data_hash`); every line of `textures.ini` is `0000000000000000<hash8> = path/png`. The PNGs are **4x** the original and redraw exactly the same area. Textures that are identical between languages have the same hash: the replacement holds for all of them (see `docs/TEXTURE_INVENTORY.md`).
 
-### Struttura reale (da `docs/changes_de/pack_structure.csv`)
-| radice | cartella | file | MB | contenuto |
+### Real structure (from `docs/changes_de/pack_structure.csv`)
+| root | folder | files | MB | content |
 |---|---|---|---|---|
 | ULES00600 (pack di base) | LEGGIMI.txt | 1 | 0.0 |  |
-| ULES00600 (pack di base) | _CHOOSE YOUR CARD STYLE/ | 3 | 7.8 | mikeymk, official_english, official_japanese |
+| ULES00600 (pack di base) | _SCEGLI LO STILE DELLE CARTE/ | 3 | 7.8 | mikeymk, official_english, official_japanese |
 | ULES00600 (pack di base) | cards/ | 11373 | 2161.9 | frame, large, large_it, small, small_it, tinyEN, tinyJP, tinyMikeyMK, tiny_it |
 | ULES00600 (pack di base) | characters/ | 1468 | 134.3 | 3d, combinations, portraits, sprites |
 | ULES00600 (pack di base) | events/ | 17 | 40.5 | academy_festival.png, alexis_rhodes.png, atticus_rhodes_beach.png, bastion_decks.png, bastion_misawa.png, chazz_dueldisk.png, chazz_on_tv.png, chazz_princeton.png, chumley_huffington.png, duel_tower.png ... |
@@ -1446,201 +1446,201 @@ PPSSPP riconosce una texture dall'**hash dei suoi pixel** (xxhash dei dati, `gim
 | ULES00600 (pack di base) | shop/ | 153 | 69.5 | blue_eyes_jp.png, card_pack_results_ui.png, dorothy, packs, purchase_text_box.png, room_textures, sadie, sandwiches.png, store_purchasing_background.png, store_purchasing_ui.png |
 | ULES00600 (pack di base) | textures.ini | 1 | 2.59 |  |
 | ULES00600 (pack di base) | ui/ | 331 | 22.3 | cardalbum, deckedit, duels, horizontal_bar_black.png, horizontal_bar_red.png, horizontal_bar_silver.png, horizontal_bar_yellow.png, janken.png, limited.png, loading ... |
-| ULES00600 (pack di base) | ui_it/ | 113 | 9.8 | icon_sheets, icon_sheets.ini, result_letters, result_letters.ini, menu_lists, menu_lists.ini, deck_screens, deck_screens.ini, recipe_screens, recipe_screens.ini ... |
+| ULES00600 (pack di base) | ui_it/ | 113 | 9.8 | fogli_icone, fogli_icone.ini, lettere_esito, lettere_esito.ini, menu_liste, menu_liste.ini, schede_deck, schede_deck.ini, schede_ricette, schede_ricette.ini ... |
 | ULES00600 (pack di base) | upscale_extra/ | 1192 | 55.8 | 00085186.png, 00162f3c.png, 003fd929.png, 0047e8d4.png, 00b99210.png, 00c5c424.png, 01673953.png, 01692dff.png, 01f7d8fe.png, 01faa502.png ... |
 | moduli/de | cards/ | 5675 | 1025.0 | frame, large_de, small_de, tiny_de |
 | moduli/de | de.ini | 1 | 0.01 |  |
 | moduli/de | intro/ | 2 | 0.4 | title_screen |
-| moduli/de | ui_de/ | 106 | 8.2 | icon_sheets, icon_sheets.ini, result_letters, result_letters.ini, menu_lists, menu_lists.ini, deck_screens, deck_screens.ini, recipe_screens, recipe_screens.ini ... |
+| moduli/de | ui_de/ | 106 | 8.2 | fogli_icone, fogli_icone.ini, lettere_esito, lettere_esito.ini, menu_liste, menu_liste.ini, schede_deck, schede_deck.ini, schede_ricette, schede_ricette.ini ... |
 
-Ogni lingua tranne l'italiano e' un **modulo** (`PSP/TEXTURES/modules/de`) da comporre sopra il pack di base con `tools/compose_pack.py BASE MODULI CARD_DIR OUT de [--copia]`: copia il base e **solo** le cartelle `cards`, `intro` e `ui_de` del modulo (hard link o copia), poi `module_ini.py` riscrive i `textures.ini`: le righe delle carte localizzate puntano a `cards/small_de`/`large_de` e le righe di `de.ini` **sostituiscono** quelle del base con la stessa chiave (hash).
+Every language except Italian is a **module** (`PSP/TEXTURES/modules/de`) to compose over the base pack with `tools/compose_pack.py BASE MODULES CARD_DIR OUT de [--copy]`: it copies the base and **only** the `cards`, `intro` and `ui_de` folders of the module (hard link or copy), then `module_ini.py` rewrites the `textures.ini`: the localized card lines point to `cards/small_de`/`large_de` and the lines of `de.ini` **replace** those of the base with the same key (hash).
 
-### Cartelle del pack di base (uguali per tutte le lingue)
-| cartella | contenuto |
+### Base pack folders (the same for all languages)
+| folder | content |
 |---|---|
-| `cards/small`, `cards/large` | carte piccole/grandi HD originali di chrisfand (2.833 carte) con testi inglesi; la lingua sceglie `small_<l>`/`large_<l>` via ini |
-| `cards/frame` | cornici, tabelle attributo/razza, etichette Magia/Trappola |
-| `cards/tinyEN/JP/MikeyMK/tiny_<l>` | atlante delle miniature del deck (7 pagine; stesso hash in tutte le lingue: vince un solo atlante per installazione) |
-| `characters` | ritratti, sprite e 3D dei personaggi HD (MikeyMK) |
-| `events` | immagini degli eventi (17) |
-| `intro` | logo, filmato di titolo, nuova partita; `title_screen` contiene le tessere con la targa "Versione Pomodoro Mistico" |
-| `map` | sfondi della mappa |
-| `shop` | negozio, pacchetti, stanze |
-| `ui` | interfaccia HD inglese di MikeyMK (per tutte le lingue con gli stessi hash) |
-| `upscale_extra` | texture non coperte dal pack, ingrandite 4x con xBRZ (1.192 file, ~56 MB; a risoluzione 4x/Auto lo shader 4xBRZ di PPSSPP e' spento): include le varianti di `card_icon03` di en/fr/de/es |
-| `_CHOOSE YOUR CARD STYLE` | 3 `textures.ini` alternativi (mikeymk, official_english, official_japanese): copiare uno al posto di `textures.ini` per cambiare lo stile delle carte |
+| `cards/small`, `cards/large` | original HD small/large cards by chrisfand (2,833 cards) with English texts; the language picks `small_<l>`/`large_<l>` via the ini |
+| `cards/frame` | frames, attribute/race tables, Spell/Trap labels |
+| `cards/tinyEN/JP/MikeyMK/tiny_<l>` | deck thumbnail atlas (7 pages; same hash in all languages: only one atlas wins per installation) |
+| `characters` | HD portraits, sprites and 3D of the characters (MikeyMK) |
+| `events` | event images (17) |
+| `intro` | logo, title movie, new game; `title_screen` contains the tiles with the "Mystic Tomato Version" plate |
+| `map` | map backgrounds |
+| `shop` | shop, packs, rooms |
+| `ui` | MikeyMK's English HD interface (for all languages with the same hashes) |
+| `upscale_extra` | textures not covered by the pack, enlarged 4x with xBRZ (1,192 files, ~56 MB; at 4x/Auto resolution PPSSPP's 4xBRZ shader is off): includes the `card_icon03` variants of en/fr/de/es |
+| `_CHOOSE YOUR CARD STYLE` | 3 alternative `textures.ini` (mikeymk, official_english, official_japanese): copy one in place of `textures.ini` to change the card style |
 
-## B2. Immagini delle carte
+## B2. Card images
 
-Cartelle della lingua: `frame` (2 file), `large_de` (2833 file), `small_de` (2833 file), `tiny_de` (7 file). Ogni carta ha una **piccola HD** (nome + descrizione + tipo, rigenerata con font liberi OFL: XCharter Bold per nomi/tipo/etichette, Libre Baskerville per gli effetti, Newsreader Italic per i Normali, PT Serif Caption per Magie/Trappole, Charis SIL per i glifi mancanti) e una **grande HD** (solo il nome sulla cornice). In piu': la **tabella degli attributi** con le parole della lingua (`cards/frame/icons_attribute_race_<l>.png`, `attributes.py`), l'**etichetta Magia/Trappola** (`icons_spell_trap_<l>.png`, `label_it.py` / `extract_labels.py` -> `dati/label_eu_<codice>_128x32.png`) e l'**atlante delle miniature** del deck (`tiny_<l>`, `tiny_atlas.py` + `tiny_fragment.py`).
+Language folders: `frame` (2 files), `large_de` (2833 files), `small_de` (2833 files), `tiny_de` (7 files). Every card has an **HD small** one (name + description + type, regenerated with free OFL fonts: XCharter Bold for names/type/labels, Libre Baskerville for effects, Newsreader Italic for Normals, PT Serif Caption for Spells/Traps, Charis SIL for the missing glyphs) and an **HD large** one (name only on the frame). In addition: the **attribute table** with the words of the language (`cards/frame/icons_attribute_race_<l>.png`, `attributes.py`), the **Spell/Trap label** (`icons_spell_trap_<l>.png`, `label_it.py` / `extract_labels.py` -> `data/label_eu_<code>_128x32.png`) and the deck **thumbnail atlas** (`tiny_<l>`, `tiny_atlas.py` + `tiny_fragment.py`).
 
-Quando cambia il testo di una carta (sezione A2) vanno rigenerate le sue immagini: **258 carte** nel tedesco. Elenco in `docs/changes_de/card_images.csv`. Comando: `python tools/generate_language.py fr PACK CARDINFO_EHP US_INI CLEAN_DIR OUT [ID ...]` (senza ID rigenera tutte: 2.833 + 2.833, ~930 MB).
+When the text of a card changes (section A2) its images must be regenerated: **258 cards** in german. List in `docs/changes_de/card_images.csv`. Command: `python tools/generate_language.py fr PACK CARDINFO_EHP US_INI CLEAN_DIR OUT [ID ...]` (without IDs it regenerates all of them: 2,833 + 2,833, ~930 MB).
 
-Tipografia: spazio non separabile prima di `: ; ! ?` e virgolette « ».
+Typography: non-breaking space before `: ; ! ?` and « » quotation marks.
 
-## B3. Interfaccia HD in tedesco (`ui_de`)
+## B3. HD interface in german (`ui_de`)
 
-**98 texture** (`docs/changes_de/ui_textures.csv`: file, hash PPSSPP, famiglia, script, dimensioni originale/HD, neutra/specifica, origine nella ISO). Per famiglia: icon_sheets 3, result_letters 28, menu_lists 6, deck_screens 14, recipe_screens 12, vs_screen 14, duel_texts 15, tutorial 6. Di queste 0 sono neutre (stesso hash in tutte le lingue) e 98 specifiche. Ogni famiglia ha uno script in `tools/ui_textures/<famiglia>.py` (lettura `TF1_LANG`): ridisegna le scritte texture per texture partendo dall'originale a bassa risoluzione della ISO e dallo stile del pack inglese; stessa area e stesse posizioni (il gioco ritaglia da rettangoli fissi); un font/peso/linea di base/ombra per scritta; font liberi (`alt_font.py`).
+**98 textures** (`docs/changes_de/ui_textures.csv`: file, PPSSPP hash, family, script, original/HD size, neutral/specific, origin in the ISO). By family: fogli_icone 3, lettere_esito 28, menu_liste 6, schede_deck 14, schede_ricette 12, schermata_vs 14, scritte_duello 15, tutorial 6. Of these 0 are neutral (same hash in all languages) and 98 specific. Every family has a script in `tools/ui_textures/<family>.py` (reads `TF1_LANG`): it redraws the lettering texture by texture starting from the low-resolution original of the ISO and from the style of the English pack; same area and same positions (the game crops from fixed rectangles); one font/weight/baseline/shadow per lettering; free fonts (`alt_font.py`).
 
-| famiglia | texture | script | archivio ISO sorgente | testi della lingua |
+| family | textures | script | source ISO archive | language texts |
 |---|---|---|---|---|
-| icon_sheets | 3 | `tools/ui_textures/icon_sheets.py` | deck/all_g.ehp, shop/all_g.ehp, field/always_* |  |
-| result_letters | 28 | `tools/ui_textures/result_letters.py` | duel/basic_gg.ehp | DU GEWINNST (DUGEWINST, 9 tessere) · DU VERLIERST (DUVERLIST, 9 tessere) · UNENTSCHIEDEN (UNETSCHID, 9 tessere; E e N ripetute) + silhouette di DU GEWINNST |
-| menu_lists | 6 | `tools/ui_textures/menu_lists.py` | title_menu/title_menu_g.ehp, duel/result/result_g.ehp, field/always_bri_<cod>.ehp |  |
-| deck_screens | 14 | `tools/ui_textures/deck_screens.py` | deck/all_g.ehp, labo/*.ehp, shop/all_g.ehp |  |
-| recipe_screens | 12 | `tools/ui_textures/recipe_screens.py` | deck/recipe_view_g.ehp, title_menu/title_menu_g.ehp, database/limitlist.ehp |  |
-| vs_screen | 14 | `tools/ui_textures/vs_screen.py` | duel/start/start_e.ehp (membri _g), start_all.ehp, start_g.ehp |  |
-| duel_texts | 15 | `tools/ui_textures/duel_texts.py` | duel/basic_gg.ehp | Ketten · SPIELZUG (blu/rosso) · NÄCHSTER SPIELER (su 2 texture, il taglio passa dentro la L; i puntini della Ä sono una sprite a parte, ingrandita e centrata sopra la A) · DUELL BEGINNEN · Direkter Angriff! · `card_icon03` e' nella cartella `upscale_extra` (B4) |
+| fogli_icone | 3 | `tools/ui_textures/fogli_icone.py` | ? |  |
+| lettere_esito | 28 | `tools/ui_textures/lettere_esito.py` | ? |  |
+| menu_liste | 6 | `tools/ui_textures/menu_liste.py` | ? |  |
+| schede_deck | 14 | `tools/ui_textures/schede_deck.py` | ? |  |
+| schede_ricette | 12 | `tools/ui_textures/schede_ricette.py` | ? |  |
+| schermata_vs | 14 | `tools/ui_textures/schermata_vs.py` | ? |  |
+| scritte_duello | 15 | `tools/ui_textures/scritte_duello.py` | ? |  |
 | tutorial | 6 | `tools/ui_textures/tutorial.py` | tutorial/tutorial_g.ehp (tuto_duelimg01..06) |  |
 
-Regole di qualita' (valgono per ogni lingua): lettere regolari, mai deformate una per una; stessa area dell'originale; niente sfocature; il testo e' quello dell'originale della lingua (si correggono solo errori evidenti: residui di altre lingue, accenti); pixel art **non** levigata senza conferma; geometrie sempre misurate sull'originale.
+Quality rules (valid for every language): regular letters, never deformed one by one; same area as the original; no blur; the text is that of the language's original (only obvious errors are corrected: leftovers from other languages, accents); pixel art is **not** smoothed without confirmation; geometries always measured on the original.
 
-### Testi disegnati: originale -> HD
-Tabella letta a occhio, texture per texture: `docs/changes_de/texture_texts_de.md`. Differenze rispetto all'originale: `DEMARRER` -> `DÉMARRER`, `SCAMBIA`/`Scambia` -> `ÉCHANGE`/`Échange`, `2è/3è round` -> `2e/3e round`; tutto il resto riscrive le stesse parole.
+### Drawn texts: original -> HD
+Table read by eye, texture by texture: `docs/changes_de/texture_texts_de.md`. Differences from the original: `DEMARRER` -> `DÉMARRER`, `SCAMBIA`/`Scambia` -> `ÉCHANGE`/`Échange`, `2è/3è round` -> `2e/3e round`; everything else rewrites the same words.
 
-### Elenco di ogni texture
-(tutte le 98 righe, da `ui_textures.csv`)
+### List of every texture
+(all 98 rows, from `ui_textures.csv`)
 
-| file nel pack | hash | famiglia | originale px | HD px | tipo | origine ISO |
+| file in the pack | hash | family | original px | HD px | type | ISO origin |
 |---|---|---|---|---|---|---|
-| ui_de/icon_sheets/all_g__icon04.png | ce4fe497 | icon_sheets | 128x128 | 512x512 | SPECIFICA | deck/all_g.ehp:icon04.gim |
-| ui_de/icon_sheets/all_g__panel.png | 68141938 | icon_sheets | 256x256 | 1024x1024 | SPECIFICA | shop/all_g.ehp:panel.gim |
-| ui_de/icon_sheets/all_g__s_pack.png | 731df6d4 | icon_sheets | 256x256 | 1024x1024 | SPECIFICA | shop/all_g.ehp:s_pack.gim |
-| ui_de/result_letters/basic_gg__duel_draw100002.png | b15e254f | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100002.gim; duel/basic_fg.ehp:duel_draw100002.gim; duel/basic_gg.ehp:duel_draw100002.gim |
-| ui_de/result_letters/basic_gg__duel_draw100004.png | 3dcf0348 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100004.gim; duel/basic_fg.ehp:duel_draw100004.gim; duel/basic_gg.ehp:duel_draw100004.gim |
-| ui_de/result_letters/basic_gg__duel_draw100006.png | 988d2924 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100006.gim; duel/basic_fg.ehp:duel_draw100006.gim; duel/basic_gg.ehp:duel_draw100006.gim |
-| ui_de/result_letters/basic_gg__duel_draw100008.png | c27723c2 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100008.gim; duel/basic_fg.ehp:duel_draw100008.gim; duel/basic_gg.ehp:duel_draw100008.gim |
-| ui_de/result_letters/basic_gg__duel_draw100010.png | d40c8877 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100010.gim; duel/basic_fg.ehp:duel_draw100010.gim; duel/basic_gg.ehp:duel_draw100010.gim |
-| ui_de/result_letters/basic_gg__duel_draw100012.png | f32aec8b | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100012.gim; duel/basic_fg.ehp:duel_draw100012.gim; duel/basic_gg.ehp:duel_draw100012.gim |
-| ui_de/result_letters/basic_gg__duel_draw100014.png | 7164c557 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100014.gim; duel/basic_fg.ehp:duel_draw100014.gim; duel/basic_gg.ehp:duel_draw100014.gim |
-| ui_de/result_letters/basic_gg__duel_draw100016.png | bf811ab0 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100016.gim; duel/basic_fg.ehp:duel_draw100016.gim; duel/basic_gg.ehp:duel_draw100016.gim |
-| ui_de/result_letters/basic_gg__duel_draw100018.png | fd752d95 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_draw100018.gim; duel/basic_fg.ehp:duel_draw100018.gim; duel/basic_gg.ehp:duel_draw100018.gim |
-| ui_de/result_letters/basic_gg__duel_lose100002.png | 912fcd45 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100002.gim; duel/basic_fg.ehp:duel_lose100002.gim; duel/basic_gg.ehp:duel_lose100002.gim |
-| ui_de/result_letters/basic_gg__duel_lose100004.png | 20c32463 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100004.gim; duel/basic_fg.ehp:duel_lose100004.gim; duel/basic_gg.ehp:duel_lose100004.gim |
-| ui_de/result_letters/basic_gg__duel_lose100006.png | 7e4814ae | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100006.gim; duel/basic_fg.ehp:duel_lose100006.gim; duel/basic_gg.ehp:duel_lose100006.gim |
-| ui_de/result_letters/basic_gg__duel_lose100008.png | e758002f | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100008.gim; duel/basic_fg.ehp:duel_lose100008.gim; duel/basic_gg.ehp:duel_lose100008.gim |
-| ui_de/result_letters/basic_gg__duel_lose100010.png | fe18c251 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100010.gim; duel/basic_fg.ehp:duel_lose100010.gim; duel/basic_gg.ehp:duel_lose100010.gim |
-| ui_de/result_letters/basic_gg__duel_lose100012.png | adde0b1d | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100012.gim; duel/basic_fg.ehp:duel_lose100012.gim; duel/basic_gg.ehp:duel_lose100012.gim |
-| ui_de/result_letters/basic_gg__duel_lose100014.png | a3ed8c27 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100014.gim; duel/basic_fg.ehp:duel_lose100014.gim; duel/basic_gg.ehp:duel_lose100014.gim |
-| ui_de/result_letters/basic_gg__duel_lose100016.png | 49b0e354 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100016.gim; duel/basic_fg.ehp:duel_lose100016.gim; duel/basic_gg.ehp:duel_lose100016.gim |
-| ui_de/result_letters/basic_gg__duel_lose100018.png | 1ee989bc | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_lose100018.gim; duel/basic_fg.ehp:duel_lose100018.gim; duel/basic_gg.ehp:duel_lose100018.gim |
-| ui_de/result_letters/basic_gg__duel_win100002.png | c8ecef23 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100002.gim; duel/basic_fg.ehp:duel_win100002.gim; duel/basic_gg.ehp:duel_win100002.gim |
-| ui_de/result_letters/basic_gg__duel_win100004.png | 6d2aaacc | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100004.gim; duel/basic_fg.ehp:duel_win100004.gim; duel/basic_gg.ehp:duel_win100004.gim |
-| ui_de/result_letters/basic_gg__duel_win100006.png | 51a3b5f3 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100006.gim; duel/basic_fg.ehp:duel_win100006.gim; duel/basic_gg.ehp:duel_win100006.gim |
-| ui_de/result_letters/basic_gg__duel_win100008.png | 3ee7d405 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100008.gim; duel/basic_fg.ehp:duel_win100008.gim; duel/basic_gg.ehp:duel_win100008.gim |
-| ui_de/result_letters/basic_gg__duel_win100010.png | 595a731a | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100010.gim; duel/basic_fg.ehp:duel_win100010.gim; duel/basic_gg.ehp:duel_win100010.gim |
-| ui_de/result_letters/basic_gg__duel_win100012.png | 2ea9ce79 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100012.gim; duel/basic_fg.ehp:duel_win100012.gim; duel/basic_gg.ehp:duel_win100012.gim |
-| ui_de/result_letters/basic_gg__duel_win100014.png | e6b4a13d | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100014.gim; duel/basic_fg.ehp:duel_win100014.gim; duel/basic_gg.ehp:duel_win100014.gim |
-| ui_de/result_letters/basic_gg__duel_win100016.png | 92a3b4b9 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100016.gim; duel/basic_fg.ehp:duel_win100016.gim; duel/basic_gg.ehp:duel_win100016.gim |
-| ui_de/result_letters/basic_gg__duel_win100018.png | 9b93a537 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:duel_win100018.gim; duel/basic_fg.ehp:duel_win100018.gim; duel/basic_gg.ehp:duel_win100018.gim |
-| ui_de/result_letters/basic_gg__duel_win100020.png | b5401172 | result_letters | 64x32 | 256x128 | SPECIFICA | duel/basic_bg.ehp:duel_win100020.gim; duel/basic_fg.ehp:duel_win100020.gim; duel/basic_gg.ehp:duel_win100020.gim |
-| ui_de/menu_lists/always_bri_ger__story_sys02.png | bcd751d8 | menu_lists | 256x128 | 1024x512 | SPECIFICA | field/always_bri_ger.ehp:story_sys02.gim; field/always_fra_ger.ehp:story_sys02.gim; field/always_ger_ger.ehp:story_sys02.gim |
-| ui_de/menu_lists/result_g__menu01.png | 43526e37 | menu_lists | 256x64 | 1024x256 | SPECIFICA | duel/result/result_g.ehp:menu01.gim |
-| ui_de/menu_lists/result_g__menu02.png | 9a4a8236 | menu_lists | 256x128 | 1024x512 | SPECIFICA | duel/result/result_g.ehp:menu02.gim |
-| ui_de/menu_lists/title_menu_g__m_menu_title01.png | 90284e3a | menu_lists | 256x128 | 1024x512 | SPECIFICA | title_menu/title_menu_g.ehp:m_menu_title01.gim |
-| ui_de/menu_lists/title_menu_g__press_start0003.png | 57081762 | menu_lists | 256x16 | 1024x64 | SPECIFICA | title_menu/title_menu_g.ehp:press_start0003.gim |
-| ui_de/menu_lists/title_menu_g__trnsmt02.png | 800ca6a3 | menu_lists | 256x256 | 1024x1024 | SPECIFICA | title_menu/title_menu_g.ehp:trnsmt02.gim |
-| ui_de/deck_screens/all_g__d_window00008.png | 410ef331 | deck_screens | 128x32 | 512x128 | SPECIFICA | deck/all_g.ehp:d_window00008.gim |
-| ui_de/deck_screens/all_g__d_window00016.png | 34a9652d | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_e.ehp:d_window00016.gim; deck/all_f.ehp:d_window00016.gim; deck/all_g.ehp:d_window00016.gim |
-| ui_de/deck_screens/all_g__d_window00033.png | 328738aa | deck_screens | 256x32 | 1024x128 | SPECIFICA | deck/all_g.ehp:d_window00033.gim |
-| ui_de/deck_screens/all_g__d_window00051.png | 78e0995c | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_g.ehp:d_window00051.gim |
-| ui_de/deck_screens/all_g__d_window00062.png | 0b841a08 | deck_screens | 128x32 | 512x128 | SPECIFICA | deck/all_g.ehp:d_window00062.gim; labo/conv_machine.ehp:window_g0016.gim; title_menu/title_menu_g.ehp:t_window0015.gim |
-| ui_de/deck_screens/all_g__d_window00101.png | dac6a171 | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_g.ehp:d_window00101.gim; labo/rental.ehp:window_g0008.gim |
-| ui_de/deck_screens/all_g__tab_title.png | c51223fd | deck_screens | 256x32 | 1024x128 | SPECIFICA | shop/all_g.ehp:tab_title.gim |
-| ui_de/deck_screens/conv_machine__window_g0009.png | 467c47c3 | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/conv_machine.ehp:window_g0009.gim; labo/conv_machine.ehp:window_g0026.gim |
-| ui_de/deck_screens/conv_machine__window_g0016.png | 0b841a08 | deck_screens | 128x32 | 512x128 | SPECIFICA | deck/all_g.ehp:d_window00062.gim; labo/conv_machine.ehp:window_g0016.gim; title_menu/title_menu_g.ehp:t_window0015.gim |
-| ui_de/deck_screens/conv_machine__window_g0026.png | 467c47c3 | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/conv_machine.ehp:window_g0009.gim; labo/conv_machine.ehp:window_g0026.gim |
-| ui_de/deck_screens/password__key_g0027.png | f2102f5c | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/password.ehp:key_g0027.gim |
-| ui_de/deck_screens/rental__window_g0008.png | dac6a171 | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_g.ehp:d_window00101.gim; labo/rental.ehp:window_g0008.gim |
-| ui_de/deck_screens/rental__window_g0015.png | 55e5724d | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/rental.ehp:window_g0015.gim |
-| ui_de/deck_screens/rental__window_g0026.png | 47f0c275 | deck_screens | 64x32 | 256x128 | SPECIFICA | labo/rental.ehp:window_g0026.gim |
-| ui_de/recipe_screens/limitlist__window_g0002.png | 3bda99aa | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_g0002.gim |
-| ui_de/recipe_screens/limitlist__window_g0004.png | a6a65331 | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_g0004.gim |
-| ui_de/recipe_screens/limitlist__window_g0012.png | c03e3475 | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_g0012.gim |
-| ui_de/recipe_screens/recipe_view_g__recipe010004.png | 97f5751a | recipe_screens | 256x64 | 1024x256 | SPECIFICA | deck/recipe_view_g.ehp:recipe010004.gim |
-| ui_de/recipe_screens/recipe_view_g__recipe010008.png | 1e332ce0 | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_g.ehp:recipe010008.gim; title_menu/title_menu_g.ehp:recipe_sel00002.gim |
-| ui_de/recipe_screens/recipe_view_g__recipe010015.png | 31608bc8 | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_g.ehp:recipe010015.gim; title_menu/title_menu_g.ehp:recipe_sel00009.gim |
-| ui_de/recipe_screens/recipe_view_g__recipe010027.png | 84c2dc4b | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_g.ehp:recipe010027.gim; title_menu/title_menu_g.ehp:recipe_sel00020.gim |
-| ui_de/recipe_screens/recipe_view_g__recipe010029.png | 2aec2bee | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_g.ehp:recipe010029.gim; title_menu/title_menu_g.ehp:recipe_sel00022.gim |
-| ui_de/recipe_screens/recipe_view_g__recipe010031.png | 3582dfbc | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_g.ehp:recipe010031.gim; title_menu/title_menu_g.ehp:recipe_sel00024.gim |
-| ui_de/recipe_screens/title_menu_g__recipe_sel00033.png | f000f198 | recipe_screens | 128x32 | 512x128 | SPECIFICA | title_menu/title_menu_g.ehp:recipe_sel00033.gim |
-| ui_de/recipe_screens/title_menu_g__t_window0008.png | 8f980210 | recipe_screens | 64x32 | 256x128 | SPECIFICA | title_menu/title_menu_g.ehp:t_window0008.gim |
-| ui_de/recipe_screens/title_menu_g__t_window0026.png | 8fee65d6 | recipe_screens | 64x32 | 256x128 | SPECIFICA | title_menu/title_menu_g.ehp:t_window0026.gim |
-| ui_de/vs_screen/start_all__jyanken20_g0005.png | 2469fc30 | vs_screen | 256x32 | 1024x128 | SPECIFICA | duel/start/start_all.ehp:jyanken20_g0005.gim; duel/start/start_e.ehp:jyanken20_g0005.gim; duel/start/start_f.ehp:jyanken20_g0005.gim |
-| ui_de/vs_screen/start_all__jyanken20_g0007.png | 8729983a | vs_screen | 256x32 | 1024x128 | SPECIFICA | duel/start/start_all.ehp:jyanken20_g0007.gim; duel/start/start_e.ehp:jyanken20_g0007.gim; duel/start/start_f.ehp:jyanken20_g0007.gim |
-| ui_de/vs_screen/start_all__vs_much1_g0001.png | 647ec094 | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much1_g0001.gim; duel/start/start_e.ehp:vs_much1_g0001.gim; duel/start/start_f.ehp:vs_much1_g0001.gim |
-| ui_de/vs_screen/start_all__vs_much2_g0001.png | d6e3420a | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much2_g0001.gim; duel/start/start_e.ehp:vs_much2_g0001.gim; duel/start/start_f.ehp:vs_much2_g0001.gim |
-| ui_de/vs_screen/start_all__vs_much3_g0001.png | 0bf3bc02 | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much3_g0001.gim; duel/start/start_e.ehp:vs_much3_g0001.gim; duel/start/start_f.ehp:vs_much3_g0001.gim |
-| ui_de/vs_screen/start_e__d_menu01_g.png | 23d1ae0c | vs_screen | 256x256 | 1024x1024 | SPECIFICA | duel/start/start_e.ehp:d_menu01_g.gim; duel/start/start_f.ehp:d_menu01_g.gim; duel/start/start_g.ehp:d_menu01_g.gim |
-| ui_de/vs_screen/start_e__vs_bg01_1_g0005.png | 9b2a5a3b | vs_screen | 256x32 | 1024x128 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_g0005.gim; duel/start/start_f.ehp:vs_bg01_1_g0005.gim; duel/start/start_g.ehp:vs_bg01_1_g0005.gim |
-| ui_de/vs_screen/start_e__vs_bg01_1_g0007.png | cc2fd1b7 | vs_screen | 256x64 | 1024x256 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_g0007.gim; duel/start/start_f.ehp:vs_bg01_1_g0007.gim; duel/start/start_g.ehp:vs_bg01_1_g0007.gim |
-| ui_de/vs_screen/start_e__vs_bg01_1_g0008.png | e3f4a299 | vs_screen | 256x64 | 1024x256 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_g0008.gim; duel/start/start_f.ehp:vs_bg01_1_g0008.gim; duel/start/start_g.ehp:vs_bg01_1_g0008.gim |
-| ui_de/vs_screen/start_e__vs_bg01_1_g0012.png | d94ea205 | vs_screen | 128x32 | 512x128 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_g0012.gim; duel/start/start_f.ehp:vs_bg01_1_g0012.gim; duel/start/start_g.ehp:vs_bg01_1_g0012.gim |
-| ui_de/vs_screen/start_e__vs_bg01_1_g0014.png | 6b884f0c | vs_screen | 128x64 | 512x256 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_g0014.gim; duel/start/start_f.ehp:vs_bg01_1_g0014.gim; duel/start/start_g.ehp:vs_bg01_1_g0014.gim |
-| ui_de/vs_screen/start_e__vs_bg01_2_g0001.png | 1dd44271 | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_2_g0001.gim; duel/start/start_f.ehp:vs_bg01_2_g0001.gim; duel/start/start_g.ehp:vs_bg01_2_g0001.gim |
-| ui_de/vs_screen/start_e__vs_bg01_2_g0004.png | 38434306 | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_2_g0004.gim; duel/start/start_f.ehp:vs_bg01_2_g0004.gim; duel/start/start_g.ehp:vs_bg01_2_g0004.gim |
-| ui_de/vs_screen/start_g__jnk_card01.png | cc4d76f2 | vs_screen | 512x256 | 2048x1024 | SPECIFICA | duel/start/start_g.ehp:jnk_card01.gim |
-| ui_de/duel_texts/basic_gg__chain010003.png | d08b0e76 | duel_texts | 64x32 | 256x128 | SPECIFICA | duel/basic_bg.ehp:chain010003.gim; duel/basic_fg.ehp:chain010003.gim; duel/basic_gg.ehp:chain010003.gim |
-| ui_de/duel_texts/basic_gg__chain010005.png | 63fc2f5c | duel_texts | 128x32 | 512x128 | SPECIFICA | duel/basic_bg.ehp:chain010005.gim; duel/basic_fg.ehp:chain010005.gim; duel/basic_gg.ehp:chain010005.gim |
-| ui_de/duel_texts/basic_gg__dilect_atk00001.png | 207c290e | duel_texts | 256x32 | 1024x128 | SPECIFICA | duel/basic_bg.ehp:dilect_atk00001.gim; duel/basic_fg.ehp:dilect_atk00001.gim; duel/basic_gg.ehp:dilect_atk00001.gim |
-| ui_de/duel_texts/basic_gg__dilect_atk00003.png | fd670497 | duel_texts | 128x32 | 512x128 | SPECIFICA | duel/basic_bg.ehp:dilect_atk00003.gim; duel/basic_fg.ehp:dilect_atk00003.gim; duel/basic_gg.ehp:dilect_atk00003.gim |
-| ui_de/duel_texts/basic_gg__next_player0001.png | 5212b3a9 | duel_texts | 64x16 | 256x64 | SPECIFICA | duel/basic_bg.ehp:next_player0001.gim; duel/basic_fg.ehp:next_player0001.gim; duel/basic_gg.ehp:next_player0001.gim |
-| ui_de/duel_texts/basic_gg__next_player0002.png | 22c1e7af | duel_texts | 64x32 | 256x128 | SPECIFICA | duel/basic_bg.ehp:next_player0002.gim; duel/basic_fg.ehp:next_player0002.gim; duel/basic_gg.ehp:next_player0002.gim |
-| ui_de/duel_texts/basic_gg__next_player0003.png | a3399289 | duel_texts | 256x32 | 1024x128 | SPECIFICA | duel/basic_bg.ehp:next_player0003.gim; duel/basic_fg.ehp:next_player0003.gim; duel/basic_gg.ehp:next_player0003.gim |
-| ui_de/duel_texts/basic_gg__next_player0005.png | 042946dc | duel_texts | 64x16 | 256x64 | SPECIFICA | duel/basic_bg.ehp:next_player0005.gim; duel/basic_fg.ehp:next_player0005.gim; duel/basic_gg.ehp:next_player0005.gim |
-| ui_de/duel_texts/basic_gg__next_player0006.png | f0dfc85e | duel_texts | 64x32 | 256x128 | SPECIFICA | duel/basic_bg.ehp:next_player0006.gim; duel/basic_fg.ehp:next_player0006.gim; duel/basic_gg.ehp:next_player0006.gim |
-| ui_de/duel_texts/basic_gg__next_player0007.png | c30370b4 | duel_texts | 256x32 | 1024x128 | SPECIFICA | duel/basic_bg.ehp:next_player0007.gim; duel/basic_fg.ehp:next_player0007.gim; duel/basic_gg.ehp:next_player0007.gim |
-| ui_de/duel_texts/basic_gg__score-top100011.png | 20d674aa | duel_texts | 32x32 | 128x128 | SPECIFICA | duel/basic_bg.ehp:score-top100011.gim; duel/basic_fg.ehp:score-top100011.gim; duel/basic_gg.ehp:score-top100011.gim |
-| ui_de/duel_texts/basic_gg__score-top100013.png | aab8884f | duel_texts | 32x32 | 128x128 | SPECIFICA | duel/basic_bg.ehp:score-top100013.gim; duel/basic_fg.ehp:score-top100013.gim; duel/basic_gg.ehp:score-top100013.gim |
-| ui_de/duel_texts/basic_gg__start_duel10001.png | 13405678 | duel_texts | 64x64 | 256x256 | SPECIFICA | duel/basic_bg.ehp:start_duel10001.gim; duel/basic_fg.ehp:start_duel10001.gim; duel/basic_gg.ehp:start_duel10001.gim |
-| ui_de/duel_texts/basic_gg__start_duel10002.png | 9bf6803a | duel_texts | 256x64 | 1024x256 | SPECIFICA | duel/basic_bg.ehp:start_duel10002.gim; duel/basic_fg.ehp:start_duel10002.gim; duel/basic_gg.ehp:start_duel10002.gim |
-| ui_de/duel_texts/basic_gg__start_duel10005.png | ef0dcee9 | duel_texts | 128x32 | 512x128 | SPECIFICA | duel/basic_bf.ehp:start_duel10005.gim; duel/basic_bg.ehp:start_duel10005.gim; duel/basic_ff.ehp:start_duel10005.gim |
-| ui_de/tutorial/tutorial_g__tuto_duelimg01.png | 5642fab0 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_g.ehp:tuto_duelimg01.gim |
-| ui_de/tutorial/tutorial_g__tuto_duelimg02.png | de3b0f96 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_g.ehp:tuto_duelimg02.gim |
-| ui_de/tutorial/tutorial_g__tuto_duelimg03.png | 78b9eca8 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_g.ehp:tuto_duelimg03.gim |
-| ui_de/tutorial/tutorial_g__tuto_duelimg04.png | 4119cb51 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_g.ehp:tuto_duelimg04.gim |
-| ui_de/tutorial/tutorial_g__tuto_duelimg05.png | 7f7bdfb2 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_g.ehp:tuto_duelimg05.gim |
-| ui_de/tutorial/tutorial_g__tuto_duelimg06.png | 931db074 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_g.ehp:tuto_duelimg06.gim |
+| ui_de/fogli_icone/all_g__icon04.png | ce4fe497 | fogli_icone | 128x128 | 512x512 | SPECIFIC | deck/all_g.ehp:icon04.gim |
+| ui_de/fogli_icone/all_g__panel.png | 68141938 | fogli_icone | 256x256 | 1024x1024 | SPECIFIC | shop/all_g.ehp:panel.gim |
+| ui_de/fogli_icone/all_g__s_pack.png | 731df6d4 | fogli_icone | 256x256 | 1024x1024 | SPECIFIC | shop/all_g.ehp:s_pack.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100002.png | b15e254f | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100002.gim; duel/basic_fg.ehp:duel_draw100002.gim; duel/basic_gg.ehp:duel_draw100002.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100004.png | 3dcf0348 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100004.gim; duel/basic_fg.ehp:duel_draw100004.gim; duel/basic_gg.ehp:duel_draw100004.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100006.png | 988d2924 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100006.gim; duel/basic_fg.ehp:duel_draw100006.gim; duel/basic_gg.ehp:duel_draw100006.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100008.png | c27723c2 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100008.gim; duel/basic_fg.ehp:duel_draw100008.gim; duel/basic_gg.ehp:duel_draw100008.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100010.png | d40c8877 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100010.gim; duel/basic_fg.ehp:duel_draw100010.gim; duel/basic_gg.ehp:duel_draw100010.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100012.png | f32aec8b | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100012.gim; duel/basic_fg.ehp:duel_draw100012.gim; duel/basic_gg.ehp:duel_draw100012.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100014.png | 7164c557 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100014.gim; duel/basic_fg.ehp:duel_draw100014.gim; duel/basic_gg.ehp:duel_draw100014.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100016.png | bf811ab0 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100016.gim; duel/basic_fg.ehp:duel_draw100016.gim; duel/basic_gg.ehp:duel_draw100016.gim |
+| ui_de/lettere_esito/basic_gg__duel_draw100018.png | fd752d95 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_draw100018.gim; duel/basic_fg.ehp:duel_draw100018.gim; duel/basic_gg.ehp:duel_draw100018.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100002.png | 912fcd45 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100002.gim; duel/basic_fg.ehp:duel_lose100002.gim; duel/basic_gg.ehp:duel_lose100002.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100004.png | 20c32463 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100004.gim; duel/basic_fg.ehp:duel_lose100004.gim; duel/basic_gg.ehp:duel_lose100004.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100006.png | 7e4814ae | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100006.gim; duel/basic_fg.ehp:duel_lose100006.gim; duel/basic_gg.ehp:duel_lose100006.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100008.png | e758002f | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100008.gim; duel/basic_fg.ehp:duel_lose100008.gim; duel/basic_gg.ehp:duel_lose100008.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100010.png | fe18c251 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100010.gim; duel/basic_fg.ehp:duel_lose100010.gim; duel/basic_gg.ehp:duel_lose100010.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100012.png | adde0b1d | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100012.gim; duel/basic_fg.ehp:duel_lose100012.gim; duel/basic_gg.ehp:duel_lose100012.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100014.png | a3ed8c27 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100014.gim; duel/basic_fg.ehp:duel_lose100014.gim; duel/basic_gg.ehp:duel_lose100014.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100016.png | 49b0e354 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100016.gim; duel/basic_fg.ehp:duel_lose100016.gim; duel/basic_gg.ehp:duel_lose100016.gim |
+| ui_de/lettere_esito/basic_gg__duel_lose100018.png | 1ee989bc | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_lose100018.gim; duel/basic_fg.ehp:duel_lose100018.gim; duel/basic_gg.ehp:duel_lose100018.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100002.png | c8ecef23 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100002.gim; duel/basic_fg.ehp:duel_win100002.gim; duel/basic_gg.ehp:duel_win100002.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100004.png | 6d2aaacc | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100004.gim; duel/basic_fg.ehp:duel_win100004.gim; duel/basic_gg.ehp:duel_win100004.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100006.png | 51a3b5f3 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100006.gim; duel/basic_fg.ehp:duel_win100006.gim; duel/basic_gg.ehp:duel_win100006.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100008.png | 3ee7d405 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100008.gim; duel/basic_fg.ehp:duel_win100008.gim; duel/basic_gg.ehp:duel_win100008.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100010.png | 595a731a | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100010.gim; duel/basic_fg.ehp:duel_win100010.gim; duel/basic_gg.ehp:duel_win100010.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100012.png | 2ea9ce79 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100012.gim; duel/basic_fg.ehp:duel_win100012.gim; duel/basic_gg.ehp:duel_win100012.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100014.png | e6b4a13d | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100014.gim; duel/basic_fg.ehp:duel_win100014.gim; duel/basic_gg.ehp:duel_win100014.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100016.png | 92a3b4b9 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100016.gim; duel/basic_fg.ehp:duel_win100016.gim; duel/basic_gg.ehp:duel_win100016.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100018.png | 9b93a537 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:duel_win100018.gim; duel/basic_fg.ehp:duel_win100018.gim; duel/basic_gg.ehp:duel_win100018.gim |
+| ui_de/lettere_esito/basic_gg__duel_win100020.png | b5401172 | lettere_esito | 64x32 | 256x128 | SPECIFIC | duel/basic_bg.ehp:duel_win100020.gim; duel/basic_fg.ehp:duel_win100020.gim; duel/basic_gg.ehp:duel_win100020.gim |
+| ui_de/menu_liste/always_bri_ger__story_sys02.png | bcd751d8 | menu_liste | 256x128 | 1024x512 | SPECIFIC | field/always_bri_ger.ehp:story_sys02.gim; field/always_fra_ger.ehp:story_sys02.gim; field/always_ger_ger.ehp:story_sys02.gim |
+| ui_de/menu_liste/result_g__menu01.png | 43526e37 | menu_liste | 256x64 | 1024x256 | SPECIFIC | duel/result/result_g.ehp:menu01.gim |
+| ui_de/menu_liste/result_g__menu02.png | 9a4a8236 | menu_liste | 256x128 | 1024x512 | SPECIFIC | duel/result/result_g.ehp:menu02.gim |
+| ui_de/menu_liste/title_menu_g__m_menu_title01.png | 90284e3a | menu_liste | 256x128 | 1024x512 | SPECIFIC | title_menu/title_menu_g.ehp:m_menu_title01.gim |
+| ui_de/menu_liste/title_menu_g__press_start0003.png | 57081762 | menu_liste | 256x16 | 1024x64 | SPECIFIC | title_menu/title_menu_g.ehp:press_start0003.gim |
+| ui_de/menu_liste/title_menu_g__trnsmt02.png | 800ca6a3 | menu_liste | 256x256 | 1024x1024 | SPECIFIC | title_menu/title_menu_g.ehp:trnsmt02.gim |
+| ui_de/schede_deck/all_g__d_window00008.png | 410ef331 | schede_deck | 128x32 | 512x128 | SPECIFIC | deck/all_g.ehp:d_window00008.gim |
+| ui_de/schede_deck/all_g__d_window00016.png | 34a9652d | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_e.ehp:d_window00016.gim; deck/all_f.ehp:d_window00016.gim; deck/all_g.ehp:d_window00016.gim |
+| ui_de/schede_deck/all_g__d_window00033.png | 328738aa | schede_deck | 256x32 | 1024x128 | SPECIFIC | deck/all_g.ehp:d_window00033.gim |
+| ui_de/schede_deck/all_g__d_window00051.png | 78e0995c | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_g.ehp:d_window00051.gim |
+| ui_de/schede_deck/all_g__d_window00062.png | 0b841a08 | schede_deck | 128x32 | 512x128 | SPECIFIC | deck/all_g.ehp:d_window00062.gim; labo/conv_machine.ehp:window_g0016.gim; title_menu/title_menu_g.ehp:t_window0015.gim |
+| ui_de/schede_deck/all_g__d_window00101.png | dac6a171 | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_g.ehp:d_window00101.gim; labo/rental.ehp:window_g0008.gim |
+| ui_de/schede_deck/all_g__tab_title.png | c51223fd | schede_deck | 256x32 | 1024x128 | SPECIFIC | shop/all_g.ehp:tab_title.gim |
+| ui_de/schede_deck/conv_machine__window_g0009.png | 467c47c3 | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/conv_machine.ehp:window_g0009.gim; labo/conv_machine.ehp:window_g0026.gim |
+| ui_de/schede_deck/conv_machine__window_g0016.png | 0b841a08 | schede_deck | 128x32 | 512x128 | SPECIFIC | deck/all_g.ehp:d_window00062.gim; labo/conv_machine.ehp:window_g0016.gim; title_menu/title_menu_g.ehp:t_window0015.gim |
+| ui_de/schede_deck/conv_machine__window_g0026.png | 467c47c3 | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/conv_machine.ehp:window_g0009.gim; labo/conv_machine.ehp:window_g0026.gim |
+| ui_de/schede_deck/password__key_g0027.png | f2102f5c | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/password.ehp:key_g0027.gim |
+| ui_de/schede_deck/rental__window_g0008.png | dac6a171 | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_g.ehp:d_window00101.gim; labo/rental.ehp:window_g0008.gim |
+| ui_de/schede_deck/rental__window_g0015.png | 55e5724d | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/rental.ehp:window_g0015.gim |
+| ui_de/schede_deck/rental__window_g0026.png | 47f0c275 | schede_deck | 64x32 | 256x128 | SPECIFIC | labo/rental.ehp:window_g0026.gim |
+| ui_de/schede_ricette/limitlist__window_g0002.png | 3bda99aa | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_g0002.gim |
+| ui_de/schede_ricette/limitlist__window_g0004.png | a6a65331 | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_g0004.gim |
+| ui_de/schede_ricette/limitlist__window_g0012.png | c03e3475 | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_g0012.gim |
+| ui_de/schede_ricette/recipe_view_g__recipe010004.png | 97f5751a | schede_ricette | 256x64 | 1024x256 | SPECIFIC | deck/recipe_view_g.ehp:recipe010004.gim |
+| ui_de/schede_ricette/recipe_view_g__recipe010008.png | 1e332ce0 | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_g.ehp:recipe010008.gim; title_menu/title_menu_g.ehp:recipe_sel00002.gim |
+| ui_de/schede_ricette/recipe_view_g__recipe010015.png | 31608bc8 | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_g.ehp:recipe010015.gim; title_menu/title_menu_g.ehp:recipe_sel00009.gim |
+| ui_de/schede_ricette/recipe_view_g__recipe010027.png | 84c2dc4b | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_g.ehp:recipe010027.gim; title_menu/title_menu_g.ehp:recipe_sel00020.gim |
+| ui_de/schede_ricette/recipe_view_g__recipe010029.png | 2aec2bee | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_g.ehp:recipe010029.gim; title_menu/title_menu_g.ehp:recipe_sel00022.gim |
+| ui_de/schede_ricette/recipe_view_g__recipe010031.png | 3582dfbc | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_g.ehp:recipe010031.gim; title_menu/title_menu_g.ehp:recipe_sel00024.gim |
+| ui_de/schede_ricette/title_menu_g__recipe_sel00033.png | f000f198 | schede_ricette | 128x32 | 512x128 | SPECIFIC | title_menu/title_menu_g.ehp:recipe_sel00033.gim |
+| ui_de/schede_ricette/title_menu_g__t_window0008.png | 8f980210 | schede_ricette | 64x32 | 256x128 | SPECIFIC | title_menu/title_menu_g.ehp:t_window0008.gim |
+| ui_de/schede_ricette/title_menu_g__t_window0026.png | 8fee65d6 | schede_ricette | 64x32 | 256x128 | SPECIFIC | title_menu/title_menu_g.ehp:t_window0026.gim |
+| ui_de/schermata_vs/start_all__jyanken20_g0005.png | 2469fc30 | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_all.ehp:jyanken20_g0005.gim; duel/start/start_e.ehp:jyanken20_g0005.gim; duel/start/start_f.ehp:jyanken20_g0005.gim |
+| ui_de/schermata_vs/start_all__jyanken20_g0007.png | 8729983a | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_all.ehp:jyanken20_g0007.gim; duel/start/start_e.ehp:jyanken20_g0007.gim; duel/start/start_f.ehp:jyanken20_g0007.gim |
+| ui_de/schermata_vs/start_all__vs_much1_g0001.png | 647ec094 | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much1_g0001.gim; duel/start/start_e.ehp:vs_much1_g0001.gim; duel/start/start_f.ehp:vs_much1_g0001.gim |
+| ui_de/schermata_vs/start_all__vs_much2_g0001.png | d6e3420a | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much2_g0001.gim; duel/start/start_e.ehp:vs_much2_g0001.gim; duel/start/start_f.ehp:vs_much2_g0001.gim |
+| ui_de/schermata_vs/start_all__vs_much3_g0001.png | 0bf3bc02 | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much3_g0001.gim; duel/start/start_e.ehp:vs_much3_g0001.gim; duel/start/start_f.ehp:vs_much3_g0001.gim |
+| ui_de/schermata_vs/start_e__d_menu01_g.png | 23d1ae0c | schermata_vs | 256x256 | 1024x1024 | SPECIFIC | duel/start/start_e.ehp:d_menu01_g.gim; duel/start/start_f.ehp:d_menu01_g.gim; duel/start/start_g.ehp:d_menu01_g.gim |
+| ui_de/schermata_vs/start_e__vs_bg01_1_g0005.png | 9b2a5a3b | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_g0005.gim; duel/start/start_f.ehp:vs_bg01_1_g0005.gim; duel/start/start_g.ehp:vs_bg01_1_g0005.gim |
+| ui_de/schermata_vs/start_e__vs_bg01_1_g0007.png | cc2fd1b7 | schermata_vs | 256x64 | 1024x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_g0007.gim; duel/start/start_f.ehp:vs_bg01_1_g0007.gim; duel/start/start_g.ehp:vs_bg01_1_g0007.gim |
+| ui_de/schermata_vs/start_e__vs_bg01_1_g0008.png | e3f4a299 | schermata_vs | 256x64 | 1024x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_g0008.gim; duel/start/start_f.ehp:vs_bg01_1_g0008.gim; duel/start/start_g.ehp:vs_bg01_1_g0008.gim |
+| ui_de/schermata_vs/start_e__vs_bg01_1_g0012.png | d94ea205 | schermata_vs | 128x32 | 512x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_g0012.gim; duel/start/start_f.ehp:vs_bg01_1_g0012.gim; duel/start/start_g.ehp:vs_bg01_1_g0012.gim |
+| ui_de/schermata_vs/start_e__vs_bg01_1_g0014.png | 6b884f0c | schermata_vs | 128x64 | 512x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_g0014.gim; duel/start/start_f.ehp:vs_bg01_1_g0014.gim; duel/start/start_g.ehp:vs_bg01_1_g0014.gim |
+| ui_de/schermata_vs/start_e__vs_bg01_2_g0001.png | 1dd44271 | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_2_g0001.gim; duel/start/start_f.ehp:vs_bg01_2_g0001.gim; duel/start/start_g.ehp:vs_bg01_2_g0001.gim |
+| ui_de/schermata_vs/start_e__vs_bg01_2_g0004.png | 38434306 | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_2_g0004.gim; duel/start/start_f.ehp:vs_bg01_2_g0004.gim; duel/start/start_g.ehp:vs_bg01_2_g0004.gim |
+| ui_de/schermata_vs/start_g__jnk_card01.png | cc4d76f2 | schermata_vs | 512x256 | 2048x1024 | SPECIFIC | duel/start/start_g.ehp:jnk_card01.gim |
+| ui_de/scritte_duello/basic_gg__chain010003.png | d08b0e76 | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bg.ehp:chain010003.gim; duel/basic_fg.ehp:chain010003.gim; duel/basic_gg.ehp:chain010003.gim |
+| ui_de/scritte_duello/basic_gg__chain010005.png | 63fc2f5c | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bg.ehp:chain010005.gim; duel/basic_fg.ehp:chain010005.gim; duel/basic_gg.ehp:chain010005.gim |
+| ui_de/scritte_duello/basic_gg__dilect_atk00001.png | 207c290e | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bg.ehp:dilect_atk00001.gim; duel/basic_fg.ehp:dilect_atk00001.gim; duel/basic_gg.ehp:dilect_atk00001.gim |
+| ui_de/scritte_duello/basic_gg__dilect_atk00003.png | fd670497 | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bg.ehp:dilect_atk00003.gim; duel/basic_fg.ehp:dilect_atk00003.gim; duel/basic_gg.ehp:dilect_atk00003.gim |
+| ui_de/scritte_duello/basic_gg__next_player0001.png | 5212b3a9 | scritte_duello | 64x16 | 256x64 | SPECIFIC | duel/basic_bg.ehp:next_player0001.gim; duel/basic_fg.ehp:next_player0001.gim; duel/basic_gg.ehp:next_player0001.gim |
+| ui_de/scritte_duello/basic_gg__next_player0002.png | 22c1e7af | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bg.ehp:next_player0002.gim; duel/basic_fg.ehp:next_player0002.gim; duel/basic_gg.ehp:next_player0002.gim |
+| ui_de/scritte_duello/basic_gg__next_player0003.png | a3399289 | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bg.ehp:next_player0003.gim; duel/basic_fg.ehp:next_player0003.gim; duel/basic_gg.ehp:next_player0003.gim |
+| ui_de/scritte_duello/basic_gg__next_player0005.png | 042946dc | scritte_duello | 64x16 | 256x64 | SPECIFIC | duel/basic_bg.ehp:next_player0005.gim; duel/basic_fg.ehp:next_player0005.gim; duel/basic_gg.ehp:next_player0005.gim |
+| ui_de/scritte_duello/basic_gg__next_player0006.png | f0dfc85e | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bg.ehp:next_player0006.gim; duel/basic_fg.ehp:next_player0006.gim; duel/basic_gg.ehp:next_player0006.gim |
+| ui_de/scritte_duello/basic_gg__next_player0007.png | c30370b4 | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bg.ehp:next_player0007.gim; duel/basic_fg.ehp:next_player0007.gim; duel/basic_gg.ehp:next_player0007.gim |
+| ui_de/scritte_duello/basic_gg__score-top100011.png | 20d674aa | scritte_duello | 32x32 | 128x128 | SPECIFIC | duel/basic_bg.ehp:score-top100011.gim; duel/basic_fg.ehp:score-top100011.gim; duel/basic_gg.ehp:score-top100011.gim |
+| ui_de/scritte_duello/basic_gg__score-top100013.png | aab8884f | scritte_duello | 32x32 | 128x128 | SPECIFIC | duel/basic_bg.ehp:score-top100013.gim; duel/basic_fg.ehp:score-top100013.gim; duel/basic_gg.ehp:score-top100013.gim |
+| ui_de/scritte_duello/basic_gg__start_duel10001.png | 13405678 | scritte_duello | 64x64 | 256x256 | SPECIFIC | duel/basic_bg.ehp:start_duel10001.gim; duel/basic_fg.ehp:start_duel10001.gim; duel/basic_gg.ehp:start_duel10001.gim |
+| ui_de/scritte_duello/basic_gg__start_duel10002.png | 9bf6803a | scritte_duello | 256x64 | 1024x256 | SPECIFIC | duel/basic_bg.ehp:start_duel10002.gim; duel/basic_fg.ehp:start_duel10002.gim; duel/basic_gg.ehp:start_duel10002.gim |
+| ui_de/scritte_duello/basic_gg__start_duel10005.png | ef0dcee9 | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bf.ehp:start_duel10005.gim; duel/basic_bg.ehp:start_duel10005.gim; duel/basic_ff.ehp:start_duel10005.gim |
+| ui_de/tutorial/tutorial_g__tuto_duelimg01.png | 5642fab0 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_g.ehp:tuto_duelimg01.gim |
+| ui_de/tutorial/tutorial_g__tuto_duelimg02.png | de3b0f96 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_g.ehp:tuto_duelimg02.gim |
+| ui_de/tutorial/tutorial_g__tuto_duelimg03.png | 78b9eca8 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_g.ehp:tuto_duelimg03.gim |
+| ui_de/tutorial/tutorial_g__tuto_duelimg04.png | 4119cb51 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_g.ehp:tuto_duelimg04.gim |
+| ui_de/tutorial/tutorial_g__tuto_duelimg05.png | 7f7bdfb2 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_g.ehp:tuto_duelimg05.gim |
+| ui_de/tutorial/tutorial_g__tuto_duelimg06.png | 931db074 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_g.ehp:tuto_duelimg06.gim |
 
-### Texture che restano come l'originale
-`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `parts` sono fogli di icone in pixel art (con NEU/NEW): restano com'erano, coperti dall'ingrandimento `upscale_extra` come nelle altre lingue; il testo non e' stato cambiato. Le texture neutre vengono dal pack di base. In spagnolo anche `score-top` (TURNO) ha lo stesso hash dell'italiano e `card_icon03` e' in `upscale_extra`.
+### Textures that stay like the original
+`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `parts` are pixel-art icon sheets (with NEU/NEW): they stay as they were, covered by the `upscale_extra` enlargement as in the other languages; the text was not changed. The neutral textures come from the base pack. In Spanish `score-top` (TURNO) also has the same hash as Italian and `card_icon03` is in `upscale_extra`.
 
-## B4. Il foglio dei numeri del duello (`card_icon03`)
+## B4. The duel number sheet (`card_icon03`)
 
-Foglio unico con cifre LP, tempo, tasti e moltiplicatori; hash diverso per lingua. Ricetta scelta dall'utente (`tools/ui_textures/icon03_languages.py`, rilanciare con `--apply`):
-- righe 0-180 (cifre piccole e segni, tasti arancioni 1/2/3, cifre grandi 0-9 con "LP", cifre piccole 0-9): **dal pack USA**, pixel art netta;
-- celle in cui il gioco europeo differisce dal pack USA (spunta nera, palla grigia, pillola vuota, parola del tempo): **pixel originali ingranditi 4x senza sfumare**; parola del tempo **ZEIT**; la pillola arancione ("Single" nel pack USA) resta **vuota**;
-- righe >= 181 (moltiplicatori x1..x12, icone, carte, frecce): dal foglio italiano gia' nel pack (`tools/data/card_icon03_base_it.png`);
-- le celle europee si incollano **solo nella loro fascia** di righe (altrimenti rovinano la parte alta delle cifre grandi).
+A single sheet with LP digits, time, keys and multipliers; different hash per language. Recipe chosen by the user (`tools/ui_textures/icon03_languages.py`, rerun with `--apply`):
+- rows 0-180 (small digits and signs, orange keys 1/2/3, big digits 0-9 with "LP", small digits 0-9): **from the US pack**, crisp pixel art;
+- cells in which the European game differs from the US pack (black check mark, grey ball, empty pill, time word): **original pixels enlarged 4x without smoothing**; time word **ZEIT**; the orange pill ("Single" in the US pack) stays **empty**;
+- rows >= 181 (multipliers x1..x12, icons, cards, arrows): from the Italian sheet already in the pack (`tools/data/card_icon03_base_it.png`);
+- the European cells are pasted **only in their band** of rows (otherwise they spoil the top of the big digits).
 
-File: it -> `ui_it/duel_texts/basic_ii__card_icon03.png` (hash 376925c7); fr -> `upscale_extra/3e5482fd.png`; en ee0c44c3; de ffe309a6; es 859eea2b. Anteprime in `confronti/icon03/`.
+Files: it -> `ui_it/duel_texts/basic_ii__card_icon03.png` (hash 376925c7); fr -> `upscale_extra/3e5482fd.png`; en ee0c44c3; de ffe309a6; es 859eea2b. Previews in `comparisons/icon03/`.
 
-## B5. Targa del titolo
+## B5. Title plate
 
-`python tools/ui_textures/mystic_tomato_title.py de` genera 2 PNG (`542eff79685c434d`, `705176739829dcf5`, tessere 18 e 19 del fondale di 20 tessere 128x64 `title_menu_i.ehp: main_title00001..00020`) con la carta 4930 nella lingua + la formula "versione" + la bandiera, font PT Sans Bold: **"EDITION MYSTISCHE TOMATE"**. La targa **va inclusa solo per la lingua scelta** (vive in `moduli/de/intro/title_screen/`); il pack di base originale ha le tessere senza banner. File in questo pack: `moduli/de/intro/title_screen/00000000542eff79685c434d.png`, `moduli/de/intro/title_screen/00000000705176739829dcf5.png`.
+`python tools/ui_textures/mystic_tomato_title.py de` generates 2 PNGs (`542eff79685c434d`, `705176739829dcf5`, tiles 18 and 19 of the 20-tile 128x64 backdrop `title_menu_i.ehp: main_title00001..00020`) with card 4930 in the language + the "version" wording + the flag, PT Sans Bold font: **"EDITION MYSTISCHE TOMATE"**. The plate **is included only for the chosen language** (it lives in `modules/de/intro/title_screen/`); the original base pack has the tiles without a banner. Files in this pack: `moduli/de/intro/title_screen/00000000542eff79685c434d.png`, `moduli/de/intro/title_screen/00000000705176739829dcf5.png`.
 
-## B6. `textures.ini` e composizione
+## B6. `textures.ini` and composition
 
-`tools/gen_ini.py TOOLS US_INI CARD_DIR OUT_INI i=it +extra_it.ini +ui_it.ini +dati/upscale_extra.ini` converte il `textures.ini` USA in quello EU: le voci non-carta restano (texture neutre = stessi hash); le voci carta sono rigenerate dagli archivi `card/*.cip` EU per le 5 lingue (`i=it` rimappa `cards/large/X.png` -> `cards/large_it/X.png`); aggiunge l'etichetta Magia/Trappola (`extra_it.ini`), le righe `ui_it` e `upscale_extra.ini`. Si fa anche per i 3 stili carte. Se gli stessi pixel esistono in piu' lingue vince la prima in `e i f g s` (per questo atlante, banner e tabella attributi sono "uno per installazione").
+`tools/gen_ini.py TOOLS US_INI CARD_DIR OUT_INI i=it +extra_it.ini +ui_it.ini +data/upscale_extra.ini` converts the US `textures.ini` into the EU one: the non-card entries stay (neutral textures = same hashes); the card entries are regenerated from the EU `card/*.cip` archives for the 5 languages (`i=it` remaps `cards/large/X.png` -> `cards/large_it/X.png`); it adds the Spell/Trap label (`extra_it.ini`), the `ui_it` lines and `upscale_extra.ini`. It is also done for the 3 card styles. If the same pixels exist in several languages the first in `e i f g s` wins (for this reason atlas, banner and attribute table are "one per installation").
 
-Righe `ui_de` nel `de.ini`: 98. Frequenza dei prefissi: `docs/changes_de/ini_lines.csv`. Controllo: ogni riga `ui_de/...` deve puntare a un file esistente e non devono esserci hash duplicati.
+`ui_de` lines in `de.ini`: 98. Prefix frequency: `docs/changes_de/ini_lines.csv`. Check: every `ui_de/...` line must point to an existing file and there must be no duplicate hashes.
 
-## B7. Installazione e impostazioni
+## B7. Installation and settings
 
-PC: copiare `ULES00600` in `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `.../TEXTURES/ULES00600/`, senza estrarlo; rigenerare lo zip con le correzioni). Impostazioni: **Sostituisci texture ON**, risoluzione di rendering **4x**, lingua del gioco = lingua del modulo (la lingua e' scritta nel **salvataggio**). Dopo aver cambiato un solo PNG basta copiarlo e riavviare PPSSPP (cache). Per provare i testi usare la ISO `_definitiva`.
+PC: copy `ULES00600` into `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `.../TEXTURES/ULES00600/`, without extracting it; regenerate the zip with the corrections). Settings: **Replace textures ON**, rendering resolution **4x**, game language = module language (the language is stored in the **save file**). After changing a single PNG it is enough to copy it and restart PPSSPP (cache). To try the texts use the `_definitiva` ISO.
 
 ---
 
-# C. SCELTE EDITORIALI
+# C. EDITORIAL CHOICES
 
-- **Rector Sheppard** (come nei dialoghi) nelle schede e nelle mappe ("Oficina del Rector"); dormitori **Slifer Rojo, Ra Amarillo, Obelisco Azul**; **Jinetes de la Sombra**; "Habitación" al posto di "Alójese" (Room).
-- Sake/shochu e abito da cameriera come nelle altre lingue (`st01_t01/Scr003E`), `st02_t01/Scr101E` ruotato; "Sirviente de la Calavera", "Toon", "Archidemonio", "Trío Ojama" e accenti dei nomi come sulle carte.
-- Opzioni: "EN/FUERADE" -> "ON/OFF"; messaggi del titolo ("nuevos datos de juego"), lezioni del tutorial ("le turno" -> "es el turno de", tasti x/o scambiati, codici colore chiusi), paragrafo finale dei Duelos Tag tradotto (era troncato/in inglese).
-- Termini lasciati come nel gioco: "Invocación por Sacrificio", "Tributar", "Efecto de Blanco", "Tronco" (domande aperte in `docs/changes_es/open_questions_es.md`).
-- Foglio numeri: cifre/LP dal pack USA, x1..x12 dal foglio italiano, parola del tempo ZEIT.
+- **Rector Sheppard** (as in the dialogues) in the cards and maps ("Oficina del Rector"); dormitories **Slifer Rojo, Ra Amarillo, Obelisco Azul**; **Jinetes de la Sombra**; "Habitación" instead of "Alójese" (Room).
+- Sake/shochu and maid outfit as in the other languages (`st01_t01/Scr003E`), `st02_t01/Scr101E` rotated; "Sirviente de la Calavera", "Toon", "Archidemonio", "Trío Ojama" and name accents as on the cards.
+- Options: "EN/FUERADE" -> "ON/OFF"; title messages ("nuevos datos de juego"), tutorial lessons ("le turno" -> "es el turno de", swapped x/o keys, closed color codes), final paragraph of the Tag Duels translated (it was truncated/in English).
+- Terms left as in the game: "Invocación por Sacrificio", "Tributar", "Efecto de Blanco", "Tronco" (open questions in `docs/changes_es/open_questions_es.md`).
+- Number sheet: digits/LP from the US pack, x1..x12 from the Italian sheet, time word ZEIT.
 
-### Voci del registro delle scelte per questa lingua (`tools/data/editorial_choices.json`)
-| id | originale | corretto | ereditata | motivo |
+### Entries of the choices register for this language (`tools/data/editorial_choices.json`)
+| id | original | corrected | inherited | reason |
 |---|---|---|---|---|
 | st01_t01/Scr003E#146 | Meinem Vater gehört eine Firma,⏎die scharfe Saucen herstellt. | Meinem Vater gehört eine⏎Sake-Brauerei. | no | sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake) |
 | st01_t01/Scr003E#147 | Er hat mir zusammen mit dem Taschengeld⏎auch etwas scharfe Sauce geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | Er hat mir zusammen mit dem Taschengeld⏎auch etwas Shochu geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | no | shochu al posto di salsa piccante |
@@ -1648,44 +1648,44 @@ PC: copiare `ULES00600` in `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in 
 | st01_t01/Scr003E#151 | Er hat mir zusammen mit dem Taschengeld⏎auch etwas scharfe Sauce geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | Er hat mir zusammen mit dem Taschengeld⏎auch etwas Shochu geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | no | come 147 |
 | st01_t01/Scr003E#163 | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Bikini! | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Dienstmädchen-Outfit! | no | abito da cameriera al posto di bikini (giapponese: メイド服) |
 | st01_t01/Scr003E#168 | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Bikini! | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Dienstmädchen-Outfit! | no | come 163 |
-| st01_t01/Scr003E#188 | Tja, ein wenig schon ... | None | si | solo italiano: "sto sbavando" era un errore di traduzione (giapponese: "non sono poi così bravo") |
+| st01_t01/Scr003E#188 | Tja, ein wenig schon ... | None | yes | solo italiano: "sto sbavando" era un errore di traduzione (giapponese: "non sono poi così bravo") |
 | st01_t01/Scr003E#189 | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》 im Bikini! | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》 im Dienstmädchen-Outfit! | no | abito da cameriera al posto di bikini |
 | st01_t01/Scr003E#191 | Hier, du kannst den hier nehmen! | Hier, nimm dieses Dienstmädchen-Outfit! | no | Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso |
-| st01_t01/Scr003E#194 | Tja, ein wenig schon ... | None | si | come 188 |
+| st01_t01/Scr003E#194 | Tja, ein wenig schon ... | None | yes | come 188 |
 | st01_t01/Scr003E#195 | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》⏎im Bikini! | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》⏎im Dienstmädchen-Outfit! | no | come 189 |
 | st01_t01/Scr003E#197 | Hier, du kannst den hier nehmen! | Hier, nimm dieses Dienstmädchen-Outfit! | no | come 191 |
 
-Altre scelte e la rilettura delle frasi dei duelli: `docs/EDITORIAL_CHOICES.md`.
+Other choices and the re-reading of the duel sentences: `docs/EDITORIAL_CHOICES.md`.
 
-# D. VERIFICA IN GIOCO
+# D. IN-GAME VERIFICATION
 
-- **Visti in gioco** (ISO `_definitiva` + modulo `de`, nuovo gioco in tedesco, 2026-10-12): scelta lingua, titolo con targa "MYSTISCHE TOMATE EDITION" e Neues Spiel/Fortfahren, "Daten geladen", Hauptmenue HD, Deck-Menue (Deck bearbeiten / Rezeptanzeige), editor del deck (linguette Deck/Fusion/Side/Truhe, "Persoenliches Deck", "Eigene Kartentypen", Hilfe), Rezeptanzeige (Benutzer/Charakter, Fusionsdeck), conferma "Deckbearbeitung verlassen", calendario ("1. Mai / Montag", "92 Tage bis zum Turnier"), mappa ("Duellakademie", elenco luoghi), menu dell'ufficio (Reden/Duell/Gegenstaende/PDA), dialoghi del cancelliere e di Crowler in Klassenzimmer con le correzioni (Buero des Kanzlers, Duellakademie, Haupttor...), box a 2-3 righe senza tagli.
-- **Non visti** (solo letti e confrontati con l'originale nei fogli di confronto): Kette, Direktangriff, fine duello, sasso-carta-forbici, ZWEITER/ERSTER, 1. Runde, tutorial e lezioni, negozio (AUSVERKAUFT, "Gekaufte Karten"), laboratorio (Labor, Konverter, Miete), PDA, album, Optionen, carte con testo nuovo, frasi dei duelli, schermata VS.
-- **Visti nel duello dimostrativo del titolo** (2026-10-12): schermata VS ("NORMALES DUELL", "Einzelmodus", "Gegen", distintivi), HUD del duello, frasi dei duellanti in tedesco, descrizioni di carte in tedesco; "Draw Phase" resta inglese come nell'originale. Difetti segnalati dall'utente: font dei dialoghi non HD (testo di sistema, non sostituibile con le texture) e menu di salvataggio PSP in francese (lingua di sistema di PPSSPP).
+- **Seen in game** (`_definitiva` ISO + `de` module, new game in German, 2026-10-12): language selection, title with the "MYSTISCHE TOMATE EDITION" plate and Neues Spiel/Fortfahren, "Daten geladen", HD Hauptmenue, Deck menu (Deck bearbeiten / Rezeptanzeige), deck editor (tabs Deck/Fusion/Side/Truhe, "Persoenliches Deck", "Eigene Kartentypen", Hilfe), Rezeptanzeige (Benutzer/Charakter, Fusionsdeck), confirmation "Deckbearbeitung verlassen", calendar ("1. Mai / Montag", "92 Tage bis zum Turnier"), map ("Duellakademie", list of places), office menu (Reden/Duell/Gegenstaende/PDA), dialogues of the chancellor and of Crowler in Klassenzimmer with the corrections (Buero des Kanzlers, Duellakademie, Haupttor...), 2-3-line boxes without cuts.
+- **Not seen** (only read and compared with the original in the comparison sheets): Kette, Direktangriff, end of duel, rock-paper-scissors, ZWEITER/ERSTER, 1. Runde, tutorial and lessons, shop (AUSVERKAUFT, "Gekaufte Karten"), laboratory (Labor, Konverter, Miete), PDA, album, Optionen, cards with new text, duel sentences, VS screen.
+- **Seen in the title demo duel** (2026-10-12): VS screen ("NORMALES DUELL", "Einzelmodus", "Gegen", badges), duel HUD, duelist sentences in German, card descriptions in German; "Draw Phase" stays English as in the original. Defects reported by the user: dialogue font not HD (system text, cannot be replaced with textures) and PSP save menu in French (PPSSPP system language).
 
-# E. COME RIGENERARE TUTTO
+# E. HOW TO REGENERATE EVERYTHING
 
 ```
-# ISO (tutte le lingue insieme)
+# ISO (all languages together)
 python tools/corrections/build_dialogues.py de
-python tools/corrections/generate_card_corrections.py de CARDINFO_de.ehp          # carte
+python tools/corrections/generate_card_corrections.py de CARDINFO_de.ehp          # cards
 python tools/corrections/apply_to_iso.py PSP/GAME/ULES00600_..._EUR.iso PSP/GAME/ULES00600_..._EUR_definitiva.iso
-# immagini
+# images
 python tools/generate_language.py fr PACK CARDINFO US_INI CLEAN_DIR OUT [ID...]
-TF1_LANG=de python tools/ui_textures/<famiglia>.py USRDIR PACK_US <modulo>      # per ognuna delle 8 famiglie (intera!)
+TF1_LANG=de python tools/ui_textures/<family>.py USRDIR PACK_US <module>      # for each of the 8 families (whole!)
 python tools/ui_textures/icon03_languages.py --apply ; python tools/ui_textures/mystic_tomato_title.py de
-python tools/compose_pack.py PSP/TEXTURES/ULES00600 PSP/TEXTURES/modules USRDIR/card OUT de --copia
-# questo documento
+python tools/compose_pack.py PSP/TEXTURES/ULES00600 PSP/TEXTURES/modules USRDIR/card OUT de --copy
+# this document
 python tools/analysis/document_changes.py ISO_ORIG ISO_DEF de docs/changes_de
 python tools/analysis/document_pack.py ISO_ORIG de docs/changes_de
 python tools/analysis/text_comparisons.py de
 python tools/analysis/write_changes_document.py de
 ```
-Input esterni da avere (controlla che esistano): ISO originale, USRDIR estratta (`tools/analysis/extract_usrdir.py`), pack USA di MikeyMK `ULUS10136` (in una cartella fuori dal progetto).
+External inputs you need (check that they exist): the original ISO, the extracted USRDIR (`tools/analysis/extract_usrdir.py`), MikeyMK's US pack `ULUS10136` (in a folder outside the project).
 
-# F. LIMITI E PUNTI APERTI
+# F. LIMITS AND OPEN POINTS
 
-- Texture tedesche aggiunte il 2026-10-13 (`result_letters` 28, `duel_texts` 15; prima date per uguali all'inglese, ed era un errore: vedi `docs/changes_de/texture_texts_de.md`): confrontate con l'originale a bassa risoluzione (sovrapposizione delle tessere, fogli di controllo), **non ancora viste in gioco**. Da verificare: il centraggio dei puntini della Ä di NÄCHSTER SPIELER (sprite a parte), la larghezza di SPIELZUG nel badge e la sagoma di DU GEWINNST.
-- 5 fogli di icone in pixel art (`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `parts`) restano ingranditi dal pack (domanda aperta n. 7 in `open_questions_de.md`; in `pda_pack01` il gioco ha un residuo italiano "NUOVO" accanto ai "NEU", come in fr/es).
-- `textures.zip` Android per il tedesco: non fatto; nessuna prova su telefono.
-- Il nome del parlante nella casella del dialogo non e' modificabile (EBOOT cifrato).
+- German textures added on 2026-10-13 (`result_letters` 28, `duel_texts` 15; before they were taken for equal to English, which was a mistake: see `docs/changes_de/texture_texts_de.md`): compared with the low-resolution original (tile overlay, check sheets), **not yet seen in game**. To check: the centring of the dots of the Ä of NÄCHSTER SPIELER (separate sprite), the width of SPIELZUG in the badge and the silhouette of DU GEWINNST.
+- 5 pixel-art icon sheets (`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `parts`) stay enlarged from the pack (open question no. 7 in `open_questions_de.md`; in `pda_pack01` the game has an Italian leftover "NUOVO" next to the "NEU", as in fr/es).
+- Android `textures.zip` for German: not done; no test on a phone.
+- The speaker name in the dialogue box cannot be modified (encrypted EBOOT).

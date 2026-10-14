@@ -1,14 +1,15 @@
-# Domande aperte per il tedesco (2026-10-12)
 
-Per ognuna: opzione consigliata (R) e alternativa. Nessuna è stata applicata senza risposta, salvo dove indicato.
+# Open questions for German (2026-10-12)
 
-1. **Terminologia di "Summon/Tribute/Duel Puzzle"**: lasciati come nel gioco originale tedesco (Beschwörung, Tribut, Duellrätsel). R: lasciare.
-2. **Nomi di carte nella UI**: tutte le carte citate nei tutorial (Hinotama, Kobolds letzte Rettung, Verstärkungen, Sieben Werkzeuge des Banditen, Schrumpfen, Umi, Ödland, Geschmolzene Zerstörung, Masse-Kanone, Menschlicher Schleim, Stammesverfügung, Schwarzer Anhänger, Spiegelkraft, Gelb-glänzender Schild) coincidono con i nomi delle carte tedesche: nessuna modifica. R: lasciare.
-3. **Nome "Kanzler" per Sheppard** (EN: Chancellor): lasciato; nel nome del parlante (EBOOT) non è modificabile. R: lasciare.
-4. **`Syrus` al posto di `Bastion` in tutorial 03 #176** ("Eben fragte Syrus …"): applicato perché l'inglese dice Syrus; confermare con il giapponese se si vuole. R: tenere.
-5. **Voce "Reden" / "Duell"** nei dialoghi (Scr049E#7): allineata al menu di campo del gioco (`field_strtbl` 1 e 3). R: tenere.
-6. **`Barett` -> `Haarspange`** (oggetto "barrette" nei dialoghi Scr007E#15, Scr023E#63/66): EN dice Barrette (fermaglio per capelli), Barett = berretto. R: tenere.
-7. **Opzionale: texture "NEU"/"N" al posto di "NEW"** (pda_pack01, icon06, mein_menu00, trnsmt01, duelrecord parts_g differiscono dall'inglese di pochi pixel): non rifatte, restano l'upscale del pack. R: rifare solo se si vuole la parola tedesca.
-8. **Stringhe del gioco originale rimaste inglesi**: `Life Points`, `Side Deck`, `Fusion`, `NEW HIGH SCORE BONUS` / `CHALLENGE COMPLETE BONUS` (sheet menu02), `NO DATA`, "Phase" (Draw/Main/Battle/End Phase), nomi dei pacchetti OCG in `ocg_packname`. Sono scelte dell'originale tedesco. R: lasciare.
-9. **`Tauschen` nella lista di gruppo**: la texture originale tedesca ha il residuo francese "ÉCHANGE"; scritto TAUSCHEN (come in `tushin_msg`). R: tenere.
-10. **Stringhe `Duelldetails` (tushin 24) con inglese `Make New Group`**: l'originale tedesco ha un testo diverso dall'inglese; lasciato. R: lasciare.
+For each one: recommended option (R) and alternative. None was applied without an answer, except where indicated.
+
+1. **Terminology of "Summon/Tribute/Duel Puzzle"**: left as in the original German game (Beschwörung, Tribut, Duellrätsel). R: leave.
+2. **Card names in the UI**: all the cards mentioned in the tutorials (Hinotama, Kobolds letzte Rettung, Verstärkungen, Sieben Werkzeuge des Banditen, Schrumpfen, Umi, Ödland, Geschmolzene Zerstörung, Masse-Kanone, Menschlicher Schleim, Stammesverfügung, Schwarzer Anhänger, Spiegelkraft, Gelb-glänzender Schild) match the names of the German cards: no change. R: leave.
+3. **Name "Kanzler" for Sheppard** (EN: Chancellor): left; the speaker name (EBOOT) cannot be modified. R: leave.
+4. **`Syrus` instead of `Bastion` in tutorial 03 #176** ("Eben fragte Syrus …"): applied because the English says Syrus; confirm with the Japanese if wanted. R: keep.
+5. **Entry "Reden" / "Duell"** in the dialogues (Scr049E#7): aligned with the game's field menu (`field_strtbl` 1 and 3). R: keep.
+6. **`Barett` -> `Haarspange`** (the "barrette" object in the dialogues Scr007E#15, Scr023E#63/66): EN says Barrette (hair clip), Barett = beret. R: keep.
+7. **Optional: "NEU"/"N" textures instead of "NEW"** (pda_pack01, icon06, mein_menu00, trnsmt01, duelrecord parts_g differ from English by a few pixels): not redone, they stay the pack's upscale. R: redo only if the German word is wanted.
+8. **Strings of the original game left in English**: `Life Points`, `Side Deck`, `Fusion`, `NEW HIGH SCORE BONUS` / `CHALLENGE COMPLETE BONUS` (menu02 sheet), `NO DATA`, "Phase" (Draw/Main/Battle/End Phase), names of the OCG packs in `ocg_packname`. They are choices of the German original. R: leave.
+9. **`Tauschen` in the group list**: the original German texture has the French leftover "ÉCHANGE"; written TAUSCHEN (as in `tushin_msg`). R: keep.
+10. **`Duelldetails` strings (tushin 24) with English `Make New Group`**: the German original has a text different from English; left. R: leave.

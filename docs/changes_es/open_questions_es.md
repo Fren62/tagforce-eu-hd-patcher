@@ -1,30 +1,30 @@
-# Domande aperte per l'utente - spagnolo (carte)
-- 4358 nome "Kanan loss Swordmistress" (inglese "Kanan the Swordmistress"): nome della carta rotto/semi-inglese. Proposta: "Kanan la Espadachina" (non applicato).
-- 4348 nome "Dian Keto, el Señora de la Curación": genere incoerente (el/Señora). Proposta: "Dian Keto, el Señor de la Curación" (non applicato).
-- Nomi con maiuscole incoerenti (es. "Espectro de sombra", "Guerrero de montaña", "Zombi guerrero", "El pelo de serpiente"): non toccati (nomi del gioco).
-- 4079 "Kairyu - Shin" (spazi attorno al trattino; inglese "Kairyu-Shin"), 4197 "LaLa Li - oon", non toccati.
-- "sólo"/"solo": uso misto nel gioco. Non toccato.
-- 4521 "La Estatua de la Isla Oriental" (inglese Easter Island = Isla de Pascua): mistraduzione del nome, non toccata.
-- 4644 nome "Reina de los permisos de otoño" (inglese Queen of Autumn Leaves: "leaves" tradotto come "permessi"): mistraduzione del nome, proposta "Reina de las Hojas de Otoño" (non applicato).
-- 5546 nome "Estrategia de Disturbación" (inglese Disturbance Strategy): "Disturbación" non esiste in spagnolo; solo corretto l accento di Estrategia. Proposta: "Estrategia de Perturbación".
-- 5732 nome "Hada del Verano" (inglese Fairy of the Spring = Hada de la Primavera): mistraduzione del nome, non toccata.
-- 5767/6095 nome "Perro Marron Excelente" / "Cráneo Perro Marron" (inglese Marron, nome proprio): lasciati senza accento.
-- 6684 nome "Viper Victory XX03" (inglese Victory Viper XX03; ufficiale spagnolo "Victory Viper XX03"): parole invertite nel nome (compare anche nel testo 6637 "Ficha de Opción"). Non applicato.
-- 6450 nome "Triedad" (inglese Triage): non toccato.
+# Open questions for the user - Spanish (cards)
+- 4358 name "Kanan loss Swordmistress" (English "Kanan the Swordmistress"): broken/semi-English card name. Proposal: "Kanan la Espadachina" (not applied).
+- 4348 name "Dian Keto, el Señora de la Curación": inconsistent gender (el/Señora). Proposal: "Dian Keto, el Señor de la Curación" (not applied).
+- Names with inconsistent capitalization (e.g. "Espectro de sombra", "Guerrero de montaña", "Zombi guerrero", "El pelo de serpiente"): not touched (game names).
+- 4079 "Kairyu - Shin" (spaces around the hyphen; English "Kairyu-Shin"), 4197 "LaLa Li - oon", not touched.
+- "sólo"/"solo": mixed use in the game. Not touched.
+- 4521 "La Estatua de la Isla Oriental" (English Easter Island = Isla de Pascua): mistranslation of the name, not touched.
+- 4644 name "Reina de los permisos de otoño" (English Queen of Autumn Leaves: "leaves" translated as "permits"): mistranslation of the name, proposal "Reina de las Hojas de Otoño" (not applied).
+- 5546 name "Estrategia de Disturbación" (English Disturbance Strategy): "Disturbación" does not exist in Spanish; only the accent of Estrategia was fixed. Proposal: "Estrategia de Perturbación".
+- 5732 name "Hada del Verano" (English Fairy of the Spring = Hada de la Primavera): mistranslation of the name, not touched.
+- 5767/6095 name "Perro Marron Excelente" / "Cráneo Perro Marron" (English Marron, a proper name): left without accent.
+- 6684 name "Viper Victory XX03" (English Victory Viper XX03; official Spanish "Victory Viper XX03"): words swapped in the name (it also appears in the text of 6637 "Ficha de Opción"). Not applied.
+- 6450 name "Triedad" (English Triage): not touched.
 
-- Dialoghi ids 6978/6986/6992: "Kaiba Corporation" (EN: "Umiuma Corporation", gag dell edizione inglese). Lasciato Kaiba Corporation: confermare?
-- Dialoghi: "duelo/duelos" in minuscolo (127 occorrenze, nel blocco 5644-6980) contro "Duelo" maiuscolo usato dal gioco altrove. Non toccato: uniformare?
+- Dialogue ids 6978/6986/6992: "Kaiba Corporation" (EN: "Umiuma Corporation", a gag of the English edition). Kaiba Corporation left: confirm?
+- Dialogues: "duelo/duelos" in lowercase (127 occurrences, in the block 5644-6980) versus capitalized "Duelo" used elsewhere by the game. Not touched: make uniform?
 
-## Risolte il 2026-10-12 (risposte dell'utente)
-- Nomi di carte rotti: corretti con il nome ufficiale spagnolo (Yugipedia `es_name`): 4358 "Kanan la Señora de las Espadas", 5546 "Estrategia de Disturbio", 6450 "La Selección". 4348 "Dian Keto, el Señor de la Curación" (genere) e 4644 "Reina de las Hojas de Otoño" (nessun nome ufficiale spagnolo; come il francese "Reine des Feuilles d'Automne"). **Lasciati** perche' ufficiali anche cosi': "Isla Oriental", "Hada del Verano", "Viper Victory XX03", "Kairyu - Shin", "LaLa Li - oon", "Marron". Altre 230 differenze di nome tra il gioco e Yugipedia sono traduzioni diverse del gioco, non errori: elenco in `official_names_diff_es.tsv` (non applicate).
-- Kaiba Corporation: confermato (resta cosi').
-- "duelo/Duelo": uniformato a **Duelo/Duelos** (maiuscolo, come il resto del gioco: 1.074 contro 263 occorrenze) nei dialoghi.
-- Rector/Canciller: **Rector** (piu' vicino a "Preside": capo di un istituto scolastico).
-- Tributo/Sacrificio: i testi ufficiali spagnoli dicono "Invocar por Sacrificio" / "Sacrificando": le carte lo usavano gia'; corretti anche "Invocación de Tributo" -> "Invocación por Sacrificio" e "Número de Invocaciones de Tributo" nelle stringhe UI.
-- "Efecto de Blanco" = "Targeting Effect" (effetto che sceglie come bersaglio una carta); "blanco" e' una resa letterale di "target" (il testo ufficiale usa "designar"), ma e' comprensibile e coerente in tutto il gioco: lasciato.
-- Variante opzionale `N`/`NEW`: era una questione del francese (scritta "NEW" -> "NOUVEAU" in 4 texture). In spagnolo `NEW` resta in inglese come nell'originale: nulla da fare.
+## Resolved on 2026-10-12 (user's answers)
+- Broken card names: corrected with the official Spanish name (Yugipedia `es_name`): 4358 "Kanan la Señora de las Espadas", 5546 "Estrategia de Disturbio", 6450 "La Selección". 4348 "Dian Keto, el Señor de la Curación" (gender) and 4644 "Reina de las Hojas de Otoño" (no official Spanish name; like the French "Reine des Feuilles d'Automne"). **Left** because they are official also as they are: "Isla Oriental", "Hada del Verano", "Viper Victory XX03", "Kairyu - Shin", "LaLa Li - oon", "Marron". Another 230 name differences between the game and Yugipedia are different translations of the game, not errors: list in `official_names_diff_es.tsv` (not applied).
+- Kaiba Corporation: confirmed (stays as it is).
+- "duelo/Duelo": made uniform to **Duelo/Duelos** (capitalized, like the rest of the game: 1,074 versus 263 occurrences) in the dialogues.
+- Rector/Canciller: **Rector** (closer to "Preside": head of a school institution).
+- Tributo/Sacrificio: the official Spanish texts say "Invocar por Sacrificio" / "Sacrificando": the cards already used it; also corrected "Invocación de Tributo" -> "Invocación por Sacrificio" and "Número de Invocaciones de Tributo" in the UI strings.
+- "Efecto de Blanco" = "Targeting Effect" (an effect that targets a card); "blanco" is a literal rendering of "target" (the official text uses "designar"), but it is understandable and consistent throughout the game: left.
+- Optional `N`/`NEW` variant: it was a French question (written "NEW" -> "NOUVEAU" in 4 textures). In Spanish `NEW` stays in English as in the original: nothing to do.
 
-## Aggiornamento (2026-10-12, seconda risposta dell'utente)
-- **Tutti i nomi di carta** sono stati allineati al nome spagnolo ufficiale di Yugipedia, anche dove il gioco li traduceva diversamente: 294 nomi (`tools/data/official_names_es.json`, elenco prima/dopo in `official_names_es.tsv`), piu' le citazioni tra virgolette nei testi delle altre carte (83 carte), nelle stringhe dell'interfaccia (suggerimenti di fusione) e nelle frasi dei duelli. Esclusi, perche' Yugipedia ha un refuso o manca il dato: 4348 (resta "Señor"), 4193 "recaudación", 6071 "Resurrección", `Amfibio/Amfibia` (resta Anfibio/Anfibia), 4130 "Herramienta Antigua" (Yugipedia scrive "Herremienta"), le differenze di soli accenti dove Yugipedia toglie accenti giusti (Búho, Cañón, Más Allá, Trío...) e 7 carte senza nome spagnolo su Yugipedia (restano come nel gioco).
-- Nomi "ufficiali" ma strani, lasciati cosi' come li da' Yugipedia: archetipi in maiuscolo (HÉROE Elemental..., RANA ...).
-- **"Efecto de Blanco"**: nei testi ufficiali spagnoli delle carte (Yugipedia `es_text`) l'azione e' "selecciona 1 monstruo..." e il bersaglio e' "ese objetivo"; Yugipedia traduce *Target* con "Objetivo". Non ho trovato un'etichetta ufficiale per la categoria "Targeting Effect": ho scelto **"Efectos con Objetivo"** e ho sostituito "blanco" con "objetivo" in tutte le spiegazioni (anche "objetivo del ataque", "objetivos de ataque" sulle carte 5179 e 5187). "blanco" resta solo nel senso di bersaglio colpito/colore (Cañón de Dharma, Conejo Oscuro, Víbora de llama) e di bianco.
+## Update (2026-10-12, second answer from the user)
+- **All the card names** were aligned with the official Spanish name of Yugipedia, even where the game translated them differently: 294 names (`tools/data/official_names_es.json`, before/after list in `official_names_es.tsv`), plus the quotations in quotation marks in the texts of the other cards (83 cards), in the interface strings (fusion hints) and in the duel sentences. Excluded, because Yugipedia has a typo or the data is missing: 4348 (stays "Señor"), 4193 "recaudación", 6071 "Resurrección", `Amfibio/Amfibia` (stays Anfibio/Anfibia), 4130 "Herramienta Antigua" (Yugipedia writes "Herremienta"), the accent-only differences where Yugipedia removes correct accents (Búho, Cañón, Más Allá, Trío...) and 7 cards without a Spanish name on Yugipedia (they stay as in the game).
+- "Official" but strange names, left as Yugipedia gives them: archetypes in capitals (HÉROE Elemental..., RANA ...).
+- **"Efecto de Blanco"**: in the official Spanish card texts (Yugipedia `es_text`) the action is "selecciona 1 monstruo..." and the target is "ese objetivo"; Yugipedia translates *Target* as "Objetivo". I did not find an official label for the category "Targeting Effect": I chose **"Efectos con Objetivo"** and replaced "blanco" with "objetivo" in all the explanations (also "objetivo del ataque", "objetivos de ataque" on cards 5179 and 5187). "blanco" stays only in the sense of a hit target/color and of white.

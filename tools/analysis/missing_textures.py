@@ -61,9 +61,9 @@ for key, d in sorted(tab.items()):
     for ref in 'fsgi':
         if ref != me and ref in d and d[ref][0] in refs[ref] and 'ui_' in refs[ref][d[ref][0]]:
             h, e = d[me][0], d.get('e', (None,))[0]
-            cat = '=ing' if h == e else ('ok' if h in mine else 'MANCA')
+            cat = '=ing' if h == e else ('ok' if h in mine else 'MISSING')
             cont[cat] += 1
-            if cat == 'MANCA':
+            if cat == 'MISSING':
                 print(ref, key, h)
             break
 print(dict(cont))

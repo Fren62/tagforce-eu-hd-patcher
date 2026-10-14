@@ -4,7 +4,7 @@ covers it (and with which file) or it is missing, and whether in that case the s
 It is needed to decide what to redraw in `modules/en/ui_en`: MikeyMK's pack is made on the US game; European English almost always has
 the same pixels (same hash) and is therefore already covered, but some textures differ (e.g. the duel numbers sheet, the "Single" pill).
 Beware of the opposite case: an Italian texture redrawn in `ui_it` whose hash is IDENTICAL to the English one (text not translated
-by the game) would make Italian appear in the English game: it is reported as ITA-SU-ING.
+by the game) would make Italian appear in the English game: it is reported as ITA-ON-ENG.
 
 usage: python texture_inventory_en.py USRDIR [BASE_INI]
 Writes on stdout a table `archive | member | hash | size | outcome | pack file | languages with the same hash`."""
@@ -56,9 +56,9 @@ for (a, m), d in sorted(tab.items()):
     different = ''.join(sorted(l for l, x in d.items() if x[0] != h))
     f = pack.get(h)
     if f is None:
-        outcome = 'MANCA'
+        outcome = 'MISSING'
     elif f.startswith('ui_it/') and equal:
-        outcome = 'ITA-SU-ING'
+        outcome = 'ITA-ON-ENG'
     elif f.startswith('upscale_extra/'):
         outcome = 'xBRZ'
     elif f.startswith('ui_'):
@@ -69,7 +69,7 @@ for (a, m), d in sorted(tab.items()):
         dim = f'{g.width}x{g.height}'
     except Exception:
         dim = '?'
-    rows.append((rel, k, h, dim, outcome, f or '-', 'uguale in: ' + (equal or '-') + ' | diversa in: ' + (different or '-')))
+    rows.append((rel, k, h, dim, outcome, f or '-', 'same in: ' + (equal or '-') + ' | different in: ' + (different or '-')))
 for r in rows:
     print(' | '.join(r))
 import collections

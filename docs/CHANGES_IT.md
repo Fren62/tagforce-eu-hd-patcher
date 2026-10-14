@@ -1,103 +1,103 @@
-# MODIFICHE PER LA VERSIONE POMODORO MISTICO IN ITALIANO
+# CHANGES OF THE MYSTIC TOMATO VERSION FOR ITALIAN
 
-Documento **completo** di tutto cio' che la "Versione Pomodoro Mistico" cambia per l'italiano: (A) le modifiche **dirette alla ISO**, (B) il **texture pack** (com'e' fatto, cosa contiene, come si compone), (C) le scelte editoriali, (D) cosa e' verificato in gioco e cosa no, (E) come rigenerare tutto.
+**Complete** document of everything the "Mystic Tomato Version" changes for italian: (A) the **direct changes to the ISO**, (B) the **texture pack** (how it is made, what it contains, how it is composed), (C) the editorial choices, (D) what has been verified in game and what has not, (E) how to regenerate everything.
 
-**Questo file e' generato** da `tools/analysis/write_changes_document.py it` a partire dai dati reali: confronto byte per byte tra la ISO originale `PSP/GAME/ULES00600_YuGiOh_GX_TagForce_EUR.iso` e la ISO corretta `..._definitiva.iso` (`document_changes.py`) e scansione del pack (`document_pack.py`). Gli elenchi riga per riga stanno in `docs/changes_it/*.csv` (separatore `;`, UTF-8 con BOM, a capo come `⏎`): sono la **lista esatta** di ogni cambiamento. Rigenera tutto dopo ogni modifica.
+**This file is generated** by `tools/analysis/write_changes_document.py it` from the real data: byte-by-byte comparison between the original ISO `PSP/GAME/ULES00600_YuGiOh_GX_TagForce_EUR.iso` and the corrected ISO `..._definitiva.iso` (`document_changes.py`) and a scan of the pack (`document_pack.py`). The row-by-row lists are in `docs/changes_it/*.csv` (`;` separator, UTF-8 with BOM, line breaks as `⏎`): they are the **exact list** of every change. Regenerate everything after each modification.
 
-Per il metodo generale e per le altre lingue: `docs/NEW_LANGUAGE_GUIDE.md`; dettagli tecnici degli script: `TUTORIAL.md`; decisioni: `docs/EDITORIAL_CHOICES.md`; texture neutre/specifiche: `docs/TEXTURE_INVENTORY.md`.
+For the general method and for the other languages: `docs/NEW_LANGUAGE_GUIDE.md`; technical details of the scripts: `docs/TUTORIAL.md`; decisions: `docs/EDITORIAL_CHOICES.md`; neutral/specific textures: `docs/TEXTURE_INVENTORY.md`.
 
-## Indice
-- A. Modifiche alla ISO: A1 panoramica · A2 carte · A3 dialoghi · A4 frasi dei duelli · A5 stringhe dell'interfaccia · A6 etichetta Magia/Trappola · A7 file toccati e dettagli tecnici · A8 cosa non si puo' cambiare
-- B. Texture pack: B1 provenienza e struttura · B2 immagini delle carte · B3 interfaccia HD (`ui_it`) · B4 foglio numeri (`card_icon03`) · B5 targa del titolo · B6 textures.ini e composizione · B7 installazione
-- C. Scelte editoriali · D. Verifica in gioco · E. Come rigenerare · F. Limiti e punti aperti
+## Index
+- A. Changes to the ISO: A1 overview · A2 cards · A3 dialogues · A4 duel sentences · A5 interface strings · A6 Spell/Trap label · A7 touched files and technical details · A8 what cannot be changed
+- B. Texture pack: B1 origin and structure · B2 card images · B3 HD interface (`ui_it`) · B4 number sheet (`card_icon03`) · B5 title plate · B6 textures.ini and composition · B7 installation
+- C. Editorial choices · D. In-game verification · E. How to regenerate · F. Limits and open points
 
 ---
 
-# A. MODIFICHE ALLA ISO
+# A. CHANGES TO THE ISO
 
-## A1. Panoramica
+## A1. Overview
 
-La ISO originale **non viene mai modificata**. `tools/corrections/apply_to_iso.py ISO_ORIG ISO_OUT [lingue]` ne crea una copia in cui alcuni archivi `.ehp` sono riscritti. Se un archivio cresce (testo piu' lungo) viene **rimesso in fondo alla ISO** in un nuovo settore e il suo voce nella directory ISO9660 viene riassegnata (`pycdlib`); la ISO `_definitiva` pesa per questo ~909 MB (l'originale ~761 MB). **Lanciarlo sempre senza elenco di lingue (o con tutte)**: con una lingua sola sovrascrive le altre.
+The original ISO is **never modified**. `tools/corrections/apply_to_iso.py ISO_ORIG ISO_OUT [languages]` creates a copy in which some `.ehp` archives are rewritten. If an archive grows (longer text) it is **put again at the end of the ISO** in a new sector and its entry in the ISO9660 directory is reassigned (`pycdlib`); for this reason the `_definitiva` ISO weighs ~909 MB (the original ~761 MB). **Always run it without a list of languages (or with all of them)**: with a single language it overwrites the others.
 
-| Cosa | Quantita' (derivata dal confronto ISO) | Dove sta il dato | File CSV |
+| What | Quantity (derived from the ISO comparison) | Where the data lives | CSV file |
 |---|---|---|---|
-| Carte con testo cambiato (nome e/o descrizione) | 181 carte (182 campi) | `tools/data/card_corrections.json` da `correzioni/rules_it.py` | cards.csv |
-| Righe di dialogo della storia | 2488 righe | `tools/data/dialogue_touchups_it.json` (+ base) | dialogues.csv |
-| Frasi dei duellanti nei duelli | 33 frasi uniche (70 voci in tutti gli archivi) | `tools/data/duel_line_corrections_it.json` | duel_lines.csv |
-| Stringhe dell'interfaccia (aiuti, schede, record, tutorial, menu...) | 298 stringhe uniche (571 voci, 46 archivi) | `correzioni/string_rules_it.py` + `dati/ui_texts.json` | ui_strings.csv |
-| Immagini sostituite dentro la ISO | 6 (etichetta [CARTA MAGIA/TRAPPOLA] della carta grande) | `apply_to_iso.py` (copia `card_spell_trap.gim` della lingua) | iso_images.csv |
-| File della ISO toccati (archivi `.ehp`) | 142 | - | touched_files.csv |
-| Altre differenze tecniche (offset ricalcolati) | 90 | - | other.csv |
+| Cards with changed text (name and/or description) | 181 cards (182 fields) | `tools/data/card_corrections.json` from `tools/corrections/rules_it.py` | cards.csv |
+| Story dialogue lines | 2488 lines | `tools/data/dialogue_touchups_it.json` (+ base) | dialogues.csv |
+| Duelist sentences in duels | 33 unique sentences (70 entries in all the archives) | `tools/data/duel_line_corrections_it.json` | duel_lines.csv |
+| Interface strings (help, cards, records, tutorial, menus...) | 298 unique strings (571 entries, 46 archives) | `tools/corrections/string_rules_it.py` + `tools/data/ui_texts.json` | ui_strings.csv |
+| Images replaced inside the ISO | 6 ([SPELL CARD/TRAP CARD] label of the large card) | `apply_to_iso.py` (copies the language's `card_spell_trap.gim`) | iso_images.csv |
+| ISO files touched (`.ehp` archives) | 142 | - | touched_files.csv |
+| Other technical differences (recomputed offsets) | 90 | - | other.csv |
 
-## A2. Testi delle carte
+## A2. Card texts
 
-Archivio: `PSP_GAME/USRDIR/duelsys/cardinfo_ita.ehp` (tabelle `CARD_Name_*`, `CARD_Desc_*`, `CARD_Indx_*`). **181 carte** hanno nome e/o descrizione modificati. Si correggono **solo errori oggettivi** (refusi, accenti, apostrofi, spazi, maiuscole incoerenti, concordanze, plurali fissi, residui di altre lingue); nomi ufficiali e terminologia del gioco non si toccano.
+Archive: `PSP_GAME/USRDIR/duelsys/cardinfo_ita.ehp` (tables `CARD_Name_*`, `CARD_Desc_*`, `CARD_Indx_*`). **181 cards** have a modified name and/or description. Only **objective errors** are corrected (typos, accents, apostrophes, spaces, inconsistent capitalization, agreement, fixed plurals, leftovers from other languages); official names and the game's terminology are not touched.
 
-Come: ogni carta e' stata letta (it: 2.479 testi, uno per uno; fr: audit contro database ufficiale + lettura). Regole in `tools/corrections/rules_it.py`: **44 regole globali** (regex applicate a nomi e descrizioni di tutte le carte) e **7 correzioni per carta** (`PER_CARTA`: id, campo, vecchio, nuovo, motivo; il vecchio testo deve esistere esattamente). `generate_card_corrections.py it CARDINFO` (fonde il risultato nel `card_corrections.json` esistente, idempotente) produce il json; `apply_to_iso` lo scrive nella ISO; le immagini HD delle carte toccate si rigenerano (sezione B2).
+How: every card was read (it: 2,479 texts, one by one; fr: audit against the official database + reading). Rules in `tools/corrections/rules_it.py`: **44 global rules** (regexes applied to the names and descriptions of all the cards) and **7 per-card corrections** (`PER_CARD`: id, field, old, new, reason; the old text must exist exactly). `generate_card_corrections.py it CARDINFO` (merges the result into the existing `card_corrections.json`, idempotent) produces the json; `apply_to_iso` writes it into the ISO; the HD images of the touched cards are regenerated (section B2).
 
-### Regole globali (tutte)
-| modello (regex) | sostituzione | motivo |
+### Global rules (all)
+| pattern (regex) | replacement | reason |
 |---|---|---|
-| \bLife Point\b | Life Points | plurale di Life Points (altrove sempre Life Points) |
-| \bAnnello\b | Anello | refuso |
-| \bavvesario\b | avversario | refuso |
-| \bin seguita\b | in seguito | refuso |
-| \bdopo di chè\b | dopo di che | accento errato |
-| \bquesto carta\b | questa carta | concordanza |
-| \bUn immagine\b | Un'immagine | apostrofo mancante |
-| \bE' composto\b | È composto | accento |
-| \bpuo\b | può | accento mancante |
-| \bne dichiarare\b | né dichiarare | accento mancante |
-| \bMain phase\b | Main Phase | maiuscola incoerente |
-| \bdella Damage Step\b | del Damage Step | genere: il Damage Step |
-| \b[Tt]ipo-(Demone\|Fata\|Guerriero)\b | Tipo \1 | trattino di troppo |
-| \btipo Pyro\b | Tipo Pyro | maiuscola incoerente |
-| \bSegna Opzione\b | Segna-Opzione | nome del Segna-Mostro |
-| \bTramite Evocazione\b | tramite Evocazione | maiuscola errata |
-| \bevocata tramite\b | Evocata tramite | maiuscola incoerente (Evocata) |
-| \bX (\d+) punti\b | x \1 punti | moltiplicatore (altrove x) |
-| \bX (\d+)\b | x \1 | moltiplicatore (altrove x) |
-| \bMagia,Trappola\b | Magia, Trappola | spazio mancante |
-| Cimitero,eccetto | Cimitero, eccetto | spazio mancante |
-| \bsolo I Mostri\b | solo i Mostri | maiuscola errata |
-| \baumenta I tuoi\b | aumenta i tuoi | maiuscola errata |
-| \bRimuovi da gioco\b | Rimuovi dal gioco | articolo mancante |
-| \bCarte Magie e Trappola\b | Carte Magia e Trappola | Magia e' invariabile |
-| Trappola , | Trappola, | spazio prima della virgola |
-| Magia : | Magia: | spazio prima dei due punti |
-| Trappola : | Trappola: | spazio prima dei due punti |
-| Effetto Mostro : | Effetto Mostro: | spazio prima dei due punti |
-| \bsi aggiudica il Partita\b | si aggiudica la Partita | genere |
-| \bvengono cambiata in\b | vengono cambiati in | concordanza |
-| \bquante possibile\b | quante possibili | concordanza |
-| \bsi sono 3\b | ci sono 3 | refuso |
-| \bdi questa carte\b | di questa carta | refuso |
-| \bpuoi scegli\b | puoi scegliere | forma verbale |
-| \bcome tributo\b | come Tributo | maiuscola incoerente (Tributo) |
-| \binferiore del DEF\b | inferiore al DEF | preposizione |
-| \bHa un indole\b | Ha un'indole | apostrofo mancante |
-| \bsul tuo terreno\b | sul tuo Terreno | maiuscola incoerente (Terreno) |
-| (?<![A-Za-zÀ-ÿ])E' (?=[a-zà-ÿ]) | È  | accento: E' -> È |
-| L' (?=[\"A-ZÀ-Þ]) | L' | spazio dopo l'apostrofo |
-| " ," | ", " | spazio dopo la virgola |
-| \(Mostro,Magia | (Mostro, Magia | spazio dopo la virgola |
-| battaglia\.Distruggi | battaglia. Distruggi | spazio dopo il punto |
+| \bLife Point\b | Life Points | plural of Life Points (elsewhere always Life Points) |
+| \bAnnello\b | Anello | typo |
+| \bavvesario\b | avversario | typo |
+| \bin seguita\b | in seguito | typo |
+| \bdopo di chè\b | dopo di che | wrong accent |
+| \bquesto carta\b | questa carta | agreement |
+| \bUn immagine\b | Un'immagine | missing apostrophe |
+| \bE' composto\b | È composto | accent |
+| \bpuo\b | può | missing accent |
+| \bne dichiarare\b | né dichiarare | missing accent |
+| \bMain phase\b | Main Phase | inconsistent capitalization |
+| \bdella Damage Step\b | del Damage Step | gender: il Damage Step |
+| \b[Tt]ipo-(Demone\|Fata\|Guerriero)\b | Tipo \1 | extra hyphen |
+| \btipo Pyro\b | Tipo Pyro | inconsistent capitalization |
+| \bSegna Opzione\b | Segna-Opzione | name of the Monster Token |
+| \bTramite Evocazione\b | tramite Evocazione | wrong capital letter |
+| \bevocata tramite\b | Evocata tramite | inconsistent capitalization (Evocata) |
+| \bX (\d+) punti\b | x \1 punti | multiplier (elsewhere x) |
+| \bX (\d+)\b | x \1 | multiplier (elsewhere x) |
+| \bMagia,Trappola\b | Magia, Trappola | missing space |
+| Cimitero,eccetto | Cimitero, eccetto | missing space |
+| \bsolo I Mostri\b | solo i Mostri | wrong capital letter |
+| \baumenta I tuoi\b | aumenta i tuoi | wrong capital letter |
+| \bRimuovi da gioco\b | Rimuovi dal gioco | missing article |
+| \bCarte Magie e Trappola\b | Carte Magia e Trappola | Magia is invariable |
+| Trappola , | Trappola, | space before the comma |
+| Magia : | Magia: | space before the colon |
+| Trappola : | Trappola: | space before the colon |
+| Effetto Mostro : | Effetto Mostro: | space before the colon |
+| \bsi aggiudica il Partita\b | si aggiudica la Partita | gender |
+| \bvengono cambiata in\b | vengono cambiati in | agreement |
+| \bquante possibile\b | quante possibili | agreement |
+| \bsi sono 3\b | ci sono 3 | typo |
+| \bdi questa carte\b | di questa carta | typo |
+| \bpuoi scegli\b | puoi scegliere | verb form |
+| \bcome tributo\b | come Tributo | inconsistent capitalization (Tributo) |
+| \binferiore del DEF\b | inferiore al DEF | preposition |
+| \bHa un indole\b | Ha un'indole | missing apostrophe |
+| \bsul tuo terreno\b | sul tuo Terreno | inconsistent capitalization (Terreno) |
+| (?<![A-Za-zÀ-ÿ])E' (?=[a-zà-ÿ]) | È  | accent: E' -> È |
+| L' (?=[\"A-ZÀ-Þ]) | L' | space after the apostrophe |
+| " ," | ", " | space after the comma |
+| \(Mostro,Magia | (Mostro, Magia | space after the comma |
+| battaglia\.Distruggi | battaglia. Distruggi | space after the full stop |
 
-### Correzioni per carta (tutte)
-| id | campo | vecchio | nuovo | motivo |
+### Per-card corrections (all)
+| id | field | old | new | reason |
 |---|---|---|---|---|
-| 6057 | desc | tutti le Carte | tutte le Carte | concordanza |
-| 6173 | desc | E' composto | È composto | accento |
-| 6248 | desc | da in Posizione d'Attacco a scoperta in Posizione di Difesa | da Posizione d'Attacco a scoperta in Posizione di Difesa | preposizione di troppo |
-| 6659 | desc | viene distrutto in seguito ad una battaglia e mandata al Cimitero | viene distrutto in seguito ad una battaglia e mandato al Cimitero | concordanza |
-| 6706 | desc | effetto di "Victory Viper XX3" | effetto di "Victory Viper XX03" | nome della carta |
-| 6657 | desc | Magia & Trappola , questa | Magia & Trappola, questa | spazio prima della virgola |
-| 6563 | desc | Carte Magie e Trappola non possono | Le Carte Magia e Trappola non possono | articolo e plurale |
+| 6057 | desc | tutti le Carte | tutte le Carte | agreement |
+| 6173 | desc | E' composto | È composto | accent |
+| 6248 | desc | da in Posizione d'Attacco a scoperta in Posizione di Difesa | da Posizione d'Attacco a scoperta in Posizione di Difesa | extra preposition |
+| 6659 | desc | viene distrutto in seguito ad una battaglia e mandata al Cimitero | viene distrutto in seguito ad una battaglia e mandato al Cimitero | agreement |
+| 6706 | desc | effetto di "Victory Viper XX3" | effetto di "Victory Viper XX03" | card name |
+| 6657 | desc | Magia & Trappola , questa | Magia & Trappola, questa | space before the comma |
+| 6563 | desc | Carte Magie e Trappola non possono | Le Carte Magia e Trappola non possono | article and plural |
 
-### Elenco completo delle carte cambiate
-**Confronto completo originale -> nuovo con le parole cambiate evidenziate: `docs/changes_it/cards_diff.md`** (tutte le 182 voci). Dati grezzi: `docs/changes_it/cards.csv`. Prime 40 righe:
+### Complete list of changed cards
+**Complete original -> new comparison with the changed words highlighted: `docs/changes_it/cards_diff.md`** (all 182 entries). Raw data: `docs/changes_it/cards.csv`. First 40 rows:
 
-| id | nome originale | campo | originale | nuovo |
+| id | original name | field | original | new |
 |---|---|---|---|---|
 | 4029 | Verme Bestiale | desc | Questa carta ritorna nella tua mano alla fine del turno. | Questa carta scoperta sul Terreno ritorna nella mano del proprietario durante l'End Phase del tuo turno. |
 | 4167 | Guerriero-M #2 | desc | Guerriero-M #2 è specializzato in attacchi combinati. E' equipaggiato con una resistente armatura rivestita di un campo magnetico. | Guerriero-M #2 è specializzato in attacchi combinati. È equipaggiato con una resistente armatura rivestita di un campo magnetico. |
@@ -140,16 +140,16 @@ Come: ogni carta e' stata letta (it: 2.479 testi, uno per uno; fr: audit contro 
 | 5174 | Capovolgere il Tavolo | desc | Puoi usare l'effetto di questa Carta solo se nella tua parte di Campo è presente un Mostro scoperto il cui nome comprenda la parola "sventato/a". Distruggi tutte le Carte presenti nella tua parte di Campo a eccezione di questa. Scegli e distruggi un numero di Carte dell'avversario pari alle tue Carte distrutte con quest'effetto. Non puoi mandare in Campo un Mostro con un'evocazione normale o posizionarne uno nel turno in cui hai usato quest'effetto. | Puoi usare l'effetto di questa Carta solo se sul tuo Terreno è presente un Mostro scoperto il cui nome comprenda la parola "sventato/a". Distruggi tutte le Carte presenti sul tuo Terreno a eccezione di questa. Scegli e distruggi un numero di Carte dell'avversario pari alle tue Carte distrutte con quest'effetto. Non puoi mandare sul Terreno un Mostro con un'evocazione normale o posizionarne uno nel turno in cui hai usato quest'effetto. |
 | 5175 | Lithmus, Spadaccino del Destino | desc | Questo Mostro può essere Evocato solo tramite Evocazione Rituale utilizzando la Carta Magia Rituale "Rituale di Lithmus". Questa Carta non viene distrutta in conseguenza di una battaglia e non subisce gli effetti delle Carte Trappola. Fin quando in Campo è presente una Carta Trappola scoperta, i valori ATK e DEF di questa Carta sono pari a 3000. | Questo Mostro può essere Evocato solo tramite Evocazione Rituale utilizzando la Carta Magia Rituale "Rituale di Lithmus". Questa Carta non viene distrutta in conseguenza di una battaglia e non subisce gli effetti delle Carte Trappola. Fin quando sul Terreno è presente una Carta Trappola scoperta, i valori ATK e DEF di questa Carta sono pari a 3000. |
 
-(... altre 142 righe nel CSV)
+(... 142 more rows in the CSV)
 
-## A3. Dialoghi della storia
+## A3. Story dialogues
 
-Archivi: `script/stNN_<scena>_i.ehp`, ogni scena e' una coppia di membri `...Ii.bin` (offset in caratteri UTF-16) e `...Li.bin` (stringhe UTF-16LE chiuse da NUL, alcune compresse in gzip). **2488 righe** cambiate (comprese quelle che **ereditano** la correzione perche' hanno lo stesso testo originale e lo stesso giapponese di una riga corretta).
+Archives: `script/stNN_<scene>_i.ehp`, every scene is a pair of members `...Ii.bin` (offsets in UTF-16 characters) and `...Li.bin` (UTF-16LE strings terminated by NUL, some gzip-compressed). **2488 lines** changed (including those that **inherit** the correction because they have the same original text and the same Japanese as a corrected line).
 
-Flusso: lettura riga per riga confrontata con inglese e giapponese -> ritocchi in `tools/data/dialogue_touchups_it.json` (`esatte` e `parti`) -> `build_dialogues.py it` -> `dialogue_corrections_it.json` -> `apply_to_iso.py`. Regole automatiche di impaginazione in `build_dialogues.py`: spazio dopo i segnaposto `《...》`, tre puntini seguiti da maiuscola (`...Ciao` -> `... Ciao`), base `dialogue_corrections_it_base.json` (~1.380 proposte della prima revisione). Vincoli del box: ~46 caratteri per riga, max 3 righe (un segnaposto vale ~6 caratteri): `apply_to_iso` segnala le righe che potrebbero non starci.
+Flow: line-by-line reading compared with English and Japanese -> touch-ups in `tools/data/dialogue_touchups_it.json` (`exact` and `parts`) -> `build_dialogues.py it` -> `dialogue_corrections_it.json` -> `apply_to_iso.py`. Automatic layout rules in `build_dialogues.py`: space after the `《...》` placeholders, three dots followed by a capital (`...Ciao` -> `... Ciao`), base `dialogue_corrections_it_base.json` (~1,380 proposals of the first review). Box constraints: ~46 characters per line, max 3 lines (a placeholder counts ~6 characters): `apply_to_iso` reports the lines that might not fit.
 
-### Ritocchi di rilettura: `esatte` (6) — frase intera originale -> frase nuova
-| originale | nuovo |
+### Re-reading touch-ups: `exact` (6) — whole original sentence -> new sentence
+| original | new |
 |---|---|
 | Not you too, 《C003_3》. | Anche tu no, 《C003_3》. |
 | Huh? E tu chi sei?⏎Oh sei il nuovo arrivato.. | Eh? E tu chi sei?⏎Oh, sei il nuovo arrivato... |
@@ -158,8 +158,8 @@ Flusso: lettura riga per riga confrontata con inglese e giapponese -> ritocchi i
 | Ecco, usa questo! | Ecco, usa questo vestito da cameriera! |
 | Oddio, sto sbavando un po'... | Beh, non sono poi così bravo... |
 
-### Ritocchi di rilettura: `parti` (74) — sostituzioni di testo applicate a ogni riga (in ordine)
-| vecchio | nuovo |
+### Re-reading touch-ups: `parts` (74) — text replacements applied to every line (in order)
+| old | new |
 |---|---|
 | inslutarmi | insultarmi |
 | Uh. Gran folla. | Uh. Che folla. |
@@ -236,10 +236,10 @@ Flusso: lettura riga per riga confrontata con inglese e giapponese -> ritocchi i
 | Cancelliere | Preside |
 | cancelliere | preside |
 
-### Elenco completo delle righe
-**Confronto completo originale -> nuovo (con inglese e giapponese): `docs/changes_it/dialogues_diff.md`** (tutte le 2488 righe). Dati grezzi: `docs/changes_it/dialogues.csv`. Prime 30:
+### Complete list of lines
+**Complete original -> new comparison (with English and Japanese): `docs/changes_it/dialogues_diff.md`** (all 2488 lines). Raw data: `docs/changes_it/dialogues.csv`. First 30:
 
-| id | originale | nuovo | inglese |
+| id | original | new | English |
 |---|---|---|---|
 | st01_t01/ImpChrMsg#23 | Velo Nocturno | Velo Notturno | Nightshroud |
 | st01_t01/ImpChrMsg#57 | Giocatore　d'azzardo | Giocatore d'azzardo | Gambler |
@@ -272,15 +272,15 @@ Flusso: lettura riga per riga confrontata con inglese e giapponese -> ritocchi i
 | st01_t01/ImpMapMsg#27 | Alloggi 203 | Dormitorio Slifer Rosso - Stanza 203 | Slifer Red Dorm - Room 203 |
 | st01_t01/ImpMapMsg#28 | Alloggi 203 | Stanza 203 | Room 203 |
 
-(... altre 2458 righe nel CSV)
+(... 2458 more rows in the CSV)
 
-## A4. Frasi dei duellanti nei duelli
+## A4. Duelist sentences in duels
 
-Tabelle `chr_wordstbl_i.bin` e `02chr_wordstbl_...` dentro ~72 archivi `duel/cutin_*.ehp` (e `zakov*`). Le frasi uniche sono ~1.800: tutte rilette. **33 frasi cambiate** (70 voci). Dati: `esatte` (7) e `parti` (27) in `duel_line_corrections_it.json`. I file `*-ptrs.txt` degli archivi dei personaggi contengono offset assoluti: se una tabella cresce vanno ricalcolati (`rimappa_puntatori`), altrimenti il duello va in crash.
+Tables `chr_wordstbl_i.bin` and `02chr_wordstbl_...` inside ~72 `duel/cutin_*.ehp` archives (and `zakov*`). The unique sentences are ~1,800: all re-read. **33 sentences changed** (70 entries). Data: `exact` (7) and `parts` (27) in `duel_line_corrections_it.json`. The `*-ptrs.txt` files of the character archives contain absolute offsets: if a table grows they must be recomputed (`remap_pointers`), otherwise the duel crashes.
 
-Confronto con parole evidenziate: `docs/changes_it/duel_lines_diff.md`.
+Comparison with highlighted words: `docs/changes_it/duel_lines_diff.md`.
 
-| originale | nuovo | voci | esempi di archivio |
+| original | new | entries | archive examples |
 |---|---|---|---|
 | Una rinascita necessita delle⏎fiamme dell'estizione!⏎Prendi questo! | Una rinascita necessita delle⏎fiamme dell'estinzione!⏎Prendi questo! | 1 | cutin_amunael01.ehp |
 | Uff, ho perso.!⏎⏎Ma mi sono divertito!⏎Giochiamo ancora in futuro! | Uff, ho perso!⏎⏎Ma mi sono divertito!⏎Giochiamo ancora in futuro! | 1 | cutin_bmgirl01.ehp |
@@ -316,12 +316,12 @@ Confronto con parole evidenziate: `docs/changes_it/duel_lines_diff.md`.
 | Evocon un mostro per Fusione. | Evoco un mostro per Fusione. | 1 | zakov81.ehp |
 | Attivo unan Magia Equipaggiamento! | Attivo una Magia Equipaggiamento! | 1 | zakov82.ehp |
 
-## A5. Stringhe lunghe e corte dell'interfaccia
+## A5. Long and short interface strings
 
-Tabelle `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (formato `(n, 12, 12+4n)` + offset + UTF-16) in 46 archivi (la stessa tabella e' copiata in piu' archivi, es. `field/always_*_ita.ehp` x6). **298 stringhe uniche cambiate**. Regole: `tools/corrections/string_rules_it.py` — **159 voci `STRINGHE`** (archivio, membro, indice 0-based, [(vecchio, nuovo)], motivo), **55 `GLOBALI`** (regex/callable, applicate dopo le STRINGHE) su **15 tabelle** (`TABELLE`); piu' 1 correzioni puntuali in `tools/data/ui_texts.json` (scrittura sul posto, testo piu' corto o uguale).
+Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12, 12+4n)` + offsets + UTF-16) in 46 archives (the same table is copied into several archives, e.g. `field/always_*_ita.ehp` x6). **298 unique strings changed**. Rules: `tools/corrections/string_rules_it.py` — **159 `STRINGS` entries** (archive, member, 0-based index, [(old, new)], reason), **55 `GLOBALS`** (regex/callable, applied after the STRINGS) on **15 tables** (`TABLES`); plus 1 targeted corrections in `tools/data/ui_texts.json` (in-place writes, text shorter than or equal to the original).
 
-### Per membro (stringhe uniche cambiate)
-| membro | stringhe |
+### By member (unique strings changed)
+| member | strings |
 |---|---|
 | strTbl_i.bin | 124 |
 | help_strtbl_contents_duel_i.bin | 49 |
@@ -333,237 +333,237 @@ Tabelle `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (formato `(n, 
 | help_strtbl_label.bin | 2 |
 | help_strtbl_label_i.bin | 2 |
 
-### Regole globali (tutte)
-| modello | sostituzione | motivo |
+### Global rules (all)
+| pattern | replacement | reason |
 |---|---|---|
-| (?<=[A-Za-zà-ù.,;!?])  +(?=[A-Za-zÀ-ù]) |   | spazi doppi |
-| ’ | ' | apostrofo tipografico -> semplice |
-| \bE'(?=[A-Za-zà-ù]) | È  | E' al posto di È |
-| \bE'  | È  | E' al posto di È |
-| (?m)(?:^\|(?<=[.!?] ))E (?=(?:riuscita\|stato\|sempre\|molto)\b) | È  | E senza accento |
+| (?<=[A-Za-zà-ù.,;!?])  +(?=[A-Za-zÀ-ù]) |   | double spaces |
+| ’ | ' | typographic apostrophe -> plain |
+| \bE'(?=[A-Za-zà-ù]) | È  | E' instead of È |
+| \bE'  | È  | E' instead of È |
+| (?m)(?:^\|(?<=[.!?] ))E (?=(?:riuscita\|stato\|sempre\|molto)\b) | È  | E without accent |
 | chè\b | ché | perché, finché, nonché... |
 | \bpò\b | po' | un po' |
-| \bfà\b | fa | accento |
-| \bsà\b | sa | accento |
-| \bstà\b | sta | accento |
-| \bnè\b | né | accento |
-| \bsè\b | sé | accento |
-| \bcosi\b | così | accento |
-| \bpiu\b | più | accento |
-| \bverrano\b | verranno | refuso |
-| \bdallla\b | dalla | refuso |
-| \bpiù più\b | più | ripetizione |
-| \bsanwich\b | sandwich | refuso |
-| \bSndwich\b | Sandwich | refuso |
-| \bsoya\b | soia | refuso |
-| sudentesca | studentesca | refuso |
-| choccolato | cioccolato | refuso |
-| scimpanzè | scimpanzé | accento |
-| \b(?!(?:po\|va\|sta\|fa\|di\|da\|stai\|dai)\b)([A-Za-zÀ-ÿ]+)' (?=[A-Za-zÀ-ÿ]) | \1' | spazio dopo l'apostrofo |
-| (?<=[A-Za-zà-ù]) '(?=[A-Za-z]) | ' | spazio prima dell'apostrofo |
-| (?<=[a-zà-ù,;] )I (?=[a-zà-ù]) | i  | articolo con la I maiuscola |
-| \b([Ii]\|[Dd]ei\|[Nn]ei\|[Aa]i\|[Ss]ui\|[Dd]ai\|[Pp]er i\|[Tt]ra i) Duello\b | \1 Duelli | plurale |
-| \bDuello Singoli\b | Duelli Singoli | plurale |
-| \b(\d) Duello\b | \1 Duelli | plurale |
-| affrontare Duello in cui | affrontare Duelli in cui | plurale |
-| \bMostri Fusione\b | Mostri da Fusione | nome del tipo |
-| \bMostri Rituale\b | Mostri Rituali | plurale |
-| \bGli Mostri\b | I Mostri | articolo |
-| (?m)^Magia (Normali\|Continuate\|Equipaggiamento\|Rituale\|Rituali\|Terreno\|da Terreno\|Rapida\|Rapide)(?=\r?$) | (funzione) _spell | elenco dei tipi di Magia |
-| (?m)^Trappola (Normali\|Continue)(?=\r?$) | Trappole \1 | elenco dei tipi di Trappola |
-| \bsulle carta\b | sulle carte | plurale |
-| ●Segna-Monstro | ●Segna-Mostro | nome |
-| I Segna dei Mostri | I Segna-Mostro | nome |
-| i Segna non | i Segna-Mostro non | nome |
-| Un Gettone equivale | Un Segna-Mostro equivale | nome |
-| Gettoni Evocati | Segna-Mostro Evocati | nome |
-| ●Guarda delle Carte | ●Guardare le Carte | titolo |
-| ●Activar | ●Attivazione | refuso |
-| \bin terreno\b | in Terreno | maiuscola |
-| \bterreno di Duello\b | Terreno di Duello | maiuscola |
-| Carta da terreno | Carta da Terreno | maiuscola |
-| \bsuo Effetti Scoperta\b | suo Effetto Scoperta | singolare |
-| \bl'Effetti Scoperta\b | l'Effetto Scoperta | singolare |
-| \bQuesta opzione di permette\b | Questa opzione ti permette | refuso |
-| \bcon ad un\b | con un | refuso |
-| \b(di\|a\|da\|in) Slifer Red\b | (funzione) f | dormitorio |
-| \bSlifer Red\b | Slifer Rosso | nome del dormitorio |
-| \b(di\|a\|da\|in) Obelisk Blue\b | (funzione) f | dormitorio |
-| \bObelisk Blue\b | Obelisk Blu | nome del dormitorio |
-| \bRa Yellow\b | Ra Giallo | nome del dormitorio |
+| \bfà\b | fa | accent |
+| \bsà\b | sa | accent |
+| \bstà\b | sta | accent |
+| \bnè\b | né | accent |
+| \bsè\b | sé | accent |
+| \bcosi\b | così | accent |
+| \bpiu\b | più | accent |
+| \bverrano\b | verranno | typo |
+| \bdallla\b | dalla | typo |
+| \bpiù più\b | più | repetition |
+| \bsanwich\b | sandwich | typo |
+| \bSndwich\b | Sandwich | typo |
+| \bsoya\b | soia | typo |
+| sudentesca | studentesca | typo |
+| choccolato | cioccolato | typo |
+| scimpanzè | scimpanzé | accent |
+| \b(?!(?:po\|va\|sta\|fa\|di\|da\|stai\|dai)\b)([A-Za-zÀ-ÿ]+)' (?=[A-Za-zÀ-ÿ]) | \1' | space after the apostrophe |
+| (?<=[A-Za-zà-ù]) '(?=[A-Za-z]) | ' | space before the apostrophe |
+| (?<=[a-zà-ù,;] )I (?=[a-zà-ù]) | i  | article with capital I |
+| \b([Ii]\|[Dd]ei\|[Nn]ei\|[Aa]i\|[Ss]ui\|[Dd]ai\|[Pp]er i\|[Tt]ra i) Duello\b | \1 Duelli | plural |
+| \bDuello Singoli\b | Duelli Singoli | plural |
+| \b(\d) Duello\b | \1 Duelli | plural |
+| affrontare Duello in cui | affrontare Duelli in cui | plural |
+| \bMostri Fusione\b | Mostri da Fusione | type name |
+| \bMostri Rituale\b | Mostri Rituali | plural |
+| \bGli Mostri\b | I Mostri | article |
+| (?m)^Magia (Normali\|Continuate\|Equipaggiamento\|Rituale\|Rituali\|Terreno\|da Terreno\|Rapida\|Rapide)(?=\r?$) | (function) _spell | list of Spell types |
+| (?m)^Trappola (Normali\|Continue)(?=\r?$) | Trappole \1 | list of Trap types |
+| \bsulle carta\b | sulle carte | plural |
+| ●Segna-Monstro | ●Segna-Mostro | name |
+| I Segna dei Mostri | I Segna-Mostro | name |
+| i Segna non | i Segna-Mostro non | name |
+| Un Gettone equivale | Un Segna-Mostro equivale | name |
+| Gettoni Evocati | Segna-Mostro Evocati | name |
+| ●Guarda delle Carte | ●Guardare le Carte | title |
+| ●Activar | ●Attivazione | typo |
+| \bin terreno\b | in Terreno | capital letter |
+| \bterreno di Duello\b | Terreno di Duello | capital letter |
+| Carta da terreno | Carta da Terreno | capital letter |
+| \bsuo Effetti Scoperta\b | suo Effetto Scoperta | singular |
+| \bl'Effetti Scoperta\b | l'Effetto Scoperta | singular |
+| \bQuesta opzione di permette\b | Questa opzione ti permette | typo |
+| \bcon ad un\b | con un | typo |
+| \b(di\|a\|da\|in) Slifer Red\b | (function) f | dormitory |
+| \bSlifer Red\b | Slifer Rosso | dormitory name |
+| \b(di\|a\|da\|in) Obelisk Blue\b | (function) f | dormitory |
+| \bObelisk Blue\b | Obelisk Blu | dormitory name |
+| \bRa Yellow\b | Ra Giallo | dormitory name |
 
-### Voci STRINGHE (tutte): dove e perche'
-| archivio | membro | indice | cambiamenti | motivo |
+### STRINGS entries (all): where and why
+| archive | member | index | changes | reason |
 |---|---|---|---|---|
-| database/charalist.ehp | strTbl_i.bin | 12 | 1 sostituzione/i | terza persona |
-| database/charalist.ehp | strTbl_i.bin | 13 | 4 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 14 | 3 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 15 | 1 sostituzione/i | refuso |
-| database/charalist.ehp | strTbl_i.bin | 17 | 3 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 18 | 3 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 20 | 6 sostituzione/i | refusi e virgolette |
-| database/charalist.ehp | strTbl_i.bin | 21 | 1 sostituzione/i | come nei dialoghi: direttore del dormitorio |
-| database/charalist.ehp | strTbl_i.bin | 22 | 2 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 23 | 3 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 24 | 2 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 28 | 2 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 29 | 1 sostituzione/i | spazio |
-| database/charalist.ehp | strTbl_i.bin | 31 | 1 sostituzione/i | frase confusa |
-| database/charalist.ehp | strTbl_i.bin | 34 | 1 sostituzione/i | grammatica |
-| database/charalist.ehp | strTbl_i.bin | 37 | 3 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 43 | 2 sostituzione/i | refusi |
-| database/charalist.ehp | strTbl_i.bin | 48 | 1 sostituzione/i | accordo |
-| database/charalist.ehp | strTbl_i.bin | 49 | 1 sostituzione/i | accento |
-| database/charalist.ehp | strTbl_i.bin | 52 | 1 sostituzione/i | Preside con la maiuscola |
-| database/duelrecord.ehp | strTbl_i.bin | 26 | 1 sostituzione/i | nome |
-| database/duelrecord.ehp | strTbl_i.bin | 35 | 1 sostituzione/i | refuso |
-| database/duelrecord.ehp | strTbl_i.bin | 63 | 1 sostituzione/i | refuso |
-| database/duelrecord.ehp | strTbl_i.bin | 137 | 1 sostituzione/i | frase confusa |
-| database/duelrecord.ehp | strTbl_i.bin | 155 | 1 sostituzione/i | articolo |
-| database/duelrecord.ehp | strTbl_i.bin | 159 | 1 sostituzione/i | stile come le altre voci |
-| database/duelrecord.ehp | strTbl_i.bin | 160 | 1 sostituzione/i | stile |
-| database/duelrecord.ehp | strTbl_i.bin | 161 | 1 sostituzione/i | stile |
-| database/duelrecord.ehp | strTbl_i.bin | 162 | 1 sostituzione/i | stile |
-| database/duelrecord.ehp | strTbl_i.bin | 163 | 1 sostituzione/i | frase |
-| database/duelrecord.ehp | strTbl_i.bin | 164 | 1 sostituzione/i | frase |
-| database/duelrecord.ehp | strTbl_i.bin | 182 | 1 sostituzione/i | plurale |
-| database/duelrecord.ehp | strTbl_i.bin | 184 | 1 sostituzione/i | frase sbagliata (copia di 182) |
-| database/duelrecord.ehp | strTbl_i.bin | 212 | 1 sostituzione/i | refuso |
-| database/duelrecord.ehp | strTbl_i.bin | 213 | 1 sostituzione/i | refuso |
-| database/duelrecord.ehp | strTbl_i.bin | 248 | 1 sostituzione/i | spazio iniziale |
-| duel/result/result_i.ehp | strTbl.bin | 26 | 1 sostituzione/i | nome |
-| duel/result/result_i.ehp | strTbl.bin | 35 | 1 sostituzione/i | refuso |
-| duel/result/result_i.ehp | strTbl.bin | 63 | 1 sostituzione/i | refuso |
-| duel/result/result_i.ehp | strTbl.bin | 137 | 1 sostituzione/i | frase confusa |
-| duel/result/result_i.ehp | strTbl.bin | 155 | 1 sostituzione/i | articolo |
-| duel/result/result_i.ehp | strTbl.bin | 159 | 1 sostituzione/i | stile come le altre voci |
-| duel/result/result_i.ehp | strTbl.bin | 160 | 1 sostituzione/i | stile |
-| duel/result/result_i.ehp | strTbl.bin | 161 | 1 sostituzione/i | stile |
-| duel/result/result_i.ehp | strTbl.bin | 162 | 1 sostituzione/i | stile |
-| duel/result/result_i.ehp | strTbl.bin | 163 | 1 sostituzione/i | frase |
-| duel/result/result_i.ehp | strTbl.bin | 164 | 1 sostituzione/i | frase |
-| duel/result/result_i.ehp | strTbl.bin | 182 | 1 sostituzione/i | plurale |
-| duel/result/result_i.ehp | strTbl.bin | 184 | 1 sostituzione/i | frase sbagliata (copia di 182) |
-| duel/result/result_i.ehp | strTbl.bin | 212 | 1 sostituzione/i | refuso |
-| duel/result/result_i.ehp | strTbl.bin | 213 | 1 sostituzione/i | refuso |
-| duel/result/result_i.ehp | strTbl.bin | 248 | 1 sostituzione/i | spazio iniziale |
-| deck/all_i.ehp | strTbl.bin | 51 | 1 sostituzione/i | spazio |
-| deck/all_i.ehp | strTbl.bin | 83 | 1 sostituzione/i | refusi |
-| deck/all_i.ehp | strTbl.bin | 100 | 1 sostituzione/i | spazio |
-| deck/all_i.ehp | strTbl.bin | 101 | 1 sostituzione/i | spazio |
-| deck/all_i.ehp | strTbl.bin | 106 | 1 sostituzione/i | spazio |
-| deck/all_i.ehp | strTbl.bin | 109 | 1 sostituzione/i | frase |
-| deck/all_i.ehp | strTbl.bin | 110 | 1 sostituzione/i | frase |
-| deck/all_i.ehp | strTbl.bin | 111 | 1 sostituzione/i | frase |
-| deck/all_i.ehp | strTbl.bin | 116 | 1 sostituzione/i | articolo |
-| deck/all_i.ehp | strTbl.bin | 126 | 1 sostituzione/i | '$' al posto dell'a capo |
-| deck/all_i.ehp | strTbl.bin | 138 | 1 sostituzione/i | frase |
-| deck/all_i.ehp | strTbl.bin | 142 | 1 sostituzione/i | italiano |
-| deck/all_i.ehp | strTbl.bin | 148 | 1 sostituzione/i | spazio |
-| deck/all_i.ehp | strTbl.bin | 152 | 1 sostituzione/i | maiuscola |
-| deck/all_i.ehp | strTbl.bin | 154 | 1 sostituzione/i | articolo |
-| deck/all_i.ehp | strTbl.bin | 155 | 1 sostituzione/i | spazio |
-| deck/all_i.ehp | help_strtbl_label.bin | 1 | 1 sostituzione/i | come l'etichetta del pulsante '?' |
-| deck/all_i.ehp | help_strtbl_label.bin | 8 | 1 sostituzione/i | coerenza |
-| deck/all_i.ehp | help_strtbl_contents.bin | 81 | 1 sostituzione/i | nome |
-| deck/all_i.ehp | help_strtbl_contents.bin | 100 | 1 sostituzione/i | genere |
-| deck/all_i.ehp | help_strtbl_contents.bin | 104 | 1 sostituzione/i | termine |
-| deck/all_i.ehp | help_strtbl_contents.bin | 105 | 1 sostituzione/i | spazio |
-| deck/all_i.ehp | help_strtbl_contents.bin | 106 | 1 sostituzione/i | accordo |
-| deck/all_i.ehp | help_strtbl_contents.bin | 107 | 1 sostituzione/i | refuso |
-| deck/all_i.ehp | help_strtbl_contents.bin | 118 | 1 sostituzione/i | refuso |
-| deck/all_i.ehp | help_strtbl_contents.bin | 129 | 2 sostituzione/i | refusi |
-| deck/all_i.ehp | help_strtbl_contents.bin | 157 | 2 sostituzione/i | Activar non e' italiano |
-| deck/all_i.ehp | help_strtbl_contents.bin | 164 | 3 sostituzione/i | plurale e genere |
-| deck/all_i.ehp | help_strtbl_contents.bin | 175 | 2 sostituzione/i | refusi |
-| deck/tutorial.ehp | strTbl_i.bin | 5 | 2 sostituzione/i | genere |
-| deck/tutorial.ehp | strTbl_i.bin | 25 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 26 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 27 | 1 sostituzione/i | virgola |
-| deck/tutorial.ehp | strTbl_i.bin | 29 | 1 sostituzione/i | articolo |
-| deck/tutorial.ehp | strTbl_i.bin | 30 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 34 | 1 sostituzione/i | frase |
-| deck/tutorial.ehp | strTbl_i.bin | 36 | 1 sostituzione/i | punteggiatura |
-| deck/tutorial.ehp | strTbl_i.bin | 39 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 82 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 46 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 61 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 74 | 1 sostituzione/i | come l'etichetta del pulsante '?' |
-| deck/tutorial.ehp | strTbl_i.bin | 79 | 1 sostituzione/i | punteggiatura |
-| deck/tutorial.ehp | strTbl_i.bin | 86 | 1 sostituzione/i | frase |
-| deck/tutorial.ehp | strTbl_i.bin | 87 | 1 sostituzione/i | spazio |
-| deck/tutorial.ehp | strTbl_i.bin | 98 | 1 sostituzione/i | genere |
-| deck/tutorial.ehp | strTbl_i.bin | 104 | 1 sostituzione/i | spazio |
-| deck/tutorial.ehp | strTbl_i.bin | 113 | 1 sostituzione/i | articolo |
-| deck/tutorial.ehp | strTbl_i.bin | 118 | 1 sostituzione/i | nome |
-| deck/tutorial.ehp | strTbl_i.bin | 119 | 1 sostituzione/i | punteggiatura |
-| deck/tutorial.ehp | strTbl_i.bin | 126 | 1 sostituzione/i | articolo |
-| deck/tutorial.ehp | strTbl_i.bin | 128 | 1 sostituzione/i | verbo |
-| deck/tutorial.ehp | strTbl_i.bin | 129 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 130 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 133 | 1 sostituzione/i | accordo |
-| deck/tutorial.ehp | strTbl_i.bin | 145 | 1 sostituzione/i | termine |
-| deck/tutorial.ehp | strTbl_i.bin | 146 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 150 | 1 sostituzione/i | articolo |
-| deck/tutorial.ehp | strTbl_i.bin | 153 | 1 sostituzione/i | frase |
-| deck/tutorial.ehp | strTbl_i.bin | 154 | 1 sostituzione/i | maiuscola |
-| deck/tutorial.ehp | strTbl_i.bin | 166 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 172 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 173 | 1 sostituzione/i | accordo |
-| deck/tutorial.ehp | strTbl_i.bin | 175 | 1 sostituzione/i | accordo |
-| deck/tutorial.ehp | strTbl_i.bin | 176 | 1 sostituzione/i | accordo |
-| deck/tutorial.ehp | strTbl_i.bin | 177 | 1 sostituzione/i | accordo |
-| deck/tutorial.ehp | strTbl_i.bin | 179 | 1 sostituzione/i | frase |
-| deck/tutorial.ehp | strTbl_i.bin | 189 | 1 sostituzione/i | articolo |
-| deck/tutorial.ehp | strTbl_i.bin | 201 | 1 sostituzione/i | accordo |
-| deck/tutorial.ehp | strTbl_i.bin | 203 | 1 sostituzione/i | refuso |
-| deck/tutorial.ehp | strTbl_i.bin | 205 | 1 sostituzione/i | maiuscola |
-| duel/basic_bi.ehp | ddstrtbl_i.bin | 70 | 1 sostituzione/i | punto finale |
-| duel/basic_bi.ehp | ddstrtbl_i.bin | 72 | 1 sostituzione/i | termine |
-| duel/basic_bi.ehp | ddstrtbl_i.bin | 73 | 1 sostituzione/i | punto finale |
-| duel/basic_bi.ehp | ddstrtbl_i.bin | 75 | 1 sostituzione/i | frase |
-| duel/basic_bi.ehp | ddstrtbl_i.bin | 81 | 1 sostituzione/i | spazio |
-| duel/basic_bi.ehp | ddstrtbl_i.bin | 84 | 1 sostituzione/i | termine |
-| duel/basic_bi.ehp | ddstrtbl_i.bin | 87 | 1 sostituzione/i | frase |
-| duel/basic_bi.ehp | ddstrtbl_i.bin | 88 | 1 sostituzione/i | frase |
-| duel/start/start_i.ehp | strTbl_i.bin | 2 | 1 sostituzione/i | refuso |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 92 | 1 sostituzione/i | nome |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 110 | 1 sostituzione/i | refuso |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 113 | 1 sostituzione/i | genere |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 116 | 1 sostituzione/i | refuso |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 123 | 2 sostituzione/i | refusi |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 154 | 1 sostituzione/i | refuso |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 177 | 2 sostituzione/i | Activar non e' italiano |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 184 | 3 sostituzione/i | plurale e genere |
-| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 195 | 2 sostituzione/i | refusi |
-| field/always_*_ita.ehp | field_strtbl.bin | 8 | 1 sostituzione/i | come nei dialoghi |
-| field/always_*_ita.ehp | field_strtbl.bin | 21 | 1 sostituzione/i | imperativo |
-| field/always_*_ita.ehp | field_strtbl.bin | 22 | 1 sostituzione/i | imperativo |
-| field/always_*_ita.ehp | field_strtbl.bin | 57 | 1 sostituzione/i | frase |
-| field/always_*_ita.ehp | field_strtbl.bin | 58 | 1 sostituzione/i | articolo |
-| field/always_*_ita.ehp | field_strtbl.bin | 59 | 1 sostituzione/i | abbreviazione |
-| field/always_*_ita.ehp | field_strtbl.bin | 60 | 1 sostituzione/i | termine |
-| field/always_*_ita.ehp | field_strtbl.bin | 68 | 1 sostituzione/i | spazio |
-| field/always_*_ita.ehp | field_strtbl.bin | 98 | 1 sostituzione/i | refuso |
-| field/always_*_ita.ehp | field_strtbl_item.bin | 95 | 1 sostituzione/i | refuso |
-| field/always_*_ita.ehp | field_strtbl_item.bin | 60 | 1 sostituzione/i | spazio |
-| field/always_*_ita.ehp | field_strtbl_item.bin | 157 | 1 sostituzione/i | termine |
-| field/always_*_ita.ehp | field_strtbl_item.bin | 184 | 1 sostituzione/i | refuso |
-| field/always_*_ita.ehp | field_strtbl_item.bin | 189 | 1 sostituzione/i | frase |
-| field/always_*_ita.ehp | field_strtbl_item.bin | 191 | 1 sostituzione/i | refuso |
-| field/always_*_ita.ehp | field_strtbl_item.bin | 193 | 1 sostituzione/i | refuso |
-| labo/password.ehp | strTbl_i.bin | 4 | 1 sostituzione/i | refusi |
-| labo/password.ehp | strTbl_i.bin | 9 | 1 sostituzione/i | articolo |
+| database/charalist.ehp | strTbl_i.bin | 12 | 1 replacement(s) | terza persona |
+| database/charalist.ehp | strTbl_i.bin | 13 | 4 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 14 | 3 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 15 | 1 replacement(s) | refuso |
+| database/charalist.ehp | strTbl_i.bin | 17 | 3 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 18 | 3 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 20 | 6 replacement(s) | refusi e virgolette |
+| database/charalist.ehp | strTbl_i.bin | 21 | 1 replacement(s) | come nei dialoghi: direttore del dormitorio |
+| database/charalist.ehp | strTbl_i.bin | 22 | 2 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 23 | 3 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 24 | 2 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 28 | 2 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 29 | 1 replacement(s) | spazio |
+| database/charalist.ehp | strTbl_i.bin | 31 | 1 replacement(s) | frase confusa |
+| database/charalist.ehp | strTbl_i.bin | 34 | 1 replacement(s) | grammatica |
+| database/charalist.ehp | strTbl_i.bin | 37 | 3 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 43 | 2 replacement(s) | refusi |
+| database/charalist.ehp | strTbl_i.bin | 48 | 1 replacement(s) | accordo |
+| database/charalist.ehp | strTbl_i.bin | 49 | 1 replacement(s) | accento |
+| database/charalist.ehp | strTbl_i.bin | 52 | 1 replacement(s) | Preside con la maiuscola |
+| database/duelrecord.ehp | strTbl_i.bin | 26 | 1 replacement(s) | name |
+| database/duelrecord.ehp | strTbl_i.bin | 35 | 1 replacement(s) | typo |
+| database/duelrecord.ehp | strTbl_i.bin | 63 | 1 replacement(s) | typo |
+| database/duelrecord.ehp | strTbl_i.bin | 137 | 1 replacement(s) | confused sentence |
+| database/duelrecord.ehp | strTbl_i.bin | 155 | 1 replacement(s) | article |
+| database/duelrecord.ehp | strTbl_i.bin | 159 | 1 replacement(s) | style like the other entries |
+| database/duelrecord.ehp | strTbl_i.bin | 160 | 1 replacement(s) | style |
+| database/duelrecord.ehp | strTbl_i.bin | 161 | 1 replacement(s) | style |
+| database/duelrecord.ehp | strTbl_i.bin | 162 | 1 replacement(s) | style |
+| database/duelrecord.ehp | strTbl_i.bin | 163 | 1 replacement(s) | sentence |
+| database/duelrecord.ehp | strTbl_i.bin | 164 | 1 replacement(s) | sentence |
+| database/duelrecord.ehp | strTbl_i.bin | 182 | 1 replacement(s) | plural |
+| database/duelrecord.ehp | strTbl_i.bin | 184 | 1 replacement(s) | wrong sentence (copy of 182) |
+| database/duelrecord.ehp | strTbl_i.bin | 212 | 1 replacement(s) | typo |
+| database/duelrecord.ehp | strTbl_i.bin | 213 | 1 replacement(s) | typo |
+| database/duelrecord.ehp | strTbl_i.bin | 248 | 1 replacement(s) | leading space |
+| duel/result/result_i.ehp | strTbl.bin | 26 | 1 replacement(s) | name |
+| duel/result/result_i.ehp | strTbl.bin | 35 | 1 replacement(s) | typo |
+| duel/result/result_i.ehp | strTbl.bin | 63 | 1 replacement(s) | typo |
+| duel/result/result_i.ehp | strTbl.bin | 137 | 1 replacement(s) | confused sentence |
+| duel/result/result_i.ehp | strTbl.bin | 155 | 1 replacement(s) | article |
+| duel/result/result_i.ehp | strTbl.bin | 159 | 1 replacement(s) | style like the other entries |
+| duel/result/result_i.ehp | strTbl.bin | 160 | 1 replacement(s) | style |
+| duel/result/result_i.ehp | strTbl.bin | 161 | 1 replacement(s) | style |
+| duel/result/result_i.ehp | strTbl.bin | 162 | 1 replacement(s) | style |
+| duel/result/result_i.ehp | strTbl.bin | 163 | 1 replacement(s) | sentence |
+| duel/result/result_i.ehp | strTbl.bin | 164 | 1 replacement(s) | sentence |
+| duel/result/result_i.ehp | strTbl.bin | 182 | 1 replacement(s) | plural |
+| duel/result/result_i.ehp | strTbl.bin | 184 | 1 replacement(s) | wrong sentence (copy of 182) |
+| duel/result/result_i.ehp | strTbl.bin | 212 | 1 replacement(s) | typo |
+| duel/result/result_i.ehp | strTbl.bin | 213 | 1 replacement(s) | typo |
+| duel/result/result_i.ehp | strTbl.bin | 248 | 1 replacement(s) | leading space |
+| deck/all_i.ehp | strTbl.bin | 51 | 1 replacement(s) | spazio |
+| deck/all_i.ehp | strTbl.bin | 83 | 1 replacement(s) | refusi |
+| deck/all_i.ehp | strTbl.bin | 100 | 1 replacement(s) | spazio |
+| deck/all_i.ehp | strTbl.bin | 101 | 1 replacement(s) | spazio |
+| deck/all_i.ehp | strTbl.bin | 106 | 1 replacement(s) | spazio |
+| deck/all_i.ehp | strTbl.bin | 109 | 1 replacement(s) | frase |
+| deck/all_i.ehp | strTbl.bin | 110 | 1 replacement(s) | frase |
+| deck/all_i.ehp | strTbl.bin | 111 | 1 replacement(s) | frase |
+| deck/all_i.ehp | strTbl.bin | 116 | 1 replacement(s) | articolo |
+| deck/all_i.ehp | strTbl.bin | 126 | 1 replacement(s) | '$' al posto dell'a capo |
+| deck/all_i.ehp | strTbl.bin | 138 | 1 replacement(s) | frase |
+| deck/all_i.ehp | strTbl.bin | 142 | 1 replacement(s) | italiano |
+| deck/all_i.ehp | strTbl.bin | 148 | 1 replacement(s) | spazio |
+| deck/all_i.ehp | strTbl.bin | 152 | 1 replacement(s) | maiuscola |
+| deck/all_i.ehp | strTbl.bin | 154 | 1 replacement(s) | articolo |
+| deck/all_i.ehp | strTbl.bin | 155 | 1 replacement(s) | spazio |
+| deck/all_i.ehp | help_strtbl_label.bin | 1 | 1 replacement(s) | come l'etichetta del pulsante '?' |
+| deck/all_i.ehp | help_strtbl_label.bin | 8 | 1 replacement(s) | coerenza |
+| deck/all_i.ehp | help_strtbl_contents.bin | 81 | 1 replacement(s) | nome |
+| deck/all_i.ehp | help_strtbl_contents.bin | 100 | 1 replacement(s) | genere |
+| deck/all_i.ehp | help_strtbl_contents.bin | 104 | 1 replacement(s) | termine |
+| deck/all_i.ehp | help_strtbl_contents.bin | 105 | 1 replacement(s) | spazio |
+| deck/all_i.ehp | help_strtbl_contents.bin | 106 | 1 replacement(s) | accordo |
+| deck/all_i.ehp | help_strtbl_contents.bin | 107 | 1 replacement(s) | refuso |
+| deck/all_i.ehp | help_strtbl_contents.bin | 118 | 1 replacement(s) | refuso |
+| deck/all_i.ehp | help_strtbl_contents.bin | 129 | 2 replacement(s) | refusi |
+| deck/all_i.ehp | help_strtbl_contents.bin | 157 | 2 replacement(s) | Activar non e' italiano |
+| deck/all_i.ehp | help_strtbl_contents.bin | 164 | 3 replacement(s) | plurale e genere |
+| deck/all_i.ehp | help_strtbl_contents.bin | 175 | 2 replacement(s) | refusi |
+| deck/tutorial.ehp | strTbl_i.bin | 5 | 2 replacement(s) | genere |
+| deck/tutorial.ehp | strTbl_i.bin | 25 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 26 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 27 | 1 replacement(s) | virgola |
+| deck/tutorial.ehp | strTbl_i.bin | 29 | 1 replacement(s) | articolo |
+| deck/tutorial.ehp | strTbl_i.bin | 30 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 34 | 1 replacement(s) | frase |
+| deck/tutorial.ehp | strTbl_i.bin | 36 | 1 replacement(s) | punteggiatura |
+| deck/tutorial.ehp | strTbl_i.bin | 39 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 82 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 46 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 61 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 74 | 1 replacement(s) | come l'etichetta del pulsante '?' |
+| deck/tutorial.ehp | strTbl_i.bin | 79 | 1 replacement(s) | punteggiatura |
+| deck/tutorial.ehp | strTbl_i.bin | 86 | 1 replacement(s) | frase |
+| deck/tutorial.ehp | strTbl_i.bin | 87 | 1 replacement(s) | spazio |
+| deck/tutorial.ehp | strTbl_i.bin | 98 | 1 replacement(s) | genere |
+| deck/tutorial.ehp | strTbl_i.bin | 104 | 1 replacement(s) | spazio |
+| deck/tutorial.ehp | strTbl_i.bin | 113 | 1 replacement(s) | articolo |
+| deck/tutorial.ehp | strTbl_i.bin | 118 | 1 replacement(s) | nome |
+| deck/tutorial.ehp | strTbl_i.bin | 119 | 1 replacement(s) | punteggiatura |
+| deck/tutorial.ehp | strTbl_i.bin | 126 | 1 replacement(s) | articolo |
+| deck/tutorial.ehp | strTbl_i.bin | 128 | 1 replacement(s) | verbo |
+| deck/tutorial.ehp | strTbl_i.bin | 129 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 130 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 133 | 1 replacement(s) | accordo |
+| deck/tutorial.ehp | strTbl_i.bin | 145 | 1 replacement(s) | termine |
+| deck/tutorial.ehp | strTbl_i.bin | 146 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 150 | 1 replacement(s) | articolo |
+| deck/tutorial.ehp | strTbl_i.bin | 153 | 1 replacement(s) | frase |
+| deck/tutorial.ehp | strTbl_i.bin | 154 | 1 replacement(s) | maiuscola |
+| deck/tutorial.ehp | strTbl_i.bin | 166 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 172 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 173 | 1 replacement(s) | accordo |
+| deck/tutorial.ehp | strTbl_i.bin | 175 | 1 replacement(s) | accordo |
+| deck/tutorial.ehp | strTbl_i.bin | 176 | 1 replacement(s) | accordo |
+| deck/tutorial.ehp | strTbl_i.bin | 177 | 1 replacement(s) | accordo |
+| deck/tutorial.ehp | strTbl_i.bin | 179 | 1 replacement(s) | frase |
+| deck/tutorial.ehp | strTbl_i.bin | 189 | 1 replacement(s) | articolo |
+| deck/tutorial.ehp | strTbl_i.bin | 201 | 1 replacement(s) | accordo |
+| deck/tutorial.ehp | strTbl_i.bin | 203 | 1 replacement(s) | refuso |
+| deck/tutorial.ehp | strTbl_i.bin | 205 | 1 replacement(s) | maiuscola |
+| duel/basic_bi.ehp | ddstrtbl_i.bin | 70 | 1 replacement(s) | punto finale |
+| duel/basic_bi.ehp | ddstrtbl_i.bin | 72 | 1 replacement(s) | termine |
+| duel/basic_bi.ehp | ddstrtbl_i.bin | 73 | 1 replacement(s) | punto finale |
+| duel/basic_bi.ehp | ddstrtbl_i.bin | 75 | 1 replacement(s) | frase |
+| duel/basic_bi.ehp | ddstrtbl_i.bin | 81 | 1 replacement(s) | spazio |
+| duel/basic_bi.ehp | ddstrtbl_i.bin | 84 | 1 replacement(s) | termine |
+| duel/basic_bi.ehp | ddstrtbl_i.bin | 87 | 1 replacement(s) | frase |
+| duel/basic_bi.ehp | ddstrtbl_i.bin | 88 | 1 replacement(s) | frase |
+| duel/start/start_i.ehp | strTbl_i.bin | 2 | 1 replacement(s) | refuso |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 92 | 1 replacement(s) | nome |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 110 | 1 replacement(s) | refuso |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 113 | 1 replacement(s) | genere |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 116 | 1 replacement(s) | refuso |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 123 | 2 replacement(s) | refusi |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 154 | 1 replacement(s) | refuso |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 177 | 2 replacement(s) | Activar non e' italiano |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 184 | 3 replacement(s) | plurale e genere |
+| duel/basic_bi.ehp | help_strtbl_contents_duel_i.bin | 195 | 2 replacement(s) | refusi |
+| field/always_*_ita.ehp | field_strtbl.bin | 8 | 1 replacement(s) | come nei dialoghi |
+| field/always_*_ita.ehp | field_strtbl.bin | 21 | 1 replacement(s) | imperativo |
+| field/always_*_ita.ehp | field_strtbl.bin | 22 | 1 replacement(s) | imperativo |
+| field/always_*_ita.ehp | field_strtbl.bin | 57 | 1 replacement(s) | frase |
+| field/always_*_ita.ehp | field_strtbl.bin | 58 | 1 replacement(s) | articolo |
+| field/always_*_ita.ehp | field_strtbl.bin | 59 | 1 replacement(s) | abbreviazione |
+| field/always_*_ita.ehp | field_strtbl.bin | 60 | 1 replacement(s) | termine |
+| field/always_*_ita.ehp | field_strtbl.bin | 68 | 1 replacement(s) | spazio |
+| field/always_*_ita.ehp | field_strtbl.bin | 98 | 1 replacement(s) | refuso |
+| field/always_*_ita.ehp | field_strtbl_item.bin | 95 | 1 replacement(s) | refuso |
+| field/always_*_ita.ehp | field_strtbl_item.bin | 60 | 1 replacement(s) | spazio |
+| field/always_*_ita.ehp | field_strtbl_item.bin | 157 | 1 replacement(s) | termine |
+| field/always_*_ita.ehp | field_strtbl_item.bin | 184 | 1 replacement(s) | refuso |
+| field/always_*_ita.ehp | field_strtbl_item.bin | 189 | 1 replacement(s) | frase |
+| field/always_*_ita.ehp | field_strtbl_item.bin | 191 | 1 replacement(s) | refuso |
+| field/always_*_ita.ehp | field_strtbl_item.bin | 193 | 1 replacement(s) | refuso |
+| labo/password.ehp | strTbl_i.bin | 4 | 1 replacement(s) | refusi |
+| labo/password.ehp | strTbl_i.bin | 9 | 1 replacement(s) | articolo |
 
-### Correzioni puntuali `ui_texts.json`
-| file | membro | indice | vecchio | nuovo | motivo |
+### Targeted corrections `ui_texts.json`
+| file | member | index | old | new | reason |
 |---|---|---|---|---|---|
 | /PSP_GAME/USRDIR/deck/all_i.ehp | strTbl.bin | 107 | Assistenza | Aiuto | etichetta del pulsante '?' del deck editor: "Assistenza" viene tagliata dal bordo dello schermo (si leggeva "Assisten"); in inglese e' "Help" |
 
-### Elenco completo
-**Confronto completo con parole evidenziate: `docs/changes_it/ui_strings_diff.md`.** Dati grezzi: `docs/changes_it/ui_strings.csv`. Prime 40:
+### Complete list
+**Complete comparison with highlighted words: `docs/changes_it/ui_strings_diff.md`.** Raw data: `docs/changes_it/ui_strings.csv`. First 40:
 
-| membro | indice | originale | nuovo |
+| member | index | original | new |
 |---|---|---|---|
 | strTbl_i.bin | 4 | Slifer Red | Slifer Rosso |
 | strTbl_i.bin | 5 | Ra Yellow | Ra Giallo |
@@ -606,13 +606,13 @@ Tabelle `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (formato `(n, 
 | strTbl_i.bin | 52 | Profilo del preside Sheppard | Profilo del Preside Sheppard |
 | strTbl_i.bin | 79 | Evocazione  Fusione | Evocazione Fusione |
 
-(... altre 258 righe nel CSV)
+(... 258 more rows in the CSV)
 
-## A6. Etichetta [CARTA MAGIA] / [CARTA TRAPPOLA] della carta grande nel duello
+## A6. [SPELL CARD] / [TRAP CARD] label of the large card in the duel
 
-In tutti i `duel/basic_<regione><lingua>.ehp` l'etichetta era in inglese (hash `c2268340`): `apply_to_iso.py` la sostituisce con `card_spell_trap.gim` di `field/always_<lingua>_<lingua>.ehp` (hash `9622cd75`).
+In all the `duel/basic_<region><language>.ehp` the label was in English (hash `c2268340`): `apply_to_iso.py` replaces it with `card_spell_trap.gim` of `field/always_<language>_<language>.ehp` (hash `9622cd75`).
 
-| archivio | membro | hash originale | hash nuovo |
+| archive | member | original hash | new hash |
 |---|---|---|---|
 | /PSP_GAME/USRDIR/duel/basic_bi.ehp | card_spell_trap.gim | c2268340 | 9622cd75 |
 | /PSP_GAME/USRDIR/duel/basic_fi.ehp | card_spell_trap.gim | c2268340 | 9622cd75 |
@@ -621,31 +621,31 @@ In tutti i `duel/basic_<regione><lingua>.ehp` l'etichetta era in inglese (hash `
 | /PSP_GAME/USRDIR/duel/basic_si.ehp | card_spell_trap.gim | c2268340 | 9622cd75 |
 | /PSP_GAME/USRDIR/duel/basic_ui.ehp | card_spell_trap.gim | c2268340 | 9622cd75 |
 
-## A7. File della ISO toccati e dettagli tecnici
+## A7. ISO files touched and technical details
 
-142 archivi `.ehp` risultano diversi dall'originale (tutte le lingue insieme, perche' la ISO e' unica; elenco in `docs/changes_it/touched_files.csv`). Gli altri file (video, audio, eseguibile `EBOOT.BIN`, `PARAM.SFO`) sono identici. Differenze tecniche non testuali: `*-ptrs.txt` (offset assoluti dei membri, ricalcolati quando una tabella cambia lunghezza), nuova posizione degli archivi in fondo alla ISO.
+142 `.ehp` archives differ from the original (all languages together, because the ISO is a single one; list in `docs/changes_it/touched_files.csv`). The other files (video, audio, `EBOOT.BIN` executable, `PARAM.SFO`) are identical. Non-textual technical differences: `*-ptrs.txt` (absolute member offsets, recomputed when a table changes length), new position of the archives at the end of the ISO.
 
-## A8. Cosa NON si puo' cambiare (limiti del gioco)
+## A8. What can NOT be changed (game limits)
 
-- Il **nome del parlante** nella casella del dialogo (es. "Preside Sheppard"/"Cancelliere" in italiano, "Doyen Sheppard" in francese, "Rector Sheppard" in spagnolo) sta nell'EBOOT cifrato: non modificabile.
-- Testi disegnati dal gioco con il suo font (dialoghi, nomi, descrizioni nel deck, menu a tendina, tastiera di sistema, schermata di scelta lingua) non sono sostituibili dal texture pack: si cambiano solo nella ISO.
-- Le 438 texture di mappa/sfondi non sono sostituite (il gioco ne cambia la palette): limite del pack di MikeyMK, non del nostro lavoro.
+- The **speaker name** in the dialogue box (e.g. "Preside Sheppard"/"Cancelliere" in Italian, "Doyen Sheppard" in French, "Rector Sheppard" in Spanish) lives in the encrypted EBOOT: it cannot be modified.
+- Texts drawn by the game with its own font (dialogues, names, descriptions in the deck, drop-down menus, system keyboard, language selection screen) cannot be replaced by the texture pack: they can only be changed in the ISO.
+- The 438 map/background textures are not replaced (the game changes their palette): a limit of MikeyMK's pack, not of our work.
 
 ---
 
 # B. TEXTURE PACK
 
-## B1. Provenienza e struttura
+## B1. Origin and structure
 
-Base: **Yu-Gi-Oh! GX Tag Force 1 HD Remastered** di **MikeyMK** (pack USA `ULUS10136`) e carte HD di **chrisfand**, adattati alla ISO europea `ULES00600`. Il progetto non ridistribuisce il pack di terzi (`PERMESSI_AUTORI.md`): il patcher se lo fa dare dall'utente. Il nostro lavoro: (1) rimappare gli **hash** del pack USA su quelli EU (`tools/gen_ini.py`), (2) rifare nella lingua carte e scritte dell'interfaccia, (3) correggere i testi, (4) `upscale_extra` per le texture non coperte.
+Base: **Yu-Gi-Oh! GX Tag Force 1 HD Remastered** by **MikeyMK** (US pack `ULUS10136`) and HD cards by **chrisfand**, adapted to the European ISO `ULES00600`. The project does not redistribute the third-party pack: the patcher gets it from the user. Our work: (1) remap the US pack's **hashes** to the EU ones (`tools/gen_ini.py`), (2) redo the cards and interface lettering in the language, (3) correct the texts, (4) `upscale_extra` for the textures that are not covered.
 
-PPSSPP riconosce una texture dall'**hash dei suoi pixel** (xxhash dei dati, `gim.data_hash`); ogni riga del `textures.ini` e' `0000000000000000<hash8> = percorso/png`. I PNG sono **4x** l'originale e ridisegnano esattamente la stessa area. Texture identiche tra lingue hanno lo stesso hash: la sostituzione vale per tutte (vedi `docs/TEXTURE_INVENTORY.md`).
+PPSSPP recognizes a texture by the **hash of its pixels** (xxhash of the data, `gim.data_hash`); every line of `textures.ini` is `0000000000000000<hash8> = path/png`. The PNGs are **4x** the original and redraw exactly the same area. Textures that are identical between languages have the same hash: the replacement holds for all of them (see `docs/TEXTURE_INVENTORY.md`).
 
-### Struttura reale (da `docs/changes_it/pack_structure.csv`)
-| radice | cartella | file | MB | contenuto |
+### Real structure (from `docs/changes_it/pack_structure.csv`)
+| root | folder | files | MB | content |
 |---|---|---|---|---|
 | ULES00600 (pack di base) | LEGGIMI.txt | 1 | 0.0 |  |
-| ULES00600 (pack di base) | _CHOOSE YOUR CARD STYLE/ | 3 | 7.8 | mikeymk, official_english, official_japanese |
+| ULES00600 (pack di base) | _SCEGLI LO STILE DELLE CARTE/ | 3 | 7.8 | mikeymk, official_english, official_japanese |
 | ULES00600 (pack di base) | cards/ | 11373 | 2161.9 | frame, large, large_it, small, small_it, tinyEN, tinyJP, tinyMikeyMK, tiny_it |
 | ULES00600 (pack di base) | characters/ | 1468 | 134.3 | 3d, combinations, portraits, sprites |
 | ULES00600 (pack di base) | events/ | 17 | 40.5 | academy_festival.png, alexis_rhodes.png, atticus_rhodes_beach.png, bastion_decks.png, bastion_misawa.png, chazz_dueldisk.png, chazz_on_tv.png, chazz_princeton.png, chumley_huffington.png, duel_tower.png ... |
@@ -654,249 +654,249 @@ PPSSPP riconosce una texture dall'**hash dei suoi pixel** (xxhash dei dati, `gim
 | ULES00600 (pack di base) | shop/ | 153 | 69.5 | blue_eyes_jp.png, card_pack_results_ui.png, dorothy, packs, purchase_text_box.png, room_textures, sadie, sandwiches.png, store_purchasing_background.png, store_purchasing_ui.png |
 | ULES00600 (pack di base) | textures.ini | 1 | 2.59 |  |
 | ULES00600 (pack di base) | ui/ | 331 | 22.3 | cardalbum, deckedit, duels, horizontal_bar_black.png, horizontal_bar_red.png, horizontal_bar_silver.png, horizontal_bar_yellow.png, janken.png, limited.png, loading ... |
-| ULES00600 (pack di base) | ui_it/ | 113 | 9.8 | icon_sheets, icon_sheets.ini, result_letters, result_letters.ini, menu_lists, menu_lists.ini, deck_screens, deck_screens.ini, recipe_screens, recipe_screens.ini ... |
+| ULES00600 (pack di base) | ui_it/ | 113 | 9.8 | fogli_icone, fogli_icone.ini, lettere_esito, lettere_esito.ini, menu_liste, menu_liste.ini, schede_deck, schede_deck.ini, schede_ricette, schede_ricette.ini ... |
 | ULES00600 (pack di base) | upscale_extra/ | 1192 | 55.8 | 00085186.png, 00162f3c.png, 003fd929.png, 0047e8d4.png, 00b99210.png, 00c5c424.png, 01673953.png, 01692dff.png, 01f7d8fe.png, 01faa502.png ... |
 
-Il **pack di base `PSP/TEXTURES/ULES00600` e' gia' italiano**: contiene `cards/small_it`, `large_it`, `tiny_it`, `ui_it` (interfaccia italiana) e le tessere italiane del titolo; le altre lingue sono moduli separati in `PSP/TEXTURES/modules/<l>`.
+The **base pack `PSP/TEXTURES/ULES00600` is already Italian**: it contains `cards/small_it`, `large_it`, `tiny_it`, `ui_it` (Italian interface) and the Italian title tiles; the other languages are separate modules in `PSP/TEXTURES/modules/<l>`.
 
-### Cartelle del pack di base (uguali per tutte le lingue)
-| cartella | contenuto |
+### Base pack folders (the same for all languages)
+| folder | content |
 |---|---|
-| `cards/small`, `cards/large` | carte piccole/grandi HD originali di chrisfand (2.833 carte) con testi inglesi; la lingua sceglie `small_<l>`/`large_<l>` via ini |
-| `cards/frame` | cornici, tabelle attributo/razza, etichette Magia/Trappola |
-| `cards/tinyEN/JP/MikeyMK/tiny_<l>` | atlante delle miniature del deck (7 pagine; stesso hash in tutte le lingue: vince un solo atlante per installazione) |
-| `characters` | ritratti, sprite e 3D dei personaggi HD (MikeyMK) |
-| `events` | immagini degli eventi (17) |
-| `intro` | logo, filmato di titolo, nuova partita; `title_screen` contiene le tessere con la targa "Versione Pomodoro Mistico" |
-| `map` | sfondi della mappa |
-| `shop` | negozio, pacchetti, stanze |
-| `ui` | interfaccia HD inglese di MikeyMK (per tutte le lingue con gli stessi hash) |
-| `upscale_extra` | texture non coperte dal pack, ingrandite 4x con xBRZ (1.192 file, ~56 MB; a risoluzione 4x/Auto lo shader 4xBRZ di PPSSPP e' spento): include le varianti di `card_icon03` di en/fr/de/es |
-| `_CHOOSE YOUR CARD STYLE` | 3 `textures.ini` alternativi (mikeymk, official_english, official_japanese): copiare uno al posto di `textures.ini` per cambiare lo stile delle carte |
+| `cards/small`, `cards/large` | original HD small/large cards by chrisfand (2,833 cards) with English texts; the language picks `small_<l>`/`large_<l>` via the ini |
+| `cards/frame` | frames, attribute/race tables, Spell/Trap labels |
+| `cards/tinyEN/JP/MikeyMK/tiny_<l>` | deck thumbnail atlas (7 pages; same hash in all languages: only one atlas wins per installation) |
+| `characters` | HD portraits, sprites and 3D of the characters (MikeyMK) |
+| `events` | event images (17) |
+| `intro` | logo, title movie, new game; `title_screen` contains the tiles with the "Mystic Tomato Version" plate |
+| `map` | map backgrounds |
+| `shop` | shop, packs, rooms |
+| `ui` | MikeyMK's English HD interface (for all languages with the same hashes) |
+| `upscale_extra` | textures not covered by the pack, enlarged 4x with xBRZ (1,192 files, ~56 MB; at 4x/Auto resolution PPSSPP's 4xBRZ shader is off): includes the `card_icon03` variants of en/fr/de/es |
+| `_CHOOSE YOUR CARD STYLE` | 3 alternative `textures.ini` (mikeymk, official_english, official_japanese): copy one in place of `textures.ini` to change the card style |
 
-## B2. Immagini delle carte
+## B2. Card images
 
-Cartelle della lingua: `frame` (13 file), `large` (2833 file), `large_it` (2833 file), `small` (2833 file), `small_it` (2833 file), `tinyEN` (7 file), `tinyJP` (7 file), `tinyMikeyMK` (7 file), `tiny_it` (7 file). Ogni carta ha una **piccola HD** (nome + descrizione + tipo, rigenerata con font liberi OFL: XCharter Bold per nomi/tipo/etichette, Libre Baskerville per gli effetti, Newsreader Italic per i Normali, PT Serif Caption per Magie/Trappole, Charis SIL per i glifi mancanti) e una **grande HD** (solo il nome sulla cornice). In piu': la **tabella degli attributi** con le parole della lingua (`cards/frame/icons_attribute_race_<l>.png`, `attributes.py`), l'**etichetta Magia/Trappola** (`icons_spell_trap_<l>.png`, `label_it.py` / `extract_labels.py` -> `dati/label_eu_<codice>_128x32.png`) e l'**atlante delle miniature** del deck (`tiny_<l>`, `tiny_atlas.py` + `tiny_fragment.py`).
+Language folders: `frame` (13 files), `large` (2833 files), `large_it` (2833 files), `small` (2833 files), `small_it` (2833 files), `tinyEN` (7 files), `tinyJP` (7 files), `tinyMikeyMK` (7 files), `tiny_it` (7 files). Every card has an **HD small** one (name + description + type, regenerated with free OFL fonts: XCharter Bold for names/type/labels, Libre Baskerville for effects, Newsreader Italic for Normals, PT Serif Caption for Spells/Traps, Charis SIL for the missing glyphs) and an **HD large** one (name only on the frame). In addition: the **attribute table** with the words of the language (`cards/frame/icons_attribute_race_<l>.png`, `attributes.py`), the **Spell/Trap label** (`icons_spell_trap_<l>.png`, `label_it.py` / `extract_labels.py` -> `data/label_eu_<code>_128x32.png`) and the deck **thumbnail atlas** (`tiny_<l>`, `tiny_atlas.py` + `tiny_fragment.py`).
 
-Quando cambia il testo di una carta (sezione A2) vanno rigenerate le sue immagini: **181 carte** nel italiano. Elenco in `docs/changes_it/card_images.csv`. Comando: `sh tools/rebuild_corrections.sh USRDIR PACK_US PACK_MOD PYTHON` (carte piccole + grandi); su Windows `python -I` non vede i pacchetti utente: passare un wrapper che scarta `-I`.
+When the text of a card changes (section A2) its images must be regenerated: **181 cards** in italian. List in `docs/changes_it/card_images.csv`. Command: `sh tools/rebuild_corrections.sh USRDIR PACK_US PACK_MOD PYTHON` (small + large cards); on Windows `python -I` does not see the user packages: pass a wrapper that drops `-I`.
 
-Tipografia: apostrofo tipografico dell'italiano e virgolette; `Tipo`, `Terreno`, `Evocazione tramite Tributo` come nel gioco.
+Typography: Italian typographic apostrophe and quotation marks; `Tipo`, `Terreno`, `Evocazione tramite Tributo` as in the game.
 
-## B3. Interfaccia HD in italiano (`ui_it`)
+## B3. HD interface in italian (`ui_it`)
 
-**105 texture** (`docs/changes_it/ui_textures.csv`: file, hash PPSSPP, famiglia, script, dimensioni originale/HD, neutra/specifica, origine nella ISO). Per famiglia: icon_sheets 8, result_letters 23, menu_lists 6, deck_screens 16, recipe_screens 17, vs_screen 14, duel_texts 15, tutorial 6. Di queste 11 sono neutre (stesso hash in tutte le lingue) e 94 specifiche. Ogni famiglia ha uno script in `tools/ui_textures/<famiglia>.py` (lettura `TF1_LANG`): ridisegna le scritte texture per texture partendo dall'originale a bassa risoluzione della ISO e dallo stile del pack inglese; stessa area e stesse posizioni (il gioco ritaglia da rettangoli fissi); un font/peso/linea di base/ombra per scritta; font liberi (`alt_font.py`).
+**105 textures** (`docs/changes_it/ui_textures.csv`: file, PPSSPP hash, family, script, original/HD size, neutral/specific, origin in the ISO). By family: fogli_icone 8, lettere_esito 23, menu_liste 6, schede_deck 16, schede_ricette 17, schermata_vs 14, scritte_duello 15, tutorial 6. Of these 11 are neutral (same hash in all languages) and 94 specific. Every family has a script in `tools/ui_textures/<family>.py` (reads `TF1_LANG`): it redraws the lettering texture by texture starting from the low-resolution original of the ISO and from the style of the English pack; same area and same positions (the game crops from fixed rectangles); one font/weight/baseline/shadow per lettering; free fonts (`alt_font.py`).
 
-| famiglia | texture | script | archivio ISO sorgente | testi della lingua |
+| family | textures | script | source ISO archive | language texts |
 |---|---|---|---|---|
-| icon_sheets | 8 | `tools/ui_textures/icon_sheets.py` | deck/all_i.ehp, shop/all_i.ehp, field/always_* | fogli di icone: `icon04` (Mia/L e distintivi), `s_pack` (ESAURITE), `panel` (frammento del tab), `icon06` (N), `pda_pack01` (NUOVO), `mein_menu00`, `trnsmt01`, `ocglist` |
-| result_letters | 23 | `tools/ui_textures/result_letters.py` | duel/basic_ii.ehp | HAI VINTO · HAI PERSO · PAREGGIO: una tessera 64x64 per lettera (lettere ripetute riusano la stessa tessera) + silhouette |
-| menu_lists | 6 | `tools/ui_textures/menu_lists.py` | title_menu/title_menu_i.ehp, duel/result/result_i.ehp, field/always_bri_<cod>.ehp | titoli dei menu (`m_menu_title01`, `trnsmt02`, `menu02`, `press_start0003`), etichette risultato, calendario (giorni, mesi, "giorni al torneo", Mattino/Sera) |
-| deck_screens | 16 | `tools/ui_textures/deck_screens.py` | deck/all_i.ehp, labo/*.ehp, shop/all_i.ehp | linguette Cassa, **Fusion**, Side, Deck, Affitto, Laboratorio, Convertitore, "Tipi di Carte Posseduti", "Carte Comprate", tasto INVIO |
-| recipe_screens | 17 | `tools/ui_textures/recipe_screens.py` | deck/recipe_view_i.ehp, title_menu/title_menu_i.ehp, database/limitlist.ehp | linguette Personaggio / Utente / Scaricata / Limitata / Semi-limitata / Vietata / Scambio e pannelli ricette |
-| vs_screen | 14 | `tools/ui_textures/vs_screen.py` | duel/start/start_e.ehp (membri _i), start_all.ehp, start_i.ehp | banner DUEL / NORMAL / TAG, bagliori, "Modalità ...", "n A GIOCARE", "n Duello", foglio sasso-carta-forbici (VITTORIA/SCONFITTA/PAREGGIO), foglio giocatori ("n° GIOCATORE") |
-| duel_texts | 15 | `tools/ui_textures/duel_texts.py` | duel/basic_ii.ehp | Catena · TURNO (blu/rosso) · TOCCA AL GIOCATORE SUCCESSIVO (spezzata su 2 texture) · INIZIA IL DUELLO · Attacco Diretto! · foglio numeri `card_icon03` (vedi B4) |
-| tutorial | 6 | `tools/ui_textures/tutorial.py` | tutorial/tutorial_i.ehp (tuto_duelimg01..06) | illustrazione del dialogo di attivazione (testi, bottoni SI/NO, carta piccola) + 5 cartine con disco del tipo |
+| fogli_icone | 8 | `tools/ui_textures/fogli_icone.py` | ? |  |
+| lettere_esito | 23 | `tools/ui_textures/lettere_esito.py` | ? |  |
+| menu_liste | 6 | `tools/ui_textures/menu_liste.py` | ? |  |
+| schede_deck | 16 | `tools/ui_textures/schede_deck.py` | ? |  |
+| schede_ricette | 17 | `tools/ui_textures/schede_ricette.py` | ? |  |
+| schermata_vs | 14 | `tools/ui_textures/schermata_vs.py` | ? |  |
+| scritte_duello | 15 | `tools/ui_textures/scritte_duello.py` | ? |  |
+| tutorial | 6 | `tools/ui_textures/tutorial.py` | tutorial/tutorial_i.ehp (tuto_duelimg01..06) | illustration of the activation dialogue (texts, YES/NO buttons, small card) + 5 maps with the type disc |
 
-Regole di qualita' (valgono per ogni lingua): lettere regolari, mai deformate una per una; stessa area dell'originale; niente sfocature; il testo e' quello dell'originale della lingua (si correggono solo errori evidenti: residui di altre lingue, accenti); pixel art **non** levigata senza conferma; geometrie sempre misurate sull'originale.
+Quality rules (valid for every language): regular letters, never deformed one by one; same area as the original; no blur; the text is that of the language's original (only obvious errors are corrected: leftovers from other languages, accents); pixel art is **not** smoothed without confirmation; geometries always measured on the original.
 
-### Testi disegnati: originale -> HD
-Tabella letta a occhio, texture per texture: `docs/changes_it/texture_texts_it.md`. Differenze rispetto all'originale: `TAUSCHEN`/`Tauschen` -> `SCAMBIO`/`Scambio`, `Fusione` -> `Fusion`; tutto il resto riscrive le stesse parole.
+### Drawn texts: original -> HD
+Table read by eye, texture by texture: `docs/changes_it/texture_texts_it.md`. Differences from the original: `TAUSCHEN`/`Tauschen` -> `SCAMBIO`/`Scambio`, `Fusione` -> `Fusion`; everything else rewrites the same words.
 
-### Elenco di ogni texture
-(tutte le 105 righe, da `ui_textures.csv`)
+### List of every texture
+(all 105 rows, from `ui_textures.csv`)
 
-| file nel pack | hash | famiglia | originale px | HD px | tipo | origine ISO |
+| file in the pack | hash | family | original px | HD px | type | ISO origin |
 |---|---|---|---|---|---|---|
-| ui_it/icon_sheets/all_i__icon04.png | 0f47adc6 | icon_sheets | 128x128 | 512x512 | SPECIFICA | deck/all_i.ehp:icon04.gim |
-| ui_it/icon_sheets/all_i__panel.png | 51288b63 | icon_sheets | 256x256 | 1024x1024 | SPECIFICA | shop/all_i.ehp:panel.gim |
-| ui_it/icon_sheets/all_i__s_pack.png | 5f349a93 | icon_sheets | 256x256 | 1024x1024 | SPECIFICA | shop/all_i.ehp:s_pack.gim |
-| ui_it/icon_sheets/always_bri_ita__pda_pack01.png | e5169419 | icon_sheets | 512x256 | 2048x1024 | SPECIFICA | field/always_bri_ita.ehp:pda_pack01.gim; field/always_fra_ita.ehp:pda_pack01.gim; field/always_ger_ita.ehp:pda_pack01.gim |
-| ui_it/icon_sheets/cardalbum__icon06_i.png | aaef4267 | icon_sheets | 128x128 | 512x512 | SPECIFICA | database/cardalbum.ehp:icon06_i.gim; deck/all_i.ehp:icon06.gim; field/always_bri_ita.ehp:card_icon06.gim |
-| ui_it/icon_sheets/cardalbum__ocglist_i.png | 295c8b9c | icon_sheets | 128x64 | 512x256 | NEUTRA | database/cardalbum.ehp:ocglist_e.gim; database/cardalbum.ehp:ocglist_f.gim; database/cardalbum.ehp:ocglist_g.gim |
-| ui_it/icon_sheets/title_menu_i__mein_menu00.png | 22692070 | icon_sheets | 128x64 | 512x256 | SPECIFICA | title_menu/title_menu_i.ehp:mein_menu00.gim |
-| ui_it/icon_sheets/title_menu_i__trnsmt01.png | bdc35d0d | icon_sheets | 256x128 | 1024x512 | SPECIFICA | title_menu/title_menu_i.ehp:trnsmt01.gim |
-| ui_it/result_letters/basic_ii__duel_draw100002.png | 60e58b0c | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_draw100002.gim; duel/basic_fi.ehp:duel_draw100002.gim; duel/basic_gi.ehp:duel_draw100002.gim |
-| ui_it/result_letters/basic_ii__duel_draw100004.png | ce971331 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_draw100004.gim; duel/basic_fi.ehp:duel_draw100004.gim; duel/basic_gi.ehp:duel_draw100004.gim |
-| ui_it/result_letters/basic_ii__duel_draw100006.png | d2e20c6c | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_draw100006.gim; duel/basic_fi.ehp:duel_draw100006.gim; duel/basic_gi.ehp:duel_draw100006.gim |
-| ui_it/result_letters/basic_ii__duel_draw100008.png | 1deeba15 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_draw100008.gim; duel/basic_fi.ehp:duel_draw100008.gim; duel/basic_gi.ehp:duel_draw100008.gim |
-| ui_it/result_letters/basic_ii__duel_draw100010.png | 9a3bba37 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_draw100010.gim; duel/basic_fi.ehp:duel_draw100010.gim; duel/basic_gi.ehp:duel_draw100010.gim |
-| ui_it/result_letters/basic_ii__duel_draw100012.png | f869c721 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_draw100012.gim; duel/basic_fi.ehp:duel_draw100012.gim; duel/basic_gi.ehp:duel_draw100012.gim |
-| ui_it/result_letters/basic_ii__duel_draw100014.png | 3d00ca65 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_draw100014.gim; duel/basic_fi.ehp:duel_draw100014.gim; duel/basic_gi.ehp:duel_draw100014.gim |
-| ui_it/result_letters/basic_ii__duel_lose100002.png | 23e6f72d | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_lose100002.gim; duel/basic_fi.ehp:duel_lose100002.gim; duel/basic_gi.ehp:duel_lose100002.gim |
-| ui_it/result_letters/basic_ii__duel_lose100004.png | aa67eb3a | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_lose100004.gim; duel/basic_fi.ehp:duel_lose100004.gim; duel/basic_gi.ehp:duel_lose100004.gim |
-| ui_it/result_letters/basic_ii__duel_lose100006.png | 0b9f2dfd | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_lose100006.gim; duel/basic_fi.ehp:duel_lose100006.gim; duel/basic_gi.ehp:duel_lose100006.gim |
-| ui_it/result_letters/basic_ii__duel_lose100008.png | 8c1ca0ea | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_lose100008.gim; duel/basic_fi.ehp:duel_lose100008.gim; duel/basic_gi.ehp:duel_lose100008.gim |
-| ui_it/result_letters/basic_ii__duel_lose100010.png | f7a3a889 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_lose100010.gim; duel/basic_fi.ehp:duel_lose100010.gim; duel/basic_gi.ehp:duel_lose100010.gim |
-| ui_it/result_letters/basic_ii__duel_lose100012.png | a3668e35 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_lose100012.gim; duel/basic_fi.ehp:duel_lose100012.gim; duel/basic_gi.ehp:duel_lose100012.gim |
-| ui_it/result_letters/basic_ii__duel_lose100014.png | be8d27c2 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_lose100014.gim; duel/basic_fi.ehp:duel_lose100014.gim; duel/basic_gi.ehp:duel_lose100014.gim |
-| ui_it/result_letters/basic_ii__duel_lose100016.png | 48fccb29 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_lose100016.gim; duel/basic_fi.ehp:duel_lose100016.gim; duel/basic_gi.ehp:duel_lose100016.gim |
-| ui_it/result_letters/basic_ii__duel_win100002.png | 00b45490 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_win100002.gim; duel/basic_fi.ehp:duel_win100002.gim; duel/basic_gi.ehp:duel_win100002.gim |
-| ui_it/result_letters/basic_ii__duel_win100004.png | d38eeaf8 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_win100004.gim; duel/basic_fi.ehp:duel_win100004.gim; duel/basic_gi.ehp:duel_win100004.gim |
-| ui_it/result_letters/basic_ii__duel_win100006.png | 64e53c06 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_win100006.gim; duel/basic_fi.ehp:duel_win100006.gim; duel/basic_gi.ehp:duel_win100006.gim |
-| ui_it/result_letters/basic_ii__duel_win100008.png | 6cb385d2 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_win100008.gim; duel/basic_fi.ehp:duel_win100008.gim; duel/basic_gi.ehp:duel_win100008.gim |
-| ui_it/result_letters/basic_ii__duel_win100010.png | ed0059c9 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_win100010.gim; duel/basic_fi.ehp:duel_win100010.gim; duel/basic_gi.ehp:duel_win100010.gim |
-| ui_it/result_letters/basic_ii__duel_win100012.png | 8be1d58a | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_win100012.gim; duel/basic_fi.ehp:duel_win100012.gim; duel/basic_gi.ehp:duel_win100012.gim |
-| ui_it/result_letters/basic_ii__duel_win100014.png | 145d1dd3 | result_letters | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:duel_win100014.gim; duel/basic_fi.ehp:duel_win100014.gim; duel/basic_gi.ehp:duel_win100014.gim |
-| ui_it/result_letters/basic_ii__duel_win100016.png | 736cf75e | result_letters | 64x32 | 256x128 | SPECIFICA | duel/basic_bi.ehp:duel_win100016.gim; duel/basic_fi.ehp:duel_win100016.gim; duel/basic_gi.ehp:duel_win100016.gim |
-| ui_it/menu_lists/always_bri_ita__story_sys02.png | 5fc07dd2 | menu_lists | 256x128 | 1024x512 | SPECIFICA | field/always_bri_ita.ehp:story_sys02.gim; field/always_fra_ita.ehp:story_sys02.gim; field/always_ger_ita.ehp:story_sys02.gim |
-| ui_it/menu_lists/result_i__menu01.png | 23b37425 | menu_lists | 256x64 | 1024x256 | SPECIFICA | duel/result/result_i.ehp:menu01.gim |
-| ui_it/menu_lists/result_i__menu02.png | aeddb824 | menu_lists | 256x128 | 1024x512 | SPECIFICA | duel/result/result_i.ehp:menu02.gim |
-| ui_it/menu_lists/title_menu_i__m_menu_title01.png | cfe8de2a | menu_lists | 256x128 | 1024x512 | SPECIFICA | title_menu/title_menu_i.ehp:m_menu_title01.gim |
-| ui_it/menu_lists/title_menu_i__press_start0003.png | 747668a4 | menu_lists | 256x16 | 1024x64 | SPECIFICA | title_menu/title_menu_i.ehp:press_start0003.gim |
-| ui_it/menu_lists/title_menu_i__trnsmt02.png | 7f3a4012 | menu_lists | 256x256 | 1024x1024 | SPECIFICA | title_menu/title_menu_i.ehp:trnsmt02.gim |
-| ui_it/deck_screens/all_i__d_window00008.png | e6b24eae | deck_screens | 128x32 | 512x128 | SPECIFICA | deck/all_i.ehp:d_window00008.gim |
-| ui_it/deck_screens/all_i__d_window00016.png | 27153d30 | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_i.ehp:d_window00016.gim |
-| ui_it/deck_screens/all_i__d_window00024.png | fd0f9c3b | deck_screens | 64x32 | 256x128 | NEUTRA | deck/all_e.ehp:d_window00024.gim; deck/all_f.ehp:d_window00024.gim; deck/all_g.ehp:d_window00024.gim |
-| ui_it/deck_screens/all_i__d_window00031.png | b77db24b | deck_screens | 64x32 | 256x128 | NEUTRA | deck/all_e.ehp:d_window00031.gim; deck/all_f.ehp:d_window00031.gim; deck/all_g.ehp:d_window00031.gim |
-| ui_it/deck_screens/all_i__d_window00033.png | 339f25bd | deck_screens | 256x32 | 1024x128 | SPECIFICA | deck/all_i.ehp:d_window00033.gim |
-| ui_it/deck_screens/all_i__d_window00034.png | 1659d75e | deck_screens | 256x32 | 1024x128 | NEUTRA | deck/all_e.ehp:d_window00034.gim; deck/all_f.ehp:d_window00034.gim; deck/all_g.ehp:d_window00034.gim |
-| ui_it/deck_screens/all_i__d_window00051.png | cefa3d7e | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_i.ehp:d_window00051.gim |
-| ui_it/deck_screens/all_i__d_window00062.png | f5fd73f9 | deck_screens | 128x32 | 512x128 | SPECIFICA | deck/all_i.ehp:d_window00062.gim; labo/conv_machine.ehp:window_i0016.gim; title_menu/title_menu_i.ehp:t_window0015.gim |
-| ui_it/deck_screens/all_i__d_window00101.png | 22ebca63 | deck_screens | 64x32 | 256x128 | SPECIFICA | deck/all_i.ehp:d_window00101.gim; labo/rental.ehp:window_i0008.gim |
-| ui_it/deck_screens/all_i__d_window00120.png | 4556da1f | deck_screens | 64x32 | 256x128 | NEUTRA | deck/all_e.ehp:d_window00120.gim; deck/all_f.ehp:d_window00120.gim; deck/all_g.ehp:d_window00120.gim |
-| ui_it/deck_screens/all_i__tab_title.png | 6852c8c2 | deck_screens | 256x32 | 1024x128 | SPECIFICA | shop/all_i.ehp:tab_title.gim |
-| ui_it/deck_screens/conv_machine__window_i0009.png | 6ca9eba7 | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/conv_machine.ehp:window_i0009.gim; labo/conv_machine.ehp:window_i0026.gim |
-| ui_it/deck_screens/conv_machine__window_i0022.png | ada2c664 | deck_screens | 256x32 | 1024x128 | NEUTRA | labo/conv_machine.ehp:window_f0022.gim; labo/conv_machine.ehp:window_g0022.gim; labo/conv_machine.ehp:window_i0022.gim |
-| ui_it/deck_screens/password__key_i0027.png | 37603c6b | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/password.ehp:key_i0027.gim |
-| ui_it/deck_screens/rental__window_i0015.png | fee49520 | deck_screens | 128x32 | 512x128 | SPECIFICA | labo/rental.ehp:window_i0015.gim; labo/rental.ehp:window_s0015.gim |
-| ui_it/deck_screens/rental__window_i0026.png | d4ea2e3a | deck_screens | 64x32 | 256x128 | SPECIFICA | labo/rental.ehp:window_i0026.gim |
-| ui_it/recipe_screens/duelrecord__parts_i.png | 4e51e475 | recipe_screens | 128x64 | 512x256 | SPECIFICA | database/duelrecord.ehp:parts_i.gim |
-| ui_it/recipe_screens/limitlist__window_i0002.png | 6c94dcad | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_i0002.gim |
-| ui_it/recipe_screens/limitlist__window_i0004.png | 9acba8ec | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_i0004.gim |
-| ui_it/recipe_screens/limitlist__window_i0012.png | 5c0e1d7a | recipe_screens | 128x32 | 512x128 | SPECIFICA | database/limitlist.ehp:window_i0012.gim |
-| ui_it/recipe_screens/recipe_view_i__recipe010002.png | 763a4766 | recipe_screens | 256x256 | 1024x1024 | NEUTRA | deck/recipe_view_e.ehp:recipe010002.gim; deck/recipe_view_f.ehp:recipe010002.gim; deck/recipe_view_g.ehp:recipe010002.gim |
-| ui_it/recipe_screens/recipe_view_i__recipe010004.png | b2427f09 | recipe_screens | 256x64 | 1024x256 | SPECIFICA | deck/recipe_view_e.ehp:recipe010004.gim; deck/recipe_view_f.ehp:recipe010004.gim; deck/recipe_view_i.ehp:recipe010004.gim |
-| ui_it/recipe_screens/recipe_view_i__recipe010006.png | 44c8b170 | recipe_screens | 256x64 | 1024x256 | NEUTRA | deck/recipe_view_e.ehp:recipe010006.gim; deck/recipe_view_f.ehp:recipe010006.gim; deck/recipe_view_g.ehp:recipe010006.gim |
-| ui_it/recipe_screens/recipe_view_i__recipe010008.png | 9b52cd0c | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_i.ehp:recipe010008.gim; title_menu/title_menu_i.ehp:recipe_sel00002.gim |
-| ui_it/recipe_screens/recipe_view_i__recipe010015.png | 9d53d71b | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_i.ehp:recipe010015.gim; title_menu/title_menu_i.ehp:recipe_sel00009.gim |
-| ui_it/recipe_screens/recipe_view_i__recipe010027.png | eb6d8202 | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_i.ehp:recipe010027.gim; title_menu/title_menu_i.ehp:recipe_sel00020.gim |
-| ui_it/recipe_screens/recipe_view_i__recipe010029.png | 29e9a88e | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_i.ehp:recipe010029.gim; title_menu/title_menu_i.ehp:recipe_sel00022.gim |
-| ui_it/recipe_screens/recipe_view_i__recipe010031.png | 4ceb96c4 | recipe_screens | 128x32 | 512x128 | SPECIFICA | deck/recipe_view_i.ehp:recipe010031.gim; title_menu/title_menu_i.ehp:recipe_sel00024.gim |
-| ui_it/recipe_screens/title_menu_i__dmenu_recipe.png | e1ba3fc9 | recipe_screens | 128x32 | 512x128 | NEUTRA | title_menu/title_menu_e.ehp:dmenu_recipe.gim; title_menu/title_menu_f.ehp:dmenu_recipe.gim; title_menu/title_menu_g.ehp:dmenu_recipe.gim |
-| ui_it/recipe_screens/title_menu_i__recipe_panel.png | 35c103aa | recipe_screens | 128x128 | 512x512 | NEUTRA | title_menu/title_menu_e.ehp:recipe_panel.gim; title_menu/title_menu_f.ehp:recipe_panel.gim; title_menu/title_menu_g.ehp:recipe_panel.gim |
-| ui_it/recipe_screens/title_menu_i__recipe_sel00033.png | 13e83af2 | recipe_screens | 128x32 | 512x128 | SPECIFICA | title_menu/title_menu_i.ehp:recipe_sel00033.gim |
-| ui_it/recipe_screens/title_menu_i__t_window0008.png | edf9b615 | recipe_screens | 64x32 | 256x128 | SPECIFICA | title_menu/title_menu_i.ehp:t_window0008.gim |
-| ui_it/recipe_screens/title_menu_i__t_window0026.png | 50bfc4e3 | recipe_screens | 64x32 | 256x128 | SPECIFICA | title_menu/title_menu_i.ehp:t_window0026.gim |
-| ui_it/vs_screen/start_all__jyanken20_i0005.png | 84daf8b2 | vs_screen | 256x32 | 1024x128 | SPECIFICA | duel/start/start_all.ehp:jyanken20_i0005.gim; duel/start/start_e.ehp:jyanken20_i0005.gim; duel/start/start_f.ehp:jyanken20_i0005.gim |
-| ui_it/vs_screen/start_all__jyanken20_i0007.png | f5bbbb53 | vs_screen | 256x32 | 1024x128 | SPECIFICA | duel/start/start_all.ehp:jyanken20_i0007.gim; duel/start/start_e.ehp:jyanken20_i0007.gim; duel/start/start_f.ehp:jyanken20_i0007.gim |
-| ui_it/vs_screen/start_all__vs_much1_i0001.png | a50e57e6 | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much1_i0001.gim; duel/start/start_e.ehp:vs_much1_i0001.gim; duel/start/start_f.ehp:vs_much1_i0001.gim |
-| ui_it/vs_screen/start_all__vs_much2_i0001.png | 8f118f8a | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much2_i0001.gim; duel/start/start_e.ehp:vs_much2_i0001.gim; duel/start/start_f.ehp:vs_much2_i0001.gim |
-| ui_it/vs_screen/start_all__vs_much3_i0001.png | ae083f33 | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_all.ehp:vs_much3_i0001.gim; duel/start/start_e.ehp:vs_much3_i0001.gim; duel/start/start_f.ehp:vs_much3_i0001.gim |
-| ui_it/vs_screen/start_e__d_menu01_i.png | f098096b | vs_screen | 256x256 | 1024x1024 | SPECIFICA | duel/start/start_e.ehp:d_menu01_i.gim; duel/start/start_f.ehp:d_menu01_i.gim; duel/start/start_g.ehp:d_menu01_i.gim |
-| ui_it/vs_screen/start_e__vs_bg01_1_i0005.png | 50201760 | vs_screen | 256x32 | 1024x128 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_i0005.gim; duel/start/start_f.ehp:vs_bg01_1_i0005.gim; duel/start/start_g.ehp:vs_bg01_1_i0005.gim |
-| ui_it/vs_screen/start_e__vs_bg01_1_i0007.png | 92f2114b | vs_screen | 256x64 | 1024x256 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_i0007.gim; duel/start/start_f.ehp:vs_bg01_1_i0007.gim; duel/start/start_g.ehp:vs_bg01_1_i0007.gim |
-| ui_it/vs_screen/start_e__vs_bg01_1_i0008.png | 5fb4b6dc | vs_screen | 256x64 | 1024x256 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_i0008.gim; duel/start/start_f.ehp:vs_bg01_1_i0008.gim; duel/start/start_g.ehp:vs_bg01_1_i0008.gim |
-| ui_it/vs_screen/start_e__vs_bg01_1_i0012.png | 01c81cd4 | vs_screen | 128x32 | 512x128 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_i0012.gim; duel/start/start_f.ehp:vs_bg01_1_i0012.gim; duel/start/start_g.ehp:vs_bg01_1_i0012.gim |
-| ui_it/vs_screen/start_e__vs_bg01_1_i0014.png | 413ccf1d | vs_screen | 128x64 | 512x256 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_1_i0014.gim; duel/start/start_f.ehp:vs_bg01_1_i0014.gim; duel/start/start_g.ehp:vs_bg01_1_i0014.gim |
-| ui_it/vs_screen/start_e__vs_bg01_2_i0001.png | 005ca7af | vs_screen | 128x32 | 512x128 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_2_i0001.gim; duel/start/start_f.ehp:vs_bg01_2_i0001.gim; duel/start/start_g.ehp:vs_bg01_2_i0001.gim |
-| ui_it/vs_screen/start_e__vs_bg01_2_i0004.png | 6b0b0fbd | vs_screen | 128x16 | 512x64 | SPECIFICA | duel/start/start_e.ehp:vs_bg01_2_i0004.gim; duel/start/start_f.ehp:vs_bg01_2_i0004.gim; duel/start/start_g.ehp:vs_bg01_2_i0004.gim |
-| ui_it/vs_screen/start_i__jnk_card01.png | 38e5ae61 | vs_screen | 512x256 | 2048x1024 | SPECIFICA | duel/start/start_i.ehp:jnk_card01.gim |
-| ui_it/duel_texts/basic_ii__card_icon03.png | 376925c7 | duel_texts | 128x128 | 512x512 | SPECIFICA | duel/basic_bi.ehp:card_icon03.gim; duel/basic_fi.ehp:card_icon03.gim; duel/basic_gi.ehp:card_icon03.gim |
-| ui_it/duel_texts/basic_ii__card_side.png | dfbaa424 | duel_texts | 64x32 | 256x128 | NEUTRA | duel/basic_be.ehp:card_side.gim; duel/basic_bf.ehp:card_side.gim; duel/basic_bg.ehp:card_side.gim |
-| ui_it/duel_texts/basic_ii__chain010003.png | 235b1041 | duel_texts | 64x32 | 256x128 | SPECIFICA | duel/basic_bi.ehp:chain010003.gim; duel/basic_fi.ehp:chain010003.gim; duel/basic_gi.ehp:chain010003.gim |
-| ui_it/duel_texts/basic_ii__chain010005.png | 79b7261f | duel_texts | 128x32 | 512x128 | SPECIFICA | duel/basic_bi.ehp:chain010005.gim; duel/basic_fi.ehp:chain010005.gim; duel/basic_gi.ehp:chain010005.gim |
-| ui_it/duel_texts/basic_ii__dilect_atk00001.png | ba952e24 | duel_texts | 256x32 | 1024x128 | SPECIFICA | duel/basic_bi.ehp:dilect_atk00001.gim; duel/basic_fi.ehp:dilect_atk00001.gim; duel/basic_gi.ehp:dilect_atk00001.gim |
-| ui_it/duel_texts/basic_ii__dilect_atk00003.png | 58789f5c | duel_texts | 128x32 | 512x128 | SPECIFICA | duel/basic_bi.ehp:dilect_atk00003.gim; duel/basic_fi.ehp:dilect_atk00003.gim; duel/basic_gi.ehp:dilect_atk00003.gim |
-| ui_it/duel_texts/basic_ii__next_player0001.png | 8abf9d52 | duel_texts | 64x32 | 256x128 | SPECIFICA | duel/basic_bi.ehp:next_player0001.gim; duel/basic_fi.ehp:next_player0001.gim; duel/basic_gi.ehp:next_player0001.gim |
-| ui_it/duel_texts/basic_ii__next_player0002.png | 6bc72dfe | duel_texts | 256x32 | 1024x128 | SPECIFICA | duel/basic_bi.ehp:next_player0002.gim; duel/basic_fi.ehp:next_player0002.gim; duel/basic_gi.ehp:next_player0002.gim |
-| ui_it/duel_texts/basic_ii__next_player0004.png | 8a774ddd | duel_texts | 64x32 | 256x128 | SPECIFICA | duel/basic_bi.ehp:next_player0004.gim; duel/basic_fi.ehp:next_player0004.gim; duel/basic_gi.ehp:next_player0004.gim |
-| ui_it/duel_texts/basic_ii__next_player0005.png | 83cf47f4 | duel_texts | 256x32 | 1024x128 | SPECIFICA | duel/basic_bi.ehp:next_player0005.gim; duel/basic_fi.ehp:next_player0005.gim; duel/basic_gi.ehp:next_player0005.gim |
-| ui_it/duel_texts/basic_ii__score-top100011.png | 36655dfa | duel_texts | 32x32 | 128x128 | SPECIFICA | duel/basic_bi.ehp:score-top100011.gim; duel/basic_bs.ehp:score-top100011.gim; duel/basic_fi.ehp:score-top100011.gim |
-| ui_it/duel_texts/basic_ii__score-top100013.png | 97d1b9a7 | duel_texts | 32x32 | 128x128 | SPECIFICA | duel/basic_bi.ehp:score-top100013.gim; duel/basic_bs.ehp:score-top100013.gim; duel/basic_fi.ehp:score-top100013.gim |
-| ui_it/duel_texts/basic_ii__start_duel10001.png | faf5cb43 | duel_texts | 64x64 | 256x256 | SPECIFICA | duel/basic_bi.ehp:start_duel10001.gim; duel/basic_fi.ehp:start_duel10001.gim; duel/basic_gi.ehp:start_duel10001.gim |
-| ui_it/duel_texts/basic_ii__start_duel10002.png | 04bb7f71 | duel_texts | 256x64 | 1024x256 | SPECIFICA | duel/basic_bi.ehp:start_duel10002.gim; duel/basic_fi.ehp:start_duel10002.gim; duel/basic_gi.ehp:start_duel10002.gim |
-| ui_it/duel_texts/basic_ii__start_duel10005.png | ad550ab4 | duel_texts | 128x32 | 512x128 | SPECIFICA | duel/basic_bi.ehp:start_duel10005.gim; duel/basic_fi.ehp:start_duel10005.gim; duel/basic_gi.ehp:start_duel10005.gim |
-| ui_it/tutorial/tutorial_i__tuto_duelimg01.png | 7dd7d0f0 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_i.ehp:tuto_duelimg01.gim |
-| ui_it/tutorial/tutorial_i__tuto_duelimg02.png | 71437f61 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_i.ehp:tuto_duelimg02.gim |
-| ui_it/tutorial/tutorial_i__tuto_duelimg03.png | f78156cc | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_i.ehp:tuto_duelimg03.gim |
-| ui_it/tutorial/tutorial_i__tuto_duelimg04.png | ee87c47c | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_i.ehp:tuto_duelimg04.gim |
-| ui_it/tutorial/tutorial_i__tuto_duelimg05.png | 866124a4 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_i.ehp:tuto_duelimg05.gim |
-| ui_it/tutorial/tutorial_i__tuto_duelimg06.png | 030db8b7 | tutorial | 256x256 | 1024x1024 | SPECIFICA | tutorial/tutorial_i.ehp:tuto_duelimg06.gim |
+| ui_it/fogli_icone/all_i__icon04.png | 0f47adc6 | fogli_icone | 128x128 | 512x512 | SPECIFIC | deck/all_i.ehp:icon04.gim |
+| ui_it/fogli_icone/all_i__panel.png | 51288b63 | fogli_icone | 256x256 | 1024x1024 | SPECIFIC | shop/all_i.ehp:panel.gim |
+| ui_it/fogli_icone/all_i__s_pack.png | 5f349a93 | fogli_icone | 256x256 | 1024x1024 | SPECIFIC | shop/all_i.ehp:s_pack.gim |
+| ui_it/fogli_icone/always_bri_ita__pda_pack01.png | e5169419 | fogli_icone | 512x256 | 2048x1024 | SPECIFIC | field/always_bri_ita.ehp:pda_pack01.gim; field/always_fra_ita.ehp:pda_pack01.gim; field/always_ger_ita.ehp:pda_pack01.gim |
+| ui_it/fogli_icone/cardalbum__icon06_i.png | aaef4267 | fogli_icone | 128x128 | 512x512 | SPECIFIC | database/cardalbum.ehp:icon06_i.gim; deck/all_i.ehp:icon06.gim; field/always_bri_ita.ehp:card_icon06.gim |
+| ui_it/fogli_icone/cardalbum__ocglist_i.png | 295c8b9c | fogli_icone | 128x64 | 512x256 | NEUTRAL | database/cardalbum.ehp:ocglist_e.gim; database/cardalbum.ehp:ocglist_f.gim; database/cardalbum.ehp:ocglist_g.gim |
+| ui_it/fogli_icone/title_menu_i__mein_menu00.png | 22692070 | fogli_icone | 128x64 | 512x256 | SPECIFIC | title_menu/title_menu_i.ehp:mein_menu00.gim |
+| ui_it/fogli_icone/title_menu_i__trnsmt01.png | bdc35d0d | fogli_icone | 256x128 | 1024x512 | SPECIFIC | title_menu/title_menu_i.ehp:trnsmt01.gim |
+| ui_it/lettere_esito/basic_ii__duel_draw100002.png | 60e58b0c | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_draw100002.gim; duel/basic_fi.ehp:duel_draw100002.gim; duel/basic_gi.ehp:duel_draw100002.gim |
+| ui_it/lettere_esito/basic_ii__duel_draw100004.png | ce971331 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_draw100004.gim; duel/basic_fi.ehp:duel_draw100004.gim; duel/basic_gi.ehp:duel_draw100004.gim |
+| ui_it/lettere_esito/basic_ii__duel_draw100006.png | d2e20c6c | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_draw100006.gim; duel/basic_fi.ehp:duel_draw100006.gim; duel/basic_gi.ehp:duel_draw100006.gim |
+| ui_it/lettere_esito/basic_ii__duel_draw100008.png | 1deeba15 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_draw100008.gim; duel/basic_fi.ehp:duel_draw100008.gim; duel/basic_gi.ehp:duel_draw100008.gim |
+| ui_it/lettere_esito/basic_ii__duel_draw100010.png | 9a3bba37 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_draw100010.gim; duel/basic_fi.ehp:duel_draw100010.gim; duel/basic_gi.ehp:duel_draw100010.gim |
+| ui_it/lettere_esito/basic_ii__duel_draw100012.png | f869c721 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_draw100012.gim; duel/basic_fi.ehp:duel_draw100012.gim; duel/basic_gi.ehp:duel_draw100012.gim |
+| ui_it/lettere_esito/basic_ii__duel_draw100014.png | 3d00ca65 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_draw100014.gim; duel/basic_fi.ehp:duel_draw100014.gim; duel/basic_gi.ehp:duel_draw100014.gim |
+| ui_it/lettere_esito/basic_ii__duel_lose100002.png | 23e6f72d | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_lose100002.gim; duel/basic_fi.ehp:duel_lose100002.gim; duel/basic_gi.ehp:duel_lose100002.gim |
+| ui_it/lettere_esito/basic_ii__duel_lose100004.png | aa67eb3a | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_lose100004.gim; duel/basic_fi.ehp:duel_lose100004.gim; duel/basic_gi.ehp:duel_lose100004.gim |
+| ui_it/lettere_esito/basic_ii__duel_lose100006.png | 0b9f2dfd | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_lose100006.gim; duel/basic_fi.ehp:duel_lose100006.gim; duel/basic_gi.ehp:duel_lose100006.gim |
+| ui_it/lettere_esito/basic_ii__duel_lose100008.png | 8c1ca0ea | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_lose100008.gim; duel/basic_fi.ehp:duel_lose100008.gim; duel/basic_gi.ehp:duel_lose100008.gim |
+| ui_it/lettere_esito/basic_ii__duel_lose100010.png | f7a3a889 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_lose100010.gim; duel/basic_fi.ehp:duel_lose100010.gim; duel/basic_gi.ehp:duel_lose100010.gim |
+| ui_it/lettere_esito/basic_ii__duel_lose100012.png | a3668e35 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_lose100012.gim; duel/basic_fi.ehp:duel_lose100012.gim; duel/basic_gi.ehp:duel_lose100012.gim |
+| ui_it/lettere_esito/basic_ii__duel_lose100014.png | be8d27c2 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_lose100014.gim; duel/basic_fi.ehp:duel_lose100014.gim; duel/basic_gi.ehp:duel_lose100014.gim |
+| ui_it/lettere_esito/basic_ii__duel_lose100016.png | 48fccb29 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_lose100016.gim; duel/basic_fi.ehp:duel_lose100016.gim; duel/basic_gi.ehp:duel_lose100016.gim |
+| ui_it/lettere_esito/basic_ii__duel_win100002.png | 00b45490 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_win100002.gim; duel/basic_fi.ehp:duel_win100002.gim; duel/basic_gi.ehp:duel_win100002.gim |
+| ui_it/lettere_esito/basic_ii__duel_win100004.png | d38eeaf8 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_win100004.gim; duel/basic_fi.ehp:duel_win100004.gim; duel/basic_gi.ehp:duel_win100004.gim |
+| ui_it/lettere_esito/basic_ii__duel_win100006.png | 64e53c06 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_win100006.gim; duel/basic_fi.ehp:duel_win100006.gim; duel/basic_gi.ehp:duel_win100006.gim |
+| ui_it/lettere_esito/basic_ii__duel_win100008.png | 6cb385d2 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_win100008.gim; duel/basic_fi.ehp:duel_win100008.gim; duel/basic_gi.ehp:duel_win100008.gim |
+| ui_it/lettere_esito/basic_ii__duel_win100010.png | ed0059c9 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_win100010.gim; duel/basic_fi.ehp:duel_win100010.gim; duel/basic_gi.ehp:duel_win100010.gim |
+| ui_it/lettere_esito/basic_ii__duel_win100012.png | 8be1d58a | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_win100012.gim; duel/basic_fi.ehp:duel_win100012.gim; duel/basic_gi.ehp:duel_win100012.gim |
+| ui_it/lettere_esito/basic_ii__duel_win100014.png | 145d1dd3 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:duel_win100014.gim; duel/basic_fi.ehp:duel_win100014.gim; duel/basic_gi.ehp:duel_win100014.gim |
+| ui_it/lettere_esito/basic_ii__duel_win100016.png | 736cf75e | lettere_esito | 64x32 | 256x128 | SPECIFIC | duel/basic_bi.ehp:duel_win100016.gim; duel/basic_fi.ehp:duel_win100016.gim; duel/basic_gi.ehp:duel_win100016.gim |
+| ui_it/menu_liste/always_bri_ita__story_sys02.png | 5fc07dd2 | menu_liste | 256x128 | 1024x512 | SPECIFIC | field/always_bri_ita.ehp:story_sys02.gim; field/always_fra_ita.ehp:story_sys02.gim; field/always_ger_ita.ehp:story_sys02.gim |
+| ui_it/menu_liste/result_i__menu01.png | 23b37425 | menu_liste | 256x64 | 1024x256 | SPECIFIC | duel/result/result_i.ehp:menu01.gim |
+| ui_it/menu_liste/result_i__menu02.png | aeddb824 | menu_liste | 256x128 | 1024x512 | SPECIFIC | duel/result/result_i.ehp:menu02.gim |
+| ui_it/menu_liste/title_menu_i__m_menu_title01.png | cfe8de2a | menu_liste | 256x128 | 1024x512 | SPECIFIC | title_menu/title_menu_i.ehp:m_menu_title01.gim |
+| ui_it/menu_liste/title_menu_i__press_start0003.png | 747668a4 | menu_liste | 256x16 | 1024x64 | SPECIFIC | title_menu/title_menu_i.ehp:press_start0003.gim |
+| ui_it/menu_liste/title_menu_i__trnsmt02.png | 7f3a4012 | menu_liste | 256x256 | 1024x1024 | SPECIFIC | title_menu/title_menu_i.ehp:trnsmt02.gim |
+| ui_it/schede_deck/all_i__d_window00008.png | e6b24eae | schede_deck | 128x32 | 512x128 | SPECIFIC | deck/all_i.ehp:d_window00008.gim |
+| ui_it/schede_deck/all_i__d_window00016.png | 27153d30 | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_i.ehp:d_window00016.gim |
+| ui_it/schede_deck/all_i__d_window00024.png | fd0f9c3b | schede_deck | 64x32 | 256x128 | NEUTRAL | deck/all_e.ehp:d_window00024.gim; deck/all_f.ehp:d_window00024.gim; deck/all_g.ehp:d_window00024.gim |
+| ui_it/schede_deck/all_i__d_window00031.png | b77db24b | schede_deck | 64x32 | 256x128 | NEUTRAL | deck/all_e.ehp:d_window00031.gim; deck/all_f.ehp:d_window00031.gim; deck/all_g.ehp:d_window00031.gim |
+| ui_it/schede_deck/all_i__d_window00033.png | 339f25bd | schede_deck | 256x32 | 1024x128 | SPECIFIC | deck/all_i.ehp:d_window00033.gim |
+| ui_it/schede_deck/all_i__d_window00034.png | 1659d75e | schede_deck | 256x32 | 1024x128 | NEUTRAL | deck/all_e.ehp:d_window00034.gim; deck/all_f.ehp:d_window00034.gim; deck/all_g.ehp:d_window00034.gim |
+| ui_it/schede_deck/all_i__d_window00051.png | cefa3d7e | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_i.ehp:d_window00051.gim |
+| ui_it/schede_deck/all_i__d_window00062.png | f5fd73f9 | schede_deck | 128x32 | 512x128 | SPECIFIC | deck/all_i.ehp:d_window00062.gim; labo/conv_machine.ehp:window_i0016.gim; title_menu/title_menu_i.ehp:t_window0015.gim |
+| ui_it/schede_deck/all_i__d_window00101.png | 22ebca63 | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_i.ehp:d_window00101.gim; labo/rental.ehp:window_i0008.gim |
+| ui_it/schede_deck/all_i__d_window00120.png | 4556da1f | schede_deck | 64x32 | 256x128 | NEUTRAL | deck/all_e.ehp:d_window00120.gim; deck/all_f.ehp:d_window00120.gim; deck/all_g.ehp:d_window00120.gim |
+| ui_it/schede_deck/all_i__tab_title.png | 6852c8c2 | schede_deck | 256x32 | 1024x128 | SPECIFIC | shop/all_i.ehp:tab_title.gim |
+| ui_it/schede_deck/conv_machine__window_i0009.png | 6ca9eba7 | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/conv_machine.ehp:window_i0009.gim; labo/conv_machine.ehp:window_i0026.gim |
+| ui_it/schede_deck/conv_machine__window_i0022.png | ada2c664 | schede_deck | 256x32 | 1024x128 | NEUTRAL | labo/conv_machine.ehp:window_f0022.gim; labo/conv_machine.ehp:window_g0022.gim; labo/conv_machine.ehp:window_i0022.gim |
+| ui_it/schede_deck/password__key_i0027.png | 37603c6b | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/password.ehp:key_i0027.gim |
+| ui_it/schede_deck/rental__window_i0015.png | fee49520 | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/rental.ehp:window_i0015.gim; labo/rental.ehp:window_s0015.gim |
+| ui_it/schede_deck/rental__window_i0026.png | d4ea2e3a | schede_deck | 64x32 | 256x128 | SPECIFIC | labo/rental.ehp:window_i0026.gim |
+| ui_it/schede_ricette/duelrecord__parts_i.png | 4e51e475 | schede_ricette | 128x64 | 512x256 | SPECIFIC | database/duelrecord.ehp:parts_i.gim |
+| ui_it/schede_ricette/limitlist__window_i0002.png | 6c94dcad | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_i0002.gim |
+| ui_it/schede_ricette/limitlist__window_i0004.png | 9acba8ec | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_i0004.gim |
+| ui_it/schede_ricette/limitlist__window_i0012.png | 5c0e1d7a | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_i0012.gim |
+| ui_it/schede_ricette/recipe_view_i__recipe010002.png | 763a4766 | schede_ricette | 256x256 | 1024x1024 | NEUTRAL | deck/recipe_view_e.ehp:recipe010002.gim; deck/recipe_view_f.ehp:recipe010002.gim; deck/recipe_view_g.ehp:recipe010002.gim |
+| ui_it/schede_ricette/recipe_view_i__recipe010004.png | b2427f09 | schede_ricette | 256x64 | 1024x256 | SPECIFIC | deck/recipe_view_e.ehp:recipe010004.gim; deck/recipe_view_f.ehp:recipe010004.gim; deck/recipe_view_i.ehp:recipe010004.gim |
+| ui_it/schede_ricette/recipe_view_i__recipe010006.png | 44c8b170 | schede_ricette | 256x64 | 1024x256 | NEUTRAL | deck/recipe_view_e.ehp:recipe010006.gim; deck/recipe_view_f.ehp:recipe010006.gim; deck/recipe_view_g.ehp:recipe010006.gim |
+| ui_it/schede_ricette/recipe_view_i__recipe010008.png | 9b52cd0c | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_i.ehp:recipe010008.gim; title_menu/title_menu_i.ehp:recipe_sel00002.gim |
+| ui_it/schede_ricette/recipe_view_i__recipe010015.png | 9d53d71b | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_i.ehp:recipe010015.gim; title_menu/title_menu_i.ehp:recipe_sel00009.gim |
+| ui_it/schede_ricette/recipe_view_i__recipe010027.png | eb6d8202 | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_i.ehp:recipe010027.gim; title_menu/title_menu_i.ehp:recipe_sel00020.gim |
+| ui_it/schede_ricette/recipe_view_i__recipe010029.png | 29e9a88e | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_i.ehp:recipe010029.gim; title_menu/title_menu_i.ehp:recipe_sel00022.gim |
+| ui_it/schede_ricette/recipe_view_i__recipe010031.png | 4ceb96c4 | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_i.ehp:recipe010031.gim; title_menu/title_menu_i.ehp:recipe_sel00024.gim |
+| ui_it/schede_ricette/title_menu_i__dmenu_recipe.png | e1ba3fc9 | schede_ricette | 128x32 | 512x128 | NEUTRAL | title_menu/title_menu_e.ehp:dmenu_recipe.gim; title_menu/title_menu_f.ehp:dmenu_recipe.gim; title_menu/title_menu_g.ehp:dmenu_recipe.gim |
+| ui_it/schede_ricette/title_menu_i__recipe_panel.png | 35c103aa | schede_ricette | 128x128 | 512x512 | NEUTRAL | title_menu/title_menu_e.ehp:recipe_panel.gim; title_menu/title_menu_f.ehp:recipe_panel.gim; title_menu/title_menu_g.ehp:recipe_panel.gim |
+| ui_it/schede_ricette/title_menu_i__recipe_sel00033.png | 13e83af2 | schede_ricette | 128x32 | 512x128 | SPECIFIC | title_menu/title_menu_i.ehp:recipe_sel00033.gim |
+| ui_it/schede_ricette/title_menu_i__t_window0008.png | edf9b615 | schede_ricette | 64x32 | 256x128 | SPECIFIC | title_menu/title_menu_i.ehp:t_window0008.gim |
+| ui_it/schede_ricette/title_menu_i__t_window0026.png | 50bfc4e3 | schede_ricette | 64x32 | 256x128 | SPECIFIC | title_menu/title_menu_i.ehp:t_window0026.gim |
+| ui_it/schermata_vs/start_all__jyanken20_i0005.png | 84daf8b2 | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_all.ehp:jyanken20_i0005.gim; duel/start/start_e.ehp:jyanken20_i0005.gim; duel/start/start_f.ehp:jyanken20_i0005.gim |
+| ui_it/schermata_vs/start_all__jyanken20_i0007.png | f5bbbb53 | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_all.ehp:jyanken20_i0007.gim; duel/start/start_e.ehp:jyanken20_i0007.gim; duel/start/start_f.ehp:jyanken20_i0007.gim |
+| ui_it/schermata_vs/start_all__vs_much1_i0001.png | a50e57e6 | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much1_i0001.gim; duel/start/start_e.ehp:vs_much1_i0001.gim; duel/start/start_f.ehp:vs_much1_i0001.gim |
+| ui_it/schermata_vs/start_all__vs_much2_i0001.png | 8f118f8a | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much2_i0001.gim; duel/start/start_e.ehp:vs_much2_i0001.gim; duel/start/start_f.ehp:vs_much2_i0001.gim |
+| ui_it/schermata_vs/start_all__vs_much3_i0001.png | ae083f33 | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much3_i0001.gim; duel/start/start_e.ehp:vs_much3_i0001.gim; duel/start/start_f.ehp:vs_much3_i0001.gim |
+| ui_it/schermata_vs/start_e__d_menu01_i.png | f098096b | schermata_vs | 256x256 | 1024x1024 | SPECIFIC | duel/start/start_e.ehp:d_menu01_i.gim; duel/start/start_f.ehp:d_menu01_i.gim; duel/start/start_g.ehp:d_menu01_i.gim |
+| ui_it/schermata_vs/start_e__vs_bg01_1_i0005.png | 50201760 | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_i0005.gim; duel/start/start_f.ehp:vs_bg01_1_i0005.gim; duel/start/start_g.ehp:vs_bg01_1_i0005.gim |
+| ui_it/schermata_vs/start_e__vs_bg01_1_i0007.png | 92f2114b | schermata_vs | 256x64 | 1024x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_i0007.gim; duel/start/start_f.ehp:vs_bg01_1_i0007.gim; duel/start/start_g.ehp:vs_bg01_1_i0007.gim |
+| ui_it/schermata_vs/start_e__vs_bg01_1_i0008.png | 5fb4b6dc | schermata_vs | 256x64 | 1024x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_i0008.gim; duel/start/start_f.ehp:vs_bg01_1_i0008.gim; duel/start/start_g.ehp:vs_bg01_1_i0008.gim |
+| ui_it/schermata_vs/start_e__vs_bg01_1_i0012.png | 01c81cd4 | schermata_vs | 128x32 | 512x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_i0012.gim; duel/start/start_f.ehp:vs_bg01_1_i0012.gim; duel/start/start_g.ehp:vs_bg01_1_i0012.gim |
+| ui_it/schermata_vs/start_e__vs_bg01_1_i0014.png | 413ccf1d | schermata_vs | 128x64 | 512x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_i0014.gim; duel/start/start_f.ehp:vs_bg01_1_i0014.gim; duel/start/start_g.ehp:vs_bg01_1_i0014.gim |
+| ui_it/schermata_vs/start_e__vs_bg01_2_i0001.png | 005ca7af | schermata_vs | 128x32 | 512x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_2_i0001.gim; duel/start/start_f.ehp:vs_bg01_2_i0001.gim; duel/start/start_g.ehp:vs_bg01_2_i0001.gim |
+| ui_it/schermata_vs/start_e__vs_bg01_2_i0004.png | 6b0b0fbd | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_2_i0004.gim; duel/start/start_f.ehp:vs_bg01_2_i0004.gim; duel/start/start_g.ehp:vs_bg01_2_i0004.gim |
+| ui_it/schermata_vs/start_i__jnk_card01.png | 38e5ae61 | schermata_vs | 512x256 | 2048x1024 | SPECIFIC | duel/start/start_i.ehp:jnk_card01.gim |
+| ui_it/scritte_duello/basic_ii__card_icon03.png | 376925c7 | scritte_duello | 128x128 | 512x512 | SPECIFIC | duel/basic_bi.ehp:card_icon03.gim; duel/basic_fi.ehp:card_icon03.gim; duel/basic_gi.ehp:card_icon03.gim |
+| ui_it/scritte_duello/basic_ii__card_side.png | dfbaa424 | scritte_duello | 64x32 | 256x128 | NEUTRAL | duel/basic_be.ehp:card_side.gim; duel/basic_bf.ehp:card_side.gim; duel/basic_bg.ehp:card_side.gim |
+| ui_it/scritte_duello/basic_ii__chain010003.png | 235b1041 | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bi.ehp:chain010003.gim; duel/basic_fi.ehp:chain010003.gim; duel/basic_gi.ehp:chain010003.gim |
+| ui_it/scritte_duello/basic_ii__chain010005.png | 79b7261f | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bi.ehp:chain010005.gim; duel/basic_fi.ehp:chain010005.gim; duel/basic_gi.ehp:chain010005.gim |
+| ui_it/scritte_duello/basic_ii__dilect_atk00001.png | ba952e24 | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bi.ehp:dilect_atk00001.gim; duel/basic_fi.ehp:dilect_atk00001.gim; duel/basic_gi.ehp:dilect_atk00001.gim |
+| ui_it/scritte_duello/basic_ii__dilect_atk00003.png | 58789f5c | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bi.ehp:dilect_atk00003.gim; duel/basic_fi.ehp:dilect_atk00003.gim; duel/basic_gi.ehp:dilect_atk00003.gim |
+| ui_it/scritte_duello/basic_ii__next_player0001.png | 8abf9d52 | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bi.ehp:next_player0001.gim; duel/basic_fi.ehp:next_player0001.gim; duel/basic_gi.ehp:next_player0001.gim |
+| ui_it/scritte_duello/basic_ii__next_player0002.png | 6bc72dfe | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bi.ehp:next_player0002.gim; duel/basic_fi.ehp:next_player0002.gim; duel/basic_gi.ehp:next_player0002.gim |
+| ui_it/scritte_duello/basic_ii__next_player0004.png | 8a774ddd | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bi.ehp:next_player0004.gim; duel/basic_fi.ehp:next_player0004.gim; duel/basic_gi.ehp:next_player0004.gim |
+| ui_it/scritte_duello/basic_ii__next_player0005.png | 83cf47f4 | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bi.ehp:next_player0005.gim; duel/basic_fi.ehp:next_player0005.gim; duel/basic_gi.ehp:next_player0005.gim |
+| ui_it/scritte_duello/basic_ii__score-top100011.png | 36655dfa | scritte_duello | 32x32 | 128x128 | SPECIFIC | duel/basic_bi.ehp:score-top100011.gim; duel/basic_bs.ehp:score-top100011.gim; duel/basic_fi.ehp:score-top100011.gim |
+| ui_it/scritte_duello/basic_ii__score-top100013.png | 97d1b9a7 | scritte_duello | 32x32 | 128x128 | SPECIFIC | duel/basic_bi.ehp:score-top100013.gim; duel/basic_bs.ehp:score-top100013.gim; duel/basic_fi.ehp:score-top100013.gim |
+| ui_it/scritte_duello/basic_ii__start_duel10001.png | faf5cb43 | scritte_duello | 64x64 | 256x256 | SPECIFIC | duel/basic_bi.ehp:start_duel10001.gim; duel/basic_fi.ehp:start_duel10001.gim; duel/basic_gi.ehp:start_duel10001.gim |
+| ui_it/scritte_duello/basic_ii__start_duel10002.png | 04bb7f71 | scritte_duello | 256x64 | 1024x256 | SPECIFIC | duel/basic_bi.ehp:start_duel10002.gim; duel/basic_fi.ehp:start_duel10002.gim; duel/basic_gi.ehp:start_duel10002.gim |
+| ui_it/scritte_duello/basic_ii__start_duel10005.png | ad550ab4 | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bi.ehp:start_duel10005.gim; duel/basic_fi.ehp:start_duel10005.gim; duel/basic_gi.ehp:start_duel10005.gim |
+| ui_it/tutorial/tutorial_i__tuto_duelimg01.png | 7dd7d0f0 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_i.ehp:tuto_duelimg01.gim |
+| ui_it/tutorial/tutorial_i__tuto_duelimg02.png | 71437f61 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_i.ehp:tuto_duelimg02.gim |
+| ui_it/tutorial/tutorial_i__tuto_duelimg03.png | f78156cc | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_i.ehp:tuto_duelimg03.gim |
+| ui_it/tutorial/tutorial_i__tuto_duelimg04.png | ee87c47c | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_i.ehp:tuto_duelimg04.gim |
+| ui_it/tutorial/tutorial_i__tuto_duelimg05.png | 866124a4 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_i.ehp:tuto_duelimg05.gim |
+| ui_it/tutorial/tutorial_i__tuto_duelimg06.png | 030db8b7 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_i.ehp:tuto_duelimg06.gim |
 
-### Texture italiane senza controparte in `ui_fr` (19) e perche'
-13 sono neutre (stesso hash in tutte le lingue: pannelli ricette, linguette Side/Deck/Fusion Deck, barre, `card_side`...). 6 hanno wording locale nell'originale (`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `d_window00016`, `duelrecord parts`): l'italiano ha NUOVO / N / Fusion, il francese originale ha NEW / Fusion e ha gia' i suoi HD in `upscale_extra`. La linguetta dell'editor deck dice **Fusion** (non "Fusione"): "Fusion Deck" si chiama cosi' in tutte le lingue.
+### Italian textures without a counterpart in `ui_fr` (19) and why
+13 are neutral (same hash in all languages: recipe panels, Side/Deck/Fusion Deck tabs, bars, `card_side`...). 6 have local wording in the original (`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `d_window00016`, `duelrecord parts`): Italian has NUOVO / N / Fusion, the original French has NEW / Fusion and already has its HD ones in `upscale_extra`. The deck editor tab says **Fusion** (not "Fusione"): "Fusion Deck" is called that in all languages.
 
-## B4. Il foglio dei numeri del duello (`card_icon03`)
+## B4. The duel number sheet (`card_icon03`)
 
-Foglio unico con cifre LP, tempo, tasti e moltiplicatori; hash diverso per lingua. Ricetta scelta dall'utente (`tools/ui_textures/icon03_languages.py`, rilanciare con `--apply`):
-- righe 0-180 (cifre piccole e segni, tasti arancioni 1/2/3, cifre grandi 0-9 con "LP", cifre piccole 0-9): **dal pack USA**, pixel art netta;
-- celle in cui il gioco europeo differisce dal pack USA (spunta nera, palla grigia, pillola vuota, parola del tempo): **pixel originali ingranditi 4x senza sfumare**; parola del tempo **TEMPO**; la pillola arancione ("Single" nel pack USA) resta **vuota**;
-- righe >= 181 (moltiplicatori x1..x12, icone, carte, frecce): dal foglio italiano gia' nel pack (`tools/data/card_icon03_base_it.png`);
-- le celle europee si incollano **solo nella loro fascia** di righe (altrimenti rovinano la parte alta delle cifre grandi).
+A single sheet with LP digits, time, keys and multipliers; different hash per language. Recipe chosen by the user (`tools/ui_textures/icon03_languages.py`, rerun with `--apply`):
+- rows 0-180 (small digits and signs, orange keys 1/2/3, big digits 0-9 with "LP", small digits 0-9): **from the US pack**, crisp pixel art;
+- cells in which the European game differs from the US pack (black check mark, grey ball, empty pill, time word): **original pixels enlarged 4x without smoothing**; time word **TEMPO**; the orange pill ("Single" in the US pack) stays **empty**;
+- rows >= 181 (multipliers x1..x12, icons, cards, arrows): from the Italian sheet already in the pack (`tools/data/card_icon03_base_it.png`);
+- the European cells are pasted **only in their band** of rows (otherwise they spoil the top of the big digits).
 
-File: it -> `ui_it/duel_texts/basic_ii__card_icon03.png` (hash 376925c7); fr -> `upscale_extra/3e5482fd.png`; en ee0c44c3; de ffe309a6; es 859eea2b. Anteprime in `confronti/icon03/`.
+Files: it -> `ui_it/duel_texts/basic_ii__card_icon03.png` (hash 376925c7); fr -> `upscale_extra/3e5482fd.png`; en ee0c44c3; de ffe309a6; es 859eea2b. Previews in `comparisons/icon03/`.
 
-## B5. Targa del titolo
+## B5. Title plate
 
-`python tools/ui_textures/mystic_tomato_title.py it` genera 2 PNG (`542eff79685c434d`, `705176739829dcf5`, tessere 18 e 19 del fondale di 20 tessere 128x64 `title_menu_i.ehp: main_title00001..00020`) con la carta 4930 nella lingua + la formula "versione" + la bandiera, font PT Sans Bold: **"VERSIONE POMODORO MISTICO"**. La targa **va inclusa solo per la lingua scelta** (vive in `moduli/it/intro/title_screen/`); il pack di base originale ha le tessere senza banner. File in questo pack: `ULES00600/intro/title_screen/00000000542eff79685c434d.png`, `ULES00600/intro/title_screen/00000000705176739829dcf5.png`.
+`python tools/ui_textures/mystic_tomato_title.py it` generates 2 PNGs (`542eff79685c434d`, `705176739829dcf5`, tiles 18 and 19 of the 20-tile 128x64 backdrop `title_menu_i.ehp: main_title00001..00020`) with card 4930 in the language + the "version" wording + the flag, PT Sans Bold font: **"VERSIONE POMODORO MISTICO"**. The plate **is included only for the chosen language** (it lives in `modules/it/intro/title_screen/`); the original base pack has the tiles without a banner. Files in this pack: `ULES00600/intro/title_screen/00000000542eff79685c434d.png`, `ULES00600/intro/title_screen/00000000705176739829dcf5.png`.
 
-## B6. `textures.ini` e composizione
+## B6. `textures.ini` and composition
 
-`tools/gen_ini.py TOOLS US_INI CARD_DIR OUT_INI i=it +extra_it.ini +ui_it.ini +dati/upscale_extra.ini` converte il `textures.ini` USA in quello EU: le voci non-carta restano (texture neutre = stessi hash); le voci carta sono rigenerate dagli archivi `card/*.cip` EU per le 5 lingue (`i=it` rimappa `cards/large/X.png` -> `cards/large_it/X.png`); aggiunge l'etichetta Magia/Trappola (`extra_it.ini`), le righe `ui_it` e `upscale_extra.ini`. Si fa anche per i 3 stili carte. Se gli stessi pixel esistono in piu' lingue vince la prima in `e i f g s` (per questo atlante, banner e tabella attributi sono "uno per installazione").
+`tools/gen_ini.py TOOLS US_INI CARD_DIR OUT_INI i=it +extra_it.ini +ui_it.ini +data/upscale_extra.ini` converts the US `textures.ini` into the EU one: the non-card entries stay (neutral textures = same hashes); the card entries are regenerated from the EU `card/*.cip` archives for the 5 languages (`i=it` remaps `cards/large/X.png` -> `cards/large_it/X.png`); it adds the Spell/Trap label (`extra_it.ini`), the `ui_it` lines and `upscale_extra.ini`. It is also done for the 3 card styles. If the same pixels exist in several languages the first in `e i f g s` wins (for this reason atlas, banner and attribute table are "one per installation").
 
-Righe `ui_it` nel `textures.ini`: 105. Frequenza dei prefissi: `docs/changes_it/ini_lines.csv`. Controllo: ogni riga `ui_it/...` deve puntare a un file esistente e non devono esserci hash duplicati.
+`ui_it` lines in `textures.ini`: 105. Prefix frequency: `docs/changes_it/ini_lines.csv`. Check: every `ui_it/...` line must point to an existing file and there must be no duplicate hashes.
 
-## B7. Installazione e impostazioni
+## B7. Installation and settings
 
-PC: copiare `ULES00600` in `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `.../TEXTURES/ULES00600/`, senza estrarlo; rigenerare lo zip con le correzioni). Impostazioni: **Sostituisci texture ON**, risoluzione di rendering **4x**, lingua del gioco = lingua del modulo (la lingua e' scritta nel **salvataggio**). Dopo aver cambiato un solo PNG basta copiarlo e riavviare PPSSPP (cache). Per provare i testi usare la ISO `_definitiva`.
+PC: copy `ULES00600` into `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `.../TEXTURES/ULES00600/`, without extracting it; regenerate the zip with the corrections). Settings: **Replace textures ON**, rendering resolution **4x**, game language = module language (the language is stored in the **save file**). After changing a single PNG it is enough to copy it and restart PPSSPP (cache). To try the texts use the `_definitiva` ISO.
 
 ---
 
-# C. SCELTE EDITORIALI
+# C. EDITORIAL CHOICES
 
-- **Preside** (mai "Cancelliere") per Sheppard, compreso "Ufficio del Preside" e "Profilo del Preside Sheppard".
-- **Segna-Mostro** (non "Gettoni Mostro") in aiuti, record e carte; `Segna-Opzione`.
-- Banner: "direttore dello Slifer Rosso"; dormitori **Slifer Rosso, Ra Giallo, Obelisk Blu**; `Modalità Storia` e' il nome del menu.
-- Linguetta **Fusion** (non Fusione). `E'` -> `È`; `Life Point` -> `Life Points`; punteggiatura e apostrofi corretti.
-- Scene censurate riportate al giapponese: sake/shochu e abito da cameriera (vedi sotto); "Beh, non sono poi così bravo..." (era "sto sbavando").
-- Foglio numeri: cifre/LP dal pack USA, x1..x12 dal foglio italiano, parola del tempo TEMPO.
+- **Preside** (never "Cancelliere") for Sheppard, including "Ufficio del Preside" and "Profilo del Preside Sheppard".
+- **Segna-Mostro** (not "Gettoni Mostro") in help, records and cards; `Segna-Opzione`.
+- Banner: "direttore dello Slifer Rosso"; dormitories **Slifer Rosso, Ra Giallo, Obelisk Blu**; `Modalità Storia` is the menu name.
+- Tab **Fusion** (not Fusione). `E'` -> `È`; `Life Point` -> `Life Points`; punctuation and apostrophes corrected.
+- Censored scenes restored to the Japanese: sake/shochu and maid outfit (see below); "Beh, non sono poi così bravo..." (it was "sto sbavando").
+- Number sheet: digits/LP from the US pack, x1..x12 from the Italian sheet, time word TEMPO.
 
-### Voci del registro delle scelte per questa lingua (`tools/data/editorial_choices.json`)
-| id | originale | corretto | ereditata | motivo |
+### Entries of the choices register for this language (`tools/data/editorial_choices.json`)
+| id | original | corrected | inherited | reason |
 |---|---|---|---|---|
 | st01_t01/Scr003E#146 | Mio padre possiede un'azienda che⏎produce salsa piccante. | La mia famiglia produce sake. | no | sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake) |
 | st01_t01/Scr003E#147 | Mi ha mandato della salsa piccante⏎con la mia ultima paga.⏎Ti farò uno sconto ragionevole.⏎Vuoi... | L'altro giorno mi hanno mandato dello shochu⏎insieme ai soldi da casa, quindi la prossima volta... | no | shochu al posto di salsa piccante |
-| st01_t01/Scr003E#150 | Mio padre possiede un'azienda che⏎produce salsa piccante. | None | si | come 146 |
+| st01_t01/Scr003E#150 | Mio padre possiede un'azienda che⏎produce salsa piccante. | None | yes | come 146 |
 | st01_t01/Scr003E#151 | Mi ha mandato della salsa piccante con la ⏎mia ultima paga.⏎Ti farò uno sconto ragionevole.⏎Vuoi... | L'altro giorno mi hanno mandato dello shochu⏎insieme ai soldi da casa, quindi la prossima volta... | no | come 147 |
 | st01_t01/Scr003E#163 | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini! | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎In abito da cameriera! | no | abito da cameriera al posto di bikini (giapponese: メイド服) |
-| st01_t01/Scr003E#168 | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini! | None | si | come 163 |
+| st01_t01/Scr003E#168 | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini! | None | yes | come 163 |
 | st01_t01/Scr003E#188 | Oddio, sto sbavando un po'... | Oddio, non sono un granché... | no | solo italiano: "sto sbavando" era un errore di traduzione (giapponese: "non sono poi così bravo") |
 | st01_t01/Scr003E#189 | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini! | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 vestita da cameriera! | no | abito da cameriera al posto di bikini |
 | st01_t01/Scr003E#191 | Ecco, usa questo! | Ecco, usa questo vestito da cameriera! | no | Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso |
-| st01_t01/Scr003E#194 | Oddio, sto sbavando un po'... | None | si | come 188 |
-| st01_t01/Scr003E#195 | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini! | None | si | come 189 |
+| st01_t01/Scr003E#194 | Oddio, sto sbavando un po'... | None | yes | come 188 |
+| st01_t01/Scr003E#195 | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini! | None | yes | come 189 |
 | st01_t01/Scr003E#197 | Ecco, usa questo! | Ecco, usa questo vestito da cameriera! | no | come 191 |
 
-Altre scelte e la rilettura delle frasi dei duelli: `docs/EDITORIAL_CHOICES.md`.
+Other choices and the re-reading of the duel sentences: `docs/EDITORIAL_CHOICES.md`.
 
-# D. VERIFICA IN GIOCO
+# D. IN-GAME VERIFICATION
 
-- Visto in gioco: interfaccia HD italiana, stringhe lunghe riscritte (aiuti, schede, tutorial), terminologia Preside/Segna-Mostro, carte HD e etichetta Magia/Trappola della carta grande.
-- **Non visto** dopo gli ultimi cambi: rilettura carte (65 carte nuove), frasi dei duelli corrette, linguetta "Fusion", 4 avvisi di lunghezza box dei dialoghi (en/es/de #147/#151, de #172).
+- Seen in game: Italian HD interface, rewritten long strings (help, cards, tutorial), Preside/Segna-Mostro terminology, HD cards and Spell/Trap label of the large card.
+- **Not seen** after the latest changes: card re-reading (65 new cards), corrected duel sentences, "Fusion" tab, 4 dialogue box-length warnings (en/es/de #147/#151, de #172).
 
-# E. COME RIGENERARE TUTTO
+# E. HOW TO REGENERATE EVERYTHING
 
 ```
-# ISO (tutte le lingue insieme)
+# ISO (all languages together)
 python tools/corrections/build_dialogues.py it
-python tools/corrections/generate_card_corrections.py it CARDINFO_it.ehp          # carte
+python tools/corrections/generate_card_corrections.py it CARDINFO_it.ehp          # cards
 python tools/corrections/apply_to_iso.py PSP/GAME/ULES00600_..._EUR.iso PSP/GAME/ULES00600_..._EUR_definitiva.iso
-# immagini
+# images
 sh tools/rebuild_corrections.sh USRDIR PACK_US PACK_MOD PYTHON
-TF1_LANG=it python tools/ui_textures/<famiglia>.py USRDIR PACK_US <modulo>      # per ognuna delle 8 famiglie (intera!)
+TF1_LANG=it python tools/ui_textures/<family>.py USRDIR PACK_US <module>      # for each of the 8 families (whole!)
 python tools/ui_textures/icon03_languages.py --apply ; python tools/ui_textures/mystic_tomato_title.py it
-python tools/compose_pack.py PSP/TEXTURES/ULES00600 PSP/TEXTURES/modules USRDIR/card OUT it --copia
-# questo documento
+python tools/compose_pack.py PSP/TEXTURES/ULES00600 PSP/TEXTURES/modules USRDIR/card OUT it --copy
+# this document
 python tools/analysis/document_changes.py ISO_ORIG ISO_DEF it docs/changes_it
 python tools/analysis/document_pack.py ISO_ORIG it docs/changes_it
 python tools/analysis/text_comparisons.py it
 python tools/analysis/write_changes_document.py it
 ```
-Input esterni da avere (controlla che esistano): ISO originale, USRDIR estratta (`tools/analysis/extract_usrdir.py`), pack USA di MikeyMK `ULUS10136` (in una cartella fuori dal progetto).
+External inputs you need (check that they exist): the original ISO, the extracted USRDIR (`tools/analysis/extract_usrdir.py`), MikeyMK's US pack `ULUS10136` (in a folder outside the project).
 
-# F. LIMITI E PUNTI APERTI
+# F. LIMITS AND OPEN POINTS
 
-- Nomi ufficiali delle carte: da decidere con l'utente. "Ragazza Mago Nero" vs "Maga Nera".
-- Le note a mano sulla rilettura delle carte prima di ~riga 1830 sono andate perse; per quel tratto c'e' anche una scansione automatica (refusi, spazi, apostrofi).
-- `textures.zip` Android da rigenerare con le correzioni; carte del pack installato da riavviare in PPSSPP (cache).
-- Il nome del parlante nella casella del dialogo non e' modificabile (EBOOT cifrato).
+- Official card names: to be decided with the user. "Ragazza Mago Nero" vs "Maga Nera".
+- The hand-written notes on the card re-reading before ~line 1830 were lost; for that stretch there is also an automatic scan (typos, spaces, apostrophes).
+- Android `textures.zip` to be regenerated with the corrections; cards of the installed pack to be restarted in PPSSPP (cache).
+- The speaker name in the dialogue box cannot be modified (encrypted EBOOT).

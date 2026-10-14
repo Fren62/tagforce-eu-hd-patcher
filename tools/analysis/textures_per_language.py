@@ -75,12 +75,12 @@ def main():
         if L not in d:
             continue
         e, i = d.get('e'), d.get('i')
-        outcome = 'DIVERSA' if L != 'e' and d[L] != e else ('=ING' if d[L] == e else '-')
-        if outcome == 'DIVERSA' and i and d[L] == i and L != 'i':
+        outcome = 'DIFFERENT' if L != 'e' and d[L] != e else ('=ENG' if d[L] == e else '-')
+        if outcome == 'DIFFERENT' and i and d[L] == i and L != 'i':
             outcome = '=ITA'
-        if only and outcome != 'DIVERSA':
+        if only and outcome != 'DIFFERENT':
             continue
-        rows.append((a, m, d[L], e, i, outcome, 'si' if i in hash_it else 'no'))
+        rows.append((a, m, d[L], e, i, outcome, 'yes' if i in hash_it else 'no'))
     for r in rows:
         print(' | '.join(str(x) for x in r))
     print('#', len(rows), 'texture', file=sys.stderr)

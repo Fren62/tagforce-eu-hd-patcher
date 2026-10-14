@@ -6,9 +6,20 @@ Patcheur gratuit et open source pour **Yu-Gi-Oh! GX Tag Force** (PSP), version e
 À partir de *votre propre* ISO, il produit une copie dans la langue choisie (**anglais, français, allemand, espagnol, italien**), avec les parties que vous sélectionnez :
 
 - **textures HD** pour PPSSPP : cartes grandes et petites dont le texte est redessiné dans votre langue, textes de l'interface, bannière du titre ;
-- **correction des dialogues et des textes** : fautes de frappe, accents, espaces et restes d'autres langues dans les dialogues, les phrases des duels et les textes de l'interface ;
-- **correction des cartes** : noms et descriptions des cartes ;
+- **réadaptation et correction des textes** : partout où la localisation avait perdu ou changé le sens de l'original, dialogues, phrases des duels et textes de l'interface sont réadaptés et retraduits depuis la langue d'origine (y compris des phrases totalement absentes dans certaines langues), en plus des fautes de frappe, accents, espaces et restes d'autres langues ;
+- **correction des textes des cartes** : noms et descriptions réadaptés là où la traduction était fausse ou incomplète, plus fautes de frappe et accents ;
 - **suppression des autres langues** : ISO plus légère, le jeu reste dans la langue choisie quelle que soit la langue système de la PSP, et le sélecteur de langue (écran du premier démarrage et entrée du menu principal) disparaît car il serait inutile.
+
+
+Textes modifiés par le patch dans chaque langue (comptés en comparant l'ISO patchée à l'originale ; les chiffres incluent toute modification, d'une lettre erronée à une phrase retraduite de zéro) :
+
+| Langue | Cartes | Lignes de dialogue | Phrases de duel (uniques) | Textes d'interface (uniques) |
+|---|---:|---:|---:|---:|
+| Anglais | 82 | 402 | 11 | 57 |
+| Français | 266 | 467 | 51 | 254 |
+| Allemand | 258 | 1,649 | 40 | 581 |
+| Espagnol | 624 | 601 | 55 | 329 |
+| Italien | 181 | 2,488 | 33 | 298 |
 
 > **État : première version.** Les patchs sont vérifiés fichier par fichier pour chaque combinaison de modules, et les cinq langues ont été testées dans PPSSPP (démarrage, écran titre, duels de démonstration). Le mode histoire, l'éditeur de deck et la boutique n'ont pas encore été joués à fond. L'installateur graphique est nouveau : testé sous Windows ; la version Linux est produite par GitHub Actions et n'a pas encore été lancée sur un vrai bureau Linux.
 
@@ -62,7 +73,7 @@ Une faute de frappe, un texte de carte erroné ou un bug ? [Ouvrez un ticket](..
 4. `patcher/tools/build_texture_modules.py` crée `base.zip` et un `<langue>.zip` par langue ; `patcher/tools/build_manifest.py` complète `manifest.json` (SHA-256, patchs, tailles des ISO).
 5. `verify_modular_patch.py`, `compare_isos.py` et `verify_texture_pack.py` contrôlent les résultats ; `build_all_patches.sh LANGUE...` refait et vérifie chaque combinaison.
 
-Les textes, les règles éditoriales et les corrections se trouvent dans `tools/` (`correzioni/`, `dati/`). `docs/NEW_LANGUAGE_GUIDE.md`, `docs/EDITORIAL_CHOICES.md` et `docs/CHANGES_<LANG>.md` documentent la méthode et les choix (en italien).
+Les textes, les règles éditoriales et les corrections se trouvent dans `tools/` (`corrections/`, `data/`). `docs/NEW_LANGUAGE_GUIDE.md`, `docs/EDITORIAL_CHOICES.md` et `docs/CHANGES_<LANG>.md` documentent la méthode et les choix (en italien).
 
 ## Compiler depuis les sources
 

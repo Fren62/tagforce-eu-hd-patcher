@@ -42,7 +42,7 @@ def write_file(name, title, entries):
     print(name, len(entries))
 
 
-write_file('cards_diff.md', f'Carte ({L}): originale -> nuovo', [(f'{c[0]} - {c[1]} ({c[2]})', c[3], c[4], []) for c in rd('cards.csv')])
-write_file('dialogues_diff.md', f'Dialoghi ({L}): originale -> nuovo', [(d[0], d[1], d[2], [f'Inglese: {d[3]}'] + ([f'Giapponese: {d[4]}'] if d[4] else [])) for d in rd('dialogues.csv')])
-write_file('duel_lines_diff.md', f'Frasi dei duelli ({L}): originale -> nuovo', [(str(n + 1), r[0], r[1], [f'Voci: {r[2]}; archivi: {r[3]}']) for n, r in enumerate(rd('duel_lines.csv'))])
-write_file('ui_strings_diff.md', f"Stringhe dell'interfaccia ({L}): originale -> nuovo", [(f'{r[0]} #{r[1]}', r[2], r[3], [f'Archivi: {r[4]}']) for r in rd('ui_strings.csv')])
+write_file('cards_diff.md', f'Carte ({L}): original -> new', [(f'{c[0]} - {c[1]} ({c[2]})', c[3], c[4], []) for c in rd('cards.csv')])
+write_file('dialogues_diff.md', f'Dialoghi ({L}): original -> new', [(d[0], d[1], d[2], [f'Inglese: {d[3]}'] + ([f'Giapponese: {d[4]}'] if d[4] else [])) for d in rd('dialogues.csv')])
+write_file('duel_lines_diff.md', f'Frasi dei duelli ({L}): original -> new', [(str(n + 1), r[0], r[1], [f'Voci: {r[2]}; archivi: {r[3]}']) for n, r in enumerate(rd('duel_lines.csv'))])
+write_file('ui_strings_diff.md', f"Stringhe dell'interfaccia ({L}): original -> new", [(f'{r[0]} #{r[1]}', r[2], r[3], [f'Archivi: {r[4]}']) for r in rd('ui_strings.csv')])

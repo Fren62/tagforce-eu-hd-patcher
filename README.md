@@ -6,9 +6,20 @@ A free, open-source patcher for **Yu-Gi-Oh! GX Tag Force** (PSP), European versi
 Starting from *your own* ISO it produces a copy in the language you choose (**English, French, German, Spanish, Italian**), with the parts you pick:
 
 - **HD textures** for PPSSPP: large and small cards with the text redrawn in your language, interface texts, title banner;
-- **dialogue and text corrections**: typos, accents, spacing and leftovers from other languages in dialogues, in-duel lines and interface texts;
-- **card corrections**: card names and descriptions;
+- **text re-adaptation and correction**: wherever the localisation lost or changed the meaning of the original, dialogues, in-duel lines and interface texts are re-adapted and translated again from the original language (including sentences that were missing altogether in some languages), on top of typos, accents, spacing and leftovers from other languages;
+- **card text correction**: names and descriptions re-adapted where the translation was wrong or incomplete, plus typos and accents;
 - **removal of the other languages**: smaller ISO, the game stays in the chosen language whatever the PSP system language is, and the language selector (first-boot screen and main-menu entry) is removed since it would be pointless.
+
+
+Texts changed by the patch in each language (counted by comparing the patched ISO with the original; the numbers include every change, from a single wrong letter to a sentence translated again from scratch):
+
+| Language | Cards | Story dialogue lines | Duel lines (unique) | Interface strings (unique) |
+|---|---:|---:|---:|---:|
+| English | 82 | 402 | 11 | 57 |
+| French | 266 | 467 | 51 | 254 |
+| German | 258 | 1,649 | 40 | 581 |
+| Spanish | 624 | 601 | 55 | 329 |
+| Italian | 181 | 2,488 | 33 | 298 |
 
 > **Status: early release.** The patches are verified file by file for every combination of modules, and the five languages were tested in PPSSPP (boot, title screen, demo duels). Story mode, deck editor and shop have not been played through yet. The graphical installer is new: tested on Windows; the Linux build is produced by GitHub Actions and has not been run on a real Linux desktop yet.
 
@@ -62,7 +73,7 @@ Found a typo, a wrong card text or a bug? [Open an issue](../../issues/new/choos
 4. `patcher/tools/build_texture_modules.py` builds `base.zip` and one `<lang>.zip` per language; `patcher/tools/build_manifest.py` completes `manifest.json` (SHA-256, patches, ISO sizes).
 5. `verify_modular_patch.py`, `compare_isos.py` and `verify_texture_pack.py` check the results; `build_all_patches.sh LANG...` rebuilds and verifies every combination.
 
-Texts, editorial rules and corrections live in `tools/` (`correzioni/`, `dati/`). `docs/NEW_LANGUAGE_GUIDE.md`, `docs/EDITORIAL_CHOICES.md` and `docs/CHANGES_<LANG>.md` document the method and the choices (in Italian).
+Texts, editorial rules and corrections live in `tools/` (`corrections/`, `data/`). `docs/NEW_LANGUAGE_GUIDE.md`, `docs/EDITORIAL_CHOICES.md` and `docs/CHANGES_<LANG>.md` document the method and the choices (in Italian).
 
 ## Building from source
 

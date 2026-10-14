@@ -84,7 +84,7 @@ for i_, (root, name) in enumerate(((BASE, 'ULES00600 (pack di base)'), (MOD, f'm
         else:
             rows.append((name, d, 1, round(os.path.getsize(p) / 1e6, 2), ''))
 with open(os.path.join(out, 'pack_structure.csv'), 'w', encoding='utf-8-sig', newline='') as f:
-    w = csv.writer(f, delimiter=';'); w.writerow(['radice', 'cartella/file', 'file', 'MB', 'contenuto (primi)']); w.writerows(rows)
+    w = csv.writer(f, delimiter=';'); w.writerow(['radice', 'folder/file', 'file', 'MB', 'contenuto (primi)']); w.writerows(rows)
 
 # 2. texture ui
 ini = os.path.join(BASE, 'textures.ini') if L == 'it' else os.path.join(MOD, f'{L}.ini')
@@ -104,15 +104,15 @@ for dp, _, fs in os.walk(root):
         h = mp.get(rel, '?')
         locs = idx.get(h, [])
         L5 = sorted({language(q, k) for q, k in locs} - {'-'})
-        kind = 'NEUTRA' if (('g' in L5 and 's' in L5) or len(L5) >= 4) else 'SPECIFICA'
+        kind = 'NEUTRAL' if (('g' in L5 and 's' in L5) or len(L5) >= 4) else 'SPECIFIC'
         im = Image.open(os.path.join(dp, f))
         src = '; '.join(sorted({q.replace('/PSP_GAME/USRDIR/', '') + ':' + k for q, k in locs})[:3])
         ui_rows.append((rel, h, fam, SCRIPT.get(fam, '?'), size_low.get(h, ('?', '?')), f'{im.width}x{im.height}', kind, ''.join(L5), src))
         fam_count[fam] += 1
 with open(os.path.join(out, 'ui_textures.csv'), 'w', encoding='utf-8-sig', newline='') as f:
     w = csv.writer(f, delimiter=';')
-    w.writerow(['file nel pack', 'hash PPSSPP (dati)', 'famiglia', 'script generatore (tools/ui_textures/)', 'originale (px)', 'HD (px)', 'neutra/specifica',
-                'lingue con lo stesso hash', 'origine nella ISO (archivio:membro)'])
+    w.writerow(['file nel pack', 'hash PPSSPP (dati)', 'famiglia', 'script generatore (tools/ui_textures/)', 'original (px)', 'HD (px)', 'neutra/specifica',
+                'languages with the same hash', 'origin in the ISO (archive:member)'])
     for r in sorted(ui_rows):
         w.writerow([r[0], r[1], r[2], r[3], f'{r[4][0]}x{r[4][1]}', r[5], r[6], r[7], r[8]])
 
@@ -141,7 +141,7 @@ for dp, _, fs in os.walk(os.path.join(MOD, 'intro')):
     for f in fs:
         banner.append(os.path.relpath(os.path.join(dp, f), T).replace(os.sep, '/'))
 cards = {d: len(os.listdir(os.path.join(MOD, 'cards', d))) for d in sorted(os.listdir(os.path.join(MOD, 'cards'))) if os.path.isdir(os.path.join(MOD, 'cards', d))} if os.path.isdir(os.path.join(MOD, 'cards')) else {}
-summary = dict(language=L, texture_ui=len(ui_rows), per_family=dict(fam_count), neutral=sum(1 for r in ui_rows if r[6] == 'NEUTRA'), specific=sum(1 for r in ui_rows if r[6] == 'SPECIFICA'),
+summary = dict(language=L, texture_ui=len(ui_rows), per_family=dict(fam_count), neutral=sum(1 for r in ui_rows if r[6] == 'NEUTRAL'), specific=sum(1 for r in ui_rows if r[6] == 'SPECIFIC'),
             rows_ini_ui=len(mp), cards_corrected=len(ids), banner=banner, folders_cards=cards)
 json.dump(summary, open(os.path.join(out, 'pack_summary.json'), 'w', encoding='utf-8'), indent=1)
 print(summary)

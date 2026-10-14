@@ -1,6 +1,6 @@
 """Composes the complete document docs/CHANGES_<LANG>.md starting from the CSVs of `document_changes.py` and `document_pack.py`, from the rules
 (`corrections/rules_*`, `data/*.json`) and from the choices register. So the numbers and lists are the REAL ones, not hand-written.
-usage: python write_changes_document.py LANGUAGE          (it|fr)  -> docs/CHANGES_IT.md / docs/CHANGES_FR.md in the project root
+usage: python write_changes_document.py LANGUAGE          (it|fr|de|es|en)  -> docs/CHANGES_IT.md ... in the project root
 Run first (from the project root):
   python tools/analysis/document_changes.py ISO_ORIG ISO_DEF LANGUAGE docs/changes_<l>
   python tools/analysis/document_pack.py      ISO_ORIG LANGUAGE docs/changes_<l>"""
@@ -11,8 +11,7 @@ sys.path.insert(0, os.path.join(B, 'tools', 'corrections')); sys.path.insert(0, 
 sys.stdout.reconfigure(encoding='utf-8')
 import importlib
 L = sys.argv[1]
-ART = "l'" if L in ('it',) else 'il '
-NAME = {'it': 'ITALIANO', 'fr': 'FRANCESE', 'de': 'TEDESCO', 'es': 'SPAGNOLO', 'en': 'INGLESE'}[L]
+NAME = {'it': 'ITALIAN', 'fr': 'FRENCH', 'de': 'GERMAN', 'es': 'SPANISH', 'en': 'ENGLISH'}[L]
 LANG = NAME.lower()
 D = os.path.join(B, 'docs', f'changes_{L}')
 rel = f'docs/changes_{L}'
@@ -39,353 +38,353 @@ def tab(head, rows, limit=None):
     for r in (rows if limit is None else rows[:limit]):
         w('| ' + ' | '.join(esc2(c) for c in r) + ' |')
     if limit is not None and len(rows) > limit:
-        w(f'\n(... altre {len(rows) - limit} righe nel CSV)')
+        w(f'\n(... {len(rows) - limit} more rows in the CSV)')
     w('')
 
 
-w(f'# MODIFICHE PER LA VERSIONE POMODORO MISTICO IN {NAME}')
+w(f'# CHANGES OF THE MYSTIC TOMATO VERSION FOR {NAME}')
 w('')
-w(f'Documento **completo** di tutto cio\' che la "Versione Pomodoro Mistico" cambia per {ART}{LANG}: (A) le modifiche **dirette alla ISO**, (B) il **texture pack** '
-  f'(com\'e\' fatto, cosa contiene, come si compone), (C) le scelte editoriali, (D) cosa e\' verificato in gioco e cosa no, (E) come rigenerare tutto.')
+w(f'**Complete** document of everything the "Mystic Tomato Version" changes for {LANG}: (A) the **direct changes to the ISO**, (B) the **texture pack** '
+  f'(how it is made, what it contains, how it is composed), (C) the editorial choices, (D) what has been verified in game and what has not, (E) how to regenerate everything.')
 w('')
-w(f'**Questo file e\' generato** da `tools/analysis/write_changes_document.py {L}` a partire dai dati reali: confronto byte per byte tra la ISO originale '
-  f'`PSP/GAME/ULES00600_YuGiOh_GX_TagForce_EUR.iso` e la ISO corretta `..._definitiva.iso` (`document_changes.py`) e scansione del pack (`document_pack.py`). '
-  f'Gli elenchi riga per riga stanno in `{rel}/*.csv` (separatore `;`, UTF-8 con BOM, a capo come `⏎`): sono la **lista esatta** di ogni cambiamento. Rigenera tutto dopo ogni modifica.')
+w(f'**This file is generated** by `tools/analysis/write_changes_document.py {L}` from the real data: byte-by-byte comparison between the original ISO '
+  f'`PSP/GAME/ULES00600_YuGiOh_GX_TagForce_EUR.iso` and the corrected ISO `..._definitiva.iso` (`document_changes.py`) and a scan of the pack (`document_pack.py`). '
+  f'The row-by-row lists are in `{rel}/*.csv` (`;` separator, UTF-8 with BOM, line breaks as `⏎`): they are the **exact list** of every change. Regenerate everything after each modification.')
 w('')
-w('Per il metodo generale e per le altre lingue: `docs/NEW_LANGUAGE_GUIDE.md`; dettagli tecnici degli script: `TUTORIAL.md`; decisioni: `docs/EDITORIAL_CHOICES.md`; texture neutre/specifiche: `docs/TEXTURE_INVENTORY.md`.')
+w('For the general method and for the other languages: `docs/NEW_LANGUAGE_GUIDE.md`; technical details of the scripts: `docs/TUTORIAL.md`; decisions: `docs/EDITORIAL_CHOICES.md`; neutral/specific textures: `docs/TEXTURE_INVENTORY.md`.')
 w('')
-w('## Indice')
-w('- A. Modifiche alla ISO: A1 panoramica · A2 carte · A3 dialoghi · A4 frasi dei duelli · A5 stringhe dell\'interfaccia · A6 etichetta Magia/Trappola · A7 file toccati e dettagli tecnici · A8 cosa non si puo\' cambiare')
-w('- B. Texture pack: B1 provenienza e struttura · B2 immagini delle carte · B3 interfaccia HD (`ui_' + L + '`) · B4 foglio numeri (`card_icon03`) · B5 targa del titolo · B6 textures.ini e composizione · B7 installazione')
-w('- C. Scelte editoriali · D. Verifica in gioco · E. Come rigenerare · F. Limiti e punti aperti')
+w('## Index')
+w('- A. Changes to the ISO: A1 overview · A2 cards · A3 dialogues · A4 duel sentences · A5 interface strings · A6 Spell/Trap label · A7 touched files and technical details · A8 what cannot be changed')
+w('- B. Texture pack: B1 origin and structure · B2 card images · B3 HD interface (`ui_' + L + '`) · B4 number sheet (`card_icon03`) · B5 title plate · B6 textures.ini and composition · B7 installation')
+w('- C. Editorial choices · D. In-game verification · E. How to regenerate · F. Limits and open points')
 w('')
 w('---')
 w('')
-w('# A. MODIFICHE ALLA ISO')
+w('# A. CHANGES TO THE ISO')
 w('')
-w('## A1. Panoramica')
+w('## A1. Overview')
 w('')
-w('La ISO originale **non viene mai modificata**. `tools/corrections/apply_to_iso.py ISO_ORIG ISO_OUT [lingue]` ne crea una copia in cui alcuni archivi `.ehp` sono riscritti. '
-  'Se un archivio cresce (testo piu\' lungo) viene **rimesso in fondo alla ISO** in un nuovo settore e il suo voce nella directory ISO9660 viene riassegnata (`pycdlib`); '
-  'la ISO `_definitiva` pesa per questo ~909 MB (l\'originale ~761 MB). **Lanciarlo sempre senza elenco di lingue (o con tutte)**: con una lingua sola sovrascrive le altre.')
+w('The original ISO is **never modified**. `tools/corrections/apply_to_iso.py ISO_ORIG ISO_OUT [languages]` creates a copy in which some `.ehp` archives are rewritten. '
+  'If an archive grows (longer text) it is **put again at the end of the ISO** in a new sector and its entry in the ISO9660 directory is reassigned (`pycdlib`); '
+  'for this reason the `_definitiva` ISO weighs ~909 MB (the original ~761 MB). **Always run it without a list of languages (or with all of them)**: with a single language it overwrites the others.')
 w('')
-tab(['Cosa', 'Quantita\' (derivata dal confronto ISO)', 'Dove sta il dato', 'File CSV'], [
-    ['Carte con testo cambiato (nome e/o descrizione)', f"{summary['cards_unique']} carte ({summary['cards']} campi)", f'`tools/data/card_corrections{"" if L == "it" else "_" + L}.json` da `correzioni/rules_{L}.py`', 'cards.csv'],
-    ['Righe di dialogo della storia', f"{summary['dialogues']} righe", f'`tools/data/dialogue_touchups_{L}.json` (+ base)', 'dialogues.csv'],
-    ['Frasi dei duellanti nei duelli', f"{summary['sentences_unique']} frasi uniche ({summary['sentences_entries']} voci in tutti gli archivi)", f'`tools/data/duel_line_corrections_{L}.json`', 'duel_lines.csv'],
-    ['Stringhe dell\'interfaccia (aiuti, schede, record, tutorial, menu...)', f"{summary['strings_unique']} stringhe uniche ({summary['strings_entries']} voci, {summary['strings_archives']} archivi)", f'`correzioni/string_rules_{L}.py` + `dati/ui_texts.json`', 'ui_strings.csv'],
-    ['Immagini sostituite dentro la ISO', f"{summary['images']} (etichetta [CARTA MAGIA/TRAPPOLA] della carta grande)", '`apply_to_iso.py` (copia `card_spell_trap.gim` della lingua)', 'iso_images.csv'],
-    ['File della ISO toccati (archivi `.ehp`)', f"{summary['file_touched']}", '-', 'touched_files.csv'],
-    ['Altre differenze tecniche (offset ricalcolati)', f"{summary['other']}", '-', 'other.csv']], None)
+tab(['What', 'Quantity (derived from the ISO comparison)', 'Where the data lives', 'CSV file'], [
+    ['Cards with changed text (name and/or description)', f"{summary['cards_unique']} cards ({summary['cards']} fields)", f'`tools/data/card_corrections{"" if L == "it" else "_" + L}.json` from `tools/corrections/rules_{L}.py`', 'cards.csv'],
+    ['Story dialogue lines', f"{summary['dialogues']} lines", f'`tools/data/dialogue_touchups_{L}.json` (+ base)', 'dialogues.csv'],
+    ['Duelist sentences in duels', f"{summary['sentences_unique']} unique sentences ({summary['sentences_entries']} entries in all the archives)", f'`tools/data/duel_line_corrections_{L}.json`', 'duel_lines.csv'],
+    ['Interface strings (help, cards, records, tutorial, menus...)', f"{summary['strings_unique']} unique strings ({summary['strings_entries']} entries, {summary['strings_archives']} archives)", f'`tools/corrections/string_rules_{L}.py` + `tools/data/ui_texts.json`', 'ui_strings.csv'],
+    ['Images replaced inside the ISO', f"{summary['images']} ([SPELL CARD/TRAP CARD] label of the large card)", '`apply_to_iso.py` (copies the language\'s `card_spell_trap.gim`)', 'iso_images.csv'],
+    ['ISO files touched (`.ehp` archives)', f"{summary['file_touched']}", '-', 'touched_files.csv'],
+    ['Other technical differences (recomputed offsets)', f"{summary['other']}", '-', 'other.csv']], None)
 
 # ---------------- A2 cards
-w('## A2. Testi delle carte')
+w('## A2. Card texts')
 w('')
-w(f'Archivio: `PSP_GAME/USRDIR/duelsys/cardinfo_{"ita" if L == "it" else "fra"}.ehp` (tabelle `CARD_Name_*`, `CARD_Desc_*`, `CARD_Indx_*`). **{summary["cards_unique"]} carte** hanno nome e/o descrizione modificati. '
-  'Si correggono **solo errori oggettivi** (refusi, accenti, apostrofi, spazi, maiuscole incoerenti, concordanze, plurali fissi, residui di altre lingue); nomi ufficiali e terminologia del gioco non si toccano.')
+w(f'Archive: `PSP_GAME/USRDIR/duelsys/cardinfo_{"ita" if L == "it" else "fra"}.ehp` (tables `CARD_Name_*`, `CARD_Desc_*`, `CARD_Indx_*`). **{summary["cards_unique"]} cards** have a modified name and/or description. '
+  'Only **objective errors** are corrected (typos, accents, apostrophes, spaces, inconsistent capitalization, agreement, fixed plurals, leftovers from other languages); official names and the game\'s terminology are not touched.')
 w('')
-w(f'Come: ogni carta e\' stata letta ({"it: 2.479 testi, uno per uno; fr: audit contro database ufficiale + lettura" if L != "en" else "inglese: elenco di tutte le carte in confronti/audit_en/carte_en.txt, solo errori oggettivi"}). Regole in `tools/corrections/rules_{L}.py`: **{len(RC.GLOBALS)} regole globali** '
-  f'(regex applicate a nomi e descrizioni di tutte le carte) e **{len(RC.PER_CARD)} correzioni per carta** (`PER_CARTA`: id, campo, vecchio, nuovo, motivo; il vecchio testo deve esistere esattamente). '
-  f'`generate_card_corrections.py {L} CARDINFO` ({"fonde il risultato nel `card_corrections.json` esistente, idempotente" if L == "it" else "scrive `card_corrections_{L}.json` partendo dai testi originali"}) produce il json; `apply_to_iso` lo scrive nella ISO; '
-  'le immagini HD delle carte toccate si rigenerano (sezione B2).')
+w(f'How: every card was read ({"it: 2,479 texts, one by one; fr: audit against the official database + reading" if L != "en" else "English: list of all the cards in comparisons/audit_en/carte_en.txt, objective errors only"}). Rules in `tools/corrections/rules_{L}.py`: **{len(RC.GLOBALS)} global rules** '
+  f'(regexes applied to the names and descriptions of all the cards) and **{len(RC.PER_CARD)} per-card corrections** (`PER_CARD`: id, field, old, new, reason; the old text must exist exactly). '
+  f'`generate_card_corrections.py {L} CARDINFO` ({"merges the result into the existing `card_corrections.json`, idempotent" if L == "it" else "writes `card_corrections_{L}.json` starting from the original texts"}) produces the json; `apply_to_iso` writes it into the ISO; '
+  'the HD images of the touched cards are regenerated (section B2).')
 w('')
-w('### Regole globali (tutte)')
-tab(['modello (regex)', 'sostituzione', 'motivo'], [[g[0], g[1], g[2]] for g in RC.GLOBALS])
-w('### Correzioni per carta (tutte)')
-tab(['id', 'campo', 'vecchio', 'nuovo', 'motivo'], [list(map(str, p)) for p in RC.PER_CARD])
-w(f'### Elenco completo delle carte cambiate\n**Confronto completo originale -> nuovo con le parole cambiate evidenziate: `{rel}/cards_diff.md`** (tutte le {summary["cards"]} voci). Dati grezzi: `{rel}/cards.csv`. Prime 40 righe:')
+w('### Global rules (all)')
+tab(['pattern (regex)', 'replacement', 'reason'], [[g[0], g[1], g[2]] for g in RC.GLOBALS])
+w('### Per-card corrections (all)')
+tab(['id', 'field', 'old', 'new', 'reason'], [list(map(str, p)) for p in RC.PER_CARD])
+w(f'### Complete list of changed cards\n**Complete original -> new comparison with the changed words highlighted: `{rel}/cards_diff.md`** (all {summary["cards"]} entries). Raw data: `{rel}/cards.csv`. First 40 rows:')
 w('')
-tab(['id', 'nome originale', 'campo', 'originale', 'nuovo'], rd('cards.csv'), 40)
+tab(['id', 'original name', 'field', 'original', 'new'], rd('cards.csv'), 40)
 
-# ---------------- A3 dialoghi
-w('## A3. Dialoghi della storia')
+# ---------------- A3 dialogues
+w('## A3. Story dialogues')
 w('')
-w(f'Archivi: `script/stNN_<scena>_{"i" if L == "it" else "f"}.ehp`, ogni scena e\' una coppia di membri `...I{"i" if L == "it" else "f"}.bin` (offset in caratteri UTF-16) e `...L{"i" if L == "it" else "f"}.bin` '
-  f'(stringhe UTF-16LE chiuse da NUL, alcune compresse in gzip). **{summary["dialogues"]} righe** cambiate (comprese quelle che **ereditano** la correzione perche\' hanno lo stesso testo originale e lo stesso giapponese di una riga corretta).')
+w(f'Archives: `script/stNN_<scene>_{"i" if L == "it" else "f"}.ehp`, every scene is a pair of members `...I{"i" if L == "it" else "f"}.bin` (offsets in UTF-16 characters) and `...L{"i" if L == "it" else "f"}.bin` '
+  f'(UTF-16LE strings terminated by NUL, some gzip-compressed). **{summary["dialogues"]} lines** changed (including those that **inherit** the correction because they have the same original text and the same Japanese as a corrected line).')
 w('')
-w('Flusso: lettura riga per riga confrontata con inglese e giapponese -> ritocchi in `tools/data/dialogue_touchups_' + L + '.json` (`esatte` e `parti`) -> `build_dialogues.py ' + L + '` -> `dialogue_corrections_' + L + '.json` -> `apply_to_iso.py`. '
-  'Regole automatiche di impaginazione in `build_dialogues.py`: ' + ('spazio dopo i segnaposto `《...》`, tre puntini seguiti da maiuscola (`...Ciao` -> `... Ciao`), base `dialogue_corrections_it_base.json` (~1.380 proposte della prima revisione).' if L == 'it' else 'spazio non separabile prima di `! ? : ;` anche dopo `》` (regola `FR_PUNT`), spazio dopo i segnaposto, "Mode histoire" -> "Mode aventure".') + ' '
-  'Vincoli del box: ~46 caratteri per riga, max 3 righe (un segnaposto vale ~6 caratteri): `apply_to_iso` segnala le righe che potrebbero non starci.')
+w('Flow: line-by-line reading compared with English and Japanese -> touch-ups in `tools/data/dialogue_touchups_' + L + '.json` (`exact` and `parts`) -> `build_dialogues.py ' + L + '` -> `dialogue_corrections_' + L + '.json` -> `apply_to_iso.py`. '
+  'Automatic layout rules in `build_dialogues.py`: ' + ('space after the `《...》` placeholders, three dots followed by a capital (`...Ciao` -> `... Ciao`), base `dialogue_corrections_it_base.json` (~1,380 proposals of the first review).' if L == 'it' else 'non-breaking space before `! ? : ;` also after `》` (rule `FR_PUNCT`), space after the placeholders, "Mode histoire" -> "Mode aventure".') + ' '
+  'Box constraints: ~46 characters per line, max 3 lines (a placeholder counts ~6 characters): `apply_to_iso` reports the lines that might not fit.')
 w('')
-w(f'### Ritocchi di rilettura: `esatte` ({len(touchups["exact"])}) — frase intera originale -> frase nuova')
-tab(['originale', 'nuovo'], [[k, v] for k, v in touchups['exact'].items()])
-w(f'### Ritocchi di rilettura: `parti` ({len(touchups["parts"])}) — sostituzioni di testo applicate a ogni riga (in ordine)')
-tab(['vecchio', 'nuovo'], [list(p) for p in touchups['parts']])
-w(f'### Elenco completo delle righe\n**Confronto completo originale -> nuovo (con inglese e giapponese): `{rel}/dialogues_diff.md`** (tutte le {summary["dialogues"]} righe). Dati grezzi: `{rel}/dialogues.csv`. Prime 30:')
+w(f'### Re-reading touch-ups: `exact` ({len(touchups["exact"])}) — whole original sentence -> new sentence')
+tab(['original', 'new'], [[k, v] for k, v in touchups['exact'].items()])
+w(f'### Re-reading touch-ups: `parts` ({len(touchups["parts"])}) — text replacements applied to every line (in order)')
+tab(['old', 'new'], [list(p) for p in touchups['parts']])
+w(f'### Complete list of lines\n**Complete original -> new comparison (with English and Japanese): `{rel}/dialogues_diff.md`** (all {summary["dialogues"]} lines). Raw data: `{rel}/dialogues.csv`. First 30:')
 w('')
-tab(['id', 'originale', 'nuovo', 'inglese'], [r[:4] for r in rd('dialogues.csv')], 30)
+tab(['id', 'original', 'new', 'English'], [r[:4] for r in rd('dialogues.csv')], 30)
 
-# ---------------- A4 frasi
-w('## A4. Frasi dei duellanti nei duelli')
+# ---------------- A4 sentences
+w('## A4. Duelist sentences in duels')
 w('')
-w(f'Tabelle `chr_wordstbl_{"i" if L == "it" else "f"}.bin` e `02chr_wordstbl_...` dentro ~72 archivi `duel/cutin_*.ehp` (e `zakov*`). Le frasi uniche sono ~{"1.800" if True else ""}: tutte rilette. '
-  f'**{summary["sentences_unique"]} frasi cambiate** ({summary["sentences_entries"]} voci). Dati: `esatte` ({len(fra["exact"])}) e `parti` ({len(fra["parts"])}) in `duel_line_corrections_{L}.json`. '
-  'I file `*-ptrs.txt` degli archivi dei personaggi contengono offset assoluti: se una tabella cresce vanno ricalcolati (`rimappa_puntatori`), altrimenti il duello va in crash.')
+w(f'Tables `chr_wordstbl_{"i" if L == "it" else "f"}.bin` and `02chr_wordstbl_...` inside ~72 `duel/cutin_*.ehp` archives (and `zakov*`). The unique sentences are ~1,800: all re-read. '
+  f'**{summary["sentences_unique"]} sentences changed** ({summary["sentences_entries"]} entries). Data: `exact` ({len(fra["exact"])}) and `parts` ({len(fra["parts"])}) in `duel_line_corrections_{L}.json`. '
+  'The `*-ptrs.txt` files of the character archives contain absolute offsets: if a table grows they must be recomputed (`remap_pointers`), otherwise the duel crashes.')
 w('')
-w(f'Confronto con parole evidenziate: `{rel}/duel_lines_diff.md`.')
+w(f'Comparison with highlighted words: `{rel}/duel_lines_diff.md`.')
 w('')
-tab(['originale', 'nuovo', 'voci', 'esempi di archivio'], rd('duel_lines.csv'))
+tab(['original', 'new', 'entries', 'archive examples'], rd('duel_lines.csv'))
 
-# ---------------- A5 stringhe
-w('## A5. Stringhe lunghe e corte dell\'interfaccia')
+# ---------------- A5 strings
+w('## A5. Long and short interface strings')
 w('')
-w(f'Tabelle `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (formato `(n, 12, 12+4n)` + offset + UTF-16) in {summary["strings_archives"]} archivi (la stessa tabella e\' copiata in piu\' archivi, es. `field/always_*_{"ita" if L == "it" else "fra"}.ehp` x6). '
-  f'**{summary["strings_unique"]} stringhe uniche cambiate**. Regole: `tools/corrections/string_rules_{L}.py` — **{len(RS.STRINGS)} voci `STRINGHE`** (archivio, membro, indice 0-based, [(vecchio, nuovo)], motivo), '
-  f'**{len(RS.GLOBALS)} `GLOBALI`** (regex/callable, applicate dopo le STRINGHE) su **{len(RS.TABLES)} tabelle** (`TABELLE`); piu\' {len(tui)} correzioni puntuali in `tools/data/ui_texts.json` (scrittura sul posto, testo piu\' corto o uguale).')
+w(f'Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12, 12+4n)` + offsets + UTF-16) in {summary["strings_archives"]} archives (the same table is copied into several archives, e.g. `field/always_*_{"ita" if L == "it" else "fra"}.ehp` x6). '
+  f'**{summary["strings_unique"]} unique strings changed**. Rules: `tools/corrections/string_rules_{L}.py` — **{len(RS.STRINGS)} `STRINGS` entries** (archive, member, 0-based index, [(old, new)], reason), '
+  f'**{len(RS.GLOBALS)} `GLOBALS`** (regex/callable, applied after the STRINGS) on **{len(RS.TABLES)} tables** (`TABLES`); plus {len(tui)} targeted corrections in `tools/data/ui_texts.json` (in-place writes, text shorter than or equal to the original).')
 w('')
 c = collections.Counter((r[0], r[4].count(';') + 1) for r in rd('ui_strings.csv'))
 cnt = collections.Counter(r[0] for r in rd('ui_strings.csv'))
-w('### Per membro (stringhe uniche cambiate)')
-tab(['membro', 'stringhe'], [[k, v] for k, v in cnt.most_common()])
-w('### Regole globali (tutte)')
-tab(['modello', 'sostituzione', 'motivo'], [[g[0], g[1] if isinstance(g[1], str) else '(funzione) ' + getattr(g[1], '__name__', ''), g[2] if len(g) > 2 else ''] for g in RS.GLOBALS])
-w('### Voci STRINGHE (tutte): dove e perche\'')
-tab(['archivio', 'membro', 'indice', 'cambiamenti', 'motivo'], [[s[0], s[1], s[2], f'{len(s[3])} sostituzione/i', s[4] if len(s) > 4 else ''] for s in RS.STRINGS])
-w('### Correzioni puntuali `ui_texts.json`')
-tab(['file', 'membro', 'indice', 'vecchio', 'nuovo', 'motivo'], [[t['file'], t['member'], t['index'], t['old'], t['new'], t.get('reason', '')] for t in tui])
-w(f'### Elenco completo\n**Confronto completo con parole evidenziate: `{rel}/ui_strings_diff.md`.** Dati grezzi: `{rel}/ui_strings.csv`. Prime 40:')
+w('### By member (unique strings changed)')
+tab(['member', 'strings'], [[k, v] for k, v in cnt.most_common()])
+w('### Global rules (all)')
+tab(['pattern', 'replacement', 'reason'], [[g[0], g[1] if isinstance(g[1], str) else '(function) ' + getattr(g[1], '__name__', ''), g[2] if len(g) > 2 else ''] for g in RS.GLOBALS])
+w('### STRINGS entries (all): where and why')
+tab(['archive', 'member', 'index', 'changes', 'reason'], [[s[0], s[1], s[2], f'{len(s[3])} replacement(s)', s[4] if len(s) > 4 else ''] for s in RS.STRINGS])
+w('### Targeted corrections `ui_texts.json`')
+tab(['file', 'member', 'index', 'old', 'new', 'reason'], [[t['file'], t['member'], t['index'], t['old'], t['new'], t.get('reason', '')] for t in tui])
+w(f'### Complete list\n**Complete comparison with highlighted words: `{rel}/ui_strings_diff.md`.** Raw data: `{rel}/ui_strings.csv`. First 40:')
 w('')
-tab(['membro', 'indice', 'originale', 'nuovo'], [r[:4] for r in rd('ui_strings.csv')], 40)
+tab(['member', 'index', 'original', 'new'], [r[:4] for r in rd('ui_strings.csv')], 40)
 
 # ---------------- A6/A7/A8
-w('## A6. Etichetta [CARTA MAGIA] / [CARTA TRAPPOLA] della carta grande nel duello')
+w('## A6. [SPELL CARD] / [TRAP CARD] label of the large card in the duel')
 w('')
-w('In tutti i `duel/basic_<regione><lingua>.ehp` l\'etichetta era in inglese (hash `c2268340`): `apply_to_iso.py` la sostituisce con `card_spell_trap.gim` di `field/always_<lingua>_<lingua>.ehp` (hash `9622cd75`).')
+w('In all the `duel/basic_<region><language>.ehp` the label was in English (hash `c2268340`): `apply_to_iso.py` replaces it with `card_spell_trap.gim` of `field/always_<language>_<language>.ehp` (hash `9622cd75`).')
 w('')
-tab(['archivio', 'membro', 'hash originale', 'hash nuovo'], rd('iso_images.csv'))
-w('## A7. File della ISO toccati e dettagli tecnici')
+tab(['archive', 'member', 'original hash', 'new hash'], rd('iso_images.csv'))
+w('## A7. ISO files touched and technical details')
 w('')
-w(f'{summary["file_touched"]} archivi `.ehp` risultano diversi dall\'originale (tutte le lingue insieme, perche\' la ISO e\' unica; elenco in `{rel}/touched_files.csv`). Gli altri file (video, audio, eseguibile `EBOOT.BIN`, `PARAM.SFO`) sono identici. '
-  'Differenze tecniche non testuali: `*-ptrs.txt` (offset assoluti dei membri, ricalcolati quando una tabella cambia lunghezza), nuova posizione degli archivi in fondo alla ISO.')
+w(f'{summary["file_touched"]} `.ehp` archives differ from the original (all languages together, because the ISO is a single one; list in `{rel}/touched_files.csv`). The other files (video, audio, `EBOOT.BIN` executable, `PARAM.SFO`) are identical. '
+  'Non-textual technical differences: `*-ptrs.txt` (absolute member offsets, recomputed when a table changes length), new position of the archives at the end of the ISO.')
 w('')
-w('## A8. Cosa NON si puo\' cambiare (limiti del gioco)')
+w('## A8. What can NOT be changed (game limits)')
 w('')
-w('- Il **nome del parlante** nella casella del dialogo (es. "Preside Sheppard"/"Cancelliere" in italiano, "Doyen Sheppard" in francese, "Rector Sheppard" in spagnolo) sta nell\'EBOOT cifrato: non modificabile.')
-w('- Testi disegnati dal gioco con il suo font (dialoghi, nomi, descrizioni nel deck, menu a tendina, tastiera di sistema, schermata di scelta lingua) non sono sostituibili dal texture pack: si cambiano solo nella ISO.')
-w('- Le 438 texture di mappa/sfondi non sono sostituite (il gioco ne cambia la palette): limite del pack di MikeyMK, non del nostro lavoro.')
+w('- The **speaker name** in the dialogue box (e.g. "Preside Sheppard"/"Cancelliere" in Italian, "Doyen Sheppard" in French, "Rector Sheppard" in Spanish) lives in the encrypted EBOOT: it cannot be modified.')
+w('- Texts drawn by the game with its own font (dialogues, names, descriptions in the deck, drop-down menus, system keyboard, language selection screen) cannot be replaced by the texture pack: they can only be changed in the ISO.')
+w('- The 438 map/background textures are not replaced (the game changes their palette): a limit of MikeyMK\'s pack, not of our work.')
 w('')
 w('---')
 w('')
 w('# B. TEXTURE PACK')
 w('')
-w('## B1. Provenienza e struttura')
+w('## B1. Origin and structure')
 w('')
-w('Base: **Yu-Gi-Oh! GX Tag Force 1 HD Remastered** di **MikeyMK** (pack USA `ULUS10136`) e carte HD di **chrisfand**, adattati alla ISO europea `ULES00600`. Il progetto non ridistribuisce il pack di terzi (`PERMESSI_AUTORI.md`): il patcher se lo fa dare dall\'utente. '
-  'Il nostro lavoro: (1) rimappare gli **hash** del pack USA su quelli EU (`tools/gen_ini.py`), (2) rifare nella lingua carte e scritte dell\'interfaccia, (3) correggere i testi, (4) `upscale_extra` per le texture non coperte.')
+w('Base: **Yu-Gi-Oh! GX Tag Force 1 HD Remastered** by **MikeyMK** (US pack `ULUS10136`) and HD cards by **chrisfand**, adapted to the European ISO `ULES00600`. The project does not redistribute the third-party pack: the patcher gets it from the user. '
+  'Our work: (1) remap the US pack\'s **hashes** to the EU ones (`tools/gen_ini.py`), (2) redo the cards and interface lettering in the language, (3) correct the texts, (4) `upscale_extra` for the textures that are not covered.')
 w('')
-w('PPSSPP riconosce una texture dall\'**hash dei suoi pixel** (xxhash dei dati, `gim.data_hash`); ogni riga del `textures.ini` e\' `0000000000000000<hash8> = percorso/png`. I PNG sono **4x** l\'originale e ridisegnano esattamente la stessa area. '
-  'Texture identiche tra lingue hanno lo stesso hash: la sostituzione vale per tutte (vedi `docs/TEXTURE_INVENTORY.md`).')
+w('PPSSPP recognizes a texture by the **hash of its pixels** (xxhash of the data, `gim.data_hash`); every line of `textures.ini` is `0000000000000000<hash8> = path/png`. The PNGs are **4x** the original and redraw exactly the same area. '
+  'Textures that are identical between languages have the same hash: the replacement holds for all of them (see `docs/TEXTURE_INVENTORY.md`).')
 w('')
-w(f'### Struttura reale (da `{rel}/pack_structure.csv`)')
-tab(['radice', 'cartella', 'file', 'MB', 'contenuto'], rd('pack_structure.csv'))
+w(f'### Real structure (from `{rel}/pack_structure.csv`)')
+tab(['root', 'folder', 'files', 'MB', 'content'], rd('pack_structure.csv'))
 if L == 'it':
-    w('Il **pack di base `PSP/TEXTURES/ULES00600` e\' gia\' italiano**: contiene `cards/small_it`, `large_it`, `tiny_it`, `ui_it` (interfaccia italiana) e le tessere italiane del titolo; le altre lingue sono moduli separati in `PSP/TEXTURES/modules/<l>`.')
+    w('The **base pack `PSP/TEXTURES/ULES00600` is already Italian**: it contains `cards/small_it`, `large_it`, `tiny_it`, `ui_it` (Italian interface) and the Italian title tiles; the other languages are separate modules in `PSP/TEXTURES/modules/<l>`.')
 else:
-    w('Ogni lingua tranne l\'italiano e\' un **modulo** (`PSP/TEXTURES/modules/' + L + '`) da comporre sopra il pack di base con `tools/compose_pack.py BASE MODULI CARD_DIR OUT ' + L + ' [--copia]`: copia il base e **solo** le cartelle `cards`, `intro` e `ui_' + L + '` del modulo (hard link o copia), poi `module_ini.py` riscrive i `textures.ini`: le righe delle carte localizzate puntano a `cards/small_' + L + '`/`large_' + L + '` e le righe di `' + L + '.ini` **sostituiscono** quelle del base con la stessa chiave (hash).')
+    w('Every language except Italian is a **module** (`PSP/TEXTURES/modules/' + L + '`) to compose over the base pack with `tools/compose_pack.py BASE MODULES CARD_DIR OUT ' + L + ' [--copy]`: it copies the base and **only** the `cards`, `intro` and `ui_' + L + '` folders of the module (hard link or copy), then `module_ini.py` rewrites the `textures.ini`: the localized card lines point to `cards/small_' + L + '`/`large_' + L + '` and the lines of `' + L + '.ini` **replace** those of the base with the same key (hash).')
 w('')
-w('### Cartelle del pack di base (uguali per tutte le lingue)')
-tab(['cartella', 'contenuto'], [
-    ['`cards/small`, `cards/large`', 'carte piccole/grandi HD originali di chrisfand (2.833 carte) con testi inglesi; la lingua sceglie `small_<l>`/`large_<l>` via ini'],
-    ['`cards/frame`', 'cornici, tabelle attributo/razza, etichette Magia/Trappola'],
-    ['`cards/tinyEN/JP/MikeyMK/tiny_<l>`', 'atlante delle miniature del deck (7 pagine; stesso hash in tutte le lingue: vince un solo atlante per installazione)'],
-    ['`characters`', 'ritratti, sprite e 3D dei personaggi HD (MikeyMK)'],
-    ['`events`', 'immagini degli eventi (17)'],
-    ['`intro`', 'logo, filmato di titolo, nuova partita; `title_screen` contiene le tessere con la targa "Versione Pomodoro Mistico"'],
-    ['`map`', 'sfondi della mappa'],
-    ['`shop`', 'negozio, pacchetti, stanze'],
-    ['`ui`', 'interfaccia HD inglese di MikeyMK (per tutte le lingue con gli stessi hash)'],
-    ['`upscale_extra`', 'texture non coperte dal pack, ingrandite 4x con xBRZ (1.192 file, ~56 MB; a risoluzione 4x/Auto lo shader 4xBRZ di PPSSPP e\' spento): include le varianti di `card_icon03` di en/fr/de/es'],
-    ['`_CHOOSE YOUR CARD STYLE`', '3 `textures.ini` alternativi (mikeymk, official_english, official_japanese): copiare uno al posto di `textures.ini` per cambiare lo stile delle carte']])
+w('### Base pack folders (the same for all languages)')
+tab(['folder', 'content'], [
+    ['`cards/small`, `cards/large`', 'original HD small/large cards by chrisfand (2,833 cards) with English texts; the language picks `small_<l>`/`large_<l>` via the ini'],
+    ['`cards/frame`', 'frames, attribute/race tables, Spell/Trap labels'],
+    ['`cards/tinyEN/JP/MikeyMK/tiny_<l>`', 'deck thumbnail atlas (7 pages; same hash in all languages: only one atlas wins per installation)'],
+    ['`characters`', 'HD portraits, sprites and 3D of the characters (MikeyMK)'],
+    ['`events`', 'event images (17)'],
+    ['`intro`', 'logo, title movie, new game; `title_screen` contains the tiles with the "Mystic Tomato Version" plate'],
+    ['`map`', 'map backgrounds'],
+    ['`shop`', 'shop, packs, rooms'],
+    ['`ui`', 'MikeyMK\'s English HD interface (for all languages with the same hashes)'],
+    ['`upscale_extra`', 'textures not covered by the pack, enlarged 4x with xBRZ (1,192 files, ~56 MB; at 4x/Auto resolution PPSSPP\'s 4xBRZ shader is off): includes the `card_icon03` variants of en/fr/de/es'],
+    ['`_CHOOSE YOUR CARD STYLE`', '3 alternative `textures.ini` (mikeymk, official_english, official_japanese): copy one in place of `textures.ini` to change the card style']])
 
 # ---------------- B2 cards
-w('## B2. Immagini delle carte')
+w('## B2. Card images')
 w('')
 cc = rp['folders_cards']
-w(f'Cartelle della lingua: {", ".join(f"`{k}` ({v} file)" for k, v in cc.items())}. Ogni carta ha una **piccola HD** (nome + descrizione + tipo, rigenerata con font liberi OFL: XCharter Bold per nomi/tipo/etichette, Libre Baskerville per gli effetti, Newsreader Italic per i Normali, PT Serif Caption per Magie/Trappole, Charis SIL per i glifi mancanti) e una **grande HD** (solo il nome sulla cornice). '
-  'In piu\': la **tabella degli attributi** con le parole della lingua (`cards/frame/icons_attribute_race_<l>.png`, `attributes.py`), l\'**etichetta Magia/Trappola** (`icons_spell_trap_<l>.png`, `label_it.py` / `extract_labels.py` -> `dati/label_eu_<codice>_128x32.png`) e l\'**atlante delle miniature** del deck (`tiny_<l>`, `tiny_atlas.py` + `tiny_fragment.py`).')
+w(f'Language folders: {", ".join(f"`{k}` ({v} files)" for k, v in cc.items())}. Every card has an **HD small** one (name + description + type, regenerated with free OFL fonts: XCharter Bold for names/type/labels, Libre Baskerville for effects, Newsreader Italic for Normals, PT Serif Caption for Spells/Traps, Charis SIL for the missing glyphs) and an **HD large** one (name only on the frame). '
+  'In addition: the **attribute table** with the words of the language (`cards/frame/icons_attribute_race_<l>.png`, `attributes.py`), the **Spell/Trap label** (`icons_spell_trap_<l>.png`, `label_it.py` / `extract_labels.py` -> `data/label_eu_<code>_128x32.png`) and the deck **thumbnail atlas** (`tiny_<l>`, `tiny_atlas.py` + `tiny_fragment.py`).')
 w('')
-w(f'Quando cambia il testo di una carta (sezione A2) vanno rigenerate le sue immagini: **{rp["cards_corrected"]} carte** nel {LANG}. Elenco in `{rel}/card_images.csv`. ' + (
-    'Comando: `sh tools/rebuild_corrections.sh USRDIR PACK_US PACK_MOD PYTHON` (carte piccole + grandi); su Windows `python -I` non vede i pacchetti utente: passare un wrapper che scarta `-I`.' if L == 'it' else
-    'Comando: `python tools/generate_language.py fr PACK CARDINFO_EHP US_INI CLEAN_DIR OUT [ID ...]` (senza ID rigenera tutte: 2.833 + 2.833, ~930 MB).'))
+w(f'When the text of a card changes (section A2) its images must be regenerated: **{rp["cards_corrected"]} cards** in {LANG}. List in `{rel}/card_images.csv`. ' + (
+    'Command: `sh tools/rebuild_corrections.sh USRDIR PACK_US PACK_MOD PYTHON` (small + large cards); on Windows `python -I` does not see the user packages: pass a wrapper that drops `-I`.' if L == 'it' else
+    'Command: `python tools/generate_language.py fr PACK CARDINFO_EHP US_INI CLEAN_DIR OUT [ID ...]` (without IDs it regenerates all of them: 2,833 + 2,833, ~930 MB).'))
 w('')
-w('Tipografia: ' + ('apostrofo tipografico dell\'italiano e virgolette; `Tipo`, `Terreno`, `Evocazione tramite Tributo` come nel gioco.' if L == 'it' else 'spazio non separabile prima di `: ; ! ?` e virgolette « ».'))
+w('Typography: ' + ('Italian typographic apostrophe and quotation marks; `Tipo`, `Terreno`, `Evocazione tramite Tributo` as in the game.' if L == 'it' else 'non-breaking space before `: ; ! ?` and « » quotation marks.'))
 w('')
 
 # ---------------- B3 ui
-w(f'## B3. Interfaccia HD in {LANG} (`ui_{L}`)')
+w(f'## B3. HD interface in {LANG} (`ui_{L}`)')
 w('')
-w(f'**{rp["texture_ui"]} texture** (`{rel}/ui_textures.csv`: file, hash PPSSPP, famiglia, script, dimensioni originale/HD, neutra/specifica, origine nella ISO). Per famiglia: ' + ', '.join(f'{k} {v}' for k, v in rp['per_family'].items()) + '. '
-  f'Di queste {rp["neutral"]} sono neutre (stesso hash in tutte le lingue) e {rp["specific"]} specifiche. '
-  'Ogni famiglia ha uno script in `tools/ui_textures/<famiglia>.py` (lettura `TF1_LANG`): ridisegna le scritte texture per texture partendo dall\'originale a bassa risoluzione della ISO e dallo stile del pack inglese; stessa area e stesse posizioni (il gioco ritaglia da rettangoli fissi); un font/peso/linea di base/ombra per scritta; font liberi (`alt_font.py`).')
+w(f'**{rp["texture_ui"]} textures** (`{rel}/ui_textures.csv`: file, PPSSPP hash, family, script, original/HD size, neutral/specific, origin in the ISO). By family: ' + ', '.join(f'{k} {v}' for k, v in rp['per_family'].items()) + '. '
+  f'Of these {rp["neutral"]} are neutral (same hash in all languages) and {rp["specific"]} specific. '
+  'Every family has a script in `tools/ui_textures/<family>.py` (reads `TF1_LANG`): it redraws the lettering texture by texture starting from the low-resolution original of the ISO and from the style of the English pack; same area and same positions (the game crops from fixed rectangles); one font/weight/baseline/shadow per lettering; free fonts (`alt_font.py`).')
 w('')
 FAM_EN = {
-    'menu_lists': "`result_e__menu01` (WIN/DRAW/LOSE e icone), `title_menu_e__m_menu_title01` (MAIN MENU · ENTER NAME · DOWNLOADED CARD LIST · DUEL PUZZLE · OPTIONS · LANGUAGE SETTINGS)",
-    'icon_sheets': "`icon04` (pixel europei sul foglio USA), `panel` (frammento `ased` della linguetta), `pda_pack01` (colonna NEW)",
-    'deck_screens': "linguette Trunk, Rental, Lab, Converter; `Card types in possession`; `Purchased Cards` / `Card Types Purche`; barra dorata; tasto ENTER",
+    'menu_lists': "`result_e__menu01` (WIN/DRAW/LOSE and icons), `title_menu_e__m_menu_title01` (MAIN MENU · ENTER NAME · DOWNLOADED CARD LIST · DUEL PUZZLE · OPTIONS · LANGUAGE SETTINGS)",
+    'icon_sheets': "`icon04` (European pixels on the US sheet), `panel` (`ased` fragment of the tab), `pda_pack01` (NEW column)",
+    'deck_screens': "tabs Trunk, Rental, Lab, Converter; `Card types in possession`; `Purchased Cards` / `Card Types Purche`; gold bar; ENTER key",
     'recipe_screens': "Character, User, Downloaded Recipes, Character Recipes, User Recipes, Limited, Semi-Limited, Forbidden, Trade",
-    'vs_screen': "`2nd round`, `3rd round`, foglio distintivi `1st PLAYER` / `2nd PLAYER` / `PLAYER`",
-    'result_letters': "tessere `D R A W` della schermata dei risultati (`result_e`) e del banner (`basic_be`): stesso hash, 4 file",
-  'tutorial': "dialogo `Your opponent has declared battle. Activate the effect of a card?` (YES/NO) e 5 carte-esempio con il testo del gioco",
+    'vs_screen': "`2nd round`, `3rd round`, badge sheet `1st PLAYER` / `2nd PLAYER` / `PLAYER`",
+    'result_letters': "`D R A W` tiles of the results screen (`result_e`) and of the banner (`basic_be`): same hash, 4 files",
+  'tutorial': "dialogue `Your opponent has declared battle. Activate the effect of a card?` (YES/NO) and 5 example cards with the game's text",
 }
 FAM = {
-    'duel_texts': ('duel/basic_<l><l>.ehp', {'it': 'Catena · TURNO (blu/rosso) · TOCCA AL GIOCATORE SUCCESSIVO (spezzata su 2 texture) · INIZIA IL DUELLO · Attacco Diretto! · foglio numeri `card_icon03` (vedi B4)', 'fr': 'Chaîne · TOUR (blu/rosso) · TOUR DU JOUEUR SUIVANT (taglio dopo SUIV) · DÉMARRER DUEL (taglio dopo DU) · Attaque Directe! · `card_icon03` e\' nella cartella `upscale_extra` (B4)', 'es': 'Cadena · TURNO DEL SIGUIENTE JUGADOR (il taglio tra le due texture passa dentro una lettera, come nell’originale) · COMENZAR DUELO · Ataque Directo · TURNO e `card_icon03` coperti da texture già presenti (stesso hash dell’italiano / `upscale_extra`)', 'de': 'Ketten · SPIELZUG (blu/rosso) · NÄCHSTER SPIELER (su 2 texture, il taglio passa dentro la L; i puntini della Ä sono una sprite a parte, ingrandita e centrata sopra la A) · DUELL BEGINNEN · Direkter Angriff! · `card_icon03` e\' nella cartella `upscale_extra` (B4)'}),
-    'result_letters': ('duel/basic_<l><l>.ehp', {'it': 'HAI VINTO · HAI PERSO · PAREGGIO: una tessera 64x64 per lettera (lettere ripetute riusano la stessa tessera) + silhouette', 'fr': 'TU AS GAGNÉ · TU AS PERDU · EGALITE (senza accento: nel pareggio non esiste la tessera É)', 'es': 'HAS GANADO (HASGNDO) · HAS PERDIDO (HASPERDIO, 9 tessere) · EMPATE (EMPAT) + silhouette', 'de': 'DU GEWINNST (DUGEWINST, 9 tessere) · DU VERLIERST (DUVERLIST, 9 tessere) · UNENTSCHIEDEN (UNETSCHID, 9 tessere; E e N ripetute) + silhouette di DU GEWINNST'}),
-    'menu_lists': ('title_menu/title_menu_<l>.ehp, duel/result/result_<l>.ehp, field/always_bri_<cod>.ehp', {'it': 'titoli dei menu (`m_menu_title01`, `trnsmt02`, `menu02`, `press_start0003`), etichette risultato, calendario (giorni, mesi, "giorni al torneo", Mattino/Sera)', 'fr': 'MENU PRINCIPAL · SAISIR NOM · LISTE CARTES TÉLÉCHARGÉE · PUZZLE DUEL · OPTIONS · SÉLECTION DE LA LANGUE · LISTE DE GROUPE... · RÉSULTAT DU DUEL · APPUYEZ SUR LA TOUCHE START · GAGNÉ/ÉGALITÉ/PERDU · Dimanche...Samedi · Mai Juillet Juin Août · jours / avant le tournoi · Matin / Soir', 'es': 'MENÚ PRINCIPAL · INTRODUCE EL NOMBRE · LISTA DE CARTAS DESCARGADAS · DUELO ACERTIJO · OPCIONES · AJUSTES DEL IDIOMA · AGRUPAR LISTA... · RESULTADO DEL DUELO · PRESIONA EL BOTÓN START · GANAS/EMPATE/PIERDES · Domingo...Sábado · Mayo Julio Junio Agosto · Días / para el torneo / de · AM / PM'}),
-    'icon_sheets': ('deck/all_<l>.ehp, shop/all_<l>.ehp, field/always_*', {'it': 'fogli di icone: `icon04` (Mia/L e distintivi), `s_pack` (ESAURITE), `panel` (frammento del tab), `icon06` (N), `pda_pack01` (NUOVO), `mein_menu00`, `trnsmt01`, `ocglist`', 'fr': '`icon04`, `s_pack` (ÉPUISÉ), `panel` (frammento "hetés"); `pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01` restano con "NEW" come nell\'originale francese', 'es': '`icon04`, `s_pack` (AGOTADO), `panel` (frammento "rados"); `pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01` hanno lo stesso hash dell’inglese'}),
-    'deck_screens': ('deck/all_<l>.ehp, labo/*.ehp, shop/all_<l>.ehp', {'it': 'linguette Cassa, **Fusion**, Side, Deck, Affitto, Laboratorio, Convertitore, "Tipi di Carte Posseduti", "Carte Comprate", tasto INVIO', 'fr': 'Coffre ×2, Location ×3, Labo, Convertisseur, "Types de cartes acquis", "Cartes achetées" (+ frammento), ENTRÉE', 'es': 'Tronco ×3, Fusión, Alquiler ×4, Laboratorio, Conversor ×2, "Tipos de carta en posesión", "Cartas compradas" (+ frammento), ACEPTAR'}),
-    'recipe_screens': ('deck/recipe_view_<l>.ehp, title_menu/title_menu_<l>.ehp, database/limitlist.ehp', {'it': 'linguette Personaggio / Utente / Scaricata / Limitata / Semi-limitata / Vietata / Scambio e pannelli ricette', 'fr': 'Personnage / Utilisateur / Téléchargée / Limitée / Semi-limitée / Interdite / Échange (nel gioco originale "Scambia" era un residuo italiano)', 'es': 'Personaje / Usuario / Recetas descargadas / Recetas de personaje / Recetas de usuario / Limitada / Semi-Limitada / Prohibida / Cambiar'}),
-    'vs_screen': ('duel/start/start_e.ehp (membri _<l>), start_all.ehp, start_<l>.ehp', {'it': 'banner DUEL / NORMAL / TAG, bagliori, "Modalità ...", "n A GIOCARE", "n Duello", foglio sasso-carta-forbici (VITTORIA/SCONFITTA/PAREGGIO), foglio giocatori ("n° GIOCATORE")', 'fr': 'DUEL / NORMAL / TAG · DEUXIÈME À JOUER / PREMIER À JOUER · 1er/2e/3e round · Mode Un Duel / Mode Match · GAGNÉ/PERDU/EGALITE · 1er JOUEUR / 2e JOUEUR · JOUEUR', 'es': 'DUELO / NORMAL / TAG · SEGUNDO EN SALIR / PRIMERO EN SALIR · 1ra/2da/3ra vuelta · Modo Individual / Modo Combate · GANAS/PIERDES/EMPATE · JUGADOR 1 / JUGADOR 2 · JUGADOR'}),
-    'tutorial': ('tutorial/tutorial_<l>.ehp (tuto_duelimg01..06)', {'it': 'illustrazione del dialogo di attivazione (testi, bottoni SI/NO, carta piccola) + 5 cartine con disco del tipo', 'fr': '"Ton adversaire a déclaré le duel." / "Activer l\'effetto de la carte ?" · OUI/NON · 5 cartine; geometria diversa (dialogo a 2 righe)', 'es': 'Tu oponente ha declarado la batalla. / ¿activar el efecto de la carta? · SÍ/NO · 5 cartine; dialogo a 2 righe ma riquadro più largo'})}
+    'duel_texts': ('duel/basic_<l><l>.ehp', {'it': 'Catena · TURNO (blue/red) · TOCCA AL GIOCATORE SUCCESSIVO (split over 2 textures) · INIZIA IL DUELLO · Attacco Diretto! · number sheet `card_icon03` (see B4)', 'fr': 'Chaîne · TOUR (blue/red) · TOUR DU JOUEUR SUIVANT (cut after SUIV) · DÉMARRER DUEL (cut after DU) · Attaque Directe! · `card_icon03` is in the `upscale_extra` folder (B4)', 'es': 'Cadena · TURNO DEL SIGUIENTE JUGADOR (the cut between the two textures passes inside a letter, as in the original) · COMENZAR DUELO · Ataque Directo · TURNO and `card_icon03` covered by already existing textures (same hash as Italian / `upscale_extra`)', 'de': 'Ketten · SPIELZUG (blue/red) · NÄCHSTER SPIELER (on 2 textures, the cut passes inside the L; the dots of the Ä are a separate sprite, enlarged and centred over the A) · DUELL BEGINNEN · Direkter Angriff! · `card_icon03` is in the `upscale_extra` folder (B4)'}),
+    'result_letters': ('duel/basic_<l><l>.ehp', {'it': 'HAI VINTO · HAI PERSO · PAREGGIO: one 64x64 tile per letter (repeated letters reuse the same tile) + silhouette', 'fr': 'TU AS GAGNÉ · TU AS PERDU · EGALITE (without accent: the draw has no É tile)', 'es': 'HAS GANADO (HASGNDO) · HAS PERDIDO (HASPERDIO, 9 tiles) · EMPATE (EMPAT) + silhouette', 'de': 'DU GEWINNST (DUGEWINST, 9 tiles) · DU VERLIERST (DUVERLIST, 9 tiles) · UNENTSCHIEDEN (UNETSCHID, 9 tiles; E and N repeated) + silhouette of DU GEWINNST'}),
+    'menu_lists': ('title_menu/title_menu_<l>.ehp, duel/result/result_<l>.ehp, field/always_bri_<code>.ehp', {'it': 'menu titles (`m_menu_title01`, `trnsmt02`, `menu02`, `press_start0003`), result labels, calendar (days, months, "days to the tournament", Morning/Evening)', 'fr': 'MENU PRINCIPAL · SAISIR NOM · LISTE CARTES TÉLÉCHARGÉE · PUZZLE DUEL · OPTIONS · SÉLECTION DE LA LANGUE · LISTE DE GROUPE... · RÉSULTAT DU DUEL · APPUYEZ SUR LA TOUCHE START · GAGNÉ/ÉGALITÉ/PERDU · Dimanche...Samedi · Mai Juillet Juin Août · jours / avant le tournoi · Matin / Soir', 'es': 'MENÚ PRINCIPAL · INTRODUCE EL NOMBRE · LISTA DE CARTAS DESCARGADAS · DUELO ACERTIJO · OPCIONES · AJUSTES DEL IDIOMA · AGRUPAR LISTA... · RESULTADO DEL DUELO · PRESIONA EL BOTÓN START · GANAS/EMPATE/PIERDES · Domingo...Sábado · Mayo Julio Junio Agosto · Días / para el torneo / de · AM / PM'}),
+    'icon_sheets': ('deck/all_<l>.ehp, shop/all_<l>.ehp, field/always_*', {'it': 'icon sheets: `icon04` (Mia/L and badges), `s_pack` (ESAURITE), `panel` (tab fragment), `icon06` (N), `pda_pack01` (NUOVO), `mein_menu00`, `trnsmt01`, `ocglist`', 'fr': '`icon04`, `s_pack` (ÉPUISÉ), `panel` (fragment "hetés"); `pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01` keep "NEW" as in the original French', 'es': '`icon04`, `s_pack` (AGOTADO), `panel` (fragment "rados"); `pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01` have the same hash as English'}),
+    'deck_screens': ('deck/all_<l>.ehp, labo/*.ehp, shop/all_<l>.ehp', {'it': 'tabs Cassa, **Fusion**, Side, Deck, Affitto, Laboratorio, Convertitore, "Tipi di Carte Posseduti", "Carte Comprate", INVIO key', 'fr': 'Coffre ×2, Location ×3, Labo, Convertisseur, "Types de cartes acquis", "Cartes achetées" (+ fragment), ENTRÉE', 'es': 'Tronco ×3, Fusión, Alquiler ×4, Laboratorio, Conversor ×2, "Tipos de carta en posesión", "Cartas compradas" (+ fragment), ACEPTAR'}),
+    'recipe_screens': ('deck/recipe_view_<l>.ehp, title_menu/title_menu_<l>.ehp, database/limitlist.ehp', {'it': 'tabs Personaggio / Utente / Scaricata / Limitata / Semi-limitata / Vietata / Scambio and recipe panels', 'fr': 'Personnage / Utilisateur / Téléchargée / Limitée / Semi-limitée / Interdite / Échange (in the original game "Scambia" was an Italian leftover)', 'es': 'Personaje / Usuario / Recetas descargadas / Recetas de personaje / Recetas de usuario / Limitada / Semi-Limitada / Prohibida / Cambiar'}),
+    'vs_screen': ('duel/start/start_e.ehp (members _<l>), start_all.ehp, start_<l>.ehp', {'it': 'banners DUEL / NORMAL / TAG, glows, "Modalità ...", "n A GIOCARE", "n Duello", rock-paper-scissors sheet (VITTORIA/SCONFITTA/PAREGGIO), player sheet ("n° GIOCATORE")', 'fr': 'DUEL / NORMAL / TAG · DEUXIÈME À JOUER / PREMIER À JOUER · 1er/2e/3e round · Mode Un Duel / Mode Match · GAGNÉ/PERDU/EGALITE · 1er JOUEUR / 2e JOUEUR · JOUEUR', 'es': 'DUELO / NORMAL / TAG · SEGUNDO EN SALIR / PRIMERO EN SALIR · 1ra/2da/3ra vuelta · Modo Individual / Modo Combate · GANAS/PIERDES/EMPATE · JUGADOR 1 / JUGADOR 2 · JUGADOR'}),
+    'tutorial': ('tutorial/tutorial_<l>.ehp (tuto_duelimg01..06)', {'it': 'illustration of the activation dialogue (texts, YES/NO buttons, small card) + 5 maps with the type disc', 'fr': '"Ton adversaire a déclaré le duel." / "Activer l\'effet de la carte ?" · OUI/NON · 5 maps; different geometry (2-line dialogue)', 'es': 'Tu oponente ha declarado la batalla. / ¿activar el efecto de la carta? · SÍ/NO · 5 maps; 2-line dialogue but wider box'})}
 SCRIPT_OF = {'duel_texts': 'duel_texts', 'result_letters': 'result_letters', 'menu_lists': 'menu_lists', 'icon_sheets': 'icon_sheets',
              'deck_screens': 'deck_screens', 'recipe_screens': 'recipe_screens', 'vs_screen': 'vs_screen', 'tutorial': 'tutorial'}   # pack family -> script
 rows = []
 for f, n in rp['per_family'].items():
     a, t = FAM.get(f, ('?', {}))
     rows.append([f, n, f'`tools/ui_textures/{SCRIPT_OF.get(f, f)}.py`', a.replace('<l>', {'it': 'i', 'fr': 'f', 'es': 's', 'de': 'g', 'en': 'e'}[L]), t.get(L, FAM_EN.get(f, '') if L == 'en' else '')])
-tab(['famiglia', 'texture', 'script', 'archivio ISO sorgente', 'testi della lingua'], rows)
-w('Regole di qualita\' (valgono per ogni lingua): lettere regolari, mai deformate una per una; stessa area dell\'originale; niente sfocature; il testo e\' quello dell\'originale della lingua (si correggono solo errori evidenti: residui di altre lingue, accenti); pixel art **non** levigata senza conferma; geometrie sempre misurate sull\'originale.')
+tab(['family', 'textures', 'script', 'source ISO archive', 'language texts'], rows)
+w('Quality rules (valid for every language): regular letters, never deformed one by one; same area as the original; no blur; the text is that of the language\'s original (only obvious errors are corrected: leftovers from other languages, accents); pixel art is **not** smoothed without confirmation; geometries always measured on the original.')
 w('')
-w('### Testi disegnati: originale -> HD')
-w("Tabella letta a occhio, texture per texture: `docs/changes_" + L + "/texture_texts_" + L + ".md`." + (" Differenze rispetto all'originale: `TAUSCHEN`/`Tauschen` -> `SCAMBIO`/`Scambio`, `Fusione` -> `Fusion`; tutto il resto riscrive le stesse parole." if L == 'it' else " Nessuna parola cambiata: l'HD riscrive le stesse parole dell'originale inglese (tranne `DOWNLOADED CARD LIST`, che il pack USA ha come `DOWNLOAD`)." if L == 'en' else " Differenze rispetto all'originale: `DEMARRER` -> `DÉMARRER`, `SCAMBIA`/`Scambia` -> `ÉCHANGE`/`Échange`, `2è/3è round` -> `2e/3e round`; tutto il resto riscrive le stesse parole."))
+w('### Drawn texts: original -> HD')
+w("Table read by eye, texture by texture: `docs/changes_" + L + "/texture_texts_" + L + ".md`." + (" Differences from the original: `TAUSCHEN`/`Tauschen` -> `SCAMBIO`/`Scambio`, `Fusione` -> `Fusion`; everything else rewrites the same words." if L == 'it' else " No word changed: the HD rewrites the same words as the English original (except `DOWNLOADED CARD LIST`, which the US pack has as `DOWNLOAD`)." if L == 'en' else " Differences from the original: `DEMARRER` -> `DÉMARRER`, `SCAMBIA`/`Scambia` -> `ÉCHANGE`/`Échange`, `2è/3è round` -> `2e/3e round`; everything else rewrites the same words."))
 w('')
-w('### Elenco di ogni texture')
-w(f'(tutte le {rp["texture_ui"]} righe, da `ui_textures.csv`)')
+w('### List of every texture')
+w(f'(all {rp["texture_ui"]} rows, from `ui_textures.csv`)')
 w('')
-tab(['file nel pack', 'hash', 'famiglia', 'originale px', 'HD px', 'tipo', 'origine ISO'], [[r[0], r[1], r[2], r[4], r[5], r[6], r[8]] for r in rd('ui_textures.csv')])
+tab(['file in the pack', 'hash', 'family', 'original px', 'HD px', 'type', 'ISO origin'], [[r[0], r[1], r[2], r[4], r[5], r[6], r[8]] for r in rd('ui_textures.csv')])
 if L == 'it':
-    w('### Texture italiane senza controparte in `ui_fr` (19) e perche\'')
-    w('13 sono neutre (stesso hash in tutte le lingue: pannelli ricette, linguette Side/Deck/Fusion Deck, barre, `card_side`...). 6 hanno wording locale nell\'originale (`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `d_window00016`, `duelrecord parts`): l\'italiano ha NUOVO / N / Fusion, il francese originale ha NEW / Fusion e ha gia\' i suoi HD in `upscale_extra`. La linguetta dell\'editor deck dice **Fusion** (non "Fusione"): "Fusion Deck" si chiama cosi\' in tutte le lingue.')
+    w('### Italian textures without a counterpart in `ui_fr` (19) and why')
+    w('13 are neutral (same hash in all languages: recipe panels, Side/Deck/Fusion Deck tabs, bars, `card_side`...). 6 have local wording in the original (`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `d_window00016`, `duelrecord parts`): Italian has NUOVO / N / Fusion, the original French has NEW / Fusion and already has its HD ones in `upscale_extra`. The deck editor tab says **Fusion** (not "Fusione"): "Fusion Deck" is called that in all languages.')
 elif L == 'en':
-    w("### Texture inglesi che restano com'erano")
-    w("Le texture inglesi gia' coperte dal pack USA (stesso hash: 621) vengono da MikeyMK e non si toccano. Restano **ingrandite con xBRZ** (`upscale_extra`) o senza file (14, frammenti senza testo: si vedono come l'originale) le texture senza testo o comuni a tutte le lingue (le 4 tessere DRAW della schermata dei risultati sono ridisegnate in `result_letters`). 17 texture del pack italiano hanno lo stesso hash di quelle inglesi (`ITA-SU-ING`): controllate una a una, sono senza testo. Elenco completo: `docs/changes_en/texture_inventory_en.txt`.")
+    w("### English textures that stay as they were")
+    w("The English textures already covered by the US pack (same hash: 621) come from MikeyMK and are not touched. The textures without text or common to all languages stay **enlarged with xBRZ** (`upscale_extra`) or without a file (14, fragments without text: they look like the original) (the 4 DRAW tiles of the results screen are redrawn in `result_letters`). 17 textures of the Italian pack have the same hash as the English ones (`ITA-ON-ENG`): checked one by one, they have no text. Complete list: `docs/changes_en/texture_inventory_en.txt`.")
 else:
-    w('### Texture che restano come l\'originale')
-    w('`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `parts` sono fogli di icone in pixel art (con NEU/NEW): restano com\'erano, coperti dall\'ingrandimento `upscale_extra` come nelle altre lingue; il testo non e\' stato cambiato. Le texture neutre vengono dal pack di base. In spagnolo anche `score-top` (TURNO) ha lo stesso hash dell\'italiano e `card_icon03` e\' in `upscale_extra`.')
+    w('### Textures that stay like the original')
+    w('`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `parts` are pixel-art icon sheets (with NEU/NEW): they stay as they were, covered by the `upscale_extra` enlargement as in the other languages; the text was not changed. The neutral textures come from the base pack. In Spanish `score-top` (TURNO) also has the same hash as Italian and `card_icon03` is in `upscale_extra`.')
 w('')
 
 # ---------------- B4
-w('## B4. Il foglio dei numeri del duello (`card_icon03`)')
+w('## B4. The duel number sheet (`card_icon03`)')
 w('')
-w('Foglio unico con cifre LP, tempo, tasti e moltiplicatori; hash diverso per lingua. Ricetta scelta dall\'utente (`tools/ui_textures/icon03_languages.py`, rilanciare con `--apply`):')
-w('- righe 0-180 (cifre piccole e segni, tasti arancioni 1/2/3, cifre grandi 0-9 con "LP", cifre piccole 0-9): **dal pack USA**, pixel art netta;')
-w('- celle in cui il gioco europeo differisce dal pack USA (spunta nera, palla grigia, pillola vuota, parola del tempo): **pixel originali ingranditi 4x senza sfumare**; parola del tempo ' + {'it': '**TEMPO**', 'fr': '**TEMPS**', 'de': '**ZEIT**', 'es': '**TIEMPO**', 'en': '**TIME**'}[L] + '; la pillola arancione ("Single" nel pack USA) resta **vuota**;')
-w('- righe >= 181 (moltiplicatori x1..x12, icone, carte, frecce): dal foglio italiano gia\' nel pack (`tools/data/card_icon03_base_it.png`);')
-w('- le celle europee si incollano **solo nella loro fascia** di righe (altrimenti rovinano la parte alta delle cifre grandi).')
+w('A single sheet with LP digits, time, keys and multipliers; different hash per language. Recipe chosen by the user (`tools/ui_textures/icon03_languages.py`, rerun with `--apply`):')
+w('- rows 0-180 (small digits and signs, orange keys 1/2/3, big digits 0-9 with "LP", small digits 0-9): **from the US pack**, crisp pixel art;')
+w('- cells in which the European game differs from the US pack (black check mark, grey ball, empty pill, time word): **original pixels enlarged 4x without smoothing**; time word ' + {'it': '**TEMPO**', 'fr': '**TEMPS**', 'de': '**ZEIT**', 'es': '**TIEMPO**', 'en': '**TIME**'}[L] + '; the orange pill ("Single" in the US pack) stays **empty**;')
+w('- rows >= 181 (multipliers x1..x12, icons, cards, arrows): from the Italian sheet already in the pack (`tools/data/card_icon03_base_it.png`);')
+w('- the European cells are pasted **only in their band** of rows (otherwise they spoil the top of the big digits).')
 w('')
-w('File: it -> `ui_it/duel_texts/basic_ii__card_icon03.png` (hash 376925c7); fr -> `upscale_extra/3e5482fd.png`; en ee0c44c3; de ffe309a6; es 859eea2b. Anteprime in `confronti/icon03/`.')
+w('Files: it -> `ui_it/duel_texts/basic_ii__card_icon03.png` (hash 376925c7); fr -> `upscale_extra/3e5482fd.png`; en ee0c44c3; de ffe309a6; es 859eea2b. Previews in `comparisons/icon03/`.')
 w('')
 # ---------------- B5
-w('## B5. Targa del titolo')
+w('## B5. Title plate')
 w('')
-w(f'`python tools/ui_textures/mystic_tomato_title.py {L}` genera 2 PNG (`542eff79685c434d`, `705176739829dcf5`, tessere 18 e 19 del fondale di 20 tessere 128x64 `title_menu_i.ehp: main_title00001..00020`) con la carta 4930 nella lingua + la formula "versione" + la bandiera, font PT Sans Bold: '
-  + '**"' + {'it': 'VERSIONE POMODORO MISTICO', 'fr': 'VERSION TOMATE MYSTIQUE', 'de': 'EDITION MYSTISCHE TOMATE', 'es': 'EDICIÓN TOMATE MÍSTICO', 'en': 'VERSION MYSTIC TOMATO'}[L] + '"**' + '. La targa **va inclusa solo per la lingua scelta** (vive in `moduli/' + L + '/intro/title_screen/`); il pack di base originale ha le tessere senza banner. File in questo pack: ' + ', '.join(f'`{b}`' for b in rp['banner'] if 'title_screen' in b and ('542eff' in b or '705176' in b)) + '.')
+w(f'`python tools/ui_textures/mystic_tomato_title.py {L}` generates 2 PNGs (`542eff79685c434d`, `705176739829dcf5`, tiles 18 and 19 of the 20-tile 128x64 backdrop `title_menu_i.ehp: main_title00001..00020`) with card 4930 in the language + the "version" wording + the flag, PT Sans Bold font: '
+  + '**"' + {'it': 'VERSIONE POMODORO MISTICO', 'fr': 'VERSION TOMATE MYSTIQUE', 'de': 'EDITION MYSTISCHE TOMATE', 'es': 'EDICIÓN TOMATE MÍSTICO', 'en': 'VERSION MYSTIC TOMATO'}[L] + '"**' + '. The plate **is included only for the chosen language** (it lives in `modules/' + L + '/intro/title_screen/`); the original base pack has the tiles without a banner. Files in this pack: ' + ', '.join(f'`{b}`' for b in rp['banner'] if 'title_screen' in b and ('542eff' in b or '705176' in b)) + '.')
 w('')
 # ---------------- B6
-w('## B6. `textures.ini` e composizione')
+w('## B6. `textures.ini` and composition')
 w('')
-w('`tools/gen_ini.py TOOLS US_INI CARD_DIR OUT_INI i=it +extra_it.ini +ui_it.ini +dati/upscale_extra.ini` converte il `textures.ini` USA in quello EU: le voci non-carta restano (texture neutre = stessi hash); le voci carta sono rigenerate dagli archivi `card/*.cip` EU per le 5 lingue (`i=it` rimappa `cards/large/X.png` -> `cards/large_it/X.png`); aggiunge l\'etichetta Magia/Trappola (`extra_it.ini`), le righe `ui_it` e `upscale_extra.ini`. Si fa anche per i 3 stili carte. '
-  'Se gli stessi pixel esistono in piu\' lingue vince la prima in `e i f g s` (per questo atlante, banner e tabella attributi sono "uno per installazione").')
+w('`tools/gen_ini.py TOOLS US_INI CARD_DIR OUT_INI i=it +extra_it.ini +ui_it.ini +data/upscale_extra.ini` converts the US `textures.ini` into the EU one: the non-card entries stay (neutral textures = same hashes); the card entries are regenerated from the EU `card/*.cip` archives for the 5 languages (`i=it` remaps `cards/large/X.png` -> `cards/large_it/X.png`); it adds the Spell/Trap label (`extra_it.ini`), the `ui_it` lines and `upscale_extra.ini`. It is also done for the 3 card styles. '
+  'If the same pixels exist in several languages the first in `e i f g s` wins (for this reason atlas, banner and attribute table are "one per installation").')
 w('')
-w(f'Righe `ui_{L}` nel `{"textures.ini" if L == "it" else L + ".ini"}`: {rp["rows_ini_ui"]}. Frequenza dei prefissi: `{rel}/ini_lines.csv`. Controllo: ogni riga `ui_{L}/...` deve puntare a un file esistente e non devono esserci hash duplicati.')
+w(f'`ui_{L}` lines in `{"textures.ini" if L == "it" else L + ".ini"}`: {rp["rows_ini_ui"]}. Prefix frequency: `{rel}/ini_lines.csv`. Check: every `ui_{L}/...` line must point to an existing file and there must be no duplicate hashes.')
 w('')
-w('## B7. Installazione e impostazioni')
+w('## B7. Installation and settings')
 w('')
-w('PC: copiare `ULES00600` in `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `.../TEXTURES/ULES00600/`, senza estrarlo; rigenerare lo zip con le correzioni). Impostazioni: **Sostituisci texture ON**, risoluzione di rendering **4x**, lingua del gioco = lingua del modulo (la lingua e\' scritta nel **salvataggio**). Dopo aver cambiato un solo PNG basta copiarlo e riavviare PPSSPP (cache). Per provare i testi usare la ISO `_definitiva`.')
+w('PC: copy `ULES00600` into `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `.../TEXTURES/ULES00600/`, without extracting it; regenerate the zip with the corrections). Settings: **Replace textures ON**, rendering resolution **4x**, game language = module language (the language is stored in the **save file**). After changing a single PNG it is enough to copy it and restart PPSSPP (cache). To try the texts use the `_definitiva` ISO.')
 w('')
 w('---')
 w('')
-w('# C. SCELTE EDITORIALI')
+w('# C. EDITORIAL CHOICES')
 w('')
 if L == 'it':
-    w('- **Preside** (mai "Cancelliere") per Sheppard, compreso "Ufficio del Preside" e "Profilo del Preside Sheppard".')
-    w('- **Segna-Mostro** (non "Gettoni Mostro") in aiuti, record e carte; `Segna-Opzione`.')
-    w('- Banner: "direttore dello Slifer Rosso"; dormitori **Slifer Rosso, Ra Giallo, Obelisk Blu**; `Modalità Storia` e\' il nome del menu.')
-    w('- Linguetta **Fusion** (non Fusione). `E\'` -> `È`; `Life Point` -> `Life Points`; punteggiatura e apostrofi corretti.')
-    w('- Scene censurate riportate al giapponese: sake/shochu e abito da cameriera (vedi sotto); "Beh, non sono poi così bravo..." (era "sto sbavando").')
+    w('- **Preside** (never "Cancelliere") for Sheppard, including "Ufficio del Preside" and "Profilo del Preside Sheppard".')
+    w('- **Segna-Mostro** (not "Gettoni Mostro") in help, records and cards; `Segna-Opzione`.')
+    w('- Banner: "direttore dello Slifer Rosso"; dormitories **Slifer Rosso, Ra Giallo, Obelisk Blu**; `Modalità Storia` is the menu name.')
+    w('- Tab **Fusion** (not Fusione). `E\'` -> `È`; `Life Point` -> `Life Points`; punctuation and apostrophes corrected.')
+    w('- Censored scenes restored to the Japanese: sake/shochu and maid outfit (see below); "Beh, non sono poi così bravo..." (it was "sto sbavando").')
 else:
     if L == 'fr':
-        w('- **Doyen / Chancelier**: dialogo per dialogo, formale -> "Chancelier", informale -> "Doyen"; nelle schede UI "Chancelier Sheppard".')
-        w('- Punteggiatura francese `! ? : ;` con spazio (anche dopo `》`); "Mode histoire" -> "Mode aventure" (nome vero del menu).')
-        w('- `Échange` al posto di "Scambia" (residuo italiano); "2e/3e round"; "EGALITE" senza accento; "DÉMARRER DUEL".')
-        w('- `Piège Continu` e\' il termine coerente di tutto il gioco: non si cambia.')
+        w('- **Doyen / Chancelier**: dialogue by dialogue, formal -> "Chancelier", informal -> "Doyen"; in the UI cards "Chancelier Sheppard".')
+        w('- French punctuation `! ? : ;` with a space (also after `》`); "Mode histoire" -> "Mode aventure" (real name of the menu).')
+        w('- `Échange` instead of "Scambia" (Italian leftover); "2e/3e round"; "EGALITE" without accent; "DÉMARRER DUEL".')
+        w('- `Piège Continu` is the term consistent across the whole game: it is not changed.')
     elif L == 'en':
-        w("- **Solo errori oggettivi** dell'inglese europeo: refusi (`Sryus`, `Principle's`, `Bandanna`), articoli (`a Equip Spell` -> `an Equip Spell`, `face-down card` -> `a face-down card`), apostrofi (`monsters's`, `opponents cards`), concordanze, forme verbali dei tutorial (`\"Summon\" it` -> `\"Summoning\" it`), spazi e `$` di troppo nei codici colore. Nessuna riscrittura di stile.")
-        w("- `Chancellor Sheppard` nelle schede, come nei dialoghi; `Bandana` come nei dialoghi.")
-        w("- Termini di carte e testi lasciati come nel gioco; le 82 carte corrette hanno il testo rigenerato nelle immagini HD (`moduli/en/cards`).")
-        w("- La targa del titolo inglese e' `VERSION MYSTIC TOMATO` (confermato dall'utente il 2026-10-13).")
+        w("- **Only objective errors** of European English: typos (`Sryus`, `Principle's`, `Bandanna`), articles (`a Equip Spell` -> `an Equip Spell`, `face-down card` -> `a face-down card`), apostrophes (`monsters's`, `opponents cards`), agreement, verb forms in the tutorials (`\"Summon\" it` -> `\"Summoning\" it`), extra spaces and `$` in the color codes. No stylistic rewriting.")
+        w("- `Chancellor Sheppard` in the cards, as in the dialogues; `Bandana` as in the dialogues.")
+        w("- Card terms and texts left as in the game; the 82 corrected cards have their text regenerated in the HD images (`modules/en/cards`).")
+        w("- The English title plate is `VERSION MYSTIC TOMATO` (confirmed by the user on 2026-10-13).")
     else:
-        w('- **Rector Sheppard** (come nei dialoghi) nelle schede e nelle mappe ("Oficina del Rector"); dormitori **Slifer Rojo, Ra Amarillo, Obelisco Azul**; **Jinetes de la Sombra**; "Habitación" al posto di "Alójese" (Room).')
-        w('- Sake/shochu e abito da cameriera come nelle altre lingue (`st01_t01/Scr003E`), `st02_t01/Scr101E` ruotato; "Sirviente de la Calavera", "Toon", "Archidemonio", "Trío Ojama" e accenti dei nomi come sulle carte.')
-        w('- Opzioni: "EN/FUERADE" -> "ON/OFF"; messaggi del titolo ("nuevos datos de juego"), lezioni del tutorial ("le turno" -> "es el turno de", tasti x/o scambiati, codici colore chiusi), paragrafo finale dei Duelos Tag tradotto (era troncato/in inglese).')
-        w('- Termini lasciati come nel gioco: "Invocación por Sacrificio", "Tributar", "Efecto de Blanco", "Tronco" (domande aperte in `docs/changes_es/open_questions_es.md`).')
-w('- Foglio numeri: cifre/LP dal pack USA, x1..x12 dal foglio italiano, parola del tempo ' + {'it': 'TEMPO', 'fr': 'TEMPS', 'de': 'ZEIT', 'es': 'TIEMPO', 'en': 'TIME'}[L] + '.')
+        w('- **Rector Sheppard** (as in the dialogues) in the cards and maps ("Oficina del Rector"); dormitories **Slifer Rojo, Ra Amarillo, Obelisco Azul**; **Jinetes de la Sombra**; "Habitación" instead of "Alójese" (Room).')
+        w('- Sake/shochu and maid outfit as in the other languages (`st01_t01/Scr003E`), `st02_t01/Scr101E` rotated; "Sirviente de la Calavera", "Toon", "Archidemonio", "Trío Ojama" and name accents as on the cards.')
+        w('- Options: "EN/FUERADE" -> "ON/OFF"; title messages ("nuevos datos de juego"), tutorial lessons ("le turno" -> "es el turno de", swapped x/o keys, closed color codes), final paragraph of the Tag Duels translated (it was truncated/in English).')
+        w('- Terms left as in the game: "Invocación por Sacrificio", "Tributar", "Efecto de Blanco", "Tronco" (open questions in `docs/changes_es/open_questions_es.md`).')
+w('- Number sheet: digits/LP from the US pack, x1..x12 from the Italian sheet, time word ' + {'it': 'TEMPO', 'fr': 'TEMPS', 'de': 'ZEIT', 'es': 'TIEMPO', 'en': 'TIME'}[L] + '.')
 w('')
-w('### Voci del registro delle scelte per questa lingua (`tools/data/editorial_choices.json`)')
-tab(['id', 'originale', 'corretto', 'ereditata', 'motivo'], [[v['id'], v['original'], v['corrected'], 'si' if v['inherited'] else 'no', v['reason']] for v in reg])
-w('Altre scelte e la rilettura delle frasi dei duelli: `docs/EDITORIAL_CHOICES.md`.')
+w('### Entries of the choices register for this language (`tools/data/editorial_choices.json`)')
+tab(['id', 'original', 'corrected', 'inherited', 'reason'], [[v['id'], v['original'], v['corrected'], 'yes' if v['inherited'] else 'no', v['reason']] for v in reg])
+w('Other choices and the re-reading of the duel sentences: `docs/EDITORIAL_CHOICES.md`.')
 w('')
-w('# D. VERIFICA IN GIOCO')
+w('# D. IN-GAME VERIFICATION')
 w('')
 if L == 'it':
-    w('- Visto in gioco: interfaccia HD italiana, stringhe lunghe riscritte (aiuti, schede, tutorial), terminologia Preside/Segna-Mostro, carte HD e etichetta Magia/Trappola della carta grande.')
-    w('- **Non visto** dopo gli ultimi cambi: rilettura carte (65 carte nuove), frasi dei duelli corrette, linguetta "Fusion", 4 avvisi di lunghezza box dei dialoghi (en/es/de #147/#151, de #172).')
+    w('- Seen in game: Italian HD interface, rewritten long strings (help, cards, tutorial), Preside/Segna-Mostro terminology, HD cards and Spell/Trap label of the large card.')
+    w('- **Not seen** after the latest changes: card re-reading (65 new cards), corrected duel sentences, "Fusion" tab, 4 dialogue box-length warnings (en/es/de #147/#151, de #172).')
 else:
     if L == 'de':
-        w('- **Visti in gioco** (ISO `_definitiva` + modulo `de`, nuovo gioco in tedesco, 2026-10-12): scelta lingua, titolo con targa "MYSTISCHE TOMATE EDITION" e Neues Spiel/Fortfahren, "Daten geladen", Hauptmenue HD, Deck-Menue (Deck bearbeiten / Rezeptanzeige), editor del deck (linguette Deck/Fusion/Side/Truhe, "Persoenliches Deck", "Eigene Kartentypen", Hilfe), Rezeptanzeige (Benutzer/Charakter, Fusionsdeck), conferma "Deckbearbeitung verlassen", calendario ("1. Mai / Montag", "92 Tage bis zum Turnier"), mappa ("Duellakademie", elenco luoghi), menu dell\'ufficio (Reden/Duell/Gegenstaende/PDA), dialoghi del cancelliere e di Crowler in Klassenzimmer con le correzioni (Buero des Kanzlers, Duellakademie, Haupttor...), box a 2-3 righe senza tagli.')
-        w('- **Non visti** (solo letti e confrontati con l\'originale nei fogli di confronto): Kette, Direktangriff, fine duello, sasso-carta-forbici, ZWEITER/ERSTER, 1. Runde, tutorial e lezioni, negozio (AUSVERKAUFT, "Gekaufte Karten"), laboratorio (Labor, Konverter, Miete), PDA, album, Optionen, carte con testo nuovo, frasi dei duelli, schermata VS.')
-        w('- **Visti nel duello dimostrativo del titolo** (2026-10-12): schermata VS ("NORMALES DUELL", "Einzelmodus", "Gegen", distintivi), HUD del duello, frasi dei duellanti in tedesco, descrizioni di carte in tedesco; "Draw Phase" resta inglese come nell\'originale. Difetti segnalati dall\'utente: font dei dialoghi non HD (testo di sistema, non sostituibile con le texture) e menu di salvataggio PSP in francese (lingua di sistema di PPSSPP).')
+        w('- **Seen in game** (`_definitiva` ISO + `de` module, new game in German, 2026-10-12): language selection, title with the "MYSTISCHE TOMATE EDITION" plate and Neues Spiel/Fortfahren, "Daten geladen", HD Hauptmenue, Deck menu (Deck bearbeiten / Rezeptanzeige), deck editor (tabs Deck/Fusion/Side/Truhe, "Persoenliches Deck", "Eigene Kartentypen", Hilfe), Rezeptanzeige (Benutzer/Charakter, Fusionsdeck), confirmation "Deckbearbeitung verlassen", calendar ("1. Mai / Montag", "92 Tage bis zum Turnier"), map ("Duellakademie", list of places), office menu (Reden/Duell/Gegenstaende/PDA), dialogues of the chancellor and of Crowler in Klassenzimmer with the corrections (Buero des Kanzlers, Duellakademie, Haupttor...), 2-3-line boxes without cuts.')
+        w('- **Not seen** (only read and compared with the original in the comparison sheets): Kette, Direktangriff, end of duel, rock-paper-scissors, ZWEITER/ERSTER, 1. Runde, tutorial and lessons, shop (AUSVERKAUFT, "Gekaufte Karten"), laboratory (Labor, Konverter, Miete), PDA, album, Optionen, cards with new text, duel sentences, VS screen.')
+        w('- **Seen in the title demo duel** (2026-10-12): VS screen ("NORMALES DUELL", "Einzelmodus", "Gegen", badges), duel HUD, duelist sentences in German, card descriptions in German; "Draw Phase" stays English as in the original. Defects reported by the user: dialogue font not HD (system text, cannot be replaced with textures) and PSP save menu in French (PPSSPP system language).')
     elif L == 'fr':
-        w('- Visti in gioco (ISO `_definitiva`): titolo con targa, menu, editor del deck.')
+        w('- Seen in game (`_definitiva` ISO): title with plate, menus, deck editor.')
     elif L == 'en':
-        w("- **Non visto in gioco**: la ISO `_definitiva` e il pack inglese composto non sono ancora stati provati in PPSSPP. Controllati solo sui dati: `apply_to_iso.py` a 0 avvisi, ogni riga `ui_en` del `textures.ini` punta a un file esistente, confronti originale/HD in `docs/changes_en/sheets/` (originale 4x accanto all'HD, riletti a occhio).")
-        w("- Da vedere in gioco: carta con testo nuovo, dialoghi corretti, aiuti dell'editor, linguette Trunk/Rental/Lab/Converter, `Purchased Cards`, `2nd/3rd round`, distintivi `1st/2nd PLAYER`, `MAIN MENU` e voci del menu, tutorial del duello.")
+        w("- **Not seen in game**: the `_definitiva` ISO and the composed English pack have not been tried in PPSSPP yet. Checked only on the data: `apply_to_iso.py` with 0 warnings, every `ui_en` line of `textures.ini` points to an existing file, original/HD comparisons in `docs/changes_en/sheets/` (original 4x next to the HD, re-read by eye).")
+        w("- To see in game: card with new text, corrected dialogues, editor help, tabs Trunk/Rental/Lab/Converter, `Purchased Cards`, `2nd/3rd round`, `1st/2nd PLAYER` badges, `MAIN MENU` and menu entries, duel tutorial.")
     else:
-        w('- **Visti in gioco** (ISO `_definitiva` + modulo `es`, nuovo gioco in spagnolo, 2026-10-12): scelta lingua, titolo con targa "EDICIÓN TOMATE MÍSTICO" e "PRESIONA EL BOTÓN START", Juego Nuevo/Continuar, "INTRODUCE EL NOMBRE", messaggi di sistema del salvataggio, Menú Principal HD, Lista de Duelistas, editor del deck (linguette Deck/Fusión/Side/Tronco, "Tipos de carta en posesión"), Opciones (ON/OFF, aiuti).')
-        w('- **Non visti** (solo letti e confrontati con l\'originale nei fogli di confronto): duello (Cadena, Ataque Directo, fine duello, VS, sasso-carta-forbici), tutorial e lezioni, negozio, laboratorio, calendario, carte con testo nuovo, dialoghi corretti della storia, frasi dei duelli.')
+        w('- **Seen in game** (`_definitiva` ISO + `es` module, new game in Spanish, 2026-10-12): language selection, title with the "EDICIÓN TOMATE MÍSTICO" plate and "PRESIONA EL BOTÓN START", Juego Nuevo/Continuar, "INTRODUCE EL NOMBRE", save system messages, HD Menú Principal, Lista de Duelistas, deck editor (tabs Deck/Fusión/Side/Tronco, "Tipos de carta en posesión"), Opciones (ON/OFF, help).')
+        w('- **Not seen** (only read and compared with the original in the comparison sheets): duel (Cadena, Ataque Directo, end of duel, VS, rock-paper-scissors), tutorial and lessons, shop, laboratory, calendar, cards with new text, corrected story dialogues, duel sentences.')
 w('')
-w('# E. COME RIGENERARE TUTTO')
+w('# E. HOW TO REGENERATE EVERYTHING')
 w('')
 w('```')
-w('# ISO (tutte le lingue insieme)')
+w('# ISO (all languages together)')
 w('python tools/corrections/build_dialogues.py ' + L)
-w('python tools/corrections/generate_card_corrections.py ' + L + ' CARDINFO_' + L + '.ehp          # carte')
+w('python tools/corrections/generate_card_corrections.py ' + L + ' CARDINFO_' + L + '.ehp          # cards')
 w('python tools/corrections/apply_to_iso.py PSP/GAME/ULES00600_..._EUR.iso PSP/GAME/ULES00600_..._EUR_definitiva.iso')
-w('# immagini')
+w('# images')
 w(('sh tools/rebuild_corrections.sh USRDIR PACK_US PACK_MOD PYTHON' if L == 'it' else 'python tools/generate_language.py fr PACK CARDINFO US_INI CLEAN_DIR OUT [ID...]') + '')
-w('TF1_LANG=' + L + ' python tools/ui_textures/<famiglia>.py USRDIR PACK_US <modulo>      # per ognuna delle 8 famiglie (intera!)')
+w('TF1_LANG=' + L + ' python tools/ui_textures/<family>.py USRDIR PACK_US <module>      # for each of the 8 families (whole!)')
 w('python tools/ui_textures/icon03_languages.py --apply ; python tools/ui_textures/mystic_tomato_title.py ' + L)
-w('python tools/compose_pack.py PSP/TEXTURES/ULES00600 PSP/TEXTURES/modules USRDIR/card OUT ' + L + ' --copia')
-w('# questo documento')
+w('python tools/compose_pack.py PSP/TEXTURES/ULES00600 PSP/TEXTURES/modules USRDIR/card OUT ' + L + ' --copy')
+w('# this document')
 w('python tools/analysis/document_changes.py ISO_ORIG ISO_DEF ' + L + ' docs/changes_' + L)
 w('python tools/analysis/document_pack.py ISO_ORIG ' + L + ' docs/changes_' + L)
 w('python tools/analysis/text_comparisons.py ' + L)
 w('python tools/analysis/write_changes_document.py ' + L)
 w('```')
-w('Input esterni da avere (controlla che esistano): ISO originale, USRDIR estratta (`tools/analysis/extract_usrdir.py`), pack USA di MikeyMK `ULUS10136` (in una cartella fuori dal progetto).')
+w('External inputs you need (check that they exist): the original ISO, the extracted USRDIR (`tools/analysis/extract_usrdir.py`), MikeyMK\'s US pack `ULUS10136` (in a folder outside the project).')
 w('')
-w('# F. LIMITI E PUNTI APERTI')
+w('# F. LIMITS AND OPEN POINTS')
 w('')
 if L == 'it':
-    w('- Nomi ufficiali delle carte: da decidere con l\'utente. "Ragazza Mago Nero" vs "Maga Nera".')
-    w('- Le note a mano sulla rilettura delle carte prima di ~riga 1830 sono andate perse; per quel tratto c\'e\' anche una scansione automatica (refusi, spazi, apostrofi).')
-    w('- `textures.zip` Android da rigenerare con le correzioni; carte del pack installato da riavviare in PPSSPP (cache).')
+    w('- Official card names: to be decided with the user. "Ragazza Mago Nero" vs "Maga Nera".')
+    w('- The hand-written notes on the card re-reading before ~line 1830 were lost; for that stretch there is also an automatic scan (typos, spaces, apostrophes).')
+    w('- Android `textures.zip` to be regenerated with the corrections; cards of the installed pack to be restarted in PPSSPP (cache).')
 else:
     if L == 'fr':
-        w('- Variante opzionale `N`/NOUVEAU al posto di `NEW` nelle 4 texture con wording locale.')
-        w('- `textures.zip` Android per il francese: non fatto; nessuna prova su telefono.')
-        w('- Etichette lunghe da verificare in gioco: "Rechercher", "Aucune restriction", "Étiquette".')
+        w('- Optional variant `N`/NOUVEAU instead of `NEW` in the 4 textures with local wording.')
+        w('- Android `textures.zip` for French: not done; no test on a phone.')
+        w('- Long labels to check in game: "Rechercher", "Aucune restriction", "Étiquette".')
     elif L == 'de':
-        w("- Texture tedesche aggiunte il 2026-10-13 (`result_letters` 28, `duel_texts` 15; prima date per uguali all'inglese, ed era un errore: vedi `docs/changes_de/texture_texts_de.md`): confrontate con l'originale a bassa risoluzione (sovrapposizione delle tessere, fogli di controllo), **non ancora viste in gioco**. Da verificare: il centraggio dei puntini della Ä di NÄCHSTER SPIELER (sprite a parte), la larghezza di SPIELZUG nel badge e la sagoma di DU GEWINNST.")
-        w('- 5 fogli di icone in pixel art (`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `parts`) restano ingranditi dal pack (domanda aperta n. 7 in `open_questions_de.md`; in `pda_pack01` il gioco ha un residuo italiano "NUOVO" accanto ai "NEU", come in fr/es).')
-        w('- `textures.zip` Android per il tedesco: non fatto; nessuna prova su telefono.')
+        w("- German textures added on 2026-10-13 (`result_letters` 28, `duel_texts` 15; before they were taken for equal to English, which was a mistake: see `docs/changes_de/texture_texts_de.md`): compared with the low-resolution original (tile overlay, check sheets), **not yet seen in game**. To check: the centring of the dots of the Ä of NÄCHSTER SPIELER (separate sprite), the width of SPIELZUG in the badge and the silhouette of DU GEWINNST.")
+        w('- 5 pixel-art icon sheets (`pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01`, `parts`) stay enlarged from the pack (open question no. 7 in `open_questions_de.md`; in `pda_pack01` the game has an Italian leftover "NUOVO" next to the "NEU", as in fr/es).')
+        w('- Android `textures.zip` for German: not done; no test on a phone.')
     elif L == 'en':
-        w("- **Decisioni dell'utente (2026-10-13)**: nome del logo `VERSION MYSTIC TOMATO` confermato; tessere DRAW da ridisegnare (fatto); (1) nome del logo confermato; (2) `DOWNLOADED CARD LIST` (europeo) contro `DOWNLOAD` (testo USA): scelto l'europeo, confermato dall'utente.")
-        w("- `textures.zip` Android per l'inglese: non fatto; nessuna prova su telefono.")
-        w("- I testi disegnati nelle texture sono in `docs/changes_en/texture_texts_en.md` (letti a occhio).")
+        w("- **User decisions (2026-10-13)**: logo name `VERSION MYSTIC TOMATO` confirmed; DRAW tiles to be redrawn (done); (1) logo name confirmed; (2) `DOWNLOADED CARD LIST` (European) versus `DOWNLOAD` (US text): the European one was chosen, confirmed by the user.")
+        w("- Android `textures.zip` for English: not done; no test on a phone.")
+        w("- The texts drawn in the textures are in `docs/changes_en/texture_texts_en.md` (read by eye).")
     else:
-        w('- Domande dell\'utente risolte il 2026-10-12 (nomi di carte rotti corretti sul nome ufficiale, Kaiba Corporation, Duelo maiuscolo, Rector, Sacrificio al posto di Tributo): `docs/changes_es/open_questions_es.md`.')
-        w('- 14 texture spagnole senza HD (frammenti senza testo: `recipe_sel`, `t_window0002`, `limitlist window_s0010/20`, `jyanken100005/7`, `recipe010011`, `bg_base_cloud02`) restano come l\'originale.')
-        w('- `textures.zip` Android: non fatto; nessuna prova su telefono. I testi disegnati nelle texture sono in `docs/changes_es/texture_texts_es.md` (letti a occhio).')
-w('- Il nome del parlante nella casella del dialogo non e\' modificabile (EBOOT cifrato).')
+        w('- User questions resolved on 2026-10-12 (broken card names corrected to the official name, Kaiba Corporation, capitalized Duelo, Rector, Sacrificio instead of Tributo): `docs/changes_es/open_questions_es.md`.')
+        w('- 14 Spanish textures without HD (fragments without text: `recipe_sel`, `t_window0002`, `limitlist window_s0010/20`, `jyanken100005/7`, `recipe010011`, `bg_base_cloud02`) stay like the original.')
+        w('- Android `textures.zip`: not done; no test on a phone. The texts drawn in the textures are in `docs/changes_es/texture_texts_es.md` (read by eye).')
+w('- The speaker name in the dialogue box cannot be modified (encrypted EBOOT).')
 open(os.path.join(B, 'docs', f'CHANGES_{L.upper()}.md'), 'w', encoding='utf-8', newline='\n').write('\n'.join(o) + '\n')
 print(len(o), 'lines ->', f'docs/CHANGES_{L.upper()}.md')

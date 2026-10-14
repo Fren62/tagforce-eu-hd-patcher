@@ -63,12 +63,12 @@ for fam in ('ui_it', 'ui_fr'):
             if not f.endswith('.png'): continue
             rel = fam + '/' + os.path.relpath(os.path.join(dp, f), root).replace(os.sep, '/')
             h = mp.get(rel)
-            if not h: rows[fam].append((rel, '?', 'hash non trovato', '')); continue
+            if not h: rows[fam].append((rel, '?', 'hash not found', '')); continue
             locs = idx.get(h, [])
             L = sorted({language(q, k) for q, k in locs} - {'-'})
             neutral = ('g' in L and 's' in L) or len(L) >= 4 or '-' in {language(q, k) for q, k in locs} and len(L) <= 1 and any(language(q, k) == '-' for q, k in locs)
-            kind = 'NEUTRA' if neutral else 'SPECIFICA'
-            rows[fam].append((rel, h, kind, 'lingue col stesso hash: ' + (''.join(L) or 'nessuna (archivio senza lingua)') + ' - ' + ', '.join(sorted({os.path.basename(q) + ':' + k for q, k in locs})[:2])))
+            kind = 'NEUTRAL' if neutral else 'SPECIFIC'
+            rows[fam].append((rel, h, kind, 'languages with the same hash: ' + (''.join(L) or 'none (archive without a language)') + ' - ' + ', '.join(sorted({os.path.basename(q) + ':' + k for q, k in locs})[:2])))
 with open(out, 'w', encoding='utf-8', newline='\n') as o:
     o.write('# Inventario texture: neutre / specifiche per lingua\n\nGenerato da `tools/analysis/texture_inventory_languages.py`. **NEUTRA** = lo stesso hash compare in piu\' lingue (de/es incluse): il PNG si copia tale e quale nel modulo della nuova lingua (e di norma e\' gia\' nel pack di base). **SPECIFICA** = l\'originale e\' diverso per lingua: va rifatta con le parole della lingua, prendendo `ui_it`/`ui_fr` come riferimento.\n\n')
     for fam, rs in rows.items():

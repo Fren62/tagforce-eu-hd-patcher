@@ -52,14 +52,14 @@ tfpatch iso --iso ULES00600.iso --patch patch_it.tfp --out ULES00600_it.iso
 tfpatch textures --lang it --out textures.zip
 ```
 
-`tfpatch iso` accetta `--no-cards`, `--no-text` e `--keep-languages` (i tre moduli qui sopra, disattivati) e `--dry-run` (stampa il peso finale della ISO in byte). `tfpatch textures` scarica `base.zip` e il modulo della lingua, ne verifica l'SHA-256 e li compone in un unico `textures.zip` (passa una cartella a `--out` per estrarre; con `--source CARTELLA` si usano file già scaricati). Su Linux scrivi `./tfpatch-linux-x86_64`.
+`tfpatch iso` accetta `--no-cards`, `--no-text` e `--keep-languages` (i tre moduli qui sopra, disattivati) e `--dry-run` (stampa il peso finale della ISO in byte). `tfpatch textures` scarica `base.zip` e il modulo della lingua, ne verifica l'SHA-256 e li compone in un unico `textures.zip` (passa una cartella a `--out` per estrarre; con `--source CARTELLA` si usano file già scaricati). Su Linux scrivi `./tfpatch`.
 
 ## Limiti noti
 
 - Un salvataggio creato in una lingua diversa da quella della patch non viene riallineato.
-- Su Linux l'installer grafico richiede `libxkbcommon-x11` (X11) o le librerie Wayland, che la maggior parte dei desktop ha già; altrimenti usa la riga di comando. Le finestre di scelta file usano il portale del desktop: se non si aprono, scrivi i percorsi nelle opzioni avanzate.
+- Su Linux l'installer grafico richiede `libxkbcommon-x11` (X11) o le librerie Wayland, che la maggior parte dei desktop ha già; altrimenti compila e usa la riga di comando. Le finestre di scelta file usano il portale del desktop: se non si aprono, scrivi i percorsi nelle opzioni avanzate.
 - Solo l'emulatore PPSSPP (la patch sostituisce un modulo del gioco nella ISO e le texture sono texture di sostituzione di PPSSPP).
-- I moduli texture pesano circa 1 GB per lingua più una base da 1,4 GB comune a tutte le lingue (il modulo inglese è piccolo).
+- Il download delle texture è di circa 1,4 GB per lingua: una base da 313 MB comune a tutte le lingue (solo le texture che servono a tutte) più un modulo da circa 1 GB con le carte HD e l'interfaccia di quella lingua.
 
 ## Segnalare problemi
 
@@ -70,7 +70,7 @@ Hai trovato un refuso, un testo di carta sbagliato o un bug? [Apri una segnalazi
 1. `patcher/tools/build_modular_patch.py` costruisce, per ogni lingua, la ISO con solo le correzioni alle carte, solo quelle ai testi e entrambe, e scrive un `.tfp` modulare (formato 2): uno zip con `patch.json` e differenze bsdiff, ognuna con i moduli che richiede (`cards`, `text`, `strip`).
 2. `patcher/tfpatch` (Rust) controlla l'MD5, sceglie le differenze dei moduli attivi e scrive la ISO in forma compatta: stessa intestazione e directory, poi solo i dati ancora usati. Il peso finale si calcola senza scrivere nulla: è così che l'installer lo mostra in tempo reale.
 3. Con `strip`, `libtitle.prx` viene modificato (`patcher/tools/remove_language_selector.py`) per togliere schermata e voce di menu della lingua e fissare la lingua, e i file delle altre lingue puntano ai dati della lingua scelta.
-4. `patcher/tools/build_texture_modules.py` crea `base.zip` e un `<lingua>.zip` per lingua; `patcher/tools/build_manifest.py` completa `manifest.json` (SHA-256, patch, pesi delle ISO).
+4. `patcher/tools/build_texture_modules.py` crea `base.zip` (solo le texture che servono a tutte le lingue) e un `<lingua>.zip` per lingua (le texture usate da quella lingua); `patcher/tools/build_manifest.py` completa `manifest.json` (SHA-256, patch, pesi delle ISO).
 5. `verify_modular_patch.py`, `compare_isos.py` e `verify_texture_pack.py` controllano i risultati; `build_all_patches.sh LINGUA...` rifà e verifica ogni combinazione.
 
 I testi, le regole editoriali e le correzioni stanno in `tools/` (`corrections/`, `data/`); `docs/NEW_LANGUAGE_GUIDE.md`, `docs/EDITORIAL_CHOICES.md` e `docs/CHANGES_<LANG>.md` documentano metodo e scelte.

@@ -52,14 +52,14 @@ tfpatch iso --iso ULES00600.iso --patch patch_de.tfp --out ULES00600_de.iso
 tfpatch textures --lang de --out textures.zip
 ```
 
-`tfpatch iso` akzeptiert `--no-cards`, `--no-text` und `--keep-languages` (die drei obigen Module, abgeschaltet) sowie `--dry-run` (gibt die endgültige ISO-Größe in Byte aus). `tfpatch textures` lädt `base.zip` und das Sprachmodul herunter, prüft deren SHA-256 und fügt sie zu einer einzigen `textures.zip` zusammen (bei `--out` einen Ordner angeben, um zu entpacken; mit `--source ORDNER` werden bereits heruntergeladene Dateien verwendet). Unter Linux geben Sie `./tfpatch-linux-x86_64` ein.
+`tfpatch iso` akzeptiert `--no-cards`, `--no-text` und `--keep-languages` (die drei obigen Module, abgeschaltet) sowie `--dry-run` (gibt die endgültige ISO-Größe in Byte aus). `tfpatch textures` lädt `base.zip` und das Sprachmodul herunter, prüft deren SHA-256 und fügt sie zu einer einzigen `textures.zip` zusammen (bei `--out` einen Ordner angeben, um zu entpacken; mit `--source ORDNER` werden bereits heruntergeladene Dateien verwendet). Unter Linux geben Sie `./tfpatch` ein.
 
 ## Bekannte Einschränkungen
 
 - Ein Spielstand, der in einer anderen Sprache als der des Patches erstellt wurde, wird nicht angepasst.
-- Unter Linux braucht der grafische Installer `libxkbcommon-x11` (X11) oder die Wayland-Bibliotheken, die die meisten Desktops schon haben; sonst die Kommandozeile verwenden. Die Dateidialoge nutzen das Desktop-Portal; öffnen sie sich nicht, geben Sie die Pfade unter „Erweiterte Optionen“ ein.
+- Unter Linux braucht der grafische Installer `libxkbcommon-x11` (X11) oder die Wayland-Bibliotheken, die die meisten Desktops schon haben; sonst die Kommandozeile bauen und verwenden. Die Dateidialoge nutzen das Desktop-Portal; öffnen sie sich nicht, geben Sie die Pfade unter „Erweiterte Optionen“ ein.
 - Unterstützt wird nur der Emulator PPSSPP (der Patch ersetzt ein Spielmodul in der ISO, und die Texturen sind PPSSPP-Ersatztexturen).
-- Die Texturmodule sind etwa 1 GB pro Sprache groß, plus eine 1,4 GB große Basis für alle Sprachen (das englische Modul ist klein).
+- Der Textur-Download beträgt etwa 1,4 GB pro Sprache: eine 313 MB große Basis für alle Sprachen (nur die Texturen, die jede Sprache braucht) plus ein Modul von etwa 1 GB mit den HD-Karten und der Oberfläche dieser Sprache.
 
 ## Probleme melden
 
@@ -70,7 +70,7 @@ Tippfehler, falscher Kartentext oder ein Fehler? [Eröffnen Sie ein Issue](../..
 1. `patcher/tools/build_modular_patch.py` baut für jede Sprache die ISO nur mit den Kartenkorrekturen, nur mit den Textkorrekturen und mit beiden und schreibt eine modulare `.tfp` (Format 2): ein Zip mit `patch.json` und bsdiff-Deltas, jedes mit den benötigten Modulen markiert (`cards`, `text`, `strip`).
 2. `patcher/tfpatch` (Rust) prüft die MD5, wählt die Deltas der aktiven Module aus und schreibt die ISO kompakt: gleicher Header und gleiche Verzeichnisse, danach nur die noch benutzten Daten. Die endgültige Größe wird berechnet, ohne etwas zu schreiben – so zeigt sie der Installer live an.
 3. Mit `strip` wird `libtitle.prx` geändert (`patcher/tools/remove_language_selector.py`), um Sprachbildschirm und Menüeintrag zu entfernen und die Sprache festzulegen; die Dateien der anderen Sprachen verweisen auf die Daten der gewählten Sprache.
-4. `patcher/tools/build_texture_modules.py` erstellt `base.zip` und je Sprache eine `<Sprache>.zip`; `patcher/tools/build_manifest.py` vervollständigt `manifest.json` (SHA-256, Patches, ISO-Größen).
+4. `patcher/tools/build_texture_modules.py` erstellt `base.zip` (nur die Texturen, die jede Sprache braucht) und je Sprache eine `<Sprache>.zip` (die Texturen dieser Sprache); `patcher/tools/build_manifest.py` vervollständigt `manifest.json` (SHA-256, Patches, ISO-Größen).
 5. `verify_modular_patch.py`, `compare_isos.py` und `verify_texture_pack.py` prüfen die Ergebnisse; `build_all_patches.sh SPRACHE...` baut und prüft jede Kombination neu.
 
 Texte, redaktionelle Regeln und Korrekturen liegen in `tools/` (`corrections/`, `data/`). `docs/NEW_LANGUAGE_GUIDE.md`, `docs/EDITORIAL_CHOICES.md` und `docs/CHANGES_<LANG>.md` dokumentieren Methode und Entscheidungen (auf Italienisch).

@@ -52,14 +52,14 @@ tfpatch iso --iso ULES00600.iso --patch patch_fr.tfp --out ULES00600_fr.iso
 tfpatch textures --lang fr --out textures.zip
 ```
 
-`tfpatch iso` accepte `--no-cards`, `--no-text` et `--keep-languages` (les trois modules ci-dessus, désactivés) et `--dry-run` (affiche la taille finale de l'ISO en octets). `tfpatch textures` télécharge `base.zip` et le module de la langue, vérifie leur SHA-256 et les fusionne en un seul `textures.zip` (donnez un dossier à `--out` pour extraire ; avec `--source DOSSIER`, on utilise des fichiers déjà téléchargés). Sous Linux, tapez `./tfpatch-linux-x86_64`.
+`tfpatch iso` accepte `--no-cards`, `--no-text` et `--keep-languages` (les trois modules ci-dessus, désactivés) et `--dry-run` (affiche la taille finale de l'ISO en octets). `tfpatch textures` télécharge `base.zip` et le module de la langue, vérifie leur SHA-256 et les fusionne en un seul `textures.zip` (donnez un dossier à `--out` pour extraire ; avec `--source DOSSIER`, on utilise des fichiers déjà téléchargés). Sous Linux, tapez `./tfpatch`.
 
 ## Limites connues
 
 - Une sauvegarde créée dans une autre langue que celle du patch n'est pas réalignée.
-- Sous Linux, l'installateur graphique demande `libxkbcommon-x11` (X11) ou les bibliothèques Wayland, que la plupart des bureaux ont déjà ; sinon, utilisez la ligne de commande. Les fenêtres de choix de fichier passent par le portail du bureau : si elles ne s'ouvrent pas, saisissez les chemins dans les options avancées.
+- Sous Linux, l'installateur graphique demande `libxkbcommon-x11` (X11) ou les bibliothèques Wayland, que la plupart des bureaux ont déjà ; sinon, compilez et utilisez la ligne de commande. Les fenêtres de choix de fichier passent par le portail du bureau : si elles ne s'ouvrent pas, saisissez les chemins dans les options avancées.
 - Seul l'émulateur PPSSPP est pris en charge (le patch remplace un module du jeu dans l'ISO et les textures sont des textures de remplacement PPSSPP).
-- Les modules de textures pèsent environ 1 Go par langue, plus une base de 1,4 Go commune à toutes les langues (le module anglais est petit).
+- Le téléchargement des textures est d'environ 1,4 Go par langue : une base de 313 Mo commune à toutes les langues (seulement les textures utiles à toutes) plus un module d'environ 1 Go avec les cartes HD et l'interface de cette langue.
 
 ## Signaler un problème
 
@@ -70,7 +70,7 @@ Une faute de frappe, un texte de carte erroné ou un bug ? [Ouvrez un ticket](..
 1. `patcher/tools/build_modular_patch.py` construit, pour chaque langue, l'ISO avec seulement les corrections des cartes, seulement celles des textes, et les deux, puis écrit un `.tfp` modulaire (format 2) : un zip avec `patch.json` et des deltas bsdiff, chacun étiqueté avec les modules dont il a besoin (`cards`, `text`, `strip`).
 2. `patcher/tfpatch` (Rust) vérifie le MD5, sélectionne les deltas des modules actifs et écrit l'ISO sous forme compacte : mêmes en-tête et répertoires, puis seulement les données encore utilisées. La taille finale est calculée sans rien écrire, ce qui permet à l'installateur de l'afficher en direct.
 3. Avec `strip`, `libtitle.prx` est modifié (`patcher/tools/remove_language_selector.py`) pour supprimer l'écran et l'entrée de menu de langue et fixer la langue, et les fichiers des autres langues pointent vers les données de la langue choisie.
-4. `patcher/tools/build_texture_modules.py` crée `base.zip` et un `<langue>.zip` par langue ; `patcher/tools/build_manifest.py` complète `manifest.json` (SHA-256, patchs, tailles des ISO).
+4. `patcher/tools/build_texture_modules.py` crée `base.zip` (seulement les textures utiles à toutes les langues) et un `<langue>.zip` par langue (les textures utilisées par cette langue) ; `patcher/tools/build_manifest.py` complète `manifest.json` (SHA-256, patchs, tailles des ISO).
 5. `verify_modular_patch.py`, `compare_isos.py` et `verify_texture_pack.py` contrôlent les résultats ; `build_all_patches.sh LANGUE...` refait et vérifie chaque combinaison.
 
 Les textes, les règles éditoriales et les corrections se trouvent dans `tools/` (`corrections/`, `data/`). `docs/NEW_LANGUAGE_GUIDE.md`, `docs/EDITORIAL_CHOICES.md` et `docs/CHANGES_<LANG>.md` documentent la méthode et les choix (en italien).

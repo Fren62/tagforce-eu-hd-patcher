@@ -26,6 +26,8 @@ Dieses Repository **enthält weder das Spiel noch daraus extrahierte Daten**: Di
 3. Das Programm sucht Ihre ISO und Ihren PPSSPP-Datenordner selbst und zeigt nur das Ergebnis; findet es einen nicht, bittet es Sie, ihn zu wählen. Lassen Sie die Module an oder entfernen Sie Häkchen (standardmäßig sind alle aktiv). Pfade, Speicherort der fertigen ISO und eine neue Suche finden Sie unter **Erweiterte Optionen**. Die **endgültige ISO-Größe und die Größe des Texturpakets werden live angezeigt** und ändern sich, wenn Sie Module an- oder abwählen.
 4. Klicken Sie auf **Installieren**. Patch und Texturmodule werden von den Releases heruntergeladen und geprüft (SHA-256); Ihre Original-ISO wird nie verändert.
 
+**Windows-Warnung:** Das Programm ist nicht digital signiert, daher kann Windows SmartScreen „Der Computer wurde durch Windows geschützt“ anzeigen, und manche Virenscanner schlagen an. Klicken Sie auf **Weitere Informationen → Trotzdem ausführen**. Der Code ist öffentlich, und die Dateien in den Releases werden daraus von GitHub Actions gebaut.
+
 Hinweise zu den Optionen:
 - Ohne *Andere Sprachen aus dem Spiel entfernen* behält das Spiel alle fünf Sprachen und seine eigene Sprachauswahl; nur die Patch-Sprache erhält Korrekturen und HD-Texturen.
 - *HD-Texturen* erzeugt eine separate `textures.zip` in `<PPSSPP-Datenordner>/PSP/TEXTURES/ULES00600/` (dieselbe Datei funktioniert unter Android: auf dem Telefon in denselben Pfad kopieren). Enthält dieser Ordner bereits ein anderes Texturpaket, verschieben Sie es zuerst.
@@ -47,6 +49,10 @@ tfpatch textures --lang de --out textures.zip
 - Unter Linux braucht der grafische Installer `libxkbcommon-x11` (X11) oder die Wayland-Bibliotheken, die die meisten Desktops schon haben; sonst die Kommandozeile verwenden. Die Dateidialoge nutzen das Desktop-Portal; öffnen sie sich nicht, geben Sie die Pfade unter „Erweiterte Optionen“ ein.
 - Unterstützt wird nur der Emulator PPSSPP (der Patch ersetzt ein Spielmodul in der ISO, und die Texturen sind PPSSPP-Ersatztexturen).
 - Die Texturmodule sind etwa 1 GB pro Sprache groß, plus eine 1,4 GB große Basis für alle Sprachen (das englische Modul ist klein).
+
+## Probleme melden
+
+Tippfehler, falscher Kartentext oder ein Fehler? [Eröffnen Sie ein Issue](../../issues/new/choose): Es gibt Formulare für Textfehler und für Programmprobleme, und Sie können in einer der fünf Sprachen schreiben. Hängen Sie niemals Ihre ISO oder Spieldateien an.
 
 ## So funktioniert es
 

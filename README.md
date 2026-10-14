@@ -26,6 +26,8 @@ This repository **does not contain** the game or any data extracted from it: the
 3. The program looks for your ISO and your PPSSPP data folder by itself and only shows the result; if it cannot find one, it asks you to choose it. Keep or untick the modules (all are on by default). Paths, the output ISO location and a new search are under **Advanced options**. The **final ISO size and the size of the texture pack are shown live** and change as you tick or untick modules.
 4. Click **Install**. The patch and the texture modules are downloaded from the Releases and verified (SHA-256); your original ISO is never modified.
 
+**Windows warning:** the program is not code-signed, so Windows SmartScreen may say "Windows protected your PC" and some antivirus programs may flag it. Click **More info → Run anyway**. The code is public and the files in the Releases are built from it by GitHub Actions.
+
 Notes on the options:
 - Without *Remove the other languages*, the game keeps all five languages and its own language selector; only the patch language gets the corrections and the HD textures.
 - *HD textures* creates a separate `textures.zip` in `<PPSSPP data folder>/PSP/TEXTURES/ULES00600/` (the same file works on Android: copy it to the same path on the phone). If that folder already holds another texture pack, move it away first.
@@ -47,6 +49,10 @@ tfpatch textures --lang en --out textures.zip
 - On Linux the graphical installer needs `libxkbcommon-x11` (X11) or the Wayland libraries, which most desktops already have; otherwise use the command line. The file dialogs use the desktop portal; if they do not open, type the paths under Advanced options.
 - Only the PPSSPP emulator is supported (the patch replaces a game module in the ISO and the textures are PPSSPP replacement textures).
 - The texture modules are about 1 GB per language plus a 1.4 GB base shared by all languages (the English module is small).
+
+## Reporting problems
+
+Found a typo, a wrong card text or a bug? [Open an issue](../../issues/new/choose): there are forms for text errors and for program problems, and you can write in any of the five languages. Never attach your ISO or any game files.
 
 ## How it works
 

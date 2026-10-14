@@ -26,6 +26,8 @@ Il repository **non contiene** il gioco né dati estratti dal gioco: le patch (`
 3. Il programma cerca da solo la tua ISO e la cartella dati di PPSSPP e mostra solo il risultato; se non ne trova una, ti chiede di sceglierla. Lascia o togli la spunta ai moduli (di default sono tutti attivi). Percorsi, posizione della ISO finale e una nuova ricerca sono in **Opzioni avanzate**. Il **peso finale della ISO e quello del pacchetto texture sono mostrati in tempo reale** e cambiano mentre spunti o togli i moduli.
 4. Premi **Installa**. La patch e i moduli texture vengono scaricati dalle Release e verificati (SHA-256); la tua ISO originale non viene mai modificata.
 
+**Avviso di Windows:** il programma non è firmato digitalmente, quindi Windows SmartScreen può mostrare "Windows ha protetto il PC" e qualche antivirus può segnalarlo. Clicca **Ulteriori informazioni → Esegui comunque**. Il codice è pubblico e i file delle Release sono compilati da GitHub Actions partendo da esso.
+
 Note sulle opzioni:
 - Senza *Rimuovi le altre lingue*, il gioco mantiene tutte e cinque le lingue e il suo selettore; solo la lingua della patch riceve correzioni e texture HD.
 - *Texture in HD* crea un `textures.zip` a parte in `<cartella dati di PPSSPP>/PSP/TEXTURES/ULES00600/` (lo stesso file vale su Android: copialo nello stesso percorso sul telefono). Se quella cartella contiene già un altro pacchetto di texture, spostalo prima altrove.
@@ -47,6 +49,10 @@ tfpatch textures --lang it --out textures.zip
 - Su Linux l'installer grafico richiede `libxkbcommon-x11` (X11) o le librerie Wayland, che la maggior parte dei desktop ha già; altrimenti usa la riga di comando. Le finestre di scelta file usano il portale del desktop: se non si aprono, scrivi i percorsi nelle opzioni avanzate.
 - Solo l'emulatore PPSSPP (la patch sostituisce un modulo del gioco nella ISO e le texture sono texture di sostituzione di PPSSPP).
 - I moduli texture pesano circa 1 GB per lingua più una base da 1,4 GB comune a tutte le lingue (il modulo inglese è piccolo).
+
+## Segnalare problemi
+
+Hai trovato un refuso, un testo di carta sbagliato o un bug? [Apri una segnalazione](../../issues/new/choose): ci sono moduli per gli errori di testo e per i problemi del programma, e puoi scrivere in una delle cinque lingue. Non allegare mai la tua ISO né file del gioco.
 
 ## Come funziona
 

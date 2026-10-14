@@ -26,6 +26,8 @@ Este repositorio **no contiene** el juego ni datos extraídos de él: los parche
 3. El programa busca por sí solo tu ISO y tu carpeta de datos de PPSSPP y solo muestra el resultado; si no encuentra alguna, te pide que la elijas. Deja o quita la marca de los módulos (todos están activados por defecto). Las rutas, la ubicación de la ISO final y una nueva búsqueda están en **Opciones avanzadas**. El **tamaño final de la ISO y el del pack de texturas se muestran en tiempo real** y cambian al marcar o desmarcar módulos.
 4. Pulsa **Instalar**. El parche y los módulos de texturas se descargan de las Releases y se verifican (SHA-256); tu ISO original nunca se modifica.
 
+**Aviso de Windows:** el programa no está firmado digitalmente, así que Windows SmartScreen puede mostrar «Windows protegió su PC» y algún antivirus puede marcarlo. Pulsa **Más información → Ejecutar de todas formas**. El código es público y los archivos de las Releases los compila GitHub Actions a partir de él.
+
 Notas sobre las opciones:
 - Sin *Quitar los demás idiomas del juego*, el juego conserva los cinco idiomas y su propio selector; solo el idioma del parche recibe las correcciones y las texturas HD.
 - *Texturas HD* crea un `textures.zip` aparte en `<carpeta de datos de PPSSPP>/PSP/TEXTURES/ULES00600/` (el mismo archivo sirve en Android: cópialo a la misma ruta en el teléfono). Si esa carpeta ya contiene otro pack de texturas, muévelo antes a otro sitio.
@@ -47,6 +49,10 @@ tfpatch textures --lang es --out textures.zip
 - En Linux, el instalador gráfico necesita `libxkbcommon-x11` (X11) o las bibliotecas de Wayland, que la mayoría de los escritorios ya tienen; si no, usa la línea de comandos. Los diálogos de archivo usan el portal del escritorio: si no se abren, escribe las rutas en las opciones avanzadas.
 - Solo se admite el emulador PPSSPP (el parche sustituye un módulo del juego en la ISO y las texturas son texturas de reemplazo de PPSSPP).
 - Los módulos de texturas pesan unos 1 GB por idioma, más una base de 1,4 GB común a todos los idiomas (el módulo en inglés es pequeño).
+
+## Informar de problemas
+
+¿Has encontrado una errata, un texto de carta incorrecto o un error? [Abre una incidencia](../../issues/new/choose): hay formularios para errores de texto y para problemas del programa, y puedes escribir en cualquiera de los cinco idiomas. No adjuntes nunca tu ISO ni archivos del juego.
 
 ## Cómo funciona
 

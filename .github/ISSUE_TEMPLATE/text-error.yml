@@ -1,0 +1,47 @@
+name: Text or translation error
+description: A typo, a wrong card text, a bad dialogue line or an interface text that should be fixed
+title: "[Text] "
+labels: ["text"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping! You can write in English, Italian, French, German or Spanish.
+        **Never attach your ISO or any file extracted from the game.** A screenshot is fine.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Patch language
+      options: [English, Italiano, Français, Deutsch, Español]
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Where is it?
+      options: [Card name or description, Dialogue, Line said during a duel, Menu or interface text, Text on a texture (HD image), Other]
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Card name, scene or screen
+      description: For example the card name, the character and what happens before the line, or the menu screen.
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested text
+      description: If you are not sure, explain what looks wrong.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The release you used, for example v0.2.0.

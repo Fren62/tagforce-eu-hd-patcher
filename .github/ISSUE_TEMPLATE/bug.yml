@@ -1,0 +1,48 @@
+name: Program or game problem
+description: The installer does not work, the game crashes or the textures do not show up
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        You can write in English, Italian, French, German or Spanish.
+        **Never attach your ISO or any file extracted from the game.**
+  - type: dropdown
+    id: what
+    attributes:
+      label: What is the problem about?
+      options: [Graphical installer (tfpatch-gui), Command line (tfpatch), The patched game in PPSSPP, HD textures, Other]
+    validations:
+      required: true
+  - type: dropdown
+    id: os
+    attributes:
+      label: Operating system
+      options: [Windows, Linux, macOS, Android (PPSSPP only)]
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The release you used, for example v0.2.0, and the PPSSPP version if the game is involved.
+    validations:
+      required: true
+  - type: dropdown
+    id: language
+    attributes:
+      label: Patch language
+      options: [English, Italiano, Français, Deutsch, Español]
+  - type: textarea
+    id: happened
+    attributes:
+      label: What happened
+      description: The exact message if there is one, and what you expected instead. A screenshot helps.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Which modules were ticked, where the ISO was, what you clicked.

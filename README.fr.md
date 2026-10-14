@@ -26,6 +26,8 @@ Ce dépôt **ne contient pas** le jeu ni de données extraites du jeu : les patc
 3. Le programme cherche tout seul votre ISO et votre dossier de données PPSSPP et n'affiche que le résultat ; s'il n'en trouve pas un, il vous demande de le choisir. Laissez ou décochez les modules (tous sont activés par défaut). Les chemins, l'emplacement de l'ISO finale et une nouvelle recherche se trouvent dans **Options avancées**. La **taille finale de l'ISO et celle du pack de textures s'affichent en direct** et changent quand vous cochez ou décochez des modules.
 4. Cliquez sur **Installer**. Le patch et les modules de textures sont téléchargés depuis les Releases et vérifiés (SHA-256) ; votre ISO d'origine n'est jamais modifiée.
 
+**Avertissement Windows :** le programme n'est pas signé numériquement ; Windows SmartScreen peut afficher « Windows a protégé votre ordinateur » et certains antivirus peuvent le signaler. Cliquez sur **Informations complémentaires → Exécuter quand même**. Le code est public et les fichiers des Releases sont compilés à partir de celui-ci par GitHub Actions.
+
 Remarques sur les options :
 - Sans *Retirer les autres langues du jeu*, le jeu garde ses cinq langues et son sélecteur ; seule la langue du patch reçoit les corrections et les textures HD.
 - *Textures HD* crée un `textures.zip` séparé dans `<dossier de données PPSSPP>/PSP/TEXTURES/ULES00600/` (le même fichier fonctionne sur Android : copiez-le au même chemin sur le téléphone). Si ce dossier contient déjà un autre pack de textures, déplacez-le d'abord.
@@ -47,6 +49,10 @@ tfpatch textures --lang fr --out textures.zip
 - Sous Linux, l'installateur graphique demande `libxkbcommon-x11` (X11) ou les bibliothèques Wayland, que la plupart des bureaux ont déjà ; sinon, utilisez la ligne de commande. Les fenêtres de choix de fichier passent par le portail du bureau : si elles ne s'ouvrent pas, saisissez les chemins dans les options avancées.
 - Seul l'émulateur PPSSPP est pris en charge (le patch remplace un module du jeu dans l'ISO et les textures sont des textures de remplacement PPSSPP).
 - Les modules de textures pèsent environ 1 Go par langue, plus une base de 1,4 Go commune à toutes les langues (le module anglais est petit).
+
+## Signaler un problème
+
+Une faute de frappe, un texte de carte erroné ou un bug ? [Ouvrez un ticket](../../issues/new/choose) : il existe des formulaires pour les erreurs de texte et pour les problèmes du programme, et vous pouvez écrire dans l'une des cinq langues. Ne joignez jamais votre ISO ni des fichiers du jeu.
 
 ## Fonctionnement
 

@@ -51,3 +51,7 @@ strumenti/font_alternativi/xcharter/
 # Dump completi di testi del gioco (originali) in CSV e confronti
 documentazione/**/*.csv
 documentazione/**/*_diff.md
+
+# Bozza del post di annuncio e immagini (non fanno parte del repository)
+ANNUNCIO_BOZZA.md
+ANNUNCIO_immagini/

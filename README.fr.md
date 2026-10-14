@@ -23,7 +23,7 @@ Ce dépôt **ne contient pas** le jeu ni de données extraites du jeu : les patc
 
 1. Téléchargez depuis la page [Releases](../../releases) `tfpatch-gui.exe` (Windows) ou `tfpatch-gui-linux-x86_64` (Linux ; lancez d'abord `chmod +x tfpatch-gui-linux-x86_64`).
 2. Lancez-le. Le programme s'ouvre dans la langue de votre PC (anglais si ce n'en est pas une des cinq) et affiche la bannière *Tomate Mystique* de la **langue du patch**, identique par défaut à celle du programme mais modifiable séparément.
-3. Choisissez votre ISO d'origine, laissez ou décochez les modules (tous sont activés par défaut), choisissez où enregistrer l'ISO et, pour les textures HD, le dossier de données de PPSSPP. La **taille finale de l'ISO et celle du pack de textures s'affichent en direct** et changent quand vous cochez ou décochez des modules.
+3. Cliquez sur **Chercher l'ISO et le dossier PPSSPP automatiquement** (ou choisissez-les avec Parcourir). Choisissez ensuite votre ISO d'origine si elle n'a pas été trouvée, laissez ou décochez les modules (tous sont activés par défaut), choisissez où enregistrer l'ISO et, pour les textures HD, le dossier de données de PPSSPP. La **taille finale de l'ISO et celle du pack de textures s'affichent en direct** et changent quand vous cochez ou décochez des modules.
 4. Cliquez sur **Installer**. Le patch et les modules de textures sont téléchargés depuis les Releases et vérifiés (SHA-256) ; votre ISO d'origine n'est jamais modifiée.
 
 Remarques sur les options :

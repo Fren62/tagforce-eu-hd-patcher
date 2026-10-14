@@ -5,6 +5,7 @@ use std::collections::HashMap;
 use std::path::{Path, PathBuf};
 use std::sync::{Arc, Mutex};
 use tfpatch::apply::{self, Options};
+use tfpatch::cerca;
 use tfpatch::i18n::{self, Lang, TUTTE, formatta_dimensione};
 use tfpatch::texture::{self, Manifest};
 
@@ -32,10 +33,19 @@ enum Lavoro {
     Errore(String),
 }
 
+#[derive(Clone)]
+enum Ricerca {
+    Ferma,
+    InCorso,
+    Fine { iso: Option<PathBuf>, ppsspp: Option<PathBuf> },
+}
+
 struct Condiviso {
     manifest: Option<Result<Arc<Manifest>, String>>,
     iso: IsoStato,
     lavoro: Lavoro,
+    ricerca: Ricerca,
+    esito_ricerca: Option<(Option<PathBuf>, Option<PathBuf>)>, // ultimo risultato, da mostrare sotto il tasto
 }
 
 struct App {
@@ -52,6 +62,7 @@ struct App {
     sh: Arc<Mutex<Condiviso>>,
     banner: HashMap<Lang, egui::TextureHandle>,
     source: String,
+    cerca_auto: bool, // solo collaudo: avvia la ricerca automatica all'apertura
     auto: bool,     // solo collaudo: TFPATCH_PROVA=...,auto=1 controlla la ISO e avvia l'installazione da solo
     avviato: bool,
 }
@@ -134,7 +145,7 @@ impl App {
     fn new(cc: &eframe::CreationContext<'_>) -> Self {
         let ui_lang = Lang::di_sistema(sys_locale::get_locale());
         let source = std::env::var("TFPATCH_SOURCE").unwrap_or_else(|_| texture::SORGENTE.to_string());
-        let sh = Arc::new(Mutex::new(Condiviso { manifest: None, iso: IsoStato::Nessuna, lavoro: Lavoro::Fermo }));
+        let sh = Arc::new(Mutex::new(Condiviso { manifest: None, iso: IsoStato::Nessuna, lavoro: Lavoro::Fermo, ricerca: Ricerca::Ferma, esito_ricerca: None }));
         {
             let (sh, source, ctx) = (sh.clone(), source.clone(), cc.egui_ctx.clone());
             std::thread::spawn(move || {
@@ -163,6 +174,7 @@ impl App {
             sh,
             banner,
             source,
+            cerca_auto: false,
             auto: false,
             avviato: false,
         };
@@ -190,6 +202,7 @@ impl App {
                 }
                 "ppsspp" => self.ppsspp = val.to_string(),
                 "auto" => self.auto = val == "1",
+                "cerca" => self.cerca_auto = val == "1",
                 _ => {}
             }
         }
@@ -205,7 +218,7 @@ impl App {
         }
         let p = Path::new(&self.iso_path);
         let stem = p.file_stem().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| "ULES00600".into());
-        self.out_path = p.with_file_name(format!("{stem}_{}.iso", self.patch_lang.code())).display().to_string();
+        self.out_path = cerca::normalizza(&p.with_file_name(format!("{stem}_{}.iso", self.patch_lang.code())).display().to_string());
     }
 
     fn controlla_iso(&mut self, ctx: &egui::Context) {
@@ -224,9 +237,25 @@ impl App {
         });
     }
 
+    fn cerca(&mut self, ctx: &egui::Context) {
+        let sh = self.sh.clone();
+        sh.lock().unwrap().ricerca = Ricerca::InCorso;
+        let ctx = ctx.clone();
+        std::thread::spawn(move || {
+            let iso = cerca::trova_iso(std::time::Duration::from_secs(30), 1).into_iter().next();
+            let ppsspp = cerca::trova_ppsspp(std::time::Duration::from_secs(15)).into_iter().next();
+            sh.lock().unwrap().ricerca = Ricerca::Fine { iso, ppsspp };
+            ctx.request_repaint();
+        });
+    }
+
     fn avvia(&mut self, ctx: &egui::Context) {
         let sh = self.sh.clone();
-        let (iso, out, ppsspp) = (PathBuf::from(&self.iso_path), PathBuf::from(&self.out_path), PathBuf::from(&self.ppsspp));
+        let (iso, out, ppsspp) = (
+            PathBuf::from(cerca::normalizza(&self.iso_path)),
+            PathBuf::from(cerca::normalizza(&self.out_path)),
+            PathBuf::from(cerca::normalizza(&self.ppsspp)),
+        );
         let (o, lang, texture_on, source) = (self.opzioni(), self.patch_lang, self.textures, self.source.clone());
         let ctx = ctx.clone();
         let t = i18n::tr(self.ui_lang);
@@ -295,6 +324,25 @@ impl eframe::App for App {
             (s.manifest.clone(), s.iso.clone(), s.lavoro.clone())
         };
         let occupato = matches!(lavoro, Lavoro::InCorso { .. });
+        let ricerca = self.sh.lock().unwrap().ricerca.clone();
+        if let Ricerca::Fine { iso, ppsspp } = ricerca.clone() {
+            if let Some(i) = &iso {
+                self.iso_path = cerca::normalizza(&i.display().to_string());
+                self.out_manuale = false;
+                self.aggiorna_uscita();
+                self.controlla_iso(ctx);
+            }
+            if let Some(p) = &ppsspp {
+                self.ppsspp = cerca::normalizza(&p.display().to_string());
+            }
+            let mut s = self.sh.lock().unwrap();
+            s.esito_ricerca = Some((iso, ppsspp));
+            s.ricerca = Ricerca::Ferma;
+        }
+        if self.cerca_auto && matches!(ricerca, Ricerca::Ferma) {
+            self.cerca_auto = false;
+            self.cerca(ctx);
+        }
         if self.auto && matches!(&manifest, Some(Ok(_))) {
             if !self.iso_path.is_empty() && matches!(iso_stato, IsoStato::Nessuna) {
                 self.controlla_iso(ctx);
@@ -331,16 +379,42 @@ impl eframe::App for App {
                     if vecchia != self.patch_lang {
                         self.aggiorna_uscita();
                     }
+                    ui.add_space(4.0);
+                    ui.horizontal(|ui| {
+                        let cercando = matches!(ricerca, Ricerca::InCorso);
+                        if ui.add_enabled(!cercando, egui::Button::new(t.auto_btn)).clicked() {
+                            self.cerca(ctx);
+                        }
+                        if cercando {
+                            ui.spinner();
+                            ui.label(RichText::new(t.auto_searching).weak());
+                        }
+                    });
+                    let esito = self.sh.lock().unwrap().esito_ricerca.clone();
+                    if let Some((iso, pp)) = esito {
+                        let arancio = Color32::from_rgb(220, 150, 60);
+                        match iso {
+                            Some(i) => ui.label(RichText::new(format!("{} {}", t.auto_found_iso, cerca::normalizza(&i.display().to_string()))).small()),
+                            None => ui.label(RichText::new(t.auto_no_iso).small().color(arancio)),
+                        };
+                        match pp {
+                            Some(p) => ui.label(RichText::new(format!("{} {}", t.auto_found_ppsspp, cerca::normalizza(&p.display().to_string()))).small()),
+                            None => ui.label(RichText::new(t.auto_no_ppsspp).small().color(arancio)),
+                        };
+                    }
                     ui.separator();
                     // ISO
                     ui.label(RichText::new(t.iso_label).strong());
                     ui.horizontal(|ui| {
                         let r = ui.add(egui::TextEdit::singleline(&mut self.iso_path).desired_width(ui.available_width() - 110.0));
                         let cambiata = r.changed();
+                        if cambiata {
+                            self.iso_path = cerca::normalizza(&self.iso_path);
+                        }
                         if ui.button(t.browse).clicked()
                             && let Some(p) = rfd::FileDialog::new().add_filter("ISO", &["iso", "ISO"]).pick_file()
                         {
-                            self.iso_path = p.display().to_string();
+                            self.iso_path = cerca::normalizza(&p.display().to_string());
                             self.aggiorna_uscita();
                             self.controlla_iso(ctx);
                         } else if cambiata && Path::new(&self.iso_path).is_file() {
@@ -403,13 +477,14 @@ impl eframe::App for App {
                     ui.horizontal(|ui| {
                         if ui.add(egui::TextEdit::singleline(&mut self.out_path).desired_width(ui.available_width() - 110.0)).changed() {
                             self.out_manuale = true;
+                            self.out_path = cerca::normalizza(&self.out_path);
                         }
                         if ui.button(t.browse).clicked()
                             && let Some(p) = rfd::FileDialog::new().add_filter("ISO", &["iso"]).set_file_name(
                                 Path::new(&self.out_path).file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default(),
                             ).save_file()
                         {
-                            self.out_path = p.display().to_string();
+                            self.out_path = cerca::normalizza(&p.display().to_string());
                             self.out_manuale = true;
                         }
                     });
@@ -417,14 +492,16 @@ impl eframe::App for App {
                         ui.add_space(4.0);
                         ui.label(RichText::new(t.out_ppsspp).strong());
                         ui.horizontal(|ui| {
-                            ui.add(egui::TextEdit::singleline(&mut self.ppsspp).desired_width(ui.available_width() - 110.0));
+                            if ui.add(egui::TextEdit::singleline(&mut self.ppsspp).desired_width(ui.available_width() - 110.0)).changed() {
+                                self.ppsspp = cerca::normalizza(&self.ppsspp);
+                            }
                             if ui.button(t.browse).clicked()
                                 && let Some(p) = rfd::FileDialog::new().pick_folder()
                             {
-                                self.ppsspp = p.display().to_string();
+                                self.ppsspp = cerca::normalizza(&p.display().to_string());
                             }
                         });
-                        ui.label(RichText::new(t.ppsspp_hint).weak().small());
+                        ui.label(RichText::new(cerca::normalizza(t.ppsspp_hint)).weak().small());
                     }
                 });
                 ui.add_space(10.0);
@@ -454,7 +531,7 @@ impl eframe::App for App {
                         ui.add_space(6.0);
                         ui.colored_label(Color32::from_rgb(60, 170, 80), RichText::new(t.done).heading());
                         for p in f {
-                            ui.label(p.display().to_string());
+                            ui.label(cerca::normalizza(&p.display().to_string()));
                         }
                     }
                     Lavoro::Errore(e) => {

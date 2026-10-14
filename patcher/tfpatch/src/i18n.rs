@@ -95,6 +95,12 @@ pub struct Tr {
     pub need_iso: &'static str,
     pub need_out: &'static str,
     pub offline: &'static str,
+    pub auto_btn: &'static str,
+    pub auto_searching: &'static str,
+    pub auto_found_iso: &'static str,
+    pub auto_found_ppsspp: &'static str,
+    pub auto_no_iso: &'static str,
+    pub auto_no_ppsspp: &'static str,
     pub footer: &'static str,
 }
 
@@ -137,6 +143,12 @@ const EN: Tr = Tr {
     need_iso: "Choose a valid ISO first.",
     need_out: "Choose where to save the ISO.",
     offline: "Can't reach the download server. Check your connection.",
+    auto_btn: "Find ISO and PPSSPP folder automatically",
+    auto_searching: "Searching… (up to 30 seconds)",
+    auto_found_iso: "ISO found:",
+    auto_found_ppsspp: "PPSSPP folder found:",
+    auto_no_iso: "ISO not found: choose it with Browse.",
+    auto_no_ppsspp: "PPSSPP folder not found: choose it with Browse.",
     footer: "Unofficial fan project, not affiliated with Konami. HD textures based on the work of MikeyMK and chrisfand. MIT license.",
 };
 
@@ -179,6 +191,12 @@ const IT: Tr = Tr {
     need_iso: "Scegli prima una ISO valida.",
     need_out: "Scegli dove salvare la ISO.",
     offline: "Non riesco a raggiungere il server dei download. Controlla la connessione.",
+    auto_btn: "Cerca ISO e cartella di PPSSPP in automatico",
+    auto_searching: "Ricerca in corso… (fino a 30 secondi)",
+    auto_found_iso: "ISO trovata:",
+    auto_found_ppsspp: "Cartella di PPSSPP trovata:",
+    auto_no_iso: "ISO non trovata: sceglila con Sfoglia.",
+    auto_no_ppsspp: "Cartella di PPSSPP non trovata: scegliila con Sfoglia.",
     footer: "Progetto di appassionati non ufficiale, non affiliato a Konami. Texture HD basate sul lavoro di MikeyMK e chrisfand. Licenza MIT.",
 };
 
@@ -221,6 +239,12 @@ const FR: Tr = Tr {
     need_iso: "Choisissez d'abord une ISO valide.",
     need_out: "Choisissez où enregistrer l'ISO.",
     offline: "Impossible de joindre le serveur de téléchargement. Vérifiez votre connexion.",
+    auto_btn: "Chercher l'ISO et le dossier PPSSPP automatiquement",
+    auto_searching: "Recherche en cours… (jusqu'à 30 secondes)",
+    auto_found_iso: "ISO trouvée :",
+    auto_found_ppsspp: "Dossier PPSSPP trouvé :",
+    auto_no_iso: "ISO introuvable : choisissez-la avec Parcourir.",
+    auto_no_ppsspp: "Dossier PPSSPP introuvable : choisissez-le avec Parcourir.",
     footer: "Projet de fans non officiel, non affilié à Konami. Textures HD basées sur le travail de MikeyMK et chrisfand. Licence MIT.",
 };
 
@@ -263,6 +287,12 @@ const DE: Tr = Tr {
     need_iso: "Wählen Sie zuerst eine gültige ISO.",
     need_out: "Wählen Sie, wo die ISO gespeichert werden soll.",
     offline: "Der Download-Server ist nicht erreichbar. Prüfen Sie Ihre Verbindung.",
+    auto_btn: "ISO und PPSSPP-Ordner automatisch suchen",
+    auto_searching: "Suche läuft… (bis zu 30 Sekunden)",
+    auto_found_iso: "ISO gefunden:",
+    auto_found_ppsspp: "PPSSPP-Ordner gefunden:",
+    auto_no_iso: "ISO nicht gefunden: mit „Durchsuchen“ auswählen.",
+    auto_no_ppsspp: "PPSSPP-Ordner nicht gefunden: mit „Durchsuchen“ auswählen.",
     footer: "Inoffizielles Fanprojekt, nicht mit Konami verbunden. HD-Texturen basieren auf der Arbeit von MikeyMK und chrisfand. MIT-Lizenz.",
 };
 
@@ -305,6 +335,12 @@ const ES: Tr = Tr {
     need_iso: "Elige primero una ISO válida.",
     need_out: "Elige dónde guardar la ISO.",
     offline: "No se puede llegar al servidor de descargas. Revisa tu conexión.",
+    auto_btn: "Buscar la ISO y la carpeta de PPSSPP automáticamente",
+    auto_searching: "Buscando… (hasta 30 segundos)",
+    auto_found_iso: "ISO encontrada:",
+    auto_found_ppsspp: "Carpeta de PPSSPP encontrada:",
+    auto_no_iso: "ISO no encontrada: elígela con Examinar.",
+    auto_no_ppsspp: "Carpeta de PPSSPP no encontrada: elígela con Examinar.",
     footer: "Proyecto de aficionados no oficial, no afiliado a Konami. Texturas HD basadas en el trabajo de MikeyMK y chrisfand. Licencia MIT.",
 };
 

@@ -23,6 +23,19 @@ Texts changed by the patch in each language (counted by comparing the patched IS
 | Spanish | 624 | 601 | 55 | 329 |
 | Italian | 181 | 2,488 | 33 | 298 |
 
+
+HD textures per language. For French, German, Spanish and Italian **every single card of the game (all 2,833) is redrawn in HD with its text in your language, in both its large and its small version**, together with its deck thumbnail pages, the attribute table and the Spell/Trap label. The interface textures are redrawn in HD as well:
+
+| Language | Large cards | Small cards | Deck thumbnail pages | Interface textures |
+|---|---:|---:|---:|---:|
+| English | 87 | 87 | – | 50 |
+| French | 2,833 | 2,833 | 7 | 93 |
+| German | 2,833 | 2,833 | 7 | 106 |
+| Spanish | 2,833 | 2,833 | 7 | 95 |
+| Italian | 2,833 | 2,833 | 7 | 113 |
+
+English already has all its cards in HD from MikeyMK's and chrisfand's pack, so only the 87 cards whose text we corrected are regenerated (large and small), and 50 interface textures that pack does not cover are redrawn. Textures that are identical in every language come from the shared base.
+
 > **Status: early release.** The patches are verified file by file for every combination of modules, and the five languages were tested in PPSSPP (boot, title screen, demo duels). Story mode, deck editor and shop have not been played through yet. The graphical installer is new: tested on Windows; the Linux build is produced by GitHub Actions and has not been run on a real Linux desktop yet.
 
 ## What you need

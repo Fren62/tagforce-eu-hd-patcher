@@ -23,6 +23,19 @@ Textos modificados por el parche en cada idioma (contados comparando la ISO parc
 | Español | 624 | 601 | 55 | 329 |
 | Italiano | 181 | 2,488 | 33 | 298 |
 
+
+Texturas HD por idioma. Para francés, alemán, español e italiano **cada una de las cartas del juego (las 2.833) se redibuja en HD con su texto en tu idioma, tanto en la versión grande como en la pequeña**, junto con las páginas de miniaturas del deck, la tabla de atributos y la etiqueta Mágica/Trampa. Las texturas de la interfaz también se redibujan en HD:
+
+| Idioma | Cartas grandes | Cartas pequeñas | Páginas de miniaturas del deck | Texturas de la interfaz |
+|---|---:|---:|---:|---:|
+| Inglés | 87 | 87 | – | 50 |
+| Francés | 2.833 | 2.833 | 7 | 93 |
+| Alemán | 2.833 | 2.833 | 7 | 106 |
+| Español | 2.833 | 2.833 | 7 | 95 |
+| Italiano | 2.833 | 2.833 | 7 | 113 |
+
+El inglés ya tiene todas sus cartas en HD gracias al pack de MikeyMK y chrisfand; solo se regeneran las 87 cartas cuyo texto hemos corregido (grandes y pequeñas) y se redibujan 50 texturas de la interfaz que ese pack no cubre. Las texturas idénticas en todos los idiomas vienen de la base compartida.
+
 > **Estado: primera versión.** Los parches están verificados archivo por archivo para cada combinación de módulos, y los cinco idiomas se probaron en PPSSPP (arranque, pantalla de título, duelos de demostración). El modo historia, el editor de mazos y la tienda aún no se han jugado a fondo. El instalador gráfico es nuevo: probado en Windows; la versión de Linux la genera GitHub Actions y aún no se ha ejecutado en un escritorio Linux real.
 
 ## Qué necesitas

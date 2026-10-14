@@ -23,6 +23,19 @@ Textes modifiés par le patch dans chaque langue (comptés en comparant l'ISO pa
 | Espagnol | 624 | 601 | 55 | 329 |
 | Italien | 181 | 2,488 | 33 | 298 |
 
+
+Textures HD par langue. Pour le français, l'allemand, l'espagnol et l'italien, **chaque carte du jeu sans exception (les 2 833) est redessinée en HD avec son texte dans votre langue, en version grande comme en version petite**, avec les pages de miniatures du deck, la table des attributs et l'étiquette Magie/Piège. Les textures de l'interface sont elles aussi redessinées en HD :
+
+| Langue | Grandes cartes | Petites cartes | Pages de miniatures du deck | Textures de l'interface |
+|---|---:|---:|---:|---:|
+| Anglais | 87 | 87 | – | 50 |
+| Français | 2 833 | 2 833 | 7 | 93 |
+| Allemand | 2 833 | 2 833 | 7 | 106 |
+| Espagnol | 2 833 | 2 833 | 7 | 95 |
+| Italien | 2 833 | 2 833 | 7 | 113 |
+
+L'anglais a déjà toutes ses cartes en HD grâce au pack de MikeyMK et chrisfand ; seules les 87 cartes dont nous avons corrigé le texte sont régénérées (grandes et petites), et 50 textures d'interface que ce pack ne couvre pas sont redessinées. Les textures identiques dans toutes les langues viennent de la base partagée.
+
 > **État : première version.** Les patchs sont vérifiés fichier par fichier pour chaque combinaison de modules, et les cinq langues ont été testées dans PPSSPP (démarrage, écran titre, duels de démonstration). Le mode histoire, l'éditeur de deck et la boutique n'ont pas encore été joués à fond. L'installateur graphique est nouveau : testé sous Windows ; la version Linux est produite par GitHub Actions et n'a pas encore été lancée sur un vrai bureau Linux.
 
 ## Ce qu'il vous faut

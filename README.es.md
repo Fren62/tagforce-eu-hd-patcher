@@ -10,7 +10,7 @@ A partir de *tu propia* ISO, genera una copia en el idioma elegido (**inglés, f
 - **sin selector de idioma**: la pantalla de elección del primer arranque y la entrada de selección de idioma del menú principal se eliminan (el idioma es fijo), porque serían inútiles;
 - **un solo idioma en la ISO**: se quitan los demás idiomas, así la ISO pesa menos (unos 610 MB en lugar de 835 MB) y el juego se queda en el idioma elegido sea cual sea el idioma del sistema de la PSP.
 
-> **Estado: primera versión (v0.1.0).** Los cinco parches de ISO están verificados archivo por archivo. Probado hasta ahora en PPSSPP: italiano y francés (arranque, título, menú principal). El inglés, el alemán y el español aún deben probarse a fondo. Todavía no hay interfaz gráfica, solo línea de comandos.
+> **Estado: primera versión (v0.1.0).** Los cinco parches de ISO están verificados archivo por archivo y probados en PPSSPP en todos los idiomas: arranque, pantalla de título y duelos de demostración (unos 9 minutos cada uno, sin fallos). El modo historia, el editor de mazos, la tienda y el resto aún no se han jugado a fondo. Todavía no hay interfaz gráfica, solo línea de comandos.
 
 ## Qué necesitas
 

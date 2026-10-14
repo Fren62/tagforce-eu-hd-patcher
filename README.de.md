@@ -10,7 +10,7 @@ Aus *Ihrer eigenen* ISO erzeugt er eine Kopie in der gewählten Sprache (**Engli
 - **keine Sprachauswahl mehr**: Der Sprachbildschirm beim ersten Start und der Menüpunkt zur Sprachwahl im Hauptmenü sind entfernt (die Sprache ist fest), da sie überflüssig wären;
 - **nur eine Sprache in der ISO**: Die anderen Sprachen werden entfernt, die ISO ist dadurch kleiner (etwa 610 MB statt 835 MB) und das Spiel bleibt in der gewählten Sprache, egal welche Systemsprache die PSP hat.
 
-> **Status: erste Version (v0.1.0).** Alle fünf ISO-Patches sind Datei für Datei geprüft. Bisher in PPSSPP gespielt: Italienisch und Französisch (Start, Titel, Hauptmenü). Englisch, Deutsch und Spanisch müssen noch gründlich getestet werden. Es gibt noch keine grafische Oberfläche, nur die Kommandozeile.
+> **Status: erste Version (v0.1.0).** Alle fünf ISO-Patches sind Datei für Datei geprüft und in PPSSPP in jeder Sprache getestet: Start, Titelbildschirm und Demo-Duelle (je etwa 9 Minuten, kein Absturz). Story-Modus, Deck-Editor, Shop und der Rest wurden noch nicht gründlich durchgespielt. Es gibt noch keine grafische Oberfläche, nur die Kommandozeile.
 
 ## Was Sie brauchen
 

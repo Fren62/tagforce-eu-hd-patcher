@@ -10,7 +10,7 @@ Patcheur gratuit et open source pour **Yu-Gi-Oh! GX Tag Force** (PSP), version e
 - **plus de sélecteur de langue** : l'écran de choix au premier démarrage et l'entrée de choix de la langue du menu principal sont supprimés (la langue est fixe), car ils seraient inutiles ;
 - **une seule langue dans l'ISO** : les autres langues sont retirées, l'ISO est donc plus légère (environ 610 Mo au lieu de 835 Mo) et le jeu reste dans la langue choisie quelle que soit la langue système de la PSP.
 
-> **État : première version (v0.1.0).** Les cinq patchs d'ISO sont vérifiés fichier par fichier. Jeu testé dans PPSSPP jusqu'ici : italien et français (démarrage, titre, menu principal). L'anglais, l'allemand et l'espagnol doivent encore être testés à fond. Pas encore d'interface graphique, seulement la ligne de commande.
+> **État : première version (v0.1.0).** Les cinq patchs d'ISO sont vérifiés fichier par fichier et testés dans PPSSPP dans toutes les langues : démarrage, écran titre et duels de démonstration (environ 9 minutes chacun, sans plantage). Le mode histoire, l'éditeur de deck, la boutique et le reste n'ont pas encore été joués à fond. Pas encore d'interface graphique, seulement la ligne de commande.
 
 ## Ce qu'il vous faut
 

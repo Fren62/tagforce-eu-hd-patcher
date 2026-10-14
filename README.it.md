@@ -45,7 +45,7 @@ Note sulle opzioni:
 
 ## Riga di comando
 
-Scarica `tfpatch.exe` (Windows) o `tfpatch-linux-x86_64` (Linux; prima `chmod +x`). Patch: `patch_it.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp`, `patch_en.tfp`.
+Lo strumento da riga di comando non è allegato alle release (alla maggior parte delle persone basta l'installer grafico): compilalo con `cd patcher/tfpatch && cargo build --release` (il programma è `target/release/tfpatch`). Patch, scaricabili dalla pagina della release: `patch_it.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp`, `patch_en.tfp`.
 
 ```
 tfpatch iso --iso ULES00600.iso --patch patch_it.tfp --out ULES00600_it.iso

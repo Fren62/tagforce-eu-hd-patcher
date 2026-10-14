@@ -45,7 +45,7 @@ Notes on the options:
 
 ## Command line
 
-Download `tfpatch.exe` (Windows) or `tfpatch-linux-x86_64` (Linux; `chmod +x` first). Patches: `patch_en.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp`, `patch_it.tfp`.
+The command-line tool is not attached to the releases (the graphical installer is what most people need): build it with `cd patcher/tfpatch && cargo build --release` (the program is `target/release/tfpatch`). Patches, downloadable from the release page: `patch_en.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp`, `patch_it.tfp`.
 
 ```
 tfpatch iso --iso ULES00600.iso --patch patch_en.tfp --out ULES00600_en.iso

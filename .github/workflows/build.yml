@@ -21,13 +21,9 @@ jobs:
       matrix:
         include:
           - os: ubuntu-22.04
-            cli: tfpatch
-            cli_asset: tfpatch-linux-x86_64
             gui: tfpatch-gui
             gui_asset: tfpatch-gui-linux-x86_64
           - os: windows-latest
-            cli: tfpatch.exe
-            cli_asset: tfpatch.exe
             gui: tfpatch-gui.exe
             gui_asset: tfpatch-gui.exe
     runs-on: ${{ matrix.os }}
@@ -60,16 +56,14 @@ jobs:
           code=$?
           echo "exit code: $code (124 = still running when the timeout hit)"
           [ "$code" -eq 124 ]
-      - name: Rename binaries
+      - name: Rename the installer (the command-line tool is built and tested but not attached to releases)
         shell: bash
         run: |
-          cp "patcher/tfpatch/target/release/${{ matrix.cli }}" "${{ matrix.cli_asset }}"
           cp "patcher/tfpatch/target/release/${{ matrix.gui }}" "${{ matrix.gui_asset }}"
       - uses: actions/upload-artifact@v4
         with:
           name: binaries-${{ matrix.os }}
           path: |
-            ${{ matrix.cli_asset }}
             ${{ matrix.gui_asset }}
 
   release:

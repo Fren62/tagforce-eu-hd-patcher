@@ -114,7 +114,8 @@ def main(tex, card_dir, out, languages):
     for l in languages:
         extra = [(n, p) for n, p in everything if n in base_names and n not in common and n in refs[l]]
         # a name present twice goes once only in the language archive
-        entries = list({n: p for n, p in per_lang[l] + extra}.items())
+        entries = [e for e in per_lang[l] if not (is_english_only(e[0]) and e[0] not in refs[l])]   # English art nobody points to
+        entries = list({n: p for n, p in entries + extra}.items())
         man['languages'][l] = write_zip(os.path.join(out, f'{l}.zip'), entries)
         print(l + '.zip', man['languages'][l]['size'] >> 20, 'MB', len(entries), 'files')
     json.dump(man, open(os.path.join(out, 'manifest.json'), 'w'), indent=1)

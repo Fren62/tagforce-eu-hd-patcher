@@ -98,6 +98,10 @@ cd patcher/tfpatch && cargo build --release
 
 Cela compile `tfpatch` (ligne de commande) et `tfpatch-gui`. Sous Linux, l'interface graphique demande les paquets de développement habituels X11/Wayland/OpenGL.
 
+## Confidentialité
+
+Les programmes ne collectent aucune donnée personnelle et n'envoient nulle part d'information sur vous ou votre ordinateur : pas de télémétrie, pas de compte, pas de statistiques. Votre ISO est lue et patchée uniquement sur votre machine et ne la quitte jamais. Le seul trafic réseau est le téléchargement du patch et des textures depuis les Releases GitHub de ce dépôt (avec la vérification SHA-256) ; comme pour tout téléchargement depuis GitHub, GitHub voit les données de connexion habituelles, comme votre adresse IP, selon sa propre politique de confidentialité.
+
 ## Crédits
 
 - **MikeyMK** — *Yu-Gi-Oh! GX Tag Force 1 HD Remastered* (base des textures HD, version US).

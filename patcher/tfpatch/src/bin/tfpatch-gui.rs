@@ -56,8 +56,11 @@ struct App {
     cards: bool,
     strip: bool,
     iso_path: String,
-    out_path: String,
-    out_manuale: bool,
+    out_path: String, // calcolato: cartella di uscita + nome automatico
+    out_dir: String,  // cartella scelta dall'utente (vuota = la stessa della ISO originale)
+    sim_nessuna: bool, // solo collaudo: la ricerca non trova nulla
+    sim_nopp: bool,    // solo collaudo: la ricerca non trova PPSSPP
+    sim_cercando: bool, // solo collaudo: la ricerca non finisce mai
     ppsspp: String,
     sh: Arc<Mutex<Condiviso>>,
     banner: HashMap<Lang, egui::TextureHandle>,
@@ -76,15 +79,6 @@ fn cache_dir() -> PathBuf {
         return PathBuf::from(d).join("tfpatch");
     }
     PathBuf::from(std::env::var("HOME").unwrap_or_default()).join(".cache").join("tfpatch")
-}
-
-fn ppsspp_guess() -> String {
-    let c = if cfg!(windows) {
-        std::env::var("USERPROFILE").map(|u| PathBuf::from(u).join("Documents").join("PPSSPP")).ok()
-    } else {
-        std::env::var("HOME").map(|h| PathBuf::from(h).join(".config").join("ppsspp")).ok()
-    };
-    c.filter(|p| p.exists()).map(|p| p.display().to_string()).unwrap_or_default()
 }
 
 fn bandiera(ui: &mut egui::Ui, l: Lang, h: f32) {
@@ -170,8 +164,11 @@ impl App {
             strip: true,
             iso_path: String::new(),
             out_path: String::new(),
-            out_manuale: false,
-            ppsspp: ppsspp_guess(),
+            out_dir: String::new(),
+            sim_nessuna: false,
+            sim_nopp: false,
+            sim_cercando: false,
+            ppsspp: String::new(),
             sh,
             banner,
             source,
@@ -202,13 +199,17 @@ impl App {
                 "strip" => self.strip = val == "1",
                 "iso" => self.iso_path = val.to_string(),
                 "out" => {
-                    self.out_path = val.to_string();
-                    self.out_manuale = true;
+                    self.out_dir = Path::new(val).parent().map(|p| p.display().to_string()).unwrap_or_default();
                 }
                 "ppsspp" => self.ppsspp = val.to_string(),
                 "auto" => self.auto = val == "1",
                 "cerca" => self.cerca_auto = val == "1",
                 "adv" => self.adv = val == "1",
+                "sim" => {
+                    self.sim_nessuna = val == "nessuna";
+                    self.sim_nopp = val == "nopp";
+                    self.sim_cercando = val == "cercando";
+                }
                 _ => {}
             }
         }
@@ -218,13 +219,15 @@ impl App {
         Options { cards: self.cards, text: self.text, strip: self.strip }
     }
 
+    /// Cartella di uscita (quella scelta, altrimenti quella della ISO) + nome automatico <originale>_<lingua>.iso
     fn aggiorna_uscita(&mut self) {
-        if self.out_manuale || self.iso_path.is_empty() {
+        if self.iso_path.is_empty() {
             return;
         }
         let p = Path::new(&self.iso_path);
         let stem = p.file_stem().map(|s| s.to_string_lossy().to_string()).unwrap_or_else(|| "ULES00600".into());
-        self.out_path = cerca::normalizza(&p.with_file_name(format!("{stem}_{}.iso", self.patch_lang.code())).display().to_string());
+        let dir = if self.out_dir.trim().is_empty() { p.parent().map(|d| d.to_path_buf()).unwrap_or_default() } else { PathBuf::from(&self.out_dir) };
+        self.out_path = cerca::normalizza(&dir.join(format!("{stem}_{}.iso", self.patch_lang.code())).display().to_string());
     }
 
     fn controlla_iso(&mut self, ctx: &egui::Context) {
@@ -246,6 +249,9 @@ impl App {
     fn cerca(&mut self, ctx: &egui::Context) {
         let sh = self.sh.clone();
         sh.lock().unwrap().ricerca = Ricerca::InCorso;
+        if self.sim_cercando {
+            return;
+        }
         let ctx = ctx.clone();
         std::thread::spawn(move || {
             let iso = cerca::trova_iso(std::time::Duration::from_secs(30), 1).into_iter().next();
@@ -258,7 +264,6 @@ impl App {
     fn scegli_iso(&mut self, ctx: &egui::Context) {
         if let Some(p) = rfd::FileDialog::new().add_filter("ISO", &["iso", "ISO"]).pick_file() {
             self.iso_path = cerca::normalizza(&p.display().to_string());
-            self.out_manuale = false;
             self.aggiorna_uscita();
             self.controlla_iso(ctx);
         }
@@ -271,6 +276,7 @@ impl App {
     }
 
     fn avvia(&mut self, ctx: &egui::Context) {
+        self.aggiorna_uscita();
         let sh = self.sh.clone();
         let (iso, out, ppsspp) = (
             PathBuf::from(cerca::normalizza(&self.iso_path)),
@@ -345,11 +351,15 @@ impl eframe::App for App {
             (s.manifest.clone(), s.iso.clone(), s.lavoro.clone())
         };
         let occupato = matches!(lavoro, Lavoro::InCorso { .. });
+        if self.out_path.is_empty() && !self.iso_path.is_empty() {
+            self.aggiorna_uscita();
+        }
         let ricerca = self.sh.lock().unwrap().ricerca.clone();
         if let Ricerca::Fine { iso, ppsspp } = ricerca.clone() {
+            let iso = if self.sim_nessuna { None } else { iso };
+            let ppsspp = if self.sim_nessuna || self.sim_nopp { None } else { ppsspp };
             if let Some(i) = &iso {
                 self.iso_path = cerca::normalizza(&i.display().to_string());
-                self.out_manuale = false;
                 self.aggiorna_uscita();
                 self.controlla_iso(ctx);
             }
@@ -510,7 +520,6 @@ impl eframe::App for App {
                             if r.changed() {
                                 self.iso_path = cerca::normalizza(&self.iso_path);
                                 if Path::new(&self.iso_path).is_file() {
-                                    self.out_manuale = false;
                                     self.aggiorna_uscita();
                                     self.controlla_iso(ctx);
                                 }
@@ -520,21 +529,28 @@ impl eframe::App for App {
                             }
                         });
                         ui.add_space(4.0);
-                        ui.label(RichText::new(t.out_iso).strong());
+                        ui.label(RichText::new(t.out_folder).strong());
                         ui.horizontal(|ui| {
-                            if ui.add(egui::TextEdit::singleline(&mut self.out_path).desired_width(ui.available_width() - 110.0)).changed() {
-                                self.out_manuale = true;
-                                self.out_path = cerca::normalizza(&self.out_path);
+                            let mut mostra = if self.out_dir.trim().is_empty() {
+                                Path::new(&self.out_path).parent().map(|d| d.display().to_string()).unwrap_or_default()
+                            } else {
+                                self.out_dir.clone()
+                            };
+                            if ui.add(egui::TextEdit::singleline(&mut mostra).desired_width(ui.available_width() - 110.0)).changed() {
+                                self.out_dir = cerca::normalizza(&mostra);
+                                self.aggiorna_uscita();
                             }
                             if ui.button(t.browse).clicked()
-                                && let Some(p) = rfd::FileDialog::new().add_filter("ISO", &["iso"]).set_file_name(
-                                    Path::new(&self.out_path).file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default(),
-                                ).save_file()
+                                && let Some(p) = rfd::FileDialog::new().pick_folder()
                             {
-                                self.out_path = cerca::normalizza(&p.display().to_string());
-                                self.out_manuale = true;
+                                self.out_dir = cerca::normalizza(&p.display().to_string());
+                                self.aggiorna_uscita();
                             }
                         });
+                        if !self.out_path.is_empty() {
+                            let nome = Path::new(&self.out_path).file_name().map(|n| n.to_string_lossy().to_string()).unwrap_or_default();
+                            ui.label(RichText::new(format!("{} {}", t.out_name, nome)).weak().small());
+                        }
                         if self.textures {
                             ui.add_space(4.0);
                             ui.label(RichText::new(t.out_ppsspp).strong());
@@ -596,7 +612,7 @@ impl eframe::App for App {
 
 fn main() -> eframe::Result {
     let opts = eframe::NativeOptions {
-        viewport: egui::ViewportBuilder::default().with_inner_size([720.0, 800.0]).with_min_inner_size([560.0, 520.0]),
+        viewport: egui::ViewportBuilder::default().with_inner_size([720.0, 880.0]).with_min_inner_size([560.0, 520.0]),
         ..Default::default()
     };
     eframe::run_native("tfpatch", opts, Box::new(|cc| Ok(Box::new(App::new(cc)))))

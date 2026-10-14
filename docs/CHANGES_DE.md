@@ -1642,18 +1642,18 @@ PC: copy `ULES00600` into `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `
 ### Entries of the choices register for this language (`tools/data/editorial_choices.json`)
 | id | original | corrected | inherited | reason |
 |---|---|---|---|---|
-| st01_t01/Scr003E#146 | Meinem Vater gehört eine Firma,⏎die scharfe Saucen herstellt. | Meinem Vater gehört eine⏎Sake-Brauerei. | no | sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake) |
-| st01_t01/Scr003E#147 | Er hat mir zusammen mit dem Taschengeld⏎auch etwas scharfe Sauce geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | Er hat mir zusammen mit dem Taschengeld⏎auch etwas Shochu geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | no | shochu al posto di salsa piccante |
-| st01_t01/Scr003E#150 | Meinem Vater gehört eine Firma,⏎die scharfe Saucen herstellt. | Meinem Vater gehört eine⏎Sake-Brauerei. | no | come 146 |
-| st01_t01/Scr003E#151 | Er hat mir zusammen mit dem Taschengeld⏎auch etwas scharfe Sauce geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | Er hat mir zusammen mit dem Taschengeld⏎auch etwas Shochu geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | no | come 147 |
-| st01_t01/Scr003E#163 | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Bikini! | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Dienstmädchen-Outfit! | no | abito da cameriera al posto di bikini (giapponese: メイド服) |
-| st01_t01/Scr003E#168 | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Bikini! | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Dienstmädchen-Outfit! | no | come 163 |
-| st01_t01/Scr003E#188 | Tja, ein wenig schon ... | None | yes | solo italiano: "sto sbavando" era un errore di traduzione (giapponese: "non sono poi così bravo") |
-| st01_t01/Scr003E#189 | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》 im Bikini! | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》 im Dienstmädchen-Outfit! | no | abito da cameriera al posto di bikini |
-| st01_t01/Scr003E#191 | Hier, du kannst den hier nehmen! | Hier, nimm dieses Dienstmädchen-Outfit! | no | Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso |
-| st01_t01/Scr003E#194 | Tja, ein wenig schon ... | None | yes | come 188 |
-| st01_t01/Scr003E#195 | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》⏎im Bikini! | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》⏎im Dienstmädchen-Outfit! | no | come 189 |
-| st01_t01/Scr003E#197 | Hier, du kannst den hier nehmen! | Hier, nimm dieses Dienstmädchen-Outfit! | no | come 191 |
+| st01_t01/Scr003E#146 | Meinem Vater gehört eine Firma,⏎die scharfe Saucen herstellt. | Meinem Vater gehört eine⏎Sake-Brauerei. | no | sake instead of hot sauce (faithful to the Japanese: Chumley's family makes sake) |
+| st01_t01/Scr003E#147 | Er hat mir zusammen mit dem Taschengeld⏎auch etwas scharfe Sauce geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | Er hat mir zusammen mit dem Taschengeld⏎auch etwas Shochu geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | no | shochu instead of hot sauce |
+| st01_t01/Scr003E#150 | Meinem Vater gehört eine Firma,⏎die scharfe Saucen herstellt. | Meinem Vater gehört eine⏎Sake-Brauerei. | no | same as 146 |
+| st01_t01/Scr003E#151 | Er hat mir zusammen mit dem Taschengeld⏎auch etwas scharfe Sauce geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | Er hat mir zusammen mit dem Taschengeld⏎auch etwas Shochu geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse? | no | same as 147 |
+| st01_t01/Scr003E#163 | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Bikini! | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Dienstmädchen-Outfit! | no | maid outfit instead of bikini (Japanese: メイド服) |
+| st01_t01/Scr003E#168 | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Bikini! | Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Dienstmädchen-Outfit! | no | same as 163 |
+| st01_t01/Scr003E#188 | Tja, ein wenig schon ... | None | yes | Italian only: "sto sbavando" was a translation error (Japanese: "I am not that good") |
+| st01_t01/Scr003E#189 | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》 im Bikini! | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》 im Dienstmädchen-Outfit! | no | maid outfit instead of bikini |
+| st01_t01/Scr003E#191 | Hier, du kannst den hier nehmen! | Hier, nimm dieses Dienstmädchen-Outfit! | no | Syrus hands over a maid outfit as a model (メイド服): with the bikini the joke made no sense |
+| st01_t01/Scr003E#194 | Tja, ein wenig schon ... | None | yes | same as 188 |
+| st01_t01/Scr003E#195 | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》⏎im Bikini! | Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》⏎im Dienstmädchen-Outfit! | no | same as 189 |
+| st01_t01/Scr003E#197 | Hier, du kannst den hier nehmen! | Hier, nimm dieses Dienstmädchen-Outfit! | no | same as 191 |
 
 Other choices and the re-reading of the duel sentences: `docs/EDITORIAL_CHOICES.md`.
 

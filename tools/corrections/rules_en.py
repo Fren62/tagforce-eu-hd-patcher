@@ -1,7 +1,7 @@
 """Corrections to the English card texts (cardinfo_eng.ehp). Objective errors only: typos, inconsistent spelling and obvious grammar slips (omitted words).
 The text is not modernised: differences from today's official text that are mere rewordings
 ("Tribute" instead of "offer", "banish", "Extra Deck"...) are left alone.
-Complete hand reading of the 2,479 cards on 2026-10-13 (notes in comparisons/audit_en/NOTE_LAVORO.md).
+Complete hand reading of the 2,479 cards on 2026-10-13 (notes in comparisons/audit_en/WORK_NOTES.md).
 Official names with typos NOT touched: "Skull Descovery Knight" (6001), "Cemetary Bomb" (6148), "Bokoichi the Freightening Car" (6174).
 GLOBALS: (regex, replacement, reason) applied to the names and descriptions of all the cards.
 PER_CARD: (id, 'name'|'desc', old, new, reason); the old text must exist exactly."""

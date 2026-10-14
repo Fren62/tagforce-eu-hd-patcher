@@ -1137,18 +1137,18 @@ PC: copy `ULES00600` into `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `
 ### Entries of the choices register for this language (`tools/data/editorial_choices.json`)
 | id | original | corrected | inherited | reason |
 |---|---|---|---|---|
-| st01_t01/Scr003E#146 | Mon père a une société qui fabrique de la⏎sauce épicée. | Mon père possède une⏎distillerie de saké. | no | sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake) |
-| st01_t01/Scr003E#147 | Il m'en a envoyé avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux... | Il m'a envoyé du shochu avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux... | no | shochu al posto di salsa piccante |
-| st01_t01/Scr003E#150 | Mon père a une société qui fabrique de la⏎sauce épicée. | Mon père possède une⏎distillerie de saké. | no | come 146 |
-| st01_t01/Scr003E#151 | Il m'en a envoyé avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux... | Il m'a envoyé du shochu avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux... | no | come 147 |
-| st01_t01/Scr003E#163 | Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En bikini ! | Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En tenue de servante ! | no | abito da cameriera al posto di bikini (giapponese: メイド服) |
-| st01_t01/Scr003E#168 | Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En bikini ! | Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En tenue de servante ! | no | come 163 |
-| st01_t01/Scr003E#188 | Eh bien, je suppose que oui... | None | yes | solo italiano: "sto sbavando" era un errore di traduzione (giapponese: "non sono poi così bravo") |
-| st01_t01/Scr003E#189 | Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en bikini ! | Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en tenue de servante ! | no | abito da cameriera al posto di bikini |
-| st01_t01/Scr003E#191 | Hé, que penses-tu de ça ! | Tiens, utilise cette tenue de servante ! | no | Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso |
-| st01_t01/Scr003E#194 | Eh bien, je suppose que oui... | None | yes | come 188 |
-| st01_t01/Scr003E#195 | Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en bikini ! | Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en tenue de servante ! | no | come 189 |
-| st01_t01/Scr003E#197 | Hé, que penses-tu de ça ! | Tiens, utilise cette tenue de servante ! | no | come 191 |
+| st01_t01/Scr003E#146 | Mon père a une société qui fabrique de la⏎sauce épicée. | Mon père possède une⏎distillerie de saké. | no | sake instead of hot sauce (faithful to the Japanese: Chumley's family makes sake) |
+| st01_t01/Scr003E#147 | Il m'en a envoyé avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux... | Il m'a envoyé du shochu avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux... | no | shochu instead of hot sauce |
+| st01_t01/Scr003E#150 | Mon père a une société qui fabrique de la⏎sauce épicée. | Mon père possède une⏎distillerie de saké. | no | same as 146 |
+| st01_t01/Scr003E#151 | Il m'en a envoyé avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux... | Il m'a envoyé du shochu avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux... | no | same as 147 |
+| st01_t01/Scr003E#163 | Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En bikini ! | Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En tenue de servante ! | no | maid outfit instead of bikini (Japanese: メイド服) |
+| st01_t01/Scr003E#168 | Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En bikini ! | Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En tenue de servante ! | no | same as 163 |
+| st01_t01/Scr003E#188 | Eh bien, je suppose que oui... | None | yes | Italian only: "sto sbavando" was a translation error (Japanese: "I am not that good") |
+| st01_t01/Scr003E#189 | Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en bikini ! | Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en tenue de servante ! | no | maid outfit instead of bikini |
+| st01_t01/Scr003E#191 | Hé, que penses-tu de ça ! | Tiens, utilise cette tenue de servante ! | no | Syrus hands over a maid outfit as a model (メイド服): with the bikini the joke made no sense |
+| st01_t01/Scr003E#194 | Eh bien, je suppose que oui... | None | yes | same as 188 |
+| st01_t01/Scr003E#195 | Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en bikini ! | Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en tenue de servante ! | no | same as 189 |
+| st01_t01/Scr003E#197 | Hé, que penses-tu de ça ! | Tiens, utilise cette tenue de servante ! | no | same as 191 |
 
 Other choices and the re-reading of the duel sentences: `docs/EDITORIAL_CHOICES.md`.
 

@@ -4,7 +4,7 @@ The title backdrop is made of 20 128x64 textures (title_menu_i.ehp: main_title00
 1 is bottom right). The banner sits in the top row, above "SHONEN JUMP'S", and falls in tiles
 18 and 19 (x 128-384 of the PSP screen). The base pack stays WITHOUT banner (original tiles): each
 language's banner lives in that language's module, modules/<language>/intro/title_screen/, and compose_pack.py copies it only
-for the chosen language. The originals of the two tiles are in comparisons/backup_prima_titolo/.
+for the chosen language. The originals of the two tiles are in comparisons/backup_before_title/.
 
 usage: mystic_tomato_title.py [LANGUAGE ...]               generates the modules (default: all) and puts the original tiles back in the base pack
        mystic_tomato_title.py --apply PACK LANGUAGE        writes the LANGUAGE banner directly into a pack (e.g. PPSSPP's)
@@ -16,7 +16,7 @@ from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(HERE, '..', '..'))
 PACK = os.path.join(ROOT, 'PSP', 'TEXTURES', 'ULES00600')
-BACKUP = os.path.join(ROOT, 'comparisons', 'backup_prima_titolo')
+BACKUP = os.path.join(ROOT, 'comparisons', 'backup_before_title')
 FONT = os.path.join(HERE, '..', 'alt_fonts', 'downloaded', 'PTSans-Bold.ttf')
 ID_CARD = 4930
 MODULES = os.path.join(ROOT, 'PSP', 'TEXTURES', 'modules')

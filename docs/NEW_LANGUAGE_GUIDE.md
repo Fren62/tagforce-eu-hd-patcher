@@ -1,220 +1,222 @@
-# GUIDA - Come adattare il gioco a una lingua europea
+# GUIDE - How to adapt the game to a European language
 
-Linee guida **generali** (valide per spagnolo, tedesco, inglese o qualunque lingua europea del gioco) ricavate dal lavoro fatto su **italiano** e
-**francese**. Gli esempi vengono da quei due casi; niente qui e' specifico di una lingua. Per i dettagli tecnici di ogni script vedi `TUTORIAL.md`
-(ricette per famiglia di texture, joypad virtuale, trappole), per lo stato corrente `STATO_LAVORI.md`, per le **scelte editoriali gia' prese**
-`docs/EDITORIAL_CHOICES.md` (e `tools/data/editorial_choices.json`).
+**General** guidelines (valid for Spanish, German, English or any European language of the game) derived from the work done on **Italian** and
+**French**. The examples come from those two cases; nothing here is specific to one language. For the technical details of every script see `docs/TUTORIAL.md`
+(recipes per texture family, virtual joypad, pitfalls) and for the **editorial choices already taken**
+`docs/EDITORIAL_CHOICES.md` (and `tools/data/editorial_choices.json`).
 
-**Documenti completi di tutto cio' che e' stato fatto, da prendere come modello:** `docs/CHANGES_IT.md` e `docs/CHANGES_FR.md` (modifiche alla ISO riga per riga, struttura e contenuto del texture pack, scelte, verifiche; elenchi esatti in `docs/changes_<l>/*.csv`). Si rigenerano con `tools/analysis/document_changes.py`, `text_comparisons.py` (confronti originale->nuovo con parole evidenziate), `document_pack.py`, `write_changes_document.py` (anche per es/de: aggiungere la lingua ai dizionari `NOME`/`LING` e creare `rules_<l>`).
+**Complete documents of everything that was done, to be taken as models:** `docs/CHANGES_IT.md` and `docs/CHANGES_FR.md` (changes to the ISO line by line, structure and content of the texture pack, choices, checks; exact lists in `docs/changes_<l>/*.csv`). They are regenerated with `tools/analysis/document_changes.py`, `text_comparisons.py` (original->new comparisons with highlighted words), `document_pack.py`, `write_changes_document.py` (also for es/de: add the language to the `NAME` dictionary and create `rules_<l>`).
 
-Chi parte: leggi questa guida, poi `docs/EDITORIAL_CHOICES.md`, poi `TUTORIAL.md` sezioni 2, 3, 7 e 13.
+Whoever starts: read this guide, then `docs/EDITORIAL_CHOICES.md`, then `docs/TUTORIAL.md` sections 2, 3, 7 and 13.
 
 ---
 
-## 0. Principi (valgono in ogni fase)
+## 0. Principles (valid in every phase)
 
-1. **Il riferimento di testo e' l'originale giapponese/inglese del gioco, non l'inventiva.** Si correggono errori oggettivi (refusi, accenti, spazi,
-   concordanze, residui di altre lingue, traduzioni palesemente sbagliate o censurate); non si "modernizza" la terminologia.
-2. **Ogni controllo fatto per una lingua si estende a tutte le altre** (it, fr, de, es, en): se in italiano trovi una classe di errore, cercala in tutte.
-3. **Ogni decisione editoriale va registrata** in `docs/EDITORIAL_CHOICES.md` **e** nei dati della lingua, con id, testo originale, testo nuovo, motivo.
-   Cosi' un patcher per un'altra lingua applica l'equivalente giusto (esempio: "salsa piccante -> shochu" e' una scelta comune, ogni lingua la scrive a modo suo).
-4. **Mai modificare la ISO originale**: `apply_to_iso.py` scrive una copia (`..._definitiva.iso`).
-5. **Non levigare la pixel art** (tasti, frecce, bandiere, cifre piccole) senza conferma dell'utente. Il pixel originale e' preferito.
-6. **Leggi a mano tutto il testo**, anche se esistono strumenti: ortografia automatica e confronto con database ufficiali trovano i refusi, non gli errori di senso.
-   Per i dump usa sempre testo **senza doppioni** con l'inglese accanto: sono migliaia di righe, ma ripetute poche volte.
-7. **Verifica in gioco** (ISO `_definitiva` + pack): un file corretto non basta.
-8. Documenta mentre lavori, non alla fine.
+1. **The text reference is the original Japanese/English of the game, not inventiveness.** Objective errors are corrected (typos, accents, spaces,
+   agreement, leftovers from other languages) and, above all, every sentence whose localisation **lost or changed the meaning** of the original is re-adapted and translated again
+   from the original language, including censored sentences and sentences that are missing altogether in some languages. The terminology is not "modernized".
+2. **Every check done for one language extends to all the others** (it, fr, de, es, en): if you find a class of error in Italian, look for it in all of them.
+3. **Every editorial decision is registered** in `docs/EDITORIAL_CHOICES.md` **and** in the language's data, with id, original text, new text, reason.
+   This way a patcher for another language applies the right equivalent (example: "hot sauce -> shochu" is a common choice, every language writes it its own way).
+4. **Never modify the original ISO**: `apply_to_iso.py` writes a copy (`..._definitiva.iso`).
+5. **Do not smooth the pixel art** (keys, arrows, flags, small digits) without the user's confirmation. The original pixel is preferred.
+6. **Read all the text by hand**, even if tools exist: automatic spelling and comparison with official databases find typos, not errors of meaning.
+   For the dumps always use text **without duplicates** with English next to it: they are thousands of lines, but repeated few times.
+7. **Verify in game** (`_definitiva` ISO + pack): a correct file is not enough.
+8. Document while you work, not at the end.
 
-## 1. Mappa del lavoro (una lingua = questi 8 blocchi)
+## 1. Map of the work (one language = these 8 blocks)
 
-| # | Blocco | Dove vive il dato | Come si applica |
+| # | Block | Where the data lives | How it is applied |
 |---|---|---|---|
-| 1 | Testi delle carte (nomi + descrizioni) | `tools/corrections/rules_<l>.py` -> `dati/card_corrections[_<l>].json` | ISO (`cardinfo_<l>.ehp`) **e** immagini HD |
-| 2 | Immagini HD delle carte (piccole, grandi, miniature, attributi, etichette) | `PSP/TEXTURES/modules/<l>/cards` | pack di texture |
-| 3 | Dialoghi della storia | `dati/dialogue_touchups_<l>.json` -> `dialogue_corrections_<l>.json` | ISO (`script/*.ehp`) |
-| 4 | Frasi dei duellanti nei duelli | `dati/duel_line_corrections_<l>.json` | ISO (`duel/*.ehp`) |
-| 5 | Stringhe lunghe dell'interfaccia (aiuti, schede dei duellisti, tutorial, record) | `correzioni/string_rules_<l>.py`, `dati/ui_texts.json` | ISO |
-| 6 | Interfaccia HD disegnata (scritte in immagine, ~86 texture) | `ui_<l>` nel modulo, script `tools/ui_textures/*.py` con `TF1_LANG` | pack di texture |
-| 7 | Foglio dei numeri del duello (`card_icon03`), targa del titolo | `tools/ui_textures/icon03_languages.py`, `mystic_tomato_title.py` | pack di texture |
-| 8 | Registro delle scelte + prova in gioco + documentazione | `docs/EDITORIAL_CHOICES.md` | - |
+| 1 | Card texts (names + descriptions) | `tools/corrections/rules_<l>.py` -> `tools/data/card_corrections[_<l>].json` | ISO (`cardinfo_<l>.ehp`) **and** HD images |
+| 2 | HD card images (small, large, thumbnails, attributes, labels) | `PSP/TEXTURES/modules/<l>/cards` | texture pack |
+| 3 | Story dialogues | `tools/data/dialogue_touchups_<l>.json` -> `dialogue_corrections_<l>.json` | ISO (`script/*.ehp`) |
+| 4 | Duelist sentences in duels | `tools/data/duel_line_corrections_<l>.json` | ISO (`duel/*.ehp`) |
+| 5 | Long interface strings (help, duelist cards, tutorial, records) | `tools/corrections/string_rules_<l>.py`, `tools/data/ui_texts.json` | ISO |
+| 6 | Drawn HD interface (lettering in images, ~86 textures) | `ui_<l>` in the module, scripts `tools/ui_textures/*.py` with `TF1_LANG` | texture pack |
+| 7 | Duel number sheet (`card_icon03`), title plate | `tools/ui_textures/icon03_languages.py`, `mystic_tomato_title.py` | texture pack |
+| 8 | Register of choices + in-game test + documentation | `docs/EDITORIAL_CHOICES.md` | - |
 
-Punto d'ingresso unico per i testi nella ISO: `python tools/corrections/apply_to_iso.py ISO_ORIG ISO_OUT [lingue]`. **Senza elenco di lingue le applica tutte**:
-non lanciarlo con una sola lingua verso la ISO finale, sovrascriveresti le altre (e' un errore gia' fatto).
+Single entry point for the texts in the ISO: `python tools/corrections/apply_to_iso.py ISO_ORIG ISO_OUT [languages] [--parts=cards,text]`. **Without a list of languages it applies all of them**:
+do not run it with a single language towards the final ISO, you would overwrite the others (a mistake already made).
 
 ---
 
-## 2. Testi delle carte (blocco 1)
+## 2. Card texts (block 1)
 
-**Cosa si corregge**: refusi (`Annello`->`Anello`), accenti (`E'`->`È`, `puo`->`può`), apostrofi e spazi (`L' OSCURITÀ`->`L'OSCURITÀ`, `Magia,Trappola`), maiuscole
-incoerenti con il resto del gioco (`Main phase`->`Main Phase`, `tipo Pyro`->`Tipo Pyro`), concordanze (`questo carta`, `vengono cambiata`), plurali di termini fissi
-(`Life Point`->`Life Points`), parole di altre lingue, nomi di carte citati male in altre descrizioni (`Victory Viper XX3`->`XX03`). **Non si cambiano**: nomi ufficiali
-nel testo, terminologia scelta dal gioco (es. in francese "Carte Piège Continu" e' coerente in tutto il gioco: si lascia; in italiano "Terreno", "Evocazione tramite Tributo").
+**What is corrected**: typos (`Annello`->`Anello`), accents (`E'`->`È`, `puo`->`può`), apostrophes and spaces (`L' OSCURITÀ`->`L'OSCURITÀ`, `Magia,Trappola`), capitalization
+inconsistent with the rest of the game (`Main phase`->`Main Phase`, `tipo Pyro`->`Tipo Pyro`), agreement (`questo carta`, `vengono cambiata`), fixed plurals of terms
+(`Life Point`->`Life Points`), words from other languages, card names badly quoted in other descriptions (`Victory Viper XX3`->`XX03`), and descriptions whose meaning was lost
+or changed by the translation (re-adapted from the English/Japanese text). **Not changed**: official names
+in the text, terminology chosen by the game (e.g. in French "Carte Piège Continu" is consistent throughout the game: it is left; in Italian "Terreno", "Evocazione tramite Tributo").
 
-**Metodo (usato per it e fr)**
-1. Estrai i testi (`cardprops.load(cardinfo_<l>.ehp, corretto=False)`), uno per riga `id <TAB> nome <TAB> descrizione`, a blocchi di ~90 righe (l'output di uno
-   strumento si tronca a ~30 KB: di piu' e' sprecato).
-2. **Leggi tutto, in ordine.** Annota subito ogni errore (id + testo): le note vanno su file, **non** a memoria (un contesto lungo si compatta e le note si perdono: e' successo).
-3. Trasforma gli errori in **regole**: preferisci `GLOBALI` (regex `(modello, sostituzione, motivo)`) quando l'errore e' di una classe; `PER_CARTA` (id, campo, vecchio, nuovo, motivo)
-   per i casi unici. Il "vecchio" di `PER_CARTA` deve comparire **esattamente** o lo script si ferma (e' voluto: la tabella non deriva da una lettura sbagliata).
-4. Dopo le regole, **scansione automatica** della classe di errore su tutte le carte (doppi spazi, ` ,`, `,A`, `.A`, apostrofo+spazio, parola doppia, `E' `...): trova quello che l'occhio salta.
-5. Genera: `python tools/corrections/generate_card_corrections.py LINGUA CARDINFO_<l>.ehp` (la versione in `correzioni/`; scrive anche `confronti/audit_cards/corrections_<l>.csv`).
-   - fr/de/es/en: parte dai testi **originali** e scrive `dati/card_corrections_<l>.json`.
-   - it: parte dai testi **gia' corretti** e **fonde** nel `dati/card_corrections.json` esistente (idempotente: rilanciabile).
-6. Controlli: i `PER_CARTA` non devono dare "testo non trovato"; leggi il CSV delle modifiche; **nessuna regola globale deve toccare cio' che non volevi** (guarda i conteggi stampati: una regola con 140 corrispondenze su un modello che pensavi raro e' sospetta).
-7. Rigenera le **immagini** solo delle carte toccate (blocco 2) e ricostruisci la ISO.
+**Method (used for it and fr)**
+1. Extract the texts (`cardprops.load(cardinfo_<l>.ehp, corrected=False)`), one per line `id <TAB> name <TAB> description`, in blocks of ~90 lines (a tool's output is
+   truncated at ~30 KB: more is wasted).
+2. **Read everything, in order.** Note every error immediately (id + text): notes go to a file, **not** to memory (a long context is compacted and the notes are lost: it happened).
+3. Turn the errors into **rules**: prefer `GLOBALS` (regex `(pattern, replacement, reason)`) when the error is of a class; `PER_CARD` (id, field, old, new, reason)
+   for the unique cases. The "old" text of `PER_CARD` must appear **exactly** or the script stops (this is intended: the table does not derive from a wrong reading).
+4. After the rules, an **automatic scan** of the error class on all the cards (double spaces, ` ,`, `,A`, `.A`, apostrophe+space, doubled word, `E' `...): it finds what the eye skips.
+5. Generate: `python tools/corrections/generate_card_corrections.py LANGUAGE CARDINFO_<l>.ehp` (also writes `comparisons/audit_cards/corrections_<l>.csv`).
+   - fr/de/es/en: starts from the **original** texts and writes `tools/data/card_corrections_<l>.json`.
+   - it: starts from the **already corrected** texts and **merges** into the existing `tools/data/card_corrections.json` (idempotent: can be rerun).
+6. Checks: the `PER_CARD` must not give "text not found"; read the CSV of the changes; **no global rule must touch what you did not want** (look at the printed counts: a rule with 140 matches on a pattern you thought rare is suspect).
+7. Regenerate the **images** only of the touched cards (block 2) and rebuild the ISO.
 
-Esempi: italiano 116 -> **181** carte corrette (`rules_it.py`, regole globali per classe di errore + 7 per carta); francese 70.
-Domande aperte da fare all'utente (non decidere da soli): portare i nomi delle carte ai nomi ufficiali della lingua, nomi di personaggi (es. "Ragazza Mago Nero" / "Maga Nera").
+Examples: Italian 116 -> **181** corrected cards (`rules_it.py`, global rules per error class + 7 per card); French 70.
+Open questions to ask the user (do not decide alone): bring the card names to the official names of the language, character names (e.g. "Ragazza Mago Nero" / "Maga Nera").
 
-## 3. Immagini delle carte (blocco 2)
+## 3. Card images (block 2)
 
-- Moduli: `python tools/generate_language.py LINGUA PACK CARDINFO_EHP US_INI CLEAN_DIR OUT [ID ...]` (la versione in `tools/`): senza ID rigenera tutto
-  (2.833 piccole + 2.833 grandi); con ID solo quelle, senza atlante. Dentro: tabella attributi con le parole della lingua, etichetta Magia/Trappola, atlante miniature
-  del deck (senza di esso il deck mostra i nomi **inglesi**).
-- **Dopo ogni modifica alle correzioni** delle carte rigenera le immagini toccate. Per l'italiano: `sh tools/rebuild_corrections.sh USRDIR PACK_US PACK_MOD PYTHON`
-  (181 carte -> 199 immagini piccole + 199 grandi, pochi minuti). Su Windows lo script usa `python -I`: i pacchetti nel *user site* (cv2) non si vedono; passa come
-  PYTHON un piccolo wrapper che scarta `-I` (`exec python "$@"`).
-- Poi copia i PNG cambiati nel pack installato in PPSSPP e **riavvia PPSSPP** (cache delle texture). Gli hash non cambiano: `textures.ini` resta uguale.
-- Tipografia della lingua: francese spazio non separabile prima di `: ; ! ?` e virgolette « »; tedesco „ “; spagnolo `¿ ¡`.
+- Modules: `python tools/generate_language.py LANGUAGE PACK CARDINFO_EHP US_INI CLEAN_DIR OUT [ID ...]`: without IDs it regenerates everything
+  (2,833 small + 2,833 large); with IDs only those, without atlas. Inside: attribute table with the words of the language, Spell/Trap label, deck thumbnail atlas
+  (without it the deck shows the **English** names).
+- **After every change to the card corrections** regenerate the touched images. For Italian: `sh tools/rebuild_corrections.sh USRDIR PACK_US PACK_MOD PYTHON`
+  (181 cards -> 199 small + 199 large images, a few minutes). On Windows the script uses `python -I`: the packages in the *user site* (cv2) are not seen; pass as
+  PYTHON a small wrapper that drops `-I` (`exec python "$@"`).
+- Then copy the changed PNGs into the pack installed in PPSSPP and **restart PPSSPP** (texture cache). The hashes do not change: `textures.ini` stays the same.
+- Typography of the language: French non-breaking space before `: ; ! ?` and « » quotation marks; German „ “; Spanish `¿ ¡`.
 
-## 4. Dialoghi della storia (blocco 3)
+## 4. Story dialogues (block 3)
 
-1. Estrai: `python tools/audit/extract_dialogues.py ISO confronti/audit_dialogues` (righe uniche con inglese e giapponese).
-2. Leggi **riga per riga confrontando con inglese e giapponese**; il giapponese decide quando inglese e lingua locale divergono. Annota in
-   `dati/dialogue_touchups_<l>.json`: `esatte` {riga intera originale: nuova} e `parti` [[vecchio, nuovo]] (a capo scritti `⏎`).
-3. `python tools/corrections/build_dialogues.py <l>` -> `dialogue_corrections_<l>.json`. Le righe senza correzione propria **ereditano** da quelle con lo stesso testo originale
-   e lo stesso giapponese (propagazione ai doppioni). Le `parti` si applicano **dopo** base ed `esatte`; la chiave di una `esatte` e' il testo **prima** delle parti.
-4. Regole automatiche di impaginazione in `build_dialogues.py`: spazio dopo i segnaposto `《...》`, punteggiatura francese `! ? : ;`, tre puntini seguiti da maiuscola (`...Ciao` -> `... Ciao`, solo it).
-5. **Vincoli del box**: ~46 caratteri per riga (il gioco non va a capo), massimo 3 righe; `apply_to_iso` avvisa ("N righe, potrebbe non stare nel box"): controlla in gioco
-   le segnalate. Un segnaposto vale ~6 caratteri.
+1. Extract: `python tools/audit/extract_dialogues.py ISO comparisons/audit_dialogues` (unique lines with English and Japanese).
+2. Read **line by line comparing with English and Japanese**; the Japanese decides when English and the local language diverge. Note in
+   `tools/data/dialogue_touchups_<l>.json`: `exact` {whole original line: new} and `parts` [[old, new]] (line breaks written `⏎`).
+3. `python tools/corrections/build_dialogues.py <l>` -> `dialogue_corrections_<l>.json`. Lines without their own correction **inherit** from those with the same original text
+   and the same Japanese (propagation to duplicates). The `parts` are applied **after** base and `exact`; the key of an `exact` is the text **before** the parts.
+4. Automatic layout rules in `build_dialogues.py`: space after the `《...》` placeholders, French punctuation `! ? : ;`, three dots followed by a capital (`...Ciao` -> `... Ciao`, it only).
+5. **Box constraints**: ~46 characters per line (the game does not wrap), maximum 3 lines; `apply_to_iso` warns ("N lines, it may not fit in the box"): check in game
+   the reported ones. A placeholder counts ~6 characters.
 
-**Cosa cercare** (classi di errore trovate in italiano, valgono per tutte): interiezioni inglesi lasciate (`Oh my`), refusi, apostrofi, `E'`, accenti, ora scritta male (`7PM`),
-nomi dei dormitori incoerenti, titoli (`Cancelliere`/`Preside`), traduzioni **censurate o cambiate** rispetto al giapponese (vedi sotto), residui di un'altra lingua.
+**What to look for** (classes of error found in Italian, valid for all): English interjections left (`Oh my`), typos, apostrophes, `E'`, accents, time badly written (`7PM`),
+inconsistent dormitory names, titles (`Cancelliere`/`Preside`), translations **censored or changed** compared with the Japanese (see below), sentences that lost their meaning or are missing, leftovers from another language.
 
-**Scelte comuni a tutte le lingue** (gia' prese, da replicare nella nuova lingua: dettagli e tabella nel registro):
-- scena `st01_t01/Scr003E`: la famiglia di Chumley ha una **distilleria di sake**, il regalo e' **shochu** (non salsa piccante); Syrus chiede il disegno della Ragazza Mago Nero
-  **in abito da cameriera** (non bikini) e passa un **abito da cameriera** come modello. Si applicano righe #146-#197 incluse le copie (#150, #151);
-- scena `st02_t01/Scr101E` righe 22-27: il testo originale e' **ruotato tra le lingue** (bug del gioco): rimettere ognuno nella sua lingua;
-- **nome del parlante** (es. "Doyen Sheppard"): sta nell'EBOOT cifrato, **non modificabile** in nessuna lingua. In italiano il personaggio e' "Preside" in tutto il testo
-  modificabile; in francese "Chancelier"/"Doyen" scelto dialogo per dialogo (formale/informale).
+**Choices common to all languages** (already taken, to be replicated in the new language: details and table in the register):
+- scene `st01_t01/Scr003E`: Chumley's family has a **sake distillery**, the gift is **shochu** (not hot sauce); Syrus asks for the drawing of the Dark Magician Girl
+  **in a maid outfit** (not a bikini) and hands over a **maid outfit** as a model. Lines #146-#197 apply, copies included (#150, #151);
+- scene `st02_t01/Scr101E` lines 22-27: the original text is **rotated between the languages** (a game bug): put each one back in its own language;
+- **speaker name** (e.g. "Doyen Sheppard"): it lives in the encrypted EBOOT, **not modifiable** in any language. In Italian the character is "Preside" in all the
+  modifiable text; in French "Chancelier"/"Doyen" chosen dialogue by dialogue (formal/informal).
 
-## 5. Frasi dei duellanti (blocco 4)
+## 5. Duelist sentences (block 4)
 
-Sono le battute dette durante i duelli (`chr_wordstbl_<l>.bin` / `02chr_wordstbl_<l>.bin` dentro ~70 archivi `duel/cutin_*.ehp`...): ~34.000 voci ma solo **~1.800 uniche per lingua**.
+These are the lines said during duels (`chr_wordstbl_<l>.bin` / `02chr_wordstbl_<l>.bin` inside ~70 `duel/cutin_*.ehp` archives...): ~34,000 entries but only **~1,800 unique per language**.
 
-1. Elenco da leggere: `python tools/audit/extract_duel_lines.py ISO LINGUA OUT.txt` (frase con le correzioni gia' applicate + inglese accanto).
-2. Leggi tutto (6-7 blocchi da ~280 righe). Non toccare cio' che e' **voluto**: frasi in "pidgin" di certi personaggi (it "Io pescare destino!", fr "Moi pioche, moi victoire !"),
-   versi (`Screech!`), nomi di mosse che l'inglese lascia in inglese (`Train Twister`), versi di sbadiglio/dolore.
-3. Errori trovati (esempi): punto finale mancante in frasi gemelle (`Attivo una Magia Continua` + `.`), maiuscola dopo `⏎` a meta' frase, apostrofo dell'imperativo (`Fa pure`->`Fa' pure`),
-   articoli duplicati (`una l'effetto`), frasi mal costruite (`non si è solo a una questione`), traduzione sbagliata del senso (`Tu es malin` per *You're cute* -> `mignon`),
-   inglesismi (`Huh ?`->`Hein ?`), maiuscole (`Mon dieu`->`Mon Dieu`), elisioni (`Je offre`->`J'offre`).
-4. Aggiungi a `dati/duel_line_corrections_<l>.json`: `esatte` (frase intera, a capo come `⏎`) o `parti` (sostituzione su ogni frase). Le `esatte` sono per le frasi **brevi** dove una `parte`
-   toccherebbe anche frasi piu' lunghe (es. aggiungere un `.` finale); verifica con `apply_to_iso` che stampi **0 avvisi** ("frase esatta mai trovata" = chiave sbagliata).
-5. **Crash**: i file `*-ptrs.txt` negli archivi dei personaggi contengono offset assoluti; se una tabella cresce vanno ricalcolati (`rimappa_puntatori`, gia' fatto da `duel_lines.py`),
-   altrimenti il duello va in crash. Non scrivere frasi con parti non-UTF-16.
+1. List to read: `python tools/audit/extract_duel_lines.py ISO LANGUAGE OUT.txt` (sentence with the corrections already applied + English next to it).
+2. Read everything (6-7 blocks of ~280 lines). Do not touch what is **intended**: "pidgin" sentences of certain characters (it "Io pescare destino!", fr "Moi pioche, moi victoire !"),
+   sound effects (`Screech!`), move names that English leaves in English (`Train Twister`), yawn/pain sounds.
+3. Errors found (examples): missing final full stop in twin sentences (`Attivo una Magia Continua` + `.`), capital after `⏎` mid-sentence, imperative apostrophe (`Fa pure`->`Fa' pure`),
+   duplicated articles (`una l'effetto`), badly built sentences (`non si è solo a una questione`), wrong translation of the meaning (`Tu es malin` for *You're cute* -> `mignon`),
+   anglicisms (`Huh ?`->`Hein ?`), capitals (`Mon dieu`->`Mon Dieu`), elisions (`Je offre`->`J'offre`).
+4. Add to `tools/data/duel_line_corrections_<l>.json`: `exact` (whole sentence, line breaks as `⏎`) or `parts` (replacement on every sentence). The `exact` entries are for **short** sentences where a `part`
+   would also touch longer sentences (e.g. adding a final `.`); check with `apply_to_iso` that it prints **0 warnings** ("exact sentence never found" = wrong key).
+5. **Crash**: the `*-ptrs.txt` files in the character archives contain absolute offsets; if a table grows they must be recomputed (`remap_pointers`, already done by `duel_lines.py`),
+   otherwise the duel crashes. Do not write sentences with non-UTF-16 parts.
 
-## 6. Stringhe lunghe dell'interfaccia (blocco 5)
+## 6. Long interface strings (block 5)
 
-Tabelle `strTbl*`, aiuti (`help_strtbl_*`), `ddstrtbl_<l>`, biografie dei duellisti (`charalist`), record e obiettivi (`duelrecord`/`result`), negozio, laboratorio, menu dell'ufficio.
+Tables `strTbl*`, help (`help_strtbl_*`), `ddstrtbl_<l>`, duelist biographies (`charalist`), records and goals (`duelrecord`/`result`), shop, laboratory, office menus.
 
-1. Estrai tutte le tabelle (stesso formato `(n, 12, 12+4n)` + offset + UTF-16 di `chr_wordstbl`; `duel_lines.tabella`/`scrivi_tabella`) e raggruppa per archivio/membro; stampa `indice | testo || inglese`.
-2. Leggi tutto. Cerca residui di altre lingue, etichette che escono dal bordo (`audit/long_labels.py`), terminologia incoerente con le carte.
-3. Scrivi `correzioni/string_rules_<l>.py`: `TABELLE` (archivi/membri), `STRINGHE` (per archivio/membro/indice 0-based, vecchio->nuovo; i vecchi testi devono comparire esattamente, a capo reali `\n` o `\r\n`),
-   `GLOBALI` (regex, sostituzione stringa o callable). Le `STRINGHE` si applicano **prima** dei `GLOBALI`.
-4. `apply_to_iso.py` riscrive gli archivi in coda alla ISO e stampa gli avvisi: devono essere 0. Italiano 505 stringhe in 15 archivi; con tutte le lingue 941 in 25.
-5. Coerenza di terminologia **tra le tre fonti** (carte, dialoghi, interfaccia): es. in italiano "Segna-Mostro" (mai "Gettone") in aiuti, record e carte; "Preside Sheppard" in scheda e dialoghi.
+1. Extract all the tables (same format `(n, 12, 12+4n)` + offsets + UTF-16 as `chr_wordstbl`; `duel_lines.read_table`/`write_table`) and group by archive/member; print `index | text || English`.
+2. Read everything. Look for leftovers from other languages, labels that go out of the edge (`audit/long_labels.py`), terminology inconsistent with the cards.
+3. Write `tools/corrections/string_rules_<l>.py`: `TABLES` (archives/members), `STRINGS` (per archive/member/0-based index, old->new; the old texts must appear exactly, real line breaks `\n` or `\r\n`),
+   `GLOBALS` (regex, string replacement or callable). The `STRINGS` are applied **before** the `GLOBALS`.
+4. `apply_to_iso.py` rewrites the archives at the end of the ISO and prints the warnings: they must be 0. Italian 505 strings in 15 archives; with all languages 941 in 25.
+5. Consistency of terminology **among the three sources** (cards, dialogues, interface): e.g. in Italian "Segna-Mostro" (never "Gettone") in help, records and cards; "Preside Sheppard" in the card and in the dialogues.
 
-## 7. Texture dell'interfaccia (blocchi 6 e 7)
+## 7. Interface textures (blocks 6 and 7)
 
-### 7.1 Prima di ridisegnare: quali texture sono davvero da fare
-PPSSPP sostituisce una texture dall'**hash dei suoi pixel**. Per ogni texture della famiglia, calcola l'hash nella tua lingua, in inglese e in italiano (`ui_it/common.texture`, `gim.data_hash`):
-- uguale all'**inglese** -> la copre gia' il pack di base (MikeyMK);
-- uguale all'**italiano** -> vale la versione `ui_it` (se contiene testo nella lingua sbagliata, e' un problema: controlla l'immagine, non solo l'hash);
-- altrimenti **da ridisegnare** in `ui_<l>`.
+### 7.1 Before redrawing: which textures really have to be done
+PPSSPP replaces a texture by the **hash of its pixels**. For every texture of the family, compute the hash in your language, in English and in Italian (`ui_textures/common.texture`, `gim.data_hash`):
+- equal to **English** -> it is already covered by the base pack (MikeyMK);
+- equal to **Italian** -> the `ui_it` version holds (if it contains text in the wrong language, that is a problem: check the image, not just the hash);
+- otherwise **to be redrawn** in `ui_<l>`.
 
-**Inventario completo**: `docs/TEXTURE_INVENTORY.md` (generato da `tools/analysis/texture_inventory_languages.py ISO OUT.md`) elenca ogni texture di `ui_it` e `ui_fr` come NEUTRA (copia e incolla per tutte le lingue) o SPECIFICA (da rifare), con le lingue che condividono l'hash. Rigeneralo se aggiungi texture.
+**Complete inventory**: `docs/TEXTURE_INVENTORY.md` (generated by `tools/analysis/texture_inventory_languages.py ISO OUT.md`) lists every texture of `ui_it` and `ui_fr` as NEUTRAL (copy and paste for all languages) or SPECIFIC (to be redone), with the languages that share the hash. Regenerate it if you add textures.
 
-**Classificare le texture "solo italiane"** (lavoro fatto per il francese): una texture presente solo in `ui_it` ricade in due casi.
-1. *Stesso hash in tutte le lingue* (pannelli ricette, linguette `Side`/`Deck`/`Fusion Deck`, barre vuote, `card_side`, bandiere): e' neutra, il modulo della nuova lingua la riceve gratis. Basta guardare l'immagine per accertarsi che non contenga parole italiane.
-2. *Hash diverso per lingua*: nel gioco originale la versione italiana e' scritta in italiano (`NUOVO`, icona `N`; la linguetta dell'editor deck dice **`Fusion`**, non `Fusione`: "Fusion Deck" si chiama cosi' in tutte le lingue, errore italiano corretto il 2026-10-11), quella francese **gia' ha un suo hash e un suo HD** in `upscale_extra` (con `NEW`, `Fusion`).
-   Non e' un buco: e' la scelta dell'originale. Rifare quelle con la parola locale (es. `NOUVEAU`/`N`, `NEU`/`N`, `NUEVO`/`N`) e' **opzionale**: chiedere all'utente.
+**Classifying the "Italian-only" textures** (work done for French): a texture present only in `ui_it` falls in two cases.
+1. *Same hash in all languages* (recipe panels, `Side`/`Deck`/`Fusion Deck` tabs, empty bars, `card_side`, flags): it is neutral, the module of the new language gets it for free. It is enough to look at the image to make sure it contains no Italian words.
+2. *Different hash per language*: in the original game the Italian version is written in Italian (`NUOVO`, icon `N`; the deck editor tab says **`Fusion`**, not `Fusione`: "Fusion Deck" is called that in all languages, an Italian error corrected on 2026-10-11), the French one **already has its own hash and its own HD** in `upscale_extra` (with `NEW`, `Fusion`).
+   It is not a hole: it is the choice of the original. Redoing those with the local word (e.g. `NOUVEAU`/`N`, `NEU`/`N`, `NUEVO`/`N`) is **optional**: ask the user.
 
-### 7.2 Famiglie e procedura
-Le 8 famiglie (`duel_texts`, `result_letters`, `menu_lists`, `icon_sheets`, `deck_screens`, `recipe_screens`, `vs_screen`, `tutorial`) e la ricetta di ciascuna sono nel `TUTORIAL.md` sez. 7.
-Regole di qualita' (dall'italiano): un solo font/peso/linea di base/ombra per scritta, mai lettere deformate una per una; stessa area e stesse posizioni dell'originale (il gioco ritaglia da
-rettangoli fissi); i testi sono quelli dell'originale della lingua (si correggono solo gli errori evidenti); geometrie **misurate sull'originale**, mai copiate dall'italiano.
-Tessere con parole spezzate: il taglio va in un varco tra due lettere. Maiuscole accentate (É Ä Ö Ü Ñ): accento troppo alto -> abbassarlo o ridurre il corpo fino a -8% con `clip`.
-Rilancia sempre la famiglia **intera**: `Family.finish()` sostituisce tutte le righe della famiglia nel `<l>.ini`.
+### 7.2 Families and procedure
+The 8 families (`duel_texts`, `result_letters`, `menu_lists`, `icon_sheets`, `deck_screens`, `recipe_screens`, `vs_screen`, `tutorial`) and the recipe of each are in `docs/TUTORIAL.md` sec. 7.
+Quality rules (from Italian): one font/weight/baseline/shadow per lettering, never letters deformed one by one; same area and same positions as the original (the game crops from fixed
+rectangles); the texts are those of the language's original (only obvious errors are corrected); geometries **measured on the original**, never copied from Italian.
+Tiles with split words: the cut goes in a gap between two letters. Accented capitals (É Ä Ö Ü Ñ): accent too high -> lower it or reduce the size down to -8% with `clip`.
+Always rerun the **whole** family: `Family.finish()` replaces all the lines of the family in `<l>.ini`.
 
-### 7.3 Il foglio dei numeri del duello (`card_icon03`) — ricetta scelta dall'utente
-Un solo foglio con LP, tempo e moltiplicatori; script `tools/ui_textures/icon03_languages.py` (aggiungi la lingua a `LINGUE` e rilancia con `--applica`):
-- righe 0-180 (cifre piccole, segni, tasti arancioni 1/2/3, cifre grandi 0-9 con "LP", cifre piccole 0-9): **dal pack USA**, pixel art netta;
-- le celle in cui il gioco europeo differisce dal pack USA (spunta nera, palla grigia, pillola vuota, parola del tempo): pixel **originali del gioco ingranditi 4x senza sfumare**; la parola
-  del tempo e' quella della lingua (TEMPO, TEMPS, TIME, ZEIT, TIEMPO); la pillola arancione ("Single" nell'USA) resta **vuota**;
-- righe >= 181 (moltiplicatori x1...x12, icone, carte, frecce): dal foglio italiano gia' nel pack (`tools/data/card_icon03_base_it.png`);
-- **attenzione alle fasce**: le celle europee si incollano solo nella loro fascia di righe, altrimenti i pixel europei rovinano la parte alta delle cifre grandi.
+### 7.3 The duel number sheet (`card_icon03`) — recipe chosen by the user
+A single sheet with LP, time and multipliers; script `tools/ui_textures/icon03_languages.py` (add the language to `LANGUAGES` and rerun with `--apply`):
+- rows 0-180 (small digits, signs, orange keys 1/2/3, big digits 0-9 with "LP", small digits 0-9): **from the US pack**, crisp pixel art;
+- the cells in which the European game differs from the US pack (black check mark, grey ball, empty pill, time word): **original game pixels enlarged 4x without smoothing**; the time
+  word is the language's (TEMPO, TEMPS, TIME, ZEIT, TIEMPO); the orange pill ("Single" in the US) stays **empty**;
+- rows >= 181 (multipliers x1...x12, icons, cards, arrows): from the Italian sheet already in the pack (`tools/data/card_icon03_base_it.png`);
+- **beware of the bands**: the European cells are pasted only in their band of rows, otherwise the European pixels spoil the top of the big digits.
 
-### 7.4 Targa del titolo
-`python tools/ui_textures/mystic_tomato_title.py LINGUA`: nome della carta 4930 nella lingua + formula "versione" + bandiera. Vive solo nel modulo della lingua scelta.
+### 7.4 Title plate
+`python tools/ui_textures/mystic_tomato_title.py LANGUAGE`: name of card 4930 in the language + "version" wording + flag. It lives only in the module of the chosen language.
 
-## 8. Comporre, installare, provare
+## 8. Compose, install, test
 
-1. `compose_pack.py` (base + moduli) e `module_ini.py`; **una lingua per volta** per i test (un solo atlante/banner vince). Dopo aver cambiato **un solo PNG** basta copiarlo nel pack installato e riavviare PPSSPP.
-2. ISO per i test: `_definitiva` (testi) + pack (texture). La lingua del gioco e' nel **salvataggio**: usa una **copia** del salvataggio dell'utente per le prove e cancellala dopo; non lasciare mai il save di prova al posto di quello vero.
-3. Joypad virtuale (`tools/extra_upscaling/pad.py`, `pw.py`, `dlg.py`): vedi `TUTORIAL.md` sez. 10. Un tasto qualsiasi salta la sigla; PPSSPP si apre sul secondo monitor.
-4. Schermate da vedere: titolo, menu principale, Base dati, editor deck, ricette, negozio, laboratorio, calendario, PDA, VS, duello (HUD, Catena, attacco diretto, fine duello, sasso-carta-forbici), tutorial,
-   dialoghi corretti (con le righe segnalate dal box), una carta con testo nuovo nell'album e in duello.
+1. `compose_pack.py` (base + modules) and `module_ini.py`; **one language at a time** for the tests (only one atlas/banner wins). After changing **a single PNG** it is enough to copy it into the installed pack and restart PPSSPP.
+2. ISO for the tests: `_definitiva` (texts) + pack (textures). The game language is in the **save file**: use a **copy** of the user's save for the tests and delete it afterwards; never leave the test save in place of the real one.
+3. Virtual joypad (`tools/extra_upscaling/pad.py`, `pw.py`, `dlg.py`): see `docs/TUTORIAL.md` sec. 10. Any key skips the opening movie; PPSSPP opens on the second monitor.
+4. Screens to see: title, main menu, database, deck editor, recipes, shop, laboratory, calendar, PDA, VS, duel (HUD, Chain, direct attack, end of duel, rock-paper-scissors), tutorial,
+   corrected dialogues (with the lines reported by the box check), a card with new text in the album and in the duel.
 
-## 9. Trappole ricorrenti (le piu' costose)
+## 9. Recurring pitfalls (the most expensive)
 
-- **Contesto che si compatta**: scrivi note e regole su file man mano che leggi; un elenco tenuto solo "in testa" si perde.
-- **Heredoc / `python -c`** con accenti o backslash corrompono i file: usa lo strumento di scrittura. Dopo ogni modifica cerca mojibake (`Ã`, `â€™`) nei json/py.
-- **Windows**: scritture in modalita' testo aggiungono `\r`; percorsi con spazi tra virgolette; `python -I` non vede il *user site*.
-- **`apply_to_iso` con una sola lingua** sulla ISO finale la sovrascrive: passa sempre tutte le lingue.
-- **Una `parte` troppo corta** (es. aggiungere un punto) tocca anche le frasi piu' lunghe che la contengono: usa `esatte`.
-- **Chiave di una `esatte` = testo prima delle `parti`**; le `parti` si applicano in ordine.
-- **Non decidere da soli** nomi ufficiali, terminologia o scelte discutibili di traduzione: elenca e chiedi.
+- **Context that gets compacted**: write notes and rules to a file as you read; a list kept only "in your head" is lost.
+- **Heredoc / `python -c`** with accents or backslashes corrupt files: use the write tool. After every change look for mojibake (`Ã`, `â€™`) in the json/py files.
+- **Windows**: writes in text mode add `\r`; paths with spaces in quotation marks; `python -I` does not see the *user site*.
+- **`apply_to_iso` with a single language** on the final ISO overwrites it: always pass all the languages.
+- **A `part` that is too short** (e.g. adding a full stop) also touches the longer sentences that contain it: use `exact`.
+- **Key of an `exact` = text before the `parts`**; the `parts` are applied in order.
+- **Do not decide alone** official names, terminology or debatable translation choices: list and ask.
 
-## 10. Documentare cosa e' cambiato rispetto alla ISO originale (come per it e fr)
+## 10. Documenting what changed compared with the original ISO (as for it and fr)
 
-Per ogni lingua va prodotto un documento `docs/CHANGES_<LANG>.md` **generato dai dati reali**, non scritto a mano (modelli: `docs/CHANGES_IT.md`, `docs/CHANGES_FR.md`). Da fare **dopo** aver costruito la ISO `_definitiva` e il pack, dalla radice del progetto, con `L` = `de` o `es`:
+For every language a document `docs/CHANGES_<LANG>.md` must be produced, **generated from the real data**, not hand-written (models: `docs/CHANGES_IT.md`, `docs/CHANGES_FR.md`). To be done **after** building the `_definitiva` ISO and the pack, from the project root, with `L` = `de` or `es`:
 
 ```
 ISO=PSP/GAME/ULES00600_YuGiOh_GX_TagForce_EUR.iso
 DEF=PSP/GAME/ULES00600_YuGiOh_GX_TagForce_EUR_definitiva.iso
-python tools/analysis/document_changes.py $ISO $DEF L docs/changes_L   # confronto byte per byte ISO originale/definitiva -> CSV
-python tools/analysis/text_comparisons.py L                                           # confronti originale -> nuovo con parole evidenziate (md)
-python tools/analysis/document_pack.py $ISO L docs/changes_L            # struttura del pack, ogni texture ui_L, carte rigenerate, ini
-python tools/analysis/write_changes_document.py L                                # compone docs/CHANGES_<LANG>.md
+python tools/analysis/document_changes.py $ISO $DEF L docs/changes_L   # byte-by-byte comparison original/definitive ISO -> CSV
+python tools/analysis/text_comparisons.py L                                           # original -> new comparisons with highlighted words (md)
+python tools/analysis/document_pack.py $ISO L docs/changes_L            # pack structure, every ui_L texture, regenerated cards, ini
+python tools/analysis/write_changes_document.py L                                # composes docs/CHANGES_<LANG>.md
 ```
 
-Cosa produce (in `docs/changes_L/`): `cards.csv`, `dialogues.csv`, `duel_lines.csv`, `ui_strings.csv`, `iso_images.csv`, `touched_files.csv`, `other.csv`, `summary.json` (ISO); `cards_diff.md`, `dialogues_diff.md`, `duel_lines_diff.md`, `ui_strings_diff.md` (confronti leggibili con ~~tolto~~ e **aggiunto**); `pack_structure.csv`, `ui_textures.csv`, `card_images.csv`, `ini_lines.csv`, `pack_summary.json` (pack).
+What it produces (in `docs/changes_L/`): `cards.csv`, `dialogues.csv`, `duel_lines.csv`, `ui_strings.csv`, `iso_images.csv`, `touched_files.csv`, `other.csv`, `summary.json` (ISO); `cards_diff.md`, `dialogues_diff.md`, `duel_lines_diff.md`, `ui_strings_diff.md` (readable comparisons with ~~removed~~ and **added**); `pack_structure.csv`, `ui_textures.csv`, `card_images.csv`, `ini_lines.csv`, `pack_summary.json` (pack).
 
-Requisiti: la lingua deve avere `correzioni/rules_L.py` (carte), `dati/dialogue_touchups_L.json`, `dati/duel_line_corrections_L.json`; `string_rules_L.py` e `ui_L` sono opzionali (se mancano la sezione e' vuota: gli script non si fermano). `write_changes_document.py` conosce gia' it, fr, de, es, en; se serve un testo specifico per lingua (elenco dei testi disegnati nelle famiglie di texture, scelte editoriali, stato delle prove in gioco) aggiungi la voce nei dizionari `FAM` e nelle sezioni C/D/F dello script.
+Requirements: the language must have `tools/corrections/rules_L.py` (cards), `tools/data/dialogue_touchups_L.json`, `tools/data/duel_line_corrections_L.json`; `string_rules_L.py` and `ui_L` are optional (if missing the section is empty: the scripts do not stop). `write_changes_document.py` already knows it, fr, de, es, en; if a language-specific text is needed (list of the texts drawn in the texture families, editorial choices, state of the in-game tests) add the entry in the `FAM` dictionaries and in the C/D/F sections of the script.
 
-**Parte fatta a occhio (non automatica).** Il documento dei **testi disegnati nelle texture** (`docs/changes_L/texture_texts_L.md`, modelli per it e fr) non si genera: non c'e' un OCR sul PC. Si prepara cosi': per ogni texture di `ui_L` si affianca l'originale della ISO (ingrandito 4x senza sfumare) al PNG HD in un foglio di confronto (`python tools/analysis/texture_comparison_sheets.py ISO_ORIGINALE L OUT_DIR`: 6 texture per foglio, originale a sinistra e HD a destra con nome file e origine), si guarda il foglio e si trascrive in tabella il testo di ognuna, segnando in **grassetto** ogni differenza dall'originale (residui di altre lingue corretti, accenti aggiunti, parole cambiate). Le tessere di lettere (`result_letters`) si confrontano lettera per lettera; le carte minuscole nelle cartine del tutorial non sono leggibili a quella scala e si danno per buone perche' vengono dai dati delle carte.
+**Part done by eye (not automatic).** The document of the **texts drawn in the textures** (`docs/changes_L/texture_texts_L.md`, models for it and fr) is not generated: there is no OCR on the PC. It is prepared this way: for every texture of `ui_L` the original of the ISO (enlarged 4x without smoothing) is placed next to the HD PNG in a comparison sheet (`python tools/analysis/texture_comparison_sheets.py ORIGINAL_ISO L OUT_DIR`: 6 textures per sheet, original on the left and HD on the right with file name and origin), the sheet is looked at and the text of each one is transcribed into a table, marking in **bold** every difference from the original (leftovers of other languages corrected, accents added, words changed). The letter tiles (`result_letters`) are compared letter by letter; the tiny cards in the tutorial maps are not legible at that scale and are taken as good because they come from the card data.
 
-**Quando rigenerare**: dopo ogni correzione di testi o texture; i numeri nel documento devono sempre coincidere con la ISO e il pack che si consegnano. Aggiungere sempre `docs/CHANGES_<LANG>.md` ai file da controllare nella checklist di "fatto" (sez. 11).
+**When to regenerate**: after every correction of texts or textures; the numbers in the document must always match the ISO and the pack that are delivered. Always add `docs/CHANGES_<LANG>.md` to the files to check in the "done" checklist (sec. 11).
 
-## 11. Checklist di "fatto" per una lingua
+## 11. "Done" checklist for a language
 
-- [ ] carte: lette tutte, `rules_<l>.py`, `card_corrections_<l>.json`, immagini rigenerate, viste in gioco su una carta con testo nuovo;
-- [ ] dialoghi: letti per intero con inglese+giapponese, `dialogue_touchups_<l>.json`, avvisi del box controllati in gioco, scene sake/cameriera e `Scr101E` a posto;
-- [ ] frasi dei duelli: lette (1.800 uniche), json, `apply_to_iso` a 0 avvisi;
-- [ ] stringhe UI: lette per intero, `string_rules_<l>.py`, 0 avvisi;
-- [ ] `ui_<l>` delle 8 famiglie + `card_icon03` + targa; texture "solo italiane" classificate (7.1);
-- [ ] ISO `_definitiva` ricostruita con tutte le lingue; pack composto; prova in gioco;
-- [ ] `docs/CHANGES_<LANG>.md` generato (sez. 10) + `testi_texture_<l>.md` letto a occhio;
-- [ ] `docs/EDITORIAL_CHOICES.md` (+ json), `STATO_LAVORI.md`, `TUTORIAL.md` se il metodo cambia, memoria dell'agente aggiornati;
-- [ ] `textures.zip` Android rigenerato con la lingua scelta (o segnalato come da fare).
+- [ ] cards: all read, `rules_<l>.py`, `card_corrections_<l>.json`, images regenerated, seen in game on a card with new text;
+- [ ] dialogues: read in full with English+Japanese, `dialogue_touchups_<l>.json`, box warnings checked in game, sake/maid scenes and `Scr101E` in place;
+- [ ] duel sentences: read (1,800 unique), json, `apply_to_iso` with 0 warnings;
+- [ ] UI strings: read in full, `string_rules_<l>.py`, 0 warnings;
+- [ ] `ui_<l>` of the 8 families + `card_icon03` + plate; "Italian-only" textures classified (7.1);
+- [ ] `_definitiva` ISO rebuilt with all the languages; pack composed; in-game test;
+- [ ] `docs/CHANGES_<LANG>.md` generated (sec. 10) + `texture_texts_<l>.md` read by eye;
+- [ ] `docs/EDITORIAL_CHOICES.md` (+ json), `docs/TUTORIAL.md` if the method changes, agent memory updated;
+- [ ] Android `textures.zip` regenerated with the chosen language (or flagged as still to do).
 
-## 12. Esempi concreti (cosa e' stato fatto, per orientarsi)
+## 12. Concrete examples (what was done, to get oriented)
 
-| Blocco | Italiano | Francese |
+| Block | Italian | French |
 |---|---|---|
-| Carte | 181 corrette (letta ogni carta; `rules_it.py`) | 70 corrette (`rules_fr.py`) |
-| Dialoghi | base ~1.380 proposte (2.176 righe con i doppioni) + 6 `esatte` + 153 `parti` di rilettura | 16 `esatte` + 178 `parti`; Doyen/Chancelier dialogo per dialogo |
-| Frasi duelli | 7 `esatte` + 27 `parti` (letta tutta, 1.792 uniche) | 22 `esatte` + 22 `parti` (letta tutta, 1.832 uniche) |
-| Stringhe UI | 505 stringhe in 15 archivi (`string_rules_it.py`) | `string_rules_fr.py` (prima lingua fatta) |
-| Texture | pack di base (i testi italiani sono nel pack) | 85 + `card_icon03` nel modulo `moduli/fr/ui_fr` |
-| Particolarita' | Preside, Segna-Mostro, Slifer Rosso/Ra Giallo/Obelisk Blu, `NUOVO` e `N` come nell'originale | punteggiatura `! ? : ;`, `Mode aventure`, `TEMPS` |
+| Cards | 181 corrected (every card read; `rules_it.py`) | 70 corrected (`rules_fr.py`) |
+| Dialogues | base ~1,380 proposals (2,176 lines with the duplicates) + 6 `exact` + 153 `parts` of re-reading | 16 `exact` + 178 `parts`; Doyen/Chancelier dialogue by dialogue |
+| Duel sentences | 7 `exact` + 27 `parts` (all read, 1,792 unique) | 22 `exact` + 22 `parts` (all read, 1,832 unique) |
+| UI strings | 505 strings in 15 archives (`string_rules_it.py`) | `string_rules_fr.py` (first language done) |
+| Textures | base pack (the Italian texts are in the pack) | 85 + `card_icon03` in the module `modules/fr/ui_fr` |
+| Peculiarities | Preside, Segna-Mostro, Slifer Rosso/Ra Giallo/Obelisk Blu, `NUOVO` and `N` as in the original | punctuation `! ? : ;`, `Mode aventure`, `TEMPS` |

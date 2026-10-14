@@ -178,8 +178,8 @@ How: every card was read (it: 2,479 texts, one by one; fr: audit against the off
 | \bAmfibia\b | Anfibia | typo |
 | \bUna (alma\|hada)\b | Un \1 | 'un' before a stressed a- (RAE) |
 | \buna (alma\|hada)\b | un \1 | 'un' before a stressed a- (RAE) |
-| "Brazo\ de\ espada\ de\ Dragón" | "Brazo de Espada de Dragón" | quoted card name: official name |
 | "Brazo\ de\ espada\ de\ Dragon" | "Brazo de Espada de Dragón" | quoted card name: official name |
+| "Brazo\ de\ espada\ de\ Dragón" | "Brazo de Espada de Dragón" | quoted card name: official name |
 | "Diablillo\ de\ cuerno" | "Diablillo de Cuerno" | quoted card name: official name |
 | "El\ pelo\ de\ serpiente" | "El Pelo de Serpiente" | quoted card name: official name |
 | "Insecto\ grande" | "Insecto Grande" | quoted card name: official name |
@@ -203,8 +203,8 @@ How: every card was read (it: 2,479 texts, one by one; fr: audit against the off
 | "Zombi\ de\ plata\ de\ ojos\ azules" | "Zombi de Plata Ojizarco" | quoted card name: official name |
 | "Necrolancer\ el\ Señor\ del\ Tiempo" | "Necrolancer el Tiempo-Señor" | quoted card name: official name |
 | "El\ ladrón\ de\ fantasma\ encantador" | "El Ladrón Fantasma Encantador" | quoted card name: official name |
-| "La\ sombra\ que\ controla\ el\ oscuridad" | "La Sombra que Controla la Oscuridad" | quoted card name: official name |
 | "La\ sombra\ que\ controla\ la\ oscuridad" | "La Sombra que Controla la Oscuridad" | quoted card name: official name |
+| "La\ sombra\ que\ controla\ el\ oscuridad" | "La Sombra que Controla la Oscuridad" | quoted card name: official name |
 | "Segadora\ de\ fuego" | "Segadora de Fuego" | quoted card name: official name |
 | "Pote\ antiguo" | "Tarro Antiguo" | quoted card name: official name |
 | "Preso\ oscuro" | "Preso Oscuro" | quoted card name: official name |
@@ -389,8 +389,8 @@ How: every card was read (it: 2,479 texts, one by one; fr: audit against the off
 | "Máquina\ Peligrosa\ TIPO\-6" | "Máquina Peligrosa Tipo 6" | quoted card name: official name |
 | "Ejército\ de\ Pira" | "Ejército de Pirañas" | quoted card name: official name |
 | "Choque\ de\ Escudo" | "Pulverizar el Escudo" | quoted card name: official name |
-| "Demonio\ Géminis" | "Diablillos Géminis" | quoted card name: official name |
 | "Demonio\ Geminis" | "Diablillos Géminis" | quoted card name: official name |
+| "Demonio\ Géminis" | "Diablillos Géminis" | quoted card name: official name |
 | "Regreso\ del\ Zombi" | "Zombi Retornado" | quoted card name: official name |
 | "Cadáver\ de\ Yata\-Garasu" | "Legado de Yata-Garatsu" | quoted card name: official name |
 | "Invitación\ de\ Espíritu\ Terrestre" | "Invitación de los Espíritus Terrestres" | quoted card name: official name |
@@ -1217,8 +1217,8 @@ Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12
 | (?<=[^\s])(?<!Sí)(?<!No)  +(?=[^\s]) |   | double space |
 | \bun refinar búsqueda\b | un filtrado | terminology as in the 'Filtrar' menu |
 | Refinar Búsqueda | Filtrar | terminology as in the 'Filtrar' menu |
-| "Brazo\ de\ espada\ de\ Dragón" | "Brazo de Espada de Dragón" | quoted card name: official name |
 | "Brazo\ de\ espada\ de\ Dragon" | "Brazo de Espada de Dragón" | quoted card name: official name |
+| "Brazo\ de\ espada\ de\ Dragón" | "Brazo de Espada de Dragón" | quoted card name: official name |
 | "Diablillo\ de\ cuerno" | "Diablillo de Cuerno" | quoted card name: official name |
 | "El\ pelo\ de\ serpiente" | "El Pelo de Serpiente" | quoted card name: official name |
 | "Insecto\ grande" | "Insecto Grande" | quoted card name: official name |
@@ -1242,8 +1242,8 @@ Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12
 | "Zombi\ de\ plata\ de\ ojos\ azules" | "Zombi de Plata Ojizarco" | quoted card name: official name |
 | "Necrolancer\ el\ Señor\ del\ Tiempo" | "Necrolancer el Tiempo-Señor" | quoted card name: official name |
 | "El\ ladrón\ de\ fantasma\ encantador" | "El Ladrón Fantasma Encantador" | quoted card name: official name |
-| "La\ sombra\ que\ controla\ el\ oscuridad" | "La Sombra que Controla la Oscuridad" | quoted card name: official name |
 | "La\ sombra\ que\ controla\ la\ oscuridad" | "La Sombra que Controla la Oscuridad" | quoted card name: official name |
+| "La\ sombra\ que\ controla\ el\ oscuridad" | "La Sombra que Controla la Oscuridad" | quoted card name: official name |
 | "Segadora\ de\ fuego" | "Segadora de Fuego" | quoted card name: official name |
 | "Pote\ antiguo" | "Tarro Antiguo" | quoted card name: official name |
 | "Preso\ oscuro" | "Preso Oscuro" | quoted card name: official name |
@@ -1428,8 +1428,8 @@ Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12
 | "Máquina\ Peligrosa\ TIPO\-6" | "Máquina Peligrosa Tipo 6" | quoted card name: official name |
 | "Ejército\ de\ Pira" | "Ejército de Pirañas" | quoted card name: official name |
 | "Choque\ de\ Escudo" | "Pulverizar el Escudo" | quoted card name: official name |
-| "Demonio\ Géminis" | "Diablillos Géminis" | quoted card name: official name |
 | "Demonio\ Geminis" | "Diablillos Géminis" | quoted card name: official name |
+| "Demonio\ Géminis" | "Diablillos Géminis" | quoted card name: official name |
 | "Regreso\ del\ Zombi" | "Zombi Retornado" | quoted card name: official name |
 | "Cadáver\ de\ Yata\-Garasu" | "Legado de Yata-Garatsu" | quoted card name: official name |
 | "Invitación\ de\ Espíritu\ Terrestre" | "Invitación de los Espíritus Terrestres" | quoted card name: official name |
@@ -1815,18 +1815,18 @@ PC: copy `ULES00600` into `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `
 ### Entries of the choices register for this language (`tools/data/editorial_choices.json`)
 | id | original | corrected | inherited | reason |
 |---|---|---|---|---|
-| st01_t01/Scr003E#146 | Mi padre es el dueño de una⏎empresa de salsa picante. | Mi padre es el dueño de una⏎destilería de sake. | no | sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake) |
-| st01_t01/Scr003E#147 | En la última paga me envió⏎un poco de salsa picante.⏎Te haré un descuento razonable.⏎¿Quieres...? | En la última paga me envió⏎un poco de shochu.⏎Te haré un descuento razonable.⏎¿Quieres...? | no | shochu al posto di salsa piccante |
-| st01_t01/Scr003E#150 | Mi padre es el dueño de una⏎empresa de salsa picante. | Mi padre es el dueño de una⏎destilería de sake. | no | come 146 |
-| st01_t01/Scr003E#151 | En la última paga me envió⏎un poco de salsa picante.⏎Te haré un descuento razonable.⏎¿Quieres...? | En la última paga me envió⏎un poco de shochu.⏎Te haré un descuento razonable.⏎¿Quieres...? | no | come 147 |
-| st01_t01/Scr003E#163 | Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y lleva un bikini! | Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y va vestida de criada! | no | abito da cameriera al posto di bikini (giapponese: メイド服) |
-| st01_t01/Scr003E#168 | Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y lleva un bikini! | Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y va vestida de criada! | no | come 163 |
-| st01_t01/Scr003E#188 | Bueno, supongo que hago⏎mis pinitos... | None | yes | solo italiano: "sto sbavando" era un errore di traduzione (giapponese: "non sono poi così bravo") |
-| st01_t01/Scr003E#189 | Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 en bikini! | Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 vestida de criada! | no | abito da cameriera al posto di bikini |
-| st01_t01/Scr003E#191 | ¡Ten, puedes usar éste! | ¡Ten, usa este traje de criada! | no | Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso |
-| st01_t01/Scr003E#194 | Bueno, supongo que hago⏎mis pinitos... | None | yes | come 188 |
-| st01_t01/Scr003E#195 | Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 en bikini! | Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 vestida de criada! | no | come 189 |
-| st01_t01/Scr003E#197 | ¡Ten, puedes usar éste! | ¡Ten, usa este traje de criada! | no | come 191 |
+| st01_t01/Scr003E#146 | Mi padre es el dueño de una⏎empresa de salsa picante. | Mi padre es el dueño de una⏎destilería de sake. | no | sake instead of hot sauce (faithful to the Japanese: Chumley's family makes sake) |
+| st01_t01/Scr003E#147 | En la última paga me envió⏎un poco de salsa picante.⏎Te haré un descuento razonable.⏎¿Quieres...? | En la última paga me envió⏎un poco de shochu.⏎Te haré un descuento razonable.⏎¿Quieres...? | no | shochu instead of hot sauce |
+| st01_t01/Scr003E#150 | Mi padre es el dueño de una⏎empresa de salsa picante. | Mi padre es el dueño de una⏎destilería de sake. | no | same as 146 |
+| st01_t01/Scr003E#151 | En la última paga me envió⏎un poco de salsa picante.⏎Te haré un descuento razonable.⏎¿Quieres...? | En la última paga me envió⏎un poco de shochu.⏎Te haré un descuento razonable.⏎¿Quieres...? | no | same as 147 |
+| st01_t01/Scr003E#163 | Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y lleva un bikini! | Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y va vestida de criada! | no | maid outfit instead of bikini (Japanese: メイド服) |
+| st01_t01/Scr003E#168 | Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y lleva un bikini! | Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y va vestida de criada! | no | same as 163 |
+| st01_t01/Scr003E#188 | Bueno, supongo que hago⏎mis pinitos... | None | yes | Italian only: "sto sbavando" was a translation error (Japanese: "I am not that good") |
+| st01_t01/Scr003E#189 | Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 en bikini! | Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 vestida de criada! | no | maid outfit instead of bikini |
+| st01_t01/Scr003E#191 | ¡Ten, puedes usar éste! | ¡Ten, usa este traje de criada! | no | Syrus hands over a maid outfit as a model (メイド服): with the bikini the joke made no sense |
+| st01_t01/Scr003E#194 | Bueno, supongo que hago⏎mis pinitos... | None | yes | same as 188 |
+| st01_t01/Scr003E#195 | Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 en bikini! | Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 vestida de criada! | no | same as 189 |
+| st01_t01/Scr003E#197 | ¡Ten, puedes usar éste! | ¡Ten, usa este traje de criada! | no | same as 191 |
 
 Other choices and the re-reading of the duel sentences: `docs/EDITORIAL_CHOICES.md`.
 

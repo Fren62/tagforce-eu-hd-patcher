@@ -33,7 +33,7 @@ The original ISO is **never modified**. `tools/corrections/apply_to_iso.py ISO_O
 
 Archive: `PSP_GAME/USRDIR/duelsys/cardinfo_fra.ehp` (tables `CARD_Name_*`, `CARD_Desc_*`, `CARD_Indx_*`). **82 cards** have a modified name and/or description. Only **objective errors** are corrected (typos, accents, apostrophes, spaces, inconsistent capitalization, agreement, fixed plurals, leftovers from other languages); official names and the game's terminology are not touched.
 
-How: every card was read (English: list of all the cards in comparisons/audit_en/carte_en.txt, objective errors only). Rules in `tools/corrections/rules_en.py`: **26 global rules** (regexes applied to the names and descriptions of all the cards) and **42 per-card corrections** (`PER_CARD`: id, field, old, new, reason; the old text must exist exactly). `generate_card_corrections.py en CARDINFO` (writes `card_corrections_{L}.json` starting from the original texts) produces the json; `apply_to_iso` writes it into the ISO; the HD images of the touched cards are regenerated (section B2).
+How: every card was read (English: list of all the cards in comparisons/audit_en/cards_en.txt, objective errors only). Rules in `tools/corrections/rules_en.py`: **26 global rules** (regexes applied to the names and descriptions of all the cards) and **42 per-card corrections** (`PER_CARD`: id, field, old, new, reason; the old text must exist exactly). `generate_card_corrections.py en CARDINFO` (writes `card_corrections_{L}.json` starting from the original texts) produces the json; `apply_to_iso` writes it into the ISO; the HD images of the touched cards are regenerated (section B2).
 
 ### Global rules (all)
 | pattern (regex) | replacement | reason |
@@ -628,18 +628,18 @@ PC: copy `ULES00600` into `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `
 ### Entries of the choices register for this language (`tools/data/editorial_choices.json`)
 | id | original | corrected | inherited | reason |
 |---|---|---|---|---|
-| st01_t01/Scr003E#146 | My father owns a hot sauce⏎company. | My father owns a sake⏎brewery. | no | sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake) |
-| st01_t01/Scr003E#147 | He sent me some hot sauce with my⏎last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna... | He sent me some shochu with my⏎last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna... | no | shochu al posto di salsa piccante |
-| st01_t01/Scr003E#150 | My father owns a hot sauce⏎company. | My father owns a sake⏎brewery. | no | come 146 |
-| st01_t01/Scr003E#151 | He sent me some hot sauce⏎with my last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna... | He sent me some shochu⏎with my last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna... | no | come 147 |
-| st01_t01/Scr003E#163 | Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a bikini! | Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a maid outfit! | no | abito da cameriera al posto di bikini (giapponese: メイド服) |
-| st01_t01/Scr003E#168 | Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a bikini! | Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a maid outfit! | no | come 163 |
-| st01_t01/Scr003E#188 | Well, I suppose I dabble a little... | None | yes | solo italiano: "sto sbavando" era un errore di traduzione (giapponese: "non sono poi così bravo") |
-| st01_t01/Scr003E#189 | Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a bikini! | Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a maid outfit! | no | abito da cameriera al posto di bikini |
-| st01_t01/Scr003E#191 | Here, you can use this! | Here, use this maid outfit! | no | Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso |
-| st01_t01/Scr003E#194 | Well, I suppose I dabble a little... | None | yes | come 188 |
-| st01_t01/Scr003E#195 | Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a bikini! | Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a maid outfit! | no | come 189 |
-| st01_t01/Scr003E#197 | Here, you can use this! | Here, use this maid outfit! | no | come 191 |
+| st01_t01/Scr003E#146 | My father owns a hot sauce⏎company. | My father owns a sake⏎brewery. | no | sake instead of hot sauce (faithful to the Japanese: Chumley's family makes sake) |
+| st01_t01/Scr003E#147 | He sent me some hot sauce with my⏎last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna... | He sent me some shochu with my⏎last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna... | no | shochu instead of hot sauce |
+| st01_t01/Scr003E#150 | My father owns a hot sauce⏎company. | My father owns a sake⏎brewery. | no | same as 146 |
+| st01_t01/Scr003E#151 | He sent me some hot sauce⏎with my last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna... | He sent me some shochu⏎with my last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna... | no | same as 147 |
+| st01_t01/Scr003E#163 | Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a bikini! | Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a maid outfit! | no | maid outfit instead of bikini (Japanese: メイド服) |
+| st01_t01/Scr003E#168 | Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a bikini! | Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a maid outfit! | no | same as 163 |
+| st01_t01/Scr003E#188 | Well, I suppose I dabble a little... | None | yes | Italian only: "sto sbavando" was a translation error (Japanese: "I am not that good") |
+| st01_t01/Scr003E#189 | Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a bikini! | Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a maid outfit! | no | maid outfit instead of bikini |
+| st01_t01/Scr003E#191 | Here, you can use this! | Here, use this maid outfit! | no | Syrus hands over a maid outfit as a model (メイド服): with the bikini the joke made no sense |
+| st01_t01/Scr003E#194 | Well, I suppose I dabble a little... | None | yes | same as 188 |
+| st01_t01/Scr003E#195 | Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a bikini! | Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a maid outfit! | no | same as 189 |
+| st01_t01/Scr003E#197 | Here, you can use this! | Here, use this maid outfit! | no | same as 191 |
 
 Other choices and the re-reading of the duel sentences: `docs/EDITORIAL_CHOICES.md`.
 

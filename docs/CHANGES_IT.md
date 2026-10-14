@@ -854,18 +854,18 @@ PC: copy `ULES00600` into `<PPSSPP>/PSP/TEXTURES/` (Android: `textures.zip` in `
 ### Entries of the choices register for this language (`tools/data/editorial_choices.json`)
 | id | original | corrected | inherited | reason |
 |---|---|---|---|---|
-| st01_t01/Scr003E#146 | Mio padre possiede un'azienda che⏎produce salsa piccante. | La mia famiglia produce sake. | no | sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake) |
-| st01_t01/Scr003E#147 | Mi ha mandato della salsa piccante⏎con la mia ultima paga.⏎Ti farò uno sconto ragionevole.⏎Vuoi... | L'altro giorno mi hanno mandato dello shochu⏎insieme ai soldi da casa, quindi la prossima volta... | no | shochu al posto di salsa piccante |
-| st01_t01/Scr003E#150 | Mio padre possiede un'azienda che⏎produce salsa piccante. | None | yes | come 146 |
-| st01_t01/Scr003E#151 | Mi ha mandato della salsa piccante con la ⏎mia ultima paga.⏎Ti farò uno sconto ragionevole.⏎Vuoi... | L'altro giorno mi hanno mandato dello shochu⏎insieme ai soldi da casa, quindi la prossima volta... | no | come 147 |
-| st01_t01/Scr003E#163 | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini! | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎In abito da cameriera! | no | abito da cameriera al posto di bikini (giapponese: メイド服) |
-| st01_t01/Scr003E#168 | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini! | None | yes | come 163 |
-| st01_t01/Scr003E#188 | Oddio, sto sbavando un po'... | Oddio, non sono un granché... | no | solo italiano: "sto sbavando" era un errore di traduzione (giapponese: "non sono poi così bravo") |
-| st01_t01/Scr003E#189 | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini! | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 vestita da cameriera! | no | abito da cameriera al posto di bikini |
-| st01_t01/Scr003E#191 | Ecco, usa questo! | Ecco, usa questo vestito da cameriera! | no | Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso |
-| st01_t01/Scr003E#194 | Oddio, sto sbavando un po'... | None | yes | come 188 |
-| st01_t01/Scr003E#195 | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini! | None | yes | come 189 |
-| st01_t01/Scr003E#197 | Ecco, usa questo! | Ecco, usa questo vestito da cameriera! | no | come 191 |
+| st01_t01/Scr003E#146 | Mio padre possiede un'azienda che⏎produce salsa piccante. | La mia famiglia produce sake. | no | sake instead of hot sauce (faithful to the Japanese: Chumley's family makes sake) |
+| st01_t01/Scr003E#147 | Mi ha mandato della salsa piccante⏎con la mia ultima paga.⏎Ti farò uno sconto ragionevole.⏎Vuoi... | L'altro giorno mi hanno mandato dello shochu⏎insieme ai soldi da casa, quindi la prossima volta... | no | shochu instead of hot sauce |
+| st01_t01/Scr003E#150 | Mio padre possiede un'azienda che⏎produce salsa piccante. | None | yes | same as 146 |
+| st01_t01/Scr003E#151 | Mi ha mandato della salsa piccante con la ⏎mia ultima paga.⏎Ti farò uno sconto ragionevole.⏎Vuoi... | L'altro giorno mi hanno mandato dello shochu⏎insieme ai soldi da casa, quindi la prossima volta... | no | same as 147 |
+| st01_t01/Scr003E#163 | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini! | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎In abito da cameriera! | no | maid outfit instead of bikini (Japanese: メイド服) |
+| st01_t01/Scr003E#168 | Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini! | None | yes | same as 163 |
+| st01_t01/Scr003E#188 | Oddio, sto sbavando un po'... | Oddio, non sono un granché... | no | Italian only: "sto sbavando" was a translation error (Japanese: "I am not that good") |
+| st01_t01/Scr003E#189 | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini! | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 vestita da cameriera! | no | maid outfit instead of bikini |
+| st01_t01/Scr003E#191 | Ecco, usa questo! | Ecco, usa questo vestito da cameriera! | no | Syrus hands over a maid outfit as a model (メイド服): with the bikini the joke made no sense |
+| st01_t01/Scr003E#194 | Oddio, sto sbavando un po'... | None | yes | same as 188 |
+| st01_t01/Scr003E#195 | Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini! | None | yes | same as 189 |
+| st01_t01/Scr003E#197 | Ecco, usa questo! | Ecco, usa questo vestito da cameriera! | no | same as 191 |
 
 Other choices and the re-reading of the duel sentences: `docs/EDITORIAL_CHOICES.md`.
 

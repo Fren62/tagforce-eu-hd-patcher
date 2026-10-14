@@ -83,7 +83,7 @@ w('')
 w(f'Archive: `PSP_GAME/USRDIR/duelsys/cardinfo_{"ita" if L == "it" else "fra"}.ehp` (tables `CARD_Name_*`, `CARD_Desc_*`, `CARD_Indx_*`). **{summary["cards_unique"]} cards** have a modified name and/or description. '
   'Only **objective errors** are corrected (typos, accents, apostrophes, spaces, inconsistent capitalization, agreement, fixed plurals, leftovers from other languages); official names and the game\'s terminology are not touched.')
 w('')
-w(f'How: every card was read ({"it: 2,479 texts, one by one; fr: audit against the official database + reading" if L != "en" else "English: list of all the cards in comparisons/audit_en/carte_en.txt, objective errors only"}). Rules in `tools/corrections/rules_{L}.py`: **{len(RC.GLOBALS)} global rules** '
+w(f'How: every card was read ({"it: 2,479 texts, one by one; fr: audit against the official database + reading" if L != "en" else "English: list of all the cards in comparisons/audit_en/cards_en.txt, objective errors only"}). Rules in `tools/corrections/rules_{L}.py`: **{len(RC.GLOBALS)} global rules** '
   f'(regexes applied to the names and descriptions of all the cards) and **{len(RC.PER_CARD)} per-card corrections** (`PER_CARD`: id, field, old, new, reason; the old text must exist exactly). '
   f'`generate_card_corrections.py {L} CARDINFO` ({"merges the result into the existing `card_corrections.json`, idempotent" if L == "it" else "writes `card_corrections_{L}.json` starting from the original texts"}) produces the json; `apply_to_iso` writes it into the ISO; '
   'the HD images of the touched cards are regenerated (section B2).')

@@ -1,5 +1,5 @@
 """Comparison sheets for the free fonts: English HD original | old mod | new mod (free fonts), per card type.
-Regenerates the chosen cards in a temporary folder (does not touch the pack) and writes the PNGs in comparisons/font_liberi/.
+Regenerates the chosen cards in a temporary folder (does not touch the pack) and writes the PNGs in comparisons/free_fonts/.
 usage: compare_fonts.py ROOT TEMPDIR     (ROOT = project folder; TEMPDIR contains ci/ and clean/)"""
 import os, re, sys, json, shutil, subprocess, collections
 ROOT, TMP = sys.argv[1], sys.argv[2]

@@ -2,12 +2,12 @@
  "language": "en",
  "texture_ui": 43,
  "per_family": {
-  "fogli_icone": 3,
-  "lettere_esito": 4,
-  "menu_liste": 2,
-  "schede_deck": 14,
-  "schede_ricette": 11,
-  "schermata_vs": 3,
+  "icon_sheets": 3,
+  "result_letters": 4,
+  "menu_lists": 2,
+  "deck_screens": 14,
+  "recipe_screens": 11,
+  "vs_screen": 3,
   "tutorial": 6
  },
  "neutral": 0,

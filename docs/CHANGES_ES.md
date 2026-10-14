@@ -178,8 +178,8 @@ How: every card was read (it: 2,479 texts, one by one; fr: audit against the off
 | \bAmfibia\b | Anfibia | typo |
 | \bUna (alma\|hada)\b | Un \1 | 'un' before a stressed a- (RAE) |
 | \buna (alma\|hada)\b | un \1 | 'un' before a stressed a- (RAE) |
-| "Brazo\ de\ espada\ de\ Dragon" | "Brazo de Espada de Dragón" | quoted card name: official name |
 | "Brazo\ de\ espada\ de\ Dragón" | "Brazo de Espada de Dragón" | quoted card name: official name |
+| "Brazo\ de\ espada\ de\ Dragon" | "Brazo de Espada de Dragón" | quoted card name: official name |
 | "Diablillo\ de\ cuerno" | "Diablillo de Cuerno" | quoted card name: official name |
 | "El\ pelo\ de\ serpiente" | "El Pelo de Serpiente" | quoted card name: official name |
 | "Insecto\ grande" | "Insecto Grande" | quoted card name: official name |
@@ -315,8 +315,8 @@ How: every card was read (it: 2,479 texts, one by one; fr: audit against the off
 | "Cortina\ de\ Magic\ oscura" | "Cortina de Magia Oscura" | quoted card name: official name |
 | "Llamada\ de\ la\ tumba" | "Llamada de la Tumba" | quoted card name: official name |
 | "Raigeki\ de\ inconformista" | "Anti Raigeki" | quoted card name: official name |
-| "Llamada\ de\ la\ oscuridad" | "Llamada de Oscuridad" | quoted card name: official name |
 | "Llamada\ del\ oscuridad" | "Llamada de Oscuridad" | quoted card name: official name |
+| "Llamada\ de\ la\ oscuridad" | "Llamada de Oscuridad" | quoted card name: official name |
 | "Chispa\ Luminosa" | "Chispa Reluciente" | quoted card name: official name |
 | "Hermano\ de\ la\ Arpía" | "Explorador del Cielo" | quoted card name: official name |
 | "Valkyrion\ el\ Guerrero\ de\ Imán" | "Valkyrion el Guerrero Magno" | quoted card name: official name |
@@ -389,8 +389,8 @@ How: every card was read (it: 2,479 texts, one by one; fr: audit against the off
 | "Máquina\ Peligrosa\ TIPO\-6" | "Máquina Peligrosa Tipo 6" | quoted card name: official name |
 | "Ejército\ de\ Pira" | "Ejército de Pirañas" | quoted card name: official name |
 | "Choque\ de\ Escudo" | "Pulverizar el Escudo" | quoted card name: official name |
-| "Demonio\ Geminis" | "Diablillos Géminis" | quoted card name: official name |
 | "Demonio\ Géminis" | "Diablillos Géminis" | quoted card name: official name |
+| "Demonio\ Geminis" | "Diablillos Géminis" | quoted card name: official name |
 | "Regreso\ del\ Zombi" | "Zombi Retornado" | quoted card name: official name |
 | "Cadáver\ de\ Yata\-Garasu" | "Legado de Yata-Garatsu" | quoted card name: official name |
 | "Invitación\ de\ Espíritu\ Terrestre" | "Invitación de los Espíritus Terrestres" | quoted card name: official name |
@@ -401,8 +401,8 @@ How: every card was read (it: 2,479 texts, one by one; fr: audit against the off
 | "Cría\ B\.\ de\ Ojos\ Rojos" | "Cría de Dragón Negro" | quoted card name: official name |
 | "El\ Tramposo" | "El Difícil" | quoted card name: official name |
 | "Magia\ de\ Tramposo\ 4" | "Conjuro Difícil 4" | quoted card name: official name |
-| "Ficha\ Tramposas" | "Ficha Difícil" | quoted card name: official name |
 | "Ficha\ Tramposa" | "Ficha Difícil" | quoted card name: official name |
+| "Ficha\ Tramposas" | "Ficha Difícil" | quoted card name: official name |
 | "Cruz\ del\ Mago" | "Magos, Uníos" | quoted card name: official name |
 | "Gran\ Núcleo" | "B.E.S. Núcleo Grande" | quoted card name: official name |
 | "Sello\ del\ Dueño" | "Sello del Propietario" | quoted card name: official name |
@@ -1217,8 +1217,8 @@ Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12
 | (?<=[^\s])(?<!Sí)(?<!No)  +(?=[^\s]) |   | double space |
 | \bun refinar búsqueda\b | un filtrado | terminology as in the 'Filtrar' menu |
 | Refinar Búsqueda | Filtrar | terminology as in the 'Filtrar' menu |
-| "Brazo\ de\ espada\ de\ Dragon" | "Brazo de Espada de Dragón" | quoted card name: official name |
 | "Brazo\ de\ espada\ de\ Dragón" | "Brazo de Espada de Dragón" | quoted card name: official name |
+| "Brazo\ de\ espada\ de\ Dragon" | "Brazo de Espada de Dragón" | quoted card name: official name |
 | "Diablillo\ de\ cuerno" | "Diablillo de Cuerno" | quoted card name: official name |
 | "El\ pelo\ de\ serpiente" | "El Pelo de Serpiente" | quoted card name: official name |
 | "Insecto\ grande" | "Insecto Grande" | quoted card name: official name |
@@ -1354,8 +1354,8 @@ Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12
 | "Cortina\ de\ Magic\ oscura" | "Cortina de Magia Oscura" | quoted card name: official name |
 | "Llamada\ de\ la\ tumba" | "Llamada de la Tumba" | quoted card name: official name |
 | "Raigeki\ de\ inconformista" | "Anti Raigeki" | quoted card name: official name |
-| "Llamada\ de\ la\ oscuridad" | "Llamada de Oscuridad" | quoted card name: official name |
 | "Llamada\ del\ oscuridad" | "Llamada de Oscuridad" | quoted card name: official name |
+| "Llamada\ de\ la\ oscuridad" | "Llamada de Oscuridad" | quoted card name: official name |
 | "Chispa\ Luminosa" | "Chispa Reluciente" | quoted card name: official name |
 | "Hermano\ de\ la\ Arpía" | "Explorador del Cielo" | quoted card name: official name |
 | "Valkyrion\ el\ Guerrero\ de\ Imán" | "Valkyrion el Guerrero Magno" | quoted card name: official name |
@@ -1428,8 +1428,8 @@ Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12
 | "Máquina\ Peligrosa\ TIPO\-6" | "Máquina Peligrosa Tipo 6" | quoted card name: official name |
 | "Ejército\ de\ Pira" | "Ejército de Pirañas" | quoted card name: official name |
 | "Choque\ de\ Escudo" | "Pulverizar el Escudo" | quoted card name: official name |
-| "Demonio\ Geminis" | "Diablillos Géminis" | quoted card name: official name |
 | "Demonio\ Géminis" | "Diablillos Géminis" | quoted card name: official name |
+| "Demonio\ Geminis" | "Diablillos Géminis" | quoted card name: official name |
 | "Regreso\ del\ Zombi" | "Zombi Retornado" | quoted card name: official name |
 | "Cadáver\ de\ Yata\-Garasu" | "Legado de Yata-Garatsu" | quoted card name: official name |
 | "Invitación\ de\ Espíritu\ Terrestre" | "Invitación de los Espíritus Terrestres" | quoted card name: official name |
@@ -1440,8 +1440,8 @@ Tables `strTbl*`, `help_strtbl_*`, `ddstrtbl_*`, `field_strtbl*` (format `(n, 12
 | "Cría\ B\.\ de\ Ojos\ Rojos" | "Cría de Dragón Negro" | quoted card name: official name |
 | "El\ Tramposo" | "El Difícil" | quoted card name: official name |
 | "Magia\ de\ Tramposo\ 4" | "Conjuro Difícil 4" | quoted card name: official name |
-| "Ficha\ Tramposas" | "Ficha Difícil" | quoted card name: official name |
 | "Ficha\ Tramposa" | "Ficha Difícil" | quoted card name: official name |
+| "Ficha\ Tramposas" | "Ficha Difícil" | quoted card name: official name |
 | "Cruz\ del\ Mago" | "Magos, Uníos" | quoted card name: official name |
 | "Gran\ Núcleo" | "B.E.S. Núcleo Grande" | quoted card name: official name |
 | "Sello\ del\ Dueño" | "Sello del Propietario" | quoted card name: official name |
@@ -1630,12 +1630,12 @@ PPSSPP recognizes a texture by the **hash of its pixels** (xxhash of the data, `
 | ULES00600 (pack di base) | shop/ | 153 | 69.5 | blue_eyes_jp.png, card_pack_results_ui.png, dorothy, packs, purchase_text_box.png, room_textures, sadie, sandwiches.png, store_purchasing_background.png, store_purchasing_ui.png |
 | ULES00600 (pack di base) | textures.ini | 1 | 2.59 |  |
 | ULES00600 (pack di base) | ui/ | 331 | 22.3 | cardalbum, deckedit, duels, horizontal_bar_black.png, horizontal_bar_red.png, horizontal_bar_silver.png, horizontal_bar_yellow.png, janken.png, limited.png, loading ... |
-| ULES00600 (pack di base) | ui_it/ | 113 | 9.8 | fogli_icone, fogli_icone.ini, lettere_esito, lettere_esito.ini, menu_liste, menu_liste.ini, schede_deck, schede_deck.ini, schede_ricette, schede_ricette.ini ... |
+| ULES00600 (pack di base) | ui_it/ | 113 | 9.8 | icon_sheets, icon_sheets.ini, result_letters, result_letters.ini, menu_lists, menu_lists.ini, deck_screens, deck_screens.ini, recipe_screens, recipe_screens.ini ... |
 | ULES00600 (pack di base) | upscale_extra/ | 1192 | 55.8 | 00085186.png, 00162f3c.png, 003fd929.png, 0047e8d4.png, 00b99210.png, 00c5c424.png, 01673953.png, 01692dff.png, 01f7d8fe.png, 01faa502.png ... |
 | moduli/es | cards/ | 5675 | 1024.6 | frame, large_es, small_es, tiny_es |
 | moduli/es | es.ini | 1 | 0.01 |  |
 | moduli/es | intro/ | 2 | 0.4 | title_screen |
-| moduli/es | ui_es/ | 95 | 8.2 | fogli_icone, fogli_icone.ini, lettere_esito, lettere_esito.ini, menu_liste, menu_liste.ini, schede_deck, schede_deck.ini, schede_ricette, schede_ricette.ini ... |
+| moduli/es | ui_es/ | 95 | 8.2 | icon_sheets, icon_sheets.ini, result_letters, result_letters.ini, menu_lists, menu_lists.ini, deck_screens, deck_screens.ini, recipe_screens, recipe_screens.ini ... |
 
 Every language except Italian is a **module** (`PSP/TEXTURES/modules/es`) to compose over the base pack with `tools/compose_pack.py BASE MODULES CARD_DIR OUT es [--copy]`: it copies the base and **only** the `cards`, `intro` and `ui_es` folders of the module (hard link or copy), then `module_ini.py` rewrites the `textures.ini`: the localized card lines point to `cards/small_es`/`large_es` and the lines of `es.ini` **replace** those of the base with the same key (hash).
 
@@ -1664,17 +1664,17 @@ Typography: non-breaking space before `: ; ! ?` and « » quotation marks.
 
 ## B3. HD interface in spanish (`ui_es`)
 
-**87 textures** (`docs/changes_es/ui_textures.csv`: file, PPSSPP hash, family, script, original/HD size, neutral/specific, origin in the ISO). By family: fogli_icone 3, lettere_esito 22, menu_liste 6, schede_deck 14, schede_ricette 11, schermata_vs 14, scritte_duello 11, tutorial 6. Of these 0 are neutral (same hash in all languages) and 87 specific. Every family has a script in `tools/ui_textures/<family>.py` (reads `TF1_LANG`): it redraws the lettering texture by texture starting from the low-resolution original of the ISO and from the style of the English pack; same area and same positions (the game crops from fixed rectangles); one font/weight/baseline/shadow per lettering; free fonts (`alt_font.py`).
+**87 textures** (`docs/changes_es/ui_textures.csv`: file, PPSSPP hash, family, script, original/HD size, neutral/specific, origin in the ISO). By family: icon_sheets 3, result_letters 22, menu_lists 6, deck_screens 14, recipe_screens 11, vs_screen 14, duel_texts 11, tutorial 6. Of these 0 are neutral (same hash in all languages) and 87 specific. Every family has a script in `tools/ui_textures/<family>.py` (reads `TF1_LANG`): it redraws the lettering texture by texture starting from the low-resolution original of the ISO and from the style of the English pack; same area and same positions (the game crops from fixed rectangles); one font/weight/baseline/shadow per lettering; free fonts (`alt_font.py`).
 
 | family | textures | script | source ISO archive | language texts |
 |---|---|---|---|---|
-| fogli_icone | 3 | `tools/ui_textures/fogli_icone.py` | ? |  |
-| lettere_esito | 22 | `tools/ui_textures/lettere_esito.py` | ? |  |
-| menu_liste | 6 | `tools/ui_textures/menu_liste.py` | ? |  |
-| schede_deck | 14 | `tools/ui_textures/schede_deck.py` | ? |  |
-| schede_ricette | 11 | `tools/ui_textures/schede_ricette.py` | ? |  |
-| schermata_vs | 14 | `tools/ui_textures/schermata_vs.py` | ? |  |
-| scritte_duello | 11 | `tools/ui_textures/scritte_duello.py` | ? |  |
+| icon_sheets | 3 | `tools/ui_textures/icon_sheets.py` | deck/all_s.ehp, shop/all_s.ehp, field/always_* | `icon04`, `s_pack` (AGOTADO), `panel` (fragment "rados"); `pda_pack01`, `icon06`, `mein_menu00`, `trnsmt01` have the same hash as English |
+| result_letters | 22 | `tools/ui_textures/result_letters.py` | duel/basic_ss.ehp | HAS GANADO (HASGNDO) · HAS PERDIDO (HASPERDIO, 9 tiles) · EMPATE (EMPAT) + silhouette |
+| menu_lists | 6 | `tools/ui_textures/menu_lists.py` | title_menu/title_menu_s.ehp, duel/result/result_s.ehp, field/always_bri_<code>.ehp | MENÚ PRINCIPAL · INTRODUCE EL NOMBRE · LISTA DE CARTAS DESCARGADAS · DUELO ACERTIJO · OPCIONES · AJUSTES DEL IDIOMA · AGRUPAR LISTA... · RESULTADO DEL DUELO · PRESIONA EL BOTÓN START · GANAS/EMPATE/PIERDES · Domingo...Sábado · Mayo Julio Junio Agosto · Días / para el torneo / de · AM / PM |
+| deck_screens | 14 | `tools/ui_textures/deck_screens.py` | deck/all_s.ehp, labo/*.ehp, shop/all_s.ehp | Tronco ×3, Fusión, Alquiler ×4, Laboratorio, Conversor ×2, "Tipos de carta en posesión", "Cartas compradas" (+ fragment), ACEPTAR |
+| recipe_screens | 11 | `tools/ui_textures/recipe_screens.py` | deck/recipe_view_s.ehp, title_menu/title_menu_s.ehp, database/limitlist.ehp | Personaje / Usuario / Recetas descargadas / Recetas de personaje / Recetas de usuario / Limitada / Semi-Limitada / Prohibida / Cambiar |
+| vs_screen | 14 | `tools/ui_textures/vs_screen.py` | duel/start/start_e.ehp (members _s), start_all.ehp, start_s.ehp | DUELO / NORMAL / TAG · SEGUNDO EN SALIR / PRIMERO EN SALIR · 1ra/2da/3ra vuelta · Modo Individual / Modo Combate · GANAS/PIERDES/EMPATE · JUGADOR 1 / JUGADOR 2 · JUGADOR |
+| duel_texts | 11 | `tools/ui_textures/duel_texts.py` | duel/basic_ss.ehp | Cadena · TURNO DEL SIGUIENTE JUGADOR (the cut between the two textures passes inside a letter, as in the original) · COMENZAR DUELO · Ataque Directo · TURNO and `card_icon03` covered by already existing textures (same hash as Italian / `upscale_extra`) |
 | tutorial | 6 | `tools/ui_textures/tutorial.py` | tutorial/tutorial_s.ehp (tuto_duelimg01..06) | Tu oponente ha declarado la batalla. / ¿activar el efecto de la carta? · SÍ/NO · 5 maps; 2-line dialogue but wider box |
 
 Quality rules (valid for every language): regular letters, never deformed one by one; same area as the original; no blur; the text is that of the language's original (only obvious errors are corrected: leftovers from other languages, accents); pixel art is **not** smoothed without confirmation; geometries always measured on the original.
@@ -1687,87 +1687,87 @@ Table read by eye, texture by texture: `docs/changes_es/texture_texts_es.md`. Di
 
 | file in the pack | hash | family | original px | HD px | type | ISO origin |
 |---|---|---|---|---|---|---|
-| ui_es/fogli_icone/all_s__icon04.png | 57ec7a66 | fogli_icone | 128x128 | 512x512 | SPECIFIC | deck/all_s.ehp:icon04.gim |
-| ui_es/fogli_icone/all_s__panel.png | 6c431a2a | fogli_icone | 256x256 | 1024x1024 | SPECIFIC | shop/all_s.ehp:panel.gim |
-| ui_es/fogli_icone/all_s__s_pack.png | 7a7314e5 | fogli_icone | 256x256 | 1024x1024 | SPECIFIC | shop/all_s.ehp:s_pack.gim |
-| ui_es/lettere_esito/basic_ss__duel_draw100002.png | ba388fb8 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100002.gim; duel/basic_fs.ehp:duel_draw100002.gim; duel/basic_gs.ehp:duel_draw100002.gim |
-| ui_es/lettere_esito/basic_ss__duel_draw100004.png | 396a68f8 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100004.gim; duel/basic_fs.ehp:duel_draw100004.gim; duel/basic_gs.ehp:duel_draw100004.gim |
-| ui_es/lettere_esito/basic_ss__duel_draw100006.png | 14389066 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100006.gim; duel/basic_fs.ehp:duel_draw100006.gim; duel/basic_gs.ehp:duel_draw100006.gim |
-| ui_es/lettere_esito/basic_ss__duel_draw100008.png | 17a7a350 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100008.gim; duel/basic_fs.ehp:duel_draw100008.gim; duel/basic_gs.ehp:duel_draw100008.gim |
-| ui_es/lettere_esito/basic_ss__duel_draw100010.png | 3d47af74 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100010.gim; duel/basic_fs.ehp:duel_draw100010.gim; duel/basic_gs.ehp:duel_draw100010.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100002.png | 1cb4482c | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100002.gim; duel/basic_fs.ehp:duel_lose100002.gim; duel/basic_gs.ehp:duel_lose100002.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100004.png | ecb90266 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100004.gim; duel/basic_fs.ehp:duel_lose100004.gim; duel/basic_gs.ehp:duel_lose100004.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100006.png | 7d290a32 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100006.gim; duel/basic_fs.ehp:duel_lose100006.gim; duel/basic_gs.ehp:duel_lose100006.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100008.png | 3733b351 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100008.gim; duel/basic_fs.ehp:duel_lose100008.gim; duel/basic_gs.ehp:duel_lose100008.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100010.png | ffc4d8e5 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100010.gim; duel/basic_fs.ehp:duel_lose100010.gim; duel/basic_gs.ehp:duel_lose100010.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100012.png | 302162eb | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100012.gim; duel/basic_fs.ehp:duel_lose100012.gim; duel/basic_gs.ehp:duel_lose100012.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100014.png | 9aa5d99c | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100014.gim; duel/basic_fs.ehp:duel_lose100014.gim; duel/basic_gs.ehp:duel_lose100014.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100016.png | 00b99210 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100016.gim; duel/basic_fs.ehp:duel_lose100016.gim; duel/basic_gs.ehp:duel_lose100016.gim |
-| ui_es/lettere_esito/basic_ss__duel_lose100018.png | 09cc5268 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100018.gim; duel/basic_fs.ehp:duel_lose100018.gim; duel/basic_gs.ehp:duel_lose100018.gim |
-| ui_es/lettere_esito/basic_ss__duel_win100002.png | c130b02b | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100002.gim; duel/basic_fs.ehp:duel_win100002.gim; duel/basic_gs.ehp:duel_win100002.gim |
-| ui_es/lettere_esito/basic_ss__duel_win100004.png | e40b4f5a | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100004.gim; duel/basic_fs.ehp:duel_win100004.gim; duel/basic_gs.ehp:duel_win100004.gim |
-| ui_es/lettere_esito/basic_ss__duel_win100006.png | b602abed | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100006.gim; duel/basic_fs.ehp:duel_win100006.gim; duel/basic_gs.ehp:duel_win100006.gim |
-| ui_es/lettere_esito/basic_ss__duel_win100008.png | 5d42a4d6 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100008.gim; duel/basic_fs.ehp:duel_win100008.gim; duel/basic_gs.ehp:duel_win100008.gim |
-| ui_es/lettere_esito/basic_ss__duel_win100010.png | 7346cdd7 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100010.gim; duel/basic_fs.ehp:duel_win100010.gim; duel/basic_gs.ehp:duel_win100010.gim |
-| ui_es/lettere_esito/basic_ss__duel_win100012.png | 3b9ae395 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100012.gim; duel/basic_fs.ehp:duel_win100012.gim; duel/basic_gs.ehp:duel_win100012.gim |
-| ui_es/lettere_esito/basic_ss__duel_win100014.png | 5a1e30a6 | lettere_esito | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100014.gim; duel/basic_fs.ehp:duel_win100014.gim; duel/basic_gs.ehp:duel_win100014.gim |
-| ui_es/lettere_esito/basic_ss__duel_win100016.png | e22c31d5 | lettere_esito | 64x32 | 256x128 | SPECIFIC | duel/basic_bs.ehp:duel_win100016.gim; duel/basic_fs.ehp:duel_win100016.gim; duel/basic_gs.ehp:duel_win100016.gim |
-| ui_es/menu_liste/always_bri_spa__story_sys02.png | 92c0609f | menu_liste | 256x128 | 1024x512 | SPECIFIC | field/always_bri_spa.ehp:story_sys02.gim; field/always_fra_spa.ehp:story_sys02.gim; field/always_ger_spa.ehp:story_sys02.gim |
-| ui_es/menu_liste/result_s__menu01.png | 6a156d48 | menu_liste | 256x64 | 1024x256 | SPECIFIC | duel/result/result_s.ehp:menu01.gim |
-| ui_es/menu_liste/result_s__menu02.png | ffd0d26a | menu_liste | 256x128 | 1024x512 | SPECIFIC | duel/result/result_s.ehp:menu02.gim |
-| ui_es/menu_liste/title_menu_s__m_menu_title01.png | 2589c36d | menu_liste | 256x128 | 1024x512 | SPECIFIC | title_menu/title_menu_s.ehp:m_menu_title01.gim |
-| ui_es/menu_liste/title_menu_s__press_start0003.png | 45d9a888 | menu_liste | 256x16 | 1024x64 | SPECIFIC | title_menu/title_menu_s.ehp:press_start0003.gim |
-| ui_es/menu_liste/title_menu_s__trnsmt02.png | 87428289 | menu_liste | 256x256 | 1024x1024 | SPECIFIC | title_menu/title_menu_s.ehp:trnsmt02.gim |
-| ui_es/schede_deck/all_s__d_window00008.png | 308698d0 | schede_deck | 128x32 | 512x128 | SPECIFIC | deck/all_s.ehp:d_window00008.gim |
-| ui_es/schede_deck/all_s__d_window00016.png | 47084696 | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_s.ehp:d_window00016.gim |
-| ui_es/schede_deck/all_s__d_window00033.png | ac8667a7 | schede_deck | 256x32 | 1024x128 | SPECIFIC | deck/all_s.ehp:d_window00033.gim |
-| ui_es/schede_deck/all_s__d_window00051.png | 4b97edef | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_s.ehp:d_window00051.gim |
-| ui_es/schede_deck/all_s__d_window00062.png | 18b02d40 | schede_deck | 128x32 | 512x128 | SPECIFIC | deck/all_s.ehp:d_window00062.gim; labo/conv_machine.ehp:window_s0016.gim; title_menu/title_menu_s.ehp:t_window0015.gim |
-| ui_es/schede_deck/all_s__d_window00101.png | 91eb2bb5 | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_s.ehp:d_window00101.gim; labo/rental.ehp:window_s0008.gim |
-| ui_es/schede_deck/all_s__tab_title.png | 6fe1264c | schede_deck | 256x32 | 1024x128 | SPECIFIC | shop/all_s.ehp:tab_title.gim |
-| ui_es/schede_deck/conv_machine__window_s0009.png | 24cf8aaf | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/conv_machine.ehp:window_s0009.gim; labo/conv_machine.ehp:window_s0026.gim |
-| ui_es/schede_deck/conv_machine__window_s0016.png | 18b02d40 | schede_deck | 128x32 | 512x128 | SPECIFIC | deck/all_s.ehp:d_window00062.gim; labo/conv_machine.ehp:window_s0016.gim; title_menu/title_menu_s.ehp:t_window0015.gim |
-| ui_es/schede_deck/conv_machine__window_s0026.png | 24cf8aaf | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/conv_machine.ehp:window_s0009.gim; labo/conv_machine.ehp:window_s0026.gim |
-| ui_es/schede_deck/password__key_s0027.png | 5d6635f4 | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/password.ehp:key_s0027.gim |
-| ui_es/schede_deck/rental__window_s0008.png | 91eb2bb5 | schede_deck | 64x32 | 256x128 | SPECIFIC | deck/all_s.ehp:d_window00101.gim; labo/rental.ehp:window_s0008.gim |
-| ui_es/schede_deck/rental__window_s0015.png | fee49520 | schede_deck | 128x32 | 512x128 | SPECIFIC | labo/rental.ehp:window_i0015.gim; labo/rental.ehp:window_s0015.gim |
-| ui_es/schede_deck/rental__window_s0026.png | 16a6572b | schede_deck | 64x32 | 256x128 | SPECIFIC | labo/rental.ehp:window_s0026.gim |
-| ui_es/schede_ricette/limitlist__window_s0002.png | 7d80a6c6 | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_s0002.gim |
-| ui_es/schede_ricette/limitlist__window_s0004.png | 1d7d2421 | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_s0004.gim |
-| ui_es/schede_ricette/limitlist__window_s0012.png | 8c7ebe78 | schede_ricette | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_s0012.gim |
-| ui_es/schede_ricette/recipe_view_s__recipe010008.png | c5c45bb7 | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010008.gim; title_menu/title_menu_s.ehp:recipe_sel00002.gim |
-| ui_es/schede_ricette/recipe_view_s__recipe010015.png | b6e6f744 | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010015.gim; title_menu/title_menu_s.ehp:recipe_sel00009.gim |
-| ui_es/schede_ricette/recipe_view_s__recipe010027.png | 72f7f26a | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010027.gim; title_menu/title_menu_s.ehp:recipe_sel00020.gim |
-| ui_es/schede_ricette/recipe_view_s__recipe010029.png | 285b971c | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010029.gim; title_menu/title_menu_s.ehp:recipe_sel00022.gim |
-| ui_es/schede_ricette/recipe_view_s__recipe010031.png | c70a1e0a | schede_ricette | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010031.gim; title_menu/title_menu_s.ehp:recipe_sel00024.gim |
-| ui_es/schede_ricette/title_menu_s__recipe_sel00033.png | 6bb39c40 | schede_ricette | 128x32 | 512x128 | SPECIFIC | title_menu/title_menu_s.ehp:recipe_sel00033.gim |
-| ui_es/schede_ricette/title_menu_s__t_window0008.png | 117e2298 | schede_ricette | 64x32 | 256x128 | SPECIFIC | title_menu/title_menu_s.ehp:t_window0008.gim |
-| ui_es/schede_ricette/title_menu_s__t_window0026.png | 01673953 | schede_ricette | 64x32 | 256x128 | SPECIFIC | title_menu/title_menu_s.ehp:t_window0026.gim |
-| ui_es/schermata_vs/start_all__jyanken20_s0005.png | a9897630 | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_all.ehp:jyanken20_s0005.gim; duel/start/start_e.ehp:jyanken20_s0005.gim; duel/start/start_f.ehp:jyanken20_s0005.gim |
-| ui_es/schermata_vs/start_all__jyanken20_s0007.png | 7368d31c | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_all.ehp:jyanken20_s0007.gim; duel/start/start_e.ehp:jyanken20_s0007.gim; duel/start/start_f.ehp:jyanken20_s0007.gim |
-| ui_es/schermata_vs/start_all__vs_much1_s0001.png | ef845abc | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much1_s0001.gim; duel/start/start_e.ehp:vs_much1_s0001.gim; duel/start/start_f.ehp:vs_much1_s0001.gim |
-| ui_es/schermata_vs/start_all__vs_much2_s0001.png | ea46529a | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much2_s0001.gim; duel/start/start_e.ehp:vs_much2_s0001.gim; duel/start/start_f.ehp:vs_much2_s0001.gim |
-| ui_es/schermata_vs/start_all__vs_much3_s0001.png | 386e4f79 | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much3_s0001.gim; duel/start/start_e.ehp:vs_much3_s0001.gim; duel/start/start_f.ehp:vs_much3_s0001.gim |
-| ui_es/schermata_vs/start_e__d_menu01_s.png | a77116f2 | schermata_vs | 256x256 | 1024x1024 | SPECIFIC | duel/start/start_e.ehp:d_menu01_s.gim; duel/start/start_f.ehp:d_menu01_s.gim; duel/start/start_g.ehp:d_menu01_s.gim |
-| ui_es/schermata_vs/start_e__vs_bg01_1_s0005.png | 939ffe1b | schermata_vs | 256x32 | 1024x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0005.gim; duel/start/start_f.ehp:vs_bg01_1_s0005.gim; duel/start/start_g.ehp:vs_bg01_1_s0005.gim |
-| ui_es/schermata_vs/start_e__vs_bg01_1_s0007.png | 3ab04908 | schermata_vs | 256x64 | 1024x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0007.gim; duel/start/start_f.ehp:vs_bg01_1_s0007.gim; duel/start/start_g.ehp:vs_bg01_1_s0007.gim |
-| ui_es/schermata_vs/start_e__vs_bg01_1_s0008.png | 41ab9f3e | schermata_vs | 256x64 | 1024x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0008.gim; duel/start/start_f.ehp:vs_bg01_1_s0008.gim; duel/start/start_g.ehp:vs_bg01_1_s0008.gim |
-| ui_es/schermata_vs/start_e__vs_bg01_1_s0012.png | ed29c0fe | schermata_vs | 128x32 | 512x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0012.gim; duel/start/start_f.ehp:vs_bg01_1_s0012.gim; duel/start/start_g.ehp:vs_bg01_1_s0012.gim |
-| ui_es/schermata_vs/start_e__vs_bg01_1_s0014.png | 8788a7c8 | schermata_vs | 128x64 | 512x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0014.gim; duel/start/start_f.ehp:vs_bg01_1_s0014.gim; duel/start/start_g.ehp:vs_bg01_1_s0014.gim |
-| ui_es/schermata_vs/start_e__vs_bg01_2_s0001.png | 5796698d | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_2_s0001.gim; duel/start/start_f.ehp:vs_bg01_2_s0001.gim; duel/start/start_g.ehp:vs_bg01_2_s0001.gim |
-| ui_es/schermata_vs/start_e__vs_bg01_2_s0004.png | f081a08d | schermata_vs | 128x16 | 512x64 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_2_s0004.gim; duel/start/start_f.ehp:vs_bg01_2_s0004.gim; duel/start/start_g.ehp:vs_bg01_2_s0004.gim |
-| ui_es/schermata_vs/start_s__jnk_card01.png | a2fc7092 | schermata_vs | 512x256 | 2048x1024 | SPECIFIC | duel/start/start_s.ehp:jnk_card01.gim |
-| ui_es/scritte_duello/basic_ss__chain010003.png | c7fd7035 | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bs.ehp:chain010003.gim; duel/basic_fs.ehp:chain010003.gim; duel/basic_gs.ehp:chain010003.gim |
-| ui_es/scritte_duello/basic_ss__chain010005.png | abaeb83c | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bs.ehp:chain010005.gim; duel/basic_fs.ehp:chain010005.gim; duel/basic_gs.ehp:chain010005.gim |
-| ui_es/scritte_duello/basic_ss__dilect_atk00001.png | 880d6d24 | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bs.ehp:dilect_atk00001.gim; duel/basic_fs.ehp:dilect_atk00001.gim; duel/basic_gs.ehp:dilect_atk00001.gim |
-| ui_es/scritte_duello/basic_ss__dilect_atk00003.png | d8591359 | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bs.ehp:dilect_atk00003.gim; duel/basic_fs.ehp:dilect_atk00003.gim; duel/basic_gs.ehp:dilect_atk00003.gim |
-| ui_es/scritte_duello/basic_ss__next_player0001.png | 9d78973f | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bs.ehp:next_player0001.gim; duel/basic_fs.ehp:next_player0001.gim; duel/basic_gs.ehp:next_player0001.gim |
-| ui_es/scritte_duello/basic_ss__next_player0002.png | 1e0eff3f | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bs.ehp:next_player0002.gim; duel/basic_fs.ehp:next_player0002.gim; duel/basic_gs.ehp:next_player0002.gim |
-| ui_es/scritte_duello/basic_ss__next_player0004.png | 6d3897cf | scritte_duello | 64x32 | 256x128 | SPECIFIC | duel/basic_bs.ehp:next_player0004.gim; duel/basic_fs.ehp:next_player0004.gim; duel/basic_gs.ehp:next_player0004.gim |
-| ui_es/scritte_duello/basic_ss__next_player0005.png | 4021e68f | scritte_duello | 256x32 | 1024x128 | SPECIFIC | duel/basic_bs.ehp:next_player0005.gim; duel/basic_fs.ehp:next_player0005.gim; duel/basic_gs.ehp:next_player0005.gim |
-| ui_es/scritte_duello/basic_ss__start_duel10001.png | 692edb74 | scritte_duello | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:start_duel10001.gim; duel/basic_fs.ehp:start_duel10001.gim; duel/basic_gs.ehp:start_duel10001.gim |
-| ui_es/scritte_duello/basic_ss__start_duel10002.png | 8ea8857e | scritte_duello | 256x64 | 1024x256 | SPECIFIC | duel/basic_bs.ehp:start_duel10002.gim; duel/basic_fs.ehp:start_duel10002.gim; duel/basic_gs.ehp:start_duel10002.gim |
-| ui_es/scritte_duello/basic_ss__start_duel10005.png | 0e4dc413 | scritte_duello | 128x32 | 512x128 | SPECIFIC | duel/basic_bs.ehp:start_duel10005.gim; duel/basic_fs.ehp:start_duel10005.gim; duel/basic_gs.ehp:start_duel10005.gim |
+| ui_es/icon_sheets/all_s__icon04.png | 57ec7a66 | icon_sheets | 128x128 | 512x512 | SPECIFIC | deck/all_s.ehp:icon04.gim |
+| ui_es/icon_sheets/all_s__panel.png | 6c431a2a | icon_sheets | 256x256 | 1024x1024 | SPECIFIC | shop/all_s.ehp:panel.gim |
+| ui_es/icon_sheets/all_s__s_pack.png | 7a7314e5 | icon_sheets | 256x256 | 1024x1024 | SPECIFIC | shop/all_s.ehp:s_pack.gim |
+| ui_es/result_letters/basic_ss__duel_draw100002.png | ba388fb8 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100002.gim; duel/basic_fs.ehp:duel_draw100002.gim; duel/basic_gs.ehp:duel_draw100002.gim |
+| ui_es/result_letters/basic_ss__duel_draw100004.png | 396a68f8 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100004.gim; duel/basic_fs.ehp:duel_draw100004.gim; duel/basic_gs.ehp:duel_draw100004.gim |
+| ui_es/result_letters/basic_ss__duel_draw100006.png | 14389066 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100006.gim; duel/basic_fs.ehp:duel_draw100006.gim; duel/basic_gs.ehp:duel_draw100006.gim |
+| ui_es/result_letters/basic_ss__duel_draw100008.png | 17a7a350 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100008.gim; duel/basic_fs.ehp:duel_draw100008.gim; duel/basic_gs.ehp:duel_draw100008.gim |
+| ui_es/result_letters/basic_ss__duel_draw100010.png | 3d47af74 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_draw100010.gim; duel/basic_fs.ehp:duel_draw100010.gim; duel/basic_gs.ehp:duel_draw100010.gim |
+| ui_es/result_letters/basic_ss__duel_lose100002.png | 1cb4482c | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100002.gim; duel/basic_fs.ehp:duel_lose100002.gim; duel/basic_gs.ehp:duel_lose100002.gim |
+| ui_es/result_letters/basic_ss__duel_lose100004.png | ecb90266 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100004.gim; duel/basic_fs.ehp:duel_lose100004.gim; duel/basic_gs.ehp:duel_lose100004.gim |
+| ui_es/result_letters/basic_ss__duel_lose100006.png | 7d290a32 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100006.gim; duel/basic_fs.ehp:duel_lose100006.gim; duel/basic_gs.ehp:duel_lose100006.gim |
+| ui_es/result_letters/basic_ss__duel_lose100008.png | 3733b351 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100008.gim; duel/basic_fs.ehp:duel_lose100008.gim; duel/basic_gs.ehp:duel_lose100008.gim |
+| ui_es/result_letters/basic_ss__duel_lose100010.png | ffc4d8e5 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100010.gim; duel/basic_fs.ehp:duel_lose100010.gim; duel/basic_gs.ehp:duel_lose100010.gim |
+| ui_es/result_letters/basic_ss__duel_lose100012.png | 302162eb | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100012.gim; duel/basic_fs.ehp:duel_lose100012.gim; duel/basic_gs.ehp:duel_lose100012.gim |
+| ui_es/result_letters/basic_ss__duel_lose100014.png | 9aa5d99c | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100014.gim; duel/basic_fs.ehp:duel_lose100014.gim; duel/basic_gs.ehp:duel_lose100014.gim |
+| ui_es/result_letters/basic_ss__duel_lose100016.png | 00b99210 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100016.gim; duel/basic_fs.ehp:duel_lose100016.gim; duel/basic_gs.ehp:duel_lose100016.gim |
+| ui_es/result_letters/basic_ss__duel_lose100018.png | 09cc5268 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_lose100018.gim; duel/basic_fs.ehp:duel_lose100018.gim; duel/basic_gs.ehp:duel_lose100018.gim |
+| ui_es/result_letters/basic_ss__duel_win100002.png | c130b02b | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100002.gim; duel/basic_fs.ehp:duel_win100002.gim; duel/basic_gs.ehp:duel_win100002.gim |
+| ui_es/result_letters/basic_ss__duel_win100004.png | e40b4f5a | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100004.gim; duel/basic_fs.ehp:duel_win100004.gim; duel/basic_gs.ehp:duel_win100004.gim |
+| ui_es/result_letters/basic_ss__duel_win100006.png | b602abed | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100006.gim; duel/basic_fs.ehp:duel_win100006.gim; duel/basic_gs.ehp:duel_win100006.gim |
+| ui_es/result_letters/basic_ss__duel_win100008.png | 5d42a4d6 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100008.gim; duel/basic_fs.ehp:duel_win100008.gim; duel/basic_gs.ehp:duel_win100008.gim |
+| ui_es/result_letters/basic_ss__duel_win100010.png | 7346cdd7 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100010.gim; duel/basic_fs.ehp:duel_win100010.gim; duel/basic_gs.ehp:duel_win100010.gim |
+| ui_es/result_letters/basic_ss__duel_win100012.png | 3b9ae395 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100012.gim; duel/basic_fs.ehp:duel_win100012.gim; duel/basic_gs.ehp:duel_win100012.gim |
+| ui_es/result_letters/basic_ss__duel_win100014.png | 5a1e30a6 | result_letters | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:duel_win100014.gim; duel/basic_fs.ehp:duel_win100014.gim; duel/basic_gs.ehp:duel_win100014.gim |
+| ui_es/result_letters/basic_ss__duel_win100016.png | e22c31d5 | result_letters | 64x32 | 256x128 | SPECIFIC | duel/basic_bs.ehp:duel_win100016.gim; duel/basic_fs.ehp:duel_win100016.gim; duel/basic_gs.ehp:duel_win100016.gim |
+| ui_es/menu_lists/always_bri_spa__story_sys02.png | 92c0609f | menu_lists | 256x128 | 1024x512 | SPECIFIC | field/always_bri_spa.ehp:story_sys02.gim; field/always_fra_spa.ehp:story_sys02.gim; field/always_ger_spa.ehp:story_sys02.gim |
+| ui_es/menu_lists/result_s__menu01.png | 6a156d48 | menu_lists | 256x64 | 1024x256 | SPECIFIC | duel/result/result_s.ehp:menu01.gim |
+| ui_es/menu_lists/result_s__menu02.png | ffd0d26a | menu_lists | 256x128 | 1024x512 | SPECIFIC | duel/result/result_s.ehp:menu02.gim |
+| ui_es/menu_lists/title_menu_s__m_menu_title01.png | 2589c36d | menu_lists | 256x128 | 1024x512 | SPECIFIC | title_menu/title_menu_s.ehp:m_menu_title01.gim |
+| ui_es/menu_lists/title_menu_s__press_start0003.png | 45d9a888 | menu_lists | 256x16 | 1024x64 | SPECIFIC | title_menu/title_menu_s.ehp:press_start0003.gim |
+| ui_es/menu_lists/title_menu_s__trnsmt02.png | 87428289 | menu_lists | 256x256 | 1024x1024 | SPECIFIC | title_menu/title_menu_s.ehp:trnsmt02.gim |
+| ui_es/deck_screens/all_s__d_window00008.png | 308698d0 | deck_screens | 128x32 | 512x128 | SPECIFIC | deck/all_s.ehp:d_window00008.gim |
+| ui_es/deck_screens/all_s__d_window00016.png | 47084696 | deck_screens | 64x32 | 256x128 | SPECIFIC | deck/all_s.ehp:d_window00016.gim |
+| ui_es/deck_screens/all_s__d_window00033.png | ac8667a7 | deck_screens | 256x32 | 1024x128 | SPECIFIC | deck/all_s.ehp:d_window00033.gim |
+| ui_es/deck_screens/all_s__d_window00051.png | 4b97edef | deck_screens | 64x32 | 256x128 | SPECIFIC | deck/all_s.ehp:d_window00051.gim |
+| ui_es/deck_screens/all_s__d_window00062.png | 18b02d40 | deck_screens | 128x32 | 512x128 | SPECIFIC | deck/all_s.ehp:d_window00062.gim; labo/conv_machine.ehp:window_s0016.gim; title_menu/title_menu_s.ehp:t_window0015.gim |
+| ui_es/deck_screens/all_s__d_window00101.png | 91eb2bb5 | deck_screens | 64x32 | 256x128 | SPECIFIC | deck/all_s.ehp:d_window00101.gim; labo/rental.ehp:window_s0008.gim |
+| ui_es/deck_screens/all_s__tab_title.png | 6fe1264c | deck_screens | 256x32 | 1024x128 | SPECIFIC | shop/all_s.ehp:tab_title.gim |
+| ui_es/deck_screens/conv_machine__window_s0009.png | 24cf8aaf | deck_screens | 128x32 | 512x128 | SPECIFIC | labo/conv_machine.ehp:window_s0009.gim; labo/conv_machine.ehp:window_s0026.gim |
+| ui_es/deck_screens/conv_machine__window_s0016.png | 18b02d40 | deck_screens | 128x32 | 512x128 | SPECIFIC | deck/all_s.ehp:d_window00062.gim; labo/conv_machine.ehp:window_s0016.gim; title_menu/title_menu_s.ehp:t_window0015.gim |
+| ui_es/deck_screens/conv_machine__window_s0026.png | 24cf8aaf | deck_screens | 128x32 | 512x128 | SPECIFIC | labo/conv_machine.ehp:window_s0009.gim; labo/conv_machine.ehp:window_s0026.gim |
+| ui_es/deck_screens/password__key_s0027.png | 5d6635f4 | deck_screens | 128x32 | 512x128 | SPECIFIC | labo/password.ehp:key_s0027.gim |
+| ui_es/deck_screens/rental__window_s0008.png | 91eb2bb5 | deck_screens | 64x32 | 256x128 | SPECIFIC | deck/all_s.ehp:d_window00101.gim; labo/rental.ehp:window_s0008.gim |
+| ui_es/deck_screens/rental__window_s0015.png | fee49520 | deck_screens | 128x32 | 512x128 | SPECIFIC | labo/rental.ehp:window_i0015.gim; labo/rental.ehp:window_s0015.gim |
+| ui_es/deck_screens/rental__window_s0026.png | 16a6572b | deck_screens | 64x32 | 256x128 | SPECIFIC | labo/rental.ehp:window_s0026.gim |
+| ui_es/recipe_screens/limitlist__window_s0002.png | 7d80a6c6 | recipe_screens | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_s0002.gim |
+| ui_es/recipe_screens/limitlist__window_s0004.png | 1d7d2421 | recipe_screens | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_s0004.gim |
+| ui_es/recipe_screens/limitlist__window_s0012.png | 8c7ebe78 | recipe_screens | 128x32 | 512x128 | SPECIFIC | database/limitlist.ehp:window_s0012.gim |
+| ui_es/recipe_screens/recipe_view_s__recipe010008.png | c5c45bb7 | recipe_screens | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010008.gim; title_menu/title_menu_s.ehp:recipe_sel00002.gim |
+| ui_es/recipe_screens/recipe_view_s__recipe010015.png | b6e6f744 | recipe_screens | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010015.gim; title_menu/title_menu_s.ehp:recipe_sel00009.gim |
+| ui_es/recipe_screens/recipe_view_s__recipe010027.png | 72f7f26a | recipe_screens | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010027.gim; title_menu/title_menu_s.ehp:recipe_sel00020.gim |
+| ui_es/recipe_screens/recipe_view_s__recipe010029.png | 285b971c | recipe_screens | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010029.gim; title_menu/title_menu_s.ehp:recipe_sel00022.gim |
+| ui_es/recipe_screens/recipe_view_s__recipe010031.png | c70a1e0a | recipe_screens | 128x32 | 512x128 | SPECIFIC | deck/recipe_view_s.ehp:recipe010031.gim; title_menu/title_menu_s.ehp:recipe_sel00024.gim |
+| ui_es/recipe_screens/title_menu_s__recipe_sel00033.png | 6bb39c40 | recipe_screens | 128x32 | 512x128 | SPECIFIC | title_menu/title_menu_s.ehp:recipe_sel00033.gim |
+| ui_es/recipe_screens/title_menu_s__t_window0008.png | 117e2298 | recipe_screens | 64x32 | 256x128 | SPECIFIC | title_menu/title_menu_s.ehp:t_window0008.gim |
+| ui_es/recipe_screens/title_menu_s__t_window0026.png | 01673953 | recipe_screens | 64x32 | 256x128 | SPECIFIC | title_menu/title_menu_s.ehp:t_window0026.gim |
+| ui_es/vs_screen/start_all__jyanken20_s0005.png | a9897630 | vs_screen | 256x32 | 1024x128 | SPECIFIC | duel/start/start_all.ehp:jyanken20_s0005.gim; duel/start/start_e.ehp:jyanken20_s0005.gim; duel/start/start_f.ehp:jyanken20_s0005.gim |
+| ui_es/vs_screen/start_all__jyanken20_s0007.png | 7368d31c | vs_screen | 256x32 | 1024x128 | SPECIFIC | duel/start/start_all.ehp:jyanken20_s0007.gim; duel/start/start_e.ehp:jyanken20_s0007.gim; duel/start/start_f.ehp:jyanken20_s0007.gim |
+| ui_es/vs_screen/start_all__vs_much1_s0001.png | ef845abc | vs_screen | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much1_s0001.gim; duel/start/start_e.ehp:vs_much1_s0001.gim; duel/start/start_f.ehp:vs_much1_s0001.gim |
+| ui_es/vs_screen/start_all__vs_much2_s0001.png | ea46529a | vs_screen | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much2_s0001.gim; duel/start/start_e.ehp:vs_much2_s0001.gim; duel/start/start_f.ehp:vs_much2_s0001.gim |
+| ui_es/vs_screen/start_all__vs_much3_s0001.png | 386e4f79 | vs_screen | 128x16 | 512x64 | SPECIFIC | duel/start/start_all.ehp:vs_much3_s0001.gim; duel/start/start_e.ehp:vs_much3_s0001.gim; duel/start/start_f.ehp:vs_much3_s0001.gim |
+| ui_es/vs_screen/start_e__d_menu01_s.png | a77116f2 | vs_screen | 256x256 | 1024x1024 | SPECIFIC | duel/start/start_e.ehp:d_menu01_s.gim; duel/start/start_f.ehp:d_menu01_s.gim; duel/start/start_g.ehp:d_menu01_s.gim |
+| ui_es/vs_screen/start_e__vs_bg01_1_s0005.png | 939ffe1b | vs_screen | 256x32 | 1024x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0005.gim; duel/start/start_f.ehp:vs_bg01_1_s0005.gim; duel/start/start_g.ehp:vs_bg01_1_s0005.gim |
+| ui_es/vs_screen/start_e__vs_bg01_1_s0007.png | 3ab04908 | vs_screen | 256x64 | 1024x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0007.gim; duel/start/start_f.ehp:vs_bg01_1_s0007.gim; duel/start/start_g.ehp:vs_bg01_1_s0007.gim |
+| ui_es/vs_screen/start_e__vs_bg01_1_s0008.png | 41ab9f3e | vs_screen | 256x64 | 1024x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0008.gim; duel/start/start_f.ehp:vs_bg01_1_s0008.gim; duel/start/start_g.ehp:vs_bg01_1_s0008.gim |
+| ui_es/vs_screen/start_e__vs_bg01_1_s0012.png | ed29c0fe | vs_screen | 128x32 | 512x128 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0012.gim; duel/start/start_f.ehp:vs_bg01_1_s0012.gim; duel/start/start_g.ehp:vs_bg01_1_s0012.gim |
+| ui_es/vs_screen/start_e__vs_bg01_1_s0014.png | 8788a7c8 | vs_screen | 128x64 | 512x256 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_1_s0014.gim; duel/start/start_f.ehp:vs_bg01_1_s0014.gim; duel/start/start_g.ehp:vs_bg01_1_s0014.gim |
+| ui_es/vs_screen/start_e__vs_bg01_2_s0001.png | 5796698d | vs_screen | 128x16 | 512x64 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_2_s0001.gim; duel/start/start_f.ehp:vs_bg01_2_s0001.gim; duel/start/start_g.ehp:vs_bg01_2_s0001.gim |
+| ui_es/vs_screen/start_e__vs_bg01_2_s0004.png | f081a08d | vs_screen | 128x16 | 512x64 | SPECIFIC | duel/start/start_e.ehp:vs_bg01_2_s0004.gim; duel/start/start_f.ehp:vs_bg01_2_s0004.gim; duel/start/start_g.ehp:vs_bg01_2_s0004.gim |
+| ui_es/vs_screen/start_s__jnk_card01.png | a2fc7092 | vs_screen | 512x256 | 2048x1024 | SPECIFIC | duel/start/start_s.ehp:jnk_card01.gim |
+| ui_es/duel_texts/basic_ss__chain010003.png | c7fd7035 | duel_texts | 64x32 | 256x128 | SPECIFIC | duel/basic_bs.ehp:chain010003.gim; duel/basic_fs.ehp:chain010003.gim; duel/basic_gs.ehp:chain010003.gim |
+| ui_es/duel_texts/basic_ss__chain010005.png | abaeb83c | duel_texts | 128x32 | 512x128 | SPECIFIC | duel/basic_bs.ehp:chain010005.gim; duel/basic_fs.ehp:chain010005.gim; duel/basic_gs.ehp:chain010005.gim |
+| ui_es/duel_texts/basic_ss__dilect_atk00001.png | 880d6d24 | duel_texts | 256x32 | 1024x128 | SPECIFIC | duel/basic_bs.ehp:dilect_atk00001.gim; duel/basic_fs.ehp:dilect_atk00001.gim; duel/basic_gs.ehp:dilect_atk00001.gim |
+| ui_es/duel_texts/basic_ss__dilect_atk00003.png | d8591359 | duel_texts | 128x32 | 512x128 | SPECIFIC | duel/basic_bs.ehp:dilect_atk00003.gim; duel/basic_fs.ehp:dilect_atk00003.gim; duel/basic_gs.ehp:dilect_atk00003.gim |
+| ui_es/duel_texts/basic_ss__next_player0001.png | 9d78973f | duel_texts | 64x32 | 256x128 | SPECIFIC | duel/basic_bs.ehp:next_player0001.gim; duel/basic_fs.ehp:next_player0001.gim; duel/basic_gs.ehp:next_player0001.gim |
+| ui_es/duel_texts/basic_ss__next_player0002.png | 1e0eff3f | duel_texts | 256x32 | 1024x128 | SPECIFIC | duel/basic_bs.ehp:next_player0002.gim; duel/basic_fs.ehp:next_player0002.gim; duel/basic_gs.ehp:next_player0002.gim |
+| ui_es/duel_texts/basic_ss__next_player0004.png | 6d3897cf | duel_texts | 64x32 | 256x128 | SPECIFIC | duel/basic_bs.ehp:next_player0004.gim; duel/basic_fs.ehp:next_player0004.gim; duel/basic_gs.ehp:next_player0004.gim |
+| ui_es/duel_texts/basic_ss__next_player0005.png | 4021e68f | duel_texts | 256x32 | 1024x128 | SPECIFIC | duel/basic_bs.ehp:next_player0005.gim; duel/basic_fs.ehp:next_player0005.gim; duel/basic_gs.ehp:next_player0005.gim |
+| ui_es/duel_texts/basic_ss__start_duel10001.png | 692edb74 | duel_texts | 64x64 | 256x256 | SPECIFIC | duel/basic_bs.ehp:start_duel10001.gim; duel/basic_fs.ehp:start_duel10001.gim; duel/basic_gs.ehp:start_duel10001.gim |
+| ui_es/duel_texts/basic_ss__start_duel10002.png | 8ea8857e | duel_texts | 256x64 | 1024x256 | SPECIFIC | duel/basic_bs.ehp:start_duel10002.gim; duel/basic_fs.ehp:start_duel10002.gim; duel/basic_gs.ehp:start_duel10002.gim |
+| ui_es/duel_texts/basic_ss__start_duel10005.png | 0e4dc413 | duel_texts | 128x32 | 512x128 | SPECIFIC | duel/basic_bs.ehp:start_duel10005.gim; duel/basic_fs.ehp:start_duel10005.gim; duel/basic_gs.ehp:start_duel10005.gim |
 | ui_es/tutorial/tutorial_s__tuto_duelimg01.png | ab860e12 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_s.ehp:tuto_duelimg01.gim |
 | ui_es/tutorial/tutorial_s__tuto_duelimg02.png | 18e1d210 | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_s.ehp:tuto_duelimg02.gim |
 | ui_es/tutorial/tutorial_s__tuto_duelimg03.png | e3014dad | tutorial | 256x256 | 1024x1024 | SPECIFIC | tutorial/tutorial_s.ehp:tuto_duelimg03.gim |

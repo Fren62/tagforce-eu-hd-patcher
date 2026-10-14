@@ -44,6 +44,7 @@ tfpatch textures --lang it --out textures.zip
 ## Limiti noti
 
 - Un salvataggio creato in una lingua diversa da quella della patch non viene riallineato.
+- Su Linux l'installer grafico richiede `libxkbcommon-x11` (X11) o le librerie Wayland, che la maggior parte dei desktop ha già; altrimenti usa la riga di comando. Le finestre di scelta file usano il portale del desktop: se non si aprono, scrivi i percorsi nelle opzioni avanzate.
 - Solo l'emulatore PPSSPP (la patch sostituisce un modulo del gioco nella ISO e le texture sono texture di sostituzione di PPSSPP).
 - I moduli texture pesano circa 1 GB per lingua più una base da 1,4 GB comune a tutte le lingue (il modulo inglese è piccolo).
 

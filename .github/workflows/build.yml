@@ -53,7 +53,7 @@ jobs:
         if: runner.os == 'Linux'
         shell: bash
         run: |
-          sudo apt-get install -y xvfb libgl1-mesa-dri libglx-mesa0
+          sudo apt-get install -y xvfb libgl1-mesa-dri libglx-mesa0 libxkbcommon-x11-0
           export LIBGL_ALWAYS_SOFTWARE=1
           set +e
           xvfb-run -a timeout 12 patcher/tfpatch/target/release/tfpatch-gui

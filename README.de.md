@@ -44,6 +44,7 @@ tfpatch textures --lang de --out textures.zip
 ## Bekannte Einschränkungen
 
 - Ein Spielstand, der in einer anderen Sprache als der des Patches erstellt wurde, wird nicht angepasst.
+- Unter Linux braucht der grafische Installer `libxkbcommon-x11` (X11) oder die Wayland-Bibliotheken, die die meisten Desktops schon haben; sonst die Kommandozeile verwenden. Die Dateidialoge nutzen das Desktop-Portal; öffnen sie sich nicht, geben Sie die Pfade unter „Erweiterte Optionen“ ein.
 - Unterstützt wird nur der Emulator PPSSPP (der Patch ersetzt ein Spielmodul in der ISO, und die Texturen sind PPSSPP-Ersatztexturen).
 - Die Texturmodule sind etwa 1 GB pro Sprache groß, plus eine 1,4 GB große Basis für alle Sprachen (das englische Modul ist klein).
 

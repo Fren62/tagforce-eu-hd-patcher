@@ -44,6 +44,7 @@ tfpatch textures --lang es --out textures.zip
 ## Límites conocidos
 
 - Una partida guardada creada en un idioma distinto al del parche no se reajusta.
+- En Linux, el instalador gráfico necesita `libxkbcommon-x11` (X11) o las bibliotecas de Wayland, que la mayoría de los escritorios ya tienen; si no, usa la línea de comandos. Los diálogos de archivo usan el portal del escritorio: si no se abren, escribe las rutas en las opciones avanzadas.
 - Solo se admite el emulador PPSSPP (el parche sustituye un módulo del juego en la ISO y las texturas son texturas de reemplazo de PPSSPP).
 - Los módulos de texturas pesan unos 1 GB por idioma, más una base de 1,4 GB común a todos los idiomas (el módulo en inglés es pequeño).
 

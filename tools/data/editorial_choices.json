@@ -1,0 +1,486 @@
+{
+ "description": "scelte editoriali comuni a tutte le lingue: il patcher di ciascuna lingua deve applicare la riga corretta della propria lingua",
+ "scene": "st01_t01/Scr003E (Syrus e Chumley)",
+ "entries": [
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#146",
+   "original": "Mio padre possiede un'azienda che⏎produce salsa piccante.",
+   "corrected": "La mia famiglia produce sake.",
+   "inherited": false,
+   "reason": "sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake)"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#147",
+   "original": "Mi ha mandato della salsa piccante⏎con la mia ultima paga.⏎Ti farò uno sconto ragionevole.⏎Vuoi...",
+   "corrected": "L'altro giorno mi hanno mandato dello shochu\ninsieme ai soldi da casa, quindi la prossima volta...",
+   "inherited": false,
+   "reason": "shochu al posto di salsa piccante"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#150",
+   "original": "Mio padre possiede un'azienda che⏎produce salsa piccante.",
+   "corrected": null,
+   "inherited": true,
+   "reason": "come 146"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#151",
+   "original": "Mi ha mandato della salsa piccante con la ⏎mia ultima paga.⏎Ti farò uno sconto ragionevole.⏎Vuoi...",
+   "corrected": "L'altro giorno mi hanno mandato dello shochu\ninsieme ai soldi da casa, quindi la prossima volta...",
+   "inherited": false,
+   "reason": "come 147"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#163",
+   "original": "Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini!",
+   "corrected": "Wow, ce l'hai fatta sul serio.\nÈ 《C026_2》...\nIn abito da cameriera!",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini (giapponese: メイド服)"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#168",
+   "original": "Wow, ce l'hai fatta sul serio.⏎È 《C026_2》...⏎E indossa un bikini!",
+   "corrected": null,
+   "inherited": true,
+   "reason": "come 163"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#188",
+   "original": "Oddio, sto sbavando un po'...",
+   "corrected": "Oddio, non sono un granché...",
+   "inherited": false,
+   "reason": "solo italiano: \"sto sbavando\" era un errore di traduzione (giapponese: \"non sono poi così bravo\")"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#189",
+   "original": "Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini!",
+   "corrected": "Ehi, puoi farmi un disegno?\nDisegnami 《C026_2》 vestita da cameriera!",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#191",
+   "original": "Ecco, usa questo!",
+   "corrected": "Ecco, usa questo vestito da cameriera!",
+   "inherited": false,
+   "reason": "Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#194",
+   "original": "Oddio, sto sbavando un po'...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "come 188"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#195",
+   "original": "Ehi, puoi farmi un disegno?⏎Disegnami 《C026_2》 in bikini!",
+   "corrected": null,
+   "inherited": true,
+   "reason": "come 189"
+  },
+  {
+   "language": "it",
+   "id": "st01_t01/Scr003E#197",
+   "original": "Ecco, usa questo!",
+   "corrected": "Ecco, usa questo vestito da cameriera!",
+   "inherited": false,
+   "reason": "come 191"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#146",
+   "original": "My father owns a hot sauce⏎company.",
+   "corrected": "My father owns a sake\nbrewery.",
+   "inherited": false,
+   "reason": "sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake)"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#147",
+   "original": "He sent me some hot sauce with my⏎last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna...",
+   "corrected": "He sent me some shochu with my\nlast allowance.\nI'll give ya a reasonable discount.\nDo you wanna...",
+   "inherited": false,
+   "reason": "shochu al posto di salsa piccante"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#150",
+   "original": "My father owns a hot sauce⏎company.",
+   "corrected": "My father owns a sake\nbrewery.",
+   "inherited": false,
+   "reason": "come 146"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#151",
+   "original": "He sent me some hot sauce⏎with my last allowance.⏎I'll give ya a reasonable discount.⏎Do you wanna...",
+   "corrected": "He sent me some shochu\nwith my last allowance.\nI'll give ya a reasonable discount.\nDo you wanna...",
+   "inherited": false,
+   "reason": "come 147"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#163",
+   "original": "Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a bikini!",
+   "corrected": "Wow. You really did it.\nIt's 《C026_2》...\nWearing a maid outfit!",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini (giapponese: メイド服)"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#168",
+   "original": "Wow. You really did it.⏎It's 《C026_2》...⏎Wearing a bikini!",
+   "corrected": "Wow. You really did it.\nIt's 《C026_2》...\nWearing a maid outfit!",
+   "inherited": false,
+   "reason": "come 163"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#188",
+   "original": "Well, I suppose I dabble a little...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "solo italiano: \"sto sbavando\" era un errore di traduzione (giapponese: \"non sono poi così bravo\")"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#189",
+   "original": "Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a bikini!",
+   "corrected": "Hey, can you draw a picture for me then?\nDraw me 《C026_2》 in a maid outfit!",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#191",
+   "original": "Here, you can use this!",
+   "corrected": "Here, use this maid outfit!",
+   "inherited": false,
+   "reason": "Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#194",
+   "original": "Well, I suppose I dabble a little...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "come 188"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#195",
+   "original": "Hey, can you draw a picture for me then?⏎Draw me 《C026_2》 in a bikini!",
+   "corrected": "Hey, can you draw a picture for me then?\nDraw me 《C026_2》 in a maid outfit!",
+   "inherited": false,
+   "reason": "come 189"
+  },
+  {
+   "language": "en",
+   "id": "st01_t01/Scr003E#197",
+   "original": "Here, you can use this!",
+   "corrected": "Here, use this maid outfit!",
+   "inherited": false,
+   "reason": "come 191"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#146",
+   "original": "Mon père a une société qui fabrique de la⏎sauce épicée.",
+   "corrected": "Mon père possède une\ndistillerie de saké.",
+   "inherited": false,
+   "reason": "sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake)"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#147",
+   "original": "Il m'en a envoyé avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux...",
+   "corrected": "Il m'a envoyé du shochu avec ma dernière bourse.\nJe suis prêt à te faire une réduction.\nTu veux...",
+   "inherited": false,
+   "reason": "shochu al posto di salsa piccante"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#150",
+   "original": "Mon père a une société qui fabrique de la⏎sauce épicée.",
+   "corrected": "Mon père possède une\ndistillerie de saké.",
+   "inherited": false,
+   "reason": "come 146"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#151",
+   "original": "Il m'en a envoyé avec ma dernière bourse.⏎Je suis prêt à te faire une réduction.⏎Tu veux...",
+   "corrected": "Il m'a envoyé du shochu avec ma dernière bourse.\nJe suis prêt à te faire une réduction.\nTu veux...",
+   "inherited": false,
+   "reason": "come 147"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#163",
+   "original": "Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En bikini !",
+   "corrected": "Ouah. Tu as réussi.\nC'est la 《C026_2》...\nEn tenue de servante !",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini (giapponese: メイド服)"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#168",
+   "original": "Ouah. Tu as réussi.⏎C'est la 《C026_2》...⏎En bikini !",
+   "corrected": "Ouah. Tu as réussi.\nC'est la 《C026_2》...\nEn tenue de servante !",
+   "inherited": false,
+   "reason": "come 163"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#188",
+   "original": "Eh bien, je suppose que oui...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "solo italiano: \"sto sbavando\" era un errore di traduzione (giapponese: \"non sono poi così bravo\")"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#189",
+   "original": "Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en bikini !",
+   "corrected": "Hé, tu peux me dessiner quelque chose, alors ?\nComme, par exemple, la 《C026_2》 en tenue de servante !",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#191",
+   "original": "Hé, que penses-tu de ça !",
+   "corrected": "Tiens, utilise cette tenue de servante !",
+   "inherited": false,
+   "reason": "Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#194",
+   "original": "Eh bien, je suppose que oui...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "come 188"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#195",
+   "original": "Hé, tu peux me dessiner quelque chose, alors ?⏎Comme, par exemple, la 《C026_2》 en bikini !",
+   "corrected": "Hé, tu peux me dessiner quelque chose, alors ?\nComme, par exemple, la 《C026_2》 en tenue de servante !",
+   "inherited": false,
+   "reason": "come 189"
+  },
+  {
+   "language": "fr",
+   "id": "st01_t01/Scr003E#197",
+   "original": "Hé, que penses-tu de ça !",
+   "corrected": "Tiens, utilise cette tenue de servante !",
+   "inherited": false,
+   "reason": "come 191"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#146",
+   "original": "Meinem Vater gehört eine Firma,⏎die scharfe Saucen herstellt.",
+   "corrected": "Meinem Vater gehört eine\nSake-Brauerei.",
+   "inherited": false,
+   "reason": "sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake)"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#147",
+   "original": "Er hat mir zusammen mit dem Taschengeld⏎auch etwas scharfe Sauce geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse?",
+   "corrected": "Er hat mir zusammen mit dem Taschengeld\nauch etwas Shochu geschickt.\nIch mach dir einen guten Preis.\nInteresse?",
+   "inherited": false,
+   "reason": "shochu al posto di salsa piccante"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#150",
+   "original": "Meinem Vater gehört eine Firma,⏎die scharfe Saucen herstellt.",
+   "corrected": "Meinem Vater gehört eine\nSake-Brauerei.",
+   "inherited": false,
+   "reason": "come 146"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#151",
+   "original": "Er hat mir zusammen mit dem Taschengeld⏎auch etwas scharfe Sauce geschickt.⏎Ich mach dir einen guten Preis.⏎Interesse?",
+   "corrected": "Er hat mir zusammen mit dem Taschengeld\nauch etwas Shochu geschickt.\nIch mach dir einen guten Preis.\nInteresse?",
+   "inherited": false,
+   "reason": "come 147"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#163",
+   "original": "Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Bikini!",
+   "corrected": "Wow. Du hast es geschafft.\n《C026_2》...\nIm Dienstmädchen-Outfit!",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini (giapponese: メイド服)"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#168",
+   "original": "Wow. Du hast es geschafft.⏎《C026_2》...⏎Im Bikini!",
+   "corrected": "Wow. Du hast es geschafft.\n《C026_2》...\nIm Dienstmädchen-Outfit!",
+   "inherited": false,
+   "reason": "come 163"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#188",
+   "original": "Tja, ein wenig schon ...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "solo italiano: \"sto sbavando\" era un errore di traduzione (giapponese: \"non sono poi così bravo\")"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#189",
+   "original": "Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》 im Bikini!",
+   "corrected": "Hey, kannst du was für mich zeichnen?\nZeichne mir 《C026_2》 im Dienstmädchen-Outfit!",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#191",
+   "original": "Hier, du kannst den hier nehmen!",
+   "corrected": "Hier, nimm dieses Dienstmädchen-Outfit!",
+   "inherited": false,
+   "reason": "Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#194",
+   "original": "Tja, ein wenig schon ...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "come 188"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#195",
+   "original": "Hey, kannst du was für mich zeichnen?⏎Zeichne mir 《C026_2》⏎im Bikini!",
+   "corrected": "Hey, kannst du was für mich zeichnen?\nZeichne mir 《C026_2》\nim Dienstmädchen-Outfit!",
+   "inherited": false,
+   "reason": "come 189"
+  },
+  {
+   "language": "de",
+   "id": "st01_t01/Scr003E#197",
+   "original": "Hier, du kannst den hier nehmen!",
+   "corrected": "Hier, nimm dieses Dienstmädchen-Outfit!",
+   "inherited": false,
+   "reason": "come 191"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#146",
+   "original": "Mi padre es el dueño de una⏎empresa de salsa picante.",
+   "corrected": "Mi padre es el dueño de una\ndestilería de sake.",
+   "inherited": false,
+   "reason": "sake al posto di salsa piccante (fedele al giapponese: la famiglia di Chumley fa sake)"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#147",
+   "original": "En la última paga me envió⏎un poco de salsa picante.⏎Te haré un descuento razonable.⏎¿Quieres...?",
+   "corrected": "En la última paga me envió\nun poco de shochu.\nTe haré un descuento razonable.\n¿Quieres...?",
+   "inherited": false,
+   "reason": "shochu al posto di salsa piccante"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#150",
+   "original": "Mi padre es el dueño de una⏎empresa de salsa picante.",
+   "corrected": "Mi padre es el dueño de una\ndestilería de sake.",
+   "inherited": false,
+   "reason": "come 146"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#151",
+   "original": "En la última paga me envió⏎un poco de salsa picante.⏎Te haré un descuento razonable.⏎¿Quieres...?",
+   "corrected": "En la última paga me envió\nun poco de shochu.\nTe haré un descuento razonable.\n¿Quieres...?",
+   "inherited": false,
+   "reason": "come 147"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#163",
+   "original": "Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y lleva un bikini!",
+   "corrected": "Vaya... Lo has conseguido.\nEs 《C026_2》...\n¡Y va vestida de criada!",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini (giapponese: メイド服)"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#168",
+   "original": "Vaya... Lo has conseguido.⏎Es 《C026_2》...⏎¡Y lleva un bikini!",
+   "corrected": "Vaya... Lo has conseguido.\nEs 《C026_2》...\n¡Y va vestida de criada!",
+   "inherited": false,
+   "reason": "come 163"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#188",
+   "original": "Bueno, supongo que hago⏎mis pinitos...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "solo italiano: \"sto sbavando\" era un errore di traduzione (giapponese: \"non sono poi così bravo\")"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#189",
+   "original": "Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 en bikini!",
+   "corrected": "Oye,\n¿puedes hacerme un dibujo?\n¡Dibújame a 《C026_2》 vestida de criada!",
+   "inherited": false,
+   "reason": "abito da cameriera al posto di bikini"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#191",
+   "original": "¡Ten, puedes usar éste!",
+   "corrected": "¡Ten, usa este traje de criada!",
+   "inherited": false,
+   "reason": "Syrus passa un abito da cameriera come modello (メイド服): col bikini la battuta non aveva senso"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#194",
+   "original": "Bueno, supongo que hago⏎mis pinitos...",
+   "corrected": null,
+   "inherited": true,
+   "reason": "come 188"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#195",
+   "original": "Oye,⏎¿puedes hacerme un dibujo?⏎¡Dibújame a 《C026_2》 en bikini!",
+   "corrected": "Oye,\n¿puedes hacerme un dibujo?\n¡Dibújame a 《C026_2》 vestida de criada!",
+   "inherited": false,
+   "reason": "come 189"
+  },
+  {
+   "language": "es",
+   "id": "st01_t01/Scr003E#197",
+   "original": "¡Ten, puedes usar éste!",
+   "corrected": "¡Ten, usa este traje de criada!",
+   "inherited": false,
+   "reason": "come 191"
+  }
+ ]
+}

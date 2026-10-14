@@ -1,5 +1,5 @@
-//! Applicazione di una patch modulare (formato 2) alla ISO: selezione dei moduli, calcolo della dimensione finale
-//! (senza scrivere nulla) e scrittura della ISO compatta.
+//! Applies a modular patch (format 2) to the ISO: module selection, final size computation
+//! (without writing anything) and writing of the compact ISO.
 use crate::iso;
 use anyhow::{Context, Result, bail};
 use md5::Md5;
@@ -10,10 +10,10 @@ use std::fs::File;
 use std::io::{BufWriter, Read, Seek, SeekFrom, Write};
 use std::path::Path;
 
-/// MD5 della ISO europea ULES00600 v1.01 completa (redump.org); la copia del progetto manca dei 2 KB finali di zeri.
+/// MD5 of the complete European ULES00600 v1.01 dump (redump.org); the project's copy lacks the final 2 KB of zeros.
 pub const MD5_REDUMP: &str = "719c99478032a4210ae877832061e9fd";
 
-/// Moduli attivi (tutti veri = installazione completa).
+/// Active modules (all true = full installation).
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub struct Options {
     pub cards: bool,
@@ -28,7 +28,7 @@ impl Default for Options {
 }
 
 impl Options {
-    fn attivi(&self) -> HashSet<&'static str> {
+    fn active(&self) -> HashSet<&'static str> {
         let mut s = HashSet::new();
         if self.cards {
             s.insert("cards");
@@ -43,8 +43,10 @@ impl Options {
     }
 }
 
+/// One operation of the patch: `delta` (bsdiff against the same file of the original ISO), `new` (whole content)
+/// or `link` (the path points to the data of another path). `needs` lists the modules that must be active.
 #[derive(Deserialize, Clone)]
-pub struct Voce {
+pub struct Entry {
     pub op: String,
     pub path: String,
     #[serde(default)]
@@ -61,28 +63,33 @@ pub struct Voce {
     pub needs: Vec<String>,
 }
 
+/// Contents of `patch.json`. The JSON keys keep their original (Italian) names: they are part of the file format
+/// shared with the released tools, so they must not change.
 #[derive(Deserialize)]
-pub struct Meta {
-    pub formato: u32,
-    pub lingua: String,
+pub struct PatchMeta {
+    #[serde(rename = "formato")]
+    pub format: u32,
+    #[serde(rename = "lingua")]
+    pub language: String,
     pub iso_md5: String,
-    pub voci: Vec<Voce>,
+    #[serde(rename = "voci")]
+    pub entries: Vec<Entry>,
 }
 
 pub fn hex(b: impl AsRef<[u8]>) -> String {
     b.as_ref().iter().map(|x| format!("{x:02x}")).collect()
 }
 
-pub fn leggi_meta(patch: &Path) -> Result<Meta> {
-    let mut zip = zip::ZipArchive::new(File::open(patch).with_context(|| format!("patch non apribile: {}", patch.display()))?)?;
-    let meta: Meta = serde_json::from_reader(zip.by_name("patch.json")?)?;
-    if meta.formato != 2 {
-        bail!("formato di patch non supportato ({}): serve una patch modulare (formato 2)", meta.formato);
+pub fn read_meta(patch: &Path) -> Result<PatchMeta> {
+    let mut zip = zip::ZipArchive::new(File::open(patch).with_context(|| format!("cannot open patch: {}", patch.display()))?)?;
+    let meta: PatchMeta = serde_json::from_reader(zip.by_name("patch.json")?)?;
+    if meta.format != 2 {
+        bail!("unsupported patch format ({}): a modular patch (format 2) is required", meta.format);
     }
     Ok(meta)
 }
 
-/// MD5 della ISO: (cosi' com'e', con i 2 KB finali di zeri aggiunti).
+/// MD5 of the ISO: (as is, with the final 2 KB of zeros appended).
 pub fn md5_iso(path: &Path) -> Result<(String, String)> {
     let mut h = Md5::new();
     let mut f = File::open(path)?;
@@ -94,153 +101,153 @@ pub fn md5_iso(path: &Path) -> Result<(String, String)> {
         }
         h.update(&buf[..n]);
     }
-    let diretto = hex(h.clone().finalize());
+    let as_is = hex(h.clone().finalize());
     h.update([0u8; 2048]);
-    Ok((diretto, hex(h.finalize())))
+    Ok((as_is, hex(h.finalize())))
 }
 
-/// Controlla che la ISO sia la ULES00600 v1.01 europea (accetta anche la copia senza i 2 KB finali di zeri).
-pub fn verifica_iso(path: &Path, md5_attesi: &[&str]) -> Result<bool> {
-    let (diretto, con_zeri) = md5_iso(path)?;
-    Ok(md5_attesi.contains(&diretto.as_str()) || md5_attesi.contains(&con_zeri.as_str()) || con_zeri == MD5_REDUMP)
+/// Checks that the ISO is the European ULES00600 v1.01 (the copy without the final 2 KB of zeros is accepted too).
+pub fn verify_iso(path: &Path, expected_md5: &[&str]) -> Result<bool> {
+    let (as_is, padded) = md5_iso(path)?;
+    Ok(expected_md5.contains(&as_is.as_str()) || expected_md5.contains(&padded.as_str()) || padded == MD5_REDUMP)
 }
 
-/// Chiave della tabella delle dimensioni nel manifest: cards, text, strip come cifre (es. "111").
-pub fn chiave(o: &Options) -> String {
+/// Key of the size table in the manifest: cards, text, strip as digits (e.g. "111").
+pub fn size_key(o: &Options) -> String {
     format!("{}{}{}", o.cards as u8, o.text as u8, o.strip as u8)
 }
 
 #[derive(Clone, Copy, PartialEq, Eq, Hash, PartialOrd, Ord)]
-enum D {
-    Orig(u32, u32), // extent, dimensione
-    Mem(usize),     // indice in `scelte`
+enum Data {
+    Orig(u32, u32), // extent, size: data that stays where it is in the original ISO
+    Mem(usize),     // index into the selected entries: data produced by the patch
 }
 
-/// Voci da applicare, nell'ordine: prima i dati (per ogni file quella con piu' `needs` tutti attivi), poi i link.
-fn scegli<'a>(voci: &'a [Voce], o: &Options) -> Vec<&'a Voce> {
-    let attivi = o.attivi();
-    let ok = |v: &Voce| v.needs.iter().all(|n| attivi.contains(n.as_str()));
-    let mut migliore: HashMap<&str, &Voce> = HashMap::new();
-    let mut ordine: Vec<&str> = Vec::new();
-    for v in voci.iter().filter(|v| v.op != "link" && ok(v)) {
-        match migliore.get(v.path.as_str()) {
+/// Entries to apply, in order: data first (for each file the one with the most `needs`, all active), then the links.
+fn select<'a>(entries: &'a [Entry], o: &Options) -> Vec<&'a Entry> {
+    let active = o.active();
+    let enabled = |e: &Entry| e.needs.iter().all(|n| active.contains(n.as_str()));
+    let mut best: HashMap<&str, &Entry> = HashMap::new();
+    let mut order: Vec<&str> = Vec::new();
+    for e in entries.iter().filter(|e| e.op != "link" && enabled(e)) {
+        match best.get(e.path.as_str()) {
             None => {
-                ordine.push(&v.path);
-                migliore.insert(&v.path, v);
+                order.push(&e.path);
+                best.insert(&e.path, e);
             }
-            Some(p) if v.needs.len() > p.needs.len() => {
-                migliore.insert(&v.path, v);
+            Some(p) if e.needs.len() > p.needs.len() => {
+                best.insert(&e.path, e);
             }
             _ => {}
         }
     }
-    let mut out: Vec<&Voce> = ordine.iter().map(|p| migliore[p]).collect();
-    out.extend(voci.iter().filter(|v| v.op == "link" && ok(v)));
+    let mut out: Vec<&Entry> = order.iter().map(|p| best[p]).collect();
+    out.extend(entries.iter().filter(|e| e.op == "link" && enabled(e)));
     out
 }
 
-struct Piano {
-    stato: HashMap<String, D>,
-    unici: Vec<D>,
+struct Plan {
+    state: HashMap<String, Data>,
+    unique: Vec<Data>,
 }
 
-fn costruisci(src: &iso::Iso, scelte: &[&Voce]) -> Result<Piano> {
-    let mut stato: HashMap<String, D> = src.voci.iter().map(|(p, v)| (p.clone(), D::Orig(v.extent, v.size))).collect();
-    for (i, v) in scelte.iter().enumerate() {
-        if !stato.contains_key(&v.path) {
-            bail!("file non presente nella ISO: {}", v.path);
+fn build_plan(src: &iso::Iso, selected: &[&Entry]) -> Result<Plan> {
+    let mut state: HashMap<String, Data> = src.files.iter().map(|(p, e)| (p.clone(), Data::Orig(e.extent, e.size))).collect();
+    for (i, e) in selected.iter().enumerate() {
+        if !state.contains_key(&e.path) {
+            bail!("file not present in the ISO: {}", e.path);
         }
-        match v.op.as_str() {
+        match e.op.as_str() {
             "delta" | "new" => {
-                stato.insert(v.path.clone(), D::Mem(i));
+                state.insert(e.path.clone(), Data::Mem(i));
             }
             "link" => {
-                let t = *stato.get(v.target.as_ref().context("target mancante")?).context("target non nella ISO")?;
-                stato.insert(v.path.clone(), t);
+                let t = *state.get(e.target.as_ref().context("missing link target")?).context("link target not in the ISO")?;
+                state.insert(e.path.clone(), t);
             }
-            o => bail!("operazione sconosciuta: {o}"),
+            o => bail!("unknown operation: {o}"),
         }
     }
-    let min_extent = src.voci.values().filter(|v| v.size > 0).map(|v| v.extent as u64 * iso::SECTOR).min().unwrap_or(u64::MAX);
-    if src.meta_fine > min_extent {
-        bail!("struttura della ISO non prevista (directory dopo i dati)");
+    let min_extent = src.files.values().filter(|e| e.size > 0).map(|e| e.extent as u64 * iso::SECTOR).min().unwrap_or(u64::MAX);
+    if src.meta_end > min_extent {
+        bail!("unexpected ISO layout (directories after file data)");
     }
-    let mut unici: Vec<D> = stato.values().copied().filter(|d| !matches!(d, D::Orig(_, 0))).collect();
-    unici.sort();
-    unici.dedup();
-    Ok(Piano { stato, unici })
+    let mut unique: Vec<Data> = state.values().copied().filter(|d| !matches!(d, Data::Orig(_, 0))).collect();
+    unique.sort();
+    unique.dedup();
+    Ok(Plan { state, unique })
 }
 
-/// Dimensione in byte della ISO finale con questi moduli (non scrive nulla, non legge i dati).
-pub fn dimensione(iso_path: &Path, patch: &Path, o: &Options) -> Result<u64> {
-    let meta = leggi_meta(patch)?;
-    let src = iso::Iso::apri(File::open(iso_path)?)?;
-    let scelte = scegli(&meta.voci, o);
-    let piano = costruisci(&src, &scelte)?;
-    let mut tot = src.meta_fine;
-    for d in &piano.unici {
+/// Size in bytes of the final ISO with these modules (writes nothing, reads no file data).
+pub fn final_size(iso_path: &Path, patch: &Path, o: &Options) -> Result<u64> {
+    let meta = read_meta(patch)?;
+    let src = iso::Iso::open(File::open(iso_path)?)?;
+    let selected = select(&meta.entries, o);
+    let plan = build_plan(&src, &selected)?;
+    let mut total = src.meta_end;
+    for d in &plan.unique {
         let len = match d {
-            D::Orig(_, n) => *n as u64,
-            D::Mem(i) => scelte[*i].size.context("size mancante")?,
+            Data::Orig(_, n) => *n as u64,
+            Data::Mem(i) => selected[*i].size.context("missing size")?,
         };
-        tot += len.next_multiple_of(iso::SECTOR);
+        total += len.next_multiple_of(iso::SECTOR);
     }
-    Ok(tot)
+    Ok(total)
 }
 
-/// Scrive la ISO patchata. `progress(frazione 0..1, messaggio)`.
-pub fn applica(iso_path: &Path, patch: &Path, out: &Path, o: &Options, progress: &mut dyn FnMut(f32, &str)) -> Result<()> {
-    let meta = leggi_meta(patch)?;
+/// Writes the patched ISO. `progress(fraction 0..1, message)`.
+pub fn apply(iso_path: &Path, patch: &Path, out: &Path, o: &Options, progress: &mut dyn FnMut(f32, &str)) -> Result<()> {
+    let meta = read_meta(patch)?;
     let mut zip = zip::ZipArchive::new(File::open(patch)?)?;
-    let mut src = iso::Iso::apri(File::open(iso_path)?)?;
-    let scelte = scegli(&meta.voci, o);
-    let piano = costruisci(&src, &scelte)?;
+    let mut src = iso::Iso::open(File::open(iso_path)?)?;
+    let selected = select(&meta.entries, o);
+    let plan = build_plan(&src, &selected)?;
 
-    // 1. dati nuovi: delta applicati e controllati
+    // 1. new data: deltas applied and checked
     let mut mem: HashMap<usize, Vec<u8>> = HashMap::new();
-    let n_data = scelte.iter().filter(|v| v.op != "link").count().max(1);
-    let mut fatti = 0;
-    for (i, v) in scelte.iter().enumerate() {
-        if v.op == "link" {
+    let n_data = selected.iter().filter(|e| e.op != "link").count().max(1);
+    let mut done = 0;
+    for (i, e) in selected.iter().enumerate() {
+        if e.op == "link" {
             continue;
         }
         let mut blob = Vec::new();
-        zip.by_name(v.blob.as_ref().context("blob mancante")?)?.read_to_end(&mut blob)?;
-        let nuovo = if v.op == "delta" {
-            let s = src.voci.get(v.src.as_ref().context("src mancante")?).copied().context("src non nella ISO")?;
-            let orig = src.leggi_file(&s)?;
+        zip.by_name(e.blob.as_ref().context("missing blob")?)?.read_to_end(&mut blob)?;
+        let new_data = if e.op == "delta" {
+            let s = src.files.get(e.src.as_ref().context("missing src")?).copied().context("src not in the ISO")?;
+            let orig = src.read_file(&s)?;
             let mut buf = Vec::new();
             qbsdiff::Bspatch::new(&blob)?.apply(&orig, &mut buf)?;
             buf
         } else {
             blob
         };
-        if Some(nuovo.len() as u64) != v.size || Some(hex(Sha256::digest(&nuovo))) != v.sha256 {
-            bail!("risultato errato per {}", v.path);
+        if Some(new_data.len() as u64) != e.size || Some(hex(Sha256::digest(&new_data))) != e.sha256 {
+            bail!("wrong result for {}", e.path);
         }
-        mem.insert(i, nuovo);
-        fatti += 1;
-        progress(0.3 * fatti as f32 / n_data as f32, &v.path);
+        mem.insert(i, new_data);
+        done += 1;
+        progress(0.3 * done as f32 / n_data as f32, &e.path);
     }
 
-    // 2. ISO compatta: intestazione e directory invariate, poi solo i dati ancora usati
-    let mut out_f = BufWriter::new(File::create(out).with_context(|| format!("non riesco a creare {}", out.display()))?);
-    let mut testa = vec![0u8; src.meta_fine as usize];
+    // 2. compact ISO: header and directories unchanged, then only the data still in use
+    let mut out_f = BufWriter::new(File::create(out).with_context(|| format!("cannot create {}", out.display()))?);
+    let mut head = vec![0u8; src.meta_end as usize];
     src.f.seek(SeekFrom::Start(0))?;
-    src.f.read_exact(&mut testa)?;
-    out_f.write_all(&testa)?;
-    let mut sett = (src.meta_fine / iso::SECTOR) as u32;
-    let mut posto: HashMap<D, u32> = HashMap::new();
-    let tot_blocchi = piano.unici.len().max(1);
-    for (k, d) in piano.unici.iter().enumerate() {
-        posto.insert(*d, sett);
+    src.f.read_exact(&mut head)?;
+    out_f.write_all(&head)?;
+    let mut sector = (src.meta_end / iso::SECTOR) as u32;
+    let mut placed: HashMap<Data, u32> = HashMap::new();
+    let n_blocks = plan.unique.len().max(1);
+    for (k, d) in plan.unique.iter().enumerate() {
+        placed.insert(*d, sector);
         let len = match d {
-            D::Orig(e, n) => {
+            Data::Orig(e, n) => {
                 src.f.seek(SeekFrom::Start(*e as u64 * iso::SECTOR))?;
                 std::io::copy(&mut (&src.f).take(*n as u64), &mut out_f)?;
                 *n as u64
             }
-            D::Mem(i) => {
+            Data::Mem(i) => {
                 let m = &mem[i];
                 out_f.write_all(m)?;
                 m.len() as u64
@@ -248,22 +255,22 @@ pub fn applica(iso_path: &Path, patch: &Path, out: &Path, o: &Options, progress:
         };
         let pad = len.next_multiple_of(iso::SECTOR) - len;
         out_f.write_all(&vec![0u8; pad as usize])?;
-        sett += len.div_ceil(iso::SECTOR) as u32;
+        sector += len.div_ceil(iso::SECTOR) as u32;
         if k % 16 == 0 {
-            progress(0.3 + 0.7 * k as f32 / tot_blocchi as f32, "ISO");
+            progress(0.3 + 0.7 * k as f32 / n_blocks as f32, "ISO");
         }
     }
     let mut out_f = out_f.into_inner().map_err(|e| e.into_error())?;
-    for (p, v) in &src.voci {
-        let d = piano.stato[p];
+    for (p, entry) in &src.files {
+        let d = plan.state[p];
         let (e, n) = match d {
-            D::Orig(_, 0) => continue,
-            D::Orig(_, n) => (posto[&d], n),
-            D::Mem(i) => (posto[&d], mem[&i].len() as u32),
+            Data::Orig(_, 0) => continue,
+            Data::Orig(_, n) => (placed[&d], n),
+            Data::Mem(i) => (placed[&d], mem[&i].len() as u32),
         };
-        iso::imposta(&mut out_f, v.rec_off, e, n)?;
+        iso::set_entry(&mut out_f, entry.rec_off, e, n)?;
     }
-    iso::imposta_volume(&mut out_f, sett)?;
+    iso::set_volume_size(&mut out_f, sector)?;
     out_f.flush()?;
     progress(1.0, "ISO");
     Ok(())

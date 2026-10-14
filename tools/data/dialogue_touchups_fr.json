@@ -1,0 +1,652 @@
+{
+ "exact": {
+  "Avec plaisir, Doyen 《C038_4》...": "Avec plaisir, Chancelier 《C038_4》...",
+  "Si le Doyen Sheppard⏎voulait bien que je revienne...": "Si le Chancelier Sheppard⏎voulait bien que je revienne...",
+  "Doyen, que faites-vous là ?!?": "Chancelier, que faites-vous là ?!?",
+  "Doyen, vous connaissez l'alchimie ?": "Chancelier, vous connaissez l'alchimie ?",
+  "À partir d'aujourd'hui, appelez-moi⏎Doyen Crowler !": "À partir d'aujourd'hui, appelez-moi⏎Chancelier Crowler !",
+  "Doyen Crowler...": "Chancelier Crowler...",
+  "Doyen Temporaire Crowler.": "Chancelier Temporaire Crowler.",
+  "Doyen Sheppard !": "Chancelier Sheppard !",
+  "Je sais, Doyen !⏎Du respect pour son adversaire !": "Je sais, Chancelier !⏎Du respect pour son adversaire !",
+  "Ha ha ha !⏎Elle est bonne, Doyen !": "Ha ha ha !⏎Elle est bonne, Chancelier !",
+  "Je suis le Doyen《C038_4》.": "Je suis le Chancelier《C038_4》.",
+  "Si tu reçois un e-mail de félicitations de⏎la part du doyen...": "Si tu reçois un e-mail de félicitations de⏎la part du chancelier...",
+  "Ces derniers reçoivent un e-mail de⏎félicitations de la part du doyen.": "Ces derniers reçoivent un e-mail de⏎félicitations de la part du chancelier.",
+  "Tu veux écouter l'histoire⏎du Doyen ?": "Tu veux écouter l'histoire⏎du Chancelier ?",
+  "Le terminal de l'Arène de Duel ne répond plus!": "Le terminal de l'Arène ne répond plus !",
+  "Hé, que penses-tu de ça !": "Tiens, utilise cette tenue de servante !"
+ },
+ "parts": [
+  [
+   "Utilise-là",
+   "Utilise-la"
+  ],
+  [
+   "C'est toi qui veut, alors",
+   "C'est toi qui veux, alors"
+  ],
+  [
+   "préfèrerais avoir volley-ball",
+   "préférerais jouer au volley-ball"
+  ],
+  [
+   "Quel le Duel",
+   "Que le Duel"
+  ],
+  [
+   "Quel Carte Magie reste",
+   "Quelle Carte Magie reste"
+  ],
+  [
+   "Qui sait , Le futur",
+   "Qui sait, le futur"
+  ],
+  [
+   "Ballade-toi un peu",
+   "Balade-toi un peu"
+  ],
+  [
+   "Pain au nouilles",
+   "Pain aux nouilles"
+  ],
+  [
+   "Pain aux ravolis",
+   "Pain aux raviolis"
+  ],
+  [
+   "Pain au durion",
+   "Pain au durian"
+  ],
+  [
+   "Sandwich au truffes",
+   "Sandwich aux truffes"
+  ],
+  [
+   "Je sais comment ce que tu ressens",
+   "Je sais ce que tu ressens"
+  ],
+  [
+   "a cru que volais",
+   "a cru que je volais"
+  ],
+  [
+   "Ça peut semble",
+   "Ça peut sembler"
+  ],
+  [
+   "ça peut semble",
+   "ça peut sembler"
+  ],
+  [
+   "Tu revoies",
+   "Tu revois"
+  ],
+  [
+   "attends que 《C006_2》 voit ça",
+   "attends que 《C006_2》 voie ça"
+  ],
+  [
+   "Huh ?",
+   "Hein ?"
+  ],
+  [
+   "Huh !?",
+   "Hein !?"
+  ],
+  [
+   "tu n'as pas super bien agit",
+   "tu n'as pas super bien agi"
+  ],
+  [
+   "Quoi que. On ne sait",
+   "Quoique. On ne sait"
+  ],
+  [
+   "Hmm... Pas même.",
+   "Hmm... Pas mal."
+  ],
+  [
+   "règles: limites",
+   "règles : limites"
+  ],
+  [
+   "aujourd' hui",
+   "aujourd'hui"
+  ],
+  [
+   "pâte d'haricot",
+   "pâte de haricots"
+  ],
+  [
+   "aux oeufs",
+   "aux œufs"
+  ],
+  [
+   "à l'oeuf",
+   "à l'œuf"
+  ],
+  [
+   "c' est une promesse",
+   "c'est une promesse"
+  ],
+  [
+   "pas très bien piocher",
+   "pas très bien pioché"
+  ],
+  [
+   "Quelque chose à dû clocher",
+   "Quelque chose a dû clocher"
+  ],
+  [
+   "J'ai suis muté",
+   "Je suis muté"
+  ],
+  [
+   "Réouverture à 2:00",
+   "Réouverture à 14:00"
+  ],
+  [
+   "déjà partenaire !",
+   "déjà partenaires !"
+  ],
+  [
+   "déjà partenaire, non?",
+   "déjà partenaires, non ?"
+  ],
+  [
+   "déjà partenaire.",
+   "déjà partenaires."
+  ],
+  [
+   "on est partenaire, hein",
+   "on est partenaires, hein"
+  ],
+  [
+   "tout mes LP",
+   "tous mes LP"
+  ],
+  [
+   "heu-reux",
+   "heureux"
+  ],
+  [
+   "en communs",
+   "en commun"
+  ],
+  [
+   "sur mon coeur",
+   "sur mon cœur"
+  ],
+  [
+   "Je dit des",
+   "Je dis des"
+  ],
+  [
+   "Tu es décidé d'être",
+   "Tu es décidé à être"
+  ],
+  [
+   "prépare toi",
+   "prépare-toi"
+  ],
+  [
+   "préfèrerais",
+   "préférerais"
+  ],
+  [
+   "J'aurais pas du",
+   "J'aurais pas dû"
+  ],
+  [
+   "m'as punis",
+   "m'as puni"
+  ],
+  [
+   "Hein? Un",
+   "Hein ? Un"
+  ],
+  [
+   "nos style à",
+   "nos styles à"
+  ],
+  [
+   "Slifer Rouge ensembles",
+   "Slifer Rouge ensemble"
+  ],
+  [
+   "Non, Je te remercie",
+   "Non, je te remercie"
+  ],
+  [
+   "Qu'est ce que tu en dis",
+   "Qu'est-ce que tu en dis"
+  ],
+  [
+   "me rends plus fort",
+   "me rend plus fort"
+  ],
+  [
+   "Ton habilité",
+   "Ton habileté"
+  ],
+  [
+   "Quoi?! Tu n'as jamais",
+   "Quoi ?! Tu n'as jamais"
+  ],
+  [
+   "aucun doute!",
+   "aucun doute !"
+  ],
+  [
+   "C'et parti",
+   "C'est parti"
+  ],
+  [
+   "Et bien, tu es un gars",
+   "Eh bien, tu es un gars"
+  ],
+  [
+   "jusqu'a que",
+   "jusqu'à ce que"
+  ],
+  [
+   "Y-a t'il des élèves",
+   "Y a-t-il des élèves"
+  ],
+  [
+   "bien trop d'erreur.",
+   "bien trop d'erreurs."
+  ],
+  [
+   "J'ai failli oublié",
+   "J'ai failli oublier"
+  ],
+  [
+   "qu'on est partenaire !",
+   "qu'on est partenaires !"
+  ],
+  [
+   "Veux- tu",
+   "Veux-tu"
+  ],
+  [
+   "l'ombre du chance",
+   "l'ombre d'une chance"
+  ],
+  [
+   "Si tu m'en juge",
+   "Si tu m'en juges"
+  ],
+  [
+   "me rappeler d'un Slifer",
+   "me rappeler un Slifer"
+  ],
+  [
+   "Je n'ai pas de tête... Hi hi",
+   "Je n'ai pas bonne mémoire... Hi hi"
+  ],
+  [
+   "une bonne fois pour toute.",
+   "une bonne fois pour toutes."
+  ],
+  [
+   "Qu'est-ce que ce robot ?",
+   "Qu'est-ce que c'est que ce robot ?"
+  ],
+  [
+   "Les phase finale",
+   "La phase finale"
+  ],
+  [
+   "J'accepte, Doyen.",
+   "J'accepte, Chancelier."
+  ],
+  [
+   "Quel chance d'avoir",
+   "Quelle chance d'avoir"
+  ],
+  [
+   "Pauvre petites poules",
+   "Pauvres petites poules"
+  ],
+  [
+   "amazone....",
+   "amazone..."
+  ],
+  [
+   "Aidez moi",
+   "Aidez-moi"
+  ],
+  [
+   "Mon frère est moi participons",
+   "Mon frère et moi participons"
+  ],
+  [
+   "cette fille-à.",
+   "cette fille-là."
+  ],
+  [
+   "tes yeux vacillent",
+   "tes yeux vacille"
+  ],
+  [
+   "Égalité! Minable",
+   "Égalité ! Minable"
+  ],
+  [
+   "  《",
+   " 《"
+  ],
+  [
+   "》  ",
+   "》 "
+  ],
+  [
+   "paquet  !",
+   "paquet !"
+  ],
+  [
+   "c'est  ?",
+   "c'est ?"
+  ],
+  [
+   "jetais  pas",
+   "jetais pas"
+  ],
+  [
+   "Je  dois",
+   "Je dois"
+  ],
+  [
+   "alors,  c'est",
+   "alors, c'est"
+  ],
+  [
+   "un  bail",
+   "un bail"
+  ],
+  [
+   "le  directeur",
+   "le directeur"
+  ],
+  [
+   "son  loisir",
+   "son loisir"
+  ],
+  [
+   "Je suis  ⏎",
+   "Je suis⏎"
+  ],
+  [
+   "d' 《",
+   "d'《"
+  ],
+  [
+   "toi 《PLAYER》 ,",
+   "toi 《PLAYER》,"
+  ],
+  [
+   "parait",
+   "paraît"
+  ],
+  [
+   "je pense que qu'il est temps",
+   "je pense qu'il est temps"
+  ],
+  [
+   "Peut-elle faire une bonne duelliste ?",
+   "Peut-elle devenir une bonne duelliste ?"
+  ],
+  [
+   "on se retrouvera Syrus !",
+   "on se retrouvera, Syrus !"
+  ],
+  [
+   "Va-y, 《PLAYER》",
+   "Vas-y, 《PLAYER》"
+  ],
+  [
+   "Qu'est ce que c'est, Professeur",
+   "Qu'est-ce que c'est, Professeur"
+  ],
+  [
+   "Et il a déjà faux !!!",
+   "Et il a déjà tout faux !!!"
+  ],
+  [
+   "C'est comme un baiser...!",
+   "C'est comme un baiser... !"
+  ],
+  [
+   "Bon, et bien...!",
+   "Bon, eh bien... !"
+  ],
+  [
+   "Carte Magie Contigüe",
+   "Carte Magie Contiguë"
+  ],
+  [
+   "choisis \"Mode histoire\"",
+   "choisis \"Mode aventure\""
+  ],
+  [
+   "sélectionnes⏎Mode histoire",
+   "sélectionnes⏎Mode aventure"
+  ],
+  [
+   "Hé bien",
+   "Eh bien"
+  ],
+  [
+   "Um, je n'aime pas vraiment ça",
+   "Euh, je n'aime pas vraiment ça"
+  ],
+  [
+   "te dépêcher ...",
+   "te dépêcher..."
+  ],
+  [
+   "j'ai eu aujourd'hui",
+   "j'ai eus aujourd'hui"
+  ],
+  [
+   "tu me⏎regarde comme ça",
+   "tu me⏎regardes comme ça"
+  ],
+  [
+   "pourraient pas dans un tel taudis",
+   "pourraient pas vivre dans un tel taudis"
+  ],
+  [
+   "Vous n'avez pas passé déjà une année ici",
+   "Vous n'avez pas déjà passé une année ici"
+  ],
+  [
+   "C'est juste, que c'est à toi",
+   "C'est juste que c'est à toi"
+  ],
+  [
+   "mènera nulle pas",
+   "mènera nulle part"
+  ],
+  [
+   "sert ⏎à quelque chose....",
+   "sert ⏎à quelque chose..."
+  ],
+  [
+   "à Slifer....",
+   "à Slifer..."
+  ],
+  [
+   "Um, assez de blagues",
+   "Euh, assez de blagues"
+  ],
+  [
+   "à ５0 %",
+   "à 50 %"
+  ],
+  [
+   "à ８0 %",
+   "à 80 %"
+  ],
+  [
+   "Uh-uh. Pas terrible",
+   "Hmm. Pas terrible"
+  ],
+  [
+   "Huh, pas mal",
+   "Hé, pas mal"
+  ],
+  [
+   "Ungh...Pas mal",
+   "Ungh... Pas mal"
+  ],
+  [
+   "Ce corps...ne va pas tenir le coup bien⏎longtemps...Il faut que je me dépêche...",
+   "Ce corps... ne va pas tenir le coup bien⏎longtemps... Il faut que je me dépêche..."
+  ],
+  [
+   "Tu...Tu peux comprendre",
+   "Tu... Tu peux comprendre"
+  ],
+  [
+   "Huh... ?",
+   "Hein... ?"
+  ],
+  [
+   "Um...",
+   "Euh..."
+  ],
+  [
+   "Umm... Eh bien...",
+   "Euh... Eh bien..."
+  ],
+  [
+   "Um, on est déjà partenaires",
+   "Euh, on est déjà partenaires"
+  ],
+  [
+   "n'a pas suffit",
+   "n'a pas suffi"
+  ],
+  [
+   "Je me suis fais⏎avoir",
+   "Je me suis fait⏎avoir"
+  ],
+  [
+   "pas grand chose",
+   "pas grand-chose"
+  ],
+  [
+   "Je me suis fait bien fait avoir",
+   "Je me suis bien fait avoir"
+  ],
+  [
+   "fais moi signe",
+   "fais-moi signe"
+  ],
+  [
+   "appelle moi",
+   "appelle-moi"
+  ],
+  [
+   "Duel ?Duel ?",
+   "Duel ? Duel ?"
+  ],
+  [
+   "Humm, et bien",
+   "Humm, eh bien"
+  ],
+  [
+   "blond(ou la fille ?)",
+   "blond (ou la fille ?)"
+  ],
+  [
+   "Ne m'oublie pas...même si",
+   "Ne m'oublie pas... même si"
+  ],
+  [
+   "J'ai...J'ai gagné",
+   "J'ai... J'ai gagné"
+  ],
+  [
+   "Râ Jaune",
+   "Ra Jaune"
+  ],
+  [
+   "je suis .《C120_1》",
+   "je suis 《C120_1》"
+  ],
+  [
+   "《PLAYER》 ,c'est ça ?",
+   "《PLAYER》, c'est ça ?"
+  ],
+  [
+   "Comment rendre des cartes⏎Comment pouvoir louer",
+   "Comment rendre des cartes ?⏎Comment pouvoir louer"
+  ],
+  [
+   "compétences⏎des champion.",
+   "compétences⏎des champions."
+  ],
+  [
+   "Q... Quoi...?",
+   "Q... Quoi... ?"
+  ],
+  [
+   "Oui⏎ Non",
+   "Oui⏎Non"
+  ],
+  [
+   "Um, euh, battons-nous",
+   "Hum, euh, battons-nous"
+  ],
+  [
+   "Uh...",
+   "Heu..."
+  ],
+  [
+   "Um, on peut commencer",
+   "Euh, on peut commencer"
+  ],
+  [
+   "Mon père a une société qui fabrique de la⏎sauce épicée.",
+   "Mon père possède une⏎distillerie de saké."
+  ],
+  [
+   "Il m'en a envoyé avec",
+   "Il m'a envoyé du shochu avec"
+  ],
+  [
+   "En bikini",
+   "En tenue de servante"
+  ],
+  [
+   "en bikini",
+   "en tenue de servante"
+  ],
+  [
+   "de carillonner comme",
+   "de m'interrompre comme"
+  ],
+  [
+   "que tu t'en⏎débarrasses de quelques-",
+   "que tu te⏎sois débarrassé de quelques-"
+  ],
+  [
+   "te rebattre en⏎Duel contre moi !",
+   "te rebattre en⏎Duel contre moi ?"
+  ],
+  [
+   "on est ⏎partenaire qu'on",
+   "on est ⏎partenaires qu'on"
+  ]
+ ],
+ "regex": [
+  [
+   "⏎ +(?=[^ .⏎])",
+   "⏎"
+  ]
+ ]
+}

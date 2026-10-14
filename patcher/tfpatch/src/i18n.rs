@@ -1,4 +1,4 @@
-//! Lingue dell'interfaccia: inglese, italiano, francese, tedesco, spagnolo.
+//! Interface languages: English, Italian, French, German, Spanish.
 
 #[derive(Clone, Copy, PartialEq, Eq, Hash, Debug)]
 pub enum Lang {
@@ -9,10 +9,10 @@ pub enum Lang {
     Es,
 }
 
-pub const TUTTE: [Lang; 5] = [Lang::En, Lang::It, Lang::Fr, Lang::De, Lang::Es];
+pub const ALL: [Lang; 5] = [Lang::En, Lang::It, Lang::Fr, Lang::De, Lang::Es];
 
 impl Lang {
-    /// codice usato nei nomi dei file (patch_<codice>.tfp, <codice>.zip)
+    /// code used in file names (patch_<code>.tfp, <code>.zip)
     pub fn code(self) -> &'static str {
         match self {
             Lang::En => "en",
@@ -23,7 +23,7 @@ impl Lang {
         }
     }
 
-    pub fn nome(self) -> &'static str {
+    pub fn name(self) -> &'static str {
         match self {
             Lang::En => "English",
             Lang::It => "Italiano",
@@ -33,22 +33,22 @@ impl Lang {
         }
     }
 
-    /// da una stringa di locale ("it-IT", "fr_CA", "de"...)
-    pub fn da_locale(loc: &str) -> Option<Lang> {
+    /// from a locale string ("it-IT", "fr_CA", "de"...)
+    pub fn from_locale(loc: &str) -> Option<Lang> {
         let p = loc.split(['-', '_', '.']).next()?.to_ascii_lowercase();
-        TUTTE.iter().copied().find(|l| l.code() == p)
+        ALL.iter().copied().find(|l| l.code() == p)
     }
 
-    /// lingua del sistema se e' una delle cinque, altrimenti inglese
-    pub fn di_sistema(locale: Option<String>) -> Lang {
-        locale.as_deref().and_then(Lang::da_locale).unwrap_or(Lang::En)
+    /// the system language if it is one of the five, English otherwise
+    pub fn from_system(locale: Option<String>) -> Lang {
+        locale.as_deref().and_then(Lang::from_locale).unwrap_or(Lang::En)
     }
 }
 
-/// Dimensione leggibile, con il separatore decimale della lingua (1,4 GB / 1.4 GB).
-pub fn formatta_dimensione(byte: u64, l: Lang) -> String {
+/// Human-readable size, with the decimal separator of the language (1,4 GB / 1.4 GB).
+pub fn format_size(bytes: u64, l: Lang) -> String {
     const MB: f64 = 1_048_576.0;
-    let mb = byte as f64 / MB;
+    let mb = bytes as f64 / MB;
     let s = if mb >= 1024.0 { format!("{:.2} GB", mb / 1024.0) } else { format!("{:.0} MB", mb) };
     match l {
         Lang::En => s,
@@ -383,19 +383,19 @@ mod test {
     use super::*;
 
     #[test]
-    fn lingua_di_sistema() {
-        assert_eq!(Lang::di_sistema(Some("it-IT".into())), Lang::It);
-        assert_eq!(Lang::di_sistema(Some("fr_CA".into())), Lang::Fr);
-        assert_eq!(Lang::di_sistema(Some("de".into())), Lang::De);
-        assert_eq!(Lang::di_sistema(Some("es-419".into())), Lang::Es);
-        assert_eq!(Lang::di_sistema(Some("pt-BR".into())), Lang::En);
-        assert_eq!(Lang::di_sistema(None), Lang::En);
+    fn system_language() {
+        assert_eq!(Lang::from_system(Some("it-IT".into())), Lang::It);
+        assert_eq!(Lang::from_system(Some("fr_CA".into())), Lang::Fr);
+        assert_eq!(Lang::from_system(Some("de".into())), Lang::De);
+        assert_eq!(Lang::from_system(Some("es-419".into())), Lang::Es);
+        assert_eq!(Lang::from_system(Some("pt-BR".into())), Lang::En);
+        assert_eq!(Lang::from_system(None), Lang::En);
     }
 
     #[test]
-    fn dimensioni() {
-        assert_eq!(formatta_dimensione(609_267_712, Lang::En), "581 MB");
-        assert_eq!(formatta_dimensione(1_493_017_044, Lang::It), "1,39 GB");
-        assert_eq!(formatta_dimensione(1_493_017_044, Lang::En), "1.39 GB");
+    fn sizes() {
+        assert_eq!(format_size(609_267_712, Lang::En), "581 MB");
+        assert_eq!(format_size(1_493_017_044, Lang::It), "1,39 GB");
+        assert_eq!(format_size(1_493_017_044, Lang::En), "1.39 GB");
     }
 }

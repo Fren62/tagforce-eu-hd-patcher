@@ -1,0 +1,74 @@
+[
+ {
+  "file": "/PSP_GAME/USRDIR/deck/all_i.ehp",
+  "member": "strTbl.bin",
+  "index": 107,
+  "old": "Assistenza",
+  "new": "Aiuto",
+  "reason": "etichetta del pulsante '?' del deck editor: \"Assistenza\" viene tagliata dal bordo dello schermo (si leggeva \"Assisten\"); in inglese e' \"Help\""
+ },
+ {
+  "file": "/PSP_GAME/USRDIR/duel/basic_*.ehp",
+  "member": "ddstrtbl_i.bin",
+  "index": 51,
+  "old": "Assistenza",
+  "new": "Aiuto",
+  "reason": "stessa etichetta del pulsante '?' nella schermata di duello"
+ },
+ {
+  "file": "/PSP_GAME/USRDIR/duel/basic_*.ehp",
+  "member": "ddstrtbl_i.bin",
+  "index": 3,
+  "old": "Posizionam",
+  "new": "Posiziona",
+  "reason": "\"Posizionam\" (Set) tagliato nel menu comandi del duello"
+ },
+ {
+  "file": "/PSP_GAME/USRDIR/duel/basic_*.ehp",
+  "member": "ddstrtbl_i.bin",
+  "index": 66,
+  "old": "Kartenrand",
+  "new": "Cornice",
+  "reason": "stringa tedesca nella tabella italiana (filtro \"Card Frame\")"
+ },
+ {
+  "file": "/PSP_GAME/USRDIR/duel/basic_*.ehp",
+  "member": "ddstrtbl_f.bin",
+  "index": 66,
+  "old": "Cornice della Carta",
+  "new": "Cadre de la carte",
+  "reason": "stringa italiana nella tabella francese"
+ },
+ {
+  "file": "/PSP_GAME/USRDIR/duel/basic_*.ehp",
+  "member": "ddstrtbl_g.bin",
+  "index": 66,
+  "old": "Couleur de cadre",
+  "new": "Kartenrand",
+  "reason": "stringa francese nella tabella tedesca"
+ },
+ {
+  "file": "/PSP_GAME/USRDIR/duel/basic_*.ehp",
+  "member": "ddstrtbl_s.bin",
+  "index": 64,
+  "old": "Colocar en la Zona de Cartas Magicas y de Trampa",
+  "new": "Colocar en la Zona de Cartas Mágicas y de Trampa",
+  "reason": "accento mancante"
+ },
+ {
+  "file": "/PSP_GAME/USRDIR/duel/basic_*.ehp",
+  "member": "help_strtbl_label_i.bin",
+  "index": 1,
+  "old": "Assistenza",
+  "new": "Aiuto",
+  "reason": "titolo \"Assistenza\" nella guida del duello (si leggeva \"Assi\" accanto a START)"
+ },
+ {
+  "file": "/PSP_GAME/USRDIR/duel/basic_*.ehp",
+  "member": "help_strtbl_label_i.bin",
+  "index": 8,
+  "old": "Chiudi Assistenza",
+  "new": "Chiudi Aiuto",
+  "reason": "coerenza con \"Aiuto\""
+ }
+]

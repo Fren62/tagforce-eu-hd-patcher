@@ -1,12 +1,12 @@
-# Giochi e dati di terzi: mai nel repository
+# Games and third-party data: never in the repository
 *.iso
 *.cso
 *.pbp
 PSP/
 backup_prima_upscaling_AI/
-confronti/
+comparisons/
 
-# Risultati di build (si ricostruiscono)
+# Build results (they can be rebuilt)
 patcher/build/
 patcher/tfpatch/target/
 *.tfp
@@ -14,22 +14,20 @@ textures.zip
 __pycache__/
 *.pyc
 
-# Derivati dalle immagini del gioco / font scaricabili con strumenti/font_alternativi/scarica_font.sh
-strumenti/dati/upscale_extra/
-strumenti/font_alternativi/scaricati/
-strumenti/font_alternativi/static/
+# Derived from game images / fonts downloadable with tools/alt_fonts/download_fonts.sh
+tools/data/upscale_extra/
+tools/alt_fonts/downloaded/
+tools/alt_fonts/static/
+tools/alt_fonts/xcharter/
+tools/alt_fonts/measurement_results/
 
-# File locali
+# Local files
 CLAUDE.local.md
 .claude/
 megapy-*.tar.gz
 pyserial-*.whl
 
-# Fogli di confronto con texture originali del gioco
-documentazione/**/fogli/
-strumenti/dati/label_eu_*.png
-
-# Note di lavoro private, bozze di permessi, export personali
+# Private working notes, permission drafts, personal exports
 LEGGIMI.md
 LEGGIMI_PACK.txt
 LEGGIMI_TRASFERIMENTO.txt
@@ -37,21 +35,18 @@ STATO_LAVORI.md
 PROMPT_NUOVA_LINGUA.md
 PERMESSI_AUTORI.md
 
-# Immagini derivate da asset del gioco o di terzi (stanno nei moduli texture, non nel repo)
-strumenti/dati/*.png
+# Images derived from game or third-party assets (they live in the texture modules, not in the repo)
+tools/data/*.png
 
-# Dati di analisi con percorsi locali / struttura del pack di terzi
-strumenti/analisi/ab.json
-strumenti/analisi/inventory.json
-strumenti/font_alternativi/risultati_misure/
+# Analysis data with local paths / structure of a third-party pack
+tools/analysis/ab.json
+tools/analysis/inventory.json
 
-# Font: si scaricano con strumenti/font_alternativi/scarica_font.sh
-strumenti/font_alternativi/xcharter/
+# Full dumps of original game texts (CSV and diffs) and comparison sheets with original game textures
+docs/**/*.csv
+docs/**/*_diff.md
+docs/**/sheets/
 
-# Dump completi di testi del gioco (originali) in CSV e confronti
-documentazione/**/*.csv
-documentazione/**/*_diff.md
-
-# Bozza del post di annuncio e immagini (non fanno parte del repository)
+# Announcement draft and images (not part of the repository)
 ANNUNCIO_BOZZA.md
 ANNUNCIO_immagini/

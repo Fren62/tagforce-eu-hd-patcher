@@ -1,5 +1,5 @@
-//! Scarica base.zip + <lingua>.zip (manifest.json con SHA-256) e li compone in un unico textures.zip
-//! (i file della lingua sovrascrivono quelli del base) oppure li estrae in una cartella.
+//! Downloads base.zip + <language>.zip (listed in manifest.json with SHA-256) and merges them into a single
+//! textures.zip (files of the language module override those of the base) or extracts them into a folder.
 use anyhow::{Context, Result, bail};
 use serde::Deserialize;
 use sha2::{Digest, Sha256};
@@ -8,20 +8,20 @@ use std::fs::File;
 use std::io::{Read, Write};
 use std::path::{Path, PathBuf};
 
-pub const SORGENTE: &str = "https://github.com/Fren62/tagforce-eu-hd-patcher/releases/latest/download";
+pub const DEFAULT_SOURCE: &str = "https://github.com/Fren62/tagforce-eu-hd-patcher/releases/latest/download";
 
 #[derive(clap::Args)]
 pub struct Args {
-    /// lingua: it fr de es en
+    /// language: it fr de es en
     #[arg(long)]
     lang: String,
-    /// output: un file .zip (consigliato, anche per Android) oppure una cartella (PSP/TEXTURES/ULES00600)
+    /// output: a .zip file (recommended, also works on Android) or a folder (PSP/TEXTURES/ULES00600)
     #[arg(long)]
     out: PathBuf,
-    /// URL o cartella locale con manifest.json, base.zip e <lingua>.zip
-    #[arg(long, default_value = SORGENTE)]
+    /// URL or local folder containing manifest.json, base.zip and <language>.zip
+    #[arg(long, default_value = DEFAULT_SOURCE)]
     source: String,
-    /// cartella per i download (default: accanto all'output)
+    /// folder for the downloads (default: next to the output)
     #[arg(long)]
     cache: Option<PathBuf>,
 }
@@ -33,28 +33,31 @@ pub struct Asset {
     pub sha256: String,
 }
 
+/// Contents of manifest.json. The JSON key `lingue` keeps its original (Italian) name: it is part of the file
+/// format shared with the released tools, so it must not change.
 #[derive(Deserialize)]
 pub struct Manifest {
     pub base: Asset,
-    pub lingue: BTreeMap<String, Asset>,
-    /// patch ISO per lingua (patch_<lingua>.tfp)
+    #[serde(rename = "lingue")]
+    pub languages: BTreeMap<String, Asset>,
+    /// ISO patches per language (patch_<language>.tfp)
     #[serde(default)]
     pub patch: BTreeMap<String, Asset>,
-    /// dimensione della ISO finale per lingua e combinazione di moduli (chiave "cards,text,strip" = "111")
+    /// final ISO size per language and module combination (key "cards,text,strip" as digits, e.g. "111")
     #[serde(default)]
     pub iso_sizes: BTreeMap<String, BTreeMap<String, u64>>,
-    /// MD5 accettati per la ISO originale
+    /// accepted MD5 values for the original ISO
     #[serde(default)]
     pub iso_md5: Vec<String>,
 }
 
-fn apri(source: &str, nome: &str) -> Result<Box<dyn Read + Send + Sync>> {
+fn open_source(source: &str, name: &str) -> Result<Box<dyn Read + Send + Sync>> {
     if source.starts_with("http://") || source.starts_with("https://") {
-        let url = format!("{}/{nome}", source.trim_end_matches('/'));
-        let r = ureq::get(&url).call().with_context(|| format!("download fallito: {url}"))?;
+        let url = format!("{}/{name}", source.trim_end_matches('/'));
+        let r = ureq::get(&url).call().with_context(|| format!("download failed: {url}"))?;
         Ok(Box::new(r.into_body().into_reader()))
     } else {
-        Ok(Box::new(File::open(Path::new(source).join(nome)).with_context(|| format!("manca {nome} in {source}"))?))
+        Ok(Box::new(File::open(Path::new(source).join(name)).with_context(|| format!("{name} not found in {source}"))?))
     }
 }
 
@@ -62,7 +65,7 @@ fn hex(b: impl AsRef<[u8]>) -> String {
     b.as_ref().iter().map(|x| format!("{x:02x}")).collect()
 }
 
-fn sha_file(p: &Path) -> Result<String> {
+fn sha256_file(p: &Path) -> Result<String> {
     let mut h = Sha256::new();
     let mut f = File::open(p)?;
     let mut buf = vec![0u8; 1 << 22];
@@ -76,24 +79,25 @@ fn sha_file(p: &Path) -> Result<String> {
     Ok(hex(h.finalize()))
 }
 
-pub fn leggi_manifest(source: &str) -> Result<Manifest> {
-    Ok(serde_json::from_reader(apri(source, "manifest.json")?)?)
+pub fn read_manifest(source: &str) -> Result<Manifest> {
+    Ok(serde_json::from_reader(open_source(source, "manifest.json")?)?)
 }
 
-/// Porta in cache l'archivio (salta il download se c'e' gia' ed e' corretto). `progress(scaricati, totali)`.
-pub fn scarica(source: &str, a: &Asset, cache: &Path, progress: &mut dyn FnMut(u64, u64)) -> Result<PathBuf> {
+/// Brings the archive into the cache (skips the download if it is already there and correct).
+/// `progress(downloaded, total)`.
+pub fn download(source: &str, a: &Asset, cache: &Path, progress: &mut dyn FnMut(u64, u64)) -> Result<PathBuf> {
     std::fs::create_dir_all(cache)?;
     let dst = cache.join(&a.file);
-    if dst.exists() && std::fs::metadata(&dst)?.len() == a.size && sha_file(&dst)? == a.sha256 {
+    if dst.exists() && std::fs::metadata(&dst)?.len() == a.size && sha256_file(&dst)? == a.sha256 {
         progress(a.size, a.size);
         return Ok(dst);
     }
     let tmp = dst.with_extension("part");
-    let mut r = apri(source, &a.file)?;
+    let mut r = open_source(source, &a.file)?;
     let mut f = File::create(&tmp)?;
     let mut h = Sha256::new();
     let mut buf = vec![0u8; 1 << 20];
-    let mut tot = 0u64;
+    let mut total = 0u64;
     loop {
         let n = r.read(&mut buf)?;
         if n == 0 {
@@ -101,70 +105,73 @@ pub fn scarica(source: &str, a: &Asset, cache: &Path, progress: &mut dyn FnMut(u
         }
         h.update(&buf[..n]);
         f.write_all(&buf[..n])?;
-        tot += n as u64;
-        progress(tot, a.size);
+        total += n as u64;
+        progress(total, a.size);
     }
     drop(f);
     if hex(h.finalize()) != a.sha256 {
         let _ = std::fs::remove_file(&tmp);
-        bail!("{}: SHA-256 errato (download corrotto)", a.file);
+        bail!("{}: wrong SHA-256 (corrupted download)", a.file);
     }
     std::fs::rename(&tmp, &dst)?;
     Ok(dst)
 }
 
-/// Compone base + modulo in `out` (.zip = un solo archivio non compresso; altrimenti cartella).
-pub fn componi(base_zip: &Path, modulo_zip: &Path, out: &Path, progress: &mut dyn FnMut(f32)) -> Result<()> {
+/// Merges base + module into `out` (.zip = one uncompressed archive; anything else = a folder).
+pub fn compose(base_zip: &Path, module_zip: &Path, out: &Path, progress: &mut dyn FnMut(f32)) -> Result<()> {
     let mut base = zip::ZipArchive::new(File::open(base_zip)?)?;
-    let mut modulo = zip::ZipArchive::new(File::open(modulo_zip)?)?;
+    let mut module = zip::ZipArchive::new(File::open(module_zip)?)?;
     if out.extension().is_some_and(|e| e.eq_ignore_ascii_case("zip")) {
         if let Some(p) = out.parent() {
             std::fs::create_dir_all(p)?;
         }
-        let sovrascritti: HashSet<String> = modulo.file_names().map(String::from).collect();
+        let overridden: HashSet<String> = module.file_names().map(String::from).collect();
         let mut w = zip::ZipWriter::new(File::create(out)?);
-        let tot = (base.len() + modulo.len()).max(1);
+        let total = (base.len() + module.len()).max(1);
         for i in 0..base.len() {
             let e = base.by_index_raw(i)?;
-            if !sovrascritti.contains(e.name()) {
+            if !overridden.contains(e.name()) {
                 w.raw_copy_file(e)?;
             }
             if i % 200 == 0 {
-                progress(i as f32 / tot as f32);
+                progress(i as f32 / total as f32);
             }
         }
-        for i in 0..modulo.len() {
-            w.raw_copy_file(modulo.by_index_raw(i)?)?;
+        for i in 0..module.len() {
+            w.raw_copy_file(module.by_index_raw(i)?)?;
             if i % 200 == 0 {
-                progress((base.len() + i) as f32 / tot as f32);
+                progress((base.len() + i) as f32 / total as f32);
             }
         }
         w.finish()?;
     } else {
         base.extract(out)?;
         progress(0.7);
-        modulo.extract(out)?; // sovrascrive
+        module.extract(out)?; // overwrites
     }
     progress(1.0);
     Ok(())
 }
 
-pub fn esegui(a: Args) -> Result<()> {
-    let m = leggi_manifest(&a.source)?;
-    let lang = m.lingue.get(&a.lang).with_context(|| format!("lingua '{}' non disponibile (ci sono: {:?})", a.lang, m.lingue.keys()))?;
+pub fn run(a: Args) -> Result<()> {
+    let m = read_manifest(&a.source)?;
+    let lang = m
+        .languages
+        .get(&a.lang)
+        .with_context(|| format!("language '{}' not available (available: {:?})", a.lang, m.languages.keys()))?;
     let cache = a.cache.clone().unwrap_or_else(|| a.out.parent().map(|p| p.to_path_buf()).unwrap_or_default().join("tfpatch_cache"));
     for asset in [&m.base, lang] {
-        eprintln!("scarico {} ({} MB)...", asset.file, asset.size >> 20);
-        let mut ultimo = 0u64;
-        scarica(&a.source, asset, &cache, &mut |t, tot| {
-            if t * 10 / tot.max(1) != ultimo * 10 / tot.max(1) {
-                eprintln!("  {}%", t * 100 / tot.max(1));
+        eprintln!("downloading {} ({} MB)...", asset.file, asset.size >> 20);
+        let mut last = 0u64;
+        download(&a.source, asset, &cache, &mut |t, total| {
+            if t * 10 / total.max(1) != last * 10 / total.max(1) {
+                eprintln!("  {}%", t * 100 / total.max(1));
             }
-            ultimo = t;
+            last = t;
         })?;
     }
-    eprintln!("compongo {}...", a.out.display());
-    componi(&cache.join(&m.base.file), &cache.join(&lang.file), &a.out, &mut |_| {})?;
-    eprintln!("fatto");
+    eprintln!("building {}...", a.out.display());
+    compose(&cache.join(&m.base.file), &cache.join(&lang.file), &a.out, &mut |_| {})?;
+    eprintln!("done");
     Ok(())
 }

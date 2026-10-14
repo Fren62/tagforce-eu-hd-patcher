@@ -1,0 +1,62 @@
+"""Corrections to the Italian card texts (cardinfo_ita.ehp). Objective errors only: typos, accents, apostrophes, inconsistent capitalisation, agreement.
+Official names and the terminology chosen by the game are not changed.
+They are applied on top of data/card_corrections.json (the corrections already made): generate_card_corrections.py it CARDINFO merges the result into the same file.
+GLOBALS: (regex, replacement, reason) applied to the names and descriptions of all the cards.
+PER_CARD: (id, 'name'|'desc', old, new, reason); the old text must exist exactly."""
+
+GLOBALS = [
+    (r"\bLife Point\b", "Life Points", "plurale di Life Points (altrove sempre Life Points)"),
+    (r"\bAnnello\b", "Anello", "refuso"),
+    (r"\bavvesario\b", "avversario", "refuso"),
+    (r"\bin seguita\b", "in seguito", "refuso"),
+    (r"\bdopo di chè\b", "dopo di che", "accento errato"),
+    (r"\bquesto carta\b", "questa carta", "concordanza"),
+    (r"\bUn immagine\b", "Un'immagine", "apostrofo mancante"),
+    (r"\bE' composto\b", "È composto", "accento"),
+    (r"\bpuo\b", "può", "accento mancante"),
+    (r"\bne dichiarare\b", "né dichiarare", "accento mancante"),
+    (r"\bMain phase\b", "Main Phase", "maiuscola incoerente"),
+    (r"\bdella Damage Step\b", "del Damage Step", "genere: il Damage Step"),
+    (r"\b[Tt]ipo-(Demone|Fata|Guerriero)\b", r"Tipo \1", "trattino di troppo"),
+    (r"\btipo Pyro\b", "Tipo Pyro", "maiuscola incoerente"),
+    (r"\bSegna Opzione\b", "Segna-Opzione", "nome del Segna-Mostro"),
+    (r"\bTramite Evocazione\b", "tramite Evocazione", "maiuscola errata"),
+    (r"\bevocata tramite\b", "Evocata tramite", "maiuscola incoerente (Evocata)"),
+    (r"\bX (\d+) punti\b", r"x \1 punti", "moltiplicatore (altrove x)"),
+    (r"\bX (\d+)\b", r"x \1", "moltiplicatore (altrove x)"),
+    (r"\bMagia,Trappola\b", "Magia, Trappola", "spazio mancante"),
+    (r"Cimitero,eccetto", "Cimitero, eccetto", "spazio mancante"),
+    (r"\bsolo I Mostri\b", "solo i Mostri", "maiuscola errata"),
+    (r"\baumenta I tuoi\b", "aumenta i tuoi", "maiuscola errata"),
+    (r"\bRimuovi da gioco\b", "Rimuovi dal gioco", "articolo mancante"),
+    (r"\bCarte Magie e Trappola\b", "Carte Magia e Trappola", "Magia e' invariabile"),
+    (r"Trappola ,", "Trappola,", "spazio prima della virgola"),
+    (r"Magia :", "Magia:", "spazio prima dei due punti"),
+    (r"Trappola :", "Trappola:", "spazio prima dei due punti"),
+    (r"Effetto Mostro :", "Effetto Mostro:", "spazio prima dei due punti"),
+    (r"\bsi aggiudica il Partita\b", "si aggiudica la Partita", "genere"),
+    (r"\bvengono cambiata in\b", "vengono cambiati in", "concordanza"),
+    (r"\bquante possibile\b", "quante possibili", "concordanza"),
+    (r"\bsi sono 3\b", "ci sono 3", "refuso"),
+    (r"\bdi questa carte\b", "di questa carta", "refuso"),
+    (r"\bpuoi scegli\b", "puoi scegliere", "forma verbale"),
+    (r"\bcome tributo\b", "come Tributo", "maiuscola incoerente (Tributo)"),
+    (r"\binferiore del DEF\b", "inferiore al DEF", "preposizione"),
+    (r"\bHa un indole\b", "Ha un'indole", "apostrofo mancante"),
+    (r"\bsul tuo terreno\b", "sul tuo Terreno", "maiuscola incoerente (Terreno)"),
+    (r"(?<![A-Za-zÀ-ÿ])E' (?=[a-zà-ÿ])", "È ", "accento: E' -> È"),
+    (r"L' (?=[\"A-ZÀ-Þ])", "L'", "spazio dopo l'apostrofo"),
+    (r'" ,"', '", "', "spazio dopo la virgola"),
+    (r"\(Mostro,Magia", "(Mostro, Magia", "spazio dopo la virgola"),
+    (r"battaglia\.Distruggi", "battaglia. Distruggi", "spazio dopo il punto"),
+]
+
+PER_CARD = [
+    (6057, 'desc', "tutti le Carte", "tutte le Carte", "concordanza"),
+    (6173, 'desc', "E' composto", "È composto", "accento"),
+    (6248, 'desc', "da in Posizione d'Attacco a scoperta in Posizione di Difesa", "da Posizione d'Attacco a scoperta in Posizione di Difesa", "preposizione di troppo"),
+    (6659, 'desc', "viene distrutto in seguito ad una battaglia e mandata al Cimitero", "viene distrutto in seguito ad una battaglia e mandato al Cimitero", "concordanza"),
+    (6706, 'desc', 'effetto di "Victory Viper XX3"', 'effetto di "Victory Viper XX03"', "nome della carta"),
+    (6657, 'desc', "Magia & Trappola , questa", "Magia & Trappola, questa", "spazio prima della virgola"),
+    (6563, 'desc', "Carte Magie e Trappola non possono", "Le Carte Magia e Trappola non possono", "articolo e plurale"),
+]

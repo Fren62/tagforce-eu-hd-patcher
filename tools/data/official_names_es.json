@@ -1,0 +1,1766 @@
+{
+ "4017": {
+  "english": "Sword Arm of Dragon",
+  "old_raw": "Brazo de espada de Dragon",
+  "old": "Brazo de espada de Dragón",
+  "new": "Brazo de Espada de Dragón"
+ },
+ "4031": {
+  "english": "Horn Imp",
+  "old_raw": "Diablillo de cuerno",
+  "old": "Diablillo de cuerno",
+  "new": "Diablillo de Cuerno"
+ },
+ "4042": {
+  "english": "The Snake Hair",
+  "old_raw": "El pelo de serpiente",
+  "old": "El pelo de serpiente",
+  "new": "El Pelo de Serpiente"
+ },
+ "4055": {
+  "english": "Big Insect",
+  "old_raw": "Insecto grande",
+  "old": "Insecto grande",
+  "new": "Insecto Grande"
+ },
+ "4081": {
+  "english": "Man-Eating Plant",
+  "old_raw": "Planta devorador de carne humana",
+  "old": "Planta devorador de carne humana",
+  "new": "Planta Come-Hombres"
+ },
+ "4084": {
+  "english": "Axe Raider",
+  "old_raw": "Incursor del hacha",
+  "old": "Incursor del hacha",
+  "new": "Incursor del Hacha"
+ },
+ "4093": {
+  "english": "Dark Chimera",
+  "old_raw": "Quimera oscura",
+  "old": "Quimera oscura",
+  "new": "Quimera Oscura"
+ },
+ "4094": {
+  "english": "Metal Guardian",
+  "old_raw": "Guardián del metal",
+  "old": "Guardián del metal",
+  "new": "Guardián de Metal"
+ },
+ "4106": {
+  "english": "Battle Warrior",
+  "old_raw": "Guerrero de lucha",
+  "old": "Guerrero de lucha",
+  "new": "Guerrero de Batalla"
+ },
+ "4107": {
+  "english": "Wings of Wicked Flame",
+  "old_raw": "Alas de la llama perversa",
+  "old": "Alas de la llama perversa",
+  "new": "Alas de la Llama Perversa"
+ },
+ "4109": {
+  "english": "Job-Change Mirror",
+  "old_raw": "Espejo de trabajo - Cambiar",
+  "old": "Espejo de trabajo - Cambiar",
+  "new": "Espejo de Trabajo - Cambiar"
+ },
+ "4110": {
+  "english": "Curtain of the Dark Ones",
+  "old_raw": "Cortina de los ones oscuros",
+  "old": "Cortina de los ones oscuros",
+  "new": "Cortina de los Oscuros"
+ },
+ "4111": {
+  "english": "Tomozaurus",
+  "old_raw": "Tomozaurus",
+  "old": "Tomozaurus",
+  "new": "Tomozaurio"
+ },
+ "4116": {
+  "english": "Hero of the East",
+  "old_raw": "Héroe de oriente",
+  "old": "Héroe de oriente",
+  "new": "Héroe del Este"
+ },
+ "4118": {
+  "english": "That Which Feeds on Life",
+  "old_raw": "Eso que se alimenta de la vida",
+  "old": "Eso que se alimenta de la vida",
+  "new": "Eso que se Alimenta de la Vida"
+ },
+ "4121": {
+  "english": "Kamionwizard",
+  "old_raw": "Kamionwizard",
+  "old": "Kamionwizard",
+  "new": "Kamionmago"
+ },
+ "4122": {
+  "english": "Nightmare Scorpion",
+  "old_raw": "Escorpión de pesadilla",
+  "old": "Escorpión de pesadilla",
+  "new": "Escorpión de Pesadilla"
+ },
+ "4124": {
+  "english": "Supporter in the Shadows",
+  "old_raw": "Partidario en las sombras",
+  "old": "Partidario en las sombras",
+  "new": "Partidario en las Sombras"
+ },
+ "4130": {
+  "english": "Ancient Tool",
+  "old_raw": "Herramienta antigua",
+  "old": "Herramienta antigua",
+  "new": "Herramienta Antigua"
+ },
+ "4131": {
+  "english": "Faith Bird",
+  "old_raw": "Ave de fe",
+  "old": "Ave de fe",
+  "new": "Ave de Fe"
+ },
+ "4141": {
+  "english": "Fiend's Hand",
+  "old_raw": "La mano de adicto",
+  "old": "La mano de adicto",
+  "new": "Mano del Demonio"
+ },
+ "4145": {
+  "english": "Blue-Eyed Silver Zombie",
+  "old_raw": "Zombi de plata de ojos azules",
+  "old": "Zombi de plata de ojos azules",
+  "new": "Zombi de Plata Ojizarco"
+ },
+ "4149": {
+  "english": "Necrolancer the Timelord",
+  "old_raw": "Necrolancer el Señor del Tiempo",
+  "old": "Necrolancer el Señor del Tiempo",
+  "new": "Necrolancer el Tiempo-Señor"
+ },
+ "4151": {
+  "english": "The Bewitching Phantom Thief",
+  "old_raw": "El ladrón de fantasma encantador",
+  "old": "El ladrón de fantasma encantador",
+  "new": "El Ladrón Fantasma Encantador"
+ },
+ "4154": {
+  "english": "The Shadow Who Controls the Dark",
+  "old_raw": "La sombra que controla el oscuridad",
+  "old": "La sombra que controla la oscuridad",
+  "new": "La Sombra que Controla la Oscuridad"
+ },
+ "4160": {
+  "english": "Fire Reaper",
+  "old_raw": "Segadora de fuego",
+  "old": "Segadora de fuego",
+  "new": "Segadora de Fuego"
+ },
+ "4173": {
+  "english": "Ancient Jar",
+  "old_raw": "Pote antiguo",
+  "old": "Pote antiguo",
+  "new": "Tarro Antiguo"
+ },
+ "4179": {
+  "english": "Dark Prisoner",
+  "old_raw": "Preso oscuro",
+  "old": "Preso oscuro",
+  "new": "Preso Oscuro"
+ },
+ "4198": {
+  "english": "Key Mace",
+  "old_raw": "Macis de tecla",
+  "old": "Macis de tecla",
+  "new": "Llave de la Maza"
+ },
+ "4203": {
+  "english": "Mech Mole Zombie",
+  "old_raw": "Zombi de topo de Mech",
+  "old": "Zombi de topo de Mech",
+  "new": "Zombi Topo Mecánico"
+ },
+ "4204": {
+  "english": "Happy Lover",
+  "old_raw": "Amante feliz",
+  "old": "Amante feliz",
+  "new": "Amante Feliz"
+ },
+ "4209": {
+  "english": "Phantom Ghost",
+  "old_raw": "Fantasma de fantasma",
+  "old": "Fantasma de fantasma",
+  "new": "Espectro Fantasma"
+ },
+ "4223": {
+  "english": "B. Skull Dragon",
+  "old_raw": "Dragón B. Cráneo",
+  "old": "Dragón B. Cráneo",
+  "new": "Dragón de Cráneo Negro"
+ },
+ "4232": {
+  "english": "Skull Stalker",
+  "old_raw": "Acosador de cráneo",
+  "old": "Acosador de cráneo",
+  "new": "Acechador del Cráneo"
+ },
+ "4235": {
+  "english": "Hourglass of Life",
+  "old_raw": "Reloj de arena de la vida",
+  "old": "Reloj de arena de la vida",
+  "new": "Reloj de Arena de la Vida"
+ },
+ "4248": {
+  "english": "Candle of Fate",
+  "old_raw": "Vela del destino",
+  "old": "Vela del destino",
+  "new": "Vela del Destino"
+ },
+ "4259": {
+  "english": "Fairywitch",
+  "old_raw": "Fairywitch",
+  "old": "Fairywitch",
+  "new": "Hadabruja"
+ },
+ "4263": {
+  "english": "Stone Armadiller",
+  "old_raw": "Stone Armadiller",
+  "old": "Stone Armadiller",
+  "new": "Armadiller de Piedra"
+ },
+ "4265": {
+  "english": "Ancient Sorcerer",
+  "old_raw": "Hechicero antiguo",
+  "old": "Hechicero antiguo",
+  "new": "Hechicero Antiguo"
+ },
+ "4285": {
+  "english": "King Fog",
+  "old_raw": "Rey Niebla",
+  "old": "Rey Niebla",
+  "new": "Rey Nebuloso"
+ },
+ "4295": {
+  "english": "Change Slime",
+  "old_raw": "Légamo de Cambiar",
+  "old": "Légamo de Cambiar",
+  "new": "Limo de Cambio"
+ },
+ "4312": {
+  "english": "Insect Armor with Laser Cannon",
+  "old_raw": "Armadura de insecto con cañón de rayo láser",
+  "old": "Armadura de insecto con cañón de rayo láser",
+  "new": "Armadura Insecto con Cañón Láser"
+ },
+ "4323": {
+  "english": "Cyber Shield",
+  "old_raw": "Cyber revestimiento",
+  "old": "Cyber revestimiento",
+  "new": "Ciber Escudo"
+ },
+ "4361": {
+  "english": "Megasonic Eye",
+  "old_raw": "Ojo de Megasonic",
+  "old": "Ojo de Megasonic",
+  "new": "Ojo Megasónico"
+ },
+ "4362": {
+  "english": "Super War-Lion",
+  "old_raw": "Guerra - león excelente",
+  "old": "Guerra - león excelente",
+  "new": "Súper León de Guerra"
+ },
+ "4365": {
+  "english": "Three-Legged Zombies",
+  "old_raw": "Zombis de tres patas",
+  "old": "Zombis de tres patas",
+  "new": "Zombis de Tres Piernas"
+ },
+ "4367": {
+  "english": "Flying Penguin",
+  "old_raw": "Pingüino volando",
+  "old": "Pingüino volando",
+  "new": "Pingüino Volador"
+ },
+ "4368": {
+  "english": "Millennium Shield",
+  "old_raw": "Revestimiento de milenio",
+  "old": "Revestimiento de milenio",
+  "new": "Escudo Milenario"
+ },
+ "4369": {
+  "english": "Fairy's Gift",
+  "old_raw": "El obsequio de hada",
+  "old": "El obsequio de hada",
+  "new": "Regalo del Hada"
+ },
+ "4371": {
+  "english": "Fiend's Mirror",
+  "old_raw": "El espejo de adicto",
+  "old": "El espejo de adicto",
+  "new": "Espejo Demoníaco"
+ },
+ "4381": {
+  "english": "Dungeon Worm",
+  "old_raw": "Gusano de calabozo",
+  "old": "Gusano de calabozo",
+  "new": "Gusano del Calabozo"
+ },
+ "4382": {
+  "english": "Monster Tamer",
+  "old_raw": "Monstruo más dócil",
+  "old": "Monstruo más dócil",
+  "new": "Domador de Monstruos"
+ },
+ "4386": {
+  "english": "Blue-Eyes Ultimate Dragon",
+  "old_raw": "Dragón Definitivo de Ojos Azules",
+  "old": "Dragón Definitivo de Ojos Azules",
+  "new": "Dragón de Ojos Azules Definitivo"
+ },
+ "4389": {
+  "english": "Parrot Dragon",
+  "old_raw": "Dragón de loro",
+  "old": "Dragón de loro",
+  "new": "Dragón Loro"
+ },
+ "4390": {
+  "english": "Dark Rabbit",
+  "old_raw": "Conejo oscuro",
+  "old": "Conejo oscuro",
+  "new": "Conejo Oscuro"
+ },
+ "4392": {
+  "english": "Harpie's Pet Dragon",
+  "old_raw": "Dragón mascota de Arpía",
+  "old": "Dragón mascota de Arpía",
+  "new": "Dragón Mascota de Arpía"
+ },
+ "4394": {
+  "english": "Pendulum Machine",
+  "old_raw": "Máquina de péndulo",
+  "old": "Máquina de péndulo",
+  "new": "Máquina del Péndulo"
+ },
+ "4399": {
+  "english": "Zone Eater",
+  "old_raw": "Comilón de zona",
+  "old": "Comilón de zona",
+  "new": "Comilón de Zona"
+ },
+ "4405": {
+  "english": "Swordsman from a Foreign Land",
+  "old_raw": "Swordsman de una nación extranjera",
+  "old": "Swordsman de una nación extranjera",
+  "new": "Espadachín de una Tierra Lejana"
+ },
+ "4411": {
+  "english": "Saber Slasher",
+  "old_raw": "Slasher de sable",
+  "old": "Slasher de sable",
+  "new": "Asesino de la Espada"
+ },
+ "4414": {
+  "english": "Giant Mech-Soldier",
+  "old_raw": "Mech - soldado gigante",
+  "old": "Mech - soldado gigante",
+  "new": "Mech - Soldado Gigante"
+ },
+ "4416": {
+  "english": "Mechanical Spider",
+  "old_raw": "Spider mecánico",
+  "old": "Spider mecánico",
+  "new": "Araña Karakuri"
+ },
+ "4432": {
+  "english": "Stone D.",
+  "old_raw": "Apedree D.",
+  "old": "Apedree D.",
+  "new": "Dragón de Piedra"
+ },
+ "4435": {
+  "english": "Goddess of Whim",
+  "old_raw": "Diosa del capricho",
+  "old": "Diosa del capricho",
+  "new": "Diosa del Capricho"
+ },
+ "4451": {
+  "english": "Defender of the Sea",
+  "old_raw": "Tutor del mar",
+  "old": "Tutor del mar",
+  "new": "Centinela del Mar"
+ },
+ "4453": {
+  "english": "Giant Red Seasnake",
+  "old_raw": "Red Seasnake del gigante",
+  "old": "Red Seasnake del gigante",
+  "new": "Serpiente Marina Roja Gigante"
+ },
+ "4461": {
+  "english": "Barrel Rock",
+  "old_raw": "Roca de barril",
+  "old": "Roca de barril",
+  "new": "Roca de Cañón"
+ },
+ "4466": {
+  "english": "Bolt Escargot",
+  "old_raw": "Caracol de perno",
+  "old": "Caracol de perno",
+  "new": "Caracol del Rayo"
+ },
+ "4467": {
+  "english": "Bolt Penguin",
+  "old_raw": "Pingüino de perno",
+  "old": "Pingüino de perno",
+  "new": "Pingüino de Perno"
+ },
+ "4473": {
+  "english": "Crimson Sunbird",
+  "old_raw": "Enrojezca Sunbird",
+  "old": "Enrojezca Sunbird",
+  "new": "Pájaro Sol Carmesí"
+ },
+ "4478": {
+  "english": "Air Eater",
+  "old_raw": "Comilón de aire",
+  "old": "Comilón de aire",
+  "new": "Comeaire"
+ },
+ "4480": {
+  "english": "Sea Kamen",
+  "old_raw": "Kamen de mar",
+  "old": "Kamen de mar",
+  "new": "Kamen de Mar"
+ },
+ "4495": {
+  "english": "Barrel Lily",
+  "old_raw": "Lirio de barril",
+  "old": "Lirio de barril",
+  "new": "Lirio Cañón"
+ },
+ "4496": {
+  "english": "Needle Ball",
+  "old_raw": "Ball de aguja",
+  "old": "Ball de aguja",
+  "new": "Bola de Agujas"
+ },
+ "4512": {
+  "english": "Gale Dogra",
+  "old_raw": "Dogra de vendaval",
+  "old": "Dogra de vendaval",
+  "new": "Gale Dogra"
+ },
+ "4513": {
+  "english": "Crazy Fish",
+  "old_raw": "Peces disparatados",
+  "old": "Peces disparatados",
+  "new": "Peces Disparatados"
+ },
+ "4515": {
+  "english": "Bracchio-raidus",
+  "old_raw": "Bracchio - raidus",
+  "old": "Bracchio - raidus",
+  "new": "Bracchio-raidus"
+ },
+ "4520": {
+  "english": "Brave Scizzar",
+  "old_raw": "Scizzar valiente",
+  "old": "Scizzar valiente",
+  "new": "Scizzar Valiente"
+ },
+ "4526": {
+  "english": "Turtle Bird",
+  "old_raw": "Ave de tortuga",
+  "old": "Ave de tortuga",
+  "new": "Pájaro Tortuga"
+ },
+ "4528": {
+  "english": "Monstrous Bird",
+  "old_raw": "Ave monstruosa",
+  "old": "Ave monstruosa",
+  "new": "Ave Monstruosa"
+ },
+ "4530": {
+  "english": "Star Boy",
+  "old_raw": "Chico Estrela",
+  "old": "Chico Estrela",
+  "new": "Chico Estrella"
+ },
+ "4532": {
+  "english": "Neck Hunter",
+  "old_raw": "Cazador de cuello",
+  "old": "Cazador de cuello",
+  "new": "Cazador de Cuello"
+ },
+ "4537": {
+  "english": "Mystical Sand",
+  "old_raw": "Arena esotérica",
+  "old": "Arena esotérica",
+  "new": "Arena Mística"
+ },
+ "4555": {
+  "english": "Frog the Jam",
+  "old_raw": "Frog el Jam",
+  "old": "Frog el Jam",
+  "new": "Sapo Viscoso"
+ },
+ "4570": {
+  "english": "Great Mammoth of Goldfine",
+  "old_raw": "Fenomenal mamut de Goldfine",
+  "old": "Fenomenal mamut de Goldfine",
+  "new": "Gran Mamut de Goldfine"
+ },
+ "4571": {
+  "english": "Man-eating Black Shark",
+  "old_raw": "Tiburón negro devorador de carne humana",
+  "old": "Tiburón negro devorador de carne humana",
+  "new": "Tiburón Negro Devorador de Carne Humana"
+ },
+ "4574": {
+  "english": "Anthrosaurus",
+  "old_raw": "Anthrosaurus",
+  "old": "Anthrosaurus",
+  "new": "Anthrosaurio"
+ },
+ "4576": {
+  "english": "Trakadon",
+  "old_raw": "Trakadon",
+  "old": "Trakadon",
+  "new": "Trakodon"
+ },
+ "4579": {
+  "english": "Little D",
+  "old_raw": "Little D",
+  "old": "Little D",
+  "new": "D Pequeño"
+ },
+ "4606": {
+  "english": "Key Mace #2",
+  "old_raw": "Macis de tecla #2",
+  "old": "Macis de tecla #2",
+  "new": "Llave de la Maza #2"
+ },
+ "4609": {
+  "english": "Fairy Dragon",
+  "old_raw": "Dragón de hada",
+  "old": "Dragón de hada",
+  "new": "Dragón Hada"
+ },
+ "4622": {
+  "english": "Hourglass of Courage",
+  "old_raw": "Reloj de arena del valor",
+  "old": "Reloj de arena del valor",
+  "new": "Reloj de Arena del Coraje"
+ },
+ "4629": {
+  "english": "The Thing That Hides in the Mud",
+  "old_raw": "La cosa que se esconde en el barro",
+  "old": "La cosa que se esconde en el barro",
+  "new": "La Cosa que se Esconde en el Barro"
+ },
+ "4632": {
+  "english": "Amazon of the Seas",
+  "old_raw": "Amazon de los mares",
+  "old": "Amazon de los mares",
+  "new": "Amazona de los Mares"
+ },
+ "4635": {
+  "english": "Armored Rat",
+  "old_raw": "Rata blindada",
+  "old": "Rata blindada",
+  "new": "Rata Blindada"
+ },
+ "4640": {
+  "english": "Night Lizard",
+  "old_raw": "Lagartija de noche",
+  "old": "Lagartija de noche",
+  "new": "Lagarto Nocturno"
+ },
+ "4645": {
+  "english": "Amphibious Bugroth",
+  "old_raw": "Bugroth anfibio",
+  "old": "Bugroth anfibio",
+  "new": "Bugroth Anfibio"
+ },
+ "4652": {
+  "english": "Gruesome Goo",
+  "old_raw": "Sustancia pegajosa horripilante",
+  "old": "Sustancia pegajosa horripilante",
+  "new": "Sustancia Pegajosa Horripilante"
+ },
+ "4657": {
+  "english": "Kunai with Chain",
+  "old_raw": "Kunai con la cadena",
+  "old": "Kunai con la cadena",
+  "new": "Kunai con Cadena"
+ },
+ "4667": {
+  "english": "Crush Card Virus",
+  "old_raw": "Aplaste la tarjeta",
+  "old": "Aplaste la tarjeta",
+  "new": "Virus Aplastacartas"
+ },
+ "4668": {
+  "english": "Eradicating Aerosol",
+  "old_raw": "Erradicar aerorosol",
+  "old": "Erradicar aerosol",
+  "new": "Aerosol Erradicador"
+ },
+ "4670": {
+  "english": "Eternal Draught",
+  "old_raw": "Bosquejo eterno",
+  "old": "Bosquejo eterno",
+  "new": "Sequía Eterna"
+ },
+ "4674": {
+  "english": "Bright Castle",
+  "old_raw": "Castillo brillante",
+  "old": "Castillo brillante",
+  "new": "Palacio Brillante"
+ },
+ "4679": {
+  "english": "War-Lion Ritual",
+  "old_raw": "Ritual de guerra - león",
+  "old": "Ritual de guerra - león",
+  "new": "Ritual del León de Guerra"
+ },
+ "4680": {
+  "english": "Beastly Mirror Ritual",
+  "old_raw": "Ritual de espejo detestable",
+  "old": "Ritual de espejo detestable",
+  "new": "Ritual del Espejo Bestial"
+ },
+ "4691": {
+  "english": "Acid Trap Hole",
+  "old_raw": "Agujero-Trampa De Ácido",
+  "old": "Agujero-Trampa De Ácido",
+  "new": "Agujero Trampa de Ácido"
+ },
+ "4692": {
+  "english": "Widespread Ruin",
+  "old_raw": "Ruina extendida",
+  "old": "Ruina extendida",
+  "new": "Ruina Generalizada"
+ },
+ "4693": {
+  "english": "Goblin Fan",
+  "old_raw": "Duende travieso admirador",
+  "old": "Duende travieso admirador",
+  "new": "Abanico Goblin"
+ },
+ "4714": {
+  "english": "Cosmo Queen",
+  "old_raw": "Reina de Cosmo",
+  "old": "Reina de Cosmo",
+  "new": "Reina Cosmo"
+ },
+ "4718": {
+  "english": "Meteor Dragon",
+  "old_raw": "Dragón de meteorito",
+  "old": "Dragón de meteorito",
+  "new": "Dragón Meteoro"
+ },
+ "4719": {
+  "english": "Meteor B. Dragon",
+  "old_raw": "Dragón de B de meteorito",
+  "old": "Dragón de B de meteorito",
+  "new": "Dragón Meteoro Negro"
+ },
+ "4720": {
+  "english": "Firewing Pegasus",
+  "old_raw": "Firewing Pegasus",
+  "old": "Firewing Pegasus",
+  "new": "Pegaso Aladefuego"
+ },
+ "4727": {
+  "english": "Dark Magic Ritual",
+  "old_raw": "Ritual mágico oscuro",
+  "old": "Ritual mágico oscuro",
+  "new": "Ritual de Magia Negra"
+ },
+ "4728": {
+  "english": "Magician of Black Chaos",
+  "old_raw": "Mago del Caos Oscuro",
+  "old": "Mago del Caos Oscuro",
+  "new": "Mago del Caos Negro"
+ },
+ "4736": {
+  "english": "Dark-Eyes Illusionist",
+  "old_raw": "Illusionist oscuro - ojos",
+  "old": "Illusionist oscuro - ojos",
+  "new": "Ilusionista de Ojos Oscuros"
+ },
+ "4742": {
+  "english": "Blast Sphere",
+  "old_raw": "Círculo de explosión",
+  "old": "Círculo de explosión",
+  "new": "Esfera Explosiva"
+ },
+ "4744": {
+  "english": "Alpha The Magnet Warrior",
+  "old_raw": "Alpha el Guerrero de Imán",
+  "old": "Alpha el Guerrero de Imán",
+  "new": "Alfa el Guerrero Magnético"
+ },
+ "4748": {
+  "english": "Red-Eyes Black Metal Dragon",
+  "old_raw": "Dragón de metal negro rojo - ojos",
+  "old": "Dragón de metal negro rojo - ojos",
+  "new": "Dragón de Metal Negro Ojos Rojos"
+ },
+ "4750": {
+  "english": "Hannibal Necromancer",
+  "old_raw": "Aníbal el Nigromante",
+  "old": "Aníbal el Nigromante",
+  "new": "Hannibal Necromante"
+ },
+ "4756": {
+  "english": "Chimera the Flying Mythical Beast",
+  "old_raw": "Quimera la bestia mítica volando",
+  "old": "Quimera la bestia mítica volando",
+  "new": "Quimera, la Bestia Voladora Mítica"
+ },
+ "4760": {
+  "english": "Cyber Raider",
+  "old_raw": "Cyber Predador",
+  "old": "Cyber Predador",
+  "new": "Ciber Predador"
+ },
+ "4763": {
+  "english": "Beta The Magnet Warrior",
+  "old_raw": "Beta el Guerrero de Imán",
+  "old": "Beta el Guerrero de Imán",
+  "new": "Beta el Guerrero Magnético"
+ },
+ "4764": {
+  "english": "Big Shield Gardna",
+  "old_raw": "Gran Escudo Guardna",
+  "old": "Gran Escudo Guardna",
+  "new": "Gran Escudo Gardna"
+ },
+ "4767": {
+  "english": "Alligator's Sword",
+  "old_raw": "La espada de piel de caimán",
+  "old": "La espada de piel de caimán",
+  "new": "Aligátor de la Espada"
+ },
+ "4790": {
+  "english": "Cyber-Tech Alligator",
+  "old_raw": "Caimán cyber- tecnología",
+  "old": "Caimán cyber- tecnología",
+  "new": "Aligátor Cibertech"
+ },
+ "4792": {
+  "english": "Gamma The Magnet Warrior",
+  "old_raw": "Gamma el Guerrero de Imán",
+  "old": "Gamma el Guerrero de Imán",
+  "new": "Gamma el Guerrero Magnético"
+ },
+ "4794": {
+  "english": "Time Machine",
+  "old_raw": "Máquina del tiempo",
+  "old": "Máquina del tiempo",
+  "new": "Máquina del Tiempo"
+ },
+ "4805": {
+  "english": "Multiply",
+  "old_raw": "Multiplique",
+  "old": "Multiplique",
+  "new": "Multiplicar"
+ },
+ "4808": {
+  "english": "Lightforce Sword",
+  "old_raw": "Espada de Fuerza Luminosa",
+  "old": "Espada de Fuerza Luminosa",
+  "new": "Espada de la Fuerza de Luz"
+ },
+ "4815": {
+  "english": "Graceful Dice",
+  "old_raw": "Dados garbosos",
+  "old": "Dados garbosos",
+  "new": "Dado Grácil"
+ },
+ "4816": {
+  "english": "Skull Dice",
+  "old_raw": "Dados de cráneo",
+  "old": "Dados de cráneo",
+  "new": "Dado de Cráneo"
+ },
+ "4830": {
+  "english": "Dark Magic Curtain",
+  "old_raw": "Cortina de Magic oscura",
+  "old": "Cortina de Magic oscura",
+  "new": "Cortina de Magia Oscura"
+ },
+ "4854": {
+  "english": "Call of the Grave",
+  "old_raw": "Llamada de la tumba",
+  "old": "Llamada de la tumba",
+  "new": "Llamada de la Tumba"
+ },
+ "4855": {
+  "english": "Anti Raigeki",
+  "old_raw": "Raigeki de inconformista",
+  "old": "Raigeki de inconformista",
+  "new": "Anti Raigeki"
+ },
+ "4859": {
+  "english": "Call of the Dark",
+  "old_raw": "Llamada del oscuridad",
+  "old": "Llamada de la oscuridad",
+  "new": "Llamada de Oscuridad"
+ },
+ "4936": {
+  "english": "Luminous Spark",
+  "old_raw": "Chispa Luminosa",
+  "old": "Chispa Luminosa",
+  "new": "Chispa Reluciente"
+ },
+ "4980": {
+  "english": "Harpie's Brother",
+  "old_raw": "Hermano de la Arpía",
+  "old": "Hermano de la Arpía",
+  "new": "Explorador del Cielo"
+ },
+ "5002": {
+  "english": "Valkyrion the Magna Warrior",
+  "old_raw": "Valkyrion el Guerrero de Imán",
+  "old": "Valkyrion el Guerrero de Imán",
+  "new": "Valkyrion el Guerrero Magno"
+ },
+ "5003": {
+  "english": "Alligator's Sword Dragon",
+  "old_raw": "El dragón de espada de piel de caimán",
+  "old": "El dragón de espada de piel de caimán",
+  "new": "Dragón del Aligátor de la Espada"
+ },
+ "5034": {
+  "english": "Kinetic Soldier",
+  "old_raw": "Soldado Cinético",
+  "old": "Soldado Cinético",
+  "new": "Soldado Cifrado"
+ },
+ "5036": {
+  "english": "Souleater",
+  "old_raw": "Devorador de Almas",
+  "old": "Devorador de Almas",
+  "new": "Comealma"
+ },
+ "5040": {
+  "english": "Electromagnetic Bagworm",
+  "old_raw": "Gusano Bolsón Electromagnético",
+  "old": "Gusano Bolsón Electromagnético",
+  "new": "Polilla Electromagnética"
+ },
+ "5072": {
+  "english": "Robolady",
+  "old_raw": "Robodama",
+  "old": "Robodama",
+  "new": "Robolady"
+ },
+ "5092": {
+  "english": "Gadget Soldier",
+  "old_raw": "Soldado de los Artilugios",
+  "old": "Soldado de los Artilugios",
+  "new": "Soldado Mecanismo"
+ },
+ "5115": {
+  "english": "Insect Monster Token",
+  "old_raw": "Ficha de Monstruo Insecto",
+  "old": "Ficha de Monstruo Insecto",
+  "new": "Ficha Monstruo Insecto"
+ },
+ "5121": {
+  "english": "Infinite Cards",
+  "old_raw": "Cartas infinitas",
+  "old": "Cartas infinitas",
+  "new": "Cartas Infinitas"
+ },
+ "5141": {
+  "english": "Red-Moon Baby",
+  "old_raw": "Bebé de la Luna Roja",
+  "old": "Bebé de la Luna Roja",
+  "new": "Bebé Vampiro"
+ },
+ "5181": {
+  "english": "Illusion Gate",
+  "old_raw": "Puerta de la Ilusión",
+  "old": "Puerta de la Ilusión",
+  "new": "Puerta de las Ilusiones"
+ },
+ "5188": {
+  "english": "Alchemic Kettle - Chaos Distill",
+  "old_raw": "Tetera Alquimia - Destilación de Caos",
+  "old": "Tetera Alquimia - Destilación de Caos",
+  "new": "Destilación del Caos"
+ },
+ "5189": {
+  "english": "Philosopher's Stone - Sabatier",
+  "old_raw": "Piedra del Filósofo - Sabatier",
+  "old": "Piedra del Filósofo - Sabatier",
+  "new": "Sabatiel - La Piedra Filosofal"
+ },
+ "5190": {
+  "english": "Ayer's Rock Sunrise",
+  "old_raw": "Amanecer en la Roca de Ayer",
+  "old": "Amanecer en la Roca de Ayer",
+  "new": "Amanecer en Ayers Rock"
+ },
+ "5195": {
+  "english": "Amazon Archer",
+  "old_raw": "Amazoness Arquera",
+  "old": "Amazoness Arquera",
+  "new": "Arquera Amazoness"
+ },
+ "5209": {
+  "english": "Marie the Fallen One",
+  "old_raw": "Marie la Caida",
+  "old": "Marie la Caida",
+  "new": "Señoroscura Marie"
+ },
+ "5223": {
+  "english": "Dark Magician's Tome of Black Magic",
+  "old_raw": "Mamotreto de Magia Negra de Maga Oscura",
+  "old": "Mamotreto de Magia Negra de Maga Oscura",
+  "new": "Fórmula Mágica"
+ },
+ "5231": {
+  "english": "Cathedral of Nobles",
+  "old_raw": "Catedral de Nobles",
+  "old": "Catedral de Nobles",
+  "new": "Templo de los Reyes"
+ },
+ "5234": {
+  "english": "Embodiment of Apophis",
+  "old_raw": "Encarnación de Apofis",
+  "old": "Encarnación de Apofis",
+  "new": "Encarnación de Apophis"
+ },
+ "5236": {
+  "english": "Foolish Burial",
+  "old_raw": "Entierro Tonto",
+  "old": "Entierro Tonto",
+  "new": "Entierro Insensato"
+ },
+ "5237": {
+  "english": "Makiu",
+  "old_raw": "Makiu",
+  "old": "Makiu",
+  "new": "Makiu, la Niebla Mística"
+ },
+ "5242": {
+  "english": "Mystical Beast Serket",
+  "old_raw": "Serket la Bestia Mística",
+  "old": "Serket la Bestia Mística",
+  "new": "Bestia Mística de Serket"
+ },
+ "5243": {
+  "english": "Swift Gaia the Fierce Knight",
+  "old_raw": "Caballero del Viento Oscuro de Gaia",
+  "old": "Caballero del Viento Oscuro de Gaia",
+  "new": "Gaia el Caballero Feroz Rápido"
+ },
+ "5244": {
+  "english": "Obnoxious Celtic Guard",
+  "old_raw": "Guardián Celta Convertido",
+  "old": "Guardián Celta Convertido",
+  "new": "Guardia Celta Convertido"
+ },
+ "5255": {
+  "english": "Garuda the Wind Spirit",
+  "old_raw": "Garuda el Espíritu del viento",
+  "old": "Garuda el Espíritu del viento",
+  "new": "Garuda el Espíritu del Viento"
+ },
+ "5261": {
+  "english": "Collected Power",
+  "old_raw": "Poder Almacenado",
+  "old": "Poder Almacenado",
+  "new": "Poder Acumulado"
+ },
+ "5275": {
+  "english": "Bait Doll",
+  "old_raw": "Muñeca Cebo",
+  "old": "Muñeca Cebo",
+  "new": "Muñeca Señuelo"
+ },
+ "5290": {
+  "english": "Enchanted Arrow",
+  "old_raw": "Flecha Encantada",
+  "old": "Flecha Encantada",
+  "new": "Flecha Rompedora de Hechizos"
+ },
+ "5291": {
+  "english": "Amazoness Chain Master",
+  "old_raw": "Maestro de la Cadena Amazoness",
+  "old": "Maestro de la Cadena Amazoness",
+  "new": "Maestra de la Cadena Amazoness"
+ },
+ "5292": {
+  "english": "Viser Des",
+  "old_raw": "Vider Des",
+  "old": "Vider Des",
+  "new": "Viser Des"
+ },
+ "5306": {
+  "english": "Skull Knight #2",
+  "old_raw": "Caballero Cráneo #2",
+  "old": "Caballero Cráneo #2",
+  "new": "Caballero del Cráneo #2"
+ },
+ "5312": {
+  "english": "Life Absorbing Machine",
+  "old_raw": "Máquina Absorbevida",
+  "old": "Máquina Absorbevida",
+  "new": "Máquina Absorbe Vidas"
+ },
+ "5317": {
+  "english": "Throwstone Unit",
+  "old_raw": "Unidad Lanzapiedras",
+  "old": "Unidad Lanzapiedras",
+  "new": "Unidad Throwstone"
+ },
+ "5332": {
+  "english": "A Feint Plan",
+  "old_raw": "Un Plan con Estratagema",
+  "old": "Un Plan con Estratagema",
+  "new": "Un plan de finta"
+ },
+ "5336": {
+  "english": "The Dragon dwelling in the Cave",
+  "old_raw": "El Dragón que mora en la Cueva",
+  "old": "El Dragón que mora en la Cueva",
+  "new": "El Dragón que Mora en la Cueva"
+ },
+ "5346": {
+  "english": "Super Rejuvenation",
+  "old_raw": "Super Rejuvenecimiento",
+  "old": "Super Rejuvenecimiento",
+  "new": "Súper Rejuvenecimiento"
+ },
+ "5358": {
+  "english": "De-Spell Germ Weapon",
+  "old_raw": "Arma Biológica De-Spell",
+  "old": "Arma Biológica De-Spell",
+  "new": "Cañón de Virus"
+ },
+ "5367": {
+  "english": "Silent Fiend",
+  "old_raw": "Demonio Silente",
+  "old": "Demonio Silente",
+  "new": "Perdición Silenciosa"
+ },
+ "5368": {
+  "english": "Kuriboh Token",
+  "old_raw": "Ficha de Kuriboh",
+  "old": "Ficha de Kuriboh",
+  "new": "Ficha Kuriboh"
+ },
+ "5383": {
+  "english": "Super Robolady",
+  "old_raw": "Super Robodama",
+  "old": "Super Robodama",
+  "new": "Super Robolady"
+ },
+ "5421": {
+  "english": "8-Claws Scorpion",
+  "old_raw": "Escorpión de 8 Garras",
+  "old": "Escorpión de 8 Garras",
+  "new": "Escorpión de 8 Pinzas"
+ },
+ "5454": {
+  "english": "Wicked Token",
+  "old_raw": "Ficha Malvada",
+  "old": "Ficha Malvada",
+  "new": "Ficha Vil"
+ },
+ "5480": {
+  "english": "Dark Designator",
+  "old_raw": "Designador Negro",
+  "old": "Designador Negro",
+  "new": "Designador Oscuro"
+ },
+ "5482": {
+  "english": "Puppet Master",
+  "old_raw": "Amo de la Marioneta",
+  "old": "Amo de la Marioneta",
+  "new": "Amo de Títeres"
+ },
+ "5486": {
+  "english": "Spell of Pain",
+  "old_raw": "Hechizo de Dolor",
+  "old": "Hechizo de Dolor",
+  "new": "Conjuro de Dolor"
+ },
+ "5490": {
+  "english": "Hidden Soldiers",
+  "old_raw": "Soldado Oculto",
+  "old": "Soldado Oculto",
+  "new": "Soldados Escondidos"
+ },
+ "5493": {
+  "english": "Calamity of the Wicked",
+  "old_raw": "Calamidad del Malvado",
+  "old": "Calamidad del Malvado",
+  "new": "Catástrofe Malevolente"
+ },
+ "5497": {
+  "english": "Monster Relief",
+  "old_raw": "Alivio de Monstruo",
+  "old": "Alivio de Monstruo",
+  "new": "Relevar al Monstruo"
+ },
+ "5501": {
+  "english": "Master of Dragon Soldier",
+  "old_raw": "Amo del Dragón Soldado",
+  "old": "Amo del Dragón Soldado",
+  "new": "Caballero Amo del Dragón"
+ },
+ "5502": {
+  "english": "F.G.D.",
+  "old_raw": "F.G.D.",
+  "old": "F.G.D.",
+  "new": "Dragón de Cinco Cabezas"
+ },
+ "5557": {
+  "english": "Rope of Spirit",
+  "old_raw": "Soga del Espíritu",
+  "old": "Soga del Espíritu",
+  "new": "Cuerda del Alma"
+ },
+ "5561": {
+  "english": "Goblin Zombie",
+  "old_raw": "Zombi Duende",
+  "old": "Zombi Duende",
+  "new": "Goblin Zombi"
+ },
+ "5588": {
+  "english": "Vampire Orchis",
+  "old_raw": "Vampiro Orchis",
+  "old": "Vampiro Orchis",
+  "new": "Orchis Vampírico"
+ },
+ "5676": {
+  "english": "Pigeonholing Books of Spell",
+  "old_raw": "Ordenando Libros de Mágia",
+  "old": "Ordenando Libros de Magia",
+  "new": "Ordenando el Libro de Magia"
+ },
+ "5680": {
+  "english": "Hidden Book of Spell",
+  "old_raw": "Libro de Conjuros Oculto",
+  "old": "Libro de Conjuros Oculto",
+  "new": "Libro de Magia Oculto"
+ },
+ "5683": {
+  "english": "Disarmament",
+  "old_raw": "Desarmar",
+  "old": "Desarmar",
+  "new": "Desarmamiento"
+ },
+ "5686": {
+  "english": "Metal Reflect Slime",
+  "old_raw": "Cieno con Reflejos Metálicos",
+  "old": "Cieno con Reflejos Metálicos",
+  "new": "Limo Reflectametal"
+ },
+ "5688": {
+  "english": "Excavation of Mage Stones",
+  "old_raw": "Excavación de Piedras Mágicas",
+  "old": "Excavación de Piedras Mágicas",
+  "new": "Excavación de la Piedra Mágica"
+ },
+ "5689": {
+  "english": "Metal Fiend Token",
+  "old_raw": "Ficha Demonio Metal",
+  "old": "Ficha Demonio Metal",
+  "new": "Ficha Demonio Metálico"
+ },
+ "5743": {
+  "english": "Soul Taker",
+  "old_raw": "Ladrón de Almas",
+  "old": "Ladrón de Almas",
+  "new": "Toma Almas"
+ },
+ "5758": {
+  "english": "Sage's Stone",
+  "old_raw": "Piedra del Sabio",
+  "old": "Piedra del Sabio",
+  "new": "La Piedra del Sabio"
+ },
+ "5774": {
+  "english": "Darkbishop Archfiend",
+  "old_raw": "Archidemonio Álfil Oscuro",
+  "old": "Archidemonio Álfil Oscuro",
+  "new": "Archidemonio Alfil Oscuro"
+ },
+ "5846": {
+  "english": "Primal Seed",
+  "old_raw": "Semilla Primigénia",
+  "old": "Semilla Primigénia",
+  "new": "Semilla Primigenia"
+ },
+ "5868": {
+  "english": "Victory Dragon",
+  "old_raw": "D. Victoria",
+  "old": "D. Victoria",
+  "new": "Dragón de la Victoria"
+ },
+ "5935": {
+  "english": "Skull Zoma",
+  "old_raw": "Zoma Calavera",
+  "old": "Zoma Calavera",
+  "new": "Zoma de Calavera"
+ },
+ "5943": {
+  "english": "Maximum Six",
+  "old_raw": "Seis Máximo",
+  "old": "Seis Máximo",
+  "new": "Seis como Máximo"
+ },
+ "5944": {
+  "english": "Dangerous Machine TYPE-6",
+  "old_raw": "Máquina Peligrosa TIPO-6",
+  "old": "Máquina Peligrosa TIPO-6",
+  "new": "Máquina Peligrosa Tipo 6"
+ },
+ "5968": {
+  "english": "Piranha Army",
+  "old_raw": "Ejército de Pira",
+  "old": "Ejército de Pira",
+  "new": "Ejército de Pirañas"
+ },
+ "6003": {
+  "english": "Shield Crash",
+  "old_raw": "Choque de Escudo",
+  "old": "Choque de Escudo",
+  "new": "Pulverizar el Escudo"
+ },
+ "6004": {
+  "english": "Gemini Fiend",
+  "old_raw": "Demonio Geminis",
+  "old": "Demonio Géminis",
+  "new": "Diablillos Géminis"
+ },
+ "6005": {
+  "english": "Return Zombie",
+  "old_raw": "Regreso del Zombi",
+  "old": "Regreso del Zombi",
+  "new": "Zombi Retornado"
+ },
+ "6006": {
+  "english": "Corpse of Yata-Garasu",
+  "old_raw": "Cadáver de Yata-Garasu",
+  "old": "Cadáver de Yata-Garasu",
+  "new": "Legado de Yata-Garatsu"
+ },
+ "6010": {
+  "english": "Earthbound Spirit's Invitation",
+  "old_raw": "Invitación de Espíritu Terrestre",
+  "old": "Invitación de Espíritu Terrestre",
+  "new": "Invitación de los Espíritus Terrestres"
+ },
+ "6032": {
+  "english": "3-Hump Lacooda",
+  "old_raw": "Lacooda de 3 jorobas",
+  "old": "Lacooda de 3 jorobas",
+  "new": "Lacooda de 3 Jorobas"
+ },
+ "6041": {
+  "english": "Regenerating Mummy",
+  "old_raw": "Momia Regenerativa",
+  "old": "Momia Regenerativa",
+  "new": "Momia Regeneradora"
+ },
+ "6076": {
+  "english": "Crush D. Gandra",
+  "old_raw": "Gandra D. Triturador",
+  "old": "Gandra D. Triturador",
+  "new": "Gandora el Dragón de la Destrucción"
+ },
+ "6084": {
+  "english": "Rare Metal Dragon",
+  "old_raw": "Dragón de Metal Raro",
+  "old": "Dragón de Metal Raro",
+  "new": "Dragón de Metales Preciosos"
+ },
+ "6109": {
+  "english": "Red-Eyes B. Chick",
+  "old_raw": "Cría B. de Ojos Rojos",
+  "old": "Cría B. de Ojos Rojos",
+  "new": "Cría de Dragón Negro"
+ },
+ "6150": {
+  "english": "The Tricky",
+  "old_raw": "El Tramposo",
+  "old": "El Tramposo",
+  "new": "El Difícil"
+ },
+ "6158": {
+  "english": "Tricky's Magic 4",
+  "old_raw": "Magia de Tramposo 4",
+  "old": "Magia de Tramposo 4",
+  "new": "Conjuro Difícil 4"
+ },
+ "6165": {
+  "english": "Tricky Token",
+  "old_raw": "Ficha Tramposas",
+  "old": "Ficha Tramposa",
+  "new": "Ficha Difícil"
+ },
+ "6169": {
+  "english": "Magician's Unite",
+  "old_raw": "Cruz del Mago",
+  "old": "Cruz del Mago",
+  "new": "Magos, Uníos"
+ },
+ "6199": {
+  "english": "Big Core",
+  "old_raw": "Gran Núcleo",
+  "old": "Gran Núcleo",
+  "new": "B.E.S. Núcleo Grande"
+ },
+ "6231": {
+  "english": "Owner's Seal",
+  "old_raw": "Sello del Dueño",
+  "old": "Sello del Dueño",
+  "new": "Sello del Propietario"
+ },
+ "6287": {
+  "english": "Curse of Vampire",
+  "old_raw": "Maldición de Vampiro",
+  "old": "Maldición de Vampiro",
+  "new": "Maldición del Vampiro"
+ },
+ "6288": {
+  "english": "Union Attack",
+  "old_raw": "Ataque Unión",
+  "old": "Ataque Unión",
+  "new": "Ataque Unido"
+ },
+ "6289": {
+  "english": "Blood Sucker",
+  "old_raw": "Sanguijuela",
+  "old": "Sanguijuela",
+  "new": "Chupasangre"
+ },
+ "6291": {
+  "english": "Overpowering Eye",
+  "old_raw": "Ojo Penetrante",
+  "old": "Ojo Penetrante",
+  "new": "Ojo Agobiante"
+ },
+ "6293": {
+  "english": "Vampire Genesis",
+  "old_raw": "Genesis de Vampiro",
+  "old": "Genesis de Vampiro",
+  "new": "Génesis de Vampiro"
+ },
+ "6302": {
+  "english": "Machiners Soldier",
+  "old_raw": "Soldados Maquinistas",
+  "old": "Soldados Maquinistas",
+  "new": "Maquinaria Soldado"
+ },
+ "6303": {
+  "english": "Machiners Defender",
+  "old_raw": "Defensor Maquinista",
+  "old": "Defensor Maquinista",
+  "new": "Maquinaria Defensora"
+ },
+ "6304": {
+  "english": "Machiners Sniper",
+  "old_raw": "Francotirador Maquinista",
+  "old": "Francotirador Maquinista",
+  "new": "Maquinaria Francotiradora"
+ },
+ "6308": {
+  "english": "Machiners Force",
+  "old_raw": "Fuerza Maquinista",
+  "old": "Fuerza Maquinista",
+  "new": "Fuerza de la Maquinaria"
+ },
+ "6310": {
+  "english": "Elemental Hero Avian",
+  "old_raw": "Héroe Elemental Avian",
+  "old": "Héroe Elemental Avian",
+  "new": "HÉROE Elemental Avian"
+ },
+ "6311": {
+  "english": "Elemental Hero Burstinatrix",
+  "old_raw": "Héroe Elemental Burstinatrix",
+  "old": "Héroe Elemental Burstinatrix",
+  "new": "HÉROE Elemental Burstinatrix"
+ },
+ "6312": {
+  "english": "Elemental Hero Clayman",
+  "old_raw": "Héroe Elemental Clayman",
+  "old": "Héroe Elemental Clayman",
+  "new": "HÉROE Elemental Clayman"
+ },
+ "6313": {
+  "english": "Elemental Hero Sparkman",
+  "old_raw": "Héroe Elemental Sparkman",
+  "old": "Héroe Elemental Sparkman",
+  "new": "HÉROE Elemental Sparkman"
+ },
+ "6344": {
+  "english": "Elemental Hero Flame Wingman",
+  "old_raw": "Héroe Elemental de la Llama Wingman",
+  "old": "Héroe Elemental de la Llama Wingman",
+  "new": "HÉROE Elemental de la Llama Wingman"
+ },
+ "6345": {
+  "english": "Elemental Hero Thunder Giant",
+  "old_raw": "Héroe Elemental del Trueno Gigante",
+  "old": "Héroe Elemental del Trueno Gigante",
+  "new": "HÉROE Elemental del Trueno Gigante"
+ },
+ "6374": {
+  "english": "Holy Knight Ishzark",
+  "old_raw": "Caballero Sagrado Ishzark",
+  "old": "Caballero Sagrado Ishzark",
+  "new": "Isaac, Caballero Divino"
+ },
+ "6393": {
+  "english": "Elemental Hero Bubbleman",
+  "old_raw": "Héroe Elemental Bubbleman",
+  "old": "Héroe Elemental Bubbleman",
+  "new": "HÉROE Elemental Bubbleman"
+ },
+ "6396": {
+  "english": "Cyber Twin Dragon",
+  "old_raw": "Ciber Dragón de Dos Cabezas",
+  "old": "Ciber Dragón de Dos Cabezas",
+  "new": "Dragón Ciber de Dos Cabezas"
+ },
+ "6397": {
+  "english": "Cyber End Dragon",
+  "old_raw": "Ciber Dragón Final",
+  "old": "Ciber Dragón Final",
+  "new": "Dragón Ciber Final"
+ },
+ "6400": {
+  "english": "Summon Priest",
+  "old_raw": "Invocación de Sacerdote",
+  "old": "Invocación de Sacerdote",
+  "new": "Monje Invocador"
+ },
+ "6405": {
+  "english": "Dark Dreadroute",
+  "old_raw": "Ruta Pavorosa Oscura",
+  "old": "Ruta Pavorosa Oscura",
+  "new": "La Raizmuerta Malvada"
+ },
+ "6410": {
+  "english": "Dark Ruler Vandalgyon",
+  "old_raw": "Vandalgyon Gobernante Oscuro",
+  "old": "Vandalgyon Gobernante Oscuro",
+  "new": "Van'Dalgyon el Señor de los Dragones Oscuros"
+ },
+ "6418": {
+  "english": "Goblin Elite Attack Force",
+  "old_raw": "Fuerza de Ataque de Elite Goblin",
+  "old": "Fuerza de Ataque de Elite Goblin",
+  "new": "Fuerza de Ataque de Élite Goblin"
+ },
+ "6424": {
+  "english": "Des Frog",
+  "old_raw": "Des Rana",
+  "old": "Des Rana",
+  "new": "Des RANA"
+ },
+ "6426": {
+  "english": "Poison Draw Frog",
+  "old_raw": "Rana del Robo Venenoso",
+  "old": "Rana del Robo Venenoso",
+  "new": "RANA del Robo Tóxica"
+ },
+ "6454": {
+  "english": "Alkana Knight Joker",
+  "old_raw": "Caballero Bromista Alkana",
+  "old": "Caballero Bromista Alkana",
+  "new": "Bufón Escolta Arcano"
+ },
+ "6465": {
+  "english": "Dreadscythe Slayer",
+  "old_raw": "Asesino de la Guadaña Espantosa",
+  "old": "Asesino de la Guadaña Espantosa",
+  "new": "Cosechador de la Guadaña del Terror"
+ },
+ "6467": {
+  "english": "Elemental Hero Shining Flare Wingman",
+  "old_raw": "Héroe Elemental Shining Flare Wingman",
+  "old": "Héroe Elemental Shining Flare Wingman",
+  "new": "HÉROE Elemental Shining Flare Wingman"
+ },
+ "6477": {
+  "english": "Elemental Hero Bladedge",
+  "old_raw": "Héroe Elemental Bladedge",
+  "old": "Héroe Elemental Bladedge",
+  "new": "HÉROE Elemental Bladedge"
+ },
+ "6478": {
+  "english": "Elemental Hero Wildheart",
+  "old_raw": "Héroe Elemental Wildheart",
+  "old": "Héroe Elemental Wildheart",
+  "new": "HÉROE Elemental Wildheart"
+ },
+ "6486": {
+  "english": "Elemental Hero Rampart Blaster",
+  "old_raw": "Héroe Elemental Rampart Blaster",
+  "old": "Héroe Elemental Rampart Blaster",
+  "new": "HÉROE Elemental Rampart Blaster"
+ },
+ "6487": {
+  "english": "Elemental Hero Tempest",
+  "old_raw": "Héroe Elemental Tempest",
+  "old": "Héroe Elemental Tempest",
+  "new": "HÉROE Elemental Tempest"
+ },
+ "6488": {
+  "english": "Elemental Hero Wildedge",
+  "old_raw": "Héroe Elemental Wiledge",
+  "old": "Héroe Elemental Wiledge",
+  "new": "HÉROE Elemental Wildedge"
+ },
+ "6527": {
+  "english": "Elemental Hero Necroshade",
+  "old_raw": "Héroe Elemental Necroshade",
+  "old": "Héroe Elemental Necroshade",
+  "new": "HÉROE Elemental Necroshade"
+ },
+ "6529": {
+  "english": "Elemental Hero Madballman",
+  "old_raw": "Héroe Elemental Hombre Bola Loco",
+  "old": "Héroe Elemental Hombre Bola Loco",
+  "new": "HÉROE Elemental Mudballman"
+ },
+ "6535": {
+  "english": "Elemental Hero Steam Healer",
+  "old_raw": "Héroe Elemental Steam Healer",
+  "old": "Héroe Elemental Steam Healer",
+  "new": "HÉROE Elemental Steam Healer"
+ },
+ "6545": {
+  "english": "Rancer Dragonute",
+  "old_raw": "Dragonauta Rancer",
+  "old": "Dragonauta Rancer",
+  "new": "Draconiano de la Lanza"
+ },
+ "6546": {
+  "english": "Mistobody",
+  "old_raw": "Cuerpo Neblinoso",
+  "old": "Cuerpo Neblinoso",
+  "new": "Cuerpo de Niebla"
+ },
+ "6547": {
+  "english": "Axe Dragonute",
+  "old_raw": "Dragonauta Hacha",
+  "old": "Dragonauta Hacha",
+  "new": "Draconiano del Hacha"
+ },
+ "6550": {
+  "english": "White Horns D.",
+  "old_raw": "D. Cuernos Blancos",
+  "old": "D. Cuernos Blancos",
+  "new": "Dragón de Cuerno Blanco"
+ },
+ "6566": {
+  "english": "Elemental Hero Neo Bubbleman",
+  "old_raw": "Héroe Elemental Neo-Bubbleman",
+  "old": "Héroe Elemental Neo-Bubbleman",
+  "new": "HÉROE Elemental Neo-Bubbleman"
+ },
+ "6568": {
+  "english": "Cyber Barrier Dragon",
+  "old_raw": "Ciber Dragón Barrera",
+  "old": "Ciber Dragón Barrera",
+  "new": "Dragón Ciber Barrera"
+ },
+ "6569": {
+  "english": "Cyber Laser Dragon",
+  "old_raw": "Ciber Dragón Láser",
+  "old": "Ciber Dragón Láser",
+  "new": "Dragón Ciber Láser"
+ },
+ "6586": {
+  "english": "Phantasmal Martyr Token",
+  "old_raw": "Ficha de Mártires Fantasma",
+  "old": "Ficha de Mártires Fantasma",
+  "new": "Ficha de Mártir Fantasmal"
+ },
+ "6603": {
+  "english": "Treeborn Frog",
+  "old_raw": "Rana Arbórea",
+  "old": "Rana Arbórea",
+  "new": "RANA Arbórea"
+ },
+ "6604": {
+  "english": "Beelze Frog",
+  "old_raw": "Rana Beelze",
+  "old": "Rana Beelze",
+  "new": "RANA Beelze"
+ },
+ "6613": {
+  "english": "Demise, King of Armageddon",
+  "old_raw": "Deceso, Rey del Apocalipsis",
+  "old": "Deceso, Rey del Apocalipsis",
+  "new": "Demise, Rey del Armagedón"
+ },
+ "6614": {
+  "english": "D.3.S. Frog",
+  "old_raw": "Rana D.3.S.",
+  "old": "Rana D.3.S.",
+  "new": "RANA D.3.S."
+ },
+ "6638": {
+  "english": "Fluffy Token",
+  "old_raw": "Ficha de Peluche",
+  "old": "Ficha de Peluche",
+  "new": "Ficha Pelusa"
+ },
+ "6639": {
+  "english": "Elemental Hero Erikshieler",
+  "old_raw": "Héroe Elemental Erikshieler",
+  "old": "Héroe Elemental Erikshieler",
+  "new": "HÉROE Elemental Electrum"
+ },
+ "6643": {
+  "english": "Elemental Hero Wild Wingman",
+  "old_raw": "Héroe Elemental Wild Wingman",
+  "old": "Héroe Elemental Wild Wingman",
+  "new": "HÉROE Elemental Wild Wingman"
+ },
+ "6644": {
+  "english": "Elemental Hero Necroid Shaman",
+  "old_raw": "Héroe Elemental Necroid Shaman",
+  "old": "Héroe Elemental Necroid Shaman",
+  "new": "HÉROE Elemental Necroid Shaman"
+ },
+ "6647": {
+  "english": "Helios Duo Megistus",
+  "old_raw": "Helios Duo Megistus",
+  "old": "Helios Duo Megistus",
+  "new": "Helios Dúo Megistus"
+ },
+ "6653": {
+  "english": "Elemental Hero Neos",
+  "old_raw": "Héroe Elemental Neos",
+  "old": "Héroe Elemental Neos",
+  "new": "HÉROE Elemental Neos"
+ },
+ "6654": {
+  "english": "Dandylion",
+  "old_raw": "Diente de León Presumido",
+  "old": "Diente de León Presumido",
+  "new": "Diente de León"
+ },
+ "6655": {
+  "english": "Elemental Hero Phoenix Enforcer",
+  "old_raw": "Héroe Elemental Phoenix Enforcer",
+  "old": "Héroe Elemental Phoenix Enforcer",
+  "new": "HÉROE Elemental Phoenix Enforcer"
+ },
+ "6656": {
+  "english": "Elemental Hero Shining Phoenix Enforcer",
+  "old_raw": "Héroe Elemental Phoenix Enforcer Brillante",
+  "old": "Héroe Elemental Phoenix Enforcer Brillante",
+  "new": "HÉROE Elemental Phoenix Enforcer Brillante"
+ },
+ "6657": {
+  "english": "Elemental Hero Mariner",
+  "old_raw": "Héroe Elemental Mariner",
+  "old": "Héroe Elemental Mariner",
+  "new": "HÉROE Elemental Mariner"
+ },
+ "6658": {
+  "english": "Destiny Hero - Doom Lord",
+  "old_raw": "Héroe del Destino - Doom Lord",
+  "old": "Héroe del Destino - Doom Lord",
+  "new": "HÉROE del Destino - Doom Lord"
+ },
+ "6659": {
+  "english": "Destiny Hero - Captain Tenacious",
+  "old_raw": "Héroe del Destino - Captain Tenacious",
+  "old": "Héroe del Destino - Captain Tenacious",
+  "new": "HÉROE del Destino - Captain Tenacious"
+ },
+ "6660": {
+  "english": "Destiny Hero - Diamond Dude",
+  "old_raw": "Héroe del Destino - Diamond Dude",
+  "old": "Héroe del Destino - Diamond Dude",
+  "new": "HÉROE del Destino - Diamond Dude"
+ },
+ "6661": {
+  "english": "Destiny Hero - Dreadmaster",
+  "old_raw": "Héroe del Destino - Dreadmaster",
+  "old": "Héroe del Destino - Dreadmaster",
+  "new": "HÉROE del Destino - Dreadmaster"
+ },
+ "6675": {
+  "english": "HERO Flash!!",
+  "old_raw": "Flash HERO!!",
+  "old": "Flash HERO!!",
+  "new": "Flash Hero!!"
+ },
+ "6752": {
+  "english": "Destiny Hero - Blade Master",
+  "old_raw": "Héroe del Destino - Blade Master",
+  "old": "Héroe del Destino - Blade Master",
+  "new": "HÉROE del Destino - Blade Master"
+ },
+ "6753": {
+  "english": "Destiny Hero - Dasher",
+  "old_raw": "Héroe del Destino - Dasher",
+  "old": "Héroe del Destino - Dasher",
+  "new": "HÉROE del Destino - Dasher"
+ },
+ "6754": {
+  "english": "Destiny Hero - Double Dude",
+  "old_raw": "Héroe del Destino - Double Dude",
+  "old": "Héroe del Destino - Double Dude",
+  "new": "HÉROE del Destino - Double Dude"
+ },
+ "6755": {
+  "english": "Destiny Hero - Defender",
+  "old_raw": "Héroe del Destino - Defender",
+  "old": "Héroe del Destino - Defender",
+  "new": "HÉROE del Destino - Defender"
+ },
+ "6756": {
+  "english": "Destiny Hero - Fear Monger",
+  "old_raw": "Héroe del Destino - Fear Monger",
+  "old": "Héroe del Destino - Fear Monger",
+  "new": "HÉROE del Destino - Fear Monger"
+ },
+ "6757": {
+  "english": "Destiny Hero - Dogma",
+  "old_raw": "Héroe del Destino - Dogma",
+  "old": "Héroe del Destino - Dogma",
+  "new": "HÉROE del Destino - Dogma"
+ },
+ "6765": {
+  "english": "Elemental Hero Dark Neos",
+  "old_raw": "Héroe Elemental Dark Neos",
+  "old": "Héroe Elemental Dark Neos",
+  "new": "HÉROE Elemental Dark Neos"
+ },
+ "6766": {
+  "english": "Elemental Hero Aqua Neos",
+  "old_raw": "Héroe Elemental Aqua Neos",
+  "old": "Héroe Elemental Aqua Neos",
+  "new": "HÉROE Elemental Aqua Neos"
+ },
+ "6767": {
+  "english": "Elemental Hero Flare Neos",
+  "old_raw": "Héroe Elemental Flare Neos",
+  "old": "Héroe Elemental Flare Neos",
+  "new": "HÉROE Elemental Flare Neos"
+ },
+ "6957": {
+  "english": "Phantom Beast Rock Lizard",
+  "old_raw": "Bestia Fantasma Lagarto de Roca",
+  "old": "Bestia Fantasma Lagarto de Roca",
+  "new": "Bestia Fantasma Rock-Lizard"
+ }
+}

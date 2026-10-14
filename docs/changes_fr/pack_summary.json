@@ -1,0 +1,28 @@
+{
+ "language": "fr",
+ "texture_ui": 85,
+ "per_family": {
+  "fogli_icone": 3,
+  "lettere_esito": 22,
+  "menu_liste": 6,
+  "schede_deck": 10,
+  "schede_ricette": 11,
+  "schermata_vs": 14,
+  "scritte_duello": 13,
+  "tutorial": 6
+ },
+ "neutral": 0,
+ "specific": 85,
+ "rows_ini_ui": 85,
+ "cards_corrected": 266,
+ "banner": [
+  "moduli/fr/intro/title_screen/00000000542eff79685c434d.png",
+  "moduli/fr/intro/title_screen/00000000705176739829dcf5.png"
+ ],
+ "folders_cards": {
+  "frame": 2,
+  "large_fr": 2833,
+  "small_fr": 2833,
+  "tiny_fr": 7
+ }
+}

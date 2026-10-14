@@ -1,0 +1,2406 @@
+{
+ "st01_t01/ImpChrMsg#23": {
+  "current": "Velo della Notte",
+  "proposed": "Velo de la Noche"
+ },
+ "st01_t01/ImpChrMsg#65": {
+  "current": "Dante Fiammeggiante",
+  "proposed": "Dante Ardiente"
+ },
+ "st01_t01/ImpChrMsg#68": {
+  "current": "Truly  Furiosa",
+  "proposed": "Truly Furiosa"
+ },
+ "st01_t01/ImpChrMsg#74": {
+  "current": "Padrone Seydina",
+  "proposed": "Maestro Seydina"
+ },
+ "st01_t01/ImpChrMsg#78": {
+  "current": "Imperatore.",
+  "proposed": "Emperador."
+ },
+ "st01_t01/ImpMapMsg#0": {
+  "current": "Academia del duelo",
+  "proposed": "Academia del Duelo"
+ },
+ "st01_t01/ImpMapMsg#7": {
+  "current": "Campo del duelo",
+  "proposed": "Campo del Duelo"
+ },
+ "st01_t01/ImpMapMsg#8": {
+  "current": "Campo del duelo",
+  "proposed": "Campo del Duelo"
+ },
+ "st01_t01/ImpMapMsg#15": {
+  "current": "Alójese 101",
+  "proposed": "Habitación 101"
+ },
+ "st01_t01/ImpMapMsg#16": {
+  "current": "Alójese 101",
+  "proposed": "Habitación 101"
+ },
+ "st01_t01/ImpMapMsg#17": {
+  "current": "Alójese 102",
+  "proposed": "Habitación 102"
+ },
+ "st01_t01/ImpMapMsg#18": {
+  "current": "Alójese 102",
+  "proposed": "Habitación 102"
+ },
+ "st01_t01/ImpMapMsg#19": {
+  "current": "Alójese 103",
+  "proposed": "Habitación 103"
+ },
+ "st01_t01/ImpMapMsg#20": {
+  "current": "Alójese 103",
+  "proposed": "Habitación 103"
+ },
+ "st01_t01/ImpMapMsg#21": {
+  "current": "Alójese 104",
+  "proposed": "Habitación 104"
+ },
+ "st01_t01/ImpMapMsg#22": {
+  "current": "Alójese 104",
+  "proposed": "Habitación 104"
+ },
+ "st01_t01/ImpMapMsg#23": {
+  "current": "Alójese 201",
+  "proposed": "Habitación 201"
+ },
+ "st01_t01/ImpMapMsg#24": {
+  "current": "Alójese 201",
+  "proposed": "Habitación 201"
+ },
+ "st01_t01/ImpMapMsg#25": {
+  "current": "Alójese 202",
+  "proposed": "Habitación 202"
+ },
+ "st01_t01/ImpMapMsg#26": {
+  "current": "Alójese 202",
+  "proposed": "Habitación 202"
+ },
+ "st01_t01/ImpMapMsg#27": {
+  "current": "Alójese 203",
+  "proposed": "Habitación 203"
+ },
+ "st01_t01/ImpMapMsg#28": {
+  "current": "Alójese 203",
+  "proposed": "Habitación 203"
+ },
+ "st01_t01/ImpMapMsg#29": {
+  "current": "Alójese 204",
+  "proposed": "Habitación 204"
+ },
+ "st01_t01/ImpMapMsg#30": {
+  "current": "Alójese 204",
+  "proposed": "Habitación 204"
+ },
+ "st01_t01/Iso001E#34": {
+  "current": "Como niegas haber tirado\nmi Deck al Océano.",
+  "proposed": "Ya que niegas haber tirado\nmi Deck al Océano."
+ },
+ "st01_t01/Iso007E#16": {
+  "current": "¡Entonces también irá《C005_4》!",
+  "proposed": "¡Entonces también irá 《C005_4》!"
+ },
+ "st01_t01/Iso007E#70": {
+  "current": "¡《PLAYER》contra《C026_1》!",
+  "proposed": "¡《PLAYER》 contra 《C026_1》!"
+ },
+ "st01_t01/Iso007E#116": {
+  "current": "《PLAYER》 ha mordido e polvo,\n¿quién se quiere medir con ella?",
+  "proposed": "《PLAYER》 ha mordido el polvo,\n¿quién se quiere medir con ella?"
+ },
+ "st01_t01/Iso010E#322": {
+  "current": "¿Quién eres? .. Ah, ya veo.\nMe llamo 《C116_1》.",
+  "proposed": "¿Quién eres? ... Ah, ya veo.\nMe llamo 《C116_1》."
+ },
+ "st01_t01/Iso010E#324": {
+  "current": "¿Cómo es tu Deck?\n¿Está pensada para Duelos Tag?",
+  "proposed": "¿Cómo es tu Deck?\n¿Está pensado para Duelos Tag?"
+ },
+ "st01_t01/Iso010E#325": {
+  "current": "¿Quién eres? .. Ah, ya veo.\nMe llamo 《C116_1》.",
+  "proposed": "¿Quién eres? ... Ah, ya veo.\nMe llamo 《C116_1》."
+ },
+ "st01_t01/Iso010E#328": {
+  "current": "¿Quién eres? .. Ah, ya veo.\nMe llamo 《C116_1》.",
+  "proposed": "¿Quién eres? ... Ah, ya veo.\nMe llamo 《C116_1》."
+ },
+ "st01_t01/Iso150E#16": {
+  "current": "Aun queda un poco para\nque empiece la clase.",
+  "proposed": "Aún queda un poco para\nque empiece la clase."
+ },
+ "st01_t01/Iso150E#20": {
+  "current": "Aun queda un poco para\nque empiece la clase.",
+  "proposed": "Aún queda un poco para\nque empiece la clase."
+ },
+ "st01_t01/LessonE#118": {
+  "current": "¡¿Eh?! ¿qué tiene\nque ver con la alquimia?",
+  "proposed": "¡¿Eh?! ¿Qué tiene\nque ver con la alquimia?"
+ },
+ "st01_t01/LessonE#273": {
+  "current": "El tenis es más glamouroso.",
+  "proposed": "El tenis es más glamuroso."
+ },
+ "st01_t01/LessonE#345": {
+  "current": "El tenis es más glamouroso.",
+  "proposed": "El tenis es más glamuroso."
+ },
+ "st01_t01/LessonE#543": {
+  "current": "Contínuos\nResiduales\nContiguos\nMolestos",
+  "proposed": "Continuos\nResiduales\nContiguos\nMolestos"
+ },
+ "st01_t01/LessonE#622": {
+  "current": "Menú Deck: edita la Deck\nque uses para luchar.",
+  "proposed": "Menú Deck: edita el Deck\nque uses para luchar."
+ },
+ "st01_t01/MorningE#81": {
+  "current": "Eh, 《PLAYER》! ¡Hoy es\ndomingo! ¡Día deL Duelo Tag!",
+  "proposed": "Eh, 《PLAYER》! ¡Hoy es\ndomingo! ¡Día del Duelo Tag!"
+ },
+ "st01_t01/Scr001E#313": {
+  "current": "¡Hasta 《C006_2》 y 《C005_2》\nhacían ruidos de monos! \nHa sido alucinante!",
+  "proposed": "¡Hasta 《C006_2》 y 《C005_2》\nhacían ruidos de monos! \n¡Ha sido alucinante!"
+ },
+ "st01_t01/Scr001E#448": {
+  "current": "He oído que van a añadir\ncanapés de chocolate el Día del Bocadillo!",
+  "proposed": "¡He oído que van a añadir\ncanapés de chocolate el Día del Bocadillo!"
+ },
+ "st01_t01/Scr001E#452": {
+  "current": "He oído que van a añadir\ncanapés de chocolate el Día del Bocadillo!",
+  "proposed": "¡He oído que van a añadir\ncanapés de chocolate el Día del Bocadillo!"
+ },
+ "st01_t01/Scr002E#216": {
+  "current": "Estoy rendido creo que\nme voy a sobar. Buenas noches.",
+  "proposed": "Estoy rendido, creo que\nme voy a sobar. Buenas noches."
+ },
+ "st01_t01/Scr002E#219": {
+  "current": "Estoy rendido creo que\nme voy a sobar. Buenas noches.",
+  "proposed": "Estoy rendido, creo que\nme voy a sobar. Buenas noches."
+ },
+ "st01_t01/Scr002E#252": {
+  "current": "Estoy rendido creo que\nme voy a sobar. Buenas noches.",
+  "proposed": "Estoy rendido, creo que\nme voy a sobar. Buenas noches."
+ },
+ "st01_t01/Scr002E#255": {
+  "current": "Estoy rendido creo que\nme voy a sobar. Buenas noches.",
+  "proposed": "Estoy rendido, creo que\nme voy a sobar. Buenas noches."
+ },
+ "st01_t01/Scr002E#287": {
+  "current": "Estoy rendido creo que\nme voy a sobar. Buenas noches.",
+  "proposed": "Estoy rendido, creo que\nme voy a sobar. Buenas noches."
+ },
+ "st01_t01/Scr002E#291": {
+  "current": "Estoy rendido creo que\nme voy a sobar. Buenas noches.",
+  "proposed": "Estoy rendido, creo que\nme voy a sobar. Buenas noches."
+ },
+ "st01_t01/Scr002E#325": {
+  "current": "Estoy rendido creo que\nme voy a sobar. Buenas noches.",
+  "proposed": "Estoy rendido, creo que\nme voy a sobar. Buenas noches."
+ },
+ "st01_t01/Scr002E#328": {
+  "current": "Estoy rendido creo que\nme voy a sobar. Buenas noches.",
+  "proposed": "Estoy rendido, creo que\nme voy a sobar. Buenas noches."
+ },
+ "st01_t01/Scr002E#565": {
+  "current": "Lo siento, 《C030_1》.\nEl envío se ha retrasado.",
+  "proposed": "Lo siento, 《C002_3》.\nEl envío se ha retrasado."
+ },
+ "st01_t01/Scr002E#845": {
+  "current": "¿Me pregunto por dónde\nanda《C005_2》?",
+  "proposed": "¿Me pregunto por dónde\nanda 《C005_2》?"
+ },
+ "st01_t01/Scr002E#907": {
+  "current": "La sardinas no me molestan.\nPero... ¿todos los días?",
+  "proposed": "Las sardinas no me molestan.\nPero... ¿todos los días?"
+ },
+ "st01_t01/Scr002E#1045": {
+  "current": "Bueno,,, no sé si me gusta o no...",
+  "proposed": "Bueno... no sé si me gusta o no..."
+ },
+ "st01_t01/Scr003E#48": {
+  "current": "¡Yujuu!! ¡ 《PLAYER》!",
+  "proposed": "¡¡Yujuu!! ¡ 《PLAYER》!"
+ },
+ "st01_t01/Scr003E#50": {
+  "current": "¡Yujuu!! ¡ 《PLAYER》!",
+  "proposed": "¡¡Yujuu!! ¡ 《PLAYER》!"
+ },
+ "st01_t01/Scr003E#64": {
+  "current": "¡Parece que te va bien, \n 《PLAYER》!",
+  "proposed": "¡Parece que te va bien, \n《PLAYER》!"
+ },
+ "st01_t01/Scr003E#66": {
+  "current": "¡Parece que te va bien, \n 《PLAYER》!",
+  "proposed": "¡Parece que te va bien, \n《PLAYER》!"
+ },
+ "st01_t01/Scr003E#68": {
+  "current": "¿Por qué murmuras,\n 《PLAYER》?",
+  "proposed": "¿Por qué murmuras,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#70": {
+  "current": "¿Por qué murmuras,\n 《PLAYER》?",
+  "proposed": "¿Por qué murmuras,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#73": {
+  "current": "¿A ti también,\n 《PLAYER》?",
+  "proposed": "¿A ti también,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#75": {
+  "current": "¿A ti también,\n 《PLAYER》?",
+  "proposed": "¿A ti también,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#87": {
+  "current": "¡Que ya te oigo,\n 《PLAYER》!",
+  "proposed": "¡Que ya te oigo,\n《PLAYER》!"
+ },
+ "st01_t01/Scr003E#89": {
+  "current": "¡Que ya te oigo,\n 《PLAYER》!",
+  "proposed": "¡Que ya te oigo,\n《PLAYER》!"
+ },
+ "st01_t01/Scr003E#91": {
+  "current": "Qué día más bueno, ¿no,\n 《PLAYER》?\n¡El cielo es azul, y el aire mola!",
+  "proposed": "Qué día más bueno, ¿no,\n《PLAYER》?\n¡El cielo es azul, y el aire mola!"
+ },
+ "st01_t01/Scr003E#93": {
+  "current": "Qué día más bueno, ¿no,\n 《PLAYER》?\n¡El cielo es azul, y el aire mola!",
+  "proposed": "Qué día más bueno, ¿no,\n《PLAYER》?\n¡El cielo es azul, y el aire mola!"
+ },
+ "st01_t01/Scr003E#135": {
+  "current": "Uaaa... ¿Qué pasa,\n 《PLAYER》?",
+  "proposed": "Uaaa... ¿Qué pasa,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#146": {
+  "current": "Mi padre es el dueño de una\nempresa de salsa picante.",
+  "proposed": "Mi padre es el dueño de una\ndestilería de sake."
+ },
+ "st01_t01/Scr003E#147": {
+  "current": "En la última paga me envió\nun poco de salsa picante.\nTe haré un descuento razonable.\n¿Quieres...?",
+  "proposed": "En la última paga me envió un poco de shochu.\nTe haré un descuento razonable.\n¿Quieres...?"
+ },
+ "st01_t01/Scr003E#150": {
+  "current": "Mi padre es el dueño de una\nempresa de salsa picante.",
+  "proposed": "Mi padre es el dueño de una\ndestilería de sake."
+ },
+ "st01_t01/Scr003E#151": {
+  "current": "En la última paga me envió\nun poco de salsa picante.\nTe haré un descuento razonable.\n¿Quieres...?",
+  "proposed": "En la última paga me envió un poco de shochu.\nTe haré un descuento razonable.\n¿Quieres...?"
+ },
+ "st01_t01/Scr003E#162": {
+  "current": "¡Un millón de gracias,\n 《C003_3》!",
+  "proposed": "¡Un millón de gracias,\n《C003_3》!"
+ },
+ "st01_t01/Scr003E#163": {
+  "current": "Vaya... Lo has conseguido.\nEs 《C026_2》...\n¡Y lleva un bikini!",
+  "proposed": "Vaya... Lo has conseguido.\nEs 《C026_2》...\n¡Y va vestida de criada!"
+ },
+ "st01_t01/Scr003E#167": {
+  "current": "¡Un millón de gracias,\n 《C003_3》!",
+  "proposed": "¡Un millón de gracias,\n《C003_3》!"
+ },
+ "st01_t01/Scr003E#168": {
+  "current": "Vaya... Lo has conseguido.\nEs 《C026_2》...\n¡Y lleva un bikini!",
+  "proposed": "Vaya... Lo has conseguido.\nEs 《C026_2》...\n¡Y va vestida de criada!"
+ },
+ "st01_t01/Scr003E#189": {
+  "current": "Oye,\n¿puedes hacerme un dibujo?\n¡Dibújame a 《C026_2》 en bikini!",
+  "proposed": "Oye,\n¿puedes hacerme un dibujo?\n¡Dibújame a 《C026_2》 vestida de criada!"
+ },
+ "st01_t01/Scr003E#191": {
+  "current": "¡Ten, puedes usar éste!",
+  "proposed": "¡Ten, usa este traje de criada!"
+ },
+ "st01_t01/Scr003E#195": {
+  "current": "Oye,\n¿puedes hacerme un dibujo?\n¡Dibújame a 《C026_2》 en bikini!",
+  "proposed": "Oye,\n¿puedes hacerme un dibujo?\n¡Dibújame a 《C026_2》 vestida de criada!"
+ },
+ "st01_t01/Scr003E#197": {
+  "current": "¡Ten, puedes usar éste!",
+  "proposed": "¡Ten, usa este traje de criada!"
+ },
+ "st01_t01/Scr003E#264": {
+  "current": "¡Ya casi es hora de cenar,\n 《PLAYER》!",
+  "proposed": "¡Ya casi es hora de cenar,\n《PLAYER》!"
+ },
+ "st01_t01/Scr003E#266": {
+  "current": "¡Ya casi es hora de cenar,\n 《PLAYER》!",
+  "proposed": "¡Ya casi es hora de cenar,\n《PLAYER》!"
+ },
+ "st01_t01/Scr003E#272": {
+  "current": "¿A dónde vas,\n 《PLAYER》?",
+  "proposed": "¿A dónde vas,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#274": {
+  "current": "¿A dónde vas,\n 《PLAYER》?",
+  "proposed": "¿A dónde vas,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#283": {
+  "current": "En esta escuela todas las\nresidencias sirven la cena a las 7PM.",
+  "proposed": "En esta escuela todas las\nresidencias sirven la cena a las 7:00 PM."
+ },
+ "st01_t01/Scr003E#285": {
+  "current": "En esta escuela todas las\nresidencias sirven la cena a las 7PM.",
+  "proposed": "En esta escuela todas las\nresidencias sirven la cena a las 7:00 PM."
+ },
+ "st01_t01/Scr003E#291": {
+  "current": "¿Vas a la tienda,\n 《PLAYER》?",
+  "proposed": "¿Vas a la tienda,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#293": {
+  "current": "¿Vas a la tienda,\n 《PLAYER》?",
+  "proposed": "¿Vas a la tienda,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#300": {
+  "current": "Seguro que eres el\nprimer Slifer al que\n 《C008_3》 elogia.",
+  "proposed": "Seguro que eres el\nprimer Slifer al que\n《C008_3》 elogia."
+ },
+ "st01_t01/Scr003E#302": {
+  "current": "En la residencia sirven la \ncena a las 7PM.",
+  "proposed": "En la residencia sirven la \ncena a las 7:00 PM."
+ },
+ "st01_t01/Scr003E#304": {
+  "current": "En la residencia sirven la \ncena a las 7PM.",
+  "proposed": "En la residencia sirven la \ncena a las 7:00 PM."
+ },
+ "st01_t01/Scr003E#306": {
+  "current": "¿Vuelves pronto,\n 《PLAYER》?",
+  "proposed": "¿Vuelves pronto,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#308": {
+  "current": "¿Vuelves pronto,\n 《PLAYER》?",
+  "proposed": "¿Vuelves pronto,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#321": {
+  "current": "Van a dar las 7PM...\nEs casi hora de cenar...",
+  "proposed": "Van a dar las 7:00 PM...\nEs casi hora de cenar..."
+ },
+ "st01_t01/Scr003E#323": {
+  "current": "Van a dar las 7PM...\nEs casi hora de cenar...",
+  "proposed": "Van a dar las 7:00 PM...\nEs casi hora de cenar..."
+ },
+ "st01_t01/Scr003E#341": {
+  "current": "¡La cena es a las 7PM!\n¿Cómo voy a esperar tanto?",
+  "proposed": "¡La cena es a las 7:00 PM!\n¿Cómo voy a esperar tanto?"
+ },
+ "st01_t01/Scr003E#343": {
+  "current": "¡La cena es a las 7PM!\n¿Cómo voy a esperar tanto?",
+  "proposed": "¡La cena es a las 7:00 PM!\n¿Cómo voy a esperar tanto?"
+ },
+ "st01_t01/Scr003E#360": {
+  "current": "¡He oído que algunos se\nvenden a 5000PD!",
+  "proposed": "¡He oído que algunos se\nvenden a 5000 PD!"
+ },
+ "st01_t01/Scr003E#362": {
+  "current": "¡He oído que algunos se\nvenden a 5000PD!",
+  "proposed": "¡He oído que algunos se\nvenden a 5000 PD!"
+ },
+ "st01_t01/Scr003E#363": {
+  "current": "Jo, jo. ¿Otra vez aquí,\n 《PLAYER》?",
+  "proposed": "Jo, jo. ¿Otra vez aquí,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#365": {
+  "current": "Jo, jo. ¿Otra vez aquí,\n 《PLAYER》?",
+  "proposed": "Jo, jo. ¿Otra vez aquí,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#397": {
+  "current": "Eso no está a la venta,\n 《C003_3》.",
+  "proposed": "Eso no está a la venta,\n《C003_3》."
+ },
+ "st01_t01/Scr003E#439": {
+  "current": "¿Por qué me miras así,\n 《PLAYER》?",
+  "proposed": "¿Por qué me miras así,\n《PLAYER》?"
+ },
+ "st01_t01/Scr003E#584": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#585": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#586": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#587": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#588": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#589": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#590": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#591": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#592": {
+  "current": "¿Eh? Ah, sólo es\n 《PLAYER》.",
+  "proposed": "¿Eh? Ah, sólo es\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#605": {
+  "current": "Hola...\n 《C145_1》.",
+  "proposed": "Hola...\n《C145_1》."
+ },
+ "st01_t01/Scr003E#750": {
+  "current": "Quería hablar contigo,\n 《PLAYER》.",
+  "proposed": "Quería hablar contigo,\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#778": {
+  "current": "Quería hablar contigo,\n 《PLAYER》.",
+  "proposed": "Quería hablar contigo,\n《PLAYER》."
+ },
+ "st01_t01/Scr003E#859": {
+  "current": "Esta... ¡es mi comida\nmás favorita!",
+  "proposed": "Esta... ¡es mi comida\nfavorita!"
+ },
+ "st01_t01/Scr004E#591": {
+  "current": "Dar estos paseos me\nhace sentirme relajada.",
+  "proposed": "Dar estos paseos me\nhace sentir relajada."
+ },
+ "st01_t01/Scr004E#592": {
+  "current": "Dar estos paseos me\nhace sentirme relajada.",
+  "proposed": "Dar estos paseos me\nhace sentir relajada."
+ },
+ "st01_t01/Scr004E#600": {
+  "current": "Qué pasa...\n¿Estás bien?",
+  "proposed": "¿Qué pasa...\n¿Estás bien?"
+ },
+ "st01_t01/Scr005E#370": {
+  "current": "Pero a mi me parecen todos iguales...\n¡Ni siquiera puedo distinguir\nquién es mejor!",
+  "proposed": "Pero a mí me parecen todos iguales...\n¡Ni siquiera puedo distinguir\nquién es mejor!"
+ },
+ "st01_t01/Scr005E#372": {
+  "current": "Pero a mi me parecen todos iguales...\n¡Ni siquiera puedo distinguir\nquién es mejor!",
+  "proposed": "Pero a mí me parecen todos iguales...\n¡Ni siquiera puedo distinguir\nquién es mejor!"
+ },
+ "st01_t01/Scr005E#420": {
+  "current": "Hola, 《PLAYER》. \n¿Tratas de entrar en\nObelisco dando coba \na 《C008_3》》?",
+  "proposed": "Hola, 《PLAYER》. ¿Tratas de entrar\nen Obelisco dando coba\na 《C008_3》?"
+ },
+ "st01_t01/Scr005E#644": {
+  "current": "¿Me pregunto por dónde\n anda 《C005_2》?",
+  "proposed": "Me pregunto por dónde\nanda 《C005_2》..."
+ },
+ "st01_t01/Scr006E#10": {
+  "current": "Ya estoy, vamos a robar\ncinco veces seguidas, así\nque no pares hasta que terminemos.",
+  "proposed": "Yo daré la señal. Vamos a robar\ncinco veces seguidas, así\nque no pares hasta que terminemos."
+ },
+ "st01_t01/Scr006E#55": {
+  "current": "Los Duelos son cuestión de,\nlógica, cálculo y oportunidad.",
+  "proposed": "Los Duelos son cuestión de\nlógica, cálculo y oportunidad."
+ },
+ "st01_t01/Scr006E#144": {
+  "current": "Un Disco vació suele significar\nque se te ha acabado la suerte.\n¡Pero no puedes ir a un Duelo con esa actitud!",
+  "proposed": "Un Disco vacío suele significar\nque se te ha acabado la suerte.\n¡Pero no puedes ir a un Duelo con esa actitud!"
+ },
+ "st01_t01/Scr006E#147": {
+  "current": "Un Disco vació suele significar\nque se te ha acabado la suerte.\n¡Pero no puedes ir a un Duelo con esa actitud!",
+  "proposed": "Un Disco vacío suele significar\nque se te ha acabado la suerte.\n¡Pero no puedes ir a un Duelo con esa actitud!"
+ },
+ "st01_t01/Scr007E#23": {
+  "current": "Pero necesita tener más\nconfianza en sí mismo.\nAún así, a veces se atasca un poco.\nAún le queda mucho que\naprender como duelista.",
+  "proposed": "Pero necesita más confianza en sí mismo.\nAun así, a veces se atasca un poco.\nAún le queda mucho que aprender como duelista."
+ },
+ "st01_t01/Scr007E#299": {
+  "current": "¡No has perdido nada de,\ntu severidad, 《C007_1》!",
+  "proposed": "¡No has perdido nada de\ntu severidad, 《C007_1》!"
+ },
+ "st01_t01/Scr007E#304": {
+  "current": "¡No has perdido nada de,\ntu severidad, 《C007_1》!",
+  "proposed": "¡No has perdido nada de\ntu severidad, 《C007_1》!"
+ },
+ "st01_t01/Scr007E#621": {
+  "current": "¡Algunos dicen que 《C007_1》\nes *demenzial*!",
+  "proposed": "¡Algunos dicen que 《C007_1》\nes *demencial*!"
+ },
+ "st01_t01/Scr008E#31": {
+  "current": "¡B-Bueno, sólo estaba usando\nun ５0% de mi verdadero poder!",
+  "proposed": "¡B-Bueno, sólo estaba usando\nun 50% de mi verdadero poder!"
+ },
+ "st01_t01/Scr008E#34": {
+  "current": "¡B-Bueno, sólo estaba usando\nun ８0% de mi verdadero poder!",
+  "proposed": "¡B-Bueno, sólo estaba usando\nun 80% de mi verdadero poder!"
+ },
+ "st01_t01/Scr049E#1": {
+  "current": "¡Dicen que Slifer Rojo es\npara los duelistas,\nfracasados, pero les\nvamos a dar una lección!",
+  "proposed": "¡Dicen que Slifer Rojo es\npara los duelistas\nfracasados, pero les\nvamos a dar una lección!"
+ },
+ "st01_t01/Scr049E#21": {
+  "current": "¡Dicen que Slifer Rojo es\npara los duelistas,\nfracasados, pero les\nvamos a dar una lección!",
+  "proposed": "¡Dicen que Slifer Rojo es\npara los duelistas\nfracasados, pero les\nvamos a dar una lección!"
+ },
+ "st01_t01/Scr051E#0": {
+  "current": "¿Huh? ¿¡Quién eres!? Oh, \neres ese estudiante nuevo.",
+  "proposed": "¿Eh? ¿¡Quién eres!? Oh, \neres ese estudiante nuevo."
+ },
+ "st01_t01/Scr051E#9": {
+  "current": "¿¡Huh!? ¡Pero! ¡Pero! \n¡Ya somos compañeros!",
+  "proposed": "¿¡Eh!? ¡Pero! ¡Pero! \n¡Ya somos compañeros!"
+ },
+ "st01_t01/Scr051E#16": {
+  "current": "¿Huh? ¿¡Quién eres!? Oh, \neres ese estudiante nuevo.",
+  "proposed": "¿Eh? ¿¡Quién eres!? Oh, \neres ese estudiante nuevo."
+ },
+ "st01_t01/Scr051E#20": {
+  "current": "¿Hum? ¿Quieres un duelo? \nBueno... Vale.",
+  "proposed": "¿Hum? ¿Quieres un Duelo? \nBueno... Vale."
+ },
+ "st01_t01/Scr051E#24": {
+  "current": "¡Hola, 《PLAYER》!.\n¡Eres un gran duelista!",
+  "proposed": "¡Hola, 《PLAYER》!\n¡Eres un gran duelista!"
+ },
+ "st01_t01/Scr051E#28": {
+  "current": "¡Hola, 《PLAYER》!. ¡Eres un gran duelista!",
+  "proposed": "¡Hola, 《PLAYER》! ¡Eres un gran duelista!"
+ },
+ "st01_t01/Scr051E#29": {
+  "current": "Apuesto a que sabes cómo\nusar esta carta bien..",
+  "proposed": "Apuesto a que sabes cómo\nusar esta carta bien."
+ },
+ "st01_t01/Scr051E#31": {
+  "current": "Si quieres,\n¡tengamos un duelo en otro momento!",
+  "proposed": "Si quieres,\n¡tengamos un Duelo en otro momento!"
+ },
+ "st01_t01/Scr051E#33": {
+  "current": "Si quieres,\n¡tendremos un duelo en otro momento!",
+  "proposed": "Si quieres,\n¡tendremos un Duelo en otro momento!"
+ },
+ "st01_t01/Scr051E#35": {
+  "current": "Si quieres,\n¡tendremos un duelo en otro momento!",
+  "proposed": "Si quieres,\n¡tendremos un Duelo en otro momento!"
+ },
+ "st01_t01/Scr051E#36": {
+  "current": "¿Huh? ¿Un regalo?\nNo necesito eso pero, ¡gracias!",
+  "proposed": "¿Eh? ¿Un regalo?\nNo necesito eso pero, ¡gracias!"
+ },
+ "st01_t01/Scr052E#0": {
+  "current": "Oye, ¿quién eres?\nSoy《C052_1》.",
+  "proposed": "Oye, ¿quién eres?\nSoy 《C052_1》."
+ },
+ "st01_t01/Scr052E#1": {
+  "current": "Puede que no lo parezca, \npero soy de Slifer Red.",
+  "proposed": "Puede que no lo parezca, \npero soy de Slifer Rojo."
+ },
+ "st01_t01/Scr052E#2": {
+  "current": "Tú también eres de Slifer Red,\n¿no? ¡Igual que yo!",
+  "proposed": "Tú también eres de Slifer Rojo,\n¿no? ¡Igual que yo!"
+ },
+ "st01_t01/Scr052E#14": {
+  "current": "Oye, ¿quién eres?\nSoy《C052_1》.",
+  "proposed": "Oye, ¿quién eres?\nSoy 《C052_1》."
+ },
+ "st01_t01/Scr052E#15": {
+  "current": "Puede que no lo parezca, \npero soy de Slifer Red.",
+  "proposed": "Puede que no lo parezca, \npero soy de Slifer Rojo."
+ },
+ "st01_t01/Scr052E#16": {
+  "current": "Tú también eres de Slifer Red,\n¿no? ¡Igual que yo!",
+  "proposed": "Tú también eres de Slifer Rojo,\n¿no? ¡Igual que yo!"
+ },
+ "st01_t01/Scr052E#19": {
+  "current": "¡Muy bien!\n¡Es la hora de un duelo!",
+  "proposed": "¡Muy bien!\n¡Es la hora de un Duelo!"
+ },
+ "st01_t01/Scr052E#23": {
+  "current": "He perdido muchos duelos.",
+  "proposed": "He perdido muchos Duelos."
+ },
+ "st01_t01/Scr052E#26": {
+  "current": "He perdido muchos duelos.\nCoge esto...",
+  "proposed": "He perdido muchos Duelos.\nCoge esto..."
+ },
+ "st01_t01/Scr052E#28": {
+  "current": "¡Tengamos un duelo en otro momento!",
+  "proposed": "¡Tengamos un Duelo en otro momento!"
+ },
+ "st01_t01/Scr052E#30": {
+  "current": "¡Tengamos un duelo en otro momento!",
+  "proposed": "¡Tengamos un Duelo en otro momento!"
+ },
+ "st01_t01/Scr052E#32": {
+  "current": "¡Tengamos un duelo en otro momento!",
+  "proposed": "¡Tengamos un Duelo en otro momento!"
+ },
+ "st01_t01/Scr053E#6": {
+  "current": "No, ¡no he olvidado!\n¡Vamos a derrotarlos a todos!",
+  "proposed": "No, ¡no lo he olvidado!\n¡Vamos a derrotarlos a todos!"
+ },
+ "st01_t01/Scr053E#15": {
+  "current": "¿Un duelo? Sí, ¡por qué no!",
+  "proposed": "¿Un Duelo? Sí, ¡por qué no!"
+ },
+ "st01_t01/Scr053E#16": {
+  "current": "¡Tengamos un duelo bonito y justo!",
+  "proposed": "¡Tengamos un Duelo bonito y justo!"
+ },
+ "st01_t01/Scr053E#17": {
+  "current": "Bueno, ¿estás listo?\n¡Tengamos un duelo!",
+  "proposed": "Bueno, ¿estás listo?\n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr053E#28": {
+  "current": "¡Fue un duelo divertido!\n¡Tengamos otro alguna vez!",
+  "proposed": "¡Fue un Duelo divertido!\n¡Tengamos otro alguna vez!"
+ },
+ "st01_t01/Scr053E#29": {
+  "current": "Chaval,\n¡qué se siente uno bien al ganar un duelo!",
+  "proposed": "Chaval,\n¡qué se siente uno bien al ganar un Duelo!"
+ },
+ "st01_t01/Scr053E#30": {
+  "current": "¡Fue un duelo divertido!\n¡Tengamos otro alguna vez!",
+  "proposed": "¡Fue un Duelo divertido!\n¡Tengamos otro alguna vez!"
+ },
+ "st01_t01/Scr053E#31": {
+  "current": "Siendo un duelo bueno y justo,\nno importa un empate.",
+  "proposed": "Siendo un Duelo bueno y justo,\nno importa un empate."
+ },
+ "st01_t01/Scr053E#32": {
+  "current": "¡Fue un duelo divertido!\n¡Tengamos otro alguna vez!",
+  "proposed": "¡Fue un Duelo divertido!\n¡Tengamos otro alguna vez!"
+ },
+ "st01_t01/Scr054E#0": {
+  "current": "¡Uuh! Oh, hola. Soy《C054_1》.",
+  "proposed": "¡Uuh! Oh, hola. Soy 《C054_1》."
+ },
+ "st01_t01/Scr054E#6": {
+  "current": "¿¡Huh!? P-pero, ya somos compañeros,\n¿¡no es cierto!?",
+  "proposed": "¿¡Eh!? P-pero, ya somos compañeros,\n¿¡no es cierto!?"
+ },
+ "st01_t01/Scr054E#12": {
+  "current": "¡Uuh! Oh, hola. Soy《C054_1》.",
+  "proposed": "¡Uuh! Oh, hola. Soy 《C054_1》."
+ },
+ "st01_t01/Scr055E#0": {
+  "current": "Soy《C055_1》.",
+  "proposed": "Soy 《C055_1》."
+ },
+ "st01_t01/Scr055E#9": {
+  "current": "Soy《C055_1》.",
+  "proposed": "Soy 《C055_1》."
+ },
+ "st01_t01/Scr055E#11": {
+  "current": "¿Un duelo? Seguro.",
+  "proposed": "¿Un Duelo? Seguro."
+ },
+ "st01_t01/Scr055E#18": {
+  "current": "Nos veremos en el próximo duelo.",
+  "proposed": "Nos veremos en el próximo Duelo."
+ },
+ "st01_t01/Scr055E#19": {
+  "current": "Gané... Nos veremos en el próximo duelo.",
+  "proposed": "Gané... Nos veremos en el próximo Duelo."
+ },
+ "st01_t01/Scr055E#20": {
+  "current": "Un empate...\nNos veremos en el próximo duelo.",
+  "proposed": "Un empate...\nNos veremos en el próximo Duelo."
+ },
+ "st01_t01/Scr056E#3": {
+  "current": "Te gustan los duelos tag,\n¿eh? Jeje, ¡igual que a mí!",
+  "proposed": "Te gustan los Duelos tag,\n¿eh? Jeje, ¡igual que a mí!"
+ },
+ "st01_t01/Scr056E#8": {
+  "current": "Te gustan los duelos tag,\n¿eh? Jeje, ¡igual que a mí!",
+  "proposed": "Te gustan los Duelos tag,\n¿eh? Jeje, ¡igual que a mí!"
+ },
+ "st01_t01/Scr056E#12": {
+  "current": "¡Yuju! ¡Tengamos un duelo!",
+  "proposed": "¡Yuju! ¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr056E#21": {
+  "current": "Si tienes comezón por un duelo,\n¡sólo dame un grito!",
+  "proposed": "Si tienes comezón por un Duelo,\n¡sólo dame un grito!"
+ },
+ "st01_t01/Scr056E#23": {
+  "current": "Si tienes comezón por un duelo,\n¡sólo dame un grito!",
+  "proposed": "Si tienes comezón por un Duelo,\n¡sólo dame un grito!"
+ },
+ "st01_t01/Scr056E#25": {
+  "current": "Si tienes comezón por un duelo,\n¡sólo dame un grito!",
+  "proposed": "Si tienes comezón por un Duelo,\n¡sólo dame un grito!"
+ },
+ "st01_t01/Scr064E#0": {
+  "current": "No creo que nos hayamos encontrado.\nSoy《C064_1》.",
+  "proposed": "No creo que nos hayamos encontrado.\nSoy 《C064_1》."
+ },
+ "st01_t01/Scr064E#3": {
+  "current": "¿Conoces a un tío llamado\n《C001_1》? Sobresale,\nasí que seguro a que has oído de él.",
+  "proposed": "¿Conoces a un tío llamado\n《C001_1》? Sobresale,\nasí que seguro que has oído hablar de él."
+ },
+ "st01_t01/Scr064E#4": {
+  "current": "Ganó durante la prueba\ncon una gran reacción!\nMe encantaría un duelo con él.",
+  "proposed": "Ganó durante la prueba\ncon una gran reacción!\nMe encantaría un Duelo con él."
+ },
+ "st01_t01/Scr064E#7": {
+  "current": "¿Conoces a un tío llamado\n《C001_1》? Sobresale,\nasí que seguro a que has oído de él.",
+  "proposed": "¿Conoces a un tío llamado\n《C001_1》? Sobresale,\nasí que seguro que has oído hablar de él."
+ },
+ "st01_t01/Scr064E#8": {
+  "current": "Ganó durante la prueba\ncon una gran reacción!\nMe encantaría un duelo con él.",
+  "proposed": "Ganó durante la prueba\ncon una gran reacción!\nMe encantaría un Duelo con él."
+ },
+ "st01_t01/Scr064E#9": {
+  "current": "No creo que nos hayamos encontrado.\nSoy《C064_1》.",
+  "proposed": "No creo que nos hayamos encontrado.\nSoy 《C064_1》."
+ },
+ "st01_t01/Scr064E#11": {
+  "current": "¿Quiero tener un duelo?\n¡Iba a preguntarte lo mismo!",
+  "proposed": "¿Quiero tener un Duelo?\n¡Iba a preguntarte lo mismo!"
+ },
+ "st01_t01/Scr064E#12": {
+  "current": "Bien, ¡tengamos un duelo!",
+  "proposed": "Bien, ¡tengamos un Duelo!"
+ },
+ "st01_t01/Scr064E#13": {
+  "current": "Me aplastaste en ese duelo.\nMordí el polvo!",
+  "proposed": "Me aplastaste en ese Duelo.\n¡Mordí el polvo!"
+ },
+ "st01_t01/Scr064E#18": {
+  "current": "So sí, quiero darte esto. \nEstá bien, tengo otros.",
+  "proposed": "Oh sí, quiero darte esto. \nEstá bien, tengo otros."
+ },
+ "st01_t01/Scr064E#19": {
+  "current": "¡Tengamos un duelo otra vez!",
+  "proposed": "¡Tengamos un Duelo otra vez!"
+ },
+ "st01_t01/Scr064E#20": {
+  "current": "¡Sí, gané!\n¡Tengamos un duelo otra vez!",
+  "proposed": "¡Sí, gané!\n¡Tengamos un Duelo otra vez!"
+ },
+ "st01_t01/Scr064E#21": {
+  "current": "Vaya, es un empate. \n¡Tengamos un duelo otra vez!",
+  "proposed": "Vaya, es un empate. \n¡Tengamos un Duelo otra vez!"
+ },
+ "st01_t01/Scr065E#3": {
+  "current": "¿Conoces a 《C001_1》 y \na《C002_1》 de Slifer Red?",
+  "proposed": "¿Conoces a 《C001_1》 y \na 《C002_1》 de Slifer Rojo?"
+ },
+ "st01_t01/Scr065E#5": {
+  "current": "Sí, ¡no he olvidado!\n¡Hagamos todo lo posible!",
+  "proposed": "Sí, ¡no lo he olvidado!\n¡Hagamos todo lo posible!"
+ },
+ "st01_t01/Scr065E#7": {
+  "current": "¿Conoces a 《C001_1》 y \na《C002_1》 de Slifer Red?",
+  "proposed": "¿Conoces a 《C001_1》 y \na 《C002_1》 de Slifer Rojo?"
+ },
+ "st01_t01/Scr065E#11": {
+  "current": "¿Un duelo? Por supuesto, \nme encantaría.",
+  "proposed": "¿Un Duelo? Por supuesto, \nme encantaría."
+ },
+ "st01_t01/Scr065E#12": {
+  "current": "¿Estás listo? Bien,\n¡tengamos un duelo!",
+  "proposed": "¿Estás listo? Bien,\n¡tengamos un Duelo!"
+ },
+ "st01_t01/Scr065E#19": {
+  "current": "¡Tengamos un duelo otra vez pronto!",
+  "proposed": "¡Tengamos un Duelo otra vez pronto!"
+ },
+ "st01_t01/Scr065E#20": {
+  "current": "¡Yuju! ¡Gané!\n¡Ese fue un gran duelo!",
+  "proposed": "¡Yuju! ¡Gané!\n¡Ese fue un gran Duelo!"
+ },
+ "st01_t01/Scr065E#21": {
+  "current": "¡Tengamos un duelo otra vez pronto!",
+  "proposed": "¡Tengamos un Duelo otra vez pronto!"
+ },
+ "st01_t01/Scr065E#22": {
+  "current": "¡Es un empate!\nTengamos otro duelo para ver quien gana.",
+  "proposed": "¡Es un empate!\nTengamos otro Duelo para ver quien gana."
+ },
+ "st01_t01/Scr065E#23": {
+  "current": "¡Tengamos un duelo otra vez pronto!",
+  "proposed": "¡Tengamos un Duelo otra vez pronto!"
+ },
+ "st01_t01/Scr066E#6": {
+  "current": "Bien,\n¡hagamos todo lo posible por Slifer Red!",
+  "proposed": "Bien,\n¡hagamos todo lo posible por Slifer Rojo!"
+ },
+ "st01_t01/Scr066E#7": {
+  "current": "¿¡De veras!? ¡Me encantaría!\n¡Todos en Slifer Red, uníos!",
+  "proposed": "¿¡De veras!? ¡Me encantaría!\n¡Todos en Slifer Rojo, uníos!"
+ },
+ "st01_t01/Scr066E#13": {
+  "current": "¿Quieres tener un duelo?\n¡Vale!",
+  "proposed": "¿Quieres tener un Duelo?\n¡Vale!"
+ },
+ "st01_t01/Scr066E#14": {
+  "current": "¿Estás listo?\n¡Tengamos un duelo!",
+  "proposed": "¿Estás listo?\n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr066E#16": {
+  "current": "¡Perdí! Eres bueno chaval.",
+  "proposed": "¡Perdí! Eres bueno, chaval."
+ },
+ "st01_t01/Scr066E#21": {
+  "current": "Tengamos otro duelo, ¿vale?\n2 estudiantes de Slifer Red",
+  "proposed": "Tengamos otro Duelo, ¿vale?\n2 estudiantes de Slifer Rojo"
+ },
+ "st01_t01/Scr066E#23": {
+  "current": "Tengamos otro duelo, ¿vale?\n2 estudiantes de Slifer Red",
+  "proposed": "Tengamos otro Duelo, ¿vale?\n2 estudiantes de Slifer Rojo"
+ },
+ "st01_t01/Scr066E#24": {
+  "current": "Un empate, ¿huh?\nInteresante.",
+  "proposed": "Un empate, ¿eh?\nInteresante."
+ },
+ "st01_t01/Scr066E#25": {
+  "current": "Tengamos otro duelo, ¿vale?\n2 estudiantes de Slifer Red",
+  "proposed": "Tengamos otro Duelo, ¿vale?\n2 estudiantes de Slifer Rojo"
+ },
+ "st01_t01/Scr069E#5": {
+  "current": "Pero lo interesante de \nlos duelos es que puedes \nganar aun si tu adversario tiene un plan.",
+  "proposed": "Pero lo interesante de \nlos Duelos es que puedes \nganar aun si tu adversario tiene un plan."
+ },
+ "st01_t01/Scr069E#10": {
+  "current": "Pero lo interesante de \nlos duelos es que puedes \nganar aun si tu adversario tiene un plan.",
+  "proposed": "Pero lo interesante de \nlos Duelos es que puedes \nganar aun si tu adversario tiene un plan."
+ },
+ "st01_t01/Scr070E#20": {
+  "current": "Tan cerca y tan lejos. ¡Un\ngran duelo, debo admitirlo!",
+  "proposed": "Tan cerca y tan lejos. ¡Un\ngran Duelo, debo admitirlo!"
+ },
+ "st01_t01/Scr073E#0": {
+  "current": "Hola. Me llamo\n《C073_1》.\nYo también soy un Slifer Red.",
+  "proposed": "Hola. Me llamo\n《C073_1》.\nYo también soy un Slifer Rojo."
+ },
+ "st01_t01/Scr073E#11": {
+  "current": "Hola. Me llamo\n《C073_1》.\nYo también soy un Slifer Red.",
+  "proposed": "Hola. Me llamo\n《C073_1》.\nYo también soy un Slifer Rojo."
+ },
+ "st01_t01/Scr073E#21": {
+  "current": "Me chiflan los duelos.\n¡Tenemos que repetirlo!",
+  "proposed": "Me chiflan los Duelos.\n¡Tenemos que repetirlo!"
+ },
+ "st01_t01/Scr073E#23": {
+  "current": "Me chiflan los duelos.\n¡Tenemos que repetirlo!",
+  "proposed": "Me chiflan los Duelos.\n¡Tenemos que repetirlo!"
+ },
+ "st01_t01/Scr073E#25": {
+  "current": "Me chiflan los duelos.\n¡Tenemos que repetirlo!",
+  "proposed": "Me chiflan los Duelos.\n¡Tenemos que repetirlo!"
+ },
+ "st01_t01/Scr076E#1": {
+  "current": "Así que te llamas《PLAYER》,\n¿no es cierto?",
+  "proposed": "Así que te llamas 《PLAYER》,\n¿no es cierto?"
+ },
+ "st01_t01/Scr076E#2": {
+  "current": "¡Es un honor conocerte.\n¡Vivo por los duelos!",
+  "proposed": "¡Es un honor conocerte.\n¡Vivo por los Duelos!"
+ },
+ "st01_t01/Scr076E#5": {
+  "current": "¡Viéndole en un duelo puedes\naprender un par de cosas!",
+  "proposed": "¡Viéndole en un Duelo puedes\naprender un par de cosas!"
+ },
+ "st01_t01/Scr076E#8": {
+  "current": "¡Vivo por los duelos! \n¡Y lucho por la victoria!",
+  "proposed": "¡Vivo por los Duelos! \n¡Y lucho por la victoria!"
+ },
+ "st01_t01/Scr076E#10": {
+  "current": "¡Viéndole en un duelo puedes\naprender un par de cosas!",
+  "proposed": "¡Viéndole en un Duelo puedes\naprender un par de cosas!"
+ },
+ "st01_t01/Scr076E#12": {
+  "current": "Así que te llamas《PLAYER》,\n¿no es cierto?",
+  "proposed": "Así que te llamas 《PLAYER》,\n¿no es cierto?"
+ },
+ "st01_t01/Scr076E#13": {
+  "current": "¡Es un honor conocerte.\n¡Vivo por los duelos!",
+  "proposed": "¡Es un honor conocerte.\n¡Vivo por los Duelos!"
+ },
+ "st01_t01/Scr076E#14": {
+  "current": "¡Soy un hombre!\nNo puedo retroceder frente a un duelo",
+  "proposed": "¡Soy un hombre!\nNo puedo retroceder frente a un Duelo"
+ },
+ "st01_t01/Scr076E#15": {
+  "current": "¡Prepárate! \n¡Todo lo que tengo es un duelo!",
+  "proposed": "¡Prepárate! \n¡Todo lo que tengo es un Duelo!"
+ },
+ "st01_t01/Scr076E#24": {
+  "current": "¡Desafíame cuando quieras! \nEspero el próximo duelo.",
+  "proposed": "¡Desafíame cuando quieras! \nEspero el próximo Duelo."
+ },
+ "st01_t01/Scr076E#26": {
+  "current": "¡Desafíame cuando quieras! \nEspero el próximo duelo.",
+  "proposed": "¡Desafíame cuando quieras! \nEspero el próximo Duelo."
+ },
+ "st01_t01/Scr076E#28": {
+  "current": "¡Desafíame cuando quieras!\nEspero el próximo duelo.",
+  "proposed": "¡Desafíame cuando quieras!\nEspero el próximo Duelo."
+ },
+ "st01_t01/Scr076E#29": {
+  "current": "Sólo estoy interesado en duelos,\n¡gracias! ¡HIAA!",
+  "proposed": "Sólo estoy interesado en Duelos,\n¡gracias! ¡HIAA!"
+ },
+ "st01_t01/Scr077E#3": {
+  "current": "Dicen que Emperador《C007_4》\ntiene un hermano menor, y",
+  "proposed": "Dicen que Emperador 《C007_4》\ntiene un hermano menor, y"
+ },
+ "st01_t01/Scr077E#4": {
+  "current": "está en el colegio.\nSeguro es tan bueno como《C007_4》",
+  "proposed": "está en el colegio.\nSeguro es tan bueno como 《C007_4》"
+ },
+ "st01_t01/Scr077E#9": {
+  "current": "Dicen que Emperador《C007_4》\ntiene un hermano menor, y",
+  "proposed": "Dicen que Emperador 《C007_4》\ntiene un hermano menor, y"
+ },
+ "st01_t01/Scr077E#10": {
+  "current": "está en el colegio.\nSeguro es tan bueno como《C007_4》",
+  "proposed": "está en el colegio.\nSeguro es tan bueno como 《C007_4》"
+ },
+ "st01_t01/Scr077E#15": {
+  "current": "La culpa de mi derrota es \nde mi habilidad para duelos.",
+  "proposed": "La culpa de mi derrota es \nde mi habilidad para Duelos."
+ },
+ "st01_t01/Scr077E#17": {
+  "current": "¡Humph! Has mejorado,\n 《PLAYER》.",
+  "proposed": "¡Humph! Has mejorado,\n《PLAYER》."
+ },
+ "st01_t01/Scr077E#18": {
+  "current": "Tienes que prever las cosas en un duelo.\nCoge mi Receta.",
+  "proposed": "Tienes que prever las cosas en un Duelo.\nCoge mi Receta."
+ },
+ "st01_t01/Scr077E#20": {
+  "current": "Tienes que prever las cosas en un duelo.\nCoge esta carta",
+  "proposed": "Tienes que prever las cosas en un Duelo.\nCoge esta carta"
+ },
+ "st01_t01/Scr077E#21": {
+  "current": "Cuando quieras tener otro duelo,\naquí estoy.",
+  "proposed": "Cuando quieras tener otro Duelo,\naquí estoy."
+ },
+ "st01_t01/Scr077E#23": {
+  "current": "Cuando quieras tener otro duelo,\naquí estoy.",
+  "proposed": "Cuando quieras tener otro Duelo,\naquí estoy."
+ },
+ "st01_t01/Scr077E#24": {
+  "current": "Humph... Buen trabajo,\n 《PLAYER》.",
+  "proposed": "Humph... Buen trabajo,\n《PLAYER》."
+ },
+ "st01_t01/Scr077E#25": {
+  "current": "Cuando quieras tener otro duelo,\naquí estoy.",
+  "proposed": "Cuando quieras tener otro Duelo,\naquí estoy."
+ },
+ "st01_t01/Scr077E#26": {
+  "current": "Regalando cosas, ¿huh? \nMuy propio de ti, 《PLAYER》.",
+  "proposed": "Regalando cosas, ¿eh? \nMuy propio de ti, 《PLAYER》."
+ },
+ "st01_t01/Scr077E#27": {
+  "current": "Regalando bocadillos, ¿huh? \nMuy propio de ti,《PLAYER》.",
+  "proposed": "Regalando bocadillos, ¿eh? \nMuy propio de ti, 《PLAYER》."
+ },
+ "st01_t01/Scr078E#0": {
+  "current": "Un duelo te \npermite fortalecerte.",
+  "proposed": "Un Duelo te \npermite fortalecerte."
+ },
+ "st01_t01/Scr078E#2": {
+  "current": "Me llamo 《C078_1》 y como tú,\n¡vivo para tener duelos!",
+  "proposed": "Me llamo 《C078_1》 y como tú,\n¡vivo para tener Duelos!"
+ },
+ "st01_t01/Scr078E#8": {
+  "current": "Nuestro amor por los duelos\nnos hará poderosos.",
+  "proposed": "Nuestro amor por los Duelos\nnos hará poderosos."
+ },
+ "st01_t01/Scr078E#16": {
+  "current": "Un duelo te \npermite fortalecerte.",
+  "proposed": "Un Duelo te \npermite fortalecerte."
+ },
+ "st01_t01/Scr078E#18": {
+  "current": "Me llamo 《C078_1》 y como tú,\n¡vivo para tener duelos!",
+  "proposed": "Me llamo 《C078_1》 y como tú,\n¡vivo para tener Duelos!"
+ },
+ "st01_t01/Scr078E#24": {
+  "current": "He perdido,\npero gracias por un duelo tan estimulante.",
+  "proposed": "He perdido,\npero gracias por un Duelo tan estimulante."
+ },
+ "st01_t01/Scr078E#25": {
+  "current": "Como regalo por tan buen duelo,\nte doy esta Receta.",
+  "proposed": "Como regalo por tan buen Duelo,\nte doy esta Receta."
+ },
+ "st01_t01/Scr078E#28": {
+  "current": "Como regalo por tan buen duelo,\nte doy esta carta.",
+  "proposed": "Como regalo por tan buen Duelo,\nte doy esta carta."
+ },
+ "st01_t01/Scr078E#30": {
+  "current": "Espero con ansiedad po\n nuestro próximo duelo.",
+  "proposed": "Espero con ansia\nnuestro próximo Duelo."
+ },
+ "st01_t01/Scr078E#32": {
+  "current": "Espero con ansiedad por\nnuestro próximo duelo.",
+  "proposed": "Espero con ansia\nnuestro próximo Duelo."
+ },
+ "st01_t01/Scr078E#34": {
+  "current": "Espero con ansiedad \nnuestro próximo duelo.",
+  "proposed": "Espero con ansiedad \nnuestro próximo Duelo."
+ },
+ "st01_t01/Scr079E#6": {
+  "current": "Oh sí,\n¡y también somos compañeros para los duelos!",
+  "proposed": "Oh sí,\n¡y también somos compañeros para los Duelos!"
+ },
+ "st01_t01/Scr079E#14": {
+  "current": "¿Un duelo?\nPrefiero que me lo pida una chica. Jejeje...",
+  "proposed": "¿Un Duelo?\nPrefiero que me lo pida una chica. Jejeje..."
+ },
+ "st01_t01/Scr079E#16": {
+  "current": "¡Vamos! ¡Tengamos un duelo! \n¡No tengo tiempo que perder!",
+  "proposed": "¡Vamos! ¡Tengamos un Duelo! \n¡No tengo tiempo que perder!"
+ },
+ "st01_t01/Scr079E#20": {
+  "current": "Esta vez admitiré mi derrota Coge,\nte daré esto.",
+  "proposed": "Esta vez admitiré mi derrota. Coge,\nte daré esto."
+ },
+ "st01_t01/Scr079E#23": {
+  "current": "Esta vez admitiré mi derrota Coge,\nte daré esto.",
+  "proposed": "Esta vez admitiré mi derrota. Coge,\nte daré esto."
+ },
+ "st01_t01/Scr079E#25": {
+  "current": "El próximo duelo,\ntráete a una chica mona contigo.",
+  "proposed": "El próximo Duelo,\ntráete a una chica mona contigo."
+ },
+ "st01_t01/Scr079E#27": {
+  "current": "El próximo duelo,\ntráete a una chica mona contigo.",
+  "proposed": "El próximo Duelo,\ntráete a una chica mona contigo."
+ },
+ "st01_t01/Scr079E#29": {
+  "current": "El próximo duelo,\ntráete a una chica mona contigo.",
+  "proposed": "El próximo Duelo,\ntráete a una chica mona contigo."
+ },
+ "st01_t01/Scr080E#3": {
+  "current": "¿Sabes cual es la debilidad \ndel Profesor 《C008_3》?",
+  "proposed": "¿Sabes cuál es la debilidad \ndel Profesor 《C008_3》?"
+ },
+ "st01_t01/Scr080E#8": {
+  "current": "¿Sabes cual es la debilidad \ndel Profesor 《C008_3》?",
+  "proposed": "¿Sabes cuál es la debilidad \ndel Profesor 《C008_3》?"
+ },
+ "st01_t01/Scr080E#12": {
+  "current": "¿Un duelo?\nBien, si ansías tanto un duelo conmigo.",
+  "proposed": "¿Un Duelo?\nBien, si ansías tanto un Duelo conmigo."
+ },
+ "st01_t01/Scr080E#21": {
+  "current": "Coge. ¿Satisfecho ahora? \nNo tientes que agradecerme.",
+  "proposed": "Coge. ¿Satisfecho ahora? \nNo tienes que agradecerme."
+ },
+ "st01_t01/Scr080E#22": {
+  "current": "Soy un hombre ocupado, \npero nunca rechazo un duelo.",
+  "proposed": "Soy un hombre ocupado, \npero nunca rechazo un Duelo."
+ },
+ "st01_t01/Scr080E#24": {
+  "current": "Soy un hombre ocupado, \npero nunca rechazo un duelo.",
+  "proposed": "Soy un hombre ocupado, \npero nunca rechazo un Duelo."
+ },
+ "st01_t01/Scr080E#26": {
+  "current": "Soy un hombre ocupado, \npero nunca rechazo un duelo.",
+  "proposed": "Soy un hombre ocupado, \npero nunca rechazo un Duelo."
+ },
+ "st01_t01/Scr080E#28": {
+  "current": "¿Huh? ¿Un bocadillo? \n¡Esperas que acepte esto!",
+  "proposed": "¿Eh? ¿Un bocadillo? \n¡Esperas que acepte esto!"
+ },
+ "st01_t01/Scr081E#18": {
+  "current": "¿Un duelo?\nVale ¡pero no llores cuando pierdas!",
+  "proposed": "¿Un Duelo?\nVale ¡pero no llores cuando pierdas!"
+ },
+ "st01_t01/Scr081E#20": {
+  "current": "¡Cómo alguien como \ntú me hizo hecho papilla!",
+  "proposed": "¡Cómo ha podido alguien como \ntú hacerme papilla!"
+ },
+ "st01_t01/Scr081E#25": {
+  "current": "¡Perder tantos duelos así\nha dañado mi orgullo!",
+  "proposed": "¡Perder tantos Duelos así\nha dañado mi orgullo!"
+ },
+ "st01_t01/Scr081E#28": {
+  "current": "¡Perder tantos duelos \nasí ha dañado mi orgullo!",
+  "proposed": "¡Perder tantos Duelos \nasí ha dañado mi orgullo!"
+ },
+ "st01_t01/Scr082E#0": {
+  "current": "¿¡Qué pasa contigo, tío!? \n¿¡Quieres tener un duelo!?",
+  "proposed": "¿¡Qué pasa contigo, tío!? \n¿¡Quieres tener un Duelo!?"
+ },
+ "st01_t01/Scr082E#1": {
+  "current": "¡Me llamo 《C082_1》! \n¿Quién eres? ¿huh?",
+  "proposed": "¡Me llamo 《C082_1》! \n¿Quién eres? ¿eh?"
+ },
+ "st01_t01/Scr082E#4": {
+  "current": "¡La Regla Apuest va contra\nla política de la escuela!",
+  "proposed": "¡La Regla de Apuestas va contra\nla política de la escuela!"
+ },
+ "st01_t01/Scr082E#9": {
+  "current": "¡La Regla Apuest va contra\nla política de la escuela!",
+  "proposed": "¡La Regla de Apuestas va contra\nla política de la escuela!"
+ },
+ "st01_t01/Scr082E#11": {
+  "current": "¿¡Qué pasa contigo, tío!? \n¿¡Quieres tener un duelo!?",
+  "proposed": "¿¡Qué pasa contigo, tío!? \n¿¡Quieres tener un Duelo!?"
+ },
+ "st01_t01/Scr082E#12": {
+  "current": "¡Me llamo 《C082_1》! \n¿Quién eres? ¿huh?",
+  "proposed": "¡Me llamo 《C082_1》! \n¿Quién eres? ¿eh?"
+ },
+ "st01_t01/Scr082E#19": {
+  "current": "¡Eres fuerte!\nRealmente sabes lo que haces, ¿huh?",
+  "proposed": "¡Eres fuerte!\nRealmente sabes lo que haces, ¿eh?"
+ },
+ "st01_t01/Scr082E#24": {
+  "current": "Cuando quieras un duelo, dímelo.\n¡Cuando quieras!",
+  "proposed": "Cuando quieras un Duelo, dímelo.\n¡Cuando quieras!"
+ },
+ "st01_t01/Scr082E#26": {
+  "current": "Cuando quieras un duelo, dímelo.\n¡Cuando quieras!",
+  "proposed": "Cuando quieras un Duelo, dímelo.\n¡Cuando quieras!"
+ },
+ "st01_t01/Scr082E#28": {
+  "current": "Cuando quieras un duelo, dímelo.\n¡Cuando quieras!",
+  "proposed": "Cuando quieras un Duelo, dímelo.\n¡Cuando quieras!"
+ },
+ "st01_t01/Scr082E#29": {
+  "current": "¡Quita eso de mi vista!\n¿Buscas un duelo contra mí?",
+  "proposed": "¡Quita eso de mi vista!\n¿Buscas un Duelo contra mí?"
+ },
+ "st01_t01/Scr082E#30": {
+  "current": "¿¡Qué!? ¿Un bocadillo?\n¿Buscas un duelo contra mí?",
+  "proposed": "¿¡Qué!? ¿Un bocadillo?\n¿Buscas un Duelo contra mí?"
+ },
+ "st01_t01/Scr086E#3": {
+  "current": "Son famosos por llevarse siempre bien,\npero siempre se llaman entre sí #1 y #2.\nVaya apodos raros, ¿huh?",
+  "proposed": "Son famosos por llevarse siempre bien,\npero siempre se llaman entre sí #1 y #2.\nVaya apodos raros, ¿eh?"
+ },
+ "st01_t01/Scr086E#8": {
+  "current": "Son famosos por llevarse siempre bien,\npero siempre se llaman entre sí #1 y #2.\nVaya apodos raros, ¿huh?",
+  "proposed": "Son famosos por llevarse siempre bien,\npero siempre se llaman entre sí #1 y #2.\nVaya apodos raros, ¿eh?"
+ },
+ "st01_t01/Scr086E#11": {
+  "current": "¡Llegas a tiempo!\nBuscaba a alguien para un duelo.",
+  "proposed": "¡Llegas a tiempo!\nBuscaba a alguien para un Duelo."
+ },
+ "st01_t01/Scr086E#12": {
+  "current": "¡Estoy listo para comenzar! \n¡Tengamos un duelo!",
+  "proposed": "¡Estoy listo para comenzar! \n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr086E#19": {
+  "current": "¡Desafíame siempre que\nquieras tener duelos!",
+  "proposed": "¡Desafíame siempre que\nquieras tener Duelos!"
+ },
+ "st01_t01/Scr086E#20": {
+  "current": "¡Ja! ¡Gané!\nDe vez en cuando puedo jugar un buen duelo.",
+  "proposed": "¡Ja! ¡Gané!\nDe vez en cuando puedo jugar un buen Duelo."
+ },
+ "st01_t01/Scr086E#21": {
+  "current": "¡Desafíame siempre que\nquieras tener duelos!",
+  "proposed": "¡Desafíame siempre que\nquieras tener Duelos!"
+ },
+ "st01_t01/Scr086E#23": {
+  "current": "¡Desafíame siempre que\nquieras tener duelos!",
+  "proposed": "¡Desafíame siempre que\nquieras tener Duelos!"
+ },
+ "st01_t01/Scr087E#0": {
+  "current": "¡Hola! Soy《C087_1》. \nEncantado de conocerte.",
+  "proposed": "¡Hola! Soy 《C087_1》. \nEncantado de conocerte."
+ },
+ "st01_t01/Scr087E#10": {
+  "current": "¡Hola! Soy《C087_1》. \nEncantado de conocerte.",
+  "proposed": "¡Hola! Soy 《C087_1》. \nEncantado de conocerte."
+ },
+ "st01_t01/Scr087E#11": {
+  "current": "¿Sólo un duelo normal? \n¡Suena fantástico!",
+  "proposed": "¿Sólo un Duelo normal? \n¡Suena fantástico!"
+ },
+ "st01_t01/Scr087E#12": {
+  "current": "¡Estoy listo para comenzar! \n¡Tengamos un duelo!",
+  "proposed": "¡Estoy listo para comenzar! \n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr087E#19": {
+  "current": "Tengamos un duelo otra vez. \nSólo avísame, ¿vale?",
+  "proposed": "Tengamos un Duelo otra vez. \nSólo avísame, ¿vale?"
+ },
+ "st01_t01/Scr087E#21": {
+  "current": "Tengamos un duelo otra vez. \nSólo avísame, ¿vale?",
+  "proposed": "Tengamos un Duelo otra vez. \nSólo avísame, ¿vale?"
+ },
+ "st01_t01/Scr087E#23": {
+  "current": "Tengamos un duelo otra vez. \nSólo avísame, ¿vale?",
+  "proposed": "Tengamos un Duelo otra vez. \nSólo avísame, ¿vale?"
+ },
+ "st01_t01/Scr101E#0": {
+  "current": "Soy《C101_1》.",
+  "proposed": "Soy 《C101_1》."
+ },
+ "st01_t01/Scr101E#10": {
+  "current": "Soy《C101_1》.",
+  "proposed": "Soy 《C101_1》."
+ },
+ "st01_t01/Scr101E#12": {
+  "current": "¿Quieres tener un duelo conmigo?",
+  "proposed": "¿Quieres tener un Duelo conmigo?"
+ },
+ "st01_t01/Scr101E#13": {
+  "current": "Bueno, no sé... Ah, qué diablos.\n¡Tengamos un duelo!",
+  "proposed": "Bueno, no sé... Ah, qué diablos.\n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr101E#20": {
+  "current": "¡Tengamos otro duelo!\nQué el espíritu de carta te guíe.",
+  "proposed": "¡Tengamos otro Duelo!\n¡Que el espíritu de las cartas te guíe!"
+ },
+ "st01_t01/Scr101E#21": {
+  "current": "¡Yuju! ¡Jugaste muy bien!\n¡Buen duelo!",
+  "proposed": "¡Yuju! ¡Jugaste muy bien!\n¡Buen Duelo!"
+ },
+ "st01_t01/Scr101E#22": {
+  "current": "¡Tengamos otro duelo!\nQué el espíritu de carta te guíe.",
+  "proposed": "¡Tengamos otro Duelo!\n¡Que el espíritu de las cartas te guíe!"
+ },
+ "st01_t01/Scr101E#24": {
+  "current": "¡Tengamos otro duelo!\nQué el espíritu de carta te guíe.",
+  "proposed": "¡Tengamos otro Duelo!\n¡Que el espíritu de las cartas te guíe!"
+ },
+ "st01_t01/Scr102E#0": {
+  "current": "Soy《C102_1》. ¿¡Quién eres!?",
+  "proposed": "Soy 《C102_1》. ¿¡Quién eres!?"
+ },
+ "st01_t01/Scr102E#2": {
+  "current": "¡Eres de Slifer Red! \n¡No olvides tu poco rango!",
+  "proposed": "¡Eres de Slifer Rojo! \n¡No olvides tu bajo rango!"
+ },
+ "st01_t01/Scr102E#3": {
+  "current": "No somos \"amigos\",\nsólo somos compañeros de duelo.",
+  "proposed": "No somos \"amigos\",\nsólo somos compañeros de Duelo."
+ },
+ "st01_t01/Scr102E#4": {
+  "current": "Tú, un Slifer Red,\n¿esperas que YO sea tu compañero?",
+  "proposed": "Tú, un Slifer Rojo,\n¿esperas que YO sea tu compañero?"
+ },
+ "st01_t01/Scr102E#6": {
+  "current": "¡Debes dar gracias por tener\nun compañero Obelisk Blue!",
+  "proposed": "¡Debes dar gracias por tener\nun compañero Obelisco Azul!"
+ },
+ "st01_t01/Scr102E#7": {
+  "current": "¡Eres de Slifer Red! \n¡No olvides tu poco rango!",
+  "proposed": "¡Eres de Slifer Rojo! \n¡No olvides tu bajo rango!"
+ },
+ "st01_t01/Scr102E#8": {
+  "current": "Soy《C102_1》. ¿¡Quién eres!?",
+  "proposed": "Soy 《C102_1》. ¿¡Quién eres!?"
+ },
+ "st01_t01/Scr102E#9": {
+  "current": "¿Un Slifer Red se atreve a desafiarme?\n¡Tienes agallas!",
+  "proposed": "¿Un Slifer Rojo se atreve a desafiarme?\n¡Tienes agallas!"
+ },
+ "st01_t01/Scr102E#10": {
+  "current": "¡Terminaré rápido contigo!\n¡Tengamos un duelo!",
+  "proposed": "¡Terminaré rápido contigo!\n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr102E#11": {
+  "current": "¡Ugh!\n¡Derrotado y humillado por un Slifer Red!",
+  "proposed": "¡Ugh!\n¡Derrotado y humillado por un Slifer Rojo!"
+ },
+ "st01_t01/Scr102E#12": {
+  "current": "YO, perdí con un Slifer Red.\n¡Inténtalo otra vez!",
+  "proposed": "YO, perdí con un Slifer Rojo.\n¡Inténtalo otra vez!"
+ },
+ "st01_t01/Scr102E#13": {
+  "current": "YO, perdí con un Slifer Red.\n¡Fuiste afortunado!",
+  "proposed": "YO, perdí con un Slifer Rojo.\n¡Fuiste afortunado!"
+ },
+ "st01_t01/Scr102E#14": {
+  "current": "No está mal para ser un Slifer Red.\nCoge esto.",
+  "proposed": "No está mal para ser un Slifer Rojo.\nCoge esto."
+ },
+ "st01_t01/Scr102E#17": {
+  "current": "Eres un Slifer Red inferior.\nVen otra vez para perder.",
+  "proposed": "Eres un Slifer Rojo inferior.\nVen otra vez para perder."
+ },
+ "st01_t01/Scr102E#18": {
+  "current": "Humph.\n¡Ahora respetarás a Obelisk Blue! ¡Jejeje!",
+  "proposed": "Humph.\n¡Ahora respetarás a Obelisco Azul! ¡Jejeje!"
+ },
+ "st01_t01/Scr102E#19": {
+  "current": "Eres un Slifer Red inferior.\nVen otra vez para perder.",
+  "proposed": "Eres un Slifer Rojo inferior.\nVen otra vez para perder."
+ },
+ "st01_t01/Scr102E#21": {
+  "current": "¡Slifer Red de bajo nivel!\nVen otra vez para perder.",
+  "proposed": "¡Slifer Rojo de bajo nivel!\nVen otra vez para perder."
+ },
+ "st01_t01/Scr102E#23": {
+  "current": "No somos amigos. \nNo quiero tu bcadillo.",
+  "proposed": "No somos amigos. \nNo quiero tu bocadillo."
+ },
+ "st01_t01/Scr103E#1": {
+  "current": "Encantado de conocerte. \nLo siento, no me interesa.",
+  "proposed": "Encantado de conocerte. \nLo siento, me distraigo mucho."
+ },
+ "st01_t01/Scr103E#6": {
+  "current": ".¿.. ...? ¿Qué sea tu compañero?\n¿De verdad?",
+  "proposed": "¿... ...? ¿Qué sea tu compañero?\n¿De verdad?"
+ },
+ "st01_t01/Scr103E#8": {
+  "current": ".¿.. ...?\n¿Qué sea tu compañero? ¿De verdad?",
+  "proposed": "¿... ...?\n¿Qué sea tu compañero? ¿De verdad?"
+ },
+ "st01_t01/Scr103E#14": {
+  "current": "Encantado de conocerte. \nLo siento, no me interesa.",
+  "proposed": "Encantado de conocerte. \nLo siento, me distraigo mucho."
+ },
+ "st01_t01/Scr103E#15": {
+  "current": "¡...Seguro!\n¡Me encantan los duelos! ¡Haré lo posible!",
+  "proposed": "¡...Seguro!\n¡Me encantan los Duelos! ¡Haré lo posible!"
+ },
+ "st01_t01/Scr103E#16": {
+  "current": "¡Estoy listo para el duelo!\n¿Y tú?",
+  "proposed": "¡Estoy listo para el Duelo!\n¿Y tú?"
+ },
+ "st01_t01/Scr103E#25": {
+  "current": "Lo siento,\nsiempre ando despistado. ¡Otro duelo!",
+  "proposed": "Lo siento,\nsiempre ando despistado. ¡Otro Duelo!"
+ },
+ "st01_t01/Scr103E#27": {
+  "current": "Lo siento, siempre ando despistado.\n¡Otro duelo!",
+  "proposed": "Lo siento, siempre ando despistado.\n¡Otro Duelo!"
+ },
+ "st01_t01/Scr103E#29": {
+  "current": "Lo siento, siempre ando despistado.\n¡Otro duelo!",
+  "proposed": "Lo siento, siempre ando despistado.\n¡Otro Duelo!"
+ },
+ "st01_t01/Scr105E#0": {
+  "current": "Oye, ¿cómo estás? \nSoy《C105_1》.",
+  "proposed": "Oye, ¿cómo estás? \nSoy 《C105_1》."
+ },
+ "st01_t01/Scr105E#5": {
+  "current": "Vale, ¡tendremos duelos juntos!\n¡Y ganaremos!",
+  "proposed": "Vale, ¡tendremos Duelos juntos!\n¡Y ganaremos!"
+ },
+ "st01_t01/Scr105E#7": {
+  "current": "¡Como quiera iba a pedirte lo mismo! ¡Ja!",
+  "proposed": "¡Justo iba a pedirte lo mismo! ¡Ja!"
+ },
+ "st01_t01/Scr105E#10": {
+  "current": "Oye, ¿cómo estás? \nSoy《C105_1》.",
+  "proposed": "Oye, ¿cómo estás? \nSoy 《C105_1》."
+ },
+ "st01_t01/Scr105E#12": {
+  "current": "Un duelo, ¿huh? ¡Seguro!",
+  "proposed": "Un Duelo, ¿eh? ¡Seguro!"
+ },
+ "st01_t01/Scr105E#13": {
+  "current": "¿Estás listo? ¡Bien! \n¡Tengamos un duelo!",
+  "proposed": "¿Estás listo? ¡Bien! \n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr105E#14": {
+  "current": "¡Eres muy bueno!\nNo puedo creer haber perdido tan así.",
+  "proposed": "¡Eres muy bueno!\nNo puedo creer haber perdido así."
+ },
+ "st01_t01/Scr105E#21": {
+  "current": "Creo que te será útil.\n¡Gracias por aceparla!",
+  "proposed": "Creo que te será útil.\n¡Gracias por aceptarla!"
+ },
+ "st01_t01/Scr105E#22": {
+  "current": "¡Tengamos otro duelo!\n¡Me gusta tener duelos contigo!",
+  "proposed": "¡Tengamos otro Duelo!\n¡Me gusta tener Duelos contigo!"
+ },
+ "st01_t01/Scr105E#24": {
+  "current": "¡Tengamos otro duelo!\n¡Me gusta tener duelos contigo!",
+  "proposed": "¡Tengamos otro Duelo!\n¡Me gusta tener Duelos contigo!"
+ },
+ "st01_t01/Scr105E#26": {
+  "current": "¡Tengamos otro duelo!\n¡Me gusta tener duelos contigo!",
+  "proposed": "¡Tengamos otro Duelo!\n¡Me gusta tener Duelos contigo!"
+ },
+ "st01_t01/Scr106E#1": {
+  "current": "Encantado de conocerte. \nSoy《C106_1》.",
+  "proposed": "Encantado de conocerte. \nSoy 《C106_1》."
+ },
+ "st01_t01/Scr106E#5": {
+  "current": "Mi destino es ser el apuesto\nPríncipe de los Duelos!",
+  "proposed": "¡Mi destino es ser el apuesto\nPríncipe de los Duelos!"
+ },
+ "st01_t01/Scr106E#13": {
+  "current": "Mi destino es ser el apuesto\nPríncipe de los Duelos!",
+  "proposed": "¡Mi destino es ser el apuesto\nPríncipe de los Duelos!"
+ },
+ "st01_t01/Scr106E#16": {
+  "current": "Encantado de conocerte. \nSoy《C106_1》.",
+  "proposed": "Encantado de conocerte. \nSoy 《C106_1》."
+ },
+ "st01_t01/Scr106E#19": {
+  "current": "Con mi ejemplo, aprenderás.\n¡Tengamos un duelo!",
+  "proposed": "Con mi ejemplo, aprenderás.\n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr106E#20": {
+  "current": "¡Perdí! ¡Qué pesadilla!\n¡Qué alguien me despierte!",
+  "proposed": "¡Perdí! ¡Qué pesadilla!\n¡Que alguien me despierte!"
+ },
+ "st01_t01/Scr106E#21": {
+  "current": "Perdí,\npero esto sólo me hace mejor!",
+  "proposed": "¡Perdí,\npero esto sólo me hace mejor!"
+ },
+ "st01_t01/Scr106E#26": {
+  "current": "Tendremos un duelo en otro momento.\nEs mi destino.",
+  "proposed": "Tendremos un Duelo en otro momento.\nEs mi destino."
+ },
+ "st01_t01/Scr106E#27": {
+  "current": "Acabé contigo..\nUsa tu pasión y ¡prueba otra vez!",
+  "proposed": "Acabé contigo...\nUsa tu pasión y ¡prueba otra vez!"
+ },
+ "st01_t01/Scr106E#28": {
+  "current": "Tendremos un duelo en otro momento.\nEs mi destino.",
+  "proposed": "Tendremos un Duelo en otro momento.\nEs mi destino."
+ },
+ "st01_t01/Scr106E#30": {
+  "current": "Tendremos un duelo en otro momento.\nEs mi destino.",
+  "proposed": "Tendremos un Duelo en otro momento.\nEs mi destino."
+ },
+ "st01_t01/Scr110E#1": {
+  "current": "Soy uno de los Seis Maestros de\n Atributos del Deck.\n¿Crees que soy guapo? ¡Pues échame agua!",
+  "proposed": "Soy uno de los Seis Maestros de\nAtributos del Deck.\n¿Crees que soy guapo? ¡Pues échame agua!"
+ },
+ "st01_t01/Scr110E#14": {
+  "current": "Soy uno de los Seis Maestros de\n Atributos del Deck.\n¿Crees que soy guapo? ¡Pues échame agua!",
+  "proposed": "Soy uno de los Seis Maestros de\nAtributos del Deck.\n¿Crees que soy guapo? ¡Pues échame agua!"
+ },
+ "st01_t01/Scr113E#0": {
+  "current": "Soy《C113_1》. \nEncantado de conocerte.",
+  "proposed": "Soy 《C113_1》. \nEncantado de conocerte."
+ },
+ "st01_t01/Scr113E#10": {
+  "current": "Soy《C113_1》. \nEncantado de conocerte.",
+  "proposed": "Soy 《C113_1》. \nEncantado de conocerte."
+ },
+ "st01_t01/Scr113E#11": {
+  "current": "¿Quieres un duelo, ¿huh?\n¡Cuando quieras!",
+  "proposed": "¿Quieres un Duelo, eh?\n¡Cuando quieras!"
+ },
+ "st01_t01/Scr113E#12": {
+  "current": "¡Estoy listo!\n¡Tengamos un duelo!",
+  "proposed": "¡Estoy listo!\n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr113E#19": {
+  "current": "Estoy listo para otro duelo.\n¡Sólo tienes que decirlo!",
+  "proposed": "Estoy listo para otro Duelo.\n¡Sólo tienes que decirlo!"
+ },
+ "st01_t01/Scr113E#21": {
+  "current": "Estoy listo para otro duelo.\n¡Sólo tienes que decirlo!",
+  "proposed": "Estoy listo para otro Duelo.\n¡Sólo tienes que decirlo!"
+ },
+ "st01_t01/Scr113E#23": {
+  "current": "Estoy listo para otro duelo.\n¡Sólo tienes que decirlo!",
+  "proposed": "Estoy listo para otro Duelo.\n¡Sólo tienes que decirlo!"
+ },
+ "st01_t01/Scr114E#0": {
+  "current": "Hmm. Eres de Slifer Red, \n¿cierto? Soy《C114_1》.",
+  "proposed": "Hmm. Eres de Slifer Rojo, \n¿cierto? Soy 《C114_1》."
+ },
+ "st01_t01/Scr114E#1": {
+  "current": "Creo que esta es primera\nvez que nos encontramos.",
+  "proposed": "Creo que esta es la primera\nvez que nos encontramos."
+ },
+ "st01_t01/Scr114E#4": {
+  "current": "Yo tengo uno.\nEs de Ra Yellow y se llama 《C006_1》.",
+  "proposed": "Yo tengo uno.\nEs de Ra Amarillo y se llama 《C006_1》."
+ },
+ "st01_t01/Scr114E#9": {
+  "current": "Yo tengo uno.\nEs de Ra Yellow y se llama 《C006_1》.",
+  "proposed": "Yo tengo uno.\nEs de Ra Amarillo y se llama 《C006_1》."
+ },
+ "st01_t01/Scr114E#11": {
+  "current": "Hmm. Eres de Slifer Red, \n¿cierto? Soy《C114_1》.",
+  "proposed": "Hmm. Eres de Slifer Rojo, \n¿cierto? Soy 《C114_1》."
+ },
+ "st01_t01/Scr114E#12": {
+  "current": "Creo que esta es primera\nvez que nos encontramos.",
+  "proposed": "Creo que esta es la primera\nvez que nos encontramos."
+ },
+ "st01_t01/Scr114E#13": {
+  "current": "¿Un duelo? Vale.\n¡Pero no me contendré!",
+  "proposed": "¿Un Duelo? Vale.\n¡Pero no me contendré!"
+ },
+ "st01_t01/Scr114E#14": {
+  "current": "Tengamos un duelo.\n¡Veámos lo que puedes hacer!",
+  "proposed": "Tengamos un Duelo.\n¡Veamos lo que puedes hacer!"
+ },
+ "st01_t01/Scr114E#17": {
+  "current": "Fue un duelo divertido. \nPero cometí algunos errores.",
+  "proposed": "Fue un Duelo divertido. \nPero cometí algunos errores."
+ },
+ "st01_t01/Scr114E#21": {
+  "current": "Tengamos un duelo otra vez. \n¡Siempre estoy listo!",
+  "proposed": "Tengamos un Duelo otra vez. \n¡Siempre estoy listo!"
+ },
+ "st01_t01/Scr114E#23": {
+  "current": "Tengamos un duelo otra vez.\n¡Siempre estoy listo!",
+  "proposed": "Tengamos un Duelo otra vez.\n¡Siempre estoy listo!"
+ },
+ "st01_t01/Scr114E#25": {
+  "current": "Tengamos un duelo otra vez.\n¡Siempre estoy listo!",
+  "proposed": "Tengamos un Duelo otra vez.\n¡Siempre estoy listo!"
+ },
+ "st01_t01/Scr117E#22": {
+  "current": "Parece que gané.\nOjalá me fuera tan bien \nen todos los duelos...",
+  "proposed": "Parece que gané.\nOjalá me fuera tan bien \nen todos los Duelos..."
+ },
+ "st01_t01/Scr118E#1": {
+  "current": "Soy《C118_1》.",
+  "proposed": "Soy 《C118_1》."
+ },
+ "st01_t01/Scr118E#9": {
+  "current": "Trataré de no ser una carga\n¡Juguemos con el corazón!",
+  "proposed": "Trataré de no ser una carga.\n¡Juguemos con el corazón!"
+ },
+ "st01_t01/Scr118E#13": {
+  "current": "Soy《C118_1》.",
+  "proposed": "Soy 《C118_1》."
+ },
+ "st01_t01/Scr118E#15": {
+  "current": "¡Un duelo suena magnífico! \n¡No me subestimes!",
+  "proposed": "¡Un Duelo suena magnífico! \n¡No me subestimes!"
+ },
+ "st01_t01/Scr118E#22": {
+  "current": "Quizá esto te de ideas nuevas...\no quizá no.",
+  "proposed": "Quizá esto te dé ideas nuevas...\no quizá no."
+ },
+ "st01_t01/Scr118E#24": {
+  "current": "Esto debe ayudarte en duelos futuros.\n¡Úsala bien!",
+  "proposed": "Esto debe ayudarte en Duelos futuros.\n¡Úsala bien!"
+ },
+ "st01_t01/Scr118E#25": {
+  "current": "Tengamos un duelo en otro momento.\n¡Eso fue divertido!",
+  "proposed": "Tengamos un Duelo en otro momento.\n¡Eso fue divertido!"
+ },
+ "st01_t01/Scr118E#27": {
+  "current": "Tengamos un duelo en otro momento.\n¡Eso fue divertido!",
+  "proposed": "Tengamos un Duelo en otro momento.\n¡Eso fue divertido!"
+ },
+ "st01_t01/Scr118E#29": {
+  "current": "Tengamos un duelo en otro momento.\n¡Eso fue divertido!",
+  "proposed": "Tengamos un Duelo en otro momento.\n¡Eso fue divertido!"
+ },
+ "st01_t01/Scr119E#3": {
+  "current": "La piel del Sr.\n《C008_3》es realmente agradable, ¿no?",
+  "proposed": "La piel del Sr.\n《C008_3》 es realmente agradable, ¿no?"
+ },
+ "st01_t01/Scr119E#8": {
+  "current": "¡Sabes como detectar a una chica con clase!\n¡Jeje!",
+  "proposed": "¡Sabes cómo detectar a una chica con clase!\n¡Jeje!"
+ },
+ "st01_t01/Scr119E#10": {
+  "current": "La piel del Sr.\n《C008_3》es realmente agradable, ¿no?",
+  "proposed": "La piel del Sr.\n《C008_3》 es realmente agradable, ¿no?"
+ },
+ "st01_t01/Scr119E#14": {
+  "current": "¡Siií! ¡Estoy lista! \n¡Tengamos un duelo!",
+  "proposed": "¡Siií! ¡Estoy lista! \n¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr119E#22": {
+  "current": "¡Tatan! Hora de los regalos\nNo lo dejes caer, ¿vale?",
+  "proposed": "¡Tatan! Hora de los regalos.\nNo lo dejes caer, ¿vale?"
+ },
+ "st01_t01/Scr119E#24": {
+  "current": "¡Eso fue TAN guay!\n¡Invítame a un duelo otra vez!",
+  "proposed": "¡Eso fue TAN guay!\n¡Invítame a un Duelo otra vez!"
+ },
+ "st01_t01/Scr119E#25": {
+  "current": "¡Siií! ¡Gané!\nParece que te descuidaste un poco, ¿huh?",
+  "proposed": "¡Siií! ¡Gané!\nParece que te descuidaste un poco, ¿eh?"
+ },
+ "st01_t01/Scr119E#26": {
+  "current": "¡Eso fue TAN guay!\n¡Invítame a un duelo otra vez!",
+  "proposed": "¡Eso fue TAN guay!\n¡Invítame a un Duelo otra vez!"
+ },
+ "st01_t01/Scr119E#28": {
+  "current": "¡Eso fue TAN guay!\n¡Invítame a un duelo otra vez!",
+  "proposed": "¡Eso fue TAN guay!\n¡Invítame a un Duelo otra vez!"
+ },
+ "st01_t01/Scr120E#22": {
+  "current": "¿¡Qué!?\n¿No tienes oponente para duelos? *suspira*",
+  "proposed": "¿¡Qué!?\n¿No tienes oponente para Duelos? *suspira*"
+ },
+ "st01_t01/Scr120E#23": {
+  "current": "Tu eras quien quería tener duelos,\n¡apresúrate!",
+  "proposed": "Tú eras quien quería tener Duelos,\n¡apresúrate!"
+ },
+ "st01_t01/Scr120E#27": {
+  "current": "¡Suerte!\n¡Normalmente no habría perdido contigo!.",
+  "proposed": "¡Suerte!\n¡Normalmente no habría perdido contigo!"
+ },
+ "st01_t01/Scr120E#30": {
+  "current": "Estudia mi Receta perfecta\npara que mejores tu duelo.",
+  "proposed": "Estudia mi Receta perfecta\npara que mejores tu Duelo."
+ },
+ "st01_t01/Scr120E#36": {
+  "current": "No pienses mal.\nNo fui yo quien QUERÍA tener un duelo.",
+  "proposed": "No pienses mal.\nNo fui yo quien QUERÍA tener un Duelo."
+ },
+ "st01_t01/Scr120E#39": {
+  "current": "No pienses mal.\nNo fui yo quien QUERÍA tener un duelo.",
+  "proposed": "No pienses mal.\nNo fui yo quien QUERÍA tener un Duelo."
+ },
+ "st01_t01/Scr120E#42": {
+  "current": "No pienses mal.\nNo fui yo quien QUERÍA tener un duelo.",
+  "proposed": "No pienses mal.\nNo fui yo quien QUERÍA tener un Duelo."
+ },
+ "st01_t01/Scr122E#22": {
+  "current": "¡Fiuuuu! Por qué poco... Me he\nquedado sin aire...",
+  "proposed": "¡Fiuuuu! Por muy poco... Me he\nquedado sin aire..."
+ },
+ "st01_t01/Scr125E#0": {
+  "current": "¿Quién eras tú?\nSoy 《C125_1》. \n¿Nos conocemos?",
+  "proposed": "¿Quién eres tú?\nSoy 《C125_1》. \n¿Nos conocemos?"
+ },
+ "st01_t01/Scr125E#8": {
+  "current": "¿Quieres ser mi compañero?\n ¡Vale! ¡Gracias!",
+  "proposed": "¿Quieres ser mi compañero?\n¡Vale! ¡Gracias!"
+ },
+ "st01_t01/Scr125E#14": {
+  "current": "¿Quién eras tú?\nSoy 《C125_1》. \n¿Nos conocemos?",
+  "proposed": "¿Quién eres tú?\nSoy 《C125_1》. \n¿Nos conocemos?"
+ },
+ "st01_t01/Scr126E#7": {
+  "current": "¿Compañeros en duelo? ¡Vale!\n¡Hagamos todo lo posible!",
+  "proposed": "¿Compañeros en Duelo? ¡Vale!\n¡Hagamos todo lo posible!"
+ },
+ "st01_t01/Scr126E#13": {
+  "current": "Vale. ¿Un duelo normal?\n¡Estás listo!",
+  "proposed": "Vale. ¿Un Duelo normal?\n¿Estás listo?"
+ },
+ "st01_t01/Scr126E#14": {
+  "current": "¡Vale! ¡Tengamos un duelo!",
+  "proposed": "¡Vale! ¡Tengamos un Duelo!"
+ },
+ "st01_t01/Scr126E#21": {
+  "current": "Tengamos un duelo otra vez. \n¡No perderé el próximo!",
+  "proposed": "Tengamos un Duelo otra vez. \n¡No perderé el próximo!"
+ },
+ "st01_t01/Scr126E#23": {
+  "current": "Tengamos un duelo otra vez. \n¡Pienso que puedo ganar!",
+  "proposed": "Tengamos un Duelo otra vez. \n¡Pienso que puedo ganar!"
+ },
+ "st01_t01/Scr126E#25": {
+  "current": "Tengamos un duelo otra vez. \nQuizá gane el próximo.",
+  "proposed": "Tengamos un Duelo otra vez. \nQuizá gane el próximo."
+ },
+ "st01_t01/Scr130E#13": {
+  "current": "Creo recordar que \nhabía un Slifer Red que usaba \nmuchas Fusiones...",
+  "proposed": "Creo recordar que \nhabía un Slifer Rojo que usaba \nmuchas Fusiones..."
+ },
+ "st01_t01/Scr147E#44": {
+  "current": "¿Qué? ¿Un gran torneo\nde duelos en la isla?",
+  "proposed": "¿Qué? ¿Un gran torneo\nde Duelos en la isla?"
+ },
+ "st01_t01/Scr147E#51": {
+  "current": "Puedes usarlo en los\ntorneos de duelos.",
+  "proposed": "Puedes usarlo en los\ntorneos de Duelos."
+ },
+ "st02_t01/ImpChrMsg#65": {
+  "current": "Dante Fiammeggiante",
+  "proposed": "Dante Ardiente"
+ },
+ "st02_t01/ImpChrMsg#68": {
+  "current": "Truly  Furiosa",
+  "proposed": "Truly Furiosa"
+ },
+ "st02_t01/ImpChrMsg#74": {
+  "current": "Padrone Seydina",
+  "proposed": "Maestro Seydina"
+ },
+ "st02_t01/ImpChrMsg#78": {
+  "current": "Imperatore.",
+  "proposed": "Emperador."
+ },
+ "st02_t01/ImpMapMsg#0": {
+  "current": "Academia del duelo",
+  "proposed": "Academia del Duelo"
+ },
+ "st02_t01/ImpMapMsg#7": {
+  "current": "Campo del duelo",
+  "proposed": "Campo del Duelo"
+ },
+ "st02_t01/ImpMapMsg#8": {
+  "current": "Campo del duelo",
+  "proposed": "Campo del Duelo"
+ },
+ "st02_t01/ImpMapMsg#15": {
+  "current": "Alójese 101",
+  "proposed": "Habitación 101"
+ },
+ "st02_t01/ImpMapMsg#16": {
+  "current": "Alójese 101",
+  "proposed": "Habitación 101"
+ },
+ "st02_t01/ImpMapMsg#17": {
+  "current": "Alójese 102",
+  "proposed": "Habitación 102"
+ },
+ "st02_t01/ImpMapMsg#18": {
+  "current": "Alójese 102",
+  "proposed": "Habitación 102"
+ },
+ "st02_t01/ImpMapMsg#19": {
+  "current": "Alójese 103",
+  "proposed": "Habitación 103"
+ },
+ "st02_t01/ImpMapMsg#20": {
+  "current": "Alójese 103",
+  "proposed": "Habitación 103"
+ },
+ "st02_t01/ImpMapMsg#21": {
+  "current": "Alójese 104",
+  "proposed": "Habitación 104"
+ },
+ "st02_t01/ImpMapMsg#22": {
+  "current": "Alójese 104",
+  "proposed": "Habitación 104"
+ },
+ "st02_t01/ImpMapMsg#23": {
+  "current": "Alójese 201",
+  "proposed": "Habitación 201"
+ },
+ "st02_t01/ImpMapMsg#24": {
+  "current": "Alójese 201",
+  "proposed": "Habitación 201"
+ },
+ "st02_t01/ImpMapMsg#25": {
+  "current": "Alójese 202",
+  "proposed": "Habitación 202"
+ },
+ "st02_t01/ImpMapMsg#26": {
+  "current": "Alójese 202",
+  "proposed": "Habitación 202"
+ },
+ "st02_t01/ImpMapMsg#27": {
+  "current": "Alójese 203",
+  "proposed": "Habitación 203"
+ },
+ "st02_t01/ImpMapMsg#28": {
+  "current": "Alójese 203",
+  "proposed": "Habitación 203"
+ },
+ "st02_t01/ImpMapMsg#29": {
+  "current": "Alójese 204",
+  "proposed": "Habitación 204"
+ },
+ "st02_t01/ImpMapMsg#30": {
+  "current": "Alójese 204",
+  "proposed": "Habitación 204"
+ },
+ "st02_t01/Iso005E#3": {
+  "current": "que anhela lo que cualquier anciano.",
+  "proposed": "que anhela lo que anhela cualquier anciano."
+ },
+ "st02_t01/Iso005E#25": {
+  "current": "No es justo, 《C001_4》!\n¡Yo también quiero!",
+  "proposed": "¡No es justo, 《C001_4》!\n¡Yo también quiero!"
+ },
+ "st02_t01/LessonE#4": {
+  "current": "del torneo de duelos por \nequipos de... ¡Tag Force!",
+  "proposed": "del torneo de Duelos por \nequipos de... ¡Tag Force!"
+ },
+ "st02_t01/MorningE#17": {
+  "current": "Eh, 《PLAYER》!\n¿Cuánto piensas dormir?",
+  "proposed": "¡Eh, 《PLAYER》!\n¿Cuánto piensas dormir?"
+ },
+ "st02_t01/MorningE#41": {
+  "current": "Eh, 《PLAYER》!\n¿Cuánto piensas dormir?",
+  "proposed": "¡Eh, 《PLAYER》!\n¿Cuánto piensas dormir?"
+ },
+ "st02_t01/Scr015E#5": {
+  "current": "Me quedaré vuestras almas y las llaves de las\nSiete Puertas Espirituales a las sombras.",
+  "proposed": "Llevaré vuestras almas y las llaves de las\nSiete Puertas Espirituales a las sombras."
+ },
+ "st02_t01/Scr037E#31": {
+  "current": "Ando buscado a una\npersona.",
+  "proposed": "Ando buscando a una\npersona."
+ },
+ "st02_t01/Scr049E#1": {
+  "current": "¡Dicen que Slifer Rojo es\npara los duelistas,\nfracasados, pero les\nvamos a dar una lección!",
+  "proposed": "¡Dicen que Slifer Rojo es\npara los duelistas\nfracasados, pero les\nvamos a dar una lección!"
+ },
+ "st02_t01/Scr049E#4": {
+  "current": "¡Dicen que Slifer Rojo es\npara los duelistas,\nfracasados, pero les\nvamos a dar una lección!",
+  "proposed": "¡Dicen que Slifer Rojo es\npara los duelistas\nfracasados, pero les\nvamos a dar una lección!"
+ },
+ "st02_t01/Scr051E#0": {
+  "current": "¿Huh? ¿¡Quién eres!? Oh, \neres ese estudiante nuevo.",
+  "proposed": "¿Eh? ¿¡Quién eres!? Oh, \neres ese estudiante nuevo."
+ },
+ "st02_t01/Scr051E#5": {
+  "current": "¿Huh? ¿¡Quién eres!? Oh, \neres ese estudiante nuevo.",
+  "proposed": "¿Eh? ¿¡Quién eres!? Oh, \neres ese estudiante nuevo."
+ },
+ "st02_t01/Scr051E#36": {
+  "current": "¿Huh? ¿Un regalo?\nNo necesito eso pero, ¡gracias!",
+  "proposed": "¿Eh? ¿Un regalo?\nNo necesito eso pero, ¡gracias!"
+ },
+ "st02_t01/Scr052E#0": {
+  "current": "Oye, ¿quién eres?\nSoy《C052_1》.",
+  "proposed": "Oye, ¿quién eres?\nSoy 《C052_1》."
+ },
+ "st02_t01/Scr052E#1": {
+  "current": "Puede que no lo parezca, \npero soy de Slifer Red.",
+  "proposed": "Puede que no lo parezca, \npero soy de Slifer Rojo."
+ },
+ "st02_t01/Scr052E#2": {
+  "current": "Tú también eres de Slifer Red,\n¿no? ¡Igual que yo!",
+  "proposed": "Tú también eres de Slifer Rojo,\n¿no? ¡Igual que yo!"
+ },
+ "st02_t01/Scr052E#5": {
+  "current": "Oye, ¿quién eres?\nSoy《C052_1》.",
+  "proposed": "Oye, ¿quién eres?\nSoy 《C052_1》."
+ },
+ "st02_t01/Scr052E#6": {
+  "current": "Puede que no lo parezca, \npero soy de Slifer Red.",
+  "proposed": "Puede que no lo parezca, \npero soy de Slifer Rojo."
+ },
+ "st02_t01/Scr052E#7": {
+  "current": "Tú también eres de Slifer Red,\n¿no? ¡Igual que yo!",
+  "proposed": "Tú también eres de Slifer Rojo,\n¿no? ¡Igual que yo!"
+ },
+ "st02_t01/Scr053E#26": {
+  "current": "Siendo un duelo bueno y justo,\nno importa un empate.",
+  "proposed": "Siendo un Duelo bueno y justo,\nno importa un empate."
+ },
+ "st02_t01/Scr053E#27": {
+  "current": "¡Fue un duelo divertido!\n¡Tengamos otro alguna vez!",
+  "proposed": "¡Fue un Duelo divertido!\n¡Tengamos otro alguna vez!"
+ },
+ "st02_t01/Scr054E#0": {
+  "current": "¡Uuh! Oh, hola. Soy《C054_1》.",
+  "proposed": "¡Uuh! Oh, hola. Soy 《C054_1》."
+ },
+ "st02_t01/Scr054E#3": {
+  "current": "¡Uuh! Oh, hola. Soy《C054_1》.",
+  "proposed": "¡Uuh! Oh, hola. Soy 《C054_1》."
+ },
+ "st02_t01/Scr055E#0": {
+  "current": "Soy《C055_1》.",
+  "proposed": "Soy 《C055_1》."
+ },
+ "st02_t01/Scr055E#3": {
+  "current": "Soy《C055_1》.",
+  "proposed": "Soy 《C055_1》."
+ },
+ "st02_t01/Scr055E#25": {
+  "current": "Un empate...\nNos veremos en el próximo duelo.",
+  "proposed": "Un empate...\nNos veremos en el próximo Duelo."
+ },
+ "st02_t01/Scr056E#30": {
+  "current": "Si tienes comezón por un duelo,\n¡sólo dame un grito!",
+  "proposed": "Si tienes comezón por un Duelo,\n¡sólo dame un grito!"
+ },
+ "st02_t01/Scr056E#32": {
+  "current": "Si tienes comezón por un duelo,\n¡sólo dame un grito!",
+  "proposed": "Si tienes comezón por un Duelo,\n¡sólo dame un grito!"
+ },
+ "st02_t01/Scr063E#2": {
+  "current": "¡Hablar es divertido,\npero entrenar es mejor!\n¡Y lo mejor son los duelos!",
+  "proposed": "¡Hablar es divertido,\npero entrenar es mejor!\n¡Y lo mejor son los Duelos!"
+ },
+ "st02_t01/Scr063E#6": {
+  "current": "¿Un Duelo? ¡Claro!\n¡Tengo los músculos a punto!\n\n¿Cuántos batidos de proteín...\ndigoo, medallas?",
+  "proposed": "¿Un Duelo? ¡Claro!\n¡Tengo los músculos a punto!\n¿Cuántos batidos de proteín... digo, medallas?"
+ },
+ "st02_t01/Scr064E#0": {
+  "current": "No creo que nos hayamos encontrado.\nSoy《C064_1》.",
+  "proposed": "No creo que nos hayamos encontrado.\nSoy 《C064_1》."
+ },
+ "st02_t01/Scr064E#3": {
+  "current": "No creo que nos hayamos encontrado.\nSoy《C064_1》.",
+  "proposed": "No creo que nos hayamos encontrado.\nSoy 《C064_1》."
+ },
+ "st02_t01/Scr064E#25": {
+  "current": "¡Tengamos un duelo otra vez!",
+  "proposed": "¡Tengamos un Duelo otra vez!"
+ },
+ "st02_t01/Scr064E#26": {
+  "current": "Vaya, es un empate. \n¡Tengamos un duelo otra vez!",
+  "proposed": "Vaya, es un empate. \n¡Tengamos un Duelo otra vez!"
+ },
+ "st02_t01/Scr065E#23": {
+  "current": "¡Yuju! ¡Gané!\n¡Ese fue un gran duelo!",
+  "proposed": "¡Yuju! ¡Gané!\n¡Ese fue un gran Duelo!"
+ },
+ "st02_t01/Scr065E#25": {
+  "current": "¡Tengamos un duelo otra vez pronto!",
+  "proposed": "¡Tengamos un Duelo otra vez pronto!"
+ },
+ "st02_t01/Scr065E#26": {
+  "current": "¡Es un empate!\nTengamos otro duelo para ver quien gana.",
+  "proposed": "¡Es un empate!\nTengamos otro Duelo para ver quien gana."
+ },
+ "st02_t01/Scr065E#27": {
+  "current": "¡Tengamos un duelo otra vez pronto!",
+  "proposed": "¡Tengamos un Duelo otra vez pronto!"
+ },
+ "st02_t01/Scr066E#24": {
+  "current": "Un empate, ¿huh?\nInteresante.",
+  "proposed": "Un empate, ¿eh?\nInteresante."
+ },
+ "st02_t01/Scr070E#27": {
+  "current": "¡Los mejores duelos\nacaban en empate!",
+  "proposed": "¡Los mejores Duelos\nacaban en empate!"
+ },
+ "st02_t01/Scr073E#0": {
+  "current": "Hola. Me llamo\n《C073_1》.\nYo también soy un Slifer Red.",
+  "proposed": "Hola. Me llamo\n《C073_1》.\nYo también soy un Slifer Rojo."
+ },
+ "st02_t01/Scr073E#3": {
+  "current": "Hola. Me llamo\n《C073_1》.\nYo también soy un Slifer Red.",
+  "proposed": "Hola. Me llamo\n《C073_1》.\nYo también soy un Slifer Rojo."
+ },
+ "st02_t01/Scr076E#21": {
+  "current": "¡Desafíame cuando quieras! \nEspero el próximo duelo.",
+  "proposed": "¡Desafíame cuando quieras! \nEspero el próximo Duelo."
+ },
+ "st02_t01/Scr076E#24": {
+  "current": "¡Desafíame cuando quieras! \nEspero el próximo duelo.",
+  "proposed": "¡Desafíame cuando quieras! \nEspero el próximo Duelo."
+ },
+ "st02_t01/Scr076E#26": {
+  "current": "¡Desafíame cuando quieras! \nEspero el próximo duelo.",
+  "proposed": "¡Desafíame cuando quieras! \nEspero el próximo Duelo."
+ },
+ "st02_t01/Scr076E#27": {
+  "current": "Sólo estoy interesado en duelos,\n¡gracias! ¡HIAA!",
+  "proposed": "Sólo estoy interesado en Duelos,\n¡gracias! ¡HIAA!"
+ },
+ "st02_t01/Scr077E#20": {
+  "current": "La culpa de mi derrota es \nde mi habilidad para duelos.",
+  "proposed": "La culpa de mi derrota es \nde mi habilidad para Duelos."
+ },
+ "st02_t01/Scr077E#25": {
+  "current": "Cuando quieras tener otro duelo,\naquí estoy.",
+  "proposed": "Cuando quieras tener otro Duelo,\naquí estoy."
+ },
+ "st02_t01/Scr077E#26": {
+  "current": "Humph... Buen trabajo,\n 《PLAYER》.",
+  "proposed": "Humph... Buen trabajo,\n《PLAYER》."
+ },
+ "st02_t01/Scr077E#27": {
+  "current": "Cuando quieras tener otro duelo,\naquí estoy.",
+  "proposed": "Cuando quieras tener otro Duelo,\naquí estoy."
+ },
+ "st02_t01/Scr077E#28": {
+  "current": "Regalando cosas, ¿huh? \nMuy propio de ti, 《PLAYER》.",
+  "proposed": "Regalando cosas, ¿eh? \nMuy propio de ti, 《PLAYER》."
+ },
+ "st02_t01/Scr078E#0": {
+  "current": "Un duelo te \npermite fortalecerte.",
+  "proposed": "Un Duelo te \npermite fortalecerte."
+ },
+ "st02_t01/Scr078E#2": {
+  "current": "Me llamo 《C078_1》 y como tú,\n¡vivo para tener duelos!",
+  "proposed": "Me llamo 《C078_1》 y como tú,\n¡vivo para tener Duelos!"
+ },
+ "st02_t01/Scr078E#5": {
+  "current": "Un duelo te \npermite fortalecerte.",
+  "proposed": "Un Duelo te \npermite fortalecerte."
+ },
+ "st02_t01/Scr078E#7": {
+  "current": "Me llamo 《C078_1》 y como tú,\n¡vivo para tener duelos!",
+  "proposed": "Me llamo 《C078_1》 y como tú,\n¡vivo para tener Duelos!"
+ },
+ "st02_t01/Scr078E#26": {
+  "current": "Espero con ansiedad po\n nuestro próximo duelo.",
+  "proposed": "Espero con ansia\nnuestro próximo Duelo."
+ },
+ "st02_t01/Scr078E#28": {
+  "current": "Espero con ansiedad po\n nuestro próximo duelo.",
+  "proposed": "Espero con ansia\nnuestro próximo Duelo."
+ },
+ "st02_t01/Scr078E#30": {
+  "current": "Espero con ansiedad \nnuestro próximo duelo.",
+  "proposed": "Espero con ansiedad \nnuestro próximo Duelo."
+ },
+ "st02_t01/Scr079E#23": {
+  "current": "El próximo duelo,\ntráete a una chica mona contigo.",
+  "proposed": "El próximo Duelo,\ntráete a una chica mona contigo."
+ },
+ "st02_t01/Scr079E#26": {
+  "current": "El próximo duelo,\ntráete a una chica mona contigo.",
+  "proposed": "El próximo Duelo,\ntráete a una chica mona contigo."
+ },
+ "st02_t01/Scr079E#28": {
+  "current": "El próximo duelo,\ntráete a una chica mona contigo.",
+  "proposed": "El próximo Duelo,\ntráete a una chica mona contigo."
+ },
+ "st02_t01/Scr080E#22": {
+  "current": "Coge. ¿Satisfecho ahora? \nNo tientes que agradecerme.",
+  "proposed": "Coge. ¿Satisfecho ahora? \nNo tienes que agradecerme."
+ },
+ "st02_t01/Scr080E#25": {
+  "current": "Soy un hombre ocupado, \npero nunca rechazo un duelo.",
+  "proposed": "Soy un hombre ocupado, \npero nunca rechazo un Duelo."
+ },
+ "st02_t01/Scr080E#27": {
+  "current": "Soy un hombre ocupado, \npero nunca rechazo un duelo.",
+  "proposed": "Soy un hombre ocupado, \npero nunca rechazo un Duelo."
+ },
+ "st02_t01/Scr082E#0": {
+  "current": "¿¡Qué pasa contigo, tío!? \n¿¡Quieres tener un duelo!?",
+  "proposed": "¿¡Qué pasa contigo, tío!? \n¿¡Quieres tener un Duelo!?"
+ },
+ "st02_t01/Scr082E#1": {
+  "current": "¡Me llamo 《C082_1》! \n¿Quién eres? ¿huh?",
+  "proposed": "¡Me llamo 《C082_1》! \n¿Quién eres? ¿eh?"
+ },
+ "st02_t01/Scr082E#4": {
+  "current": "¿¡Qué pasa contigo, tío!? \n¿¡Quieres tener un duelo!?",
+  "proposed": "¿¡Qué pasa contigo, tío!? \n¿¡Quieres tener un Duelo!?"
+ },
+ "st02_t01/Scr082E#5": {
+  "current": "¡Me llamo 《C082_1》! \n¿Quién eres? ¿huh?",
+  "proposed": "¡Me llamo 《C082_1》! \n¿Quién eres? ¿eh?"
+ },
+ "st02_t01/Scr082E#24": {
+  "current": "Cuando quieras un duelo, dímelo.\n¡Cuando quieras!",
+  "proposed": "Cuando quieras un Duelo, dímelo.\n¡Cuando quieras!"
+ },
+ "st02_t01/Scr082E#27": {
+  "current": "Cuando quieras un duelo, dímelo.\n¡Cuando quieras!",
+  "proposed": "Cuando quieras un Duelo, dímelo.\n¡Cuando quieras!"
+ },
+ "st02_t01/Scr082E#29": {
+  "current": "Cuando quieras un duelo, dímelo.\n¡Cuando quieras!",
+  "proposed": "Cuando quieras un Duelo, dímelo.\n¡Cuando quieras!"
+ },
+ "st02_t01/Scr082E#30": {
+  "current": "¡Quita eso de mi vista!\n¿Buscas un duelo contra mí?",
+  "proposed": "¡Quita eso de mi vista!\n¿Buscas un Duelo contra mí?"
+ },
+ "st02_t01/Scr085E#2": {
+  "current": "¿Te gustan los duelos?",
+  "proposed": "¿Te gustan los Duelos?"
+ },
+ "st02_t01/Scr086E#20": {
+  "current": "¡Desafíame siempre que\nquieras tener duelos!",
+  "proposed": "¡Desafíame siempre que\nquieras tener Duelos!"
+ },
+ "st02_t01/Scr086E#21": {
+  "current": "¡Ja! ¡Gané!\nDe vez en cuando puedo jugar un buen duelo.",
+  "proposed": "¡Ja! ¡Gané!\nDe vez en cuando puedo jugar un buen Duelo."
+ },
+ "st02_t01/Scr086E#23": {
+  "current": "¡Desafíame siempre que\nquieras tener duelos!",
+  "proposed": "¡Desafíame siempre que\nquieras tener Duelos!"
+ },
+ "st02_t01/Scr086E#25": {
+  "current": "¡Desafíame siempre que\nquieras tener duelos!",
+  "proposed": "¡Desafíame siempre que\nquieras tener Duelos!"
+ },
+ "st02_t01/Scr087E#0": {
+  "current": "¡Hola! Soy《C087_1》. \nEncantado de conocerte.",
+  "proposed": "¡Hola! Soy 《C087_1》. \nEncantado de conocerte."
+ },
+ "st02_t01/Scr087E#2": {
+  "current": "¡Hola! Soy《C087_1》. \nEncantado de conocerte.",
+  "proposed": "¡Hola! Soy 《C087_1》. \nEncantado de conocerte."
+ },
+ "st02_t01/Scr087E#25": {
+  "current": "Tengamos un duelo otra vez. \nSólo avísame, ¿vale?",
+  "proposed": "Tengamos un Duelo otra vez. \nSólo avísame, ¿vale?"
+ },
+ "st02_t01/Scr087E#28": {
+  "current": "Tengamos un duelo otra vez. \nSólo avísame, ¿vale?",
+  "proposed": "Tengamos un Duelo otra vez. \nSólo avísame, ¿vale?"
+ },
+ "st02_t01/Scr087E#30": {
+  "current": "Tengamos un duelo otra vez. \nSólo avísame, ¿vale?",
+  "proposed": "Tengamos un Duelo otra vez. \nSólo avísame, ¿vale?"
+ },
+ "st02_t01/Scr101E#0": {
+  "current": "Soy《C101_1》.",
+  "proposed": "Soy 《C101_1》."
+ },
+ "st02_t01/Scr101E#3": {
+  "current": "Soy《C101_1》.",
+  "proposed": "Soy 《C101_1》."
+ },
+ "st02_t01/Scr101E#17": {
+  "current": "Bueno, no sé... Ah, qué diablos.\n¡Tengamos un duelo!",
+  "proposed": "Bueno, no sé... Ah, qué diablos.\n¡Tengamos un Duelo!"
+ },
+ "st02_t01/Scr101E#19": {
+  "current": "¡Tengamos otro duelo!\nQué el espíritu de carta te guíe.",
+  "proposed": "¡Tengamos otro Duelo!\n¡Que el espíritu de las cartas te guíe!"
+ },
+ "st02_t01/Scr101E#21": {
+  "current": "¡Tengamos otro duelo!\nQué el espíritu de carta te guíe.",
+  "proposed": "¡Tengamos otro Duelo!\n¡Que el espíritu de las cartas te guíe!"
+ },
+ "st02_t01/Scr101E#22": {
+  "current": "Non hai combattuto male!\nOttimo Duello!",
+  "proposed": "¡Yuju! ¡Has jugado bastante bien!\n¡Buen Duelo!"
+ },
+ "st02_t01/Scr101E#23": {
+  "current": "Penso che la mia fortuna potrebbe cambiare,\ngrazie a te!",
+  "proposed": "¡Creo que mi suerte está cambiando,\ngracias a ti!"
+ },
+ "st02_t01/Scr101E#24": {
+  "current": "Facciamoci un altro Duello\nuno di questi giorni.",
+  "proposed": "¡Tengamos otro Duelo!\n¡Que el espíritu de las cartas te guíe!"
+ },
+ "st02_t01/Scr101E#25": {
+  "current": "Allora è un pareggio, eh?\nMi devi la rivincita!",
+  "proposed": "¿Un empate, eh?\n¡Me debes una revancha!"
+ },
+ "st02_t01/Scr101E#26": {
+  "current": "Facciamoci un altro Duello\nuno di questi giorni.",
+  "proposed": "¡Tengamos otro Duelo!\n¡Que el espíritu de las cartas te guíe!"
+ },
+ "st02_t01/Scr101E#27": {
+  "current": "Mi vogliono proprio tutti\nbene in questi giorni!",
+  "proposed": "¡Qué popular soy últimamente!\nPero no, gracias."
+ },
+ "st02_t01/Scr102E#0": {
+  "current": "Soy《C102_1》. ¿¡Quién eres!?",
+  "proposed": "Soy 《C102_1》. ¿¡Quién eres!?"
+ },
+ "st02_t01/Scr102E#1": {
+  "current": "Yo lucho por Medallas GX,\npero si no es para eso...\n¡Aléjate de mí, Slifer Red!",
+  "proposed": "Yo lucho por Medallas GX,\npero si no es para eso...\n¡Aléjate de mí, Slifer Rojo!"
+ },
+ "st02_t01/Scr102E#2": {
+  "current": "Soy《C102_1》. ¿¡Quién eres!?",
+  "proposed": "Soy 《C102_1》. ¿¡Quién eres!?"
+ },
+ "st02_t01/Scr102E#10": {
+  "current": "Es increíble la de Slifer Red\nmemos que hay.\n¡Piérdete!",
+  "proposed": "Es increíble la de Slifer Rojo\nmemos que hay.\n¡Piérdete!"
+ },
+ "st02_t01/Scr102E#11": {
+  "current": "Es increíble la de Slifer Red\nmemos que hay.\n¡Piérdete!",
+  "proposed": "Es increíble la de Slifer Rojo\nmemos que hay.\n¡Piérdete!"
+ },
+ "st02_t01/Scr102E#12": {
+  "current": "Es increíble la de Slifer Red\nmemos que hay.\n¡Piérdete!",
+  "proposed": "Es increíble la de Slifer Rojo\nmemos que hay.\n¡Piérdete!"
+ },
+ "st02_t01/Scr102E#13": {
+  "current": "Es increíble la de Slifer Red\nmemos que hay.\n¡Piérdete!",
+  "proposed": "Es increíble la de Slifer Rojo\nmemos que hay.\n¡Piérdete!"
+ },
+ "st02_t01/Scr102E#14": {
+  "current": "Es increíble la de Slifer Red\nmemos que hay.\n¡Piérdete!",
+  "proposed": "Es increíble la de Slifer Rojo\nmemos que hay.\n¡Piérdete!"
+ },
+ "st02_t01/Scr102E#15": {
+  "current": "¡Terminaré rápido contigo!\n¡Tengamos un duelo!",
+  "proposed": "¡Terminaré rápido contigo!\n¡Tengamos un Duelo!"
+ },
+ "st02_t01/Scr102E#17": {
+  "current": "Por eso odio a los \nSlifer Red. No confío.",
+  "proposed": "Por eso odio a los \nSlifer Rojo. No confío."
+ },
+ "st02_t01/Scr102E#18": {
+  "current": "YO, perdí con un Slifer Red.\n¡Inténtalo otra vez!",
+  "proposed": "YO, perdí con un Slifer Rojo.\n¡Inténtalo otra vez!"
+ },
+ "st02_t01/Scr102E#20": {
+  "current": "Eres un Slifer Red inferior.\nVen otra vez para perder.",
+  "proposed": "Eres un Slifer Rojo inferior.\nVen otra vez para perder."
+ },
+ "st02_t01/Scr102E#21": {
+  "current": "Humph.\n¡Ahora respetarás a Obelisk Blue! ¡Jejeje!",
+  "proposed": "Humph.\n¡Ahora respetarás a Obelisco Azul! ¡Jejeje!"
+ },
+ "st02_t01/Scr102E#23": {
+  "current": "Eres un Slifer Red inferior.\nVen otra vez para perder.",
+  "proposed": "Eres un Slifer Rojo inferior.\nVen otra vez para perder."
+ },
+ "st02_t01/Scr102E#25": {
+  "current": "Eres un Slifer Red inferior.\nVen otra vez para perder.",
+  "proposed": "Eres un Slifer Rojo inferior.\nVen otra vez para perder."
+ },
+ "st02_t01/Scr103E#1": {
+  "current": "Encantado de conocerte. \nLo siento, no me interesa.",
+  "proposed": "Encantado de conocerte. \nLo siento, me distraigo mucho."
+ },
+ "st02_t01/Scr103E#4": {
+  "current": "Encantado de conocerte. \nLo siento, no me interesa.",
+  "proposed": "Encantado de conocerte. \nLo siento, me distraigo mucho."
+ },
+ "st02_t01/Scr103E#22": {
+  "current": "Lo siento,\nsiempre ando despistado. ¡Otro duelo!",
+  "proposed": "Lo siento,\nsiempre ando despistado. ¡Otro Duelo!"
+ },
+ "st02_t01/Scr103E#25": {
+  "current": "Lo siento, siempre ando despistado.\n¡Otro duelo!",
+  "proposed": "Lo siento, siempre ando despistado.\n¡Otro Duelo!"
+ },
+ "st02_t01/Scr103E#27": {
+  "current": "Lo siento, siempre ando despistado.\n¡Otro duelo!",
+  "proposed": "Lo siento, siempre ando despistado.\n¡Otro Duelo!"
+ },
+ "st02_t01/Scr105E#0": {
+  "current": "Oye, ¿cómo estás? \nSoy《C105_1》.",
+  "proposed": "Oye, ¿cómo estás? \nSoy 《C105_1》."
+ },
+ "st02_t01/Scr105E#3": {
+  "current": "Oye, ¿cómo estás? \nSoy《C105_1》.",
+  "proposed": "Oye, ¿cómo estás? \nSoy 《C105_1》."
+ },
+ "st02_t01/Scr105E#22": {
+  "current": "¡Tengamos otro duelo!\n¡Me gusta tener duelos contigo!",
+  "proposed": "¡Tengamos otro Duelo!\n¡Me gusta tener Duelos contigo!"
+ },
+ "st02_t01/Scr105E#25": {
+  "current": "¡Tengamos otro duelo!\n¡Me gusta tener duelos contigo!",
+  "proposed": "¡Tengamos otro Duelo!\n¡Me gusta tener Duelos contigo!"
+ },
+ "st02_t01/Scr105E#27": {
+  "current": "¡Tengamos otro duelo!\n¡Me gusta tener duelos contigo!",
+  "proposed": "¡Tengamos otro Duelo!\n¡Me gusta tener Duelos contigo!"
+ },
+ "st02_t01/Scr106E#1": {
+  "current": "Encantado de conocerte. \nSoy《C106_1》.",
+  "proposed": "Encantado de conocerte. \nSoy 《C106_1》."
+ },
+ "st02_t01/Scr106E#5": {
+  "current": "Encantado de conocerte. \nSoy《C106_1》.",
+  "proposed": "Encantado de conocerte. \nSoy 《C106_1》."
+ },
+ "st02_t01/Scr106E#22": {
+  "current": "Perdí,\npero esto sólo me hace mejor!",
+  "proposed": "¡Perdí,\npero esto sólo me hace mejor!"
+ },
+ "st02_t01/Scr106E#24": {
+  "current": "Tendremos un duelo en otro momento.\nEs mi destino.",
+  "proposed": "Tendremos un Duelo en otro momento.\nEs mi destino."
+ },
+ "st02_t01/Scr106E#25": {
+  "current": "Acabé contigo..\nUsa tu pasión y ¡prueba otra vez!",
+  "proposed": "Acabé contigo...\nUsa tu pasión y ¡prueba otra vez!"
+ },
+ "st02_t01/Scr106E#27": {
+  "current": "Tendremos un duelo en otro momento.\nEs mi destino.",
+  "proposed": "Tendremos un Duelo en otro momento.\nEs mi destino."
+ },
+ "st02_t01/Scr106E#29": {
+  "current": "Tendremos un duelo en otro momento.\nEs mi destino.",
+  "proposed": "Tendremos un Duelo en otro momento.\nEs mi destino."
+ },
+ "st02_t01/Scr113E#0": {
+  "current": "Soy《C113_1》. \nEncantado de conocerte.",
+  "proposed": "Soy 《C113_1》. \nEncantado de conocerte."
+ },
+ "st02_t01/Scr113E#2": {
+  "current": "Soy《C113_1》. \nEncantado de conocerte.",
+  "proposed": "Soy 《C113_1》. \nEncantado de conocerte."
+ },
+ "st02_t01/Scr113E#20": {
+  "current": "Estoy listo para otro duelo.\n¡Sólo tienes que decirlo!",
+  "proposed": "Estoy listo para otro Duelo.\n¡Sólo tienes que decirlo!"
+ },
+ "st02_t01/Scr113E#23": {
+  "current": "Estoy listo para otro duelo.\n¡Sólo tienes que decirlo!",
+  "proposed": "Estoy listo para otro Duelo.\n¡Sólo tienes que decirlo!"
+ },
+ "st02_t01/Scr113E#25": {
+  "current": "Estoy listo para otro duelo.\n¡Sólo tienes que decirlo!",
+  "proposed": "Estoy listo para otro Duelo.\n¡Sólo tienes que decirlo!"
+ },
+ "st02_t01/Scr114E#0": {
+  "current": "Hmm. Eres de Slifer Red, \n¿cierto? Soy《C114_1》.",
+  "proposed": "Hmm. Eres de Slifer Rojo, \n¿cierto? Soy 《C114_1》."
+ },
+ "st02_t01/Scr114E#1": {
+  "current": "Creo que esta es primera\nvez que nos encontramos.",
+  "proposed": "Creo que esta es la primera\nvez que nos encontramos."
+ },
+ "st02_t01/Scr114E#3": {
+  "current": "Hmm. Eres de Slifer Red, \n¿cierto? Soy《C114_1》.",
+  "proposed": "Hmm. Eres de Slifer Rojo, \n¿cierto? Soy 《C114_1》."
+ },
+ "st02_t01/Scr114E#4": {
+  "current": "Creo que esta es primera\nvez que nos encontramos.",
+  "proposed": "Creo que esta es la primera\nvez que nos encontramos."
+ },
+ "st02_t01/Scr114E#22": {
+  "current": "Tengamos un duelo otra vez. \n¡Siempre estoy listo!",
+  "proposed": "Tengamos un Duelo otra vez. \n¡Siempre estoy listo!"
+ },
+ "st02_t01/Scr114E#25": {
+  "current": "Tengamos un duelo otra vez.\n¡Siempre estoy listo!",
+  "proposed": "Tengamos un Duelo otra vez.\n¡Siempre estoy listo!"
+ },
+ "st02_t01/Scr114E#27": {
+  "current": "Tengamos un duelo otra vez.\n¡Siempre estoy listo!",
+  "proposed": "Tengamos un Duelo otra vez.\n¡Siempre estoy listo!"
+ },
+ "st02_t01/Scr117E#23": {
+  "current": "Parece que gané.\nOjalá me fuera tan bien \nen todos los duelos...",
+  "proposed": "Parece que gané.\nOjalá me fuera tan bien \nen todos los Duelos..."
+ },
+ "st02_t01/Scr118E#1": {
+  "current": "Soy《C118_1》.",
+  "proposed": "Soy 《C118_1》."
+ },
+ "st02_t01/Scr118E#5": {
+  "current": "Soy《C118_1》.",
+  "proposed": "Soy 《C118_1》."
+ },
+ "st02_t01/Scr118E#24": {
+  "current": "Tengamos un duelo en otro momento.\n¡Eso fue divertido!",
+  "proposed": "Tengamos un Duelo en otro momento.\n¡Eso fue divertido!"
+ },
+ "st02_t01/Scr118E#27": {
+  "current": "Tengamos un duelo en otro momento.\n¡Eso fue divertido!",
+  "proposed": "Tengamos un Duelo en otro momento.\n¡Eso fue divertido!"
+ },
+ "st02_t01/Scr118E#29": {
+  "current": "Tengamos un duelo en otro momento.\n¡Eso fue divertido!",
+  "proposed": "Tengamos un Duelo en otro momento.\n¡Eso fue divertido!"
+ },
+ "st02_t01/Scr119E#22": {
+  "current": "¡Eso fue TAN guay!\n¡Invítame a un duelo otra vez!",
+  "proposed": "¡Eso fue TAN guay!\n¡Invítame a un Duelo otra vez!"
+ },
+ "st02_t01/Scr119E#23": {
+  "current": "¡Siií! ¡Gané!\nParece que te descuidaste un poco, ¿huh?",
+  "proposed": "¡Siií! ¡Gané!\nParece que te descuidaste un poco, ¿eh?"
+ },
+ "st02_t01/Scr119E#25": {
+  "current": "¡Eso fue TAN guay!\n¡Invítame a un duelo otra vez!",
+  "proposed": "¡Eso fue TAN guay!\n¡Invítame a un Duelo otra vez!"
+ },
+ "st02_t01/Scr119E#27": {
+  "current": "¡Eso fue TAN guay!\n¡Invítame a un duelo otra vez!",
+  "proposed": "¡Eso fue TAN guay!\n¡Invítame a un Duelo otra vez!"
+ },
+ "st02_t01/Scr120E#27": {
+  "current": "No pienses mal.\nNo fui yo quien QUERÍA tener un duelo.",
+  "proposed": "No pienses mal.\nNo fui yo quien QUERÍA tener un Duelo."
+ },
+ "st02_t01/Scr120E#31": {
+  "current": "No pienses mal.\nNo fui yo quien QUERÍA tener un duelo.",
+  "proposed": "No pienses mal.\nNo fui yo quien QUERÍA tener un Duelo."
+ },
+ "st02_t01/Scr120E#34": {
+  "current": "No pienses mal.\nNo fui yo quien QUERÍA tener un duelo.",
+  "proposed": "No pienses mal.\nNo fui yo quien QUERÍA tener un Duelo."
+ },
+ "st02_t01/Scr125E#0": {
+  "current": "¿Quién eras tú?\nSoy 《C125_1》. \n¿Nos conocemos?",
+  "proposed": "¿Quién eres tú?\nSoy 《C125_1》. \n¿Nos conocemos?"
+ },
+ "st02_t01/Scr125E#4": {
+  "current": "¿Quién eras tú?\nSoy 《C125_1》. \n¿Nos conocemos?",
+  "proposed": "¿Quién eres tú?\nSoy 《C125_1》. \n¿Nos conocemos?"
+ },
+ "st02_t01/Scr126E#22": {
+  "current": "Tengamos un duelo otra vez. \n¡No perderé el próximo!",
+  "proposed": "Tengamos un Duelo otra vez. \n¡No perderé el próximo!"
+ },
+ "st02_t01/Scr126E#25": {
+  "current": "Tengamos un duelo otra vez. \n¡Pienso que puedo ganar!",
+  "proposed": "Tengamos un Duelo otra vez. \n¡Pienso que puedo ganar!"
+ },
+ "st02_t01/Scr126E#27": {
+  "current": "Tengamos un duelo otra vez. \nQuizá gane el próximo.",
+  "proposed": "Tengamos un Duelo otra vez. \nQuizá gane el próximo."
+ }
+}

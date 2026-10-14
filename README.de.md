@@ -56,13 +56,13 @@ Tippfehler, falscher Kartentext oder ein Fehler? [Eröffnen Sie ein Issue](../..
 
 ## So funktioniert es
 
-1. `patcher/strumenti/crea_patch_modulare.py` baut für jede Sprache die ISO nur mit den Kartenkorrekturen, nur mit den Textkorrekturen und mit beiden und schreibt eine modulare `.tfp` (Format 2): ein Zip mit `patch.json` und bsdiff-Deltas, jedes mit den benötigten Modulen markiert (`cards`, `text`, `strip`).
+1. `patcher/tools/build_modular_patch.py` baut für jede Sprache die ISO nur mit den Kartenkorrekturen, nur mit den Textkorrekturen und mit beiden und schreibt eine modulare `.tfp` (Format 2): ein Zip mit `patch.json` und bsdiff-Deltas, jedes mit den benötigten Modulen markiert (`cards`, `text`, `strip`).
 2. `patcher/tfpatch` (Rust) prüft die MD5, wählt die Deltas der aktiven Module aus und schreibt die ISO kompakt: gleicher Header und gleiche Verzeichnisse, danach nur die noch benutzten Daten. Die endgültige Größe wird berechnet, ohne etwas zu schreiben – so zeigt sie der Installer live an.
-3. Mit `strip` wird `libtitle.prx` geändert (`patcher/strumenti/salta_lingua.py`), um Sprachbildschirm und Menüeintrag zu entfernen und die Sprache festzulegen; die Dateien der anderen Sprachen verweisen auf die Daten der gewählten Sprache.
-4. `patcher/strumenti/crea_moduli.py` erstellt `base.zip` und je Sprache eine `<Sprache>.zip`; `patcher/strumenti/manifest.py` vervollständigt `manifest.json` (SHA-256, Patches, ISO-Größen).
-5. `verifica_modulare.py`, `verifica_iso.py` und `verifica_texture.py` prüfen die Ergebnisse; `costruisci_modulari.sh SPRACHE...` baut und prüft jede Kombination neu.
+3. Mit `strip` wird `libtitle.prx` geändert (`patcher/tools/remove_language_selector.py`), um Sprachbildschirm und Menüeintrag zu entfernen und die Sprache festzulegen; die Dateien der anderen Sprachen verweisen auf die Daten der gewählten Sprache.
+4. `patcher/tools/build_texture_modules.py` erstellt `base.zip` und je Sprache eine `<Sprache>.zip`; `patcher/tools/build_manifest.py` vervollständigt `manifest.json` (SHA-256, Patches, ISO-Größen).
+5. `verify_modular_patch.py`, `compare_isos.py` und `verify_texture_pack.py` prüfen die Ergebnisse; `build_all_patches.sh SPRACHE...` baut und prüft jede Kombination neu.
 
-Texte, redaktionelle Regeln und Korrekturen liegen in `strumenti/` (`correzioni/`, `dati/`). `GUIDA_NUOVA_LINGUA.md`, `REGISTRO_SCELTE.md` und `MODIFICHE_<SPRACHE>.md` dokumentieren Methode und Entscheidungen (auf Italienisch).
+Texte, redaktionelle Regeln und Korrekturen liegen in `tools/` (`correzioni/`, `dati/`). `docs/NEW_LANGUAGE_GUIDE.md`, `docs/EDITORIAL_CHOICES.md` und `docs/CHANGES_<LANG>.md` dokumentieren Methode und Entscheidungen (auf Italienisch).
 
 ## Aus dem Quellcode bauen
 
@@ -76,7 +76,7 @@ Das baut sowohl `tfpatch` (Kommandozeile) als auch `tfpatch-gui`. Unter Linux br
 
 - **MikeyMK** — *Yu-Gi-Oh! GX Tag Force 1 HD Remastered* (Grundlage der HD-Texturen, US-Version).
 - **chrisfand** — HD-Karten.
-- Freie Schriften (OFL): XCharter, Libre Baskerville, Newsreader, Alegreya und weitere, heruntergeladen mit `strumenti/font_alternativi/scarica_font.sh`.
+- Freie Schriften (OFL): XCharter, Libre Baskerville, Newsreader, Alegreya und weitere, heruntergeladen mit `tools/alt_fonts/download_fonts.sh`.
 
 Inoffizielles, nicht kommerzielles Fanprojekt, nicht mit Konami verbunden. *Yu-Gi-Oh!* ist eine Marke von Konami.
 

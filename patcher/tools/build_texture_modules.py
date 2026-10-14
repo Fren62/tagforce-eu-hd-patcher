@@ -6,7 +6,7 @@ usage: build_texture_modules.py TEXTURES_DIR CARD_DIR OUT_DIR [LANGUAGE ...]
 Extracted one over the other (first base.zip, then <language>.zip) they give the complete pack of that language: the files of the
 language overwrite those of the base and bring the already composed textures.ini. Uncompressed archives (the PNGs already are).
 """
-import hashlib, json, os, re, sys, tempfile, zipfile
+import hashlib, json, os, re, shutil, sys, tempfile, zipfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, '..', '..', 'tools'))
@@ -15,6 +15,9 @@ import module_ini
 LANGUAGES = ['it', 'fr', 'de', 'es', 'en']
 ITALIAN = ('cards/large_it', 'cards/small_it', 'cards/tiny_it', 'ui_it')   # in the installed base pack Italian is already inside
 STYLE_DIR = '_CHOOSE YOUR CARD STYLE'
+# English card art of the base pack: only English uses it (the other languages replace every card with their own
+# cards/small_<l> and cards/large_<l>), so it travels in en.zip instead of base.zip
+ENGLISH_ONLY = ('cards/small/', 'cards/large/', 'cards/tinyEN/', 'cards/tinyJP/', 'cards/tinyMikeyMK/')
 
 
 def files(root, sub=None):
@@ -64,24 +67,54 @@ def main(tex, card_dir, out, languages):
     is_italian = lambda n: n.startswith(tuple(i + '/' for i in ITALIAN))
 
     everything = files(base_dir)
-    base = [(n, p) for n, p in everything if n not in inis and not is_italian(n) and n not in it_intro]
-    man = dict(format=1, base=write_zip(os.path.join(out, 'base.zip'), base), languages={})
-    print('base.zip', man['base']['size'] >> 20, 'MB')
+    is_english_only = lambda n: n.startswith(ENGLISH_ONLY)
+    base = [(n, p) for n, p in everything if n not in inis and not is_italian(n) and n not in it_intro and not is_english_only(n)]
+    base_names = {n for n, _ in base}
+    per_lang = {}
     for l in languages:
         if l == 'it':
-            entries = [(n, p) for n, p in everything if is_italian(n) or n in it_intro or n in inis]
+            entries = [(n, p) for n, p in everything if is_italian(n) or n in it_intro]
             entries += [(n, p) for n, p in files(os.path.join(modules, 'it'), 'intro')]
+            for rel in inis:     # the base inis hold the lines of every language: keep only those whose file ships
+                dst = os.path.join(tmp, l, rel)
+                os.makedirs(os.path.dirname(dst), exist_ok=True)
+                shutil.copyfile(os.path.join(base_dir, rel), dst)
+                cut_dead_lines(dst, base_names | {n for n, _ in entries})
+                entries.append((rel, dst))
         else:
             mod = os.path.join(modules, l)
             entries = [x for sub in ('cards', 'intro', 'ui_' + l) for x in files(mod, sub)]
+            if l == 'en':
+                entries += [(n, p) for n, p in everything if is_english_only(n)]
             for rel in inis:
                 dst = os.path.join(tmp, l, rel)
                 os.makedirs(os.path.dirname(dst), exist_ok=True)
                 module_ini.main(card_dir, os.path.join(base_dir, rel), dst, modules, [l])
-                cut_dead_lines(dst, {n for n, _ in base} | {n for n, _ in entries})
+                cut_dead_lines(dst, base_names | {n for n, _ in entries})
                 entries.append((rel, dst))
-        # a name present twice (base and module) goes once only in the language archive
-        entries = list({n: p for n, p in entries}.items())
+        per_lang[l] = entries
+    # base.zip = only the textures that EVERY language needs; a texture needed by some languages goes into those modules;
+    # a texture that no language references is dropped (PPSSPP looks textures up by hash, an unreferenced file is dead weight)
+    def referenced(entries):
+        ref = set()
+        for n, p in entries:
+            if n.endswith('textures.ini'):
+                for r in open(p, encoding='utf-8').read().splitlines():
+                    m = re.match(r'^\s*[0-9a-fA-F]+\s*=\s*(.+?)\s*$', r)
+                    if m and not r.lstrip().startswith(('#', ';')):
+                        ref.add(m.group(1))
+        return ref
+    refs = {l: referenced(e) for l, e in per_lang.items()}
+    common = {n for n in base_names if all(n in refs[l] for l in languages)}
+    dropped = [n for n in base_names if not any(n in refs[l] for l in languages)]
+    print(f'common to all {len(languages)} languages: {len(common)} files; shared by some: {len(base_names) - len(common) - len(dropped)}; unreferenced (dropped): {len(dropped)}')
+    base = [(n, p) for n, p in base if n in common]
+    man = dict(format=1, base=write_zip(os.path.join(out, 'base.zip'), base), languages={})
+    print('base.zip', man['base']['size'] >> 20, 'MB')
+    for l in languages:
+        extra = [(n, p) for n, p in everything if n in base_names and n not in common and n in refs[l]]
+        # a name present twice goes once only in the language archive
+        entries = list({n: p for n, p in per_lang[l] + extra}.items())
         man['languages'][l] = write_zip(os.path.join(out, f'{l}.zip'), entries)
         print(l + '.zip', man['languages'][l]['size'] >> 20, 'MB', len(entries), 'files')
     json.dump(man, open(os.path.join(out, 'manifest.json'), 'w'), indent=1)

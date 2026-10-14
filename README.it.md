@@ -3,14 +3,14 @@
 [English](README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md)
 
 Patcher gratuito e open source per **Yu-Gi-Oh! GX Tag Force** (PSP) nella versione europea **ULES00600 v1.01**.
-Partendo dalla *tua* ISO, produce una copia con la lingua scelta (**italiano, francese, tedesco, spagnolo, inglese**) con:
+Partendo dalla *tua* ISO, produce una copia nella lingua scelta (**italiano, francese, tedesco, spagnolo, inglese**), con le parti che scegli:
 
-- **testi corretti**: nomi e descrizioni delle carte, dialoghi, frasi dei duelli, stringhe dell'interfaccia (refusi, accenti, spazi, residui di altre lingue);
 - **texture HD** per PPSSPP: carte grandi e piccole con testo ridisegnato nella lingua, scritte dell'interfaccia, banner del titolo;
-- **niente selettore lingua**: la schermata di scelta all'avvio e la voce "Parametri lingua" del menu principale sono rimosse (la lingua è fissa), perché sarebbero inutili;
-- **una sola lingua nella ISO**: le altre lingue vengono tolte, quindi la ISO pesa meno (circa 610 MB invece di 835) e il gioco resta nella lingua scelta qualunque sia la lingua di sistema del PSP.
+- **correzione di dialoghi e testi**: refusi, accenti, spazi e residui di altre lingue in dialoghi, frasi dei duelli e testi dell'interfaccia;
+- **correzione delle carte**: nomi e descrizioni delle carte;
+- **rimozione delle altre lingue**: ISO più leggera, il gioco resta nella lingua scelta qualunque sia la lingua di sistema del PSP, e il selettore della lingua (schermata al primo avvio e voce del menu principale) sparisce perché sarebbe inutile.
 
-> **Stato: prima versione (v0.1.0).** Le cinque patch della ISO sono verificate file per file e provate in PPSSPP in tutte le lingue: avvio, titolo e duelli dimostrativi (circa 9 minuti ciascuno, nessun crash). Modalità storia, editor del deck, negozio e il resto non sono ancora stati giocati a fondo. Non c'è ancora una interfaccia grafica, solo la riga di comando.
+> **Stato: prima versione.** Le patch sono verificate file per file per ogni combinazione di moduli, e le cinque lingue sono state provate in PPSSPP (avvio, titolo, duelli dimostrativi). Modalità storia, editor del deck e negozio non sono ancora stati giocati a fondo. L'installer grafico è nuovo: provato su Windows; la versione Linux è prodotta da GitHub Actions e non è ancora stata eseguita su un vero desktop Linux.
 
 ## Cosa serve
 
@@ -19,51 +19,51 @@ Partendo dalla *tua* ISO, produce una copia con la lingua scelta (**italiano, fr
 
 Il repository **non contiene** il gioco né dati estratti dal gioco: le patch (`.tfp`) contengono solo differenze binarie rispetto ai file originali.
 
-## Come si usa (riga di comando)
+## Installer grafico (consigliato)
 
-Dalla pagina [Releases](../../releases) scarica `tfpatch.exe` (Windows) o `tfpatch-linux-x86_64` (Linux; prima `chmod +x tfpatch-linux-x86_64`) e la patch della tua lingua (`patch_it.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp` o `patch_en.tfp`).
+1. Dalla pagina [Releases](../../releases) scarica `tfpatch-gui.exe` (Windows) o `tfpatch-gui-linux-x86_64` (Linux; prima `chmod +x tfpatch-gui-linux-x86_64`).
+2. Avvialo. Il programma si apre nella lingua del tuo PC (inglese se non è una delle cinque) e mostra il banner *Pomodoro Mistico* della **lingua della patch**, che di default è la stessa del programma ma si può cambiare separatamente.
+3. Scegli la ISO originale, lascia o togli la spunta ai moduli (di default sono tutti attivi), scegli dove salvare la ISO e, per le texture HD, la cartella dati di PPSSPP. Il **peso finale della ISO e quello del pacchetto texture sono mostrati in tempo reale** e cambiano mentre spunti o togli i moduli.
+4. Premi **Installa**. La patch e i moduli texture vengono scaricati dalle Release e verificati (SHA-256); la tua ISO originale non viene mai modificata.
 
-I comandi qui sotto usano `tfpatch`; su Linux scrivi `./tfpatch-linux-x86_64`.
+Note sulle opzioni:
+- Senza *Rimuovi le altre lingue*, il gioco mantiene tutte e cinque le lingue e il suo selettore; solo la lingua della patch riceve correzioni e texture HD.
+- *Texture in HD* crea un `textures.zip` a parte in `<cartella dati di PPSSPP>/PSP/TEXTURES/ULES00600/` (lo stesso file vale su Android: copialo nello stesso percorso sul telefono). Se quella cartella contiene già un altro pacchetto di texture, spostalo prima altrove.
 
-1. Applica la patch alla ISO (l'originale non viene modificato):
+## Riga di comando
 
-   ```
-   tfpatch iso --iso ULES00600.iso --patch patch_it.tfp --out ULES00600_it.iso
-   ```
+Scarica `tfpatch.exe` (Windows) o `tfpatch-linux-x86_64` (Linux; prima `chmod +x`). Patch: `patch_it.tfp`, `patch_fr.tfp`, `patch_de.tfp`, `patch_es.tfp`, `patch_en.tfp`.
 
-2. Crea il pacchetto texture HD. Scarica `base.zip` e il modulo della tua lingua dalle Release, ne verifica l'SHA-256 e li compone in un unico `textures.zip`:
+```
+tfpatch iso --iso ULES00600.iso --patch patch_it.tfp --out ULES00600_it.iso
+tfpatch textures --lang it --out textures.zip
+```
 
-   ```
-   tfpatch textures --lang it --out textures.zip
-   ```
-
-3. Copia `textures.zip` in `<cartella dati di PPSSPP>/PSP/TEXTURES/ULES00600/textures.zip` (stesso percorso su Android; non estrarlo). Per estrarre in una cartella, passa una cartella a `--out`. Con `--source CARTELLA` si usano file già scaricati.
-
-4. In PPSSPP: Impostazioni → Grafica → attiva **Sostituisci texture**, poi avvia `ULES00600_it.iso`.
-
-Codici lingua per `--lang` e per le patch: `it`, `fr`, `de`, `es`, `en`.
+`tfpatch iso` accetta `--no-cards`, `--no-text` e `--keep-languages` (i tre moduli qui sopra, disattivati) e `--dry-run` (stampa il peso finale della ISO in byte). `tfpatch textures` scarica `base.zip` e il modulo della lingua, ne verifica l'SHA-256 e li compone in un unico `textures.zip` (passa una cartella a `--out` per estrarre; con `--source CARTELLA` si usano file già scaricati). Su Linux scrivi `./tfpatch-linux-x86_64`.
 
 ## Limiti noti
 
 - Un salvataggio creato in una lingua diversa da quella della patch non viene riallineato.
 - Solo l'emulatore PPSSPP (la patch sostituisce un modulo del gioco nella ISO e le texture sono texture di sostituzione di PPSSPP).
-- I moduli texture pesano circa 1 GB per lingua (`base.zip` 1,4 GB, comune a tutte le lingue; il modulo inglese è piccolo).
+- I moduli texture pesano circa 1 GB per lingua più una base da 1,4 GB comune a tutte le lingue (il modulo inglese è piccolo).
 
 ## Come funziona
 
-1. `patcher/strumenti/crea_patch.py` confronta la ISO originale con la ISO finale di una lingua e scrive un pacchetto `.tfp` (zip con `patch.json` e differenze bsdiff).
-2. `patcher/tfpatch` (Rust) controlla l'MD5, applica le differenze e riscrive la ISO in forma compatta: stessa intestazione e directory, poi solo i dati ancora usati (le altre lingue restano fuori).
-3. `patcher/strumenti/salta_lingua.py` modifica `libtitle.prx` per togliere schermata e voce di menu della lingua e fissare la lingua.
-4. `patcher/strumenti/crea_moduli.py` crea `base.zip`, un `<lingua>.zip` per lingua e `manifest.json` (SHA-256).
-5. `patcher/strumenti/verifica_iso.py` e `verifica_texture.py` controllano i risultati; `costruisci_patch.sh LINGUA...` rifà l'intera catena e verifica.
+1. `patcher/strumenti/crea_patch_modulare.py` costruisce, per ogni lingua, la ISO con solo le correzioni alle carte, solo quelle ai testi e entrambe, e scrive un `.tfp` modulare (formato 2): uno zip con `patch.json` e differenze bsdiff, ognuna con i moduli che richiede (`cards`, `text`, `strip`).
+2. `patcher/tfpatch` (Rust) controlla l'MD5, sceglie le differenze dei moduli attivi e scrive la ISO in forma compatta: stessa intestazione e directory, poi solo i dati ancora usati. Il peso finale si calcola senza scrivere nulla: è così che l'installer lo mostra in tempo reale.
+3. Con `strip`, `libtitle.prx` viene modificato (`patcher/strumenti/salta_lingua.py`) per togliere schermata e voce di menu della lingua e fissare la lingua, e i file delle altre lingue puntano ai dati della lingua scelta.
+4. `patcher/strumenti/crea_moduli.py` crea `base.zip` e un `<lingua>.zip` per lingua; `patcher/strumenti/manifest.py` completa `manifest.json` (SHA-256, patch, pesi delle ISO).
+5. `verifica_modulare.py`, `verifica_iso.py` e `verifica_texture.py` controllano i risultati; `costruisci_modulari.sh LINGUA...` rifà e verifica ogni combinazione.
 
-I testi e le regole editoriali stanno in `strumenti/` (`correzioni/`, `dati/`); `GUIDA_NUOVA_LINGUA.md`, `REGISTRO_SCELTE.md` e `MODIFICHE_<LINGUA>.md` documentano metodo e scelte.
+I testi, le regole editoriali e le correzioni stanno in `strumenti/` (`correzioni/`, `dati/`); `GUIDA_NUOVA_LINGUA.md`, `REGISTRO_SCELTE.md` e `MODIFICHE_<LINGUA>.md` documentano metodo e scelte.
 
 ## Compilare
 
 ```
 cd patcher/tfpatch && cargo build --release
 ```
+
+Compila sia `tfpatch` (riga di comando) sia `tfpatch-gui`. Su Linux l'interfaccia grafica richiede i soliti pacchetti di sviluppo X11/Wayland/OpenGL.
 
 ## Crediti
 

@@ -26,27 +26,33 @@ pub struct Args {
     cache: Option<PathBuf>,
 }
 
-#[derive(Deserialize)]
-struct Asset {
-    file: String,
-    size: u64,
-    sha256: String,
+#[derive(Deserialize, Clone)]
+pub struct Asset {
+    pub file: String,
+    pub size: u64,
+    pub sha256: String,
 }
 
 #[derive(Deserialize)]
-struct Manifest {
-    base: Asset,
-    lingue: BTreeMap<String, Asset>,
-}
-
-fn http(url: &str) -> Result<Box<dyn Read + Send + Sync>> {
-    let r = ureq::get(url).call().with_context(|| format!("download fallito: {url}"))?;
-    Ok(Box::new(r.into_body().into_reader()))
+pub struct Manifest {
+    pub base: Asset,
+    pub lingue: BTreeMap<String, Asset>,
+    /// patch ISO per lingua (patch_<lingua>.tfp)
+    #[serde(default)]
+    pub patch: BTreeMap<String, Asset>,
+    /// dimensione della ISO finale per lingua e combinazione di moduli (chiave "cards,text,strip" = "111")
+    #[serde(default)]
+    pub iso_sizes: BTreeMap<String, BTreeMap<String, u64>>,
+    /// MD5 accettati per la ISO originale
+    #[serde(default)]
+    pub iso_md5: Vec<String>,
 }
 
 fn apri(source: &str, nome: &str) -> Result<Box<dyn Read + Send + Sync>> {
     if source.starts_with("http://") || source.starts_with("https://") {
-        http(&format!("{}/{nome}", source.trim_end_matches('/')))
+        let url = format!("{}/{nome}", source.trim_end_matches('/'));
+        let r = ureq::get(&url).call().with_context(|| format!("download fallito: {url}"))?;
+        Ok(Box::new(r.into_body().into_reader()))
     } else {
         Ok(Box::new(File::open(Path::new(source).join(nome)).with_context(|| format!("manca {nome} in {source}"))?))
     }
@@ -70,19 +76,24 @@ fn sha_file(p: &Path) -> Result<String> {
     Ok(hex(h.finalize()))
 }
 
-/// Porta in cache l'archivio (salta il download se c'e' gia' ed e' corretto).
-fn scarica(source: &str, a: &Asset, cache: &Path) -> Result<PathBuf> {
+pub fn leggi_manifest(source: &str) -> Result<Manifest> {
+    Ok(serde_json::from_reader(apri(source, "manifest.json")?)?)
+}
+
+/// Porta in cache l'archivio (salta il download se c'e' gia' ed e' corretto). `progress(scaricati, totali)`.
+pub fn scarica(source: &str, a: &Asset, cache: &Path, progress: &mut dyn FnMut(u64, u64)) -> Result<PathBuf> {
+    std::fs::create_dir_all(cache)?;
     let dst = cache.join(&a.file);
     if dst.exists() && std::fs::metadata(&dst)?.len() == a.size && sha_file(&dst)? == a.sha256 {
-        eprintln!("{}: gia' scaricato", a.file);
+        progress(a.size, a.size);
         return Ok(dst);
     }
-    eprintln!("scarico {} ({} MB)...", a.file, a.size >> 20);
     let tmp = dst.with_extension("part");
     let mut r = apri(source, &a.file)?;
     let mut f = File::create(&tmp)?;
     let mut h = Sha256::new();
     let mut buf = vec![0u8; 1 << 20];
+    let mut tot = 0u64;
     loop {
         let n = r.read(&mut buf)?;
         if n == 0 {
@@ -90,6 +101,8 @@ fn scarica(source: &str, a: &Asset, cache: &Path) -> Result<PathBuf> {
         }
         h.update(&buf[..n]);
         f.write_all(&buf[..n])?;
+        tot += n as u64;
+        progress(tot, a.size);
     }
     drop(f);
     if hex(h.finalize()) != a.sha256 {
@@ -100,35 +113,58 @@ fn scarica(source: &str, a: &Asset, cache: &Path) -> Result<PathBuf> {
     Ok(dst)
 }
 
-pub fn esegui(a: Args) -> Result<()> {
-    let m: Manifest = serde_json::from_reader(apri(&a.source, "manifest.json")?)?;
-    let lang = m.lingue.get(&a.lang).with_context(|| format!("lingua '{}' non disponibile (ci sono: {:?})", a.lang, m.lingue.keys()))?;
-    let cache = a.cache.clone().unwrap_or_else(|| a.out.parent().map(|p| p.to_path_buf()).unwrap_or_default().join("tfpatch_cache"));
-    std::fs::create_dir_all(&cache)?;
-    let pb = scarica(&a.source, &m.base, &cache)?;
-    let pl = scarica(&a.source, lang, &cache)?;
-    let mut base = zip::ZipArchive::new(File::open(pb)?)?;
-    let mut modulo = zip::ZipArchive::new(File::open(pl)?)?;
-
-    if a.out.extension().is_some_and(|e| e.eq_ignore_ascii_case("zip")) {
-        eprintln!("compongo {}...", a.out.display());
+/// Compone base + modulo in `out` (.zip = un solo archivio non compresso; altrimenti cartella).
+pub fn componi(base_zip: &Path, modulo_zip: &Path, out: &Path, progress: &mut dyn FnMut(f32)) -> Result<()> {
+    let mut base = zip::ZipArchive::new(File::open(base_zip)?)?;
+    let mut modulo = zip::ZipArchive::new(File::open(modulo_zip)?)?;
+    if out.extension().is_some_and(|e| e.eq_ignore_ascii_case("zip")) {
+        if let Some(p) = out.parent() {
+            std::fs::create_dir_all(p)?;
+        }
         let sovrascritti: HashSet<String> = modulo.file_names().map(String::from).collect();
-        let mut w = zip::ZipWriter::new(File::create(&a.out)?);
+        let mut w = zip::ZipWriter::new(File::create(out)?);
+        let tot = (base.len() + modulo.len()).max(1);
         for i in 0..base.len() {
             let e = base.by_index_raw(i)?;
             if !sovrascritti.contains(e.name()) {
                 w.raw_copy_file(e)?;
             }
+            if i % 200 == 0 {
+                progress(i as f32 / tot as f32);
+            }
         }
         for i in 0..modulo.len() {
             w.raw_copy_file(modulo.by_index_raw(i)?)?;
+            if i % 200 == 0 {
+                progress((base.len() + i) as f32 / tot as f32);
+            }
         }
         w.finish()?;
     } else {
-        eprintln!("estraggo in {}...", a.out.display());
-        base.extract(&a.out)?;
-        modulo.extract(&a.out)?; // sovrascrive
+        base.extract(out)?;
+        progress(0.7);
+        modulo.extract(out)?; // sovrascrive
     }
+    progress(1.0);
+    Ok(())
+}
+
+pub fn esegui(a: Args) -> Result<()> {
+    let m = leggi_manifest(&a.source)?;
+    let lang = m.lingue.get(&a.lang).with_context(|| format!("lingua '{}' non disponibile (ci sono: {:?})", a.lang, m.lingue.keys()))?;
+    let cache = a.cache.clone().unwrap_or_else(|| a.out.parent().map(|p| p.to_path_buf()).unwrap_or_default().join("tfpatch_cache"));
+    for asset in [&m.base, lang] {
+        eprintln!("scarico {} ({} MB)...", asset.file, asset.size >> 20);
+        let mut ultimo = 0u64;
+        scarica(&a.source, asset, &cache, &mut |t, tot| {
+            if t * 10 / tot.max(1) != ultimo * 10 / tot.max(1) {
+                eprintln!("  {}%", t * 100 / tot.max(1));
+            }
+            ultimo = t;
+        })?;
+    }
+    eprintln!("compongo {}...", a.out.display());
+    componi(&cache.join(&m.base.file), &cache.join(&lang.file), &a.out, &mut |_| {})?;
     eprintln!("fatto");
     Ok(())
 }

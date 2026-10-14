@@ -146,12 +146,14 @@ def _record(f, lba, nome):
     raise FileNotFoundError(nome)
 
 
-def main(src, dst, lingue_scelte=None):
+def main(src, dst, lingue_scelte=None, parti=('carte', 'testi')):
+    """parti: 'carte' = nomi e descrizioni delle carte (cardinfo) + etichetta Magia/Trappola; 'testi' = dialoghi, frasi dei duelli,
+    stringhe dell'interfaccia, testi in BOOT.BIN."""
     import fnmatch, json, shutil
     lingue_scelte = lingue_scelte or [l for l in lingue.LINGUE if applica.tabella(l)]
     iso = pycdlib.PyCdlib(); iso.open(src)
     nuovi = {}
-    for l in lingue_scelte:
+    for l in (lingue_scelte if 'carte' in parti else []):
         b = io.BytesIO(); iso.get_file_from_iso_fp(b, iso_path=ehp_di(l)); d = b.getvalue()
         nuovo, cambiate = patch_ehp(d, l)
         nuovi[ehp_di(l)] = (d, nuovo)
@@ -159,7 +161,7 @@ def main(src, dst, lingue_scelte=None):
     import dialoghi   # dialoghi (script/stNN_*_<l>.ehp), per ogni lingua con dati/correzioni_dialoghi_<lingua>.json
     def prendi(p):
         b = io.BytesIO(); iso.get_file_from_iso_fp(b, iso_path=p); return b.getvalue()
-    for l in lingue_scelte:
+    for l in (lingue_scelte if 'testi' in parti else []):
         if not os.path.exists(dialoghi.dati(l)):
             continue
         avvisi = []
@@ -168,12 +170,12 @@ def main(src, dst, lingue_scelte=None):
         print(f'dialoghi {l}: {n} righe riscritte, {len(avvisi)} avvisi'); [print('  ', a) for a in avvisi[:20]]
     import frasi_duello   # battute dei personaggi nei duelli (duel/*.ehp), per ogni lingua con una tabella di correzioni
     avvisi = []
-    fd, n = frasi_duello.patch(iso, lingue_scelte, avvisi)
+    fd, n = frasi_duello.patch(iso, lingue_scelte if 'testi' in parti else [], avvisi)
     nuovi.update(fd)
     print(f'frasi duello: {n} frasi riscritte in {len(fd)} archivi, {len(avvisi)} avvisi'); [print('  ', x) for x in avvisi[:20]]
     ui = []   # (percorso nella ISO, vecchio archivio, nuovo archivio) per i testi dell'interfaccia
     ftesti = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dati', 'testi_ui.json')
-    if os.path.exists(ftesti):
+    if 'testi' in parti and os.path.exists(ftesti):
         tutti = []
         def cammina(p):
             for ch in iso.list_children(iso_path=p):
@@ -201,7 +203,7 @@ def main(src, dst, lingue_scelte=None):
     # (card_spell_trap.gim, hash c2268340) per qualsiasi lingua; la regione europea e' 'b' (basic_bi = Italia). Si mette quella della
     # lingua (la stessa di field/always_<lingua>_<lingua>.ehp, stesso formato e dimensione) in tutti gli archivi di quella lingua
     for cod, (f3, lett, _) in lingue.LINGUE.items():
-        if lingue_scelte and cod not in lingue_scelte or cod == 'en':
+        if 'carte' not in parti or lingue_scelte and cod not in lingue_scelte or cod == 'en':
             continue
         try:
             pa = f'/PSP_GAME/USRDIR/field/always_{f3}_{f3}.ehp'
@@ -225,7 +227,7 @@ def main(src, dst, lingue_scelte=None):
     import stringhe_ui
     avvisi = []
     ui_regole = json.load(open(ftesti, encoding='utf-8')) if os.path.exists(ftesti) else []
-    su, n = stringhe_ui.patch(iso, lingue_scelte, avvisi, ui_regole)
+    su, n = stringhe_ui.patch(iso, lingue_scelte if 'testi' in parti else [], avvisi, ui_regole if 'testi' in parti else [])
     assert not set(su) & set(nuovi), 'archivio riscritto due volte'
     nuovi.update(su)
     print(f'stringhe interfaccia: {n} stringhe riscritte in {len(su)} archivi, {len(avvisi)} avvisi'); [print('  ', a) for a in avvisi[:30]]
@@ -233,7 +235,7 @@ def main(src, dst, lingue_scelte=None):
     # testi dentro l'eseguibile (SYSDIR/BOOT.BIN: nomi dei personaggi nella casella del dialogo): dati/testi_boot.json,
     # sostituzione UTF-16 sul posto (il nuovo testo non puo' essere piu' lungo del vecchio: i puntatori non si spostano)
     fboot = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'dati', 'testi_boot.json')
-    if os.path.exists(fboot):
+    if 'testi' in parti and os.path.exists(fboot):
         bb = io.BytesIO(); iso.get_file_from_iso_fp(bb, iso_path='/PSP_GAME/SYSDIR/BOOT.BIN'); db = bb.getvalue()
         for r in json.load(open(fboot, encoding='utf-8')):
             if lingue_scelte and r['lingua'] not in lingue_scelte:
@@ -278,4 +280,6 @@ def main(src, dst, lingue_scelte=None):
 
 
 if __name__ == '__main__':
-    main(sys.argv[1], sys.argv[2], sys.argv[3:] or None)
+    args = [a for a in sys.argv[1:] if not a.startswith('--parti=')]
+    parti = next((a[8:].split(',') for a in sys.argv[1:] if a.startswith('--parti=')), ['carte', 'testi'])
+    main(args[0], args[1], args[2:] or None, tuple(parti))

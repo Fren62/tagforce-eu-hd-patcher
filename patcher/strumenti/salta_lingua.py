@@ -3,7 +3,8 @@ imposta la lingua fissa.
 
 Il punto d'ingresso di libtitle (vaddr 0x34) guarda il "modo di avvio": 0 e 1 aprono la scena 0x28 (scelta lingua), 2 il titolo.
 Qui i modi 0 e 1 vengono deviati su un blocco che chiama SetLanguage(n) (stesso import 0x24d1c che la scena lingua usa
-a fine scelta) e poi va alla scena del titolo (0x1a8). Il blocco sta nello spazio dei vecchi rami (ora morti); il `jal`
+a fine scelta) e poi continua dalla scena 0 (0x1e0), come faceva la scena lingua a fine scelta (scavalcare le scene iniziali
+faceva crashare il primo duello dimostrativo). Il blocco sta nello spazio dei vecchi rami (ora morti); il `jal`
 ha bisogno di una voce di rilocazione (PRX): si riusa quella del `jal 0x24d1c` della scena lingua (0xb028), ora inutile.
 
 Indici lingua del gioco (ordine della schermata: cursore + 1): 1 en, 2 de, 3 fr, 4 it, 5 es.
@@ -32,7 +33,7 @@ def patch(b: bytearray, lingua: str) -> bytearray:
     metti(0x84, 0x50600003, 0x50600001)                    # modo 0 -> 0x8c (era 0x94)
     metti(0x8c, 0x10000054, 0x0c009347)                    # jal SetLanguage
     metti(0x90, 0x00000000, 0x24040000 | n)                # (delay slot) a0 = lingua
-    metti(0x94, 0x10000052, 0x10000044)                    # b 0x1a8 -> scena del titolo (0x26b8(5, 0))
+    metti(0x94, 0x10000052, 0x1000004a)                    # b 0x1e0 -> scena 0 (logo, filmato, titolo), come dopo la scelta lingua originale
     metti(0x98, 0xa6020008, 0x00000000)                    # nop
     struct.pack_into('<I', b, REL_JAL_SCENA, 0x8c)         # la rilocazione ora vale per il jal a 0x8c
     # Menu principale (init a 0x80c): una voce in meno = niente "Parametri lingua" (e' l'ultima della lista; il contatore

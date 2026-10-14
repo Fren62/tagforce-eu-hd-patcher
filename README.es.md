@@ -2,6 +2,8 @@
 
 [English](README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md)
 
+<p align="center"><img src="patcher/tfpatch/assets/banner_es.png" alt="Edición Tomate Místico" width="670"></p>
+
 Un parcheador gratuito y de código abierto para **Yu-Gi-Oh! GX Tag Force** (PSP), versión europea **ULES00600 v1.01**.
 A partir de *tu propia* ISO, genera una copia en el idioma elegido (**inglés, francés, alemán, español, italiano**), con las partes que selecciones:
 

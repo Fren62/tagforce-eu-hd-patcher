@@ -2,6 +2,8 @@
 
 [English](README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md)
 
+<p align="center"><img src="patcher/tfpatch/assets/banner_it.png" alt="Versione Pomodoro Mistico" width="670"></p>
+
 Patcher gratuito e open source per **Yu-Gi-Oh! GX Tag Force** (PSP) nella versione europea **ULES00600 v1.01**.
 Partendo dalla *tua* ISO, produce una copia nella lingua scelta (**italiano, francese, tedesco, spagnolo, inglese**), con le parti che scegli:
 

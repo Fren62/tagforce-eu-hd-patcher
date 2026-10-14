@@ -2,6 +2,8 @@
 
 [English](README.md) · [Italiano](README.it.md) · [Français](README.fr.md) · [Deutsch](README.de.md) · [Español](README.es.md)
 
+<p align="center"><img src="patcher/tfpatch/assets/banner_fr.png" alt="Version Tomate Mystique" width="670"></p>
+
 Patcheur gratuit et open source pour **Yu-Gi-Oh! GX Tag Force** (PSP), version européenne **ULES00600 v1.01**.
 À partir de *votre propre* ISO, il produit une copie dans la langue choisie (**anglais, français, allemand, espagnol, italien**), avec les parties que vous sélectionnez :
 

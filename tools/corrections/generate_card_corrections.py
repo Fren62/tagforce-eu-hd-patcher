@@ -1,5 +1,5 @@
 """Generates data/card_corrections_<language>.json (fr, de, es, en) from the rules in corrections/rules_<language>.py.
-usage: generate_card_corrections.py LANGUAGE CARDINFO.ehp [OUT_JSON]       (also writes comparisons/audit_carte/correzioni_<language>.csv)
+usage: generate_card_corrections.py LANGUAGE CARDINFO.ehp [OUT_JSON]       (also writes comparisons/audit_cards/corrections_<language>.csv)
 The JSON has the form {"<id>": {"name": "...", "desc": "..."}} with the changed fields only, like card_corrections.json (Italian).
 Every PER_CARD must find the exact text: if it is not there it stops, so the table does not derive from a wrong reading."""
 import csv, importlib.util, json, os, re, sys
@@ -50,7 +50,7 @@ if IT and os.path.exists(out):
         previous.setdefault(k, {}).update(v)
     res = previous
 json.dump(res, open(out, 'w', encoding='utf-8'), ensure_ascii=False, indent=1, sort_keys=True)
-csv_path = os.path.join(HERE, '..', '..', 'comparisons', 'audit_carte', f'correzioni_{lang}.csv')
+csv_path = os.path.join(HERE, '..', '..', 'comparisons', 'audit_cards', f'corrections_{lang}.csv')
 with open(csv_path, 'w', encoding='utf-8-sig', newline='') as f:
     w = csv.writer(f, delimiter=';')
     w.writerow(['id', 'field', 'before', 'after', 'reason'])

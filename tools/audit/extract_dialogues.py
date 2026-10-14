@@ -1,4 +1,4 @@
-"""Extracts the dialogues (script/stNN_*_<l>.ehp) of all the European languages into comparisons/audit_dialoghi/dialoghi_<l>.tsv:
+"""Extracts the dialogues (script/stNN_*_<l>.ehp) of all the European languages into comparisons/audit_dialogues/dialogues_<l>.tsv:
 id (archive/scene#index), language text, English text, Japanese. Line breaks written as ⏎.  usage: extract_dialogues.py ISO OUT_DIR"""
 import io, os, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -25,7 +25,7 @@ for n in sorted(names):
         except Exception:
             pass
 for l in 'ifgse':
-    with open(f'{out}/dialoghi_{LL[l]}.tsv', 'w', encoding='utf-8') as o:
+    with open(f'{out}/dialogues_{LL[l]}.tsv', 'w', encoding='utf-8') as o:
         n = 0
         for (st, sc, ll), v in sorted(data.items()):
             if ll != l:

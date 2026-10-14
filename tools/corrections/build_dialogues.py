@@ -1,5 +1,5 @@
 """Generates data/dialogue_corrections_<language>.json (id -> current, proposed) for dialogues.py from:
-  - the original dialogues (comparisons/audit_dialoghi/dialoghi_<language>.tsv, extracted with audit/extract_dialogues.py from the original ISO)
+  - the original dialogues (comparisons/audit_dialogues/dialogues_<language>.tsv, extracted with audit/extract_dialogues.py from the original ISO)
   - data/dialogue_corrections_<language>_base.json (it only: the complete hand-made review)
   - data/dialogue_touchups_<language>.json  {"exact": {line: new}, "parts": [[old, new]]}  (line breaks written as ⏎)
   - automatic rules: spaces around the 《...》 placeholders and (fr only) space before ! ? : ;
@@ -9,7 +9,7 @@ usage: build_dialogues.py LANGUAGE [LANGUAGE ...]"""
 import json, os, re, sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 DATA = os.path.join(HERE, '..', 'data')
-AUDIT = os.path.join(HERE, '..', '..', 'comparisons', 'audit_dialoghi')
+AUDIT = os.path.join(HERE, '..', '..', 'comparisons', 'audit_dialogues')
 nl = lambda s: s.replace('⏎', '\n')
 SPACE_BEFORE = re.compile(r"(?<=[A-Za-zÀ-ÿ,;:!?])《")
 SPACE_AFTER = re.compile(r"》(?=[A-Za-zÀ-ÿ])")
@@ -28,7 +28,7 @@ FROM = {'fr': 'it', 'de': 'fr'}      # the language whose original text contains
 
 def tsv(l, ja=False):
     r = {}
-    for x in open(os.path.join(AUDIT, f'dialoghi_{l}.tsv'), encoding='utf-8', newline='\n').read().split('\n'):
+    for x in open(os.path.join(AUDIT, f'dialogues_{l}.tsv'), encoding='utf-8', newline='\n').read().split('\n'):
         p = x.split('\t')
         if len(p) >= 2:
             r[p[0]] = (p[1], p[3] if len(p) > 3 else '') if ja else p[1]

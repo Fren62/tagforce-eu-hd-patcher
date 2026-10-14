@@ -57,7 +57,7 @@ nel testo, terminologia scelta dal gioco (es. in francese "Carte Piège Continu"
 3. Trasforma gli errori in **regole**: preferisci `GLOBALI` (regex `(modello, sostituzione, motivo)`) quando l'errore e' di una classe; `PER_CARTA` (id, campo, vecchio, nuovo, motivo)
    per i casi unici. Il "vecchio" di `PER_CARTA` deve comparire **esattamente** o lo script si ferma (e' voluto: la tabella non deriva da una lettura sbagliata).
 4. Dopo le regole, **scansione automatica** della classe di errore su tutte le carte (doppi spazi, ` ,`, `,A`, `.A`, apostrofo+spazio, parola doppia, `E' `...): trova quello che l'occhio salta.
-5. Genera: `python tools/corrections/generate_card_corrections.py LINGUA CARDINFO_<l>.ehp` (la versione in `correzioni/`; scrive anche `confronti/audit_carte/correzioni_<l>.csv`).
+5. Genera: `python tools/corrections/generate_card_corrections.py LINGUA CARDINFO_<l>.ehp` (la versione in `correzioni/`; scrive anche `confronti/audit_cards/corrections_<l>.csv`).
    - fr/de/es/en: parte dai testi **originali** e scrive `dati/card_corrections_<l>.json`.
    - it: parte dai testi **gia' corretti** e **fonde** nel `dati/card_corrections.json` esistente (idempotente: rilanciabile).
 6. Controlli: i `PER_CARTA` non devono dare "testo non trovato"; leggi il CSV delle modifiche; **nessuna regola globale deve toccare cio' che non volevi** (guarda i conteggi stampati: una regola con 140 corrispondenze su un modello che pensavi raro e' sospetta).
@@ -79,7 +79,7 @@ Domande aperte da fare all'utente (non decidere da soli): portare i nomi delle c
 
 ## 4. Dialoghi della storia (blocco 3)
 
-1. Estrai: `python tools/audit/extract_dialogues.py ISO confronti/audit_dialoghi` (righe uniche con inglese e giapponese).
+1. Estrai: `python tools/audit/extract_dialogues.py ISO confronti/audit_dialogues` (righe uniche con inglese e giapponese).
 2. Leggi **riga per riga confrontando con inglese e giapponese**; il giapponese decide quando inglese e lingua locale divergono. Annota in
    `dati/dialogue_touchups_<l>.json`: `esatte` {riga intera originale: nuova} e `parti` [[vecchio, nuovo]] (a capo scritti `⏎`).
 3. `python tools/corrections/build_dialogues.py <l>` -> `dialogue_corrections_<l>.json`. Le righe senza correzione propria **ereditano** da quelle con lo stesso testo originale

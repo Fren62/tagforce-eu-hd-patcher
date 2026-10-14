@@ -5,7 +5,7 @@ import os, re, sys, json, shutil, subprocess, collections
 ROOT, TMP = sys.argv[1], sys.argv[2]
 T = f'{ROOT}/tools'
 PACK = f'{ROOT}/PSP/TEXTURES/ULES00600'
-OLD = f'{ROOT}/confronti/audit_carte/prima_delle_correzioni'
+OLD = f'{ROOT}/confronti/audit_cards/prima_delle_correzioni'
 OUT = f'{ROOT}/confronti/font_liberi'
 sys.path.insert(0, T)
 from cardprops import load

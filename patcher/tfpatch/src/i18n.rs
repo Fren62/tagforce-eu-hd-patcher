@@ -101,6 +101,8 @@ pub struct Tr {
     pub auto_found_ppsspp: &'static str,
     pub auto_no_iso: &'static str,
     pub auto_no_ppsspp: &'static str,
+    pub advanced: &'static str,
+    pub ppsspp_ok: &'static str,
     pub footer: &'static str,
 }
 
@@ -149,6 +151,8 @@ const EN: Tr = Tr {
     auto_found_ppsspp: "PPSSPP folder found:",
     auto_no_iso: "ISO not found: choose it with Browse.",
     auto_no_ppsspp: "PPSSPP folder not found: choose it with Browse.",
+    advanced: "Advanced options",
+    ppsspp_ok: "PPSSPP folder found.",
     footer: "Unofficial fan project, not affiliated with Konami. HD textures based on the work of MikeyMK and chrisfand. MIT license.",
 };
 
@@ -197,6 +201,8 @@ const IT: Tr = Tr {
     auto_found_ppsspp: "Cartella di PPSSPP trovata:",
     auto_no_iso: "ISO non trovata: sceglila con Sfoglia.",
     auto_no_ppsspp: "Cartella di PPSSPP non trovata: scegliila con Sfoglia.",
+    advanced: "Opzioni avanzate",
+    ppsspp_ok: "Cartella di PPSSPP trovata.",
     footer: "Progetto di appassionati non ufficiale, non affiliato a Konami. Texture HD basate sul lavoro di MikeyMK e chrisfand. Licenza MIT.",
 };
 
@@ -245,6 +251,8 @@ const FR: Tr = Tr {
     auto_found_ppsspp: "Dossier PPSSPP trouvé :",
     auto_no_iso: "ISO introuvable : choisissez-la avec Parcourir.",
     auto_no_ppsspp: "Dossier PPSSPP introuvable : choisissez-le avec Parcourir.",
+    advanced: "Options avancées",
+    ppsspp_ok: "Dossier PPSSPP trouvé.",
     footer: "Projet de fans non officiel, non affilié à Konami. Textures HD basées sur le travail de MikeyMK et chrisfand. Licence MIT.",
 };
 
@@ -293,6 +301,8 @@ const DE: Tr = Tr {
     auto_found_ppsspp: "PPSSPP-Ordner gefunden:",
     auto_no_iso: "ISO nicht gefunden: mit „Durchsuchen“ auswählen.",
     auto_no_ppsspp: "PPSSPP-Ordner nicht gefunden: mit „Durchsuchen“ auswählen.",
+    advanced: "Erweiterte Optionen",
+    ppsspp_ok: "PPSSPP-Ordner gefunden.",
     footer: "Inoffizielles Fanprojekt, nicht mit Konami verbunden. HD-Texturen basieren auf der Arbeit von MikeyMK und chrisfand. MIT-Lizenz.",
 };
 
@@ -341,6 +351,8 @@ const ES: Tr = Tr {
     auto_found_ppsspp: "Carpeta de PPSSPP encontrada:",
     auto_no_iso: "ISO no encontrada: elígela con Examinar.",
     auto_no_ppsspp: "Carpeta de PPSSPP no encontrada: elígela con Examinar.",
+    advanced: "Opciones avanzadas",
+    ppsspp_ok: "Carpeta de PPSSPP encontrada.",
     footer: "Proyecto de aficionados no oficial, no afiliado a Konami. Texturas HD basadas en el trabajo de MikeyMK y chrisfand. Licencia MIT.",
 };
 

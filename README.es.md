@@ -23,7 +23,7 @@ Este repositorio **no contiene** el juego ni datos extraídos de él: los parche
 
 1. Descarga desde la página de [Releases](../../releases) `tfpatch-gui.exe` (Windows) o `tfpatch-gui-linux-x86_64` (Linux; antes ejecuta `chmod +x tfpatch-gui-linux-x86_64`).
 2. Ejecútalo. El programa se abre en el idioma de tu PC (inglés si no es uno de los cinco) y muestra el banner *Tomate Místico* del **idioma del parche**, que por defecto es el mismo que el del programa pero se puede cambiar por separado.
-3. Pulsa **Buscar la ISO y la carpeta de PPSSPP automáticamente** (o elígelas con Examinar). Después elige tu ISO original si no se encontró, deja o quita la marca de los módulos (todos están activados por defecto), elige dónde guardar la ISO y, para las texturas HD, tu carpeta de datos de PPSSPP. El **tamaño final de la ISO y el del pack de texturas se muestran en tiempo real** y cambian al marcar o desmarcar módulos.
+3. El programa busca por sí solo tu ISO y tu carpeta de datos de PPSSPP y solo muestra el resultado; si no encuentra alguna, te pide que la elijas. Deja o quita la marca de los módulos (todos están activados por defecto). Las rutas, la ubicación de la ISO final y una nueva búsqueda están en **Opciones avanzadas**. El **tamaño final de la ISO y el del pack de texturas se muestran en tiempo real** y cambian al marcar o desmarcar módulos.
 4. Pulsa **Instalar**. El parche y los módulos de texturas se descargan de las Releases y se verifican (SHA-256); tu ISO original nunca se modifica.
 
 Notas sobre las opciones:

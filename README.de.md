@@ -23,7 +23,7 @@ Dieses Repository **enthält weder das Spiel noch daraus extrahierte Daten**: Di
 
 1. Laden Sie von der Seite [Releases](../../releases) `tfpatch-gui.exe` (Windows) oder `tfpatch-gui-linux-x86_64` (Linux; zuerst `chmod +x tfpatch-gui-linux-x86_64` ausführen) herunter.
 2. Starten Sie es. Das Programm öffnet sich in der Sprache Ihres PCs (Englisch, wenn sie nicht zu den fünf gehört) und zeigt das Banner *Mystische Tomate* der **Patch-Sprache**; standardmäßig ist sie die Programmsprache, lässt sich aber getrennt ändern.
-3. Klicken Sie auf **ISO und PPSSPP-Ordner automatisch suchen** (oder wählen Sie sie mit „Durchsuchen“). Wählen Sie danach Ihre Original-ISO, falls sie nicht gefunden wurde, lassen Sie die Module an oder entfernen Sie Häkchen (standardmäßig sind alle aktiv), wählen Sie den Speicherort der ISO und, für die HD-Texturen, Ihren PPSSPP-Datenordner. Die **endgültige ISO-Größe und die Größe des Texturpakets werden live angezeigt** und ändern sich, wenn Sie Module an- oder abwählen.
+3. Das Programm sucht Ihre ISO und Ihren PPSSPP-Datenordner selbst und zeigt nur das Ergebnis; findet es einen nicht, bittet es Sie, ihn zu wählen. Lassen Sie die Module an oder entfernen Sie Häkchen (standardmäßig sind alle aktiv). Pfade, Speicherort der fertigen ISO und eine neue Suche finden Sie unter **Erweiterte Optionen**. Die **endgültige ISO-Größe und die Größe des Texturpakets werden live angezeigt** und ändern sich, wenn Sie Module an- oder abwählen.
 4. Klicken Sie auf **Installieren**. Patch und Texturmodule werden von den Releases heruntergeladen und geprüft (SHA-256); Ihre Original-ISO wird nie verändert.
 
 Hinweise zu den Optionen:

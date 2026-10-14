@@ -23,7 +23,7 @@ This repository **does not contain** the game or any data extracted from it: the
 
 1. Download from the [Releases](../../releases) page `tfpatch-gui.exe` (Windows) or `tfpatch-gui-linux-x86_64` (Linux; run `chmod +x tfpatch-gui-linux-x86_64` first).
 2. Run it. The program opens in your PC language (English if it is not one of the five) and shows the *Mystic Tomato* banner of the **patch language**, which is the same as the program language by default but can be changed separately.
-3. Press **Find ISO and PPSSPP folder automatically** (or pick them with Browse). Then pick your original ISO if it was not found, keep or untick the modules (all are on by default), choose where to save the ISO and, for the HD textures, your PPSSPP data folder. The **final ISO size and the size of the texture pack are shown live** and change as you tick or untick modules.
+3. The program looks for your ISO and your PPSSPP data folder by itself and only shows the result; if it cannot find one, it asks you to choose it. Keep or untick the modules (all are on by default). Paths, the output ISO location and a new search are under **Advanced options**. The **final ISO size and the size of the texture pack are shown live** and change as you tick or untick modules.
 4. Click **Install**. The patch and the texture modules are downloaded from the Releases and verified (SHA-256); your original ISO is never modified.
 
 Notes on the options:

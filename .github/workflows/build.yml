@@ -49,6 +49,17 @@ jobs:
         shell: bash
         working-directory: patcher/tfpatch
         run: cargo test --release --locked --lib
+      - name: Smoke test of the GUI (Linux, virtual display)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          sudo apt-get install -y xvfb libgl1-mesa-dri libglx-mesa0
+          export LIBGL_ALWAYS_SOFTWARE=1
+          set +e
+          xvfb-run -a timeout 12 patcher/tfpatch/target/release/tfpatch-gui
+          code=$?
+          echo "exit code: $code (124 = still running when the timeout hit)"
+          [ "$code" -eq 124 ]
       - name: Rename binaries
         shell: bash
         run: |

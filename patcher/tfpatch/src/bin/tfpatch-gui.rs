@@ -62,6 +62,7 @@ struct App {
     sh: Arc<Mutex<Condiviso>>,
     banner: HashMap<Lang, egui::TextureHandle>,
     source: String,
+    adv: bool,        // solo collaudo: apre "Opzioni avanzate" all'avvio
     cerca_auto: bool, // solo collaudo: avvia la ricerca automatica all'apertura
     auto: bool,     // solo collaudo: TFPATCH_PROVA=...,auto=1 controlla la ISO e avvia l'installazione da solo
     avviato: bool,
@@ -174,11 +175,15 @@ impl App {
             sh,
             banner,
             source,
+            adv: false,
             cerca_auto: false,
             auto: false,
             avviato: false,
         };
         app.prova_da_ambiente();
+        if app.iso_path.is_empty() {
+            app.cerca(&cc.egui_ctx); // l'utente base non deve fare nulla: ISO e cartella di PPSSPP si cercano da soli
+        }
         app
     }
 
@@ -203,6 +208,7 @@ impl App {
                 "ppsspp" => self.ppsspp = val.to_string(),
                 "auto" => self.auto = val == "1",
                 "cerca" => self.cerca_auto = val == "1",
+                "adv" => self.adv = val == "1",
                 _ => {}
             }
         }
@@ -247,6 +253,21 @@ impl App {
             sh.lock().unwrap().ricerca = Ricerca::Fine { iso, ppsspp };
             ctx.request_repaint();
         });
+    }
+
+    fn scegli_iso(&mut self, ctx: &egui::Context) {
+        if let Some(p) = rfd::FileDialog::new().add_filter("ISO", &["iso", "ISO"]).pick_file() {
+            self.iso_path = cerca::normalizza(&p.display().to_string());
+            self.out_manuale = false;
+            self.aggiorna_uscita();
+            self.controlla_iso(ctx);
+        }
+    }
+
+    fn scegli_ppsspp(&mut self) {
+        if let Some(p) = rfd::FileDialog::new().pick_folder() {
+            self.ppsspp = cerca::normalizza(&p.display().to_string());
+        }
     }
 
     fn avvia(&mut self, ctx: &egui::Context) {
@@ -380,54 +401,51 @@ impl eframe::App for App {
                         self.aggiorna_uscita();
                     }
                     ui.add_space(4.0);
-                    ui.horizontal(|ui| {
-                        let cercando = matches!(ricerca, Ricerca::InCorso);
-                        if ui.add_enabled(!cercando, egui::Button::new(t.auto_btn)).clicked() {
-                            self.cerca(ctx);
+                    ui.separator();
+                    let cercando = matches!(ricerca, Ricerca::InCorso);
+                    let verde = Color32::from_rgb(60, 170, 80);
+                    let arancio = Color32::from_rgb(220, 150, 60);
+                    let rosso = Color32::from_rgb(220, 70, 70);
+                    // ISO: solo il risultato; il pulsante compare solo se non si e' trovata
+                    ui.label(RichText::new(t.iso_label).strong());
+                    ui.horizontal(|ui| match (&iso_stato, cercando) {
+                        (IsoStato::Ok, _) => {
+                            ui.label(RichText::new(format!("✔ {}", t.iso_ok)).color(verde));
                         }
-                        if cercando {
+                        (IsoStato::Controllo, _) => {
+                            ui.spinner();
+                            ui.label(t.iso_checking);
+                        }
+                        (_, true) if self.iso_path.is_empty() => {
                             ui.spinner();
                             ui.label(RichText::new(t.auto_searching).weak());
                         }
+                        (stato, _) => {
+                            let (testo, col) = if matches!(stato, IsoStato::No) { (t.iso_bad, rosso) } else { (t.auto_no_iso, arancio) };
+                            ui.label(RichText::new(testo).color(col));
+                            if ui.button(t.browse).clicked() {
+                                self.scegli_iso(ctx);
+                            }
+                        }
                     });
-                    let esito = self.sh.lock().unwrap().esito_ricerca.clone();
-                    if let Some((iso, pp)) = esito {
-                        let arancio = Color32::from_rgb(220, 150, 60);
-                        match iso {
-                            Some(i) => ui.label(RichText::new(format!("{} {}", t.auto_found_iso, cerca::normalizza(&i.display().to_string()))).small()),
-                            None => ui.label(RichText::new(t.auto_no_iso).small().color(arancio)),
-                        };
-                        match pp {
-                            Some(p) => ui.label(RichText::new(format!("{} {}", t.auto_found_ppsspp, cerca::normalizza(&p.display().to_string()))).small()),
-                            None => ui.label(RichText::new(t.auto_no_ppsspp).small().color(arancio)),
-                        };
+                    // cartella di PPSSPP (serve solo per le texture HD)
+                    if self.textures {
+                        ui.add_space(4.0);
+                        ui.label(RichText::new(t.out_ppsspp).strong());
+                        ui.horizontal(|ui| {
+                            if !self.ppsspp.trim().is_empty() {
+                                ui.label(RichText::new(format!("✔ {}", t.ppsspp_ok)).color(verde));
+                            } else if cercando {
+                                ui.spinner();
+                                ui.label(RichText::new(t.auto_searching).weak());
+                            } else {
+                                ui.label(RichText::new(t.auto_no_ppsspp).color(arancio));
+                                if ui.button(t.browse).clicked() {
+                                    self.scegli_ppsspp();
+                                }
+                            }
+                        });
                     }
-                    ui.separator();
-                    // ISO
-                    ui.label(RichText::new(t.iso_label).strong());
-                    ui.horizontal(|ui| {
-                        let r = ui.add(egui::TextEdit::singleline(&mut self.iso_path).desired_width(ui.available_width() - 110.0));
-                        let cambiata = r.changed();
-                        if cambiata {
-                            self.iso_path = cerca::normalizza(&self.iso_path);
-                        }
-                        if ui.button(t.browse).clicked()
-                            && let Some(p) = rfd::FileDialog::new().add_filter("ISO", &["iso", "ISO"]).pick_file()
-                        {
-                            self.iso_path = cerca::normalizza(&p.display().to_string());
-                            self.aggiorna_uscita();
-                            self.controlla_iso(ctx);
-                        } else if cambiata && Path::new(&self.iso_path).is_file() {
-                            self.aggiorna_uscita();
-                            self.controlla_iso(ctx);
-                        }
-                    });
-                    match iso_stato {
-                        IsoStato::Nessuna => ui.label(RichText::new(t.iso_none).weak()),
-                        IsoStato::Controllo => ui.label(t.iso_checking),
-                        IsoStato::Ok => ui.label(RichText::new(t.iso_ok).color(Color32::from_rgb(60, 170, 80))),
-                        IsoStato::No => ui.label(RichText::new(t.iso_bad).color(Color32::from_rgb(220, 70, 70))),
-                    };
                     ui.separator();
                     // moduli
                     ui.label(RichText::new(t.modules).strong());
@@ -472,37 +490,65 @@ impl eframe::App for App {
                         }
                     }
                     ui.separator();
-                    // destinazioni
-                    ui.label(RichText::new(t.out_iso).strong());
-                    ui.horizontal(|ui| {
-                        if ui.add(egui::TextEdit::singleline(&mut self.out_path).desired_width(ui.available_width() - 110.0)).changed() {
-                            self.out_manuale = true;
-                            self.out_path = cerca::normalizza(&self.out_path);
+                    egui::CollapsingHeader::new(t.advanced).default_open(self.adv).show(ui, |ui| {
+                        if ui.add_enabled(!cercando, egui::Button::new(t.auto_btn)).clicked() {
+                            self.cerca(ctx);
                         }
-                        if ui.button(t.browse).clicked()
-                            && let Some(p) = rfd::FileDialog::new().add_filter("ISO", &["iso"]).set_file_name(
-                                Path::new(&self.out_path).file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default(),
-                            ).save_file()
-                        {
-                            self.out_path = cerca::normalizza(&p.display().to_string());
-                            self.out_manuale = true;
-                        }
-                    });
-                    if self.textures {
-                        ui.add_space(4.0);
-                        ui.label(RichText::new(t.out_ppsspp).strong());
-                        ui.horizontal(|ui| {
-                            if ui.add(egui::TextEdit::singleline(&mut self.ppsspp).desired_width(ui.available_width() - 110.0)).changed() {
-                                self.ppsspp = cerca::normalizza(&self.ppsspp);
+                        let esito = self.sh.lock().unwrap().esito_ricerca.clone();
+                        if let Some((iso, pp)) = esito {
+                            if let Some(i) = iso {
+                                ui.label(RichText::new(format!("{} {}", t.auto_found_iso, cerca::normalizza(&i.display().to_string()))).small());
                             }
-                            if ui.button(t.browse).clicked()
-                                && let Some(p) = rfd::FileDialog::new().pick_folder()
-                            {
-                                self.ppsspp = cerca::normalizza(&p.display().to_string());
+                            if let Some(p) = pp {
+                                ui.label(RichText::new(format!("{} {}", t.auto_found_ppsspp, cerca::normalizza(&p.display().to_string()))).small());
+                            }
+                        }
+                        ui.add_space(4.0);
+                        ui.label(RichText::new(t.iso_label).strong());
+                        ui.horizontal(|ui| {
+                            let r = ui.add(egui::TextEdit::singleline(&mut self.iso_path).desired_width(ui.available_width() - 110.0));
+                            if r.changed() {
+                                self.iso_path = cerca::normalizza(&self.iso_path);
+                                if Path::new(&self.iso_path).is_file() {
+                                    self.out_manuale = false;
+                                    self.aggiorna_uscita();
+                                    self.controlla_iso(ctx);
+                                }
+                            }
+                            if ui.button(t.browse).clicked() {
+                                self.scegli_iso(ctx);
                             }
                         });
-                        ui.label(RichText::new(cerca::normalizza(t.ppsspp_hint)).weak().small());
-                    }
+                        ui.add_space(4.0);
+                        ui.label(RichText::new(t.out_iso).strong());
+                        ui.horizontal(|ui| {
+                            if ui.add(egui::TextEdit::singleline(&mut self.out_path).desired_width(ui.available_width() - 110.0)).changed() {
+                                self.out_manuale = true;
+                                self.out_path = cerca::normalizza(&self.out_path);
+                            }
+                            if ui.button(t.browse).clicked()
+                                && let Some(p) = rfd::FileDialog::new().add_filter("ISO", &["iso"]).set_file_name(
+                                    Path::new(&self.out_path).file_name().map(|s| s.to_string_lossy().to_string()).unwrap_or_default(),
+                                ).save_file()
+                            {
+                                self.out_path = cerca::normalizza(&p.display().to_string());
+                                self.out_manuale = true;
+                            }
+                        });
+                        if self.textures {
+                            ui.add_space(4.0);
+                            ui.label(RichText::new(t.out_ppsspp).strong());
+                            ui.horizontal(|ui| {
+                                if ui.add(egui::TextEdit::singleline(&mut self.ppsspp).desired_width(ui.available_width() - 110.0)).changed() {
+                                    self.ppsspp = cerca::normalizza(&self.ppsspp);
+                                }
+                                if ui.button(t.browse).clicked() {
+                                    self.scegli_ppsspp();
+                                }
+                            });
+                            ui.label(RichText::new(cerca::normalizza(t.ppsspp_hint)).weak().small());
+                        }
+                    });
                 });
                 ui.add_space(10.0);
                 // installa

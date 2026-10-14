@@ -23,7 +23,7 @@ Il repository **non contiene** il gioco né dati estratti dal gioco: le patch (`
 
 1. Dalla pagina [Releases](../../releases) scarica `tfpatch-gui.exe` (Windows) o `tfpatch-gui-linux-x86_64` (Linux; prima `chmod +x tfpatch-gui-linux-x86_64`).
 2. Avvialo. Il programma si apre nella lingua del tuo PC (inglese se non è una delle cinque) e mostra il banner *Pomodoro Mistico* della **lingua della patch**, che di default è la stessa del programma ma si può cambiare separatamente.
-3. Premi **Cerca ISO e cartella di PPSSPP in automatico** (oppure scegli i percorsi con Sfoglia). Poi scegli la ISO originale se non è stata trovata, lascia o togli la spunta ai moduli (di default sono tutti attivi), scegli dove salvare la ISO e, per le texture HD, la cartella dati di PPSSPP. Il **peso finale della ISO e quello del pacchetto texture sono mostrati in tempo reale** e cambiano mentre spunti o togli i moduli.
+3. Il programma cerca da solo la tua ISO e la cartella dati di PPSSPP e mostra solo il risultato; se non ne trova una, ti chiede di sceglierla. Lascia o togli la spunta ai moduli (di default sono tutti attivi). Percorsi, posizione della ISO finale e una nuova ricerca sono in **Opzioni avanzate**. Il **peso finale della ISO e quello del pacchetto texture sono mostrati in tempo reale** e cambiano mentre spunti o togli i moduli.
 4. Premi **Installa**. La patch e i moduli texture vengono scaricati dalle Release e verificati (SHA-256); la tua ISO originale non viene mai modificata.
 
 Note sulle opzioni:

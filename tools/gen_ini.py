@@ -91,8 +91,10 @@ for cid in ids:
     if block:
         out.append(f'#{cid}: {names.get(cid, "")}')
         seen = {}
-        for line in block:  # same pixels in several languages -> keep the first (english) mapping
-            seen.setdefault(line.split(' = ')[0], line)
+        for line in block:  # same pixels in several languages -> keep the first mapping, but a localized PNG beats the english one
+            k = line.split(' = ')[0]
+            if k not in seen or (re.search(r'cards/(large|small)_', line) and not re.search(r'cards/(large|small)_', seen[k])):
+                seen[k] = line
         out += seen.values()
 
 with open(out_ini, 'w', encoding='utf-8', newline='\n') as f:

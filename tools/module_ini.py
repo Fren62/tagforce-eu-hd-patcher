@@ -45,7 +45,7 @@ def main(card_dir, ini_in, ini_out, modules, codes):
         if m:
             h = m.group(3).lower()
             for c in codes:
-                if owner.get(h) == letter[c] and m.group(6).lower() == hours[letter[c]].get(h, ''):
+                if m.group(6).lower() == hours[letter[c]].get(h, ''):   # also hashes shared with other languages (same name: banner font still differs from the US pack)
                     alt = f'cards/{m.group(6).lower()}_{c}/{m.group(7)}'
                     if os.path.exists(os.path.join(modules, c, alt)):
                         row = f'{m.group(1)}{m.group(2)}{h}{m.group(4)}{alt}'
